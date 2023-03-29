@@ -1,0 +1,55 @@
+{
+    "wfrp4epladdon.applySlashing.Enable": "Włącz cechę Tnący",
+    "wfrp4epladdon.applySlashing.EnableHint": "Włącz cechę Tnący, która będzie zadawać 1 Stan Krwawienia, w przypadku gdy trafienie spowodowało również trafienie krytyczne. Za cenę X przewag, można wywołać dodatkowy Stan Krwawienia.",
+  
+    "wfrp4epladdon.arrowReclamation.Enable": "Włącz odzyskiwanie amunicji",
+    "wfrp4epladdon.arrowReclamation.EnableHint": "Włącz odzyskiwanie amunicji podczas testu na atak zasięgowy podczas walki (nie działa bez aktywanego Starcia). Amunicja wystrzelona podczas Starcia zostanie przywrócona po jego zakończeniu.",
+  
+    "wfrp4epladdon.arrowReclamation.EnableArrows": "Pozwól odzyskiwać Strzały",
+    "wfrp4epladdon.arrowReclamation.EnableArrowsHint": "Zaznacz, aby gracze mogli odzyskiwać amunicję do Łuku",
+    "wfrp4epladdon.arrowReclamation.EnableBolts": "Pozwól odzyskiwać Bełty",
+    "wfrp4epladdon.arrowReclamation.EnableBoltsHint": "Zaznacz, aby gracze mogli odzyskiwać amunicję do Kuszy",
+    "wfrp4epladdon.arrowReclamation.EnableBullets": "Pozwól odzyskiwać Pociski",
+    "wfrp4epladdon.arrowReclamation.EnableBulletsHint": "Zaznacz, aby gracze mogli odzyskiwać amunicję do Procy",
+  
+    "wfrp4epladdon.arrowReclamation.Rule": "Zasady odzyskiwania amunicji",
+    "wfrp4epladdon.arrowReclamation.RuleHint": "Wybierz zasady, według których amunicja zostanie odzyskana. Słowo `Krytyk` oznacza zarówno Fuks jak i Pech",
+  
+    "wfrp4epladdon.arrowReclamation.DefaultRule": "Rzut był parzysty",
+    "wfrp4epladdon.arrowReclamation.SuccessRule": "Rzut był parzysty i udany",
+    "wfrp4epladdon.arrowReclamation.NoCritRule": "Rzut był parzysty, ale bez Krytyka",
+    "wfrp4epladdon.arrowReclamation.SuccessNoCritRule": "Rzut był parzysty, udany, ale bez Krytyka",
+    "wfrp4epladdon.arrowReclamation.FailureRule": "Rzut był parzysty i nieudany",
+    "wfrp4epladdon.arrowReclamation.FailureNoCritRule": "Rzut był parzysty, nieudany, ale bez Krytyka",
+    "wfrp4epladdon.arrowReclamation.PercentageRule": "Zdaj rzut na Szansę",
+    "wfrp4epladdon.arrowReclamation.PercentageNoCritRule": "Zdaj rzut na Szansę, ale bez Krytyka",
+  
+    "wfrp4epladdon.arrowReclamation.Percentage": "Docelowa Szansa",
+    "wfrp4epladdon.arrowReclamation.PercentageHint": "Ustaw \"Szansę\" procentową dla rzutu wymaganego przez niektóre Zasady. Rzut się powiedzie, jeśli na k100 wypadnie mniej lub tyle samo, ile wynosi Docelowa Szansa",
+
+    "wfrp4epladdon.alternativeArmour.Enable": "Aktywuj alternatywne zasady Pancerzy", 
+    "wfrp4epladdon.alternativeArmour.EnableHint": "Zmienia kategorie pancerzy oraz zasady ich łączenia oraz udostępnia dodatkowe kompendium z dedykowanymi pancerzami.", 
+  
+    "wfrp4epladdon.SlashingApplied": "W wyniku trafienia krytycznego, spowodowano 1 Stan @Condition[Krwawienie]. Za {SlashingLevel} przewag można nadać dodatkowy stan Krwawienia.",
+    "wfrp4epladdon.Chat.ArrowsRecovered": "{0} odnalazł(a) <strong>{2}</strong> sztuk „{1}” zdatnych do ponownego wykorzystania.",
+  
+    "wfrp4epladdon.recovered": "Odzyskano {type}",
+    "wfrp4epladdon.recoveredFuture": "Odzyskasz {type} po zakończeniu Starcia",
+    "wfrp4epladdon.Arrow": "Strzałę",
+    "wfrp4epladdon.Bolt": "Bełt",
+    "wfrp4epladdon.Bullet": "Pocisk",
+  
+    "PROPERTY.Recoverable": "Odzyskiwalny",
+    "PROPERTY.Unrecoverable": "Nieodzyskiwalny",
+    "PROPERTY.Sturdy": "Solidny",
+    "PROPERTY.Frail": "Kruchy",
+  
+    "WFRP4E.Properties.Recoverable": "Amunicja może być odzyskana nawet wtedy, jeśli normalnie zasady nie pozwalają na odzyskiwanie tego typu amunicji. <br/><em>(wymaga włączenia funkcji w ustawieniach)</em>",
+    "WFRP4E.Properties.Unrecoverable": "Amunicja zawsze się niszczy po wystrzeleniu i nie może być nigdy odzyskana.",
+    "WFRP4E.Properties.Sturdy": "Pocisk jest wytrzymały, więc łatwiej go odzyskać.<br/><b>Szansa</b>: rzuć dwa razy, wybierz niższy<br/><b>Zasady Sukcesu/Porażni</b>: neguje warunki Sukcesu/Porażki<br/><b>Inne zasady:</b> jeśli nie odzyskano, rzuć na Szansę.<br/><em>(wymaga włączenia funkcji w ustawieniach)</em>",
+    "WFRP4E.Properties.Frail": "Pocisk jest słaby i łatwo się psuje, przez co trudniej go odzyskać.<br/><b>Szansa</b>: rzuć dwa razy, wybierz wyższy<br/><b>Inne zasady:</b> jeśli odzyskano, rzuć na Szansę<br/><em>(wymaga włączenia funkcji w ustawieniach)</em>",
+
+   "WFRP4E.ArmourType.Light": "Lekki Pancerz",
+   "WFRP4E.ArmourType.Medium": "Średni Pancerz",
+   "WFRP4E.ArmourType.Heavy": "Ciężki Pancerz"
+}

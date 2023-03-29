@@ -1,0 +1,86 @@
+{
+  "name": "wfrp4e-pl-addons",
+  "title": "Warhammer 4ed Addons PL.",
+  "description": "Kilka dodatków do polskiej wersji wfrp4e. Odzyskiwanie strzał, alternatywne zasady pancerzy, dodatkowy ekwipunek, alternatywne zasady trafień krytycznych (UiA).",
+  "authors": [
+    {
+      "name": "silent_mark",
+      "flags": {}
+    }
+  ],
+  "scripts": [
+    "wfrp4e_pl.js"
+  ],
+  "languages": [
+    {
+      "lang": "pl",
+      "name": "Polski",
+      "path": "pl.json",
+      "flags": {}
+    }
+  ],
+  "packs": [
+    {
+      "name": "tables",
+      "label": "Tabele (Dodatkowe)",
+      "system": "wfrp4e",
+      "path": "packs/tables.db",
+      "type": "RollTable",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "criticals",
+      "label": "Trafienia Krytyczne (Pod Bronią)",
+      "system": "wfrp4e",
+      "path": "packs/criticals.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "weapons",
+      "label": "Zbrojownia",
+      "system": "wfrp4e",
+      "path": "packs/weapons.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "armoury",
+      "label": "Pancerze",
+      "system": "wfrp4e",
+      "path": "packs/armoury.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    }
+  ],
+  "url": "https://github.com/silentmark/wfrp4e-pl-addons",
+  "manifest": "https://raw.githubusercontent.com/silentmark/wfrp4e-pl-addons/main/module.json",
+  "download": "https://github.com/silentmark/wfrp4e-pl-addons/releases/download/1.0.0/wfrp4e-pl-addons.zip",
+  "version": "1.0.0",
+  "relationships": {
+    "requires": [
+      {
+        "id": "wfrp4e-core-pl",
+        "type": "module",
+        "compatibility": {}
+      }
+    ],
+    "systems": [
+      {
+        "id": "wfrp4e",
+        "type": "system",
+        "manifest": "https://github.com/moo-man/WFRP4e-FoundryVTT/releases/latest/download/system.json",
+        "compatibility": {}
+      }
+    ]
+  },
+  "compatibility": {
+    "minimum": "10",
+    "verified": "10",
+    "maximum": "10"
+  }
+}
