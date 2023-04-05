@@ -140,7 +140,7 @@ Hooks.on("renderCompendiumDirectory", async () => {
         ui.sidebar.element.find("[data-pack='wfrp4e-gm-toolkit.gm-toolkit-tables']").remove()
     }
     if (!game.settings.get("wfrp4e-pl-addons", "alternativeArmour.Enable")) {
-      if (game.packs.get("wfrp4e-pl.armoury")) {
+      if (game.packs.get("wfrp4e-pl-addons.armoury")) {
         ui.sidebar.element.find("[data-pack='wfrp4e-pl.armoury']").remove()
       }
     }
