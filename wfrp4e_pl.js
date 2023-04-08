@@ -314,7 +314,7 @@ Hooks.on("deleteCombat", async function (combat) {
             templateData.ammo.img = null;
           }
       
-          const html = await renderTemplate('modules/wfrp4e-pl/templates/ammo-recovery.html', templateData)
+          const html = await renderTemplate('modules/wfrp4e-pl-addons/templates/ammo-recovery.html', templateData)
             const chatData = {
             user: user,
             speaker: {alias: actor.name, actor: actor.id},
