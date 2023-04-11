@@ -95,7 +95,8 @@ Hooks.on("deleteCombat", async function (combat) {
             let actor = actors[i];
             let effects = actor.effects.filter(x=> x.label.startsWith('Wiatry Magii'));
             if (effects.length > 0) {
-                await actor.deleteEmbeddedDocuments(effects);
+                effects = effects.map(x => x.id);
+                await actor.deleteEmbeddedDocuments("ActiveEffect", effects);
             }
         }
     }
