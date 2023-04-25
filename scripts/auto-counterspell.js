@@ -52,7 +52,7 @@ Hooks.on("wfrp4e:rollCastTest", async function(castData, chatData) {
             let combatants = combat.combatants.map(x=>x);
             for (let i = 0; i < combatants.length; i++) { 
                 let actorId = combatants[i].actorId;
-                if (!casters[actorId] && actorId != casterId) {
+                if (typeof(casters[actorId]) !== 'undefined' && !casters[actorId] && actorId !== casterId) {
                     potentialDefenders.push(combatants[i]);
                 }
             }

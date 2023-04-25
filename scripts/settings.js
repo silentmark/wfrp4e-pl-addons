@@ -121,10 +121,15 @@ Hooks.on("setup", () => {
           recoverable: false,
           frail: false,
           unrecoverable: false
-      }
+        }
     }
-  
+
     mergeObject(game.wfrp4e.config, config);
+
+    setTimeout(() => {            
+        game.wfrp4e.config.effectTriggers.measuredTemplate = "Efekt Szablonu";
+        game.wfrp4e.config.effectPlaceholder.measuredTemplate = ``;
+    }, (timeout = 250));
 
     if (game.settings.get("wfrp4e-pl-addons", "alternativeArmour.Enable")) {
       game.wfrp4e.config.armorTypes = {
@@ -147,3 +152,11 @@ Hooks.on("renderCompendiumDirectory", async () => {
         }
     }
 });
+
+Hooks.on('preCreateChatMessage', (doc, message, options, userid) => {
+    if (message.flags !== undefined) {
+      if (message.flags?.core?.initiativeRoll) {
+        return false;
+      };
+    };
+  });

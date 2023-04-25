@@ -13,7 +13,8 @@
     "/scripts/ammoReplenish.js",
     "/scripts/armour.js",
     "/scripts/windsofmagic.js",
-    "/scripts/auto-counterspell.js"
+    "/scripts/auto-counterspell.js",
+    "/scripts/spelltracker.js"
   ],
   "languages": [
     {
