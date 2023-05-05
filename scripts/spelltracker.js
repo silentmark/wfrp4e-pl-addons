@@ -53,9 +53,9 @@ Hooks.on("renderCombatTracker", (app, html, options) => {
                 }
 
                 rows += `<li class="directory-item flexrow" style="position: relative; height: 55px;" data-message-id="${messageId}" data-spell-id="${spellId}" data-actor-id="${actorId}">
-                <div class="flexcol"><img style="${imageStyle}" alt="${spellName}" src="${spellImg}"></div>
+                <div class="flexcol"><img style="width:48px;${imageStyle}" alt="${spellName}" src="${spellImg}"></div>
                 <div class="flexcol">
-                    <h4 style="${textStyle}">${spellName} - ${actorName}</h4>
+                    <h4 style="width: 200px;text-overflow:ellipsis;${textStyle}">${spellName} - ${actorName}</h4>
                 </div>        
                 <div class="flexcol duration-value" style="text-align: center;">
                     <span style="${textStyle}">${duration.current}</span>
@@ -67,12 +67,10 @@ Hooks.on("renderCombatTracker", (app, html, options) => {
             }
             let element = 
             $(`
-            <div class="active-spells">
-            <div style="width: 100%; text-align: center;"><h4>Aktywne zaklęcia</h4></div>
-            <ol id="spell-tracker" class="directory-list">
+            <div style="width: 100%; text-align: center; flex: 0;"><h4>Aktywne zaklęcia</h4></div>
+            <ol id="spell-tracker" style="min-height: 20%; flex: 0;" class="directory-list">
             ${rows}
             </ol>
-            </div>
             `)
         
             element.insertBefore(html.find("#combat-controls"));
