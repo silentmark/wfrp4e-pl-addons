@@ -18,7 +18,7 @@ Hooks.on("createCombat", async function (combat) {
               confirm: {
                 label: "Rzut",
                 callback: async (dlg) => { 
-                    const inputs = $('input[name]', dlg);
+                    const inputs = $('input.wind[name]', dlg);
                     const winds = {}
                     winds.modifier = [];
                     let message = '';
@@ -31,6 +31,7 @@ Hooks.on("createCombat", async function (combat) {
                         message += `<tr><td><strong>${wind}</strong>:</td><td>${result > 0 ? '+' + result : result}</td></tr>`
                     }
                     winds.tzeentch = $('input[name="tzeentchInfluence"]', dlg)[0].checked;
+                    winds.deamonName = $('input[name="tzeentchInfluenceDemon"]', dlg)[0].value;
                     await combat.setFlag('wfrp4e-pl-addons', 'winds', winds);
                     await ChatMessage.create({ content: `<p><strong>Zmienne Wiatry magii wpływają na splatanie w następujący sposób:</strong><br/><table>${message}</table></p>` });
                 }
@@ -65,7 +66,7 @@ Hooks.on("updateCombat", async function (combat, updateData) {
                     if (!effect) {
                         effect = {
                             label: 'Wiatry Magii (' + wind + ')',
-                            icon: "systems/wfrp4e/ui/buttons/d10.webp",
+                            icon: "modules/wfrp4e-core/icons/spells/octagram.png",
                             transfer: false,
                             flags: {
                                 wfrp4e: {
@@ -84,38 +85,56 @@ Hooks.on("updateCombat", async function (combat, updateData) {
                     }
                 }
                 if (winds.tzeentch) {
+                    let deamonName = winds.deamonName;
+                    let script = `
+                    let suffusedWithMagicEffect = {
+                        label: 'Nasycenie Magią',
+                        icon: "modules/wfrp4e-core/icons/spells/tzeentch.png",
+                        transfer: false,
+                        duration: {
+                            rounds: 1
+                        },
+                        flags: {
+                            wfrp4e: {
+                                "effectApplication": "actor",
+                                "effectTrigger": "prefillDialog",
+                                "script": 'if (args.type == "cast") args.prefillModifiers.slBonus += 1',
+                                "preventDuplicateEffects": true
+                            }
+                        }
+                    }
+                    if (args.test.result.roll.toString() == '99') {
+                        let demonTokenId = (await warpgate.spawn("${deamonName}"))[0];
+                        let demonToken = game.canvas.tokens.get(demonTokenId);
+                        let caster = this.actor;
+                        setTimeout(async function () {
+                            new Sequence()
+                            .effect()
+                                .file("jb2a.magic_signs.circle.02.abjuration.intro.dark_purple")
+                                .atLocation(demonToken)
+                                .scaleToObject(2.5)
+                                .randomRotation()
+                            .play();
+                        }, 200);
+                        ChatMessage.create({content: "<span>Złowrogie wpływy Tzeentcha wywołały manifestację chaosu: <a class='table-click fumble-roll' title='Złowrogie Wpływy Tzeentcha' data-table='majormis'><i class='fas fa-list'></i>Poważna Manifestacja Chaosu</a></span>"})
+                        caster.createEmbeddedDocuments("ActiveEffect", [suffusedWithMagicEffect]);
+                    }
+                    else if (args.test.result.roll.toString().split('').reverse()[0] == '9') {
+                        ChatMessage.create({content: "<span>Złowrogie wpływy Tzeentcha wywołały manifestację chaosu: <a class='table-click fumble-roll' title='Złowrogie Wpływy Tzeentcha' data-table='minormis'><i class='fas fa-list'></i>Pomniejsza Manifestacja Chaosu</a></span>"});
+                        this.actor.createEmbeddedDocuments("ActiveEffect", [suffusedWithMagicEffect]);
+                    }
+            `
                     let effect = actor.effects.find(x => x.label == 'Złowrogie Wpływy Tzeentcha (Czarowanie)');
                     if (!effect) {
                         effect = {
                             label: 'Złowrogie Wpływy Tzeentcha (Czarowanie)',
-                            icon: "modules/wfrp4e-core/icons/spells/undivided.png",
+                            icon: "modules/wfrp4e-core/icons/spells/tzeentch.png",
                             transfer: false,
                             flags: {
                                 wfrp4e: {
                                     "effectApplication": "actor",
                                     "effectTrigger": "rollCastTest",
-                                    "script": `
-                                        if (args.test.result.roll.toString() == '99') {
-                                            let demonTokenId = (await warpgate.spawn("Demonetka Slaanesha"))[0];
-                                            let demonToken = game.canvas.tokens.get(demonTokenId);
-                                            let caster = this.actor;
-                                            setTimeout(async function () {
-                                                new Sequence()
-                                                .effect()
-                                                    .file("modules/jb2a_patreon/Library/Generic/Magic_Signs/AbjurationCircleComplete_02_Dark_Pink_800x800.webm")
-                                                    .atLocation(demonToken)
-                                                    .scaleToObject(2.5)
-                                                    .randomRotation()
-                                                .play();
-                                            }, 200);
-                                            ChatMessage.Create({content: "<a class='table-click fumble-roll' title='Złowrogie Wpływy Tzeentcha' data-table='majormis'><i class='fas fa-list'></i>Poważna Manifestacja Chaosu</a>"})
-                                            //TODO: add effect for one turn/ 
-                                        }
-                                        else if (args.test.result.roll.toString().split('').reverse()[0] == '9') {
-                                            ChatMessage.Create({content: "<a class='table-click fumble-roll' title='Złowrogie Wpływy Tzeentcha' data-table='minormis'><i class='fas fa-list'></i>Pomniejsza Manifestacja Chaosu</a>"});
-                                            //TODO: add effect for one turn/ 
-                                        }
-                                `
+                                    "script": script
                                 }
                             }
                         }
@@ -131,31 +150,11 @@ Hooks.on("updateCombat", async function (combat, updateData) {
                                 wfrp4e: {
                                     "effectApplication": "actor",
                                     "effectTrigger": "rollChannellingTest",
-                                    "script": `                                    
-                                        if (args.test.result.roll.toString() == '99') {
-                                            let demonTokenId = (await warpgate.spawn("Demonetka Slaanesha"))[0];
-                                            let demonToken = game.canvas.tokens.get(demonTokenId);
-                                            let caster = this.actor;
-                                            setTimeout(async function () {
-                                                new Sequence()
-                                                .effect()
-                                                    .file("modules/jb2a_patreon/Library/Generic/Magic_Signs/AbjurationCircleComplete_02_Dark_Pink_800x800.webm")
-                                                    .atLocation(demonToken)
-                                                    .scaleToObject(2.5)
-                                                    .randomRotation()
-                                                .play();
-                                            }, 200);
-                                            ChatMessage.Create({content: "<a class='table-click fumble-roll' title='Złowrogie Wpływy Tzeentcha' data-table='majormis'><i class='fas fa-list'></i>Poważna Manifestacja Chaosu</a>"})
-                                            //TODO: add effect for one turn/ 
-                                        }
-                                        else if (args.test.result.roll.toString().split('').reverse()[0] == '9') {
-                                            ChatMessage.Create({content: "<a class='table-click fumble-roll' title='Złowrogie Wpływy Tzeentcha' data-table='minormis'><i class='fas fa-list'></i>Pomniejsza Manifestacja Chaosu</a>"});
-                                            //TODO: add effect for one turn/ 
-                                        }
-                                `
+                                    "script": script
                                 }
                             }
                         }
+                        await actor.createEmbeddedDocuments("ActiveEffect", [effect])
                     }
                 }
             }
@@ -169,7 +168,7 @@ Hooks.on("deleteCombat", async function (combat) {
         let actors = game.actors.map(x=>x);
         for (let i = 0; i < actors.length; i++) {
             let actor = actors[i];
-            let effects = actor.effects.filter(x=> x.label.startsWith('Wiatry Magii'));
+            let effects = actor.effects.filter(x=> x.label.startsWith('Wiatry Magii') || x.label.startsWith('Złowrogie Wpływy Tzeentcha'));
             if (effects.length > 0) {
                 effects = effects.map(x => x.id);
                 await actor.deleteEmbeddedDocuments("ActiveEffect", effects);

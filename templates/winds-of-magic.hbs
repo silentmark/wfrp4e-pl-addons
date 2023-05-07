@@ -5,7 +5,7 @@
      <li data-item-id="{{wind}}">
       <div style="line-height: 30px">
         <span style="line-height: 20px; padding-top: 5px; padding-bottom: 5px;">{{wind.wind}}</span>
-        <input class="input" name="{{wind.wind}}" type="text" value="{{wind.modifier}}" style="line-height: 20px; width: calc(100% - 100px); background: url(/systems/wfrp4e/ui/frames/parchment-texture.webp); box-shadow: inset 0 0 10px #000000; border: 2px groove #564d3a; border-image: url(/systems/wfrp4e/ui/chat-controls-border.webp) 4 repeat; border-image-width: 4px; border-image-outset: 1px; font-family: var(--actor-input-font-family); font-size: var(--actor-input-font-family); font-weight: var(--actor-input-font-weight); color: var(--actor-input-color); text-align: center; float: right;" />
+        <input class="input wind" name="{{wind.wind}}" type="text" value="{{wind.modifier}}" style="line-height: 20px; width: calc(100% - 100px); background: url(/systems/wfrp4e/ui/frames/parchment-texture.webp); box-shadow: inset 0 0 10px #000000; border: 2px groove #564d3a; border-image: url(/systems/wfrp4e/ui/chat-controls-border.webp) 4 repeat; border-image-width: 4px; border-image-outset: 1px; font-family: var(--actor-input-font-family); font-size: var(--actor-input-font-family); font-weight: var(--actor-input-font-weight); color: var(--actor-input-color); text-align: center; float: right;" />
       </div>
     </li>
   {{/each}}
@@ -13,6 +13,12 @@
       <div style="line-height: 30px">
         <span style="line-height: 20px; padding-top: 5px; padding-bottom: 5px;">Złowrogie Wpływy Tzeentcha</span>
         <input type="checkbox" name="tzeentchInfluence"/>
+      </div>
+    </li>
+    <li>
+      <div style="line-height: 30px">
+        <span style="line-height: 20px; padding-top: 5px; padding-bottom: 5px;">Nazwa przywołanego demona</span>
+        <input class="input" name="tzeentchInfluenceDemon" type="text" value="" style="line-height: 20px; width: calc(100% - 100px); background: url(/systems/wfrp4e/ui/frames/parchment-texture.webp); box-shadow: inset 0 0 10px #000000; border: 2px groove #564d3a; border-image: url(/systems/wfrp4e/ui/chat-controls-border.webp) 4 repeat; border-image-width: 4px; border-image-outset: 1px; font-family: var(--actor-input-font-family); font-size: var(--actor-input-font-family); font-weight: var(--actor-input-font-weight); color: var(--actor-input-color); text-align: center; float: right;" />
       </div>
     </li>
   </ol>
