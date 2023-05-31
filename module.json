@@ -14,7 +14,8 @@
     "/scripts/armour.js",
     "/scripts/windsofmagic.js",
     "/scripts/auto-counterspell.js",
-    "/scripts/spelltracker.js"
+    "/scripts/spelltracker.js",
+    "/scripts/miscasts.js"
   ],
   "languages": [
     {
@@ -65,7 +66,7 @@
   "url": "https://github.com/silentmark/wfrp4e-pl-addons",
   "manifest": "https://raw.githubusercontent.com/silentmark/wfrp4e-pl-addons/main/module.json",
   "download": "https://github.com/silentmark/wfrp4e-pl-addons/releases/download/1.0.0/wfrp4e-pl-addons.zip",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "relationships": {
     "requires": [
       {
