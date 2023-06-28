@@ -1,6 +1,6 @@
 
 Hooks.on("setup", () => {  
-    Reflect.defineProperty(TestWFRP$1.prototype, '_handleMiscasts', { value:
+    Reflect.defineProperty(TestWFRP.prototype, '_handleMiscasts', { value:
         function(miscastCounter)  {
             let mis = false;
             if (this.result.roll % 11 == 0) {
