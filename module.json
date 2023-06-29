@@ -15,7 +15,8 @@
     "/scripts/windsofmagic.js",
     "/scripts/auto-counterspell.js",
     "/scripts/spelltracker.js",
-    "/scripts/miscasts.js"
+    "/scripts/miscasts.js",
+    "/scripts/auto-engaged.js"
   ],
   "languages": [
     {

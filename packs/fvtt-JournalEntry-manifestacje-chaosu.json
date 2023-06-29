@@ -1,0 +1,48 @@
+{
+  "name": "Manifestacje Chaosu",
+  "pages": [
+    {
+      "sort": 100000,
+      "name": "Manifestacje Chaosu",
+      "type": "text",
+      "_id": "rasVECcyWoSsX6HH",
+      "title": {
+        "show": false,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>W przeciwieństwie do oryginalnych zasad, zamiast 3 poziomów manifestacji, jest tylko jeden (jedna tabela). Każdy Wiatr Magii będzie miał powiązaną Tabelę Rzutów na manifestacje. Rzut na manifestację będzie dalej rzutem 1K100, ale tym razem rzut będzie obarczony modyfikatorami w zależności, od okoliczności.</p><p>Manifestacja chaosu zawsze występuje przy wystąpieniu dubletu przy rzucie na Splatanie Magii lub Język Magiczny.</p><p>W przypadku Złowrogich Wpływów, Manifestacja dodatkowo następuje gdy wynik rzutu kością zawiera 0 na pozycji jednostek.</p><p>Przy wyjątkowo nieprzyjaznych miejscach skażonych Tzeentchem, rzut z wynikiem 9 na kości jedności również wywołuje manifestację.</p><p></p><p>Następujące okoliczności wpływają na powagę manifestacji.</p><ul><li><p>Rzucanie zaklęcia z magii prostej: modyfikator -50</p></li><li><p>Rzucanie zaklęcia lub splatanie z wykorzystaniem składnika do Kontroli: -SW rzucającego.</p></li><li><p>Splatanie zaklęcia przez postać posiadającą Talent Zmysł Magii: -SW rzucającego.</p></li><li><p>Rzucanie zaklęcia przez postać posiadającą Talent Precyzyjne Inkantowanie: -SW rzucającego.</p></li><li><p>Modyfikator z tabeli wiatrów magii dla danego wiatru.</p></li></ul><p>Warto zauważyć, że manifestacja występuje zawsze przy dublecie, w szczególności przy zdanym teście, w tym wypadku Talenty Zmysł Magii i Precyzyjne Inkantowanie mają inne działanie.</p><p></p><p>Negatywny wpływ na rzut mają:</p><ul><li><p>Niezdany test: +50</p></li><li><p>Modyfikator aktualnie splecionych Punktów Zaklęcia *3</p></li><li><p>Rzucanie zaklęcia z księgi: +50</p></li><li><p>Rzucanie lub splatanie zaklęcia z użyciem składnika do Mocy: +50</p></li><li><p>Szybkie Czarowanie: +50</p></li><li><p>Wykorzystanie Nadsplatania: +10 * liczba punktów nadsplatania.</p></li></ul><p>Czarowanie i splatanie przy obecności Tzeentcha jest wyjątkowo niebezpieczne. Oprócz dodatkowej szansy na manifestację, <strong>Rzut na Manifestację modyfikowany jest o wynik testu.</strong></p><p>Dodatkowo, przy wyrzuceniu 99 w obecności mocy Tzeentcha, manifestuje się demon - Niebieski lub Różowy Horror.</p><p></p>",
+        "markdown": ""
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "flags": {
+    "exportSource": {
+      "world": "wfrp4",
+      "system": "wfrp4e",
+      "coreVersion": "10.291",
+      "systemVersion": "6.5.3"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.3",
+    "coreVersion": "10.291",
+    "createdTime": 1685526044178,
+    "modifiedTime": 1685527330484,
+    "lastModifiedBy": "Czz7IJA9DEa5LD9E"
+  },
+  "_id": "m482OEsjBSiO6Swj"
+}
