@@ -18,13 +18,15 @@ Hooks.on("setup", () => {
               this.result.mis = game.i18n.localize("Manifestacja Chaosu");
               const wind = game.wfrp4e.config.magicWind[this.spell.lore.value.toLowerCase()];
               if (game.combats.active && game.combats.active.flags['wfrp4e-pl-addons']['winds']) {
-                modifier = game.combats.active.flags['wfrp4e-pl-addons']['winds'].find(x=> x.wind == wind).modifier;
-                console.log("Modyfikator z wiatrów magii: " + modifier);
-                this.result.tooltips.miscast.push("Modyfikator z wiatrów magii: " + modifier);
-                globalModifier += modifier;
+                modifier = game.combats.active.flags['wfrp4e-pl-addons']['winds'].find(x=> x.wind == wind)?.modifier;
+                if (modifier) {
+                  console.log("Modyfikator z wiatrów magii: " + modifier);
+                  this.result.tooltips.miscast.push("Modyfikator z wiatrów magii: " + modifier);
+                  globalModifier += modifier;
+                }
               }
-              console.log("Modyfikator z PS: " + Number.parseInt(this.result.SL) * 3);
-              this.result.tooltips.miscast.push("Modyfikator z PS: " + (Number.parseInt(this.result.SL) * 3));
+              console.log("Modyfikator z Punktów Zaklęcia: " + Number.parseInt(this.item.cn.SL) * 3);
+              this.result.tooltips.miscast.push("Modyfikator z Punktów Zaklęcia: " + (Number.parseInt(this.item.cn.SL) * 3));
               globalModifier += Number.parseInt(this.item.cn.SL) * 3;
               
               if (!this.item.system.memorized.value) {
@@ -80,11 +82,22 @@ Hooks.on("setup", () => {
                 globalModifier -= this.actor.characteristics.wp.value;
               }
               this.result.miscastModifier = globalModifier;
+              this.result.miscastTable = "miscast";
               const table = game.wfrp4e.tables.findTable("miscast" + wind?.toLowerCase())
               if (table) {
-                this.result.miscastTable = "miscast" + wind.toLowerCase();
-              } else {
-                this.result.miscastTable = "miscast";
+                modifier = game.combats.active.flags['wfrp4e-pl-addons']['winds'].find(x=> x.wind == wind)?.modifier;
+                if (!modifier) { 
+                  modifier = 0;
+                }
+                let formula;
+                if (modifier < 0) {
+                  formula = `1d100${modifier}`
+                } else {
+                  formula = `1d100 + ${modifier}`
+                }
+                if (Number.parseInt(new Roll("1d100").roll({async: false}).result) > 50) {
+                  this.result.miscastTable = "miscast" + wind.toLowerCase();
+                }
               }
             }
           }

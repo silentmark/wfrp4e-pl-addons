@@ -1,6 +1,6 @@
 {
   "name": "wfrp4e-pl-addons",
-  "title": "Warhammer 4ed Addons PL.",
+  "title": "Warhammer 4ed Addons",
   "description": "Kilka dodatków do polskiej wersji wfrp4e. Odzyskiwanie strzał, alternatywne zasady pancerzy, dodatkowy ekwipunek, alternatywne zasady trafień krytycznych (UiA).",
   "authors": [
     {
@@ -16,7 +16,8 @@
     "/scripts/auto-counterspell.js",
     "/scripts/spelltracker.js",
     "/scripts/miscasts.js",
-    "/scripts/auto-engaged.js"
+    "/scripts/auto-engaged.js",
+    "/scripts/auto-outnumbered.js"
   ],
   "languages": [
     {
@@ -32,6 +33,15 @@
       "label": "Tabele (Dodatkowe)",
       "system": "wfrp4e",
       "path": "packs/tables.db",
+      "type": "RollTable",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "tables-miscast",
+      "label": "Tabele (Manifestacje)",
+      "system": "wfrp4e",
+      "path": "packs/tables-miscast.db",
       "type": "RollTable",
       "private": false,
       "flags": {}
@@ -67,7 +77,7 @@
   "url": "https://github.com/silentmark/wfrp4e-pl-addons",
   "manifest": "https://raw.githubusercontent.com/silentmark/wfrp4e-pl-addons/main/module.json",
   "download": "https://github.com/silentmark/wfrp4e-pl-addons/releases/download/1.0.0/wfrp4e-pl-addons.zip",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "relationships": {
     "requires": [
       {
@@ -86,8 +96,8 @@
     ]
   },
   "compatibility": {
-    "minimum": "10",
-    "verified": "10",
-    "maximum": "10"
+    "minimum": "11",
+    "verified": "11",
+    "maximum": "11"
   }
 }

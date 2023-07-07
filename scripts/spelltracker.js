@@ -63,6 +63,9 @@ Hooks.on("renderCombatTracker", (app, html, options) => {
                 <div class="flexcol duration-unit" style="text-align: center;">
                     <span style="${textStyle}">${duration.unit}</span>
                 </div>
+                <div>
+                    <a class="item-controls item-delete" data-spell-id="${messageId}" title="Skasuj Zaklęcie"><i class="fas fa-trash"></i></a>
+                </div>
             </li>`;
             }
             let element = 
@@ -73,15 +76,18 @@ Hooks.on("renderCombatTracker", (app, html, options) => {
             </ol>
             `)
         
-            element.insertBefore(html.find("#combat-controls"));
+            let newElement = element.insertBefore(html.find("#combat-controls"));
+            newElement.find(".item-delete").click(async function () {
+                let spells = game.combats.active.getFlag('wfrp4e-pl-addons', 'spells');
+                if (!spells) {
+                  spells = {};
+                }
+                spells[this.dataset.spellId] = null;
+                await game.combats.active.setFlag('wfrp4e-pl-addons', 'spells', spells);
+            });
         }
     }
 });
-
-Hooks.on("preUpdateCombat", async function (combat, updateData) {
-    
-});
-
 
 Hooks.on("preUpdateCombat", async (combat, updateData, context) => {
     const previousId = combat.combatant?.id;

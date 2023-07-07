@@ -10,5 +10,8 @@
   },
   "scripts": {
     "build": "cross-env NODE_ENV=development rollup --config rollup.config.js --watch"
+  },
+  "dependencies": {
+    "@foundryvtt/foundryvtt-cli": "^0.0.9"
   }
 }
