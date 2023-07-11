@@ -51,5 +51,7 @@
 
    "WFRP4E.ArmourType.Light": "Lekki Pancerz",
    "WFRP4E.ArmourType.Medium": "Średni Pancerz",
-   "WFRP4E.ArmourType.Heavy": "Ciężki Pancerz"
+   "WFRP4E.ArmourType.Heavy": "Ciężki Pancerz",
+
+   "NAME.CombatMaster": "Mistrz Walki"
 }
