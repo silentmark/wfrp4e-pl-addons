@@ -18,7 +18,8 @@ Hooks.on("setup", () => {
               this.result.mis = game.i18n.localize("Manifestacja Chaosu");
               const wind = game.wfrp4e.config.magicWind[this.spell.lore.value.toLowerCase()];
               if (game.combats.active && game.combats.active.flags['wfrp4e-pl-addons']['winds']) {
-                modifier = game.combats.active.flags['wfrp4e-pl-addons']['winds'].find(x=> x.wind == wind)?.modifier;
+                modifier = game.combats.active.flags['wfrp4e-pl-addons']['winds']?.modifier.find(x=>x.wind == wind)?.modifier;
+
                 if (modifier) {
                   console.log("Modyfikator z wiatrów magii: " + modifier);
                   this.result.tooltips.miscast.push("Modyfikator z wiatrów magii: " + modifier);
@@ -85,7 +86,7 @@ Hooks.on("setup", () => {
               this.result.miscastTable = "miscast";
               const table = game.wfrp4e.tables.findTable("miscast" + wind?.toLowerCase())
               if (table) {
-                modifier = game.combats.active.flags['wfrp4e-pl-addons']['winds'].find(x=> x.wind == wind)?.modifier;
+                modifier = game.combats.active.flags['wfrp4e-pl-addons']['winds']?.modifier.find(x=>x.wind == wind)?.modifier;
                 if (!modifier) { 
                   modifier = 0;
                 }

@@ -47,7 +47,7 @@ Hooks.on("createCombat", async function (combat) {
   
 Hooks.on("updateCombat", async function (combat, updateData) {
     if (game.user.isGM) {
-        if (!updateData.round && !updateData.turn) {
+        if (typeof(updateData.round) === 'undefined' && typeof(updateData.turn) === 'undefined') {
             return
         }
         let actor = game.actors.get(combat.combatants.get(combat.current.combatantId).actorId);
@@ -74,7 +74,7 @@ Hooks.on("updateCombat", async function (combat, updateData) {
                                     "effectTrigger": "prefillDialog",
                                     "script": `
                                         let skillName = "Splatanie Magii (${wind})";
-                                        if (args.type == "skill" && args.item.name == skillName) {
+                                        if (args.type == "channelling" && game.wfrp4e.config.magicWind[args.item?.lore?.value] == '${wind}') {
                                             args.prefillModifiers.modifier += ${modifier};
                                         }
                                 `
