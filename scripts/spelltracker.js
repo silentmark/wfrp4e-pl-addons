@@ -38,6 +38,7 @@ Hooks.on("renderCombatTracker", (app, html, options) => {
         if (spells) {
             let rows = ``;
             for(let messageId in spells) {
+                if (!spells[messageId]) continue;
                 let actorId = spells[messageId].castTest.data.context.speaker.actor;
                 let actorName = spells[messageId].castTest.data.context.cardOptions.speaker.alias;
                 let spellName = spells[messageId].castTest.data.preData.itemData.name;
@@ -152,6 +153,7 @@ Hooks.on("updateCombat", async (combat, changes, context) => {
         if (!spells) 
             return;
         for (let messageId in spells) {
+            if (!spells[messageId]) continue;
             let duration = spells[messageId].castTest.data.result.overcast.usage.duration;
             let templates = spells[messageId].castTest.data.context.templates;
             if (Number.isInteger(duration.current) && duration.current > 0 && templates) {
@@ -177,7 +179,7 @@ Hooks.on("updateCombat", async (combat, changes, context) => {
                             }
                         });
 
-                        if (targetCombatant) {
+                        if (targetCombatant && !targetCombatant.isDefeated) {
                             let caster = game.actors.get(spells[messageId].castTest.data.context.speaker.actor);
                             let spellItem = caster.items.get(spells[messageId].castTest.data.preData.itemData._id);
                             let actor = game.actors.get(targetCombatant.actorId);
