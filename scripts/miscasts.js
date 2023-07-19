@@ -12,6 +12,9 @@ Hooks.on("setup", () => {
                 mis = true;
               }
             }
+            if (game.wfrp4e.config.magicWind[this.spell.lore.value.toLowerCase()] == "Dhar" && this.result.roll.toString().includes("8")) {
+              mis = true;
+            } 
 
             if (mis) {
               let globalModifier = 0;
@@ -67,6 +70,17 @@ Hooks.on("setup", () => {
                 this.result.tooltips.miscast.push("Czar prosty: " + -50);
                 globalModifier -= 50;
               }
+              if (wind == "Dhar" && (this.preData.unofficialGrimoire.ingredientMode == 'none' || this.hasIngredient)) {
+                console.log("Magia Dhar bez składnika: " + -50);
+                this.result.tooltips.miscast.push("Magia Dhar bez składnika: " +50);
+                globalModifier += 50;
+              }
+              if (wind == "Dhar" && this.result.roll == 88) {
+                console.log("Magia Dhar 88: " +50);
+                this.result.tooltips.miscast.push("Magia Dhar przy 88: " +50);
+                globalModifier += 50;
+              }
+
               if (this.preData.unofficialGrimoire.ingredientMode == "control") {
                 console.log("Użyto składnika kontroli: " + -this.actor.characteristics.wp.value);
                 this.result.tooltips.miscast.push("Użyto składnika kontroli: " + -this.actor.characteristics.wp.value);

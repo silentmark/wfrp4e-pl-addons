@@ -45,6 +45,7 @@ Hooks.on("renderCombatTracker", (app, html, options) => {
                 let spellImg = spells[messageId].castTest.data.preData.itemData.img;
                 let spellId = spells[messageId].castTest.data.preData.itemData._id;
                 let duration = spells[messageId].castTest.data.result.overcast.usage.duration;
+                let dispelValue = spells[messageId].castTest.data.result.itemData.system.cn.value + Number.parseInt(spells[messageId].castTest.data.result.SL);
                 
                 let textStyle = ""
                 let imageStyle = "";
@@ -56,15 +57,19 @@ Hooks.on("renderCombatTracker", (app, html, options) => {
                 rows += `<li class="directory-item flexrow" style="position: relative; height: 55px;" data-message-id="${messageId}" data-spell-id="${spellId}" data-actor-id="${actorId}">
                 <div class="flexcol"><img style="width:48px;${imageStyle}" alt="${spellName}" src="${spellImg}"></div>
                 <div class="flexcol">
-                    <h4 style="width: 200px;text-overflow:ellipsis;${textStyle}">${spellName} - ${actorName}</h4>
-                </div>        
+                    <h4 style="width: 150px;text-overflow:ellipsis;${textStyle}" title="${spellName} - ${actorName}">${spellName} - ${actorName}</h4>
+                </div>
                 <div class="flexcol duration-value" style="text-align: center;">
                     <span style="${textStyle}">${duration.current}</span>
-                </div>        
+                </div>
                 <div class="flexcol duration-unit" style="text-align: center;">
                     <span style="${textStyle}">${duration.unit}</span>
                 </div>
+                <div class="flexcol dispel-value" style="text-align: center;" title="Wartość Rozproszenia">
+                    <span style="${textStyle}">${dispelValue}</span>
+                </div>
                 <div>
+                    <a class="item-controls item-dispel" data-spell-id="${messageId}" title="Rozprosz Zaklęcie"><i class="fas fa-burst"></i></a>
                     <a class="item-controls item-delete" data-spell-id="${messageId}" title="Skasuj Zaklęcie"><i class="fas fa-trash"></i></a>
                 </div>
             </li>`;
@@ -85,6 +90,47 @@ Hooks.on("renderCombatTracker", (app, html, options) => {
                 }
                 spells[this.dataset.spellId] = null;
                 await game.combats.active.setFlag('wfrp4e-pl-addons', 'spells', spells);
+            });
+            newElement.find(".item-dispel").click(async function () {
+                let spells = game.combats.active.getFlag('wfrp4e-pl-addons', 'spells');
+                let messageId = this.dataset.spellId;
+                if (!spells) {
+                    return;
+                }
+                if (game.canvas.tokens.controlled.length !== 1) {
+                    return;
+                }
+                let actor = game.canvas.tokens.controlled[0].actor;
+                let skill = actor.getItemTypes("skill").find(x => x.name == "Język (Magiczny)");
+                if (!skill) {
+                    return;
+                }
+                let spell = spells[messageId];
+                let dispelValue = spell.castTest.data.result.itemData.system.cn.value + Number.parseInt(spell.castTest.data.result.SL);
+                let dispelTest = actor.getItemTypes("extendedTest").find(x => x.getFlag('wfrp4e-pl-addons', 'messageId') == messageId);
+                if (!dispelTest) {
+                    dispelTestData = {
+                        name : "Rozpraszanie Zaklęcia - " + spell.castTest.data.result.itemData.name,
+                        type : "extendedTest",
+                        system : {
+                            completion:{value: 'remove'},
+                            description:{type: 'String', label: 'Description', value: ''},
+                            failingDecreases:{value: true},
+                            gmdescription:{type: 'String', label: 'Description', value: ''},
+                            hide: { test: false, progress: false },
+                            negativePossible: { value: true },
+                            SL: { current: 0, target: dispelValue },
+                            test: { value: "Język (Magiczny)" }
+                        },
+                        flags : { 
+                            'wfrp4e-pl-addons' : {
+                                messageId : messageId
+                            }
+                        }
+                    }
+                    dispelTest = await actor.createEmbeddedDocuments("Item", [dispelTestData])[0];
+                }
+                await actor.setupExtendedTest(dispelTest, {appendTitle : " - Rozpraszanie Zaklęcia"});
             });
         }
     }
