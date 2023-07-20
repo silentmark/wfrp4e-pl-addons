@@ -171,30 +171,12 @@ Hooks.on("preUpdateCombat", async (combat, updateData, context) => {
     }
 });
 
-  // onTurnStart/End/Each
-Hooks.on("updateCombat", async (combat, changes, context) => {
-    const cTurn = combat.current.turn;
-    const pTurn = foundry.utils.getProperty(context, `wfrp4e-pl-addons.previousTR.T`);
-    const cRound = combat.current.round;
-    const pRound = foundry.utils.getProperty(context, `wfrp4e-pl-addons.previousTR.R`);
-
-    // no change in turns nor rounds.
-    if (changes.turn === undefined && changes.round === undefined) return;
-    // combat not started or not active.
-    if (!combat.started || !combat.isActive) return;
-    // we went back.
-    if (cRound < pRound || (cTurn < pTurn && cRound === pRound)) return;
-
+Hooks.on('updateToken', async (tokenDocument, data, options) => {
     if (!game.user.isGM) return;
+    if (!game.combat || !game.combat.active) return;
+    if (data.x > 0 || data.y > 0) {
+        let combat = game.combat;
 
-    // retrieve combatants.
-    const currentCombatant = combat.combatant;
-    const previousId = foundry.utils.getProperty(context, `wfrp4e-pl-addons.previousCombatant`);
-    const wasStarted = foundry.utils.getProperty(context, `wfrp4e-pl-addons.started`);
-    const previousCombatant = wasStarted ? combat.combatants.get(previousId) : null;
-
-    // end turn
-    if (previousCombatant && !previousCombatant.isDefeated) {
         let spells = combat.getFlag('wfrp4e-pl-addons', 'spells');
         if (!spells) 
             return;
@@ -202,50 +184,47 @@ Hooks.on("updateCombat", async (combat, changes, context) => {
             if (!spells[messageId]) continue;
             let duration = spells[messageId].castTest.data.result.overcast.usage.duration;
             let templates = spells[messageId].castTest.data.context.templates;
-            if (Number.isInteger(duration.current) && duration.current > 0 && templates) {
-                for(let i = 0; i < templates.length; i++) {
-                    let templateId = templates[i];
-                    let template =  game.canvas.templates.get(templateId);
-                    if (template) {
-                        let grid = canvas.scene.grid;
-                        let templateData = template.document;
-                        let templateGridSize = templateData.distance/grid.distance * grid.size
-                    
-                        let minx = templateData.x - templateGridSize
-                        let miny = templateData.y - templateGridSize
-                    
-                        let maxx = templateData.x + templateGridSize
-                        let maxy = templateData.y + templateGridSize
-                    
-                        let targetCombatant;
-                        canvas.tokens.placeables.forEach(t => {
-                        if ((t.x + (t.width / 2)) < maxx && (t.x + (t.width / 2)) > minx && (t.y + (t.height / 2)) < maxy && (t.y + (t.height / 2)) > miny)
-                            if (t.id == previousCombatant.tokenId) {
-                                targetCombatant = previousCombatant;
+            const targetToken = canvas.tokens.placeables.find(t => t.id == tokenDocument.id);
+            const tokenRect = new PIXI.Rectangle(tokenDocument.x, tokenDocument.y, tokenDocument.w, tokenDocument.h).normalize();
+            if (targetToken && !targetToken.isDefeated) {
+                if (Number.isInteger(duration.current) && duration.current > 0 && templates) {
+                    for (let i = 0; i < templates.length; i++) {
+                        let templateId = templates[i];
+                        let template =  game.canvas.templates.get(templateId);
+                        if (template) {
+                            const cells = template._getGridHighlightPositions();
+                            let affected = false;
+                            for (const cell of cells) {
+                                if (cell.x <= tokenRect.right && cell.x >= tokenRect.left && cell.y <= tokenRect.bottom && cell.y >= tokenRect.top) {
+                                    affected = true; 
+                                    break;
+                                }
                             }
-                        });
-
-                        if (targetCombatant && !targetCombatant.isDefeated) {
-                            let caster = game.actors.get(spells[messageId].castTest.data.context.speaker.actor);
-                            let spellItem = caster.items.get(spells[messageId].castTest.data.preData.itemData._id);
-                            let actor = game.actors.get(targetCombatant.actorId);
-                            let measuredTemplateeffects = spellItem.effects.filter(e => e.trigger == "measuredTemplate");
-                            for (let j = 0; j < measuredTemplateeffects.length; j++) {
-                                let effect = measuredTemplateeffects[j];
-                                await game.wfrp4e.utility.runSingleEffect(effect, actor, spellItem, {caster});
+                            if (affected) {
+                                let caster = game.actors.get(spells[messageId].castTest.data.context.speaker.actor);
+                                let spellItem = caster.items.get(spells[messageId].castTest.data.preData.itemData._id);
+                                let measuredTemplateeffects = spellItem.effects.map(x=>x.toObject());
+                                for (let j = 0; j < measuredTemplateeffects.length; j++) {
+                                    let effect = measuredTemplateeffects[j];
+                                    let existingEffect = targetToken.actor.actorEffects.find(e => e.flags.wfrp4e?.messageId == messageId && e.name == effect.name);
+                                    if (existingEffect) continue;
+                                    mergeObject(effect, { duration: {rounds: duration.current}, flags: {wfrp4e: { messageId: messageId } } });
+                                    await game.wfrp4e.utility.applyEffectToTarget(effect, [targetToken]);
+                                }
+                            } else {
+                                let effectsToRemove = targetToken.actor.actorEffects.filter(e => e.flags.wfrp4e?.messageId == messageId);
+                                if (effectsToRemove.length > 0) {
+                                    await targetToken.actor.deleteEmbeddedDocuments("ActiveEffect", effectsToRemove.map(e => e.id))
+                                }
+                                let itemsToRemove = targetToken.actor.items.filter(x => x.flags.wfrp4e?.effect == messageId);
+                                if (itemsToRemove.length > 0) {
+                                    await targetToken.actor.deleteEmbeddedDocuments("Item", itemsToRemove.map(e => e.id))
+                                }
                             }
                         }
                     }
                 }
             }
-        }
-    }
-
-    // start turn
-    if (currentCombatant && !currentCombatant.isDefeated) {
-        let measuredTemplateeffects = currentCombatant.actor.actorEffects.filter(e => e.trigger == "measuredTemplate");
-        if (measuredTemplateeffects.length > 0) {
-            await currentCombatant.actor.deleteEmbeddedDocuments("ActiveEffect", measuredTemplateeffects.map(e => e.id))
         }
     }
 });

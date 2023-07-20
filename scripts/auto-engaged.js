@@ -1,6 +1,6 @@
 Hooks.on('updateToken', (tokenDocument, data, options) => {
   if (game.user.isGM) {
-    if (data.x > 0 || data.y > 0) {
+      if (data.x > 0 || data.y > 0) {
       let token = game.canvas.tokens.get(tokenDocument.id);
       let tokenX = data.x ?? token.x;
       let tokenY = data.y ?? token.y;
