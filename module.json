@@ -10,7 +10,6 @@
   ],
   "scripts": [
     "/scripts/settings.js",
-    "/scripts/ammoReplenish.js",
     "/scripts/armour.js",
     "/scripts/windsofmagic.js",
     "/scripts/auto-counterspell.js",
