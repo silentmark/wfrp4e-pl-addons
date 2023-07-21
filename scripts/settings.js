@@ -164,12 +164,7 @@ Hooks.on("setup", () => {
     }
 
     mergeObject(game.wfrp4e.config, config);
-
-    setTimeout(() => {            
-        game.wfrp4e.config.effectTriggers.measuredTemplate = "Efekt Szablonu";
-        game.wfrp4e.config.effectPlaceholder.measuredTemplate = ``;
-    }, (timeout = 250));
-
+    
     if (game.settings.get("wfrp4e-pl-addons", "alternativeArmour.Enable")) {
       game.wfrp4e.config.armorTypes = {
         "light": game.i18n.localize("WFRP4E.ArmourType.Light"),
