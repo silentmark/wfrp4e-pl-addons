@@ -20,6 +20,7 @@ Hooks.on("setup", () => {
               let globalModifier = 0;
               this.result.mis = game.i18n.localize("Manifestacja Chaosu");
               const wind = game.wfrp4e.config.magicWind[this.spell.lore.value.toLowerCase()];
+              let modifier = 0;
               if (game.combats.active && game.combats.active.flags['wfrp4e-pl-addons']['winds']) {
                 modifier = game.combats.active.flags['wfrp4e-pl-addons']['winds']?.modifier.find(x=>x.wind == wind)?.modifier;
 
@@ -27,6 +28,8 @@ Hooks.on("setup", () => {
                   console.log("Modyfikator z wiatrów magii: " + modifier);
                   this.result.tooltips.miscast.push("Modyfikator z wiatrów magii: " + modifier);
                   globalModifier += modifier;
+                } else {
+                  modifier = 0;
                 }
               }
               console.log("Modyfikator z Punktów Zaklęcia: " + Number.parseInt(this.item.cn.SL) * 3);
@@ -100,17 +103,11 @@ Hooks.on("setup", () => {
               this.result.miscastTable = "miscast";
               const table = game.wfrp4e.tables.findTable("miscast" + wind?.toLowerCase())
               if (table) {
-                if (game.combat && game.combat.active) {
-                  modifier = game.combats.active.flags['wfrp4e-pl-addons']['winds']?.modifier.find(x=>x.wind == wind)?.modifier;
-                }
-                if (!modifier) { 
-                  modifier = 0;
-                }
                 let formula;
                 if (modifier < 0) {
-                  formula = `1d100${modifier}`
+                  formula = `1d100 - ${Math.abs(modifier)}`
                 } else {
-                  formula = `1d100 + ${modifier}`
+                  formula = `1d100 + ${Math.abs(modifier)}`
                 }
                 if (Number.parseInt(new Roll("1d100").roll({async: false}).result) > 50) {
                   this.result.miscastTable = "miscast" + wind.toLowerCase();

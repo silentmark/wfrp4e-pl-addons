@@ -132,12 +132,13 @@ Hooks.on("ready", () => {
         },
 
         loreEffectDescriptions: {
-          waaagh: "Waaagh! Gorka Morka!"
+          waaagh: "Waaagh! Gorka Morka!",
+          slaanesh: "Tradycja Slaanesha przynosi ból i ekstazę, wszystko w imię Księcia Bólu i Przyjemności dla jego wiecznego zadowolenia, łącząc perwersyjną mieszankę Ametystowego, Złotego i Jadeitowego Wiatru w coś pokręconego i egzotycznego. Efekt Tradycji: Czarnoksiężnik Slaanesha jest biegły w sztuce dostarczania przyjemności i bólu. Możesz zadać dodatkową ranę za każdy Stan Ogłuszenia lub Paniki odniesiony przez cele twoich zaklęć."
         },
 
         loreEffects: {
           waaagh: {
-            label: "Tradycja Waaagh!",
+            name: "Tradycja Waaagh!",
             icon: "modules/wfrp4e-unofficial-grimoire/icons/spell_waaaaaagh!.jpg",
             transfer: true,
             flags: {
@@ -158,6 +159,33 @@ Hooks.on("ready", () => {
                         }
                     `,
               },
+            }
+          },
+
+          slaanesh: {
+            name: "Tradycja Slaanesha",
+            icon: "modules/wfrp4e-core/icons/spells/slaanesh.png",
+            transfer: true,
+            flags: {
+              wfrp4e: {
+                effectApplication: "apply",
+                effectTrigger: "oneTime",
+                lore: true,
+                script: `
+                        let stunned = this.actor.hasCondition("stunned");
+                        let broken = this.actor.hasCondition("broken");
+                        let wounds = 0; 
+                        if (stunned) { 
+                          wounds += stunned.conditionValue;
+                        }
+                        if (broken) {
+                          wounds += broken.conditionValue;
+                        }
+                        if (wounds) {
+                          this.actor.applyBasicDamage(wounds, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL});
+                        }
+                    `,
+              }
             },
           },
         }

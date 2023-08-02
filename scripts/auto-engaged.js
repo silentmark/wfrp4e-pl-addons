@@ -69,7 +69,7 @@ Hooks.on('wfrp4e:rollWeaponTest', (test, cardOptions) => {
       tokens.forEach(t => t.actor.addCondition("engaged"));
     } else {
       const effectData = {
-        label: "Zwiąż Walką",
+        name: "Zwiąż Walką",
         transfer: true,
         flags: {
           wfrp4e: {

@@ -62,10 +62,10 @@ Hooks.on("updateCombat", async function (combat, updateData) {
             if (winds) {
                 let modifier = winds.modifier.find(x=> x.wind == wind).modifier;
                 if (modifier != 0) {
-                    let effect = actor.effects.find(x => x.label == 'Wiatry Magii (' + wind + ')');
+                    let effect = actor.effects.find(x => x.name == 'Wiatry Magii (' + wind + ')');
                     if (!effect) {
                         effect = {
-                            label: 'Wiatry Magii (' + wind + ')',
+                            name: 'Wiatry Magii (' + wind + ')',
                             icon: "modules/wfrp4e-core/icons/spells/octagram.png",
                             transfer: false,
                             flags: {
@@ -88,7 +88,7 @@ Hooks.on("updateCombat", async function (combat, updateData) {
                     let deamonName = winds.deamonName;
                     let script = `
                     let suffusedWithMagicEffect = {
-                        label: 'Nasycenie Magią',
+                        name:s 'Nasycenie Magią',
                         icon: "modules/wfrp4e-core/icons/spells/tzeentch.png",
                         transfer: false,
                         duration: {
@@ -124,10 +124,10 @@ Hooks.on("updateCombat", async function (combat, updateData) {
                         this.actor.createEmbeddedDocuments("ActiveEffect", [suffusedWithMagicEffect]);
                     }
             `
-                    let effect = actor.effects.find(x => x.label == 'Złowrogie Wpływy Tzeentcha (Czarowanie)');
+                    let effect = actor.effects.find(x => x.name == 'Złowrogie Wpływy Tzeentcha (Czarowanie)');
                     if (!effect) {
                         effect = {
-                            label: 'Złowrogie Wpływy Tzeentcha (Czarowanie)',
+                            name: 'Złowrogie Wpływy Tzeentcha (Czarowanie)',
                             icon: "modules/wfrp4e-core/icons/spells/tzeentch.png",
                             transfer: false,
                             flags: {
@@ -140,10 +140,10 @@ Hooks.on("updateCombat", async function (combat, updateData) {
                         }
                         await actor.createEmbeddedDocuments("ActiveEffect", [effect])
                     }                    
-                    effect = actor.effects.find(x => x.label == 'Złowrogie Wpływy Tzeentcha (Splatanie)');
+                    effect = actor.effects.find(x => x.name == 'Złowrogie Wpływy Tzeentcha (Splatanie)');
                     if (!effect) {
                         effect = {
-                            label: 'Złowrogie Wpływy Tzeentcha (Splatanie)',
+                            name: 'Złowrogie Wpływy Tzeentcha (Splatanie)',
                             icon: "modules/wfrp4e-core/icons/spells/undivided.png",
                             transfer: false,
                             flags: {
@@ -168,7 +168,7 @@ Hooks.on("deleteCombat", async function (combat) {
         let actors = game.actors.map(x=>x);
         for (let i = 0; i < actors.length; i++) {
             let actor = actors[i];
-            let effects = actor.effects.filter(x=> x.label.startsWith('Wiatry Magii') || x.label.startsWith('Złowrogie Wpływy Tzeentcha'));
+            let effects = actor.effects.filter(x=> x.name.startsWith('Wiatry Magii') || x.name.startsWith('Złowrogie Wpływy Tzeentcha'));
             if (effects.length > 0) {
                 effects = effects.map(x => x.id);
                 await actor.deleteEmbeddedDocuments("ActiveEffect", effects);
