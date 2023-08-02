@@ -1,6 +1,5 @@
-
 Hooks.on("renderChatMessage", async (app, html, messageData) => {
-    if (!game.user.isUniqueGM) {
+    if (!game.user.isGM) {
       return;
     }
     const combat = game.combats.active;
@@ -39,13 +38,19 @@ Hooks.on("renderCombatTracker", (app, html, options) => {
             let rows = ``;
             for(let messageId in spells) {
                 if (!spells[messageId]) continue;
-                let actorId = spells[messageId].castTest.data.context.speaker.actor;
-                let actorName = spells[messageId].castTest.data.context.cardOptions.speaker.alias;
-                let spellName = spells[messageId].castTest.data.preData.itemData.name;
-                let spellImg = spells[messageId].castTest.data.preData.itemData.img;
-                let spellId = spells[messageId].castTest.data.preData.itemData._id;
-                let duration = spells[messageId].castTest.data.result.overcast.usage.duration;
-                let dispelValue = spells[messageId].castTest.data.result.itemData.system.cn.value + Number.parseInt(spells[messageId].castTest.data.result.SL);
+                const msg = spells[messageId]
+                let actorId = msg.castTest.data.context.speaker.actor;
+                let actorName = msg.castTest.data.context.cardOptions.speaker.alias;
+                let spellName = msg.castTest.data.preData.itemData.name;
+                let spellImg = msg.castTest.data.preData.itemData.img;
+                let spellId = msg.castTest.data.preData.itemData._id;
+                let duration = msg.castTest.data.result.overcast.usage.duration;
+                let isMemorized = msg.castTest.data.result.itemData.system.memorized.value;
+                let cnValue = msg.castTest.data.result.itemData.system.cn.value;
+                if (!isMemorized) {
+                    cnValue = cnValue / 2;
+                }
+                let dispelValue = cnValue + Number.parseInt(msg.castTest.data.result.SL);
                 
                 let textStyle = ""
                 let imageStyle = "";
@@ -159,9 +164,11 @@ Hooks.on("preUpdateCombat", async (combat, updateData, context) => {
                 let spells = combat.getFlag('wfrp4e-pl-addons', 'spells');
                 if (spells) {
                     for (let messageId in spells) {
-                        let duration = spells[messageId].castTest.data.result.overcast.usage.duration;
-                        if (duration.unit === 'rund' && Number.isInteger(duration.current) && duration.current > 0) {
-                            duration.current = Number.parseInt(duration.current) - 1;
+                        if (spells[messageId]) {
+                            let duration = spells[messageId].castTest.data.result.overcast.usage.duration;
+                            if (duration.unit === 'rund' && Number.isInteger(duration.current) && duration.current > 0) {
+                                duration.current = Number.parseInt(duration.current) - 1;
+                            }
                         }
                     }
                     await combat.setFlag('wfrp4e-pl-addons', 'spells', spells);

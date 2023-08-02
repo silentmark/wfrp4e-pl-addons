@@ -91,7 +91,7 @@ Hooks.once("init", function() {
 
 
 
-Hooks.on("setup", () => {
+Hooks.on("ready", () => {
     const config = {
         weaponQualities: {
           slash: game.i18n.localize("PROPERTY.Slash"),

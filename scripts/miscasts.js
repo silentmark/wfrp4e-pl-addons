@@ -100,7 +100,9 @@ Hooks.on("setup", () => {
               this.result.miscastTable = "miscast";
               const table = game.wfrp4e.tables.findTable("miscast" + wind?.toLowerCase())
               if (table) {
-                modifier = game.combats.active.flags['wfrp4e-pl-addons']['winds']?.modifier.find(x=>x.wind == wind)?.modifier;
+                if (game.combat && game.combat.active) {
+                  modifier = game.combats.active.flags['wfrp4e-pl-addons']['winds']?.modifier.find(x=>x.wind == wind)?.modifier;
+                }
                 if (!modifier) { 
                   modifier = 0;
                 }

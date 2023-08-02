@@ -120,7 +120,7 @@ Hooks.on("updateCombat", async (combat, updateData) => {
 });
 
 Hooks.on("renderChatMessage", async (app, html, messageData) => {
-  if (!game.user.isUniqueGM) {
+  if (!game.user.isGM) {
     return;
   }
 
@@ -185,7 +185,7 @@ Hooks.on("renderChatMessage", async (app, html, messageData) => {
     });
   }
 
-  if (app.flags?.wfrp4e?.opposeData?.attackerMessageId && app.flags?.wfrp4e?.opposeData?.messageId && !app.flags.wfrp4e.opposeData.resultMessageId) {
+  if (game.ready && app.flags?.wfrp4e?.opposeData?.attackerMessageId && app.flags?.wfrp4e?.opposeData?.messageId && !app.flags.wfrp4e.opposeData.resultMessageId) {
     let msg = game.messages.get(app.flags.wfrp4e.opposeData.attackerMessageId);
     let postFunction = msg?.flags?.testData?.context?.postFunction;
     if (postFunction == "weaponTest" || postFunction == "traitTest") {
