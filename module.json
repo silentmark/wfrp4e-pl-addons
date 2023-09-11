@@ -16,6 +16,7 @@
     "/scripts/spelltracker.js",
     "/scripts/miscasts.js",
     "/scripts/auto-engaged.js",
+    "/scripts/auto-rotate.js",
     "/scripts/auto-outnumbered.js",
     "/scripts/reroll-initiative.js",
     "/scripts/auto-combat.js"

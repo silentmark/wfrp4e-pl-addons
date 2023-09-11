@@ -10,7 +10,17 @@ let modulePath = foundryPath.modulePath(manifest.name)
 console.log("Bundling to " + modulePath)
 export default {
     input: [
-        "scripts/ammoReplenish.js", "scripts/armour.js", "scripts/armour.js", "scripts/settings.js", "scripts/windsofmagic.js"
+        "scripts/armour.js", 
+        "scripts/auto-combat.js", 
+        "scripts/auto-counterspell.js", 
+        "scripts/auto-engaged.js", 
+        "scripts/auto-outnumbered.js",
+        "scripts/auto-rotate.js", 
+        "scripts/miscasts.js", 
+        "scripts/reroll-initiative.js", 
+        "scripts/settings.js", 
+        "scripts/spelltracker.js", 
+        "scripts/windsofmagic.js"
     ],
     output: {
         dir : path.join(modulePath, "scripts")

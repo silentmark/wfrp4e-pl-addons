@@ -4,7 +4,8 @@ Hooks.on("init", function() {
   const maxOutnumberingMultiplier = 3;
 
   game.wfrp4e.config.customPrefillModifiers.calculateOutnumbering = async function(item, type, options, tooltips, prefillModifiers) {
-    // this = actor;
+    game.canvas.tokens.placeables.forEach(tok => new Sequence().animation().on(tok).tint("#FFFFFF").play());
+
     if (type != "trait" && type != "weapon") return;
     if (game.user.targets.size && item.type === "weapon" && item.attackType == "melee") {
       let tooltip = "Przewaga Liczebna: ";
@@ -16,7 +17,6 @@ Hooks.on("init", function() {
       const targeToken = game.user.targets.first();
       let outnumbering = -(targeToken.hitArea.width / game.canvas.grid.grid.w) + 1;
       
-
       let tokenX = targeToken.x;
       let tokenY = targeToken.y;
 
@@ -50,7 +50,12 @@ Hooks.on("init", function() {
         let h1 = targeToken.hitArea.y + targeToken.hitArea.height - (LAMBDA*2);
 
         for (let tok of canvas.tokens.placeables) {
-          if (tok.id != targeToken.id && tok.actor.hasCondition("engaged")) {
+          if (tok.id != targeToken.id 
+            && tok.actor.hasCondition("engaged") 
+            && !tok.actor.hasCondition("dead") 
+            && !tok.actor.hasCondition("unconscious")
+            && !tok.actor.hasCondition("broken")
+            && !tok.actor.hasCondition("stunned")) {
             let x2 = tok.x;
             let y2 = tok.y;
             let w2 = tok.hitArea.x + tok.hitArea.width;
@@ -64,6 +69,12 @@ Hooks.on("init", function() {
                 } else {
                   outnumbering--;
                 }
+                 
+                if (tok.document.disposition === 1) {
+                  new Sequence().animation().on(tok).tint("#00FF00").play();
+                } else {
+                  new Sequence().animation().on(tok).tint("#FF0000").play();
+                }
                 processedTokens.push(tok.id);
               }
             }
@@ -74,6 +85,7 @@ Hooks.on("init", function() {
       const talent = targeToken.actor.getItemTypes("talent").find(x=>x.name == game.i18n.localize("NAME.CombatMaster"));
       if(talent?.length > 0) {
         outnumbering -= talent.advances;
+        tooltips.push(game.i18n.localize("NAME.CombatMaster"))
       }
       if (outnumbering > 0) {
         const outnumberFinalModifier = Math.min(outnumbering * outnumberingModifier, maxOutnumberingMultiplier * outnumberingModifier);
@@ -82,5 +94,11 @@ Hooks.on("init", function() {
         tooltips.push(tooltip);
       }
     }
+  }
+});
+
+Hooks.on("updateCombat", function() {
+  if (game.user.isGM) {
+    game.canvas.tokens.placeables.forEach(tok => new Sequence().animation().on(tok).tint("#FFFFFF").play());
   }
 });
