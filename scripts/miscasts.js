@@ -99,6 +99,7 @@ Hooks.on("setup", () => {
                 this.result.tooltips.miscast.push("Zmysł Magii: " + -this.actor.characteristics.wp.value);
                 globalModifier -= this.actor.characteristics.wp.value;
               }
+              this.result.tooltips.miscastText = `Manifestacje Chaosu: <ul><li style='float: left'>${this.result.tooltips.miscast.map(t => t.trim()).join("</li><li>")}</li></ul>`
               this.result.miscastModifier = globalModifier;
               this.result.miscastTable = "miscast";
               const table = game.wfrp4e.tables.findTable("miscast" + wind?.toLowerCase())
