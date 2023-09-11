@@ -4,7 +4,9 @@ Hooks.on("init", function() {
   const maxOutnumberingMultiplier = 3;
 
   game.wfrp4e.config.customPrefillModifiers.calculateOutnumbering = async function(item, type, options, tooltips, prefillModifiers) {
-    game.canvas.tokens.placeables.forEach(tok => new Sequence().animation().on(tok).tint("#FFFFFF").play());
+    for (const tok of game.canvas.tokens.placeables) {
+      await (new Sequence().animation().on(tok).tint("#FFFFFF").play());
+    }
 
     if (type != "trait" && type != "weapon") return;
     if (game.user.targets.size && item.type === "weapon" && item.attackType == "melee") {
@@ -42,7 +44,7 @@ Hooks.on("init", function() {
         surroundings.push({x: tokenX + hitAreaX, y: tokenY + gridY * i});
       }
 
-      surroundings.forEach(pos => {
+      for (const pos of surroundings) {
         const LAMBDA = 5;
         let x1 = pos.x + LAMBDA;
         let y1 = pos.y + LAMBDA;
@@ -71,16 +73,16 @@ Hooks.on("init", function() {
                 }
                  
                 if (tok.document.disposition === 1) {
-                  new Sequence().animation().on(tok).tint("#00FF00").play();
+                  await (new Sequence().animation().on(tok).tint("#00FF00").play());
                 } else {
-                  new Sequence().animation().on(tok).tint("#FF0000").play();
+                  await (new Sequence().animation().on(tok).tint("#FF0000").play());
                 }
                 processedTokens.push(tok.id);
               }
             }
           }
         }
-      });
+      }
 
       const talent = targeToken.actor.getItemTypes("talent").find(x=>x.name == game.i18n.localize("NAME.CombatMaster"));
       if(talent?.length > 0) {
@@ -97,8 +99,8 @@ Hooks.on("init", function() {
   }
 });
 
-Hooks.on("updateCombat", function() {
+Hooks.on("updateCombat", async function() {
   if (game.user.isGM) {
-    game.canvas.tokens.placeables.forEach(tok => new Sequence().animation().on(tok).tint("#FFFFFF").play());
+    await Promise.all(game.canvas.tokens.placeables.map(tok => new Sequence().animation().on(tok).tint("#FFFFFF").play()));
   }
 });
