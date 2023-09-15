@@ -136,6 +136,14 @@ Hooks.on("renderChatMessage", async (app, html, messageData) => {
       let targets = Array.from(user.targets).map(t => t.actor.speakerData(t.document))
 
       castTest.context.targets = castTest.context.targets.concat(targets);
+      let uniqueTargets = []; 
+      castTest.context.targets.forEach(target => {
+        if (uniqueTargets.find(x=>x._id == target._id)) {
+          return;
+        }
+        uniqueTargets.push(target);
+      });
+      castTest.context.targets = uniqueTargets;
 
       if(castTest.item.magicMissile?.value) {
         targets = castTest.context.targets.map(t => WFRP_Utility.getToken(t));
@@ -148,18 +156,22 @@ Hooks.on("renderChatMessage", async (app, html, messageData) => {
         castTest = message.getTest();
         for(let i = 0; i < castTest.opposedMessages.length; i++) {
           let opposeMessage = castTest.opposedMessages[i];
-          let oppose = opposeMessage.getOppose();
-          await oppose.resolveUnopposed();
+          if (opposeMessage) {
+            let oppose = opposeMessage.getOppose();
+            await oppose.resolveUnopposed();
+           // oppose.setDefender(//get message from ro);
+          }
         };
 
         message = game.messages.get(messageId);
         castTest = message.getTest();
         for(let i = 0; i < castTest.opposedMessages.length; i++) {
           let opposeMessage = castTest.opposedMessages[i];
-          let opposedTest = opposeMessage.getOppose();
-
-          let updateMsg = await opposedTest.defender.applyDamage(opposedTest.resultMessage.getOpposedTest(), game.wfrp4e.config.DAMAGE_TYPE.NORMAL)
-          await OpposedWFRP.updateOpposedMessage(updateMsg, message.id);
+          if (opposeMessage) {
+            let opposedTest = opposeMessage.getOppose();
+            let updateMsg = await opposedTest.defender.applyDamage(opposedTest.resultMessage.getOpposedTest(), game.wfrp4e.config.DAMAGE_TYPE.NORMAL)
+            await OpposedWFRP.updateOpposedMessage(updateMsg, opposedTest.resultMessage.id);
+          }
         }
       }
       let item = castTest.item
