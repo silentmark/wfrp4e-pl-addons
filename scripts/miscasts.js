@@ -1,5 +1,6 @@
 
 Hooks.on("setup", () => {  
+  if (game.settings.get("wfrp4e-pl-addons", "alternativeArmour.Enable")) {
     Reflect.defineProperty(TestWFRP.prototype, '_handleMiscasts', { value:
         function(miscastCounter)  {
             let mis = false;
@@ -116,5 +117,6 @@ Hooks.on("setup", () => {
               }
             }
           }
-    });
+      });
+    }
   });

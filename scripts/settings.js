@@ -14,75 +14,126 @@ Hooks.once("init", function() {
         }
     });
 
-    // Add enable/disable setting for arrow reclamation feature
-    game.settings.register("wfrp4e-pl-addons", "arrowReclamation.Enable", {
-        name: "wfrp4epladdon.arrowReclamation.Enable",
-        hint: "wfrp4epladdon.arrowReclamation.EnableHint",
+    game.settings.register("wfrp4e-pl-addons", "initiativeRoll.Enable", {
+        name: "wfrp4epladdon.initiativeRoll.Enable",
+        hint: "wfrp4epladdon.initiativeRoll.EnableHint",
         scope: "world",
         config: true,
         default: false,
         type: Boolean
     });
+
+    game.settings.register("wfrp4e-pl-addons", "alternativeMiscasts.Enable", {
+      name: "wfrp4epladdon.alternativeMiscasts.Enable",
+      hint: "wfrp4epladdon.alternativeMiscasts.EnableHint",
+      scope: "world",
+      config: true,
+      default: false,
+      type: Boolean,
+      onChange: value => {
+          foundry.utils.debouncedReload()
+      }
+  });
+
+  game.settings.register("wfrp4e-pl-addons", "windsOfMagicCombatRolls.Enable", {
+    name: "wfrp4epladdon.windsOfMagicCombatRolls.Enable",
+    hint: "wfrp4epladdon.windsOfMagicCombatRolls.EnableHint",
+    scope: "world",
+    config: true,
+    default: false,
+    type: Boolean,
+    onChange: value => {
+        foundry.utils.debouncedReload()
+    }
+  });
+
+  game.settings.register("wfrp4e-pl-addons", "combatSpellTracker.Enable", {
+    name: "wfrp4epladdon.combatSpellTracker.Enable",
+    hint: "wfrp4epladdon.combatSpellTracker.EnableHint",
+    scope: "world",
+    config: true,
+    default: false,
+    type: Boolean,
+    onChange: value => {
+        foundry.utils.debouncedReload()
+    }
+  });
+
+  game.settings.register("wfrp4e-pl-addons", "counterSpells.Enable", {
+    name: "wfrp4epladdon.counterSpells.Enable",
+    hint: "wfrp4epladdon.counterSpells.EnableHint",
+    scope: "world",
+    config: true,
+    default: false,
+    type: Boolean,
+    onChange: value => {
+        foundry.utils.debouncedReload()
+    }
+  });
   
-    // Add enable/disable recovery of Arrows
-    game.settings.register("wfrp4e-pl-addons", "arrowReclamation.EnableArrows", {
-        name: "wfrp4epladdon.arrowReclamation.EnableArrows",
-        hint: "wfrp4epladdon.arrowReclamation.EnableArrowsHint",
-        scope: "world",
-        config: true,
-        default: true,
-        type: Boolean
-    });
+  game.settings.register("wfrp4e-pl-addons", "autoEngaged.Enable", {
+    name: "wfrp4epladdon.autoEngaged.Enable",
+    hint: "wfrp4epladdon.autoEngaged.EnableHint",
+    scope: "world",
+    config: true,
+    default: false,
+    type: Boolean
+  });
   
-    // Add enable/disable recovery of Bolts
-    game.settings.register("wfrp4e-pl-addons", "arrowReclamation.EnableBolts", {
-        name: "wfrp4epladdon.arrowReclamation.EnableBolts",
-        hint: "wfrp4epladdon.arrowReclamation.EnableBoltsHint",
-        scope: "world",
-        config: true,
-        default: false,
-        type: Boolean
-    });
+  game.settings.register("wfrp4e-pl-addons", "autoOutnumbered.Enable", {
+    name: "wfrp4epladdon.autoOutnumbered.Enable",
+    hint: "wfrp4epladdon.autoOutnumbered.EnableHint",
+    scope: "world",
+    config: true,
+    default: false,
+    type: Boolean
+  });
+
+  game.settings.register("wfrp4e-pl-addons", "autoOutnumbered.Bonus", {
+    name: "wfrp4epladdon.autoOutnumbered.Bonus",
+    hint: "wfrp4epladdon.autoOutnumbered.BonusHint",
+    scope: "world",
+    config: true,
+    default: 10,
+    type: Number
+  });
+
+  game.settings.register("wfrp4e-pl-addons", "autoOutnumbered.Max", {
+    name: "wfrp4epladdon.autoOutnumbered.Max",
+    hint: "wfrp4epladdon.autoOutnumbered.MaxHint",
+    scope: "world",
+    config: true,
+    default: 3,
+    type: Number
+  });
+
   
-    // Add enable/disable recovery of Bullets
-    game.settings.register("wfrp4e-pl-addons", "arrowReclamation.EnableBullets", {
-        name: "wfrp4epladdon.arrowReclamation.EnableBullets",
-        hint: "wfrp4epladdon.arrowReclamation.EnableBulletsHint",
-        scope: "world",
-        config: true,
-        default: true,
-        type: Boolean
-    });
-  
-    // Add setting that allows for different rules of arrow reclamation
-    game.settings.register("wfrp4e-pl-addons", "arrowReclamation.Rule", {
-        name: "wfrp4epladdon.arrowReclamation.Rule",
-        hint: "wfrp4epladdon.arrowReclamation.RuleHint",
-        scope: "world",
-        config: true,
-        default: "default",
-        type: String,
-        choices: {
-            "default": "wfrp4epladdon.arrowReclamation.DefaultRule",
-            "success": "wfrp4epladdon.arrowReclamation.SuccessRule",
-            "noCrit": "wfrp4epladdon.arrowReclamation.NoCritRule",
-            "successNoCrit": "wfrp4epladdon.arrowReclamation.SuccessNoCritRule",
-            "failure": "wfrp4epladdon.arrowReclamation.FailureRule",
-            "failureNoCrit": "wfrp4epladdon.arrowReclamation.FailureNoCritRule",
-            "percentage": "wfrp4epladdon.arrowReclamation.PercentageRule",
-            "percentageNoCrit": "wfrp4epladdon.arrowReclamation.PercentageNoCritRule",
-        }
-    });
-  
-    // Add Percentage setting for Percentage rules
-    game.settings.register("wfrp4e-pl-addons", "arrowReclamation.Percentage", {
-        name: "wfrp4epladdon.arrowReclamation.Percentage",
-        hint: "wfrp4epladdon.arrowReclamation.PercentageHint",
-        scope: "world",
-        config: true,
-        default: 50,
-        type: Number
-    });
+  game.settings.register("wfrp4e-pl-addons", "autoRotate.Enable", {
+    name: "wfrp4epladdon.autoRotate.Enable",
+    hint: "wfrp4epladdon.autoRotate.EnableHint",
+    scope: "world",
+    config: true,
+    default: false,
+    type: Boolean
+  });
+
+  game.settings.register("wfrp4e-pl-addons", "autoRotate.BonusFlanking", {
+    name: "wfrp4epladdon.autoRotate.BonusFlanking",
+    hint: "wfrp4epladdon.autoRotate.BonusFlankingHint",
+    scope: "world",
+    config: true,
+    default: 10,
+    type: Number
+  });
+
+  game.settings.register("wfrp4e-pl-addons", "autoRotate.BonuBehind", {
+    name: "wfrp4epladdon.autoRotate.BonuBehind",
+    hint: "wfrp4epladdon.autoRotate.BonuBehindHint",
+    scope: "world",
+    config: true,
+    default: 20,
+    type: Number
+  });
 
     $("body").on("click", ".journal-sheet .item-property", ev => {
         game.wfrp4e.utility.postProperty(ev.target.text)
@@ -93,35 +144,6 @@ Hooks.once("init", function() {
 
 Hooks.on("ready", () => {
     const config = {
-        weaponQualities: {
-          slash: game.i18n.localize("PROPERTY.Slash"),
-          sturdy: game.i18n.localize("PROPERTY.Sturdy"),
-          recoverable: game.i18n.localize("PROPERTY.Recoverable")
-        },
-  
-        weaponFlaws: {
-          frail: game.i18n.localize("PROPERTY.Frail"),
-          unrecoverable: game.i18n.localize("PROPERTY.Unrecoverable")
-        },
-  
-        qualityDescriptions: {
-          slash: game.i18n.localize("WFRP4E.Properties.Slash"),
-          sturdy: game.i18n.localize("WFRP4E.Properties.Sturdy"),
-          recoverable: game.i18n.localize("WFRP4E.Properties.Recoverable")
-        },
-  
-        flawDescriptions : {
-          frail: game.i18n.localize("WFRP4E.Properties.Frail"),
-          unrecoverable: game.i18n.localize("WFRP4E.Properties.Unrecoverable"),
-        },
-      
-        propertyHasValue: {
-          sturdy: false,
-          slash: true,
-          recoverable: false,
-          frail: false,
-          unrecoverable: false
-        },
 
         magicLores: {
           waaagh: "Waaagh!"
@@ -216,9 +238,11 @@ Hooks.on("renderCompendiumDirectory", async () => {
 });
 
 Hooks.on('preCreateChatMessage', (doc, message, options, userid) => {
+  if (game.settings.get("wfrp4e-pl-addons", "initiativeRoll.Enable")) {
     if (message.flags !== undefined) {
       if (message.flags?.core?.initiativeRoll) {
         return false;
       };
     };
-  });
+  }
+});

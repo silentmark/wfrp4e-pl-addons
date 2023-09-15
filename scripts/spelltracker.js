@@ -1,29 +1,31 @@
 Hooks.on("renderChatMessage", async (app, html, messageData) => {
-    if (!game.user.isGM) {
-      return;
-    }
-    const combat = game.combats.active;
-    if (combat && combat.round != 0 && combat.turns && combat.active) {//combat started
-        let castTest = app.getTest();
-        if (castTest?.constructor?.name == "WomCastTest" && castTest.result.castOutcome == "success") {
-            let newMessage = jQuery(html).find(".message-content").append(jQuery('<div class="card-content"><a class="chat-button card-track-spell" style="width: 100%">Śledź zaklęcie</a></div>'))
-            newMessage.find(".card-track-spell").click(async function () {
-              let messageId = messageData.message._id;
-              let userId = messageData.user.id;
-              let message = game.messages.get(messageId);
-              let castTest = message.getTest();
-              
-              let spells = combat.getFlag('wfrp4e-pl-addons', 'spells');
-              if (!spells) {
-                spells = {};
-              } 
-              spells[messageId] = {
-                user: userId, 
-                castTest: castTest,
-                message: messageId
-              }
-              await combat.setFlag('wfrp4e-pl-addons', 'spells', spells);
-          });
+    if (game.settings.get("wfrp4e-pl-addons", "combatSpellTracker.Enable")) {
+        if (!game.user.isGM) {
+            return;
+        }
+        const combat = game.combats.active;
+        if (combat && combat.round != 0 && combat.turns && combat.active) {//combat started
+            let castTest = app.getTest();
+            if (castTest?.constructor?.name == "WomCastTest" && castTest.result.castOutcome == "success") {
+                let newMessage = jQuery(html).find(".message-content").append(jQuery('<div class="card-content"><a class="chat-button card-track-spell" style="width: 100%">Śledź zaklęcie</a></div>'))
+                newMessage.find(".card-track-spell").click(async function () {
+                    let messageId = messageData.message._id;
+                    let userId = messageData.user.id;
+                    let message = game.messages.get(messageId);
+                    let castTest = message.getTest();
+                    
+                    let spells = combat.getFlag('wfrp4e-pl-addons', 'spells');
+                    if (!spells) {
+                        spells = {};
+                    } 
+                    spells[messageId] = {
+                        user: userId, 
+                        castTest: castTest,
+                        message: messageId
+                    }
+                    await combat.setFlag('wfrp4e-pl-addons', 'spells', spells);
+                });
+            }
         }
     }
 });
