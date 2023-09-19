@@ -145,8 +145,8 @@ Hooks.on("renderChatMessage", async (app, html, messageData) => {
       });
       castTest.context.targets = uniqueTargets;
 
+      targets = castTest.context.targets.map(t => WFRP_Utility.getToken(t));
       if(castTest.item.magicMissile?.value) {
-        targets = castTest.context.targets.map(t => WFRP_Utility.getToken(t));
         for(let i = 0; i < targets.length; i++) {
           let t = targets[i];
           await castTest.createOpposedMessage(t)
@@ -174,8 +174,8 @@ Hooks.on("renderChatMessage", async (app, html, messageData) => {
           }
         }
       }
-      let item = castTest.item
-      let actor = castTest.actor
+      let item = castTest.item;
+      let actor = castTest.actor;
       for (let i = 0; i < castTest.effects.length; i++) {
         let effect = castTest.effects[i];
         let effectId = castTest.effects[i].id;
@@ -189,7 +189,6 @@ Hooks.on("renderChatMessage", async (app, html, messageData) => {
           if (item.range && item.range.value.toLowerCase() == game.i18n.localize("You").toLowerCase() && item.target && item.target.value.toLowerCase() == game.i18n.localize("You").toLowerCase())
             game.wfrp4e.utility.applyEffectToTarget(effect, [{ actor }]) // Apply to caster (self) 
           else {
-            let targets = Array.from(user.targets);
             game.wfrp4e.utility.applyEffectToTarget(effect, targets, user);
           }
         }
