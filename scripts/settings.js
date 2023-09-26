@@ -210,10 +210,33 @@ Hooks.on("ready", () => {
               }
             },
           },
+        },
+
+        conditions: {
+          "covered": "Zasłona przed Strzałem"
         }
     }
 
     mergeObject(game.wfrp4e.config, config);
+    const covered = {
+      icon: "modules/wfrp4e-pl-addons/icons/cover.png", 
+      id: "covered", 
+      statuses: ["covered"],
+      name: game.i18n.localize("WFRP4E.ConditionName.Covered"),
+      flags: {
+          wfrp4e: {
+              "trigger": "endRound",
+              "effectTrigger": "prefillDialog",
+              "script": "if (args.item && args.item.attackType=='ranged') args.prefillModifiers.modifier -= (this.effect.conditionValue * 10)",
+              "value": 1,
+              "secondaryEffect" :{
+                  "effectTrigger": "targetPrefillDialog",
+                  "script": "if (args.item && args.item.attackType=='ranged') args.prefillModifiers.modifier -= (this.effect.conditionValue * 10)",
+              }
+          }
+      }
+    };
+    game.wfrp4e.config.statusEffects.splice(9, 0, covered);
     
     if (game.settings.get("wfrp4e-pl-addons", "alternativeArmour.Enable")) {
       game.wfrp4e.config.armorTypes = {
@@ -222,18 +245,8 @@ Hooks.on("ready", () => {
         "heavy": game.i18n.localize("WFRP4E.ArmourType.Heavy"),
         "other": game.i18n.localize("WFRP4E.ArmourType.Other")
       };
-    }
-});
-
-Hooks.on("renderCompendiumDirectory", async () => {
-    if (game.packs.get("wfrp4e-gm-toolkit.db.gm-toolkit-tables")) {
-        game.packs.delete("wfrp4e-gm-toolkit.gm-toolkit-tables")
-        ui.sidebar.element.find("[data-pack='wfrp4e-gm-toolkit.gm-toolkit-tables']").remove()
-    }
-    if (!game.settings.get("wfrp4e-pl-addons", "alternativeArmour.Enable")) {
-        if (game.packs.get("wfrp4e-pl-addons.armoury")) {
-            ui.sidebar.element.find("[data-pack='wfrp4e-pl.armoury']").remove()
-        }
+    } else {
+      game.data.packs = game.data.packs.filter(i => i.name != "armoury" && i.module != "wfrp4e-pl-addons");
     }
 });
 

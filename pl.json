@@ -5,6 +5,7 @@
    "WFRP4E.ArmourType.Other": "Inny",
 
    "NAME.CombatMaster": "Mistrz Walki",
+   "WFRP4E.ConditionName.Covered": "Zasłona przed Strzałem",
 
    "wfrp4epladdon.alternativeArmour.Enable": "Aktywuj alternatywne zasady Pancerzy", 
    "wfrp4epladdon.alternativeArmour.EnableHint": "Zmienia kategorie pancerzy oraz zasady ich łączenia oraz udostępnia dodatkowe kompendium z dedykowanymi pancerzami.", 
