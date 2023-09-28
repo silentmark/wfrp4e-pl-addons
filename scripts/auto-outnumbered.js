@@ -10,7 +10,7 @@ Hooks.on("init", function() {
       }
 
       if (type != "trait" && type != "weapon") return;
-      if (game.user.targets.size && item.type === "weapon" && item.attackType == "melee") {
+      if (game.user.targets.size && (item.type === "weapon" || item.type === "trait") && item.attackType == "melee") {
         let tooltip = "Przewaga Liczebna: ";
         const processedTokens = [];
         const attackingToken = this.getActiveTokens()[0];

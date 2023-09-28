@@ -200,7 +200,14 @@ Hooks.on("renderChatMessage", async (app, html, messageData) => {
     let msg = game.messages.get(app.flags.wfrp4e.opposeData.attackerMessageId);
     let postFunction = msg?.flags?.testData?.context?.postFunction;
     if (postFunction == "weaponTest" || postFunction == "traitTest") {
-      let speaker = game.actors.get(msg.flags.testData.context.speaker.actor);
+      let speaker;
+      if (msg.flags.testData.context.speaker.actor) {
+        speaker = game.actors.get(msg.flags.testData.context.speaker.actor);
+      }
+      else {      
+        let speakerToken = game.canvas.tokens.get(msg.flags.testData.context.speaker.token);
+        speaker = speakerToken.actor;
+      }
       let item = speaker.items.get(msg.flags.testData.preData.item);
       if(msg.flags?.testData?.context?.targets 
           && msg.flags?.testData?.context?.targets.length > 0

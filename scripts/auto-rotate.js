@@ -13,7 +13,7 @@ Hooks.on("init", function() {
     if (game.settings.get("wfrp4e-pl-addons", "autoRotate.Enable")) {
         game.wfrp4e.config.customPrefillModifiers.calculateFlanking = async function(item, type, options, tooltips, prefillModifiers) {
             if (type != "trait" && type != "weapon") return;
-            if (game.user.targets.size && item.type === "weapon" && item.attackType == "melee") {
+            if (game.user.targets.size && (item.type === "weapon" || item.type === "trait") && item.attackType == "melee") {
 
                 const flankingBonus = game.settings.get("wfrp4e-pl-addons", "autoRotate.BonusFlanking");
                 const backBonus =  game.settings.get("wfrp4e-pl-addons", "autoRotate.BonuBehind");

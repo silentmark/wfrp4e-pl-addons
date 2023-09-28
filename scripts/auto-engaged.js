@@ -89,3 +89,32 @@ Hooks.on('wfrp4e:rollWeaponTest', (test, cardOptions) => {
     }
   }
 });
+
+
+
+Hooks.on('wfrp4e:rollTraitTest', (test, cardOptions) => {
+  if (game.settings.get("wfrp4e-pl-addons", "autoEngaged.Enable")) {
+    if (test.item.attackType == "melee" && test.context.targets?.length > 0) {
+      const tokens = test.context.targets.map(t => game.wfrp4e.utility.getToken(t));
+      test.actor.addCondition("engaged");
+      if (game.user.isGM) {
+        tokens.forEach(t => t.actor.addCondition("engaged"));
+      } else {
+        const effectData = {
+          name: "Zwiąż Walką",
+          transfer: true,
+          flags: {
+            wfrp4e: {
+              effectApplication: "actor",
+              effectTrigger: "oneTime",
+              script: `this.actor.addCondition("engaged");`,
+            },
+          },
+        };
+        let effect = new CONFIG.ActiveEffect.documentClass(effectData);
+        const payload = { effect, targets: [...tokens].map(t => t.toObject()), scene: canvas.scene.id };
+        WFRP_Utility.awaitSocket(game.user, "applyEffects", payload, "invoking effect");
+      }
+    }
+  }
+});

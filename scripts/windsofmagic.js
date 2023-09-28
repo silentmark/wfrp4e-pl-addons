@@ -91,7 +91,7 @@ Hooks.on("updateCombat", async function (combat, updateData) {
                         let deamonName = winds.deamonName;
                         let script = `
                         let suffusedWithMagicEffect = {
-                            name:s 'Nasycenie Magią',
+                            name: 'Nasycenie Magią',
                             icon: "modules/wfrp4e-core/icons/spells/tzeentch.png",
                             transfer: false,
                             duration: {
