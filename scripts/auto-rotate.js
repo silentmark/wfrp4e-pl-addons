@@ -23,13 +23,13 @@ Hooks.on("init", function() {
                 const frontRange2Min = 270;
                 const frontRange2Max = 360;
             
-                const rearRange1Min = 91; 
-                const rearRange1Max = 119;
-                const rearRange2Min = 241;
-                const rearRange2Max = 269;
+                const rearRange1Min = frontRange1Max;
+                const rearRange1Max = 120;
+                const rearRange2Min = 240;
+                const rearRange2Max = frontRange2Min;
             
-                const backRange1Min = 120;
-                const backRange1Max = 240;
+                const backRange1Min = rearRange1Max;
+                const backRange1Max = rearRange2Min;
 
                 const attackingToken = this.getActiveTokens()[0];
                 const targeToken = game.user.targets.first();
@@ -50,9 +50,9 @@ Hooks.on("init", function() {
                 if ((attackAngle > frontRange1Min && attackAngle < frontRange1Max) || attackAngle > frontRange2Min && attackAngle < frontRange2Max) {
                     //do nothing - frontal attack
                 }
-                else if ((attackAngle > rearRange1Min && attackAngle < rearRange1Max) || attackAngle > rearRange2Min && attackAngle < rearRange2Max) {
+                else if ((attackAngle >= rearRange1Min && attackAngle <= rearRange1Max) || attackAngle >= rearRange2Min && attackAngle <= rearRange2Max) {
                     prefillModifiers.modifier += flankingBonus;
-                    tooltips.push(`Atak z flanki (+${backBonus})`);
+                    tooltips.push(`Atak z flanki (+${flankingBonus})`);
                 }
                 else if (attackAngle > backRange1Min && attackAngle < backRange1Max) {
                     prefillModifiers.modifier += backBonus;

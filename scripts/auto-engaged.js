@@ -49,7 +49,7 @@ Hooks.on('updateToken', (tokenDocument, data, options) => {
               }
             }
           }
-          let collision = collisions.find(x => x.actor.hasCondition("engaged"));
+          let collision = collisions.find(x => x.actor && x.actor.hasCondition("engaged"));
           if (collision) {
             remove = false;
           }

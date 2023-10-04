@@ -53,7 +53,7 @@ Hooks.on("init", function() {
           let h1 = targeToken.hitArea.y + targeToken.hitArea.height - (LAMBDA*2);
 
           for (let tok of canvas.tokens.placeables) {
-            if (tok.id != targeToken.id 
+            if (tok.actor != null && tok.id != targeToken.id 
               && tok.actor.hasCondition("engaged") 
               && !tok.actor.hasCondition("dead") 
               && !tok.actor.hasCondition("unconscious")
