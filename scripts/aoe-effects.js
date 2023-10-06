@@ -20,13 +20,14 @@ const AoEEffects = {
 	},
 
 	getAoEEffectData: function (template) {
-		let flags = template.getFlag('wfrp4e-pl-addons', 'aoeEffects');
-        if (flags) {
+		let itemId = template.getFlag('wfrp4e', 'itemuuid');
+        if (itemId) {
             let aoeEffect = {};
-            aoeEffect.item = fromUuidSync(flags.itemId);
+            aoeEffect.item = fromUuidSync(itemId);
 			aoeEffect.token = template.object.attachedToken; //walled template feature
-            if (flags.messageId) {
-                aoeEffect.message = game.messages.get(flags.messageId);
+			let messageId = template.getFlag('wfrp4e', 'messageId');
+            if (messageId) {
+                aoeEffect.message = game.messages.get(messageId);
             }
             return aoeEffect;
         }
@@ -46,13 +47,13 @@ const AoEEffects = {
 			<div class="form-group">
 				<label>Item UUID</label>
 				<div class="form-fields">
-					<input type="text" value="${aoeEffect.item?.uuid ?? ""}" name="flags.wfrp4e-pl-addons.aoeEffects.itemId">
+					<input type="text" value="${aoeEffect.item?.uuid ?? ""}" name="flags.wfrp4e.itemuuid">
 				</div>
 			</div>
 			<div class="form-group">
 				<label>Message Id</label>
 				<div class="form-fields">
-					<input type="text" value="${aoeEffect.message?.id ?? ""}" name="flags.wfrp4e-pl-addons.aoeEffects.messageId">
+					<input type="text" value="${aoeEffect.message?.id ?? ""}" name="flags.wfrp4e.messageId">
 				</div>
 			</div>
 		`;
@@ -66,18 +67,18 @@ const AoEEffects = {
 
 		for (let targetToken of game.canvas.tokens.placeables) {
 			if (!targetToken || targetToken.isDefeated) continue;
-			let effectsFromAoE = targetToken.actor.actorEffects.filter(x=>x.getFlag('wfrp4e-pl-addons', 'templateId'));
-			let effectToDelete = targetToken.actor.actorEffects.filter(x=>x.getFlag('wfrp4e-pl-addons', 'templateId'));
+			let effectsFromAoE = targetToken.actor.actorEffects.filter(x=>x.getFlag('wfrp4e', 'templateId'));
+			let effectToDelete = targetToken.actor.actorEffects.filter(x=>x.getFlag('wfrp4e', 'templateId'));
 	
 			for (let templateDocument of game.canvas.scene.templates) {
-				if (templateDocument.getFlag('wfrp4e-pl-addons', 'aoeEffects')?.itemId) {
+				if (templateDocument.getFlag('wfrp4e', 'itemuuid')) {
 					//let affected = templateDocument.collidesToken(targetToken.document, {collisionMethod: "GRID_SPACES_POINTS"});
 					let affected = templateDocument.collidesToken(targetToken.document, {collisionMethod: "POINTS_CENTER"});
 					if (affected && templateDocument.elevation == targetToken.document.elevation) {
 						const aoeEffect = AoEEffects.getAoEEffectData(templateDocument);
 						if (!aoeEffect.item) continue;
 
-						if (!effectsFromAoE.find(x=>x.getFlag('wfrp4e-pl-addons', 'templateId') == templateDocument.id)) {
+						if (!effectsFromAoE.find(x=>x.getFlag('wfrp4e', 'templateId') == templateDocument.id)) {
 							const effectsToApply = aoeEffect.item.effects.filter(x=>x.getFlag('wfrp4e', 'effectApplication') == 'area');
 							for (let effectToApply of effectsToApply) {
 								let effect = effectToApply.toObject();
@@ -87,46 +88,65 @@ const AoEEffects = {
 								}
 								if (aoeEffect.token) {
 									effect = aoeEffect.token.actor.populateEffect(effect._id, aoeEffect.item, test);
-									if (test) {
-								    	mergeObject(effect, { flags: {wfrp4e: { messageId: aoeEffect.message.id } } });
-									} 
 									mergeObject(effect, { 
-										flags: {"wfrp4e-pl-addons": { 
-											templateId: templateDocument.id, 
-											itemId: aoeEffect.item.id, 
-											actorId: aoeEffect.token.actor.id } 
+										flags: {
+											wfrp4e: { 
+												templateId: templateDocument.id, 
+												itemuuid: aoeEffect.item.uuid, 
+												actorId: aoeEffect.token.actor.id 
+											} 
 										} 
 									});
-          							// this probably shouldnt happen
-									if (effect.flags.wfrp4e.effectTrigger == "invoke") {
-										await game.wfrp4e.utility.runSingleEffect(effect, targetToken.actor, aoeEffect.item, {actor, effect, item: aoeEffect.item});
-									} else {
-      									await game.wfrp4e.utility.applyEffectToTarget(effect, [targetToken]);
-									}
 								}
 								else {
 									mergeObject(effect, { 
-										flags: {"wfrp4e-pl-addons": { 
-											templateId: templateDocument.id, 
-											itemId: aoeEffect.item.id } 
+										flags: {
+											wfrp4e: { 
+												templateId: templateDocument.id, 
+												itemuuid: aoeEffect.item.uuid 
+											} 
 										} 
 									});
+								}
+								if (test) {
+									mergeObject(effect, { flags: {wfrp4e: { messageId: aoeEffect.message.id } } });
+								}
+								if (effect.flags.wfrp4e.effectTrigger == "oneTime") {
+
+									if (game.combats.active && game.combats.active.started) {
+										const combatant = game.combats.active.combatants.find(x=>x.tokenId === targetToken.id);
+										if (combatant) {
+											combatant.areaEffects = combatant.areaEffects || {};
+											combatant.areaEffects[effect._id] = combatant.areaEffects[effect._id] ?? {};
+											if (!combatant.areaEffects[effect._id].applied) {
+												combatant.areaEffects[effect._id].applied = true;
+												let targetsBackup = Array.from(game.user.targets.map(t=>t.id));									 
+												game.user.updateTokenTargets([]);
+												game.user.broadcastActivity({targets: []});
+												await game.wfrp4e.utility.applyOneTimeEffect(effect, targetToken.actor);
+																						
+												game.user.updateTokenTargets(targetsBackup);
+												game.user.broadcastActivity({targets: targetsBackup});
+											}
+										}
+									}
+								} else {
 									await game.wfrp4e.utility.applyEffectToTarget(effect, [targetToken]);
 								}
 							}
 						}
 						else {
-							effectToDelete = effectToDelete.filter(x=>x.getFlag('wfrp4e-pl-addons', 'templateId') != templateDocument.id);
+							effectToDelete = effectToDelete.filter(x=>x.getFlag('wfrp4e', 'templateId') != templateDocument.id);
 						}
 					} else {
-						const effectIds = effectsFromAoE.filter(x=>x.getFlag('wfrp4e-pl-addons', 'templateId') == templateDocument.id).map(x=>x.id);
+						const effectIds = effectsFromAoE.filter(x=>x.getFlag('wfrp4e', 'templateId') == templateDocument.id).map(x=>x.id);
 						if (effectIds.length) {
 							await targetToken.actor.deleteEmbeddedDocuments('ActiveEffect', effectIds);
 						}
 					}
 				}
 			}
-			const effectIds = effectToDelete.map(x=>x.id);
+			const effectIds = effectToDelete.filter(x=> targetToken.actor.effects.find(y=> y.id == x.id)).map(x=>x.id);
 			if (effectIds.length) {
 				await targetToken.actor.deleteEmbeddedDocuments('ActiveEffect', effectIds);
 			}
