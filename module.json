@@ -19,7 +19,8 @@
     "/scripts/auto-rotate.js",
     "/scripts/auto-outnumbered.js",
     "/scripts/reroll-initiative.js",
-    "/scripts/auto-combat.js"
+    "/scripts/auto-combat.js",
+    "/scripts/aoe-effects.js"
   ],
   "languages": [
     {
