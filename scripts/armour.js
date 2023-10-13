@@ -63,6 +63,9 @@ Hooks.on("setup", () => {
                         if (this.system.special?.value && this.system.special?.value?.indexOf('Metal') !== -1) {
                             layer.metal = true;
                         }
+                        if (this.system.special?.value && this.system.special?.value?.indexOf('Magiczny') !== -1) {
+                            layer.magic = true;
+                        }
         
                         AP[loc].layers.push(layer);
                     }

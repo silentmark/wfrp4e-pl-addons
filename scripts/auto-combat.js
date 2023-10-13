@@ -3,17 +3,14 @@ Hooks.on("renderTokenHUD", (app, html, data) => {
     if (actor === undefined) return
     if (actor.type !== "creature" && actor.type !== "npc") return
     
-    const divTokenHudExt = '<div class="tokenHudContainer"></div>'
-    html.find(".col.left").before(divTokenHudExt)
-
-    const hudExtensionColumnOuter = '<div class="col tokenHudColumn" id="hudLeftOuter"></div>'
-    html.find(".tokenHudContainer").prepend(hudExtensionColumnOuter)
-    
     const autoCombatColor = actor.flags?.wfrp4e?.autoCombat === 1 ? 'green' : (actor.flags?.wfrp4e?.autoCombat === 2 ? 'red' : 'black');
     const autoCombatTooltip =  actor.flags?.wfrp4e?.autoCombat === 1 ? 'Automatyczna Obrona' : (actor.flags?.wfrp4e?.autoCombat === 2 ? 'Automatyczny Atak' : 'Automatyczna Walka Wyłączona');
     const style = `0 0 23px ${autoCombatColor} inset`
-    const hudAutoCombat = $(`<div style="box-shadow: ${style}" class="control-icon tokenhudicon left" id="toggleAutoCombat" title="${autoCombatTooltip}"><i class="fas fa-repeat"></i></div>`)
-    html.find('[id = "hudLeftOuter"]').prepend(hudAutoCombat)
+    const hudAutoCombat = $(
+      `<div style="box-shadow: ${style}" class="control-icon" id="toggleAutoCombat" title="${autoCombatTooltip}">
+        <i class="fas fa-repeat"></i>
+      </div>`)
+    html.find(".col.left").append(hudAutoCombat)
 
     hudAutoCombat.find("i").click(async ev => {
         if (actor.flags?.wfrp4e?.autoCombat == 1) {
@@ -33,7 +30,7 @@ Hooks.on("renderTokenHUD", (app, html, data) => {
     });
   })
   
-  
+
 Hooks.on("updateCombat", async (combat, updateData) => {
     if (!game.user.isUniqueGM) {
       return;
@@ -44,6 +41,7 @@ Hooks.on("updateCombat", async (combat, updateData) => {
     }
     if (combat.current && combat.active) {
       let token = game.scenes.current.tokens.get(combat.current.tokenId);
+      let tokenObj = game.canvas.tokens.get(combat.current.tokenId);
       let actor = token.actor;
       if (!actor?.flags?.wfrp4e?.autoCombat) {
         return;
@@ -51,21 +49,28 @@ Hooks.on("updateCombat", async (combat, updateData) => {
       if (actor.flags.wfrp4e.autoCombat != 2) {
         return;
       }
-      let tokenObj = game.canvas.tokens.get(token.id);
-      let targetPlayers = canvas.tokens.placeables.filter(x=>x.actor?.hasPlayerOwner);
-      canvas.effects.visionSources.clear();
-      tokenObj.updateVisionSource();
-      canvas.effects.visibility.refresh();  
-
-      targetPlayers = targetPlayers.filter(target => canvas.effects.visibility.testVisibility(target.position, {tolerance: 0, object: target}));
-      if (targetPlayers.length == 0) {
+      if (game.combat.current.currentAutoCombatTurn == game.combat.current.turn) {
         return;
       }
-      targetPlayers = targetPlayers.sort(() => Math.random());
-      targetPlayers = targetPlayers.sort((a, b) => 
+
+      game.combat.current.currentAutoCombatTurn = game.combat.current.turn;
+      await tokenObj.document.update({sight: {angle: 360}});
+      let potentialTargets = canvas.tokens.placeables.filter(x=> token.disposition == x.document.disposition * -1);
+      canvas.effects.visionSources.clear();
+      tokenObj.updateVisionSource();
+      canvas.effects.visibility.refresh();
+
+      potentialTargets = potentialTargets.filter(target => canvas.effects.visibility.testVisibility(target.position, {tolerance: 0, object: target}));
+      
+      await tokenObj.document.update({sight: {angle: 240}});
+      if (potentialTargets.length == 0) {
+        return;
+      }
+      potentialTargets = potentialTargets.sort(() => Math.random());
+      potentialTargets = potentialTargets.sort((a, b) => 
       game.canvas.grid.measureDistance({ x: tokenObj.x, y: tokenObj.y }, { x: a.x, y: a.y }, { gridSpaces: true }) - 
       game.canvas.grid.measureDistance({ x: tokenObj.x, y: tokenObj.y }, { x: b.x, y: b.y }, { gridSpaces: true }) );
-      let target = targetPlayers[0];
+      let target = potentialTargets[0];
       let distance = game.canvas.grid.measureDistance({ x: tokenObj.x, y: tokenObj.y }, { x: target.x, y: target.y }, { gridSpaces: true });
       if (distance <= 2) {//melee
         let stuffToUse = actor.getItemTypes("weapon").filter(w => w.attackType == "melee");
@@ -92,7 +97,7 @@ Hooks.on("updateCombat", async (combat, updateData) => {
               setupItem = newSetupItem;
             }
           }
-          targetPlayers[0].setTarget();
+          potentialTargets[0].setTarget();
           let test = await actor.setupWeapon(setupItem);
           await test.roll();
         }
@@ -102,14 +107,14 @@ Hooks.on("updateCombat", async (combat, updateData) => {
           let setupItem = stuffToUse[0];
           if (setupItem.currentAmmo.value && actor.items.get(setupItem.currentAmmo.value).quantity.value > 0) {
             if (setupItem.loading) {
-              if(!setupItem.loaded.value) {                
-                targetPlayers[0].setTarget();
+              if (setupItem.loaded.value) {                
+                potentialTargets[0].setTarget();
               }
               let test = await actor.setupWeapon(setupItem);
               await test.roll();
             }
             else {                              
-              targetPlayers[0].setTarget();
+              potentialTargets[0].setTarget();
               let test = await actor.setupWeapon(setupItem);
               await test.roll();
             }
