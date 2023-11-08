@@ -5,12 +5,70 @@ Hooks.on("renderChatMessage", async (app, html, messageData) => {
   }
 
   let test = app.getTest();
-  if (processedMessages.indexOf(app.id) == -1 
-      && test?.weapon?.attackType == "ranged" 
-      && test?.result?.outcome == "failure" 
-      && test?.context?.targets?.length > 0 
-      && !test?.context?.edited) {
-    processedMessages.push(app.id);
+  if (!test || processedMessages.indexOf(app.id) != -1 || test?.weapon?.attackType != "ranged") return;
+
+  processedMessages.push(app.id);
+  if (test.weapon?.weaponGroup?.value == 'throwing' && test.result.outcome == "failure") {
+    let position = (await new Roll('1d8').roll()).total;
+    let distance = game.canvas.grid.size * Math.abs(Number.parseInt(test.result.SL));
+    let target = game.canvas.tokens.get(test.context.targets[0].token);
+    let x = target.center.x;
+    let y = target.center.y;
+    if (position == 1) {
+      x = x - distance;
+      y = y - distance;
+    } else if (position == 2) {
+      x = x - distance;;
+    } else if (position == 3) {
+      x = x - distance;
+      y = y + distance;
+    } else if (position == 4) {
+      y = y - distance;
+    } else if (position == 5) {
+      y = y + distance;
+    } else if (position == 6) {
+      y = y - distance;
+      x = x + distance;
+    } else if (position == 7) {
+      x = x + distance;
+    } else {
+      x = x + distance;
+      y = y + distance;
+    }
+    let tokensInArea = game.canvas.tokens.placeables.filter(t => t.x >= x && t.y >= y && t.x + t.w <= x && t.y + t.h <= y);
+    if (tokensInArea.length > 0) {
+      let newTarget = tokensInArea[Math.floor(Math.random() * tokensInArea.length)];
+      let testData = app.flags.testData;
+      testData.context.edited = true;
+      testData.context.previousResult = duplicate(test.result);
+      testData.preData.slBonus = 0;
+      testData.preData.successBonus = 0;
+      testData.preData.roll = test.result.roll;
+      testData.preData.target = test.result.roll;
+      testData.context.targets[0].token = newTarget.id;
+      testData.preData.other.push(`Ups, trafiono inny cel w pobliżu <b>(${newTarget.name})</b>`);
+      delete testData.context.messageId;
+      let newTest = TestWFRP.recreate(testData);
+      await newTest.roll();
+    }
+  }
+  else if (test?.weapon?.properties?.qualities?.blast?.value && test.result.outcome == 'success' && test?.context?.targets?.length > 0) {
+    let blast = test.weapon.properties.qualities.blast.value;
+    let distance = canvas.dimensions.distance;
+    let pixelDistance = (blast / distance) * canvas.dimensions.distancePixels;
+    let target = game.canvas.tokens.get(test.context.targets[0].token);
+
+    let tokenX = target.center.x;
+    let tokenY = target.center.y;
+    const area = new PIXI.Circle(tokenX, tokenY, pixelDistance + (game.canvas.grid.w / 2));
+
+    for (let tok of canvas.tokens.placeables) {
+      if (tok.actor != null && tok.id != target.id && !tok.actor.hasCondition("dead") && area.contains(tok.center.x, tok.center.y)) { 
+        await ChatMessage.create({content: `Rozrzut zranił również: <b>(${tok.name})</b>`});
+        await test.createOpposedMessage(tok);
+      }
+    }
+  } else if (test?.result?.outcome == "failure" && test?.context?.targets?.length > 0) {
     const shooter = test.actor.getActiveTokens()[0];
     const target = game.canvas.tokens.get(test.context.targets[0].token);
     const tokens =  shootDifferentTarget(shooter, target);
