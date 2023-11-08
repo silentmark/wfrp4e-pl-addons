@@ -14,20 +14,24 @@ Hooks.on("init", function() {
         let tooltip = "Przewaga Liczebna: ";
         const processedTokens = [];
         const attackingToken = this.getActiveTokens()[0];
-        processedTokens.push(attackingToken.id);
-        //TODO: various rules for outnumbering. First rule: count all engaged tokens near target. Target size reduces outnumbering by 1. 
 
-        const targeToken = game.user.targets.first();
-        let outnumbering = -(targeToken.hitArea.width / game.canvas.grid.grid.w) + 1;
+        let targetToken = game.user.targets.first();
+        let targetSizeNum = targetToken.actor.sizeNum;
+        if (targetToken.actor.isMounted) {
+          processedTokens.push(targetToken.id);
+          targetToken = targetToken.actor.mount.getActiveTokens()[0];
+          targetSizeNum = targetToken.actor.sizeNum;
+        }
+        let outnumbering = -1 * (targetSizeNum + 1);
         
-        let tokenX = targeToken.x;
-        let tokenY = targeToken.y;
+        let tokenX = targetToken.x;
+        let tokenY = targetToken.y;
 
-        let wx = targeToken.hitArea.width / game.canvas.grid.grid.w;
-        let hy = targeToken.hitArea.height / game.canvas.grid.grid.h;
+        let wx = targetToken.hitArea.width / game.canvas.grid.grid.w;
+        let hy = targetToken.hitArea.height / game.canvas.grid.grid.h;
         
-        let hitAreaX = targeToken.hitArea.width;
-        let hitAreaY = targeToken.hitArea.height;
+        let hitAreaX = targetToken.hitArea.width;
+        let hitAreaY = targetToken.hitArea.height;
         let gridX = game.canvas.grid.grid.w;
         let gridY = game.canvas.grid.grid.h;
 
@@ -49,11 +53,11 @@ Hooks.on("init", function() {
           const LAMBDA = 5;
           let x1 = pos.x + LAMBDA;
           let y1 = pos.y + LAMBDA;
-          let w1 = targeToken.hitArea.x + targeToken.hitArea.width - (LAMBDA*2);
-          let h1 = targeToken.hitArea.y + targeToken.hitArea.height - (LAMBDA*2);
+          let w1 = targetToken.hitArea.x + targetToken.hitArea.width - (LAMBDA*2);
+          let h1 = targetToken.hitArea.y + targetToken.hitArea.height - (LAMBDA*2);
 
           for (let tok of canvas.tokens.placeables) {
-            if (tok.actor != null && tok.id != targeToken.id 
+            if (tok.actor != null && tok.id != targetToken.id 
               && tok.actor.hasCondition("engaged") 
               && !tok.actor.hasCondition("dead") 
               && !tok.actor.hasCondition("unconscious")
@@ -66,11 +70,21 @@ Hooks.on("init", function() {
               
               if (!(x2 > w1 + x1 || x1 > w2 + x2 || y2 > h1 + y1 || y1 > h2 + y2)) {
                 if (processedTokens.indexOf(tok.id) === -1) {
+                  let attackingTokenSizeNum = tok.actor.sizeNum;
+                  if (tok.actor.isMounted) {
+                    attackingTokenSizeNum = tok.actor.mount.sizeNum;
+                  }
+                  attackingTokenSizeNum = Math.min(attackingTokenSizeNum, targetSizeNum);
+                  attackingTokenSizeNum -= 1;
                   if (tok.document.disposition === attackingToken.document.disposition) {
-                    tooltip += `${tok.document.name}, `;
-                    outnumbering++;
+                    tooltip += `${tok.document.name}`;
+                    outnumbering += attackingTokenSizeNum;
+                    if (tok.actor.isMounted) {
+                      tooltip += ` (${tok.actor.mount.name})`;
+                    }
+                    tooltip += ", ";
                   } else {
-                    outnumbering--;
+                    outnumbering -= attackingTokenSizeNum;
                   }
                   
                   if (tok.document.disposition === 1) {
@@ -85,7 +99,9 @@ Hooks.on("init", function() {
           }
         }
 
-        const talent = targeToken.actor.getItemTypes("talent").find(x=>x.name == game.i18n.localize("NAME.CombatMaster"));
+        outnumbering = Math.ceil(outnumbering / targetSizeNum);
+
+        const talent = targetToken.actor.getItemTypes("talent").find(x=>x.name == game.i18n.localize("NAME.CombatMaster"));
         if(talent?.length > 0) {
           outnumbering -= talent.advances;
           tooltips.push(game.i18n.localize("NAME.CombatMaster"))

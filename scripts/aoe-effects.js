@@ -117,9 +117,10 @@ const AoEEffects = {
 										const combatant = game.combats.active.combatants.find(x=>x.tokenId === targetToken.id);
 										if (combatant) {
 											combatant.areaEffects = combatant.areaEffects || {};
-											combatant.areaEffects[effect._id] = combatant.areaEffects[effect._id] ?? {};
-											if (!combatant.areaEffects[effect._id].applied) {
-												combatant.areaEffects[effect._id].applied = true;
+											const id = templateDocument.id + "-" + effect._id;
+											combatant.areaEffects[id] = combatant.areaEffects[id] ?? {};											
+											if (!combatant.areaEffects[id][game.combats.active.round]) {
+												combatant.areaEffects[id][game.combats.active.round] = true;
 												let targetsBackup = Array.from(game.user.targets.map(t=>t.id));									 
 												game.user.updateTokenTargets([]);
 												game.user.broadcastActivity({targets: []});

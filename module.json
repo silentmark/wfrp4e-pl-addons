@@ -20,7 +20,9 @@
     "/scripts/auto-outnumbered.js",
     "/scripts/reroll-initiative.js",
     "/scripts/auto-combat.js",
-    "/scripts/aoe-effects.js"
+    "/scripts/aoe-effects.js",
+    "/scripts/prayer-nerf.js",
+    "/scripts/auto-miss.js"
   ],
   "languages": [
     {
