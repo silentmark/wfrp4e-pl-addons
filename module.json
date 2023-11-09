@@ -22,7 +22,8 @@
     "/scripts/auto-combat.js",
     "/scripts/aoe-effects.js",
     "/scripts/prayer-nerf.js",
-    "/scripts/auto-miss.js"
+    "/scripts/auto-miss.js",
+    "/scripts/auto-exhaustion.js"
   ],
   "languages": [
     {

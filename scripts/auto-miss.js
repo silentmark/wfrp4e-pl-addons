@@ -68,7 +68,7 @@ Hooks.on("renderChatMessage", async (app, html, messageData) => {
         await test.createOpposedMessage(tok);
       }
     }
-  } else if (test?.result?.outcome == "failure" && test?.context?.targets?.length > 0) {
+  } else if (test?.result?.outcome == "failure" && test?.context?.targets?.length > 0 && test.context.targets[0] && test.context.targets[0].token) {
     const shooter = test.actor.getActiveTokens()[0];
     const target = game.canvas.tokens.get(test.context.targets[0].token);
     const tokens =  shootDifferentTarget(shooter, target);
