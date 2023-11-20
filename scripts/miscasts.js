@@ -1,8 +1,9 @@
 
 Hooks.on("setup", () => {  
-  if (game.settings.get("wfrp4e-pl-addons", "alternativeArmour.Enable")) {
+  if (game.settings.get("wfrp4e-pl-addons", "alternativeMiscasts.Enable")) {
     Reflect.defineProperty(TestWFRP.prototype, '_handleMiscasts', { value:
         function(miscastCounter)  {
+            const maxRandom = 25;
             let mis = false;
             if (this.result.roll % 11 == 0) {
               mis = true;
@@ -33,13 +34,15 @@ Hooks.on("setup", () => {
                   modifier = 0;
                 }
               }
-              console.log("Modyfikator z Punktów Zaklęcia: " + Number.parseInt(this.item.cn.SL) * 3);
-              this.result.tooltips.miscast.push("Modyfikator z Punktów Zaklęcia: " + (Number.parseInt(this.item.cn.SL) * 3));
-              globalModifier += Number.parseInt(this.item.cn.SL) * 3;
+              let spellCn = Math.max(Number.parseInt(this.item.cn.SL), Number.parseInt(this.item.cn.value)) * 3;
+              console.log("Modyfikator z Punktów Zaklęcia: " + spellCn);
+              this.result.tooltips.miscast.push("Modyfikator z Punktów Zaklęcia: " + spellCn);
+              globalModifier += spellCn;
               
               if (!this.item.system.memorized.value) {
-                console.log("Modyfikator z Księgi Zaklęć: " + 50);
-                this.result.tooltips.miscast.push("Modyfikator z Księgi Zaklęć: " + 50);
+                let random = Math.floor(Math.random() * maxRandom) + 50;
+                console.log("Modyfikator z Księgi Zaklęć: " + random);
+                this.result.tooltips.miscast.push("Modyfikator z Księgi Zaklęć: " + random);
                 globalModifier += 50;
               }
 
@@ -49,19 +52,22 @@ Hooks.on("setup", () => {
                 globalModifier += this.result.roll;
               }
               if (this.result.outcome == "failure") {
-                console.log("Niezdany Test: " + 50);
-                this.result.tooltips.miscast.push("Niezdany Test: " + 50);
-                globalModifier += 50;
+                let random = Math.floor(Math.random() * maxRandom) + 50;
+                console.log("Niezdany Test: " + random);
+                this.result.tooltips.miscast.push("Niezdany Test: " + random);
+                globalModifier += random;
               }
               if (this.preData.unofficialGrimoire.ingredientMode == "power") {
-                console.log("Użyto składnika Mocy: " + 50);
-                this.result.tooltips.miscast.push("Użyto składnika Mocy: " + 50);
-                globalModifier += 50;
+                let random = Math.floor(Math.random() * maxRandom) + 50;
+                console.log("Użyto składnika Mocy: " + random);
+                this.result.tooltips.miscast.push("Użyto składnika Mocy: " + random);
+                globalModifier += random;
               }
               if (this.preData.unofficialGrimoire.quickcasting) {
-                console.log("Szybkie Czarowanie: " + 50);
-                this.result.tooltips.miscast.push("Szybkie Czarowanie: " + 50);
-                globalModifier += 50;
+                let random = Math.floor(Math.random() * maxRandom) + 50;
+                console.log("Szybkie Czarowanie: " + random);
+                this.result.tooltips.miscast.push("Szybkie Czarowanie: " + random);
+                globalModifier += random;
               }
               if (this.preData.unofficialGrimoire.overchannelling) {
                 console.log("Nadsplatanie: " + (this.preData.unofficialGrimoire.overchannelling * 10));
@@ -75,14 +81,16 @@ Hooks.on("setup", () => {
                 globalModifier -= 50;
               }
               if (wind == "Dhar" && (this.preData.unofficialGrimoire.ingredientMode == 'none' || this.hasIngredient)) {
-                console.log("Magia Dhar bez składnika: " + -50);
-                this.result.tooltips.miscast.push("Magia Dhar bez składnika: " +50);
-                globalModifier += 50;
+                let random = Math.floor(Math.random() * maxRandom) + 50;
+                console.log("Magia Dhar bez składnika: " + random);
+                this.result.tooltips.miscast.push("Magia Dhar bez składnika: " + random);
+                globalModifier += random;
               }
               if (wind == "Dhar" && this.result.roll == 88) {
-                console.log("Magia Dhar 88: " +50);
-                this.result.tooltips.miscast.push("Magia Dhar przy 88: " +50);
-                globalModifier += 50;
+                let random = Math.floor(Math.random() * maxRandom) + 50;
+                console.log("Magia Dhar 88: " + random);
+                this.result.tooltips.miscast.push("Magia Dhar przy 88: " + random);
+                globalModifier += random;
               }
 
               if (this.preData.unofficialGrimoire.ingredientMode == "control") {

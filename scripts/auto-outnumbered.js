@@ -12,17 +12,16 @@ Hooks.on("init", function() {
       if (type != "trait" && type != "weapon") return;
       if (game.user.targets.size && (item.type === "weapon" || item.type === "trait") && item.attackType == "melee") {
         let tooltip = "Przewaga Liczebna: ";
-        const processedTokens = [];
+        let processedTokens = [];
         const attackingToken = this.getActiveTokens()[0];
 
         let targetToken = game.user.targets.first();
-        let targetSizeNum = targetToken.actor.sizeNum;
+        let targetSizeNum = targetToken.actor._getTokenSize().width;
         if (targetToken.actor.isMounted) {
-          processedTokens.push(targetToken.id);
+          processedTokens.push(targetToken);
           targetToken = targetToken.actor.mount.getActiveTokens()[0];
-          targetSizeNum = targetToken.actor.sizeNum;
+          targetSizeNum = targetToken.actor._getTokenSize().width;
         }
-        let outnumbering = -1 * (targetSizeNum + 1);
         
         let tokenX = targetToken.x;
         let tokenY = targetToken.y;
@@ -69,37 +68,46 @@ Hooks.on("init", function() {
               let h2 = tok.hitArea.y + tok.hitArea.height;
               
               if (!(x2 > w1 + x1 || x1 > w2 + x2 || y2 > h1 + y1 || y1 > h2 + y2)) {
-                if (processedTokens.indexOf(tok.id) === -1) {
-                  let attackingTokenSizeNum = tok.actor.sizeNum;
-                  if (tok.actor.isMounted) {
-                    attackingTokenSizeNum = tok.actor.mount.sizeNum;
-                  }
-                  attackingTokenSizeNum = Math.min(attackingTokenSizeNum, targetSizeNum);
-                  attackingTokenSizeNum -= 1;
-                  if (tok.document.disposition === attackingToken.document.disposition) {
-                    tooltip += `${tok.document.name}`;
-                    outnumbering += attackingTokenSizeNum;
-                    if (tok.actor.isMounted) {
-                      tooltip += ` (${tok.actor.mount.name})`;
-                    }
-                    tooltip += ", ";
-                  } else {
-                    outnumbering -= attackingTokenSizeNum;
-                  }
-                  
+                if (!processedTokens.find(x=>x.id == tok.id)) {
+                  processedTokens.push(tok);                  
                   if (tok.document.disposition === 1) {
                     await (new Sequence().animation().on(tok).tint("#00FF00").play());
                   } else {
                     await (new Sequence().animation().on(tok).tint("#FF0000").play());
                   }
-                  processedTokens.push(tok.id);
                 }
               }
             }
           }
         }
 
-        outnumbering = Math.ceil(outnumbering / targetSizeNum);
+        processedTokens = processedTokens.map(tok => {
+          let sizeNum = tok.actor._getTokenSize().width;
+          if (tok.actor.isMounted) {
+            sizeNum = tok.actor.mount._getTokenSize().width;
+          }
+          sizeNum = Math.min(sizeNum, targetSizeNum);
+          let disposition = tok.document.disposition;
+          return {token: tok, sizeNum: sizeNum, disposition: disposition};
+        });
+        processedTokens = processedTokens.sort((t1, t2) => {
+          return t1.sizeNum - t2.sizeNum;
+        });
+        
+        let outnumbering = -targetSizeNum;
+        for (let tokWrap of processedTokens) {
+          let tok = tokWrap.token;
+          if (tok.document.disposition === attackingToken.document.disposition) {
+            tooltip += `${tok.document.name}`;
+            if (tok.actor.isMounted) {
+              tooltip += ` (${tok.actor.mount.name})`;
+            }
+            tooltip += ", ";
+            outnumbering += tokWrap.sizeNum;
+          } else {
+            outnumbering -= tokWrap.sizeNum;
+          }
+        }
 
         const talent = targetToken.actor.getItemTypes("talent").find(x=>x.name == game.i18n.localize("NAME.CombatMaster"));
         if(talent?.length > 0) {

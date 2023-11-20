@@ -3,6 +3,10 @@ Hooks.on('updateToken', (tokenDocument, data, options) => {
     if (game.user.isGM) {
         if (data.x > 0 || data.y > 0) {
         let token = game.canvas.tokens.get(tokenDocument.id);
+
+        let originalTokenX = token.x;
+        let originalTokenY = token.y;
+
         let tokenX = data.x ?? token.x;
         let tokenY = data.y ?? token.y;
 
@@ -13,6 +17,20 @@ Hooks.on('updateToken', (tokenDocument, data, options) => {
         let hitAreaY = token.hitArea.height;
         let gridX = game.canvas.grid.grid.w;
         let gridY = game.canvas.grid.grid.h;
+        
+        let oldSurroundings = [];
+        oldSurroundings.push({x: originalTokenX - gridX, y: originalTokenY - gridY});
+        oldSurroundings.push({x: originalTokenX + hitAreaX, y: originalTokenY + hitAreaY});
+        oldSurroundings.push({x: originalTokenX - gridX, y: originalTokenY + hitAreaY});
+        oldSurroundings.push({x: originalTokenX + hitAreaX, y: originalTokenY - gridY});
+        for (let i = 0; i < wx; i++) {
+          oldSurroundings.push({x: originalTokenX + gridX * i, y: originalTokenY - gridY});
+          oldSurroundings.push({x: originalTokenX + gridX * i, y: originalTokenY + hitAreaY});
+        }
+        for (let i = 0; i < hy; i++) {
+          oldSurroundings.push({x: originalTokenX - gridX, y: originalTokenY + gridY * i});
+          oldSurroundings.push({x: originalTokenX + hitAreaX, y: originalTokenY + gridY * i});
+        }
 
         let surroundings = [];
         surroundings.push({x: tokenX - gridX, y: tokenY - gridY});
@@ -27,6 +45,33 @@ Hooks.on('updateToken', (tokenDocument, data, options) => {
           surroundings.push({x: tokenX - gridX, y: tokenY + gridY * i});
           surroundings.push({x: tokenX + hitAreaX, y: tokenY + gridY * i});
         }
+
+        let tokenIds = [];
+        oldSurroundings.forEach(pos => {
+          const LAMBDA = 5;
+          let x1 = pos.x + LAMBDA;
+          let y1 = pos.y + LAMBDA;
+          let w1 = token.hitArea.x + token.hitArea.width - (LAMBDA*2);
+          let h1 = token.hitArea.y + token.hitArea.height - (LAMBDA*2);
+          let collisions = [];
+
+          for (let tok of canvas.tokens.placeables) {
+            if (tok.id != token.id){
+              let x2 = tok.x;
+              let y2 = tok.y;
+              let w2 = tok.hitArea.x + tok.hitArea.width;
+              let h2 = tok.hitArea.y + tok.hitArea.height;
+              
+              if (!(x2 > w1 + x1 || x1 > w2 + x2 || y2 > h1 + y1 || y1 > h2 + y2)) {
+                collisions.push(tok);
+              }
+            }
+          }
+          let originalTokenIds = collisions.filter(x => x.actor && x.actor.hasCondition("engaged")).map(x => x.id);
+          for (let i = 0; i < originalTokenIds.length; i++) {
+            tokenIds.push(originalTokenIds[i]);
+          }
+        });
 
         let remove = true;
         surroundings.forEach(pos => {
@@ -49,7 +94,7 @@ Hooks.on('updateToken', (tokenDocument, data, options) => {
               }
             }
           }
-          let collision = collisions.find(x => x.actor && x.actor.hasCondition("engaged"));
+          let collision = collisions.find(x => x.actor && x.actor.hasCondition("engaged") && tokenIds.includes(x.id));
           if (collision) {
             remove = false;
           }

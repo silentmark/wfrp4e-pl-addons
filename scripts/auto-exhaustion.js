@@ -3,6 +3,8 @@ Hooks.on("preCreateCombatant", (combatant, data) => {
 });
 
 Hooks.on("ready", () => {
+    game.wfrp4e.combat.scripts.endRound.push(postExhaustionMessage);
+
     $('body').on('change', '.ce-modify-hp', (event) => {
         event.preventDefault();
         
@@ -18,6 +20,47 @@ Hooks.on("ready", () => {
       });
 });
 
+Hooks.on('renderChatLog', (log, html, data) => {
+    html.on("click", '.exhaustion-test', async event => {
+        let combatantId = event.currentTarget.dataset.combatantId;
+        const c = game.combat.combatants.find(c => c.id == combatantId);
+        if (c) {
+            let msgId = $(event.currentTarget).parents(".message").attr("data-message-id")
+            let message = game.messages.get(msgId);
+            let newData;
+            let test = await c.actor.setupSkill(game.i18n.localize('NAME.Endurance'));            
+            await test.roll();
+            if (test.result.outcome == 'failure') {
+                await c.actor.addCondition('fatigued');
+                await c.setFlag('wfrp4e', 'exhaustion', c.actor.characteristics.t.bonus);
+                newData = game.wfrp4e.utility.chatDataSetup(`<h2>Wyczerpanie: ${c.actor.name}</h2><p>Test odporności nie zdany, rund do kolejnego wyczerpania: ${c.actor.characteristics.t.bonus}, otrzymano stan Zmęczenie</p>`)
+            } else {
+                await c.setFlag('wfrp4e', 'exhaustion', Number.parseInt(test.result.SL));
+                newData = game.wfrp4e.utility.chatDataSetup(`<h2>Wyczerpanie: ${c.actor.name}</h2><p>Test odporności zdany, rund do kolejnego wyczerpania: ${Number.parseInt(test.result.SL)}</p>`)
+            }
+            if (game.user.isGM)
+                message.update(newData)
+            else
+                WFRP_Utility.awaitSocket(game.user, "updateMsg", { id: msgId, updateData: newData }, "executing condition script");
+        }
+      });
+      html.on("click", '.exhaustion-rest', async event => {
+        let combatantId = event.currentTarget.dataset.combatantId;
+        const c = game.combat.combatants.find(c => c.id == combatantId);
+        if (c) {
+            await c.setFlag('wfrp4e', 'exhaustion', c.actor.characteristics.t.bonus);
+            let msgId = $(event.currentTarget).parents(".message").attr("data-message-id")
+            let message = game.messages.get(msgId);
+            let newData = game.wfrp4e.utility.chatDataSetup(`<h2>Wyczerpanie: ${c.actor.name}</h2><p>Odpoczynek podczas najbliższej rundy, rund do kolejnego wyczerpania: ${c.actor.characteristics.t.bonus + 1}</p>`)
+            if (game.user.isGM)
+              message.update(newData)
+            else
+              WFRP_Utility.awaitSocket(game.user, "updateMsg", { id: msgId, updateData: newData }, "executing condition script");
+        }
+      });
+  });
+
+
 Hooks.on("renderCombatTracker", (app, html, options) => {
     const combat = game.combats.active;
     if(combat) {
@@ -30,45 +73,20 @@ Hooks.on("renderCombatTracker", (app, html, options) => {
     }
 });
 
-Hooks.on("updateCombat", async (combat, changes, context) => {
-    if(getProperty(context, "wfrp4e-pl-addons.shouldReroll")) return;
+async function postExhaustionMessage (combat) {
+    if (!game.user.isGM) return;
 
-    let cTurn = combat.current.turn;
-    let pTurn = foundry.utils.getProperty(context, `wfrp4e.previousTR.T`);
-    let cRound = combat.current.round;
-    let pRound = foundry.utils.getProperty(context, `wfrp4e.previousTR.R`);
-
-    if (changes?.flags && changes?.flags['wfrp4e-pl-addons'] && changes.flags['wfrp4e-pl-addons'].reroll) {
-        pRound -= 1;
-        changes.turn = cTurn;
-        changes.round = cRound;
-    }
-
-    // no change in turns nor rounds.
-    if (changes.turn === undefined && changes.round === undefined) return;
-    // combat not started or not active.
-    if (!combat.started || !combat.isActive) return;
-    // we went back.
-    if (cRound < pRound || (cTurn < pTurn && cRound === pRound)) return;
-
-    if (combat.round != 1 && combat.turns && combat.active && cRound > 1 && combat.current.turn == 0) {
-        for (let i = 0; i < combat.turns.length; i++) {
-            let c = combat.turns[i];
-            let exhaustion = c.flags?.wfrp4e?.exhaustion;
-            if (exhaustion === undefined) exhaustion = c.actor.characteristics.t.bonus;
-            exhaustion = Math.max(exhaustion - 1, 0);
-            if (exhaustion == 0) {
-                let test = await c.actor.setupSkill(game.i18n.localize('NAME.Endurance'));
-                await test.roll();
-                if (test.result.outcome == 'failure') {
-                    await c.actor.addCondition('fatigued');
-                    await c.setFlag('wfrp4e', 'exhaustion', c.actor.characteristics.t.bonus);
-                } else {
-                    await c.setFlag('wfrp4e', 'exhaustion', Number.parseInt(test.result.SL));
-                }
-            } else {
-                await c.setFlag('wfrp4e', 'exhaustion', exhaustion);
-            }
+    for (let i = 0; i < combat.turns.length; i++) {
+        let c = combat.turns[i];
+        let exhaustion = c.flags?.wfrp4e?.exhaustion;
+        if (exhaustion === undefined) exhaustion = c.actor.characteristics.t.bonus;
+        exhaustion = Math.max(exhaustion - 1, 0);
+        await c.setFlag('wfrp4e', 'exhaustion', exhaustion);
+        if (exhaustion == 0) {
+            msgContent = `
+            <h2>Wyczerpanie: ${c.actor.name}</h2>
+            <a class="chat-button exhaustion-test" data-combatant-id="${c.id}">Test Odporności</a> lub <a class="chat-button exhaustion-rest" data-combatant-id="${c.id}">Opuszczenie następnej rundy</a>`;
+            await ChatMessage.create({ content: msgContent, speaker: { alias: c.actor.name } });
         }
     }
-});
+}

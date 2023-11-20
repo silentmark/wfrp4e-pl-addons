@@ -171,7 +171,6 @@ Hooks.on("renderChatMessage", async (app, html, messageData) => {
           if (opposeMessage) {
             let oppose = opposeMessage.getOppose();
             await oppose.resolveUnopposed();
-           // oppose.setDefender(//get message from ro);
           }
         };
 

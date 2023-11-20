@@ -17,6 +17,7 @@ const AoEEffects = {
 				AoEEffects.running = false;
 			}
 		}, 100);
+		game.wfrp4e.combat.scripts.startTurn.push(AoEEffects.removeObsoleteTemplates);
 	},
 
 	getAoEEffectData: function (template) {
@@ -29,6 +30,10 @@ const AoEEffects = {
             if (messageId) {
                 aoeEffect.message = game.messages.get(messageId);
             }
+			let round = template.getFlag('wfrp4e', 'round');
+			if (round) {
+				aoeEffect.round = round;
+			}
             return aoeEffect;
         }
 		return {};
@@ -56,6 +61,12 @@ const AoEEffects = {
 					<input type="text" value="${aoeEffect.message?.id ?? ""}" name="flags.wfrp4e.messageId">
 				</div>
 			</div>
+			<div class="form-group">
+				<label>Round Placed</label>
+				<div class="form-fields">
+					<input type="text" value="${aoeEffect.round ?? ""}" name="flags.wfrp4e.round">
+				</div>
+			</div>
 		`;
 
 		nav.after(effectConfig);
@@ -72,8 +83,8 @@ const AoEEffects = {
 	
 			for (let templateDocument of game.canvas.scene.templates) {
 				if (templateDocument.getFlag('wfrp4e', 'itemuuid')) {
-					//let affected = templateDocument.collidesToken(targetToken.document, {collisionMethod: "GRID_SPACES_POINTS"});
-					let affected = templateDocument.collidesToken(targetToken.document, {collisionMethod: "POINTS_CENTER"});
+					let affected = templateDocument._boundsOverlap(targetToken.document);
+					//let affected = templateDocument.collidesToken(targetToken.document, {collisionMethod: "POINTS_CENTER"});
 					if (affected && templateDocument.elevation == targetToken.document.elevation) {
 						const aoeEffect = AoEEffects.getAoEEffectData(templateDocument);
 						if (!aoeEffect.item) continue;
@@ -154,21 +165,34 @@ const AoEEffects = {
 		}
 	},
 
-	getTemplateDuration: async function (template) {
-		let duration = -1;
-		aoeEffect = AoEEffects.getAoEEffectData(template);
+	getTemplateDuration: function (template) {
+		let duration = undefined;
+		let aoeEffect = AoEEffects.getAoEEffectData(template);
 		if (aoeEffect.message) {
 			let test = aoeEffect.message.getTest();
 			if (test.data.result?.overcast?.usage?.duration?.current && 
 				test.data.result?.overcast?.usage?.duration?.unit?.toLowerCase() == game.i18n.localize("Rounds") &&
-				game.combat?.active) {
-					//TODO: get the round that template was placed. 
-				duration = test.data.result.overcast.usage.duration.current - (game.combat.round - templatePlacementRound);
+				game.combat?.active &&
+				aoeEffect.round) {
+					duration = test.data.result.overcast.usage.duration.current - (game.combat.round - aoeEffect.round);
+			} else {
+				duration = -1;
 			}
 		}
 		return duration;
 	},
 
+	removeObsoleteTemplates: async function(combat, curentCombatant) {
+		if (game.user.isGM && combat.active) {
+			let templates = game.canvas.templates.placeables.map(x=>x);
+			for (let t of templates) {
+				let duration = AoEEffects.getTemplateDuration(t.document);
+				if (duration === -1) {
+					t.document.delete();
+				}
+			}
+		}
+	},
 
 	onRefreshToken: async function (tokenDocument, data, options) {
 		if (!game.user.isGM) return;
@@ -191,7 +215,6 @@ const AoEEffects = {
 		AoEEffects.promises.push(AoEEffects.refreshEffects);
 	},
 
-
 	onUpdateTemplate: async function(templateDocument, data, options) {
 		if (!game.user.isGM) return;
 		if (!game.combat || !game.combat.active) return;
@@ -200,9 +223,11 @@ const AoEEffects = {
 	}
 }
 
+
 Hooks.on('ready', AoEEffects.init);
 Hooks.on('refreshToken', AoEEffects.onRefreshToken);
 Hooks.on('updateMeasuredTemplate', AoEEffects.onUpdateTemplate);
 Hooks.on('deleteMeasuredTemplate', AoEEffects.onDeleteTemplate);
 Hooks.on('createMeasuredTemplate', AoEEffects.onCreateTemplate);
 Hooks.on('renderMeasuredTemplateConfig', AoEEffects.onConfigRender);
+Hooks.on("updateCombat", AoEEffects.removeObsoleteTemplates);

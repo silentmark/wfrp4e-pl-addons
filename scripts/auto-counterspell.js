@@ -1,6 +1,11 @@
-Hooks.on("updateCombat", async function (combat, updateData) {
+Hooks.on("ready", function () {
+    game.wfrp4e.combat.scripts.startTurn.push(updateCombatCasters);
+
+});
+
+async function updateCombatCasters (combat, currentCombatant) {
     if (game.settings.get("wfrp4e-pl-addons", "counterSpells.Enable")) {
-        if (game.user.isGM) {
+        if (game.user.isGM && combat.active) {
             let casters = combat.getFlag('wfrp4e-pl-addons', 'casters');
             if(!casters) {
                 casters = {};
@@ -19,8 +24,7 @@ Hooks.on("updateCombat", async function (combat, updateData) {
             await combat.setFlag('wfrp4e-pl-addons', 'casters', casters);
         }
     }
-});
-
+};
 
 Hooks.on("preUpdateCombat", async function (combat, updateData) {    
     if (game.settings.get("wfrp4e-pl-addons", "counterSpells.Enable")) {
