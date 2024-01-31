@@ -11,17 +11,17 @@ console.log("Bundling to " + modulePath)
 export default {
     input: [
         "scripts/aoe-effects.js",
-        "scripts/armour.js", 
-        "scripts/auto-combat.js", 
-        "scripts/auto-counterspell.js", 
-        "scripts/auto-engaged.js", 
-        "scripts/auto-outnumbered.js",
-        "scripts/auto-rotate.js", 
-        "scripts/miscasts.js", 
-        "scripts/reroll-initiative.js", 
-        "scripts/settings.js", 
-        "scripts/spelltracker.js", 
-        "scripts/windsofmagic.js",
+        "scripts/auto-combat.mjs",
+        "scripts/auto-miss.mjs",
+        "scripts/armour.mjs",  
+        "scripts/auto-counterspell.mjs", 
+        "scripts/auto-engaged.mjs", 
+        "scripts/auto-outnumbered.mjs",
+        "scripts/auto-rotate.mjs", 
+        "scripts/miscasts.mjs", 
+        "scripts/reroll-initiative.mjs", 
+        "scripts/constants.mjs", 
+        "scripts/windsofmagic.mjs",
     ],
     output: {
         dir : path.join(modulePath, "scripts")

@@ -1,7 +1,8 @@
+export default class Miscasts {
 
-Hooks.on("setup", () => {  
-  if (game.settings.get("wfrp4e-pl-addons", "alternativeMiscasts.Enable")) {
-    Reflect.defineProperty(TestWFRP.prototype, '_handleMiscasts', { value:
+  setup() {
+    if (game.settings.get("wfrp4e-pl-addons", "alternativeMiscasts.Enable")) {
+      Reflect.defineProperty(TestWFRP.prototype, '_handleMiscasts', { value:
         function(miscastCounter)  {
             const maxRandom = 25;
             let mis = false;
@@ -94,19 +95,22 @@ Hooks.on("setup", () => {
               }
 
               if (this.preData.unofficialGrimoire.ingredientMode == "control") {
-                console.log("Użyto składnika kontroli: " + -this.actor.characteristics.wp.value);
-                this.result.tooltips.miscast.push("Użyto składnika kontroli: " + -this.actor.characteristics.wp.value);
-                globalModifier -= this.actor.characteristics.wp.value;
+                let random = Math.floor(Math.random() * maxRandom) + 50;
+                console.log("Użyto składnika kontroli: " + -random);
+                this.result.tooltips.miscast.push("Użyto składnika kontroli: " + -random);
+                globalModifier -= -random;
               }
-              if (this instanceof CastTest && this.actor.getItemTypes("talent").find(x=>x.name == "Precyzyjne Inkantowanie")) {
-                console.log("Precyzyjne Inkantowanie: " + -this.actor.characteristics.wp.value);
-                this.result.tooltips.miscast.push("Precyzyjne Inkantowanie: " + -this.actor.characteristics.wp.value);
-                globalModifier -= this.actor.characteristics.wp.value;
+              if (this instanceof CastTest && this.actor.itemTypes["talent"].find(x=>x.name == "Precyzyjne Inkantowanie")) {
+                let random = Math.floor(Math.random() * maxRandom) + 50;
+                console.log("Precyzyjne Inkantowanie: " + -random);
+                this.result.tooltips.miscast.push("Precyzyjne Inkantowanie: " + -random);
+                globalModifier -= random;
               }
-              if (this instanceof ChannelTest && this.actor.getItemTypes("talent").find(x=>x.name == "Zmysł Magii")) {
-                console.log("Zmysł Magii: " + -this.actor.characteristics.wp.value);
-                this.result.tooltips.miscast.push("Zmysł Magii: " + -this.actor.characteristics.wp.value);
-                globalModifier -= this.actor.characteristics.wp.value;
+              if (this instanceof ChannelTest && this.actor.itemTypes["talent"].find(x=>x.name == "Zmysł Magii")) {
+                let random = Math.floor(Math.random() * maxRandom) + 50;
+                console.log("Zmysł Magii: " + -random);
+                this.result.tooltips.miscast.push("Zmysł Magii: " + -random);
+                globalModifier -= random;
               }
               this.result.tooltips.miscastText = `Manifestacje Chaosu: <ul><li style='float: left'>${this.result.tooltips.miscast.map(t => t.trim()).join("</li><li>")}</li></ul>`
               this.result.miscastModifier = globalModifier;
@@ -127,4 +131,5 @@ Hooks.on("setup", () => {
           }
       });
     }
-  });
+  }
+}

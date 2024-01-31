@@ -1,29 +1,15 @@
 {
   "name": "wfrp4e-pl-addons",
   "title": "Warhammer 4ed Addons",
-  "description": "Kilka dodatków do polskiej wersji wfrp4e. Odzyskiwanie strzał, alternatywne zasady pancerzy, dodatkowy ekwipunek, alternatywne zasady trafień krytycznych (UiA).",
+  "description": "Kilka Głupot.",
   "authors": [
     {
       "name": "silent_mark",
       "flags": {}
     }
   ],
-  "scripts": [
-    "/scripts/settings.js",
-    "/scripts/armour.js",
-    "/scripts/windsofmagic.js",
-    "/scripts/auto-counterspell.js",
-    "/scripts/spelltracker.js",
-    "/scripts/miscasts.js",
-    "/scripts/auto-engaged.js",
-    "/scripts/auto-rotate.js",
-    "/scripts/auto-outnumbered.js",
-    "/scripts/reroll-initiative.js",
-    "/scripts/auto-combat.js",
-    "/scripts/aoe-effects.js",
-    "/scripts/prayer-nerf.js",
-    "/scripts/auto-miss.js",
-    "/scripts/auto-exhaustion.js"
+  "esmodules": [
+    "/scripts/main.mjs"
   ],
   "languages": [
     {
