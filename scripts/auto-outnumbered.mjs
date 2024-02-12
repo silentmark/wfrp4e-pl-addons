@@ -116,7 +116,7 @@ export default class AutoOutnumbered {
             return t1.sizeNum - t2.sizeNum;
           });
           
-          let outnumbering = attackingSizeNum;
+          let outnumbering = 0;
           for (let tokWrap of processedTokens) {
             let tok = tokWrap.token;
             if (tok.document.disposition === attackingToken.document.disposition) {

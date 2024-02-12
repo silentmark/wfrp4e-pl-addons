@@ -1,8 +1,10 @@
+import CircleHelper from "./helper.js";
 
 export default class WindsOfMagic {
 
     setup () {
         if (game.settings.get("wfrp4e-pl-addons", "windsOfMagicCombatRolls.Enable")) {
+            CircleHelper.registerHelpers();
 
             Hooks.on("createCombat", async function (combat) {
                 if (game.user.isGM) {
@@ -229,7 +231,7 @@ export default class WindsOfMagic {
                 if (combat && combat.round != 0 && combat.turns && combat.active && app?.getTest) {//combat started
                     let test = app.getTest();
                     if ((test?.constructor?.name == "WomCastTest" && test.result.castOutcome == "success") ||
-                        (test?.constructor?.name == "WeaponTest" && test.result.outcome == "success" && test.weapon?.effects?.find(x=>x.flags?.wfrp4e?.applicationData?.type == 'area'))) {
+                        (test?.constructor?.name == "WeaponTest" && test.result.outcome == "success" && test.weapon?.areaEffects?.length)) {
                         let newMessage = jQuery(html).find(".message-content").append(jQuery('<div class="card-content"><a class="chat-button card-track-spell" style="width: 100%">Śledź zaklęcie / Efekt</a></div>'))
                         newMessage.find(".card-track-spell").click(async function () {
                             let messageId = messageData.message._id;
@@ -252,7 +254,7 @@ export default class WindsOfMagic {
                                 spells[messageId].duration = test.result.overcast.usage.duration;
                             } else {
                                 spells[messageId].type = "Weapon"
-                                let effect = test.weapon.effects.find(x=>x.flags?.wfrp4e?.effectApplication == 'area');
+                                let effect = test.weapon.areaEffects;
                                 spells[messageId].duration = {current: effect.duration.rounds, unit: "rund"};
                             }
                             if (test.data?.context?.templates) {
@@ -267,6 +269,20 @@ export default class WindsOfMagic {
             Hooks.on("renderCombatTracker", (app, html, options) => {
                 const combat = game.combats.active; 
                 if(combat) {
+
+                    game.combat.combatants.forEach(c => {
+                        // Add class to trigger drag events.
+                        let bar = c.token.getBarAttribute("bar1");
+                        let healthSvg = CircleHelper.getProgressCircle({
+                            current: bar.value,
+                            max: bar.max,
+                            radius: 16
+                        });
+                        let $combatant = html.find(`.combatant[data-combatant-id="${c.id}"]`);
+                        $combatant.find('.token-image').wrap('<div class="ce-image-wrapper">');
+                        $combatant.find('.ce-image-wrapper').append(CircleHelper.getProgressCircleHtml(healthSvg));
+                    });
+
                     let spells = combat.getFlag('wfrp4e-pl-addons', 'spells');
                     if (spells) {
                         let rows = ``;

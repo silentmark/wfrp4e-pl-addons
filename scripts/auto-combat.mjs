@@ -85,7 +85,7 @@ export default class AutoCombat {
               let setupItem = stuffToUse[0];
               for (let i = 1; i < stuffToUse.length; i++) {
                 let max = 0;
-                let skillToUse = setupItem.getSkillToUse(actor);
+                let skillToUse = setupItem.skillToUse;
                 if (skillToUse) {
                   max = skillToUse.system.total.value;
                 } else {
@@ -94,7 +94,7 @@ export default class AutoCombat {
 
                 let newMax = 0;
                 let newSetupItem = stuffToUse[i];
-                skillToUse = newSetupItem.getSkillToUse(actor)
+                skillToUse = newSetupItem.skillToUse;
                 if (skillToUse) {
                   newMax = skillToUse.system.total.value;
                 } else {
@@ -186,6 +186,8 @@ export default class AutoCombat {
             }
             let item = castTest.item;
             let actor = castTest.actor;
+            // TODO: fix
+            debugger;
             for (let i = 0; i < castTest.effects.length; i++) {
               let effect = castTest.effects[i];
               let effectId = castTest.effects[i].id;
@@ -208,8 +210,8 @@ export default class AutoCombat {
 
         if (game.ready && app.flags?.wfrp4e?.opposeData?.attackerMessageId && app.flags?.wfrp4e?.opposeData?.messageId && !app.flags.wfrp4e.opposeData.resultMessageId) {
           let msg = game.messages.get(app.flags.wfrp4e.opposeData.attackerMessageId);
-          let postFunction = msg?.flags?.testData?.context?.postFunction;
-          if (postFunction == "weaponTest" || postFunction == "traitTest") {
+          let postFunction = msg?.flags?.testData?.preData?.rollClass;
+          if (postFunction == "WeaponTest" || postFunction == "TraitTest") {
             let speaker;
             if (msg.flags.testData.context.speaker.actor) {
               speaker = game.actors.get(msg.flags.testData.context.speaker.actor);
@@ -240,7 +242,7 @@ export default class AutoCombat {
                         if (setupItem.type == "skill") {
                           max = setupItem.system.total.value;
                         } else {
-                          let skillToUse = setupItem.getSkillToUse(actor)
+                          let skillToUse = setupItem.skillToUse;
                           if (skillToUse) {
                             max = skillToUse.system.total.value;
                           } else {
@@ -252,7 +254,7 @@ export default class AutoCombat {
                         if (newSetupItem.type == "skill") {
                           newMax = newSetupItem.system.total.value;
                         } else {
-                          let skillToUse = newSetupItem.getSkillToUse(actor)
+                          let skillToUse = newSetupItem.skillToUse;
                           if (skillToUse) {
                             newMax = skillToUse.system.total.value;
                           } else {
