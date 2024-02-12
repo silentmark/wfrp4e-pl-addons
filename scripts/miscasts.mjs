@@ -58,7 +58,7 @@ export default class Miscasts {
                 this.result.tooltips.miscast.push("Niezdany Test: " + random);
                 globalModifier += random;
               }
-              if (this.preData.unofficialGrimoire.ingredientMode == "power") {
+              if (this.preData.ingredientMode == "power") {
                 let random = Math.floor(Math.random() * maxRandom) + 50;
                 console.log("Użyto składnika Mocy: " + random);
                 this.result.tooltips.miscast.push("Użyto składnika Mocy: " + random);
@@ -70,10 +70,10 @@ export default class Miscasts {
                 this.result.tooltips.miscast.push("Szybkie Czarowanie: " + random);
                 globalModifier += random;
               }
-              if (this.preData.unofficialGrimoire.overchannelling) {
-                console.log("Nadsplatanie: " + (this.preData.unofficialGrimoire.overchannelling * 10));
-                this.result.tooltips.miscast.push("Nadsplatanie: " + (this.preData.unofficialGrimoire.overchannelling * 10));
-                globalModifier += this.preData.unofficialGrimoire.overchannelling * 10;
+              if (this.preData.overchannelling) {
+                console.log("Nadsplatanie: " + (this.preData.overchannelling * 10));
+                this.result.tooltips.miscast.push("Nadsplatanie: " + (this.preData.overchannelling * 10));
+                globalModifier += this.preData.overchannelling * 10;
               }
 
               if (this.spell.lore.value.toLowerCase() == "petty") {
@@ -81,7 +81,7 @@ export default class Miscasts {
                 this.result.tooltips.miscast.push("Czar prosty: " + -50);
                 globalModifier -= 50;
               }
-              if (wind == "Dhar" && (this.preData.unofficialGrimoire.ingredientMode == 'none' || this.hasIngredient)) {
+              if (wind == "Dhar" && (this.preData.ingredientMode == 'none' || this.hasIngredient)) {
                 let random = Math.floor(Math.random() * maxRandom) + 50;
                 console.log("Magia Dhar bez składnika: " + random);
                 this.result.tooltips.miscast.push("Magia Dhar bez składnika: " + random);
@@ -93,8 +93,20 @@ export default class Miscasts {
                 this.result.tooltips.miscast.push("Magia Dhar przy 88: " + random);
                 globalModifier += random;
               }
+              if (this instanceof CastTest && this.actor.hasCondition("multispell")) {
+                let multiSpell = this.actor.hasCondition("multispell").conditionValue * 50;
+                console.log("Wielokrotne Czarowanie: " + multiSpell);
+                this.result.tooltips.miscast.push("Wielokrotne Czarowanie: " + multiSpell);
+                globalModifier += multiSpell;
+              }
+              if (this instanceof ChannelTest && this.actor.hasCondition("multichannelling")) {
+                let multichannelling = this.actor.hasCondition("multichannelling").conditionValue * 50;
+                console.log("Wielokrotne Splatanie: " + multichannelling);
+                this.result.tooltips.miscast.push("Wielokrotne Splatanie: " + multichannelling);
+                globalModifier += multichannelling;
+              }
 
-              if (this.preData.unofficialGrimoire.ingredientMode == "control") {
+              if (this.preData.ingredientMode == "control") {
                 let random = Math.floor(Math.random() * maxRandom) + 50;
                 console.log("Użyto składnika kontroli: " + -random);
                 this.result.tooltips.miscast.push("Użyto składnika kontroli: " + -random);
@@ -117,7 +129,6 @@ export default class Miscasts {
               this.result.miscastTable = "miscast";
               const table = game.wfrp4e.tables.findTable("miscast" + wind?.toLowerCase())
               if (table) {
-                let formula;
                 if (modifier < 0) {
                   formula = `1d100 - ${Math.abs(modifier)}`
                 } else {

@@ -10,6 +10,7 @@ import AutoCounterSpell from './auto-counterspell.mjs';
 import AutoOutnumbered from './auto-outnumbered.mjs';
 import AutoCombat from './auto-combat.mjs';
 import AutoMiss from './auto-miss.mjs';
+import PF2eHeresy from './pf2e-heresy.mjs';
 
 class Main {
     constructor() {
@@ -24,6 +25,7 @@ class Main {
         this.autoOutnumbered = new AutoOutnumbered();
         this.autoCombat = new AutoCombat();
         this.autoMiss = new AutoMiss();
+        this.pf2eHeresy = new PF2eHeresy();
 
         this.customPrefillModifiers = {};
     }
@@ -39,6 +41,7 @@ class Main {
     autoOutnumbered;
     autoCombat;
     autoMiss;
+    pf2eHeresy;
 
     customPrefillModifiers;
 
@@ -54,6 +57,7 @@ class Main {
         this.autoOutnumbered.setup();
         this.autoCombat.setup();
         this.autoMiss.setup();
+        this.pf2eHeresy.setup();
     }
 
     ready() {
@@ -243,6 +247,15 @@ Hooks.once("init", () => {
     game.settings.register("wfrp4e-pl-addons", "autoMiss.Enabled", {
         name: "wfrp4epladdon.autoMiss.Enable",
         hint: "wfrp4epladdon.autoMiss.EnableHint",
+        scope: "world",
+        config: true,
+        default: false,
+        type: Boolean
+    });
+
+    game.settings.register("wfrp4e-pl-addons", "pf2eHeresy.Enable", {
+        name: "wfrp4epladdon.pf2eHeresy.Enable",
+        hint: "wfrp4epladdon.pf2eHeresy.EnableHint",
         scope: "world",
         config: true,
         default: false,

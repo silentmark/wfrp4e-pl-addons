@@ -6,6 +6,9 @@
 
    "NAME.CombatMaster": "Mistrz Walki",
    "WFRP4E.ConditionName.Covered": "Zasłona przed Strzałem",
+   "WFRP4E.ConditionName.Multiattacks": "Atak Wielokrotny",
+   "WFRP4E.ConditionName.Multichannelling": "Wielokrotne Splatanie",
+   "WFRP4E.ConditionName.Multispell": "Wielokrotne Czarowanie",
 
    "wfrp4epladdon.alternativeArmour.Enable": "Aktywuj alternatywne zasady Pancerzy", 
    "wfrp4epladdon.alternativeArmour.EnableHint": "Zmienia kategorie pancerzy oraz zasady ich łączenia oraz udostępnia dodatkowe kompendium z dedykowanymi pancerzami.", 
@@ -44,5 +47,8 @@
     "wfrp4epladdon.autoRotate.BonusFlankingHint": "",
     
     "wfrp4epladdon.autoRotate.BonuBehind": "Bonus przy ataku od tyłu",
-    "wfrp4epladdon.autoRotate.BonuBehindHint": ""
+    "wfrp4epladdon.autoRotate.BonuBehindHint": "",
+    
+    "wfrp4epladdon.pf2eHeresy.Enable": "Aktywuj karę za atak wielokrotny",
+    "wfrp4epladdon.pf2eHeresy.EnableHint": ""
 }

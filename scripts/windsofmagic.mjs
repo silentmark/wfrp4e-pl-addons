@@ -1,4 +1,4 @@
-import CircleHelper from "./helper.js";
+import CircleHelper from "./helper.mjs";
 
 export default class WindsOfMagic {
 
@@ -82,7 +82,7 @@ export default class WindsOfMagic {
                                                 options : {
                                                     dialog : {
                                                             hideScript : `return args.type != 'channelling' || game.wfrp4e.config.magicWind[args.item?.lore?.value] == '${wind}'`,
-                                                        activateScript : `return args.type == "channelling" && game.wfrp4e.config.magicWind[args.item?.lore?.value] == '${wind}'`
+                                                            activateScript : `return args.type == "channelling" && game.wfrp4e.config.magicWind[args.item?.lore?.value] == '${wind}'`
                                                         }
                                                     }
                                                 }

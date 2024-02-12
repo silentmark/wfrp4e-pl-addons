@@ -10,17 +10,20 @@ let modulePath = foundryPath.modulePath(manifest.name)
 console.log("Bundling to " + modulePath)
 export default {
     input: [
-        "scripts/aoe-effects.js",
+        "scripts/armour.mjs",
         "scripts/auto-combat.mjs",
+        "scripts/auto-counterspell.mjs",
+        "scripts/auto-engaged.mjs",
         "scripts/auto-miss.mjs",
-        "scripts/armour.mjs",  
-        "scripts/auto-counterspell.mjs", 
-        "scripts/auto-engaged.mjs", 
         "scripts/auto-outnumbered.mjs",
-        "scripts/auto-rotate.mjs", 
-        "scripts/miscasts.mjs", 
-        "scripts/reroll-initiative.mjs", 
-        "scripts/constants.mjs", 
+        "scripts/auto-rotate.mjs",
+        "scripts/constants.mjs",
+        "scripts/helper.mjs",
+        "scripts/main.mjs",
+        "scripts/miscasts.mjs",
+        "scripts/pf2e-heresy.mjs",
+        "scripts/prayer-nerf.mjs",
+        "scripts/reroll-initiative.mjs",
         "scripts/windsofmagic.mjs",
     ],
     output: {
