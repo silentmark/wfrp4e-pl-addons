@@ -76,6 +76,12 @@ export default class PF2eHeresy {
                 }
             };
 
+            Hooks.on("createToken", async (token, data, user) => {
+                if (game.canvas.grid.type == CONST.GRID_TYPES.GRIDLESS) {
+                    await token.update({texture: {src: token.actor.img}});
+                }
+            });
+
             Hooks.on("ready", () => {
                 setTimeout(() => {
                     game.wfrp4e.config.statusEffects.splice(9, 0, multiattacks);

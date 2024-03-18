@@ -129,12 +129,13 @@ export default class Miscasts {
               this.result.miscastTable = "miscast";
               const table = game.wfrp4e.tables.findTable("miscast" + wind?.toLowerCase())
               if (table) {
+                let formula = "1d100";
                 if (modifier < 0) {
                   formula = `1d100 - ${Math.abs(modifier)}`
                 } else {
                   formula = `1d100 + ${Math.abs(modifier)}`
                 }
-                if (Number.parseInt(new Roll("1d100").roll({async: false}).result) > 50) {
+                if (Number.parseInt(new Roll(formula).roll({async: false}).result) > 50) {
                   this.result.miscastTable = "miscast" + wind.toLowerCase();
                 }
               }
