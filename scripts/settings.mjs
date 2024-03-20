@@ -52,6 +52,6 @@ const config = {
           }
         }
     }
-    mergeObject(game.wfrp4e.config, config);
+    foundry.utils.mergeObject(game.wfrp4e.config, config);
 });
 
