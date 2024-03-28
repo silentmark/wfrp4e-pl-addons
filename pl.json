@@ -4,6 +4,11 @@
    "WFRP4E.ArmourType.Heavy": "Ciężki Pancerz",
    "WFRP4E.ArmourType.Other": "Inny",
 
+   "PROPERTY.Inner": "Warstwa Wewnętrzna",
+   "PROPERTY.Outer": "Warstwa Zewnętrzna",
+   "PROPERTY.Complementary": "Warstwa Uzupełniająca",
+   "PROPERTY.Metal": "Metal", 
+
    "NAME.CombatMaster": "Mistrz Walki",
    "WFRP4E.ConditionName.Covered": "Zasłona przed Strzałem",
    "WFRP4E.ConditionName.Multiattacks": "Atak Wielokrotny",

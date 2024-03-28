@@ -9,10 +9,10 @@ export default class Armours {
               "other": game.i18n.localize("WFRP4E.ArmourType.Other")
             };
 
-            game.wfrp4e.config.armorQualities.inner = "PROPERTY.Inner";
-            game.wfrp4e.config.armorQualities.outer = "PROPERTY.Outer";
-            game.wfrp4e.config.armorQualities.complementary = "PROPERTY.Complementary";
-            game.wfrp4e.config.armorQualities.metal = "PROPERTY.Metal";
+            game.wfrp4e.config.armorQualities.inner =  game.i18n.localize("PROPERTY.Inner");
+            game.wfrp4e.config.armorQualities.complementary =  game.i18n.localize("PROPERTY.Complementary");
+            game.wfrp4e.config.armorQualities.outer =  game.i18n.localize("PROPERTY.Outer");
+            game.wfrp4e.config.armorQualities.metal =  game.i18n.localize("PROPERTY.Metal");
         }
     }
 

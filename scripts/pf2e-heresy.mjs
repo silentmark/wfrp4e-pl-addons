@@ -92,7 +92,7 @@ export default class PF2eHeresy {
                     
                     game.wfrp4e.config.statusEffects.splice(9, 0, multispell);
                     game.wfrp4e.config.conditions.multispell = "Wielokrotne Czarowanie";
-                }, 1000);
+                }, 10000);
                 let f = async function(combat, combatant) {
                     await combatant.actor.removeCondition("multiattacks", 99);
                     await combatant.actor.removeCondition("multichannelling", 99);

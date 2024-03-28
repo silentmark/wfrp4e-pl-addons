@@ -69,6 +69,10 @@ Hooks.on("setup", () => {
     game.modules.get(constants.moduleId).api.setup();
 });
 
+Hooks.on("ready", () => {    
+    game.modules.get(constants.moduleId).api.ready();
+});
+
 Hooks.once("init", () => {
     game.modules.get(constants.moduleId).api = new Main();
 

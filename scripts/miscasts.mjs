@@ -64,7 +64,7 @@ export default class Miscasts {
                 this.result.tooltips.miscast.push("Użyto składnika Mocy: " + random);
                 globalModifier += random;
               }
-              if (this.preData.unofficialGrimoire.quickcasting) {
+              if (this.preData.quickcasting) {
                 let random = Math.floor(Math.random() * maxRandom) + 50;
                 console.log("Szybkie Czarowanie: " + random);
                 this.result.tooltips.miscast.push("Szybkie Czarowanie: " + random);

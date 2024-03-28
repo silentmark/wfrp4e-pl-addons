@@ -47,7 +47,7 @@ export default class AutoMiss {
         setTimeout(() => {
           game.wfrp4e.config.statusEffects.splice(9, 0, covered);
           game.wfrp4e.config.conditions.covered = "Zasłona przed Strzałem";
-        }, 1000);
+        }, 10000);
       });
 
       Hooks.on("renderChatMessage", async (app, html, messageData) => {

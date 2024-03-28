@@ -293,7 +293,7 @@ export default class WindsOfMagic {
                             const msg = spells[messageId];
                             if (msg.type == "Spell") {
                                 let actorId = msg.test.data.context.speaker.actor;
-                                let actorName = msg.test.data.context.cardOptions.speaker.alias;
+                                let actorName = msg.test.data.context.chatOptions.speaker.alias;
                                 let spellName = msg.test.data.preData.itemData.name;
                                 let spellImg = msg.test.data.preData.itemData.img;
                                 let spellId = msg.test.data.preData.itemData._id;
@@ -331,7 +331,7 @@ export default class WindsOfMagic {
                                     </li>`;
                             } else {
                                 let actorId = msg.test.data.context.speaker.actor;
-                                let actorName = msg.test.data.context.cardOptions.speaker.alias;
+                                let actorName = msg.test.data.context.chatOptions.speaker.alias;
                                 let item = game.actors.get(actorId).items.get(msg.test.data.preData.item);
             
                                 let itemName = item.name;
