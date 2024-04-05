@@ -18,19 +18,7 @@ export default class PF2eHeresy {
                                 options : {
                                     dialog : {
                                         hideScript : "return !args.item?.system.attackType && !args.skill?.name?.includes(game.i18n.localize('NAME.Dodge'))",
-                                        activateScript : "return args.item?.system.attackType || args.skill?.name?.includes(game.i18n.localize('NAME.Dodge'))",
-                                        targeter: true
-                                    }
-                                }
-                            },
-                            {
-                                trigger: "dialog",
-                                label : game.i18n.localize("WFRP4E.ConditionName.Multiattacks"),
-                                script : `args.prefillModifiers.modifier -= (this.effect.conditionValue * 30)`,
-                                options : {
-                                    dialog : {
-                                        hideScript : "return !args.item?.system.attackType && !args.skill?.name?.includes(game.i18n.localize('NAME.Dodge'))",
-                                        activateScript : "return args.item?.system.attackType || args.skill?.name?.includes(game.i18n.localize('NAME.Dodge'))",
+                                        activateScript : "return args.item?.system.attackType || args.skill?.name?.includes(game.i18n.localize('NAME.Dodge'))"
                                     }
                                 }
                             }

@@ -7,19 +7,18 @@ export default class AutoMiss {
   setup() {
     if (game.modules.get("tokencover")?.active && game.settings.get("wfrp4e-pl-addons", "autoMiss.Enabled")) {
 
-      const covered = {
+      const coveredLow = {
         icon: "modules/wfrp4e-pl-addons/icons/cover.png", 
-        id: "covered", 
-        statuses: ["covered"],
-        name: game.i18n.localize("WFRP4E.ConditionName.Covered"),
+        id: "tokencover.cover.LOW", 
+        statuses: ["tokencover.cover.LOW"],
+        name: "Zasłona przed Strzałem (Słaba)",
         flags: {
             wfrp4e: {
-              value: 1,
               scriptData: [
                 {
                   trigger: "dialog",
-                  label : game.i18n.localize("WFRP4E.ConditionName.Covered"),
-                  script : `args.prefillModifiers.modifier -= (this.effect.conditionValue * 10)`,
+                  label : "Zasłona przed Strzałem (Słaba)",
+                  script : `args.prefillModifiers.modifier -= 10`,
                   options : {
                       dialog : {
                           hideScript : "return args.item?.system.attackType != 'ranged'",
@@ -30,8 +29,80 @@ export default class AutoMiss {
                 },
                 {
                   trigger: "dialog",
-                  label : game.i18n.localize("WFRP4E.ConditionName.Covered"),
-                  script : `args.prefillModifiers.modifier -= (this.effect.conditionValue * 10)`,
+                  label : "Zasłona przed Strzałem (Słaba)",
+                  script : `args.prefillModifiers.modifier -= 10`,
+                  options : {
+                      dialog : {
+                          hideScript : "return args.item?.system.attackType != 'ranged'",
+                          activateScript : "return args.item?.system.attackType == 'ranged'"
+                      }
+                  }
+                }
+              ]
+            }
+        }
+      };
+
+      const coveredMedium = {
+        icon: "modules/wfrp4e-pl-addons/icons/cover.png", 
+        id: "tokencover.cover.MEDIUM", 
+        statuses: ["tokencover.cover.MEDIUM"],
+        name: "Zasłona przed Strzałem (Średnia)",
+        flags: {
+            wfrp4e: {
+              scriptData: [
+                {
+                  trigger: "dialog",
+                  label : "Zasłona przed Strzałem (Średnia)",
+                  script : `args.prefillModifiers.modifier -= 20`,
+                  options : {
+                      dialog : {
+                          hideScript : "return args.item?.system.attackType != 'ranged'",
+                          activateScript : "return args.item?.system.attackType == 'ranged'",
+                          targeter: true
+                      }
+                  }
+                },
+                {
+                  trigger: "dialog",
+                  label : "Zasłona przed Strzałem (Średnia)",
+                  script : `args.prefillModifiers.modifier -= 20`,
+                  options : {
+                      dialog : {
+                          hideScript : "return args.item?.system.attackType != 'ranged'",
+                          activateScript : "return args.item?.system.attackType == 'ranged'"
+                      }
+                  }
+                }
+              ]
+            }
+        }
+      };
+
+      const coveredHigh = {
+        icon: "modules/wfrp4e-pl-addons/icons/cover.png", 
+        id: "tokencover.cover.HIGH", 
+        statuses: ["tokencover.cover.HIGH"],
+        name: "Zasłona przed Strzałem (Silna)",
+        flags: {
+            wfrp4e: {
+              scriptData: [
+                {
+                  trigger: "dialog",
+                  label : "Zasłona przed Strzałem (Silna)",
+                  script : `args.prefillModifiers.modifier -= 30`,
+                  options : {
+                      dialog : {
+                          hideScript : "return args.item?.system.attackType != 'ranged'",
+                          activateScript : "return args.item?.system.attackType == 'ranged'",
+                          targeter: true
+                      }
+                  }
+                },
+                {
+                  trigger: "dialog",
+                  label : "Zasłona przed Strzałem (Silna)",
+                  script : `args.prefillModifiers.modifier -= 30`,
                   options : {
                       dialog : {
                           hideScript : "return args.item?.system.attackType != 'ranged'",
@@ -45,9 +116,12 @@ export default class AutoMiss {
       };
       Hooks.on("ready", () =>{
         setTimeout(() => {
-          game.wfrp4e.config.statusEffects.splice(9, 0, covered);
-          game.wfrp4e.config.conditions.covered = "Zasłona przed Strzałem";
-        }, 10000);
+          game.wfrp4e.config.statusEffects.splice(9, 0, coveredLow, coveredMedium, coveredHigh);
+          game.wfrp4e.config.conditions['tokencover.cover.MEDIUM'] = "Zasłona przed Strzałem (Średnia)";
+          game.wfrp4e.config.conditions['tokencover.cover.LOW'] = "Zasłona przed Strzałem (Słaba)";
+          game.wfrp4e.config.conditions['tokencover.cover.HIGH'] = "Zasłona przed Strzałem (Silna)";
+          
+        }, 20000);
       });
 
       Hooks.on("renderChatMessage", async (app, html, messageData) => {

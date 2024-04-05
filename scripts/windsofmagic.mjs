@@ -65,8 +65,8 @@ export default class WindsOfMagic {
                         let wind = skill.name.substring(skill.name.indexOf("(") + 1, skill.name.indexOf(")"));
                         let winds = combat.flags['wfrp4e-pl-addons']['winds'];
                         if (winds) {
-                            let modifier = winds.modifier.find(x=> x.wind == wind).modifier;
-                            if (modifier != 0) {
+                            let modifier = winds.modifier.find(x=> x.wind == wind)?.modifier;
+                            if (modifier != 0 && modifier != undefined) {
                                 let effect = actor.effects.find(x => x.name == 'Wiatry Magii (' + wind + ')');
                                 if (!effect) {
                                     effect = {
@@ -75,17 +75,17 @@ export default class WindsOfMagic {
                                         transfer: false,
                                         flags: {
                                             wfrp4e: {
-                                            scriptData: {
-                                                label: "@effect.name",
+                                            scriptData: [{
+                                                label: 'Wiatry Magii (' + wind + ')',
                                                 trigger: "dialog",
                                                 script : `args.prefillModifiers.modifier += ${modifier};`,
                                                 options : {
                                                     dialog : {
-                                                            hideScript : `return args.type != 'channelling' || game.wfrp4e.config.magicWind[args.item?.lore?.value] == '${wind}'`,
+                                                            hideScript : `return args.type != 'channelling' || game.wfrp4e.config.magicWind[args.item?.lore?.value] != '${wind}'`,
                                                             activateScript : `return args.type == "channelling" && game.wfrp4e.config.magicWind[args.item?.lore?.value] == '${wind}'`
                                                         }
                                                     }
-                                                }
+                                                }]
                                             }
                                         }
                                     }
@@ -138,37 +138,24 @@ export default class WindsOfMagic {
                                         ChatMessage.create({content: "<span>Złowrogie wpływy Tzeentcha wywołały manifestację chaosu: <a class='table-click fumble-roll' title='Złowrogie Wpływy Tzeentcha' data-table='minormis'><i class='fas fa-list'></i>Pomniejsza Manifestacja Chaosu</a></span>"});
                                         this.actor.createEmbeddedDocuments("ActiveEffect", [suffusedWithMagicEffect]);
                                     }`
-                                let effect = actor.effects.find(x => x.name == 'Złowrogie Wpływy Tzeentcha (Czarowanie)');
+                                let effect = actor.effects.find(x => x.name == 'Złowrogie Wpływy Tzeentcha');
                                 if (!effect) {
                                     effect = {
-                                        name: 'Złowrogie Wpływy Tzeentcha (Czarowanie)',
+                                        name: 'Złowrogie Wpływy Tzeentcha',
                                         icon: "modules/wfrp4e-core/icons/spells/tzeentch.png",
                                         transfer: false,
                                         flags: {
                                             wfrp4e: {
-                                                scriptData: {
-                                                    label: "@effect.name",
+                                                scriptData: [{
+                                                    label: "Złowrogie Wpływy Tzeentcha (Czarowanie)",
                                                     trigger: "rollCastTest",
                                                     script : script
-                                                }
-                                            }
-                                        }
-                                    }
-                                    await actor.createEmbeddedDocuments("ActiveEffect", [effect])
-                                }
-                                effect = actor.effects.find(x => x.name == 'Złowrogie Wpływy Tzeentcha (Splatanie)');
-                                if (!effect) {
-                                    effect = {
-                                        name: 'Złowrogie Wpływy Tzeentcha (Splatanie)',
-                                        icon: "modules/wfrp4e-core/icons/spells/undivided.png",
-                                        transfer: false,
-                                        flags: {
-                                            wfrp4e: {
-                                                scriptData: {
-                                                    label: "@effect.name",
+                                                },
+                                                {
+                                                    label: "Złowrogie Wpływy Tzeentcha (Splatanie)",
                                                     trigger: "rollChannellingTest",
                                                     script : script
-                                                }
+                                                }]
                                             }
                                         }
                                     }
