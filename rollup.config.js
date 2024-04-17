@@ -1,11 +1,12 @@
-const fs = require("fs")
-const path = require("path")
-const foundryPath = require("./foundry-path.js");
-import copy from 'rollup-plugin-copy-watch'
+import fs from "fs";
+import path from "path";
+import foundryPath from "./foundry-path.mjs";
+import copy from 'rollup-plugin-copy-watch';
+import jscc from 'rollup-plugin-jscc';
 
 let manifest = JSON.parse(fs.readFileSync("./module.json"))
 
-let modulePath = foundryPath.modulePath(manifest.name)
+let modulePath = foundryPath(manifest.name)
 
 console.log("Bundling to " + modulePath)
 export default {
@@ -33,6 +34,9 @@ export default {
         clearScreen: true
     }, 
     plugins: [
+        jscc({      
+            values : {_ENV :  process.env.NODE_ENV}
+        }),
         copy({
             targets : [
                 {src : "./module.json", dest : modulePath},
@@ -42,7 +46,12 @@ export default {
                 {src : "./packs/*", dest :  path.join(modulePath, "packs")},
                 {src : "./icons/*", dest :  path.join(modulePath, "icons")}
             ],
-            watch: ["module.json", "scripts/*", "templates/*", "packs/*", "icons/*"]
+            watch: ["module.json", "scripts/*", "templates/*", "icons/*"]
         })
-    ]
+    ],
+    onwarn(warning, warn) {
+        // suppress eval warnings
+        if (warning.code === 'EVAL') return
+        warn(warning)
+    }
 }

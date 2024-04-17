@@ -21,49 +21,92 @@
   ],
   "packs": [
     {
-      "name": "tables",
-      "label": "Tabele (Dodatkowe)",
-      "system": "wfrp4e",
-      "path": "packs/tables.db",
+      "label": "WFRP - Pancerze",
+      "name": "addons-armoury",
+      "path": "packs/addons-armoury",
+      "type": "Item",
+      "ownership": {
+          "PLAYER": "OBSERVER",
+          "ASSISTANT": "OWNER"
+      },
+      "system": "wfrp4e"
+    },
+    {
+      "label": "WFRP - Pech",
+      "name": "addons-fumbles",
+      "path": "packs/addons-fumbles",
+      "type": "Item",
+      "ownership": {
+          "PLAYER": "OBSERVER",
+          "ASSISTANT": "OWNER"
+      },
+      "system": "wfrp4e"
+    },
+    {
+      "label": "WFRP - Mikstury",
+      "name": "addons-ingredients",
+      "path": "packs/addons-ingredients",
+      "type": "Item",
+      "ownership": {
+          "PLAYER": "OBSERVER",
+          "ASSISTANT": "OWNER"
+      },
+      "system": "wfrp4e"
+    },
+    {
+      "label": "WFRP - Przedmioty",
+      "name": "addons-items",
+      "path": "packs/addons-items",
+      "type": "Item",
+      "ownership": {
+          "PLAYER": "OBSERVER",
+          "ASSISTANT": "OWNER"
+      },
+      "system": "wfrp4e"
+    },
+    {
+      "label": "WFRP - Manifestacje",
+      "name": "addons-miscasts",
+      "path": "packs/addons-miscasts",
       "type": "RollTable",
-      "private": false,
-      "flags": {}
+      "ownership": {
+          "PLAYER": "OBSERVER",
+          "ASSISTANT": "OWNER"
+      },
+      "system": "wfrp4e"
     },
     {
-      "name": "tables-miscast",
-      "label": "Tabele (Manifestacje)",
-      "system": "wfrp4e",
-      "path": "packs/tables-miscast.db",
+      "label": "WFRP - Tabele",
+      "name": "addons-tables",
+      "path": "packs/addons-tables",
       "type": "RollTable",
-      "private": false,
-      "flags": {}
+      "ownership": {
+          "PLAYER": "OBSERVER",
+          "ASSISTANT": "OWNER"
+      },
+      "system": "wfrp4e"
     },
     {
-      "name": "criticals",
-      "label": "Trafienia Krytyczne (Pod Bronią)",
-      "system": "wfrp4e",
-      "path": "packs/criticals.db",
+      "label": "WFRP - Wampiry",
+      "name": "addons-vampires",
+      "path": "packs/addons-vampires",
       "type": "Item",
-      "private": false,
-      "flags": {}
+      "ownership": {
+          "PLAYER": "OBSERVER",
+          "ASSISTANT": "OWNER"
+      },
+      "system": "wfrp4e"
     },
     {
-      "name": "weapons",
-      "label": "Zbrojownia",
-      "system": "wfrp4e",
-      "path": "packs/weapons.db",
+      "label": "WFRP - Broń",
+      "name": "addons-weapons",
+      "path": "packs/addons-weapons",
       "type": "Item",
-      "private": false,
-      "flags": {}
-    },
-    {
-      "name": "armoury",
-      "label": "Pancerze",
-      "system": "wfrp4e",
-      "path": "packs/armoury.db",
-      "type": "Item",
-      "private": false,
-      "flags": {}
+      "ownership": {
+          "PLAYER": "OBSERVER",
+          "ASSISTANT": "OWNER"
+      },
+      "system": "wfrp4e"
     }
   ],
   "url": "https://github.com/silentmark/wfrp4e-pl-addons",
