@@ -1,0 +1,521 @@
+{
+  "_id": "R9tmGw2LBoHvzWne",
+  "name": "Potęga Chaosu (Niepodzielny)",
+  "type": "spell",
+  "img": "modules/wfrp4e-core/icons/spells/undivided.png",
+  "effects": [
+    {
+      "_id": "TVALIiKAB2dgDNgV",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prePrepareItem",
+          "effectApplication": "apply",
+          "script": "if (args.item.type == \"spell\") {\n    args.item.cn.value = args.item.cn.value / 2;\n}",
+          "preventDuplicateEffects": false,
+          "hide": false
+        },
+        "autoanimations": {
+          "id": "8dfc2336-f246-42a6-b22e-a0c53032223b",
+          "label": "Poziom zaklęcia obniżony o połowe",
+          "activeEffectType": "ontoken",
+          "menu": "aefx",
+          "macro": {
+            "enable": false,
+            "playWhen": "0"
+          },
+          "primary": {
+            "video": {
+              "dbSection": "static",
+              "menuType": "marker",
+              "animation": "energystrand",
+              "variant": "01",
+              "color": "purple",
+              "enableCustom": false,
+              "customPath": ""
+            },
+            "options": {
+              "addTokenWidth": false,
+              "anchor": "0.5",
+              "delay": 0,
+              "elevation": 1000,
+              "fadeIn": 250,
+              "fadeOut": 500,
+              "isMasked": false,
+              "isRadius": false,
+              "isWait": false,
+              "opacity": 1,
+              "persistent": true,
+              "playbackRate": 1,
+              "playOn": "source",
+              "repeat": 1,
+              "repeatDelay": 250,
+              "size": 1,
+              "unbindAlpha": false,
+              "unbindVisibility": false,
+              "zIndex": 1
+            },
+            "sound": {
+              "enable": false,
+              "delay": 0,
+              "repeat": 1,
+              "repeatDelay": 250,
+              "startTime": 0,
+              "volume": 0.75
+            }
+          },
+          "secondary": {
+            "enable": false,
+            "video": {
+              "dbSection": "static",
+              "menuType": "spell",
+              "animation": "curewounds",
+              "variant": "01",
+              "color": "blue",
+              "enableCustom": false,
+              "customPath": ""
+            },
+            "sound": {
+              "enable": false,
+              "delay": 0,
+              "repeat": 1,
+              "repeatDelay": 250,
+              "startTime": 0,
+              "volume": 0.75
+            },
+            "options": {
+              "addTokenWidth": false,
+              "anchor": "0.5",
+              "delay": 0,
+              "elevation": 1000,
+              "fadeIn": 250,
+              "fadeOut": 500,
+              "isMasked": false,
+              "isRadius": true,
+              "isWait": false,
+              "opacity": 1,
+              "repeat": 1,
+              "repeatDelay": 250,
+              "size": 1.5,
+              "zIndex": 1
+            }
+          },
+          "soundOnly": {
+            "sound": {
+              "enable": false,
+              "delay": 0,
+              "repeat": 1,
+              "repeatDelay": 250,
+              "startTime": 0,
+              "volume": 0.75
+            }
+          },
+          "source": {
+            "enable": false,
+            "video": {
+              "dbSection": "static",
+              "menuType": "spell",
+              "animation": "curewounds",
+              "variant": "01",
+              "color": "blue",
+              "enableCustom": false,
+              "customPath": ""
+            },
+            "sound": {
+              "enable": false,
+              "delay": 0,
+              "repeat": 1,
+              "repeatDelay": 250,
+              "startTime": 0,
+              "volume": 0.75
+            },
+            "options": {
+              "addTokenWidth": false,
+              "anchor": "0.5",
+              "delay": 0,
+              "elevation": 1000,
+              "fadeIn": 250,
+              "fadeOut": 500,
+              "isMasked": false,
+              "isRadius": false,
+              "isWait": true,
+              "opacity": 1,
+              "repeat": 1,
+              "repeatDelay": 250,
+              "size": 1,
+              "zIndex": 1
+            }
+          },
+          "isEnabled": true,
+          "isCustomized": true,
+          "version": 5
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/spells/undivided.png",
+      "tint": null,
+      "transfer": false,
+      "origin": null,
+      "name": "Poziom zaklęcia obniżony o połowe",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!R9tmGw2LBoHvzWne.TVALIiKAB2dgDNgV"
+    },
+    {
+      "_id": "w1U6DcQY33Zo6VyU",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prefillDialog",
+          "effectApplication": "apply",
+          "script": "if (args.type == \"cast\") {\n   args.prefillModifiers.difficulty = \"average\";\n}",
+          "preventDuplicateEffects": false,
+          "hide": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/spells/undivided.png",
+      "tint": null,
+      "transfer": false,
+      "origin": null,
+      "name": "Trudność czrowania",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!R9tmGw2LBoHvzWne.w1U6DcQY33Zo6VyU"
+    },
+    {
+      "icon": "modules/wfrp4e-core/icons/spells/undivided.png",
+      "transfer": false,
+      "_id": "Ekq1TvuioZGG1Kwp",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "times-up": {
+          "isPassive": false
+        },
+        "wfrp4e": {
+          "effectTrigger": "endRound",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": true,
+          "script": "await ChatMessage.create({ content: `<b>${this.actor.name}</b> musi wykonać test odporności lub otrzyma punkt korupcji.` })\nif (this.actor.isOwner && this.actor.type == \"character\") {\n     let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {absolute: {difficulty : \"average\"}, appendTitle : \" - Potęga Chaosu\"})\n     await test.roll();\n     if (test.result.outcome == \"failure\" && this.actor.type == \"character\") {\n    \tlet corruption = this.actor.status.corruption.value + 1;\n     \tawait this.actor.update({\"system.status.corruption.value\" : corruption})\n    \tawait ChatMessage.create({ content: `<b>${this.actor.name}</b> otrzymał punkt korupcji: ${corruption}` })\n       }\n}"
+        }
+      },
+      "name": "Test Odporności lub 1 Punkt Zepsucia.",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!R9tmGw2LBoHvzWne.Ekq1TvuioZGG1Kwp"
+    }
+  ],
+  "flags": {
+    "autoanimations": {
+      "id": "03882209-501f-4bbd-b8ab-90fbcc896e7a",
+      "label": "Potęga Chaosu (Niepodzielny)",
+      "macro": {
+        "enable": false,
+        "playWhen": "0"
+      },
+      "menu": "templatefx",
+      "primary": {
+        "video": {
+          "dbSection": "templatefx",
+          "menuType": "circle",
+          "animation": "outpulse",
+          "variant": "02",
+          "color": "purplepink",
+          "enableCustom": false,
+          "customPath": ""
+        },
+        "sound": {
+          "enable": false,
+          "delay": 0,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "startTime": 0,
+          "volume": 0.75
+        },
+        "options": {
+          "delay": 0,
+          "elevation": 1000,
+          "isMasked": false,
+          "isWait": false,
+          "occlusionAlpha": 0.5,
+          "occlusionMode": "3",
+          "opacity": 1,
+          "persistent": false,
+          "persistType": "sequencerground",
+          "playbackRate": 1,
+          "removeTemplate": false,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "rotate": 0,
+          "scale": "1",
+          "zIndex": 1
+        }
+      },
+      "secondary": {
+        "enable": false,
+        "video": {
+          "dbSection": "static",
+          "menuType": "spell",
+          "animation": "curewounds",
+          "variant": "01",
+          "color": "blue",
+          "enableCustom": false,
+          "customPath": ""
+        },
+        "sound": {
+          "enable": false,
+          "delay": 0,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "startTime": 0,
+          "volume": 0.75
+        },
+        "options": {
+          "addTokenWidth": false,
+          "anchor": "0.5",
+          "delay": 0,
+          "elevation": 1000,
+          "fadeIn": 250,
+          "fadeOut": 500,
+          "isMasked": false,
+          "isRadius": true,
+          "isWait": false,
+          "opacity": 1,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "size": 1.5,
+          "zIndex": 1
+        }
+      },
+      "soundOnly": {
+        "sound": {
+          "enable": false,
+          "delay": 0,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "startTime": 0,
+          "volume": 0.75
+        }
+      },
+      "source": {
+        "enable": false,
+        "video": {
+          "dbSection": "static",
+          "menuType": "spell",
+          "animation": "curewounds",
+          "variant": "01",
+          "color": "blue",
+          "enableCustom": false,
+          "customPath": ""
+        },
+        "sound": {
+          "enable": false,
+          "delay": 0,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "startTime": 0,
+          "volume": 0.75
+        },
+        "options": {
+          "addTokenWidth": false,
+          "anchor": "0.5",
+          "delay": 0,
+          "elevation": 1000,
+          "fadeIn": 250,
+          "fadeOut": 500,
+          "isMasked": false,
+          "isRadius": false,
+          "isWait": true,
+          "opacity": 1,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "size": 1,
+          "zIndex": 1
+        }
+      },
+      "target": {
+        "enable": false,
+        "video": {
+          "dbSection": "static",
+          "menuType": "spell",
+          "animation": "curewounds",
+          "variant": "01",
+          "color": "blue",
+          "enableCustom": false,
+          "customPath": ""
+        },
+        "sound": {
+          "enable": false,
+          "delay": 0,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "startTime": 0,
+          "volume": 0.75
+        },
+        "options": {
+          "addTokenWidth": false,
+          "anchor": "0.5",
+          "delay": 0,
+          "elevation": 1000,
+          "fadeIn": 250,
+          "fadeOut": 500,
+          "isMasked": false,
+          "isRadius": false,
+          "opacity": 1,
+          "persistent": false,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "size": 1,
+          "unbindAlpha": false,
+          "unbindVisibility": false,
+          "zIndex": 1
+        }
+      },
+      "isEnabled": true,
+      "isCustomized": true,
+      "fromAmmo": false,
+      "version": 5
+    },
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Wzywasz bogów Chaosu, by wspomogli Twe wysiłki poprzez niewielkie rozdarcie prowadzące do Eteru. Każde zaklęcie rzucone na obszarze działania Potęgi Chaosu ma PZ obniżony o połowę. Ponadto wszyscy przebywający na tym obszarze muszą zdać Przeciętny (+20) Test Odporności na koniec każdej Rundy lub    otrzymują 1 Punkt Zepsucia. Testy Rzucania Zaklęć na tym obszarze mają Przeciętną (+20) Trudność.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "undivided",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Siła Woli metrów",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Bonus Ogd Metrów",
+      "aoe": true
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Bonus SW Rund",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 4,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.2",
+    "coreVersion": "11.311",
+    "createdTime": 1668200975538,
+    "modifiedTime": 1696797178015,
+    "lastModifiedBy": "Czz7IJA9DEa5LD9E"
+  },
+  "folder": "vuh3rAKKh58ELgB5",
+  "sort": 900000,
+  "ownership": {
+    "default": 0,
+    "Czz7IJA9DEa5LD9E": 3
+  },
+  "_key": "!items!R9tmGw2LBoHvzWne"
+}

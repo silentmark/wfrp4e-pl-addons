@@ -1,0 +1,82 @@
+{
+  "name": "Drawing Down the Moon",
+  "permission": {
+    "default": 0,
+    "OfKMBdcUK6oV9G48": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>If there is any sliver of Mannslieb visible, you bring down a form of moon madness upon all creatures within the AoE. This spell will have no effect if Morrslieb is up in the sky. You bathe your targets in the glowing moonlight, weakening their resolve and suffering hallucinations: they all take a Stunned Condition and may not use Fate, Fortune, Resilience or Resolve. Targets are totally cleansed of Physical Corruption points. Further, affected creatures must attempt to win an Opposed Cool/Channelling Test against you or suffer SL Stunned Conditions. Whilst in this state, your targets move about randomly, according to the Scatte&nbsp;table (WFRP4 p163). Creatures who fail to remove all their Stunned</p>\n<p>Conditions before the spell ends must then pass a Test for Mental Corruption (Moderate). The spell has no mental effect on creatures who are immune to Psychology. However, creatures with the Daemonic, Mutation, Shapeshifter or Undead Creature Traits are affected differently, instead suffering a magic missile with a Damage of +6.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Seasons",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower yards"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Willpower Bonus yards",
+      "aoe": true
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus rounds",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 12,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.LLLDgMVX82SwfEOL"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_drawing_moon.jpg",
+  "effects": [],
+  "_id": "f0UJyBmytvWZmfCR",
+  "_key": "!items!f0UJyBmytvWZmfCR"
+}

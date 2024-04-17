@@ -1,0 +1,103 @@
+{
+  "name": "Owler",
+  "type": "career",
+  "img": "modules/wfrp4e-core/icons/careers/smuggler-02.png",
+  "folder": "cPTcFWSSpOVSviFW",
+  "flags": {
+    "wfrp4e-salzenmund": {
+      "initialization-folder": "Smuggling",
+      "sort": 0
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>@UUID[JournalEntry.pHTIwlH91NjUNwig.JournalEntryPage.JyC0KWmSzZmtJiri]{Owler}</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "careergroup": {
+      "type": "String",
+      "label": "Career Group",
+      "value": "Owler"
+    },
+    "class": {
+      "type": "String",
+      "label": "Class",
+      "value": "Rogue"
+    },
+    "current": {
+      "type": "Boolean",
+      "value": false
+    },
+    "complete": {
+      "type": "Boolean",
+      "value": false
+    },
+    "level": {
+      "type": "String",
+      "label": "Career Level",
+      "value": "2"
+    },
+    "status": {
+      "tier": "b",
+      "standing": 3
+    },
+    "characteristics": [
+      "ws"
+    ],
+    "skills": [
+      "Animal Care",
+      "Bribery",
+      "Consume Alcohol",
+      "Endurance",
+      "Evaluate",
+      "Haggle",
+      "Melee (Basic)",
+      "Outdoor Survival",
+      "Ride (Horse)",
+      "Stealth (Rural or Urban)",
+      "Athletics",
+      "Charm",
+      "Gossip",
+      "Lore (Local)",
+      "Perception",
+      "Secret Signs (Smuggler)"
+    ],
+    "talents": [
+      "Dealmaker",
+      "Etiquette (Criminals)",
+      "Orientation",
+      "Very Strong"
+    ],
+    "trappings": [
+      "2 Barrels",
+      "Hand Weapon",
+      "Leather Jack",
+      "Cart"
+    ],
+    "incomeSkill": [
+      9
+    ]
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wjUQkVmn4leETiQ6": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1687134833784,
+    "modifiedTime": 1693273572802,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "UM2bikzhVzmP4X1L",
+  "_key": "!items!UM2bikzhVzmP4X1L"
+}

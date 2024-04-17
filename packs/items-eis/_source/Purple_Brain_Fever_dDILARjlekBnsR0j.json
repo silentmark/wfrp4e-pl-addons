@@ -1,0 +1,238 @@
+{
+  "_id": "dDILARjlekBnsR0j",
+  "name": "Purple Brain Fever",
+  "type": "disease",
+  "img": "modules/wfrp4e-core/icons/diseases/disease.png",
+  "effects": [
+    {
+      "_id": "y8Y4R4eNJF4owDpt",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
+      "transfer": true,
+      "flags": {
+        "wfrp4e": {
+          "effectApplication": "actor",
+          "effectTrigger": "invoke",
+          "symptom": true,
+          "script": "\n                        let difficulty = \"\"\n                        if (this.effect.name.includes(\"Moderate\"))\n                            difficulty = \"easy\"\n                        else if (this.effect.name.includes(\"Severe\"))\n                            difficulty = \"average\"\n                        else\n                            difficulty = \"veasy\"\n    \n                        if (this.actor.isOwner)\n                        {\n                            args.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {context : {failure : args.actor.name + \" dies from Blight\"}, absolute: {difficulty}, appendTitle : \" - Blight\"}).then(setupData => {\n                                args.actor.basicTest(setupData).then(test => \n                                    {\n                                        if (test.result.outcome == \"failure\")\n                                            args.actor.addCondition(\"dead\")\n                                    })\n                                })\n                        }"
+        }
+      },
+      "name": "Blight",
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "_key": "!items.effects!dDILARjlekBnsR0j.y8Y4R4eNJF4owDpt"
+    },
+    {
+      "_id": "49BX8VW6C4kk2nVz",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
+      "transfer": true,
+      "flags": {
+        "wfrp4e": {
+          "effectApplication": "actor",
+          "effectTrigger": "prefillDialog",
+          "symptom": true,
+          "script": "\n                        let modifier = 0\n                        if (this.effect.name.includes(\"Moderate\"))\n                            modifier = -20\n                        else\n                            modifier = -10\n                        \n                        let applicableCharacteristics = [\"ws\", \"bs\", \"s\", \"ag\", \"t\", \"dex\"]\n                        if (args.type == \"weapon\")\n                            args.prefillModifiers.modifier += modifier\n                        else if (args.type == \"characteristic\")\n                        {\n                            if (applicableCharacteristics.includes(args.item))\n                                args.prefillModifiers.modifier += modifier\n                        }\n                        else if (args.type == \"skill\")\n                        {\n                            if (applicableCharacteristics.includes(args.item.characteristic.key))\n                                args.prefillModifiers.modifier += modifier\n                        }"
+        }
+      },
+      "name": "Convulsions",
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "_key": "!items.effects!dDILARjlekBnsR0j.49BX8VW6C4kk2nVz"
+    },
+    {
+      "_id": "nXYbldwxxdFqLdqx",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
+      "transfer": true,
+      "flags": {
+        "wfrp4e": {
+          "symptom": true
+        }
+      },
+      "name": "Delirium",
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "_key": "!items.effects!dDILARjlekBnsR0j.nXYbldwxxdFqLdqx"
+    },
+    {
+      "_id": "hxoosLo3RMkSDPxO",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
+      "transfer": true,
+      "flags": {
+        "wfrp4e": {
+          "effectApplication": "actor",
+          "effectTrigger": "prefillDialog",
+          "symptom": true,
+          "script": "\n                       \n                    let applicableCharacteristics = [\"ws\", \"bs\", \"s\", \"fel\", \"ag\", \"t\", \"dex\"]\n    \n                    if (args.type == \"weapon\")\n                        args.prefillModifiers.modifier -= 10\n                    else if (args.type == \"characteristic\")\n                    {\n                        if (applicableCharacteristics.includes(args.item))\n                            args.prefillModifiers.modifier -= 10\n                    }\n                    else if (args.type == \"skill\")\n                    {\n                        if (applicableCharacteristics.includes(args.item.characteristic.key))\n                            args.prefillModifiers.modifier -= 10\n                    }",
+          "otherEffects": [
+            "blight",
+            "wounded"
+          ]
+        }
+      },
+      "name": "Fever (Severe)",
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "_key": "!items.effects!dDILARjlekBnsR0j.hxoosLo3RMkSDPxO"
+    },
+    {
+      "_id": "9ikMfbmQYH84zCgZ",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
+      "transfer": true,
+      "flags": {
+        "wfrp4e": {
+          "symptom": true
+        }
+      },
+      "name": "Lingering (Challenging)",
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "_key": "!items.effects!dDILARjlekBnsR0j.9ikMfbmQYH84zCgZ"
+    },
+    {
+      "_id": "ckxwreFfvBI8mvzC",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
+      "transfer": true,
+      "flags": {
+        "wfrp4e": {
+          "symptom": true
+        }
+      },
+      "name": "Swelling (face and head).",
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "_key": "!items.effects!dDILARjlekBnsR0j.ckxwreFfvBI8mvzC"
+    }
+  ],
+  "folder": "XsC9EhjxkwhKYROH",
+  "sort": 0,
+  "flags": {
+    "wfrp4e-eis": {
+      "initialization-folder": "Diseases"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Purple Brain Fever is a feared disease. It causes the head to swell to appalling size, and is accompanied by flushing fevers and delirium. The face turns a frightful plum colour, the eyes bulge from their sockets, and the tongue swells until the mouth can no longer contain it. Death usually occurs within a week.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "contraction": {
+      "label": "Contraction",
+      "value": "If you fail an <b>Average (+20) Endurance</b> Test when physical contact is made with an infected individual (at a rate of 1 Test per hour of exposure).",
+      "type": "String"
+    },
+    "incubation": {
+      "label": "Incubation",
+      "value": "1d10",
+      "unit": "hours",
+      "type": "String"
+    },
+    "duration": {
+      "label": "Duration",
+      "value": "1d10",
+      "type": "String",
+      "unit": "days",
+      "active": false
+    },
+    "symptoms": {
+      "label": "Symptoms",
+      "value": "Blight, Convulsions, Delirium, Fever (Severe), Lingering (Challenging), Swelling (face and head).",
+      "type": "String"
+    },
+    "permanent": {
+      "label": "Permanent",
+      "value": "",
+      "type": "String"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "34JMfpmBvTmVYPh4": 3,
+    "VnnpieLwbiAu3Owf": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1693273565147,
+    "modifiedTime": 1693273565147,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!dDILARjlekBnsR0j"
+}

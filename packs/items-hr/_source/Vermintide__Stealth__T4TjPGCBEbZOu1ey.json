@@ -1,0 +1,123 @@
+{
+  "_id": "T4TjPGCBEbZOu1ey",
+  "name": "Vermintide (Stealth)",
+  "type": "spell",
+  "img": "modules/wfrp4e-horned-rat/assets/icons/stealth.png",
+  "effects": [],
+  "folder": "Z7BCpnuCa1IbMurX",
+  "sort": -150000,
+  "flags": {
+    "wfrp4e-horned-rat": {
+      "initialization-folder": "Stealth",
+      "sort": -150000
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You summon a swarm of rats that appear next to you and move as you direct, attacking any creature (except you) they encounter. You do not need to spend your action directing the swarm &mdash; it responds to any squeaked command readily. However, after Willpower Bonus rounds have elapsed, you lose control of the swarm. Thereafter, it moves about at random, attacking any creature it encounters.</p>\n<p>If the rat swarm encounters a creature, the rats scurry across its lower extremities biting and scratching furiously, inflicting [[/r 1d10 #Wounds]] Wounds to each non-prosthetic leg a creature has. This Damage is reduced by Toughness Bonus, but not armour (the rats scuttle inside of clothing and armour with alarming skill). The rats climb over any object less than 1 yard tall to reach their victims.</p>\n<p>The swarm can be destroyed by any area of effect attack, but is immune to regular attacks &mdash; a sword blow or stomped boot will kill a rat or two, but more emerge to take their place. While not under the direct control of the caster, the swarm will not attack victims wielding a torch or other sizable open flame if another target is available, and will avoid targets inflicted with an @Condition[Ablaze] Condition entirely.</p>\n<p>After the spell ends, the rats disperse.</p><p>\n\n <b>Lore:</b> <p>The Lore of Stealth draws on the power of <em>Dhar</em>, infused with a particularly large portion of <em>Ulgu</em>, to confuse and conceal. It is unclear whether this lore remains similar to how it is practised in Cathay, or if the Sorcerers of Clan Eshin have corrupted a more noble form of stealthy magic. Regardless, spells of this lore specialise in concealing the sorcerer from prying eyes, using magic to distract or diminish signs of the Skaven&rsquo;s presence.</p><p>The Lore of Stealth wreathes the wielder in threads of magic that obfuscate their presence. Whenever you successfully cast a spell from the Lore of Stealth, you gain the @UUID[Compendium.wfrp4e-core.items.OzwDT6kzoLYeeR2d]{Stealthy} Creature Trait for [[/br 1d10]] rounds.</p><p>Ingredients: Clan Eshin Sorcerers use small scraps of paper with assorted runes inscribed on them, which are then coated in powdered Warpstone. When used as an ingredient, the Warpstone powder is consumed, but the scraps of paper remain and can be coated again and reused. The characters used are of no known form of written Queekish, and the Sorcerers of Clan Eshin are in no rush to explain either their meaning or providence.</p><p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "stealth",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "You",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Special",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "2 × Willpower Bonus rounds",
+      "extendable": true
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 8,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "AUExJb3c35oBvDuA": 3,
+    "R44a2dfsw2hWQXbE": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1687734901067,
+    "modifiedTime": 1693273568144,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!T4TjPGCBEbZOu1ey"
+}

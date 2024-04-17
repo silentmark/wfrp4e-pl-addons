@@ -1,0 +1,157 @@
+{
+  "name": "Corrupt Waystone",
+  "type": "spell",
+  "img": "systems/wfrp4e/icons/blank.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><strong>Ingredients</strong>: An unbroken waystone.</p><p><strong>Conditions</strong>: No conditions necessary.</p><p><strong>Sacrifices</strong>: Each Round of Channelling the spellcaster must make an <strong>Average (+20) Endurance</strong> Test or gain a @Condition[Fatigued] Condition.</p><p><strong>Consequences</strong>: The ritual fails. </p><p>You alter the properties of a waystone, corrupting it to produce the effects described in @UUID[JournalEntry.BBMts94CJGZ3wRMi.JournalEntryPage.yLUOK05g65WDiAU1#corruption-of-leylines-and-waystones]{Corruption of Leylines and Waystones}. </p><p>If the waystone is part of a planned leyline, not only does this affect the stone in question, but magic stops flowing through the leyline. Magic coalesces and stagnates around the closest ‘upstream’ waystone that isn’t also corrupted. The next stone in line becomes a new gathering stone, and then magic is passed on from this point.</p><p>This is quickly noticed by the High Elf Mages of Saphery, who will make it a priority to locate the source of the disruption and hunt down those responsible.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Any Dark Lore",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 60,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": true,
+      "type": "",
+      "xp": 450
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "effects": [
+    {
+      "icon": "systems/wfrp4e/icons/blank.png",
+      "transfer": false,
+      "_id": "oRwFYgy0HfcFjX4W",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "rollChannellingTest",
+          "effectApplication": "item",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {absolute: {difficulty : \"average\"}}).then(test =>\n{\n     test.roll().then(test => {\n       if (test.result.outcome == \"failure\")\n         this.actor.addCondition(\"fatigued\")    \n     });\n\n})"
+        },
+        "core": {
+          "sourceId": "Item.8Vuv6suWsiIujIQd.ActiveEffect.OqsTZbiU0jYV1LLS"
+        }
+      },
+      "name": "Sacrifice",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!XlFCI3AzQ4R1fDd5.oRwFYgy0HfcFjX4W"
+    }
+  ],
+  "folder": "KM54PsSqzM9r94kp",
+  "sort": 187500,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Rituals",
+      "sort": 187500
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676064772004,
+    "modifiedTime": 1693273575748,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "XlFCI3AzQ4R1fDd5",
+  "_key": "!items!XlFCI3AzQ4R1fDd5"
+}

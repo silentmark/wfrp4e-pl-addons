@@ -1,0 +1,110 @@
+{
+  "name": "Master Shaman",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>@UUID[Compendium.wfrp4e-wom.journals.DND7iNuVrCXgTXki.JournalEntryPage.AzRC4qW92gvO1P8C]{Shaman}</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "careergroup": {
+      "type": "String",
+      "label": "Career Group",
+      "value": "Shaman"
+    },
+    "class": {
+      "type": "String",
+      "label": "Class",
+      "value": "Academics"
+    },
+    "current": {
+      "type": "Boolean",
+      "value": false
+    },
+    "complete": {
+      "type": "Boolean",
+      "value": false
+    },
+    "level": {
+      "type": "String",
+      "label": "Career Level",
+      "value": "3"
+    },
+    "status": {
+      "tier": "g",
+      "standing": 1
+    },
+    "characteristics": [
+      "ws",
+      "int",
+      "wp",
+      "ag",
+      "i"
+    ],
+    "skills": [
+      "Animal Care",
+      "Channelling (Ghur)",
+      "Cool",
+      "Dodge",
+      "Intuition",
+      "Language (Magick)",
+      "Lore (Magic)",
+      "Melee (Polearm)",
+      "Outdoor Survival",
+      "Perception",
+      "Animal Training",
+      "Charm Animal",
+      "Lore (Beasts)",
+      "Ranged (Bow)",
+      "Stealth (Rural)",
+      "Track",
+      "Navigation",
+      "Research",
+      "Ride (Horse)",
+      "Secret Signs (Amber Order)"
+    ],
+    "talents": [
+      "Animal Affinity",
+      "Instinctive Diction",
+      "Magical Sense",
+      "Menacing"
+    ],
+    "trappings": [
+      "Apprentice",
+      "Magical Item",
+      "Standard Robes"
+    ],
+    "incomeSkill": [
+      5
+    ]
+  },
+  "type": "career",
+  "folder": "EGdnaG0JFAHnazff",
+  "img": "modules/wfrp4e-wom/assets/icons/careers/shaman-03.png",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Shaman",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676405151383,
+    "modifiedTime": 1693273575791,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "p915OKfRKeajS0JQ",
+  "_key": "!items!p915OKfRKeajS0JQ"
+}

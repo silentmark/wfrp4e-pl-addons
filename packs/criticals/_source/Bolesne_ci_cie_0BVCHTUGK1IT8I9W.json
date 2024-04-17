@@ -1,0 +1,134 @@
+{
+  "name": "Bolesne cięcie",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/tornbody.png",
+  "effects": [
+    {
+      "_id": "MeryWEfxh1qfb4qD",
+      "flags": {
+        "wfrp4e": {
+          "trigger": "endRound",
+          "value": 2
+        },
+        "core": {
+          "statusId": "bleeding"
+        }
+      },
+      "changes": [],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "systems/wfrp4e/icons/conditions/bleeding.png",
+      "label": "Krwawienie",
+      "transfer": true,
+      "disabled": false,
+      "origin": null,
+      "tint": null,
+      "_key": "!items.effects!0BVCHTUGK1IT8I9W.MeryWEfxh1qfb4qD"
+    },
+    {
+      "_id": "k8a0UhmO2dc0eg89",
+      "flags": {
+        "wfrp4e": {
+          "trigger": "endRound",
+          "effectTrigger": "prefillDialog",
+          "script": "args.prefillModifiers.modifier -= 10 * getProperty(this.effect, 'flags.wfrp4e.value');",
+          "value": 1
+        },
+        "core": {
+          "statusId": "stunned"
+        }
+      },
+      "changes": [],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "systems/wfrp4e/icons/conditions/stunned.png",
+      "label": "Oszołomienie",
+      "transfer": true,
+      "disabled": false,
+      "origin": null,
+      "tint": null,
+      "_key": "!items.effects!0BVCHTUGK1IT8I9W.k8a0UhmO2dc0eg89"
+    },
+    {
+      "_id": "oScP7BQrypeVVVbf",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "actor",
+          "script": "if (this.actor.isOwner) {\n    args.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {absolute: {difficulty: \"hard\"}}).then(async test => {\n        await test.roll();\n        if (test.result.outcome == \"failure\") {\n            await args.actor.addCondition(\"unconscious\");\n        }\n    });\n}"
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/injuries/tornbody.png",
+      "label": "Bolesne cięcie",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "_key": "!items.effects!0BVCHTUGK1IT8I9W.oScP7BQrypeVVVbf"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wfrp4e-pl.criticals.0BVCHTUGK1IT8I9W"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Postać otrzymuje 2 poziomy Stanu @Condition[Krwawienie] oraz 1 poziom Stanu @Condition[Oszołomienie]. Musi także zdać Trudny (-20) Test Odporności, w przeciwnym wypadku nastąpi Utrata Przytomności z powodu bólu. Jeśli Test nie zakończy się co najmniej 4 PS, postać wyje z bólu.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "3",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Korpus",
+      "type": "String",
+      "label": "Location"
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_id": "0BVCHTUGK1IT8I9W",
+  "folder": null,
+  "sort": 0,
+  "_key": "!items!0BVCHTUGK1IT8I9W"
+}

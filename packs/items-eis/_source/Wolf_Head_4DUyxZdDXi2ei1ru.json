@@ -1,0 +1,112 @@
+{
+  "_id": "4DUyxZdDXi2ei1ru",
+  "name": "Wolf Head",
+  "type": "mutation",
+  "img": "modules/wfrp4e-core/icons/mutations/mutation.png",
+  "effects": [
+    {
+      "_id": "8MPo2ozoHRpVba2d",
+      "flags": {
+        "wfrp4e": {
+          "effectApplication": "actor",
+          "preventDuplicateEffects": false,
+          "effectTrigger": "prepareData",
+          "script": "args.actor.status.armour[\"head\"].value += 1"
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/mutations/mutation.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Wolf Head AP",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!4DUyxZdDXi2ei1ru.8MPo2ozoHRpVba2d"
+    },
+    {
+      "_id": "NOEikEJCLX6qTsNI",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "addItems",
+          "effectApplication": "actor",
+          "script": "await fromUuid(\"Compendium.wfrp4e-core.items.pLW9SVX0TVTYPiPv\").then(item => {\n   item = item.toObject()\n   item.system.specification.value = 6 - this.actor.characteristics.s.bonus\n   this.actor.createEmbeddedDocuments(\"Item\", [item], {fromEffect : this.effect.id}, {fromEffect : this.effect.id})\n})\n\nfromUuid(\"Compendium.wfrp4e-core.items.9h82z72XGo9tfgQS\").then(item => {\n   item = item.toObject()\n    item.system.tests.value = item.system.tests.value.replace(\"(Sense)\", \"(Smell)\") \n   item.name = item.name += \" (Smell)\"\n   this.actor.createEmbeddedDocuments(\"Item\", [item])\n})",
+          "preventDuplicateEffects": false,
+          "hide": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/mutations/mutation.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Wolf Head",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!4DUyxZdDXi2ei1ru.NOEikEJCLX6qTsNI"
+    }
+  ],
+  "folder": "QOjm4pUE8aywpu9Z",
+  "sort": 900001,
+  "flags": {},
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>+1 Armour Point to the Head; gain the @UUID[Compendium.wfrp4e-core.items.pLW9SVX0TVTYPiPv]{Bite} +6 Creature Trait; gain the @UUID[Compendium.wfrp4e-core.items.9h82z72XGo9tfgQS]{Acute Sense (Smell)} Talent; this mutation cannot be hidden</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "mutationType": {
+      "label": "Type",
+      "type": "String",
+      "value": "physical"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Modifier"
+    },
+    "modifiesSkills": {
+      "value": false,
+      "type": "Boolean",
+      "label": "Skill Modifier?"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "sAiwDCZFd21tgaDN": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1691299878976,
+    "modifiedTime": 1693273565114,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!4DUyxZdDXi2ei1ru"
+}

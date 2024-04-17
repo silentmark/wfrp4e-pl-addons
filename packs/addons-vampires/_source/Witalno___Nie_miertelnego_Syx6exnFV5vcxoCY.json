@@ -1,0 +1,236 @@
+{
+  "_id": "Syx6exnFV5vcxoCY",
+  "name": "Witalność Nieśmiertelnego",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+      "transfer": true,
+      "name": "Witalność Nieśmiertelnego",
+      "_id": "DLo54e0hqe8ftVUW",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "effectTrigger": "invoke",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "let advantage = game.settings.get(\"wfrp4e\", \"groupAdvantageValues\");\r\nif (advantage.enemies >= 2) {\r\n  advantage.enemies = 0;\r\n  game.wfrp4e.utility.updateGroupAdvantage(advantage);\r\n  let newFlag = this.actor.conditions\r\n    .filter(x => x.statuses.first() != 'grappling' && x.statuses.first() != 'engaged')\r\n    .map(x => { \r\n      let z = {};\r\n      z.name = x.statuses.first(); \r\n      z.value = x.conditionValue; \r\n      z.id = x.id;\r\n      return z\r\n    });\r\n  await this.actor.setFlag(\"wfrp4e\", \"deathlessvigor\", newFlag);\r\n  let ids = newFlag.map(x => x.id);\r\n  await this.actor.deleteEmbeddedDocuments(\"ActiveEffect\", ids);\r\n  let bonus = newFlag.reduce((a,x) => x.value ? a + x.value : a + 1, 0);\r\n  await this.actor.setFlag(\"wfrp4e\", \"deathlessvigorbonus\", bonus);\r\n}",
+          "scriptData": [
+            {
+              "label": "Witalność Nieśmiertelnego",
+              "trigger": "manual",
+              "script": "let advantage = game.settings.get(\"wfrp4e\", \"groupAdvantageValues\");\r\nif (advantage.enemies >= 2) {\r\n  advantage.enemies = 0;\r\n  game.wfrp4e.utility.updateGroupAdvantage(advantage);\r\n  let newFlag = this.actor.conditions\r\n    .filter(x => x.statuses.first() != 'grappling' && x.statuses.first() != 'engaged')\r\n    .map(x => { \r\n      let z = {};\r\n      z.label = x.name;\r\n      z.name = x.statuses.first(); \r\n      z.value = x.conditionValue; \r\n      z.id = x.id;\r\n      return z\r\n    });\r\n  let text = ''\r\n  for (let c of newFlag) {\r\n    text += c.label; \r\n    if (c.value) {\r\n      text + ' (' + c.value + ')'\r\n    }\r\n    text += ', ';\r\n  }\r\n  let chatData = game.wfrp4e.utility.chatDataSetup(`Wigor Nieśmiertelnego usunął stany: ${text}`, \"text\", false);\r\n  ChatMessage.create(chatData);\r\n  await this.actor.setFlag(\"wfrp4e\", \"deathlessvigor\", newFlag);\r\n  let ids = newFlag.map(x => x.id);\r\n  await this.actor.deleteEmbeddedDocuments(\"ActiveEffect\", ids);\r\n  let bonus = newFlag.reduce((a,x) => x.value ? a + x.value : a + 1, 0);\r\n  await this.actor.setFlag(\"wfrp4e\", \"deathlessvigorbonus\", bonus);\r\n}",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "applicationData": {
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false,
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": false
+          }
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!Syx6exnFV5vcxoCY.DLo54e0hqe8ftVUW"
+    },
+    {
+      "icon": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+      "transfer": true,
+      "name": "Witalność Nieśmiertelnego (Obrażenia)",
+      "_id": "vPIcJfQbMNbB7zaM",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "effectTrigger": "applyDamage",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "if (this.actor.flags?.wfrp4e?.deathlessvigorbonus) {\r\n  let bonus = this.actor.flags.wfrp4e.deathlessvigorbonus;\r\n  args.totalWoundLoss += bonus;\r\n  args.extraMessages.push(\"<b>Witalność Nieśmiertelnego</b>: +\" + bonus);\r\n}",
+          "scriptData": [
+            {
+              "label": "Witalność Nieśmiertelnego (Obrażenia)",
+              "trigger": "applyDamage",
+              "script": "if (this.actor.flags?.wfrp4e?.deathlessvigorbonus) {\r\n  let bonus = this.actor.flags.wfrp4e.deathlessvigorbonus;\r\n  args.totalWoundLoss += bonus;\r\n  args.extraMessages.push(\"<b>Witalność Nieśmiertelnego</b>: +\" + bonus);\r\n}",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "applicationData": {
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          }
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!Syx6exnFV5vcxoCY.vPIcJfQbMNbB7zaM"
+    },
+    {
+      "icon": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+      "transfer": true,
+      "name": "Witalność Nieśmiertelnego (Początek Tury)",
+      "_id": "T5LyIjkCczCX6WwS",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "effectTrigger": "startTurn",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "await this.actor.unsetFlag(\"wfrp4e\", \"deathlessvigorbonus\");\r\nlet arr = this.actor.flags?.wfrp4e?.deathlessvigor;\r\nif (arr?.length > 0) {\r\n  for (let c of arr) {\r\n    if (c.value) {\r\n      await this.actor.addCondition(c.name, c.value);\r\n    } else {\r\n      await this.actor.addCondition(c.name);\r\n    }\r\n  }\r\n  await this.actor.unsetFlag(\"wfrp4e\", \"deathlessvigor\");\r\n}",
+          "scriptData": [
+            {
+              "label": "Witalność Nieśmiertelnego (Początek Tury)",
+              "trigger": "startTurn",
+              "script": "await this.actor.unsetFlag(\"wfrp4e\", \"deathlessvigorbonus\");\r\nlet arr = this.actor.flags?.wfrp4e?.deathlessvigor;\r\nif (arr?.length > 0) {\r\n  for (let c of arr) {\r\n    if (c.value) {\r\n      await this.actor.addCondition(c.name, c.value);\r\n    } else {\r\n      await this.actor.addCondition(c.name);\r\n    }\r\n  }\r\n  await this.actor.unsetFlag(\"wfrp4e\", \"deathlessvigor\");\r\n}",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "applicationData": {
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          }
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!Syx6exnFV5vcxoCY.T5LyIjkCczCX6WwS"
+    }
+  ],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Jesteś nieustraszonym wojownikiem, potrafiącym czerpać z głębokich rezerw zwierzęcej siły.</p><p>Możesz wydać wszystkie przewagi (minimum 2), aby przywołać Witalność Nieśmiertelnego. Do swojej następnej tury tymczasowo ignorujesz efekty wszystkich Stanów i dodajesz premię do wszelkich zadanych obrażeń w walce wręcz równą całkowitej liczbie zignorowanych Stanów.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "t"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": "Testy Walki Wręcz będąc pod wpływem Witalności Nieśmiertelnego"
+    }
+  },
+  "folder": "IdBKVE70UjsZfSoR",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.311",
+    "createdTime": 1700571907134,
+    "modifiedTime": 1707139629241,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 4700000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!Syx6exnFV5vcxoCY"
+}

@@ -1,0 +1,102 @@
+{
+  "_id": "0JMqXbCFSYGvBLnE",
+  "name": "Reikworms",
+  "type": "disease",
+  "img": "modules/wfrp4e-core/icons/diseases/disease.png",
+  "effects": [
+    {
+      "_id": "h79fESNPRL8J4ocS",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prefillDialog",
+          "effectApplication": "actor",
+          "script": "if (args.type == \"characteristic\" && args.item == \"ag\")\n    args.prefillModifiers.modifier -= 5\n\nif (args.type == \"skill\" && args.item.characteristic.key == \"ag\")\n    args.prefillModifiers.modifier -= 5",
+          "hide": false,
+          "preventDuplicateEffects": false
+        }
+      },
+      "changes": [],
+      "disabled": true,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Agility Penalty",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!0JMqXbCFSYGvBLnE.h79fESNPRL8J4ocS"
+    }
+  ],
+  "folder": "cuSAaKvV7LGfpqtd",
+  "sort": 100001,
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Diseases",
+      "sort": 100001
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Any body of water can carry the Reikworm, and different healers have all kinds of bizarre methods that supposedly keep them at bay, including swirling water around the mouth six times before swallowing it (a common superstition in Ostermark), or never drinking untested water when Morrsleib is visible (Nordland).</p><p>When the tiny larva of the Reikworm enters the body, it burrows deep into the guts of its host, where it feeds and grows. Soon, the host’s immune system is diminished, decreasing resistance to other diseases.</p><p>After three months, the worm has grown to four feet in length and is ready to start the next phase of its life cycle. The first visible sign of the parasite is a massive blister that forms on the surface of the skin. After a week, the blister bursts, causing an intense burning pain. Commonly, sufferers plunge their hot wounds into cooling water for relief. If this happens, the mature Reikworm emerges and spits forth a new batch of young as a sickly yellowish fluid, which soon disperse in the water, ready to infect new hosts. After this, the worm dies.</p><h4>Effects of Reikworms</h4><p>For every full 30 days of infection, the Character suffers a –5 penalty to all Endurance Tests to resist disease. This penalty is reduced by 1 point per day after the worm dies.</p><p>To determine where the worm surfaces, roll for @Table[hitloc]{Hit Location} as in normal combat. When the blister forms, the patient suffers a –5% penalty to all Agility Tests due to the constant irritation; further, if the blister is in a visible location, the Character also suffers a –10 penalty to Fellowship Tests.</p><p>On the seventh day after the blister appears, the sufferer must make an Endurance Test every hour. On the first failure — or on the last hour of the day if all Tests are passed — the blister bursts wetly, inflicting 1 Wound and causing one @Condition[Stunned] Condition owing to the almost unbearable burning sensation that results. This persists until the wound receives medical attention but may be allayed temporarily if the site of the blister is immersed in water.</p><p>There is no known treatment for infestation with Reikworms, other than to let the cycle run its course. Some physicians have tried to cut it out of a patient once the blister forms and the parasite’s location becomes apparent, but this approach usually does more harm than good, and the patient takes longer to recover from it.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "contraction": {
+      "label": "Contraction",
+      "value": "Exposure to dirty water; Test as in description.",
+      "type": "String"
+    },
+    "incubation": {
+      "label": "Incubation",
+      "value": "85 + 1d10",
+      "unit": "days",
+      "type": "String"
+    },
+    "duration": {
+      "label": "Duration",
+      "value": "8",
+      "type": "String",
+      "unit": "days",
+      "active": false
+    },
+    "symptoms": {
+      "label": "Symptoms",
+      "value": "Special (see description)",
+      "type": "String"
+    },
+    "permanent": {
+      "label": "Permanent",
+      "value": "",
+      "type": "String"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "2TbX8z7IWr0GFssP": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "hv1aja7lAR8ZyKUO": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1681859838881,
+    "modifiedTime": 1693273562872,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!0JMqXbCFSYGvBLnE"
+}

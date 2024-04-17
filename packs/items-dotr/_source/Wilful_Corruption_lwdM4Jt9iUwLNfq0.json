@@ -1,0 +1,63 @@
+{
+  "_id": "lwdM4Jt9iUwLNfq0",
+  "name": "Wilful Corruption",
+  "type": "talent",
+  "img": "modules/wfrp4e-core/icons/mutations/mutation.png",
+  "effects": [],
+  "folder": "bE9FzNf9jIyO48JO",
+  "sort": 550000,
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Other",
+      "sort": 550000
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The favoured of Tzeentch are masters of magic, and gain a small measure of insight and control over the horrific gifts their patron bestows. When you gain a mutation, you roll any dice twice and pick the preferred result.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "1"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "2TbX8z7IWr0GFssP": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "hv1aja7lAR8ZyKUO": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1681859838894,
+    "modifiedTime": 1693273562901,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!lwdM4Jt9iUwLNfq0"
+}

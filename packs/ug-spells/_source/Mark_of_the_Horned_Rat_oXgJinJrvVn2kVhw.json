@@ -1,0 +1,82 @@
+{
+  "_id": "oXgJinJrvVn2kVhw",
+  "name": "Mark of the Horned Rat",
+  "permission": {
+    "default": 0,
+    "LhiA8OMMa0ToAWEe": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Your target suﬀers an unsightly blemish, taking the form of an open weeping sore on their forehead or the back of their hand. Against those who can see the blemish, the mark imposes a penalty of one Diﬃculty step to the target&rsquo;s Fellowship Tests (ie, <strong>Average</strong> to <strong>Challenging</strong>). Grey Seers use this spell to mark their messengers.&nbsp;&nbsp;</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Minor",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Touch"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "1",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus hours",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 0,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.NRjrioAzTRDfQewH"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_curse%20of%20the%20horned%20one.jpg",
+  "effects": [],
+  "_key": "!items!oXgJinJrvVn2kVhw"
+}

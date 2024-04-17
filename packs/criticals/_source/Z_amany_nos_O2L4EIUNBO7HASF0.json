@@ -1,0 +1,103 @@
+{
+  "name": "Złamany nos",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/head.png",
+  "effects": [
+    {
+      "_id": "us244BgOUN1LRLnc",
+      "flags": {
+        "wfrp4e": {
+          "trigger": "endRound",
+          "value": 2
+        },
+        "core": {
+          "statusId": "bleeding"
+        }
+      },
+      "changes": [],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "systems/wfrp4e/icons/conditions/bleeding.png",
+      "label": "Krwawienie",
+      "transfer": true,
+      "disabled": false,
+      "origin": null,
+      "tint": null,
+      "_key": "!items.effects!O2L4EIUNBO7HASF0.us244BgOUN1LRLnc"
+    },
+    {
+      "_id": "zYfCX8Eq2VkRFhNI",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "actor",
+          "script": "if (this.actor.isOwner) {\n   args.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\")).then(async test => {\n        await test.roll();\n        if (test.result.outcome == \"failure\") {\n            await args.actor.addCondition(\"stunned\")\n        }\n     });\n}"
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/injuries/head.png",
+      "label": "Złamany nos",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "_key": "!items.effects!O2L4EIUNBO7HASF0.zYfCX8Eq2VkRFhNI"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wfrp4e-pl.criticals.O2L4EIUNBO7HASF0"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Silny cios trafia w sam środek twarzy, a postać zalewa się krwią. Postać otrzymuje 2 poziomy Stanu @Condition[Krwawienie]. Musi także zdać Wymagający (+0) Test Odporności, w przeciwnym wypadku otrzyma również 1 poziom Stanu @Condition[Oszołomienie]. Po wyleczeniu tej rany postać uzyskuje premię +1 lub karę -1 do Testów w kontaktach społecznych (w zależności od kontekstu), chyba że podjęto Test Chirurgii, by nastawić i wyprostować nos.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "3",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Głowa",
+      "type": "String",
+      "label": "Location"
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_id": "O2L4EIUNBO7HASF0",
+  "folder": null,
+  "sort": 0,
+  "_key": "!items!O2L4EIUNBO7HASF0"
+}

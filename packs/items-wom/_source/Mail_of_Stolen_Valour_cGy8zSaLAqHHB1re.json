@@ -1,0 +1,118 @@
+{
+  "folder": "ilg9UmIyexqM7and",
+  "name": "Mail of Stolen Valour",
+  "type": "armour",
+  "img": "modules/wfrp4e-core/icons/equipment/armour/mail-coat.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><strong>Boon</strong>: 3 Armour Points</p><p><strong>Bane</strong>: Forced flee</p><p><strong>Trigger</strong>: Failed Cool Test</p><p><strong>Description</strong>: This mail coat seems to be polished to an almost impossibly bright sheen. It provides 3 APs of protection to the Body and Arms.</p><p>Each time this cursed mail absorbs damage from a blow, the wearer must make a Cool Test. This is a <strong>Very Easy (+60) Cool</strong> Test for the first blow but increases by one step of difficulty for each subsequent blow: an <strong>Easy (+40) Cool</strong> Test for the second, an <strong>Average (+20) Cool</strong> Test for the third, and so on.</p><p>If the wearer fails a Cool Test, they must break from combat and flee until they pass a <strong>Challenging (+0) Willpower</strong> Test. The coat provides 0 APs to any damage taken while fleeing, which may lead to a coward’s end.</p>"
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 3
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "None"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "damageToItem": {
+      "type": "Number",
+      "value": 0,
+      "shield": 0
+    },
+    "worn": {
+      "type": "Boolean",
+      "label": "Worn",
+      "value": false
+    },
+    "armorType": {
+      "type": "String",
+      "label": "Armour Type",
+      "value": "mail"
+    },
+    "penalty": {
+      "type": "String",
+      "label": "Penalty",
+      "value": ""
+    },
+    "qualities": {
+      "type": "String",
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "type": "String",
+      "label": "Flaws",
+      "value": []
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    },
+    "AP": {
+      "head": 0,
+      "lArm": 3,
+      "rArm": 3,
+      "lLeg": 0,
+      "rLeg": 0,
+      "body": 3
+    },
+    "APdamage": {
+      "head": 0,
+      "lArm": 0,
+      "rArm": 0,
+      "lLeg": 0,
+      "rLeg": 0,
+      "body": 0
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Cursed Items",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1677702798210,
+    "modifiedTime": 1693273575761,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "cGy8zSaLAqHHB1re",
+  "_key": "!items!cGy8zSaLAqHHB1re"
+}

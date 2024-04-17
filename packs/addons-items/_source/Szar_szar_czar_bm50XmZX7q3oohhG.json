@@ -1,0 +1,135 @@
+{
+  "name": "Szar-szar-czar",
+  "type": "trait",
+  "img": "modules/wfrp4e-core/icons/traits/trait.png",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-core/icons/traits/trait.png",
+      "transfer": true,
+      "_id": "VN6KRxHhemlxueEU",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "effectTrigger": "rollCastTest",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "let test = args.test;\nif(test.result.castOutcome == \"success\") {\n   test.result.SL = parseInt(test.result.SL) + parseInt(this.item.specification.value);\n   let roll = await new Roll(\"d10\").roll();\n   let result = roll.result - 1\n    ChatMessage.create({ content: `<b>Rogaty Szczur pobłogosławił swoją mocą zwiększając o ${this.item.specification.value} PS. Rzut na manifestacje: ${result} </b>` });\n\n   let extraResult = result.toString().split('')[0];\n   let table = test.result.roll.toString().split('');\n   const groupBy = (x,f)=>x.reduce((a,b,i)=>((a[f(b,i,x)]||=[]).push(b),a),{});\n   let groupedBy = Object.getOwnPropertyNames(groupBy(table, x => x)).length;\n   table = table.concat(extraResult);\n   let groupedByExtra = Object.getOwnPropertyNames(groupBy(table, x => x)).length;\n   if (groupedBy  == 2 && groupedByExtra  == 2 || groupedBy  == 1 && groupedByExtra  == 1) {\n       if (!test.result.minormis) {\n            test.result.minormis = game.i18n.localize(\"ROLL.MinorMis\");\n      } else if (!test.result.majormis) {\n           test.result.minormis = null;\n           test.result.majormis = game.i18n.localize(\"ROLL.MajorMis\");\n     } else {\n          test.result.catastrophicmis = game.i18n.localize(\"ROLL.CatastrophicMis\");\n          test.result.majormis = null;\n     }\n   } else if(groupedByExtra  == 1) {\n      if (!test.result.majormis) {\n           test.result.minormis = null;\n           test.result.majormis = game.i18n.localize(\"ROLL.MajorMis\");\n     } else {\n          test.result.catastrophicmis = game.i18n.localize(\"ROLL.CatastrophicMis\");\n          test.result.majormis = null;\n     }\n   }\n}"
+        }
+      },
+      "name": "Szar-szar-czar (czarowanie)",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!bm50XmZX7q3oohhG.VN6KRxHhemlxueEU"
+    },
+    {
+      "icon": "modules/wfrp4e-core/icons/traits/trait.png",
+      "transfer": true,
+      "_id": "m3H1WjTDaNaSkfBz",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "effectTrigger": "rollChannellingTest",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "let test = args.test\nif(test.result.outcome== \"success\") { \n   test.result.SL = parseInt(test.result.SL) + parseInt(this.item.specification.value);\n   let roll = await new Roll(\"d10\").roll();\n    let result = roll.result - 1\n    ChatMessage.create({ content: `<b>Rogaty Szczur pobłogosławił swoją mocą zwiększając o ${this.item.specification.value} PS. Rzut na manifestacje: ${result} </b>` });\n\n   let extraResult = result.toString().split('')[0];\n   let table = test.result.roll.toString().split('');\n   const groupBy = (x,f)=>x.reduce((a,b,i)=>((a[f(b,i,x)]||=[]).push(b),a),{});\n   let groupedBy = Object.getOwnPropertyNames(groupBy(table, x => x)).length;\n   table = table.concat(extraResult);\n   let groupedByExtra = Object.getOwnPropertyNames(groupBy(table, x => x)).length;\n   if (groupedBy  == 2 && groupedByExtra  == 2 || groupedBy  == 1 && groupedByExtra  == 1) {\n       if (!test.result.minormis) {\n            test.result.minormis = game.i18n.localize(\"ROLL.MinorMis\");\n      } else if (!test.result.majormis) {\n           test.result.minormis = null;\n           test.result.majormis = game.i18n.localize(\"ROLL.MajorMis\");\n     } else {\n          test.result.catastrophicmis = game.i18n.localize(\"ROLL.CatastrophicMis\");\n          test.result.majormis = null;\n     }\n   } else if(groupedByExtra  == 1) {\n      if (!test.result.majormis) {\n           test.result.minormis = null;\n           test.result.majormis = game.i18n.localize(\"ROLL.MajorMis\");\n     } else {\n          test.result.catastrophicmis = game.i18n.localize(\"ROLL.CatastrophicMis\");\n          test.result.majormis = null;\n     }\n   }\n}"
+        }
+      },
+      "name": "Szar-szar-czar (splatanie)",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!bm50XmZX7q3oohhG.m3H1WjTDaNaSkfBz"
+    }
+  ],
+  "folder": "Fn9BF4AZCCMMhKOf",
+  "flags": {
+    "wfrp4e-eis": {
+      "initialization-folder": "Cechy"
+    },
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Przed wykonaniem jakiegokolwiek testu splatania lub języka magicznego, możesz wezwać Rogatego Szczura, aby ci pomogł w swoim zaklęciu. Jeśli test się powiedzie, dodaj swój Wartość Szar-szar-czaru do PS testu. Kiedy wzywasz tę moc, rzuć dodatkowy 1d10.  Ta kość nie stanowi bonusu, ale się liczy przy liczeniu manifestacji chaosu. ta sama liczba na wszystkich trzech kościach zwiększa poziom manifestacji o 1</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "3",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.2",
+    "coreVersion": "11.311",
+    "createdTime": 1666259045059,
+    "modifiedTime": 1696797335722,
+    "lastModifiedBy": "Czz7IJA9DEa5LD9E"
+  },
+  "_id": "bm50XmZX7q3oohhG",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Czz7IJA9DEa5LD9E": 3
+  },
+  "_key": "!items!bm50XmZX7q3oohhG"
+}

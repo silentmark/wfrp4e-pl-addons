@@ -1,0 +1,129 @@
+{
+  "_id": "TJQC4f6mGiFMxS5V",
+  "name": "Attach and Feed",
+  "type": "trait",
+  "img": "modules/wfrp4e-core/icons/traits/trait.png",
+  "effects": [
+    {
+      "_id": "XaqalZle2E7NV3vb",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "applyDamage",
+          "effectApplication": "actor",
+          "script": "let trait = args.opposedTest.attackerTest.item\nlet woundLossEffect = args.attacker.effects.find(i => i.name == \"Attached Wound Loss\")\nif (trait && trait.name.includes(\"Bite\") && woundLossEffect)\n{\n    game.wfrp4e.utility.applyEffectToTarget(woundLossEffect, [{actor : args.actor}])\n}",
+          "preventDuplicateEffects": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/traits/trait.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Attach and Feed",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!TJQC4f6mGiFMxS5V.XaqalZle2E7NV3vb"
+    },
+    {
+      "_id": "7Amhi75wLv0PvGjd",
+      "flags": {
+        "wfrp4e": {
+          "effectApplication": "apply",
+          "preventDuplicateEffects": false,
+          "effectTrigger": "endRound",
+          "script": "let msg = `<b>${this.actor.prototypeToken.name}</b> loses 1 Wound.<br>`\n  if (this.actor.status.wounds.value <= 1)\n  {\n    msg += `<b>${this.actor.prototypeToken.name}</b> goes unconscious.<br>`\n    this.actor.addCondition(\"unconscious\")\n  }\n  ChatMessage.create({content : msg, speaker : {alias : this.effect.name}})\n  this.actor.modifyWounds(-1)"
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/traits/trait.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Attached Wound Loss",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!TJQC4f6mGiFMxS5V.7Amhi75wLv0PvGjd"
+    }
+  ],
+  "folder": "wvnqjaHZIliUa723",
+  "sort": 400001,
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Traits",
+      "sort": 400001
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>If the creature makes a successful Bite attack, it becomes attached to the victim, clamping tight with surprising force. It then extracts blood, causing the automatic loss of 1 Wound every Round it is attached. Victims reduced to zero Wounds gain an @Condition[Unconscious] Condition as they pass out from blood loss.</p>\n<p>The creature will only free itself when full, which happens after it has extracted its TB in Wounds; it then retreats to digest the meal.</p>\n<p>The creature can be pulled off with an <strong>Opposed Strength</strong> Test, but doing so inflicts 1 Wound on the victim. If the creature has the appropriate Trait, anything it fears makes it release its hold immediately.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "2TbX8z7IWr0GFssP": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "hv1aja7lAR8ZyKUO": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1681859838889,
+    "modifiedTime": 1693273562890,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!TJQC4f6mGiFMxS5V"
+}

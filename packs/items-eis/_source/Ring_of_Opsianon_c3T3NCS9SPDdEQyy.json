@@ -1,0 +1,85 @@
+{
+  "_id": "c3T3NCS9SPDdEQyy",
+  "name": "Ring of Opsianon",
+  "type": "trapping",
+  "img": "modules/wfrp4e-eis/assets/icons/ring-of-opsianon.png",
+  "effects": [],
+  "folder": "7AP1Hx1JHl8Pc4jQ",
+  "sort": 0,
+  "flags": {
+    "wfrp4e-eis": {
+      "initialization-folder": "Enemy In Shadows"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Gideon wears a gold ring set with a black, faceted obsidian stone.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The ring was supposedly forged almost three hundred years ago, several decades before the Colleges of Magic were founded. Its creator, Kurtis Krammovic, wished to hide his magical nature from those unsympathetic to witches in those dark times. It was secured by High Astromancer Filonia Perls of the Blue Order in 2498 IC in an exclusive auction for magical artefacts in Marienburg. The ring was stolen from High Astromancer Perls by Teugen five years ago. Gideon claimed to need it to stabilise its physical form when not in a stolen skin. Further, the ring was required to enact the ritual that would &lsquo;save&nbsp;Teugen&rsquo;s soul&rsquo;. Perls, a court wizard&nbsp;who reads futures for important&nbsp;nobles in Altdorf, wants it back, and has an open reward of @Credit[10gc SPLIT]{10 GC} for its return.</p>\n<h3>Rules</h3>\n<p>Any Daemon wearing the ring can ignore the @UUID[Compendium.wfrp4e-core.items.D0ImWEIMSDgElsnl]{Unstable} Creature Trait, and cannot be detected by @UUID[Compendium.wfrp4e-core.items.OEjUvJKi0xmBwbS2]{Second Sight}. Further, as the Daemon&rsquo;s magics cannot be detected by Second Sight until cast, its spells may not be Dispelled by other Characters.</p>\n<p>Mortals wearing the ring instead gain all the effects of the @UUID[Compendium.wfrp4e-core.items.T9cEYAUhqBiTxrp2]{Mundane Aura} Spell.</p>\n<p>Unfortunately, as the ring has now been steeped in Gideon&rsquo;s Daemonic energies for many years, it is dangerous. For every month it is worn by a mortal,&nbsp; a Test to resist a @Corruption[minor]{Minor Exposure to Corruption} must be taken. This taint can only be removed by rare rituals and spells of the Light Order of Magic.</p>"
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "None"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "clothingAccessories"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "34JMfpmBvTmVYPh4": 3,
+    "VnnpieLwbiAu3Owf": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1693273565145,
+    "modifiedTime": 1693273565145,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!c3T3NCS9SPDdEQyy"
+}

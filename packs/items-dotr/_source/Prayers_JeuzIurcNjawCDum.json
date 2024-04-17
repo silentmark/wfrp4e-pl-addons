@@ -1,0 +1,19 @@
+{
+  "name": "Prayers",
+  "type": "Item",
+  "_id": "JeuzIurcNjawCDum",
+  "folder": null,
+  "sorting": "a",
+  "sort": 800000,
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1691300237576,
+    "modifiedTime": 1691300353712,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "color": null,
+  "_key": "!folders!JeuzIurcNjawCDum"
+}

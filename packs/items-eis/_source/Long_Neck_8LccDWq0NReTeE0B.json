@@ -1,0 +1,81 @@
+{
+  "_id": "8LccDWq0NReTeE0B",
+  "name": "Long Neck",
+  "type": "mutation",
+  "img": "modules/wfrp4e-core/icons/mutations/mutation.png",
+  "effects": [
+    {
+      "_id": "zcc7htyjfLyJfquD",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "preTakeDamage",
+          "effectApplication": "actor",
+          "script": "if (args.opposedTest.result.hitloc.value == \"body\")\n{\n   if ((await new Roll(\"1d2\").roll()).total == 1)\n   {\n       args.opposedTest.result.hitloc.value = \"head\"\n       ChatMessage.create({content : `<b>Long Neck</b>: Hit location changed to Head`, speaker : {alias : this.actor.prototypeToken.name}})\n   }\n}",
+          "preventDuplicateEffects": true
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/mutations/mutation.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Long Neck",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!8LccDWq0NReTeE0B.zcc7htyjfLyJfquD"
+    }
+  ],
+  "folder": "QOjm4pUE8aywpu9Z",
+  "sort": 100001,
+  "flags": {},
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Half of body hits are head hits; this mutation cannot be hidden</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "mutationType": {
+      "label": "Type",
+      "type": "String",
+      "value": "physical"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Modifier"
+    },
+    "modifiesSkills": {
+      "value": false,
+      "type": "Boolean",
+      "label": "Skill Modifier?"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "sAiwDCZFd21tgaDN": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1691299878976,
+    "modifiedTime": 1693273565118,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!8LccDWq0NReTeE0B"
+}

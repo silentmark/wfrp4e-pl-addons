@@ -1,0 +1,85 @@
+{
+  "name": "Gesundheit",
+  "type": "trapping",
+  "img": "icons/consumables/potions/bottle-bulb-corked-purple.webp",
+  "effects": [],
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Herbs of the Empire",
+      "sort": 300000
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<h3>A Festering Treatment</h3>\n<p>Gesundheit, as everyone knows, means &lsquo;good health&rsquo; in Reikspiel, and such a simple name leads me to believe that the knowledge of this plant is very ancient. The Elves call it <em>Leoleghas</em>, and in Bretonnia it is known as <em>Feuille de Blessure</em>. In the Moot, we call it &lsquo;Heal-All&rsquo;.</p>\n<p>It is a very simple herb to use: simply bruise the leaves to release their sap, and create a poultice. There are some who like to add various other healing herbs, according to the nature of the wound or the source of the infection, but I have never found this necessary.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><strong>Locality: </strong>Mixed forest</p>\n<p><strong>Season: </strong>Winter, Spring</p>\n<p><strong>Preparations:&nbsp;</strong>Poultice</p>\n<p>A poultice of Gesundheit leaves applied to a @Compendium[wfrp4e-core.diseases.kKccDTGzWzSXCBOb]{Festering Wound} affords the patient an <strong>Average (+20) Endurance </strong>Test, with each SL achieved reducing the duration of the Festering Wound by one day. This application can be repeated with a fresh poultice no more than once daily, until the wound is no longer Festering.</p>"
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "15",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "scarce"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690313554375,
+    "modifiedTime": 1690314376321,
+    "lastModifiedBy": "Czz7IJA9DEa5LD9E"
+  },
+  "_id": "9WIdtena4dRBBghq",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "kYUjI3k8J8QQt9Qw": 3
+  },
+  "_key": "!items!9WIdtena4dRBBghq"
+}

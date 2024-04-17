@@ -1,0 +1,353 @@
+{
+  "_id": "iO0yNAT4Qg4IGuyf",
+  "name": "Gaze o’ Mork",
+  "type": "spell",
+  "flags": {
+    "core": {},
+    "autoanimations": {
+      "id": "eb34993c-f32e-471b-8ed3-3546f37c4c1f",
+      "label": "Gaze o’ Mork",
+      "levels3d": {
+        "type": "explosion",
+        "data": {
+          "color01": "#FFFFFF",
+          "color02": "#FFFFFF",
+          "spritePath": "modules/levels-3d-preview/assets/particles/dust.png"
+        },
+        "sound": {
+          "enable": false
+        },
+        "secondary": {
+          "enable": false,
+          "data": {
+            "color01": "#FFFFFF",
+            "color02": "#FFFFFF",
+            "spritePath": "modules/levels-3d-preview/assets/particles/dust.png"
+          }
+        }
+      },
+      "macro": {
+        "enable": false,
+        "playWhen": "0"
+      },
+      "menu": "range",
+      "primary": {
+        "video": {
+          "dbSection": "range",
+          "menuType": "spell",
+          "animation": "scorchingray",
+          "variant": "01",
+          "color": "green",
+          "enableCustom": false,
+          "customPath": ""
+        },
+        "sound": {
+          "enable": false,
+          "delay": 0,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "startTime": 0,
+          "volume": 0.75
+        },
+        "options": {
+          "contrast": 0,
+          "delay": 0,
+          "elevation": 1000,
+          "isReturning": false,
+          "isWait": false,
+          "onlyX": false,
+          "opacity": 1,
+          "playbackRate": 1,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "saturate": 0,
+          "tint": false,
+          "tintColor": "#FFFFFF",
+          "zIndex": 1
+        }
+      },
+      "secondary": {
+        "enable": false,
+        "video": {
+          "dbSection": "static",
+          "menuType": "spell",
+          "animation": "curewounds",
+          "variant": "01",
+          "color": "blue",
+          "enableCustom": false,
+          "customPath": ""
+        },
+        "sound": {
+          "enable": false,
+          "delay": 0,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "startTime": 0,
+          "volume": 0.75
+        },
+        "options": {
+          "addTokenWidth": false,
+          "anchor": "0.5",
+          "contrast": 0,
+          "delay": 0,
+          "elevation": 1000,
+          "fadeIn": 250,
+          "fadeOut": 500,
+          "isMasked": false,
+          "isRadius": true,
+          "isWait": false,
+          "opacity": 1,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "saturate": 0,
+          "size": 1.5,
+          "tint": false,
+          "tintColor": "#FFFFFF",
+          "zIndex": 1
+        }
+      },
+      "soundOnly": {
+        "sound": {
+          "enable": false,
+          "delay": 0,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "startTime": 0,
+          "volume": 0.75
+        }
+      },
+      "source": {
+        "enable": false,
+        "video": {
+          "dbSection": "static",
+          "menuType": "spell",
+          "animation": "curewounds",
+          "variant": "01",
+          "color": "blue",
+          "enableCustom": false,
+          "customPath": ""
+        },
+        "sound": {
+          "enable": false,
+          "delay": 0,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "startTime": 0,
+          "volume": 0.75
+        },
+        "options": {
+          "addTokenWidth": false,
+          "anchor": "0.5",
+          "contrast": 0,
+          "delay": 0,
+          "elevation": 1000,
+          "fadeIn": 250,
+          "fadeOut": 500,
+          "isMasked": false,
+          "isRadius": false,
+          "isWait": true,
+          "opacity": 1,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "saturate": 0,
+          "size": 1,
+          "tint": false,
+          "tintColor": "#FFFFFF",
+          "zIndex": 1
+        }
+      },
+      "target": {
+        "enable": false,
+        "video": {
+          "dbSection": "static",
+          "menuType": "spell",
+          "animation": "curewounds",
+          "variant": "01",
+          "color": "blue",
+          "enableCustom": false,
+          "customPath": ""
+        },
+        "sound": {
+          "enable": false,
+          "delay": 0,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "startTime": 0,
+          "volume": 0.75
+        },
+        "options": {
+          "addTokenWidth": false,
+          "anchor": "0.5",
+          "contrast": 0,
+          "delay": 0,
+          "elevation": 1000,
+          "fadeIn": 250,
+          "fadeOut": 500,
+          "isMasked": false,
+          "isRadius": false,
+          "opacity": 1,
+          "persistent": false,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "saturate": 0,
+          "size": 1,
+          "tint": false,
+          "tintColor": "#FFFFFF",
+          "unbindAlpha": false,
+          "unbindVisibility": false,
+          "zIndex": 1
+        }
+      },
+      "isEnabled": true,
+      "isCustomized": true,
+      "fromAmmo": false,
+      "version": 5
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_gaz-o%27-mork.jpg",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-unofficial-grimoire/icons/spell_gaz-o%27-mork.jpg",
+      "transfer": false,
+      "_id": "2UqgU6LD1WerqtWY",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "times-up": {
+          "isPassive": false
+        },
+        "wfrp4e": {
+          "effectTrigger": "preTakeDamage",
+          "effectApplication": "damage",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "let items = args.actor.getItemTypes(\"armour\");\nlet hitloc = args.opposedTest.attackerTest.hitloc.result;\nfor (let item of items) {\n    let itemData = item.toObject();\n    if (itemData.system.AP[hitloc]) {\n        itemData.system.APdamage[hitloc] = itemData.system.AP[hitloc];\n        await args.actor.updateEmbeddedDocuments(\"Item\", [itemData]);\n        ChatMessage.create({ content: \"Zniszczono Pancerz!\" });\n    }\n}"
+        }
+      },
+      "name": "Gaze o’ Mork (Niszczenie pancerza)",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!iO0yNAT4Qg4IGuyf.2UqgU6LD1WerqtWY"
+    }
+  ],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Your eyes glow green with the power of Waaagh! and you unleash a destructive blast of seething magical energy. The beam is 1-yard wide and extends as far as your Willpower yards. Unless absorbed by an inanimate object with a Toughness Bonus of 6 or greater, the beam will destroy and pass through any lesser obstacle. Any creature in the path of the beam suﬀers a <em>magic missile </em>with a Damage of +6. The beam will destroy all Armour Points on a struck Location. If there is uncertainty whether or not a creature is within the path of the beam, make a 1d10 roll: <strong>1-5</strong> miss, <strong>6-10</strong> hit.&nbsp;</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "waaagh",
+      "effectString": "Waagh",
+      "effect": "Waagh"
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Siła Woli Metrów",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Specjalny",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Natychmiast",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": "6"
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 6,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": true
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": true
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "folder": "vuh3rAKKh58ELgB5",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.2",
+    "coreVersion": "11.311",
+    "createdTime": 1675977972805,
+    "modifiedTime": 1696797178015,
+    "lastModifiedBy": "Czz7IJA9DEa5LD9E"
+  },
+  "sort": 400000,
+  "ownership": {
+    "default": 0,
+    "Czz7IJA9DEa5LD9E": 3
+  },
+  "_key": "!items!iO0yNAT4Qg4IGuyf"
+}

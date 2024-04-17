@@ -1,0 +1,98 @@
+{
+  "_id": "mqdPFau0fgu2aUrB",
+  "name": "Smoothing",
+  "type": "vehicleMod",
+  "img": "modules/wfrp4e-dotr/assets/icons/upgrade.png",
+  "effects": [
+    {
+      "_id": "YM9LffFUMjn9bLYq",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false
+        }
+      },
+      "changes": [
+        {
+          "key": "system.details.move.value",
+          "value": "1",
+          "mode": 2,
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-dotr/assets/icons/upgrade.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Smoothing",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!mqdPFau0fgu2aUrB.YM9LffFUMjn9bLYq"
+    }
+  ],
+  "folder": "mqmgFBAdX7S24AT7",
+  "sort": 200001,
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Hull",
+      "sort": 200001
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Less radical than a racing hull is the process of smoothing a boat’s hull with sand and abrasive rocks, to remove any irregularities that might cause unnecessary drag. Initial smoothing of a hull takes at least a week at a boatyard and gives the boat M +1.</p><p>@UUID[Compendium.wfrp4e-dotr.journals.WR8ZAD6yw9lYgzeY.JournalEntryPage.qpdadmEFPBzFcklt]{Repairing} a smoothed hull costs 50% more than normal; cheaper repairs lose all the benefits of the smoothing.</p><blockquote class=\"foundry-note\"><p>Encumbrance and Price reflects 10 ft. of length. Modify this item according to the ship it's being applied to.</p></blockquote>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "40",
+      "ss": "0",
+      "bp": "0"
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "modType": {
+      "value": "hull"
+    },
+    "quantity": {
+      "value": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "2TbX8z7IWr0GFssP": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "hv1aja7lAR8ZyKUO": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1681859838895,
+    "modifiedTime": 1693273562902,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!mqdPFau0fgu2aUrB"
+}

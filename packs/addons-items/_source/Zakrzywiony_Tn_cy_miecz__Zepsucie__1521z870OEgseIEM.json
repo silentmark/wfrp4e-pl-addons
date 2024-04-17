@@ -1,0 +1,189 @@
+{
+  "name": "Zakrzywiony Tnący miecz (Zepsucie)",
+  "type": "weapon",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/hand-weapon.png",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-core/icons/equipment/weapons/hand-weapon.png",
+      "transfer": true,
+      "_id": "ftJUyImazckY6qgP",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "effectTrigger": "rollWeaponTest",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "if (args.test.result.outcome == \"failure\" && Number(args.test.result.roll.toString().split('').pop()) == 8) {\n\tawait ChatMessage.create({ content: `<b>${this.actor.name}</b> musi wykonać test odporności lub otrzyma punkt korupcji.` })\n\tlet options = {};\n\toptions.context = {};\n  \toptions.context.failure = \"Otrzymano 1 punkt korupcji\";\n        options.context.success = \"Tym razem się udało...\";\n        options.appendTitle = \" - Zepsucie\";\n\tlet test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), options);\n\tawait test.roll(); \n\tif (test.result.outcome == \"failure\" ) {\n          \tlet corruption = this.actor.status.corruption.value + 1;\n     \t        await this.actor.update({\"system.status.corruption.value\" : corruption})\n    \t        await ChatMessage.create({ content: `<b>${this.actor.name}</b> otrzymał punkt korupcji: ${corruption}` })\n\t}\n}"
+        }
+      },
+      "name": "Zakrzywiony Tnący miecz (Zepsucie)",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!1521z870OEgseIEM.ftJUyImazckY6qgP"
+    }
+  ],
+  "flags": {
+    "_sheetTab": "details",
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 1
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "1",
+      "ss": "0",
+      "bp": "0",
+      "value": ""
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "common"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "damageToItem": {
+      "type": "Number",
+      "value": 0,
+      "shield": 0
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": "SB+4",
+      "meleeValue": "SB+4",
+      "rangedValue": ""
+    },
+    "reach": {
+      "type": "String",
+      "label": "Reach",
+      "value": "average"
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": ""
+    },
+    "skill": {
+      "type": "String",
+      "label": "Skill Override",
+      "value": ""
+    },
+    "modeOverride": {
+      "type": "String",
+      "label": "Mode Override",
+      "value": ""
+    },
+    "twohanded": {
+      "type": "Boolean",
+      "label": "Two-Handed",
+      "value": false
+    },
+    "ammunitionGroup": {
+      "type": "String",
+      "label": "Ammunition Group",
+      "value": "none"
+    },
+    "currentAmmo": {
+      "type": "Number",
+      "value": 0
+    },
+    "consumesAmmo": {
+      "value": true
+    },
+    "weaponGroup": {
+      "type": "String",
+      "label": "Weapon Group",
+      "value": "basic"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": [
+        {
+          "name": "slash",
+          "value": 2
+        }
+      ],
+      "type": "String"
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": [],
+      "type": "String"
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    },
+    "equipped": false,
+    "loaded": {
+      "value": false,
+      "repeater": false,
+      "amt": 0
+    },
+    "offhand": {
+      "value": false
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.2",
+    "coreVersion": "11.311",
+    "createdTime": 1663627495171,
+    "modifiedTime": 1696797299712,
+    "lastModifiedBy": "Czz7IJA9DEa5LD9E"
+  },
+  "_id": "1521z870OEgseIEM",
+  "folder": null,
+  "sort": 800000,
+  "ownership": {
+    "default": 0,
+    "Czz7IJA9DEa5LD9E": 3
+  },
+  "_key": "!items!1521z870OEgseIEM"
+}

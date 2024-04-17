@@ -1,0 +1,128 @@
+{
+  "name": "Chwytacz Pocisków Ulgu",
+  "type": "trapping",
+  "img": "modules/wfrp4e-core/icons/equipment/clothing_and_accessories/cloak.png",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-core/icons/equipment/clothing_and_accessories/cloak.png",
+      "transfer": true,
+      "name": "Chwytacz Pocisków Ulgu",
+      "_id": "aXBGiq8O5McaBsx5",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "effectTrigger": "takeDamage",
+          "effectApplication": "equipped",
+          "areaEffect": false,
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "if (args.opposedTest?.attackerTest?.item?.attackType == \"ranged\") {\n    const roll = await args.actor.setupCharacteristic(\"wp\", { appendTitle : \" - Chwytacz Pocisków\", modify : { successBonus : 2 } });\n    await roll.roll();\n    if (roll.result.outcome == \"success\") {\n        let reduction = Number.parseInt(roll.result.SL);\n        ChatMessage.create({ content: `<b>Chwytacz Pocisków Ulgu</b>: Płaszcz zredukował obrażenia o ${reduction} u ${args.actor.name}.`});\n        args.totalWoundLoss -= reduction\n        if (args.totalWoundLoss <= 0) {\n            args.totalWoundLoss = 1;\n        }\n    }\n}"
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!yKX71F9BV4vNce2K.aXBGiq8O5McaBsx5"
+    }
+  ],
+  "flags": {
+    "_sheetTab": "details",
+    "core": {},
+    "babele": {
+      "translated": true,
+      "hasTranslation": true,
+      "originalName": "Cloak"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Magiczny płaszcz Ulgu, potrafiący za pomocą siły woli noszącego, wyłapywać pociski skierowane w noszącego.</p><p>Gdy jest celem ataku strzeleckiego, może wykonać test siły woli, aby zmieniejszyć obrażenia o PS rzutu +2. </p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 1
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "10",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "common"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "clothingAccessories"
+    },
+    "worn": true,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.2",
+    "coreVersion": "11.311",
+    "createdTime": 1663627495181,
+    "modifiedTime": 1696767877039,
+    "lastModifiedBy": "Czz7IJA9DEa5LD9E"
+  },
+  "_id": "yKX71F9BV4vNce2K",
+  "folder": "ZP0UuGj1tO64CDBP",
+  "sort": 200000,
+  "ownership": {
+    "default": 0,
+    "Czz7IJA9DEa5LD9E": 3
+  },
+  "_key": "!items!yKX71F9BV4vNce2K"
+}

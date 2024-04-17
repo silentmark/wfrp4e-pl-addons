@@ -1,0 +1,111 @@
+{
+  "name": "Master Alchemist",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>@UUID[Compendium.wfrp4e-wom.journals.kLTWtoz5d7Yt2zAJ.JournalEntryPage.aYYDra6LCt6daz0s]{Alchemist}</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "careergroup": {
+      "type": "String",
+      "label": "Career Group",
+      "value": "Alchemist"
+    },
+    "class": {
+      "type": "String",
+      "label": "Class",
+      "value": "Academics"
+    },
+    "current": {
+      "type": "Boolean",
+      "value": false
+    },
+    "complete": {
+      "type": "Boolean",
+      "value": false
+    },
+    "level": {
+      "type": "String",
+      "label": "Career Level",
+      "value": "3"
+    },
+    "status": {
+      "tier": "g",
+      "standing": 3
+    },
+    "characteristics": [
+      "t",
+      "dex",
+      "int",
+      "wp",
+      "i"
+    ],
+    "skills": [
+      "Channelling (Chamon)",
+      "Evaluate",
+      "Haggle",
+      "Intuition",
+      "Language (Magick)",
+      "Lore (Magic)",
+      "Melee (Basic)",
+      "Melee (Polearm)",
+      "Perception",
+      "Trade (Alchemist)",
+      "Charm",
+      "Cool",
+      "Intimidate",
+      "Lore (Metallurgy)",
+      "Research",
+      "Trade (Blacksmith or Goldsmith or Engineer))",
+      "Lore (Engineering)",
+      "Lore (Science)",
+      "Ride (Horse)",
+      "Trade (Engineer)"
+    ],
+    "talents": [
+      "Bookish",
+      "Craftsman (Blacksmith or Goldsmith or Engineer)",
+      "Instinctive Diction",
+      "Magical Sense"
+    ],
+    "trappings": [
+      "Alchemist Apprentice",
+      "Light Warhorse",
+      "Magical Item",
+      "Standard Robes"
+    ],
+    "incomeSkill": [
+      4
+    ]
+  },
+  "type": "career",
+  "folder": "EGdnaG0JFAHnazff",
+  "img": "modules/wfrp4e-wom/assets/icons/careers/alchemist-03.png",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Alchemist",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676244062452,
+    "modifiedTime": 1693273575762,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "cXXPURj3wlKpPLAx",
+  "_key": "!items!cXXPURj3wlKpPLAx"
+}

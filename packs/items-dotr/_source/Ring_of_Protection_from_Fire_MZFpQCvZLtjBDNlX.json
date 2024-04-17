@@ -1,0 +1,154 @@
+{
+  "_id": "MZFpQCvZLtjBDNlX",
+  "name": "Ring of Protection from Fire",
+  "type": "trapping",
+  "img": "modules/wfrp4e-core/icons/equipment/clothing_and_accessories/signet-ring.png",
+  "effects": [
+    {
+      "_id": "syRXiBX6eqQVFkG6",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "takeDamage",
+          "effectApplication": "equipped",
+          "script": "ChatMessage.create({content : `<b>${this.actor.name}</b> takes half damage from all sources of fire.`, speaker : {alias : this.item.name}});",
+          "preventDuplicateEffects": true
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/equipment/clothing_and_accessories/signet-ring.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Fire Damage Protection",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!MZFpQCvZLtjBDNlX.syRXiBX6eqQVFkG6"
+    },
+    {
+      "_id": "ytkHNxwXElbHRXxu",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "dialogChoice",
+          "effectApplication": "equipped",
+          "effectData": {
+            "description": "Involves Fire",
+            "modifier": 10,
+            "slBonus": null,
+            "successBonus": null,
+            "difficultyStep": null
+          },
+          "preventDuplicateEffects": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/equipment/clothing_and_accessories/signet-ring.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Ring of Protection from Fire",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!MZFpQCvZLtjBDNlX.ytkHNxwXElbHRXxu"
+    }
+  ],
+  "folder": "BklzLmZbleBRvnuC",
+  "sort": 500000,
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Other",
+      "sort": 200000
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "None"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "clothingAccessories"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "2TbX8z7IWr0GFssP": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "hv1aja7lAR8ZyKUO": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1681859838886,
+    "modifiedTime": 1693273562883,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!MZFpQCvZLtjBDNlX"
+}

@@ -1,0 +1,82 @@
+{
+  "_id": "H0UXPMkerYRSKGKh",
+  "name": "Flensing Ruin",
+  "permission": {
+    "default": 0,
+    "LhiA8OMMa0ToAWEe": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You channel manic green ribbons of Warp energy that you send tearing at a single target&rsquo;s flesh. The targeted creature is struck by a <em>magic missile</em> with a Damage of +5. Also, the ruinous ribbons follow your target wherever it goes until the spell ends. At the end of every Round, including this Round, the target gains +1 <em>Bleeding</em> Condition.&nbsp;&nbsp;</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Warp",
+      "effect": "Warp Sorcerers gain a +10 bonus to Channelling and Language (Magick) Tests in any underground environment, such as a cavern, sewer or even a basement. Targets who suﬀer Wounds from Warp Lore spells must pass an Average (+20) Endurance Test to avoid contracting a Minor Infection."
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower Bonus yards"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Special",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus rounds",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": "5"
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 8,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": true
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.p04a5JGvMdcVwBJB"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_flensing%20ruin.jpg",
+  "effects": [],
+  "_key": "!items!H0UXPMkerYRSKGKh"
+}

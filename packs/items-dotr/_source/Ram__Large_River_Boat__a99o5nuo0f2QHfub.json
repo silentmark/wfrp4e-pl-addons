@@ -1,0 +1,60 @@
+{
+  "_id": "a99o5nuo0f2QHfub",
+  "name": "Ram (Large River Boat)",
+  "type": "vehicleMod",
+  "img": "modules/wfrp4e-dotr/assets/icons/upgrade.png",
+  "effects": [],
+  "folder": "mqmgFBAdX7S24AT7",
+  "sort": 150001,
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Weapons",
+      "sort": 150001
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>A metal ram can be fitted to the front of a boat, ensuring that in any head-on collision, the other vessel takes all the damage. It also gives the boat 5 AP at the front. Possession of a ram is taken by the River Patrol and other authorities as evidence of the crew&rsquo;s intent to ram and sink other vessels, and anyone with a ram on their boat had better be able to produce a letter of authorization from a local noble or some other power unless they want to be taken for pirates.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "60",
+      "ss": "0",
+      "bp": "0"
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 120
+    },
+    "modType": {
+      "value": ""
+    },
+    "quantity": {
+      "value": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "2TbX8z7IWr0GFssP": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "hv1aja7lAR8ZyKUO": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1681859838892,
+    "modifiedTime": 1693273562895,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!a99o5nuo0f2QHfub"
+}

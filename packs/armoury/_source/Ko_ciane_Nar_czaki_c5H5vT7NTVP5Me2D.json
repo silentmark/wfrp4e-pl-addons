@@ -1,0 +1,135 @@
+{
+  "name": "Kościane Naręczaki",
+  "type": "armour",
+  "flags": {
+    "_sheetTab": "details",
+    "core": {
+      "sourceId": "Compendium.wfrp4e-pl.armoury.c5H5vT7NTVP5Me2D"
+    }
+  },
+  "img": "modules/wfrp4e-pl-addons/icons/bonearmour.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Każdy element zbroi kościanej posiada wadę „tandetny” ze względu na rodzaj użytego materiału. Wady tej nie da się pozbyć w żaden normalny sposób. Kość jako materiał do zbroi sięga czasów przed obróbką metali i stoi w zgodzie z nakazem wykorzystywania zwierząt w całości.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 1
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "12",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "rare"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "damageToItem": {
+      "type": "Number",
+      "value": 0,
+      "shield": 0
+    },
+    "worn": {
+      "type": "Boolean",
+      "label": "Worn",
+      "value": false
+    },
+    "armorType": {
+      "type": "String",
+      "label": "Armour Type",
+      "value": "medium"
+    },
+    "penalty": {
+      "type": "String",
+      "label": "Penalty",
+      "value": ""
+    },
+    "qualities": {
+      "type": "String",
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "type": "String",
+      "label": "Flaws",
+      "value": [
+        {
+          "name": "shoddy",
+          "value": null
+        }
+      ]
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": "Warstwa Zewnętrzna, Zbroja kościana"
+    },
+    "AP": {
+      "head": 0,
+      "lArm": 1,
+      "rArm": 1,
+      "lLeg": 0,
+      "rLeg": 0,
+      "body": 0
+    },
+    "APdamage": {
+      "head": 0,
+      "lArm": 0,
+      "rArm": 0,
+      "lLeg": 0,
+      "rLeg": 0,
+      "body": 0
+    },
+    "maxAP": {
+      "head": 0,
+      "lArm": 2,
+      "rArm": 2,
+      "lLeg": 0,
+      "rLeg": 0,
+      "body": 0
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "effects": [],
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.3.0",
+    "coreVersion": "10.291",
+    "createdTime": 1675639492194,
+    "modifiedTime": 1675815874972,
+    "lastModifiedBy": "Czz7IJA9DEa5LD9E"
+  },
+  "_id": "c5H5vT7NTVP5Me2D",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Czz7IJA9DEa5LD9E": 3
+  },
+  "_key": "!items!c5H5vT7NTVP5Me2D"
+}

@@ -1,0 +1,132 @@
+{
+  "name": "Zmasakrowana dłoń",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/tornarm.png",
+  "effects": [
+    {
+      "_id": "lSn9Mr174doheAbo",
+      "flags": {
+        "wfrp4e": {
+          "trigger": "endRound",
+          "value": 2
+        },
+        "core": {
+          "statusId": "bleeding"
+        }
+      },
+      "changes": [],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "systems/wfrp4e/icons/conditions/bleeding.png",
+      "label": "Krwawienie",
+      "transfer": true,
+      "disabled": false,
+      "origin": null,
+      "tint": null,
+      "_key": "!items.effects!Z9M6OO087DZB3J44.lSn9Mr174doheAbo"
+    },
+    {
+      "_id": "3rDSK76g1cKpmn40",
+      "flags": {
+        "wfrp4e": {
+          "trigger": "endRound",
+          "effectTrigger": "prefillDialog",
+          "script": "args.prefillModifiers.modifier -= 10 * getProperty(this.effect, 'flags.wfrp4e.value');",
+          "value": 1
+        },
+        "core": {
+          "statusId": "stunned"
+        }
+      },
+      "changes": [],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "systems/wfrp4e/icons/conditions/stunned.png",
+      "label": "Oszołomienie",
+      "transfer": true,
+      "disabled": false,
+      "origin": null,
+      "tint": null,
+      "_key": "!items.effects!Z9M6OO087DZB3J44.3rDSK76g1cKpmn40"
+    },
+    {
+      "_id": "6KtIpUxSWrqIewki",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "actor",
+          "script": "let injury = await fromUuid(\"Compendium.wfrp4e-core.injuries.SYjWiKDzMS6CtROJ\");\nargs.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()]);\n",
+          "preventDuplicateEffects": false,
+          "hide": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/injuries/tornarm.png",
+      "label": "Zmasakrowana dłoń",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "_key": "!items.effects!Z9M6OO087DZB3J44.6KtIpUxSWrqIewki"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wfrp4e-pl.criticals.Z9M6OO087DZB3J44"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Cios przecina dłoń, a rana zaczyna się rozszerzać. Postać traci 1 palec - Amputacja (problematyczna). Ponadto otrzymuje 2 poziomy Krwawienia oraz 1 poziom Stanu @Condition[Oszołomienie]. W każdej następnej Rundzie, jeśli nie otrzyma Pomocy Medycznej, traci kolejny palec, ponieważ rana się rozszerza, a dłoń po prostu rwie się na strzępy. Jeśli skończą się palce, postać traci dłoń - Amputacja (trudna).</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "4",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Ręka",
+      "type": "String",
+      "label": "Location"
+    }
+  },
+  "_id": "Z9M6OO087DZB3J44",
+  "folder": null,
+  "sort": 0,
+  "_key": "!items!Z9M6OO087DZB3J44"
+}

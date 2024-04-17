@@ -1,0 +1,113 @@
+{
+  "_id": "l0PYm8MRdg2fceiG",
+  "name": "Głód",
+  "type": "trait",
+  "flags": {
+    "_sheetTab": "details",
+    "core": {}
+  },
+  "img": "modules/wfrp4e-core/icons/injuries/amputatedarm.png",
+  "effects": [
+    {
+      "_id": "xm5TBH4jQTLJyAXv",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "",
+          "effectApplication": "actor",
+          "script": "",
+          "preventDuplicateEffects": false,
+          "hide": false
+        }
+      },
+      "changes": [
+        {
+          "key": "system.characteristics.wp.modifier",
+          "mode": 2,
+          "value": "-10",
+          "priority": null
+        },
+        {
+          "key": "system.characteristics.fel.modifier",
+          "mode": 2,
+          "value": "-10",
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null,
+        "combat": null
+      },
+      "icon": "modules/wfrp4e-core/icons/injuries/amputatedarm.png",
+      "tint": null,
+      "transfer": true,
+      "name": "Głód",
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "_key": "!items.effects!l0PYm8MRdg2fceiG.xm5TBH4jQTLJyAXv"
+    }
+  ],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Otrzymujesz karę -10 do Twojej Ogłady i Siły Woli, ponieważ głód sprawia, że wyglądasz i zachowujesz się bardziej jak potwór.</p><p>Aby usunąć ten Stan, musisz wyleczyć, jedząc, wystarczającą liczbę Ran, aby odzyskać pełnie zdrowia, plus 1 Ranę za każdą Cechę Głód, którą aktualnie posiadasz (minimum 3). Cechy Głód są zawsze usuwane po wyleczeniu wszystkich ran (patrz @Compendium[wfrp4e-vampires.vampires-journals.FkFgBgD34AyoInr2]{Leczenie}). Nie możesz wydać Determinacji, aby usunąć Stan Głód.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "folder": "XwxUCN1xDJMXTjBk",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.311",
+    "createdTime": 1698701502446,
+    "modifiedTime": 1698787698112,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 1500000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!l0PYm8MRdg2fceiG"
+}

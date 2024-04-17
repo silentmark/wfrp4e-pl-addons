@@ -1,0 +1,84 @@
+{
+  "name": "Bewilder",
+  "permission": {
+    "default": 0,
+    "JaDY9Gr5gDw8h5kN": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You channel Ulgu into delicate strands that your target unwittingly absorbs. If the target fails a Challenging (+0) Cool Test, take the units die and refer to the table. This is the effect that the target suffers for the spell&rsquo;s Duration.</p>\n<p>&nbsp;</p>\n<table style=\"height: 102px;\" border=\"1\">\n<tbody>\n<tr style=\"height: 17px;\">\n<td style=\"width: 51px; height: 17px;\">1d10</td>\n<td style=\"width: 653px; height: 17px;\">Bewildering Effect</td>\n</tr>\n<tr style=\"height: 17px;\">\n<td style=\"width: 51px; height: 17px;\">1-2</td>\n<td style=\"width: 653px; height: 17px;\">Befuddled: Target refuses to budge, taking an Entangled Condition that is removed when the spell ends.</td>\n</tr>\n<tr style=\"height: 17px;\">\n<td style=\"width: 51px; height: 17px;\">3-4</td>\n<td style=\"width: 653px; height: 17px;\">Wander: Target wanders off in a random direction at their Walk rate. There is a 50% chance that the target loses their Action and Free Actions.</td>\n</tr>\n<tr style=\"height: 17px;\">\n<td style=\"width: 51px; height: 17px;\">5-6</td>\n<td style=\"width: 653px; height: 17px;\">Attack!: Target attacks the nearest creature, friend or foe. If no creature is within range of a possible attack, the target will put themselves in a strategic position for next Turn.</td>\n</tr>\n<tr style=\"height: 17px;\">\n<td style=\"width: 51px; height: 17px;\">7-9</td>\n<td style=\"width: 653px; height: 17px;\">Confuses: Target takes a Stunned Condition which is removed when the spell ends.</td>\n</tr>\n<tr style=\"height: 17px;\">\n<td style=\"width: 51px; height: 17px;\">10</td>\n<td style=\"width: 653px; height: 17px;\">Fetal Position: Target curls into a ball on the ground, becoming a Helpless Target while the spell lasts.</td>\n</tr>\n</tbody>\n</table>\n<p>&nbsp;</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Shadows",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower yards"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "1",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus Rounds",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 6,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "flags": {
+    "_sheetTab": "details"
+  },
+  "img": "modules/wfrp4e-content/icons/spells/shadow.png",
+  "_id": "jcel1FqtYdkLd2rS",
+  "effects": [],
+  "_key": "!items!jcel1FqtYdkLd2rS"
+}

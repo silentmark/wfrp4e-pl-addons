@@ -1,0 +1,87 @@
+{
+  "name": "Druidic Initiate",
+  "permission": {
+    "default": 0,
+    "OfKMBdcUK6oV9G48": 3
+  },
+  "type": "career",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "careergroup": {
+      "type": "String",
+      "label": "Career Group",
+      "value": "Druidic Priest"
+    },
+    "class": {
+      "type": "String",
+      "label": "Class",
+      "value": "Peasant"
+    },
+    "current": {
+      "type": "Boolean",
+      "value": false
+    },
+    "complete": {
+      "type": "Boolean",
+      "value": false
+    },
+    "level": {
+      "type": "String",
+      "label": "Career Level",
+      "value": "1"
+    },
+    "status": {
+      "tier": "b",
+      "standing": 1
+    },
+    "characteristics": [
+      "i",
+      "dex",
+      "wp"
+    ],
+    "skills": [
+      "Animal Care",
+      "Channelling",
+      "Charm Animal",
+      "Heal",
+      "Lore (The Old Faith)",
+      "Navigation",
+      "Outdoor Survival",
+      "Set Trap"
+    ],
+    "talents": [
+      "Animal Affinity",
+      "Orientation",
+      "Second Sight",
+      "Spirit Familiar"
+    ],
+    "trappings": [
+      "Boots",
+      "Dagger",
+      "Homespun Robe",
+      "Pouch containing 2 days worth of nuts and berries",
+      "Symbol of the Mother"
+    ],
+    "incomeSkill": [
+      0
+    ]
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.9suBUpLUk2wAmmem"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/career_druid.jpg",
+  "effects": [],
+  "_id": "CMtVmYHMued2u5tx",
+  "_key": "!items!CMtVmYHMued2u5tx"
+}

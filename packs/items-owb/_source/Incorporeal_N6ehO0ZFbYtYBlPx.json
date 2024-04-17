@@ -1,0 +1,66 @@
+{
+  "_id": "N6ehO0ZFbYtYBlPx",
+  "name": "Incorporeal",
+  "type": "trait",
+  "img": "modules/wfrp4e-core/icons/traits/trait.png",
+  "effects": [],
+  "folder": "DFPLv9eoZXqUC5D1",
+  "sort": 200000,
+  "flags": {
+    "wfrp4e-owb1": {
+      "initialization-folder": "The Old World Bundle",
+      "sort": 0
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Josef is unable to manifest to the degree that ghosts summoned through necromancy are. For most of the adventure he is invisible, silent, and unable to interact with the world unless noted as part of the plot. Characters with Magical Awareness may be able to see faint traces of <em>Dhar </em>and <em>Shyish </em>at Josef&rsquo;s location. If you wish, Josef may pass a Willpower Test in order to be able to strike out with his Paralysing Chill.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "Xlvhg98mSSaskNtI": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1687730662717,
+    "modifiedTime": 1693273569624,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!N6ehO0ZFbYtYBlPx"
+}

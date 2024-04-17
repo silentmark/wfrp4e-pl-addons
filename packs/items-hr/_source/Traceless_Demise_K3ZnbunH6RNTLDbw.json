@@ -1,0 +1,123 @@
+{
+  "_id": "K3ZnbunH6RNTLDbw",
+  "name": "Traceless Demise",
+  "type": "spell",
+  "img": "modules/wfrp4e-horned-rat/assets/icons/stealth.png",
+  "effects": [],
+  "folder": "Z7BCpnuCa1IbMurX",
+  "sort": -9375,
+  "flags": {
+    "wfrp4e-horned-rat": {
+      "initialization-folder": "Stealth",
+      "sort": -9375
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The body of any creature that dies while under the effects of this spell dissolves instantly into a foul-smelling black slime. The slime is briefly highly acidic, and most equipment is rendered barely recognisable as well. Eshin Sorcerers commonly cast Traceless Demise upon assassins before they embark on a mission, ensuring that no Skaven corpses are left behind.</p><p>Limbs struck from a body before death do not dissolve, even if the victim ultimately dies while under the effects of this spell. Decapitation typically destroys the body but leaves the head intact.</p><p>\n\n <b>Lore:</b> <p>The Lore of Stealth draws on the power of <em>Dhar</em>, infused with a particularly large portion of <em>Ulgu</em>, to confuse and conceal. It is unclear whether this lore remains similar to how it is practised in Cathay, or if the Sorcerers of Clan Eshin have corrupted a more noble form of stealthy magic. Regardless, spells of this lore specialise in concealing the sorcerer from prying eyes, using magic to distract or diminish signs of the Skaven&rsquo;s presence.</p><p>The Lore of Stealth wreathes the wielder in threads of magic that obfuscate their presence. Whenever you successfully cast a spell from the Lore of Stealth, you gain the @UUID[Compendium.wfrp4e-core.items.OzwDT6kzoLYeeR2d]{Stealthy} Creature Trait for [[/br 1d10]] rounds.</p><p>Ingredients: Clan Eshin Sorcerers use small scraps of paper with assorted runes inscribed on them, which are then coated in powdered Warpstone. When used as an ingredient, the Warpstone powder is consumed, but the scraps of paper remain and can be coated again and reused. The characters used are of no known form of written Queekish, and the Sorcerers of Clan Eshin are in no rush to explain either their meaning or providence.</p><p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "stealth",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower Bonus yards",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Up to Willpower Bonus targets",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus days",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 11,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "AUExJb3c35oBvDuA": 3,
+    "R44a2dfsw2hWQXbE": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1687734901065,
+    "modifiedTime": 1693273568137,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!K3ZnbunH6RNTLDbw"
+}

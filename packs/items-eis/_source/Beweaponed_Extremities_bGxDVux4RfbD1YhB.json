@@ -1,0 +1,81 @@
+{
+  "_id": "bGxDVux4RfbD1YhB",
+  "name": "Beweaponed Extremities",
+  "type": "mutation",
+  "img": "modules/wfrp4e-core/icons/mutations/mutation.png",
+  "effects": [
+    {
+      "_id": "zDNhOWBVfdHCThyL",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prepareData",
+          "effectApplication": "actor",
+          "script": "args.actor.characteristics.dex.value = 0",
+          "preventDuplicateEffects": true
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/mutations/mutation.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Beweaponed Extremities",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!bGxDVux4RfbD1YhB.zDNhOWBVfdHCThyL"
+    }
+  ],
+  "folder": "QOjm4pUE8aywpu9Z",
+  "sort": 100001,
+  "flags": {},
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Permanently reduce Dexterity to 0. You cannot be disarmed; this mutation cannot be hidden</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "mutationType": {
+      "label": "Type",
+      "type": "String",
+      "value": "physical"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Modifier"
+    },
+    "modifiesSkills": {
+      "value": false,
+      "type": "Boolean",
+      "label": "Skill Modifier?"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "sAiwDCZFd21tgaDN": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1691299878976,
+    "modifiedTime": 1693273565145,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!bGxDVux4RfbD1YhB"
+}

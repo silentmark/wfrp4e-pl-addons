@@ -1,0 +1,87 @@
+{
+  "name": "Cleansing Flurry (Air)",
+  "permission": {
+    "default": 0,
+    "49AXXoPz63AAzPKB": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You summon a strong wind which dissipates all impurities in the air and brings a feeling of spring-like freshness. For the duration, airborne poisons, gases, smoke, breath effects, and wind-based spells have no effect. Refreshed, everyone in range removes one @Condition[Fatigued] Condition.&nbsp;</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Elementalism",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower yards"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "You",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus minutes",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 6,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.57gPyoeoQjFrHBVE"
+    },
+    "dynamiceffects": {
+      "equipActive": false,
+      "alwaysActive": false,
+      "effects": []
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_cleansing_flurry.jpg",
+  "_id": "ECLuryBffozvVma6",
+  "effects": [],
+  "_key": "!items!ECLuryBffozvVma6"
+}

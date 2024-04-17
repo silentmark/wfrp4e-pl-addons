@@ -1,0 +1,95 @@
+{
+  "_id": "7UntMNNLpHTquCxi",
+  "name": "Zone of Sanctuary",
+  "type": "prayer",
+  "img": "modules/wfrp4e-core/icons/prayers/miracles.png",
+  "effects": [],
+  "folder": "JeuzIurcNjawCDum",
+  "sort": 800000,
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Other",
+      "sort": 800000
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You appeal to the righteous might of Sigmar to judge the wicked and keep them from your presence. Characters within the Miracle&rsquo;s area of effect gain a +20 bonus to resist Fear and Terror. No Undead or Daemonic creatures may enter the zone, nor may they attack those inside it. Such creatures within the Range of this Miracle when it is invoked must attempt to leave it. This miracle is centred on the Character who invoked it, who for its duration may not Move or take any Action other than to vigorously condemn the wicked in Sigmar&rsquo;s name.&nbsp;</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "type": {
+      "type": "String",
+      "label": "Type",
+      "value": "miracle"
+    },
+    "god": {
+      "type": "String",
+      "label": "God",
+      "value": "Sigmar"
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Self"
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Fellowship Bonus Rounds"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Fellowship yards",
+      "aoe": true
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": "",
+      "addSL": false
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "additional": "",
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "additional": "",
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "2TbX8z7IWr0GFssP": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "hv1aja7lAR8ZyKUO": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1681859838883,
+    "modifiedTime": 1693273562877,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!7UntMNNLpHTquCxi"
+}

@@ -1,0 +1,154 @@
+{
+  "name": "Armour of Tin",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You cause metal armour to become soft and flimsy. Metal armour worn by anyone within the AoE is reduced by 2 Armour Points on every hit location.</p><p>\n\n <b>Lore:</b> Spells inflicting Damage ignore Armor Points from metal armor, and inflict bonus Damage equal to the number of Armor Points of metal armor being worn on any Hit Location struck. So, if your spell hit an Arm location protected by 2 Armor Points of metal armor, it would cause an additional +2 Damage and ignore the Armor Points.<p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "metal",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower yards",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Willpower Bonus yards",
+      "aoe": true
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus rounds",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 4,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "type": "spell",
+  "folder": "PuRXlumJzE8wmvzt",
+  "img": "modules/wfrp4e-core/icons/spells/metal.png",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-core/icons/spells/metal.png",
+      "transfer": false,
+      "_id": "k79EEPgOtdxJYsUC",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "APCalc",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "args.AP.head.value -= tinDifference(args.AP.head.layers)\nargs.AP.body.value -= tinDifference(args.AP.body.layers)\nargs.AP.lArm.value -= tinDifference(args.AP.lArm.layers)\nargs.AP.rArm.value -= tinDifference(args.AP.rArm.layers)\nargs.AP.rLeg.value -= tinDifference(args.AP.rLeg.layers)\nargs.AP.lLeg.value -= tinDifference(args.AP.lLeg.layers)\n\nfunction tinDifference(layers)\n{ \n   let metalAP = layers.filter(i => i.metal).reduce((prev, current) => prev + current.value, 0)\n\n   let tinAP = layers.filter(i => i.metal).reduce((prev, current) => prev + Math.max(0, current.value - 2), 0)\n\n   return metalAP - tinAP;\n}"
+        }
+      },
+      "name": "Armour of Tin",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!rzAfUo3JgJQdtJtw.k79EEPgOtdxJYsUC"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Metal",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676244822738,
+    "modifiedTime": 1693273575803,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "rzAfUo3JgJQdtJtw",
+  "_key": "!items!rzAfUo3JgJQdtJtw"
+}

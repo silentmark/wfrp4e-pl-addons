@@ -1,0 +1,82 @@
+{
+  "_id": "KjJXeDfk3LLOOPRN",
+  "name": "Ghostly Flame",
+  "permission": {
+    "default": 0,
+    "LhiA8OMMa0ToAWEe": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You conjure a floating blob of glowing fire the colour of warpstone that drips viscous green fluid as it burns. The flame provides illumination equal to the Range until the spell ends or it is thrown. You may choose to hurl the fiery ball at a single target within Range with a Ranged (Throwing) Test: if it hits, the victim gains an Ablaze Condition and must Test for Corruption (Minor).&nbsp;&nbsp;</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Minor",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "AoE (Willpower Bonus yards)"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "You",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Wilpower minutes",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 0,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.anA7jkHHpCsszr6p"
+    }
+  },
+  "img": "systems/wfrp4e/icons/blank.png",
+  "effects": [],
+  "_key": "!items!KjJXeDfk3LLOOPRN"
+}

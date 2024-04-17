@@ -1,0 +1,127 @@
+{
+  "type": "trapping",
+  "name": "Hair Tonic",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><strong>Onset Time</strong>: 15 minutes</p><p><strong>Volatility</strong>: Moderate</p><p><strong>Ingredient Cost</strong> @Pay[10gc]{10 GC}</p><p><strong>Ingredient Locale</strong>: Coastal Regions</p><p><strong>Ingredient Difficulty</strong>: -10</p><p><strong>Creation Difficulty</strong>: +0 SL</p><p><strong>Creation Time</strong>: 1 week</p><p>When applied to an area, hair tonic causes hair to grow profusely. One dose is enough to cover a Human scalp. If the tonic is accidentally ingested (or slipped to an unsuspecting drinker) hair grows in the mouth, imposing a penalty of –2 SL to Fellowship-based Tests. The new hair growth lasts until it naturally falls out or is shaven off, quite a risky procedure for someone who drinks the tonic.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "None"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "img": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/vitality-draught.png",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/vitality-draught.png",
+      "transfer": true,
+      "_id": "Fj1u3aH3JiNeZFNk",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prefillDialog",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "effectData": {
+            "description": "",
+            "modifier": null,
+            "slBonus": null,
+            "successBonus": null,
+            "difficultyStep": null
+          },
+          "script": "if ((args.type == \"characteristic\" && args.item == \"fel\") || (args.type == \"skill\" && args.item.system.characteristic.value == \"fel\"))\n      args.prefillModifiers.slBonus -= 2"
+        },
+        "core": {
+          "sourceId": "Item.1Cmuim3Hi6dVk1H8.ActiveEffect.V9jqgWNbs8jllRJ8"
+        }
+      },
+      "name": "Fellowship Penalty",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!L0zm6lLWVIgqGGif.Fj1u3aH3JiNeZFNk"
+    }
+  ],
+  "folder": "PTC5Z3dO3YcFXIkR",
+  "sort": 112500,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Potions",
+      "sort": 112500
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1677616103297,
+    "modifiedTime": 1693273575719,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "L0zm6lLWVIgqGGif",
+  "_key": "!items!L0zm6lLWVIgqGGif"
+}

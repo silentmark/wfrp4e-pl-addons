@@ -1,0 +1,85 @@
+{
+  "name": "Utrata Równowagi",
+  "type": "critical",
+  "_id": "bUtlPQDqASAWPgT0",
+  "img": "icons/skills/melee/shield-damaged-broken-blue.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Postać wykonała wyjątkowo niefortynną Akcję, która wytraciła ją z równowagi, odsłoniła i zdezorientowała. Postać otrzymuje karę do wszystkich testów -20 do końca Następnej Rundy.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "0",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "",
+      "type": "String",
+      "label": "Location"
+    }
+  },
+  "effects": [
+    {
+      "icon": "icons/skills/melee/shield-damaged-broken-blue.webp",
+      "transfer": true,
+      "name": "Utrata Równowagi",
+      "_id": "IwQcLVie72Yx8US9",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": 2,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "effectTrigger": "prefillDialog",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "args.prefillModifiers.modifier = -20;"
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!bUtlPQDqASAWPgT0.IwQcLVie72Yx8US9"
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Czz7IJA9DEa5LD9E": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.305",
+    "createdTime": 1689674572769,
+    "modifiedTime": 1689795813438,
+    "lastModifiedBy": "Czz7IJA9DEa5LD9E"
+  },
+  "_key": "!items!bUtlPQDqASAWPgT0"
+}

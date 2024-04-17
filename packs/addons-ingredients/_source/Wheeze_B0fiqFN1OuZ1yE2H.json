@@ -1,0 +1,80 @@
+{
+  "name": "Wheeze",
+  "type": "trapping",
+  "img": "icons/consumables/potions/bottle-bulb-empty-glass.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><span style=\"font-family: serif\">Another difficult to detect poison, Wheeze has never been a terribly popular concoction. For six hours after consuming a dose of Wheeze, the victim becomes extremely easy to fatigue. Even minor tasks should as climbing a ladder or taking a short walk become extremely tiring for even fit individuals. Any task involving even a little physical stimulation causes the victim to gain a Fatigued Condition. Any activity which would normally inflict a Fatigued Condition inflicts two instead.</span></p><p><span style=\"font-family: serif\"> At the end of each hour, the victim may attempt a Challenging (+0) Endurance Test to shake off this effect. If they pass they no longer gain Fatigued Conditions solely due to the effects of the poison — however, any Fatigued Conditions they already had remain until they have rested.</span></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "1",
+      "ss": "10",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "rare"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.4.0",
+    "coreVersion": "10.291",
+    "createdTime": 1670890602882,
+    "modifiedTime": 1690313546946,
+    "lastModifiedBy": "kYUjI3k8J8QQt9Qw"
+  },
+  "_id": "B0fiqFN1OuZ1yE2H",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "kYUjI3k8J8QQt9Qw": 3
+  },
+  "_key": "!items!B0fiqFN1OuZ1yE2H"
+}

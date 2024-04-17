@@ -1,0 +1,82 @@
+{
+  "name": "Call Lightning",
+  "permission": {
+    "default": 0,
+    "OfKMBdcUK6oV9G48": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>When the sky is overcast, your staff generates an electrical surge in the clouds nearby. A bolt of lightning strikes your target, causing a magic missile with a Damage of +4 that ignores Armour Points. Anyone engaged with the initial target takes the same hit with a Damage of +2. Anyone engaged with a secondary target takes the same hit with a Damage of +0. For all these hits, metal armour adds Damage equal to the AP of the struck location. If the GM allows, this spell may inflict an Ablaze condition to nearby flammable objects (not creatures, however).</p>\n<p>&nbsp;</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Seasons",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower yards"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "1",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Instant",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": "4"
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 8,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": true
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.2kSGw3wO1F1C4sE5"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_lightning.jpg",
+  "effects": [],
+  "_id": "412o763CUxjPe6z3",
+  "_key": "!items!412o763CUxjPe6z3"
+}

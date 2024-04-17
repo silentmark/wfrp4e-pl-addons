@@ -1,0 +1,118 @@
+{
+  "type": "trapping",
+  "name": "Panacea Universalis",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><strong>Onset Time</strong>: [[/r 1d10]] rounds</p><p><strong>Volatility</strong>: Moderate</p><p><strong>Ingredient Cost</strong> @Pay[6gc]{6 GC}</p><p><strong>Ingredient Locale</strong>: Temperate Forest</p><p><strong>Ingredient Difficulty</strong>: -10</p><p><strong>Creation Difficulty</strong>: -2 SL</p><p><strong>Creation Time</strong>: 1 month</p><p>Panacea Universalis is a healing draught of tremendous efficacy. Once the potion takes effect, the drinker recovers three times their Toughness Bonus in Wounds immediately. They also recover from any @Condition[Bleeding] or @Condition[Fatigued] Conditions. Critical Injuries may also be healed — refer to the Panacea Universalis Critical Healing table.</p><table style=\"width: 63.9058%; height: 84px;\" border=\"1\"><tbody><tr style=\"height: 17px;\"><td style=\"height: 17px; text-align: center;\"><strong>Critical Injury</strong></td><td style=\"height: 17px; text-align: center;\"><strong>Healed on a...</strong></td></tr><tr style=\"height: 17px;\"><td style=\"height: 17px; text-align: center;\">Minor Broken Bone</td><td style=\"height: 17px; text-align: center;\"><strong>Challenging (+0) Endurance</strong> Test</td></tr><tr style=\"height: 16px;\"><td style=\"height: 16px; text-align: center;\">Major Broken Bone</td><td style=\"height: 16px; text-align: center;\"><strong>Difficult (–10) Endurance</strong> Test</td></tr><tr style=\"height: 17px;\"><td style=\"height: 17px; text-align: center;\">Minor Torn Muscle</td><td style=\"height: 17px; text-align: center;\"><strong>Easy (+40) Endurance</strong> Test</td></tr><tr style=\"height: 17px;\"><td style=\"height: 17px; text-align: center;\">Major Torn Muscle</td><td style=\"height: 17px; text-align: center;\"><strong>Average (+20) Endurance</strong> Test</td></tr></tbody></table><p>Multiple Critical Injuries may be healed this way, although Amputations are unfortunately beyond the ability of Panacea Universalis to treat.</p><p>Finally, any diseases are cured on an <strong>Average (+20) Endurance</strong> Test. Roll once per disease if the drinker has more than one.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "None"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "img": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/vitality-draught.png",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/vitality-draught.png",
+      "transfer": true,
+      "_id": "guySPiZdsMaVIwEY",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "await this.actor.modifyWounds(this.actor.system.characteristics.t.bonus * 3)\n\nthis.actor.removeCondition(\"bleeding\", 999)\nthis.actor.removeCondition(\"fatigued\", 999)\n",
+          "reduceQuantity": true
+        }
+      },
+      "name": "Panacea Universalis",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!fTsQHKPzB7SaTN3t.guySPiZdsMaVIwEY"
+    }
+  ],
+  "folder": "PTC5Z3dO3YcFXIkR",
+  "sort": 100391,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Potions",
+      "sort": 100391
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1677616103315,
+    "modifiedTime": 1693273575770,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "fTsQHKPzB7SaTN3t",
+  "_key": "!items!fTsQHKPzB7SaTN3t"
+}

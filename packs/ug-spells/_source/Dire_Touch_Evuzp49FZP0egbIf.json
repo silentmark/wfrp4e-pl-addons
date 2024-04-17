@@ -1,0 +1,82 @@
+{
+  "_id": "Evuzp49FZP0egbIf",
+  "name": "Dire Touch",
+  "permission": {
+    "default": 0,
+    "rPtCM2fgOqxK9HLk": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You jolt one living target with a harrowing energy, inflicting a magic missile with a Damage equal to twice your Dexterity Bonus. The energy carries one additional eﬀect of your choice, replacing any Lore eﬀects:&nbsp;&nbsp;</p>\n<ul>\n<li>Cold: Target gains a Stunned condition for every full 5 Wounds suﬀered (minimum 1). Compatible Lores: Death, Elementalism, Heavens, Life, Necromancy, Slaanesh.&nbsp;&nbsp;</li>\n<li>Corrosion: The touched item (armour or weapon) takes 1 Damage for every full 5 Wounds suﬀered (minimum 1). Compatible Lores: Daemonology, Metal, Necromancy, Nurgle, Warp, Witchcraft.&nbsp; Corruption: Target must pass a Combined Challenging (+0) Endurance/Cool Test or gain 1 Corruption point per failed Test. If this spell would trigger a Test for Mutation, the Test is Hard (-20). Compatible Lores: Daemonology, Necromancy, Nurgle, Slaanesh, Tzeentch, Warp.&nbsp;&nbsp;</li>\n<li>Enervated: Any Wounds caused ignore Toughness Bonus. Target suﬀers a Fatigued Condition for every full 5 Wounds suﬀered (minimum 1). Compatible Lores: Death, Necromancy, Witchcraft. Fire: Any Wounds caused ignore Armour Points. Targets gain an Ablaze condition. Compatible Lores: Elementalism, Fire, Heavens, Hedgecraft, Light, Metal.&nbsp;</li>\n<li>Electrical: Any Wounds caused ignore Armour Points. Targets suﬀer a Stunned condition. Compatible Lores: Daemonology, Elementalism, Heavens, Life, Metal, Witchcraft.&nbsp;</li>\n<li>Pestilence: Any Wounds caused ignore Armour Points. Target must pass a Challenging (+0) Endurance Test or suﬀer a Festering Wound. Compatible Lores: Beasts, Nurgle, Warp, Witchcraft.&nbsp;</li>\n<li>Poison: Any Wounds caused ignore Armour Points. Targets gain a Poisoned condition. Compatible Lores: Beasts, Death, Necromancy, Nurgle, Shadows, Warp, Witchcraft.&nbsp;</li>\n<li>Shadow: Any Wounds caused ignore Armour Points. Targets gain an Entangled condition. Compatible Lores: Daemonology, Necromancy, Shadows, Witchcraft.&nbsp;</li>\n</ul>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Touch"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Special",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Instant",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 4,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.WN9tNdkOKR7tS7BE"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_dire_touch.jpg",
+  "effects": [],
+  "_key": "!items!Evuzp49FZP0egbIf"
+}

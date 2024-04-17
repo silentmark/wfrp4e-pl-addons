@@ -1,0 +1,122 @@
+{
+  "name": "Decipher Curse",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You perform a magical investigation into whether an item is cursed. Successfully deciphering a cursed item reveals its secrets: the fact that it is cursed, the details of its boons and banes, and how the curse is triggered. Those who create curses do not like having them deciphered. If you decipher the curse, make a <strong>Challenging (+0) Intelligence</strong> Test. Failure means you suffer @Corruption[moderate]{Moderate Exposure to Corruption} due to spiteful secondary wards worked into the cursed item.</p><p><strong>Note</strong>: Whilst the curse is deciphered it is is still in effect. The @UUID[Compendium.wfrp4e-wom.items.qVc0GaUwsUvAvUgW]{Remove Curse} Ritual must be performed to remove the curse.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower yards",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Any item",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Instant",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 4,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "type": "spell",
+  "folder": "9BfmjdIlIIpVtI20",
+  "img": "systems/wfrp4e/icons/blank.png",
+  "effects": [],
+  "sort": -100000,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Arcane",
+      "sort": -100000
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676064409243,
+    "modifiedTime": 1693273575765,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "dOqRrdaJ8Nbyfiti",
+  "_key": "!items!dOqRrdaJ8Nbyfiti"
+}

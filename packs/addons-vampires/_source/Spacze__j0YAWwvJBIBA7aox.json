@@ -1,0 +1,68 @@
+{
+  "_id": "j0YAWwvJBIBA7aox",
+  "name": "Spaczeń",
+  "type": "trait",
+  "flags": {
+    "_sheetTab": "details",
+    "core": {}
+  },
+  "img": "modules/wfrp4e-core/icons/injuries/amputatedarm.png",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Twoja wampiryczna forma jest mniej stabilna niż zwykle; Spaczenie powoduje jego mutację. Musisz wykonać Wymagający (+0) Test Opanowania, aby znaleźć się na odległość mniejszą niż 6 metrów od Spaczenia. Po godzinie przebywania w jego obecności musisz przerzucić jeden Dar Krwi i jedną Słabość, które zmieniają się na stałe.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "folder": "XwxUCN1xDJMXTjBk",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.311",
+    "createdTime": 1698787686764,
+    "modifiedTime": 1698787698112,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 800000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!j0YAWwvJBIBA7aox"
+}

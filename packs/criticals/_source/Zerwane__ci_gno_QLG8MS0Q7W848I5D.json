@@ -1,0 +1,72 @@
+{
+  "name": "Zerwane ścięgno",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+  "effects": [
+    {
+      "_id": "ixCa0FfjTQFA9Th6",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "actor",
+          "script": "let injury = await fromUuid(\"Compendium.wfrp4e-core.injuries.3S4OYOZLauXctmev\");\nargs.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()]);\n\nif (this.actor.isOwner) {\n    args.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {absolute: {difficulty: \"hard\"}}).then(async test => {\n        await test.roll();\n        if (test.result.outcome == \"failure\") {\n            await args.actor.addCondition(\"unconscious\");\n        }\n     });\n}",
+          "preventDuplicateEffects": false,
+          "hide": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+      "label": "Zerwane ścięgno",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "_key": "!items.effects!QLG8MS0Q7W848I5D.ixCa0FfjTQFA9Th6"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wfrp4e-pl.criticals.QLG8MS0Q7W848I5D"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>W wyniku zerwania ścięgna w nodze postać otrzymuje Stany Powalenie i Oszołomienie. Musi także zdać Trudny (-20) Test Odporności, w przeciwnym wypadku nastąpi Utrata Przytomności. Noga jest bezwładna (patrz Amputacje), a cios skutkuje Urazem Zerwanie mięśni (poważne).</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "2",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Noga",
+      "type": "String",
+      "label": "Location"
+    }
+  },
+  "_id": "QLG8MS0Q7W848I5D",
+  "folder": null,
+  "sort": 0,
+  "_key": "!items!QLG8MS0Q7W848I5D"
+}

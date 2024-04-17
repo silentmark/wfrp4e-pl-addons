@@ -1,0 +1,188 @@
+{
+  "_id": "F6YtcZmxCw34Uuex",
+  "name": "Kostur Splatania",
+  "type": "weapon",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/quarter-staff.png",
+  "effects": [
+    {
+      "_id": "gApEq4TzThLksBSB",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/equipment/weapons/quarter-staff.png",
+      "transfer": true,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prefillDialog",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "if (args.type === \"channelling\") {\n    args.prefillModifiers.modifier += 2;\n}",
+          "areaEffect": false
+        }
+      },
+      "tint": null,
+      "origin": null,
+      "name": "Kostur Splatania",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!F6YtcZmxCw34Uuex.gApEq4TzThLksBSB"
+    }
+  ],
+  "folder": "ZP0UuGj1tO64CDBP",
+  "flags": {
+    "_sheetTab": "details",
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Magiczny kostur - przy zdanym teście na trafienie, dodaj +1 PS</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 2
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "",
+      "ss": "3",
+      "bp": ""
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "common"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": "mnA8rUXLEcbnKUBc"
+    },
+    "damageToItem": {
+      "type": "Number",
+      "value": 0,
+      "shield": 0
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": "SB+4",
+      "meleeValue": "SB+4",
+      "rangedValue": ""
+    },
+    "reach": {
+      "type": "String",
+      "label": "Reach",
+      "value": "long"
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": ""
+    },
+    "skill": {
+      "type": "String",
+      "label": "Skill Override",
+      "value": ""
+    },
+    "modeOverride": {
+      "type": "String",
+      "label": "Mode Override",
+      "value": ""
+    },
+    "twohanded": {
+      "type": "Boolean",
+      "label": "Two-Handed",
+      "value": true
+    },
+    "ammunitionGroup": {
+      "type": "String",
+      "label": "Ammunition Group",
+      "value": "none"
+    },
+    "currentAmmo": {
+      "type": "Number",
+      "value": 0
+    },
+    "consumesAmmo": {
+      "value": true
+    },
+    "weaponGroup": {
+      "type": "String",
+      "label": "Weapon Group",
+      "value": "polearm"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": [
+        {
+          "name": "defensive"
+        },
+        {
+          "name": "pummel"
+        }
+      ],
+      "type": "String"
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": [],
+      "type": "String"
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": "+1 PS przy zdanym teście."
+    },
+    "equipped": false,
+    "loaded": {
+      "value": false,
+      "repeater": false,
+      "amt": 0
+    },
+    "offhand": {
+      "value": false
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.2",
+    "coreVersion": "11.311",
+    "createdTime": 1694983625353,
+    "modifiedTime": 1696767877807,
+    "lastModifiedBy": "Czz7IJA9DEa5LD9E"
+  },
+  "sort": 150000,
+  "ownership": {
+    "default": 0,
+    "Czz7IJA9DEa5LD9E": 3
+  },
+  "_key": "!items!F6YtcZmxCw34Uuex"
+}

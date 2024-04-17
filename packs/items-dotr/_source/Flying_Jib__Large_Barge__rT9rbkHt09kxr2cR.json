@@ -1,0 +1,97 @@
+{
+  "_id": "rT9rbkHt09kxr2cR",
+  "name": "Flying Jib (Large Barge)",
+  "type": "vehicleMod",
+  "img": "modules/wfrp4e-dotr/assets/icons/upgrade.png",
+  "effects": [
+    {
+      "_id": "CrWwBezVQbKRATxa",
+      "flags": {
+        "wfrp4e": {
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false
+        }
+      },
+      "changes": [
+        {
+          "key": "system.details.length.value",
+          "value": "1.1",
+          "mode": 1,
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-dotr/assets/icons/upgrade.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Flying Jib",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!rT9rbkHt09kxr2cR.CrWwBezVQbKRATxa"
+    }
+  ],
+  "folder": "mqmgFBAdX7S24AT7",
+  "sort": 100000,
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Rigging",
+      "sort": 100000
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>A flying jib is an extra foresail and requires a bowsprit to be added to the boat; this increases length by 10%. Unfurled in a tailwind, the flying jib gives the boat an extra +5% Movement over the amount given in the @Table[wind]{wind table}. It has no effect in sidewinds, and doubles the Movement penalty for a headwind.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "80",
+      "ss": "0",
+      "bp": "0"
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 70
+    },
+    "modType": {
+      "value": "rigging"
+    },
+    "quantity": {
+      "value": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "2TbX8z7IWr0GFssP": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "hv1aja7lAR8ZyKUO": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1681859838896,
+    "modifiedTime": 1693273562905,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!rT9rbkHt09kxr2cR"
+}

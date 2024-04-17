@@ -1,0 +1,57 @@
+{
+  "_id": "RVb0E7MFSUijx61x",
+  "name": "Rigging",
+  "type": "critical",
+  "img": "systems/wfrp4e/icons/blank.png",
+  "effects": [],
+  "folder": "7kFyk5KiB6fVqbit",
+  "sort": 100001,
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Boat Critical Hits",
+      "sort": 100001
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The sail is brought down, dragging ropes and tackle with it. All personnel on deck must make an <strong>Initiative </strong>Test or suffer one hit for +5 Damage and gain one @Condition[Entangled] Condition. Until the rigging is repaired, the boat can only drift.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "0",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Vehicle",
+      "type": "String",
+      "label": "Location"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "2TbX8z7IWr0GFssP": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "hv1aja7lAR8ZyKUO": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1681859838888,
+    "modifiedTime": 1693273562889,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!RVb0E7MFSUijx61x"
+}

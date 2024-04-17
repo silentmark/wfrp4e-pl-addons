@@ -1,0 +1,58 @@
+{
+  "_id": "wMLaL1i5ddoc7M6L",
+  "name": "Przyzywanie Szkodników (TODO)",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Wywołujesz przenikliwy krzyk, który rozchodzi się daleko i szeroko, i musisz wykonać Wymagający (+0) Test Dowodzenia.</p><p>Przywołujesz rój Gigantycznych Szczurów, Gigantycznych Pająków lub Węży z najbliższej okolicy. Użyj standardowego profilu dla danego typu stworzenia z dodaną Cechą Roju. Dodaj dodatkową Żywotność w wysokości bonusu z Siły Woli do roju za każde +2 PS wyrzucone w teście.</p><p>Stwory przybędą natychmiast, czołgając się ze wszystkich stron. Działają w walce zgodnie z twoją inicjatywą i wykonują proste rozkazy, takie jak atak, śledzenie lub obrona. Rozproszą się lub odejdą po liczbie godzin równej twojemu bonusowi do Siły Woli.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "1"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "folder": "R9GP6kUptFm6hQ24",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.311",
+    "createdTime": 1707133898068,
+    "modifiedTime": 1707133898068,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!wMLaL1i5ddoc7M6L"
+}

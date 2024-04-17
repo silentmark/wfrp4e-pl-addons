@@ -1,0 +1,57 @@
+{
+  "_id": "NXtKXJV95JWy73L0",
+  "name": "Steering",
+  "type": "critical",
+  "img": "systems/wfrp4e/icons/blank.png",
+  "effects": [],
+  "folder": "7kFyk5KiB6fVqbit",
+  "sort": 300001,
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Boat Critical Hits",
+      "sort": 300001
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The rudder is splintered, and the helmsman takes one hit for +5 Damage from flying splinters. Until the rudder is repaired, all Tests to steer the boat are <strong>Very Hard (&ndash;30)</strong>.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "0",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Vehicle",
+      "type": "String",
+      "label": "Location"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "2TbX8z7IWr0GFssP": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "hv1aja7lAR8ZyKUO": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1681859838886,
+    "modifiedTime": 1693273562884,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!NXtKXJV95JWy73L0"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Reducible",
+  "permission": {
+    "default": 0,
+    "OfKMBdcUK6oV9G48": 3
+  },
+  "type": "trait",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Elementals do not have a fixed size or profile that gets damaged and then killed. Instead, each time an Elemental’s Wounds are reduced to a number equal to or less than a smaller size category, its size and all relevant statistics are reduced. For example, if an Enormous Elemental is reduced to 40 Wounds, its size would be reduced to Large.</p>\n  <p>&nbsp;</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "defaultDifficulty": "challenging"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.Li623ENffP8ecLp4"
+    }
+  },
+  "img": "systems/wfrp4e/icons/blank.png",
+  "effects": [],
+  "_id": "6tyixZSSaGwqEggF",
+  "_key": "!items!6tyixZSSaGwqEggF"
+}

@@ -1,0 +1,154 @@
+{
+  "name": "Inscription",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You inscribe a metal surface with words or images simply by passing your hand over it. Every dozen words takes a round to inscribe. If you achieve +2 SL, the inscription may be encoded as a Secret Rune. Another Gold Wizard can reveal a Secret Rune by casting this spell on the inscribed surface, otherwise it’s invisible. Gold Wizards communicate covertly by this method.</p><p>In an emergency, this spell can function as a short-ranged acid spray against enemies wearing metal armour. The spray is a <em>magic missile</em> attack with Damage +2. A successful hit also ruins 1 Armour Point on the hit location if the acid isn’t washed off before 10 rounds.</p><p><strong>Lore:</strong> Spells inflicting Damage ignore Armor Points from metal armor, and inflict bonus Damage equal to the number of Armor Points of metal armor being worn on any Hit Location struck. So, if your spell hit an Arm location protected by 2 Armor Points of metal armor, it would cause an additional +2 Damage and ignore the Armor Points.</p><p></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "metal",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "1 yard",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Special",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Special",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": "2"
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 2,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": true
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "type": "spell",
+  "folder": "PuRXlumJzE8wmvzt",
+  "img": "modules/wfrp4e-core/icons/spells/metal.png",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-core/icons/spells/metal.png",
+      "transfer": false,
+      "_id": "mbt4BI86c7U1UClt",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "applyDamage",
+          "effectApplication": "damage",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "args.extraMessages.push(\"Ruins 1 Armour Point if the acid isn't washed off before 10 rounds.\")"
+        }
+      },
+      "name": "Inscription",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!q8B4NBj8YsqdKLfu.mbt4BI86c7U1UClt"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Metal",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676244822768,
+    "modifiedTime": 1693273575795,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "q8B4NBj8YsqdKLfu",
+  "_key": "!items!q8B4NBj8YsqdKLfu"
+}

@@ -1,0 +1,157 @@
+{
+  "name": "Remove Curse",
+  "type": "spell",
+  "img": "systems/wfrp4e/icons/blank.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><strong>Ingredients</strong>: The cursed Item.</p><p><strong>Conditions</strong>: The item must be confirmed as a cursed item through a successful @UUID[Compendium.wfrp4e-wom.items.dOqRrdaJ8Nbyfiti]{Decipher Curse} spell. </p><p><strong>Sacrifices</strong>: Each Round of Channelling the spellcaster must make an <strong>Average (+20) Cool</strong> Test or suffer @Corruption[moderate]{Moderate Exposure to Corruption}. </p><p><strong>Consequences</strong>: The ritual fails.</p><p>You may opt to lift the curse, removing all boons and banes from the item. A weapon whose curse has been lifted retains its <em>Magical</em> Quality.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Any Lore",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 40,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": true,
+      "type": "",
+      "xp": 200
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "effects": [
+    {
+      "icon": "systems/wfrp4e/icons/blank.png",
+      "transfer": false,
+      "_id": "aQw6JEB1V3tYakdJ",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "rollChannellingTest",
+          "effectApplication": "item",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {absolute: {difficulty : \"average\"}}).then(test =>\n{\n     test.roll().then(test => {\n       if (test.result.outcome == \"failure\")\n         this.actor.corruptionDialog(\"moderate\")    \n     });\n\n})"
+        },
+        "core": {
+          "sourceId": "Item.8Vuv6suWsiIujIQd.ActiveEffect.OqsTZbiU0jYV1LLS"
+        }
+      },
+      "name": "Sacrifice",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!qVc0GaUwsUvAvUgW.aQw6JEB1V3tYakdJ"
+    }
+  ],
+  "folder": "KM54PsSqzM9r94kp",
+  "sort": 129688,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Rituals",
+      "sort": 129688
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676064772004,
+    "modifiedTime": 1693273575797,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "qVc0GaUwsUvAvUgW",
+  "_key": "!items!qVc0GaUwsUvAvUgW"
+}

@@ -1,0 +1,117 @@
+{
+  "_id": "e0Km0uHZL9MoShjD",
+  "name": "Obsession (Undivided)",
+  "type": "spell",
+  "img": "modules/wfrp4e-core/icons/spells/undivided.png",
+  "effects": [],
+  "folder": "SFy3nl8V2qrjRoOS",
+  "sort": 600000,
+  "flags": {},
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><span class=\"fontstyle0\">You must possess a beloved or precious object belonging to the target. You weave magic infused with the raw stuff of Chaos into the object that, in turn, affects the target. They become obsessed with something: the precise nature of the obsession depends onthe individual in question, and your Lore. For instance, when cast with the Lore of Nurgle,&nbsp;</span><em>Obsession&nbsp;</em><span class=\"fontstyle0\">may cause a recently wounded target to become obsessed with picking at their scabs. The Lore of Slaanesh may cause an epicure or gourmand to overeat.</span></p>\n<p><span class=\"fontstyle0\"><br />The target must pass an&nbsp;</span><strong>Average (+20) Endurance&nbsp;</strong><span class=\"fontstyle0\"><strong>Test</strong>&nbsp;every hour, or succumb to their obsession. On a failure, future tests become&nbsp;</span><strong>Challenging (+0)</strong><span class=\"fontstyle0\">. Subsequent failings make Tests increasingly harder, until they become&nbsp;</span><strong>Very Hard (&ndash;30)</strong><span class=\"fontstyle0\">. Should the target ever Fumble one of these Tests (fail while rolling a double), the target becomes completely obsessed. They can do nothing except indulge the obsession, no matter the costs or implications, for [[/r d10]]&ndash;Will Power Bonus hours (minimum 1 hour). At the end of the spell&rsquo;s duration, in addition to any other physical, social, or financial implications, the target must pass a&nbsp;</span><strong>Challenging (+0) Endurance&nbsp;</strong><span class=\"fontstyle0\"><strong>Test</strong>&nbsp;or gain +1 Corruption Point.<br /></span></p>\n<p><span class=\"fontstyle0\">A target may only ever be affected once by this spell once for each Lore with which it is cast. Any future attempts on the same target with this spell have no effect.</span></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Undivided",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Initiative Bonus miles",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Special",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "SL days",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 8,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "sAiwDCZFd21tgaDN": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1691299878976,
+    "modifiedTime": 1693273565147,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!e0Km0uHZL9MoShjD"
+}

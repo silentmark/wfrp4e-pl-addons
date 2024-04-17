@@ -1,0 +1,80 @@
+{
+  "name": "Longsleep",
+  "type": "trapping",
+  "img": "icons/consumables/potions/bottle-round-empty-glass.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><span style=\"font-family: serif\">The venom of a Darkwald Mancatcher is bad enough just in the creature's bite. However, when properly prepared by an expert, it becomes even more deadly. </span></p><p><span style=\"font-family: serif\">This poison is almost impossible to detect, applying a -40 penalty to any attempt to do so. If a full dose is imbibed, the victim must pass a Hard (-20) EnduranceTest. If they pass, nothing happens. However, if they fail the victim notices nothing amiss save that they become tired a little earlier than usual. At this point it is still possible to save the victim via a powerful antidote or magical means. Once they fall asleep however, it is almost impossible. </span></p><p><span style=\"font-family: serif\">At this point the victim must make a Hard (-20) Endurance Test. If they fail, they never awaken. To most mundane observations, they will appear to have suffered from some sort of heart failure. It is not known how many important nobles, generals, and other people of note have fallen victim to Longsleep over the years, but it is certain to be far more than commonly thought.</span></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "3",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "rare"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.4.0",
+    "coreVersion": "10.291",
+    "createdTime": 1670890602882,
+    "modifiedTime": 1690313546946,
+    "lastModifiedBy": "kYUjI3k8J8QQt9Qw"
+  },
+  "_id": "CKn26DbDbSkf6SHh",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "kYUjI3k8J8QQt9Qw": 3
+  },
+  "_key": "!items!CKn26DbDbSkf6SHh"
+}

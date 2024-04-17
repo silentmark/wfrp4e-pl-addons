@@ -1,0 +1,67 @@
+{
+  "_id": "CHqfy42NcbhTWM32",
+  "name": "Mark of Tzeentch",
+  "type": "trait",
+  "img": "modules/wfrp4e-core/icons/traits/trait.png",
+  "effects": [],
+  "folder": "R0nd9hzOuBxoEZwj",
+  "sort": 0,
+  "flags": {
+    "_sheetTab": "details",
+    "wfrp4e-eis": {
+      "initialization-folder": "Traits"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><span class=\"fontstyle0\">Tzeentch, the Lord of Change, has marked this creature with a physical brand, proclaiming it as an important piece in the great game. This creature gains [[/r ceil(1d10/3)]]{1d10/3} Mutations (rounding up), alternating between Mental and Physical Mutations. All Physical Mutations should be determined using the Tzeentch column. This creature gains @UUID[Compendium.wfrp4e-core.items.sYbgpSnRqSZWgwFP]{Etiquette (Followers of Tzeentch)}, and is subject to Animosity towards overt followers of Nurgle. The creature is also subject to Animosity by followers of Nurgle, so long as the Mark of Tzeentch can be seen. Additionally, this creature may purchase the following Talents as if they were Career Advances: @UUID[Compendium.wfrp4e-core.items.1IZWRr7BYOIcqPlQ]{Aethyric Attunement}, @UUID[Compendium.wfrp4e-core.items.3O9clK7LGyuLTHPW]{Arcane Magic (Any)}, @UUID[Compendium.wfrp4e-core.items.hiU7vhBOVpVI8c7C]{Chaos Magic (Tzeentch)}, @UUID[Compendium.wfrp4e-core.items.9sMAf0xmehjEmUao]{Fast Hands}, @UUID[Compendium.wfrp4e-core.items.BYChSVfMG004eflQ]{Instinctive Diction}, @UUID[Compendium.wfrp4e-core.items.6w30u0VPsAicrqb5]{Magical Sense}, @UUID[Compendium.wfrp4e-core.items.mdPGZsn2396dEpOf]{Petty Magic}, @UUID[Compendium.wfrp4e-core.items.OEjUvJKi0xmBwbS2]{Second Sight}, @UUID[Compendium.wfrp4e-core.items.F2EiuAc6IpaGd4J7]{War Wizard}, and @UUID[Compendium.wfrp4e-core.items.qdMbxW09FUoYBzmB]{Witch!} for the normal XP costs.</span></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "34JMfpmBvTmVYPh4": 3,
+    "VnnpieLwbiAu3Owf": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1693273565123,
+    "modifiedTime": 1693273565123,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!CHqfy42NcbhTWM32"
+}

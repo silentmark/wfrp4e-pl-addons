@@ -1,0 +1,80 @@
+{
+  "name": "Wyvern's Kiss",
+  "type": "trapping",
+  "img": "icons/consumables/potions/bottle-conical-corked-labeled-skull-poison-green.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><span style=\"font-family: serif\">A powerful contact poison created using venom directly taken from a Wyvern’s tail stinger sac. Victims who take a Wound from a blade, arrow or bolt coated in Wyvern’s Kiss must succeed at an Endurance Test or immediately take an additional 5 Wounds that ignore Toughness and Armour. As Wyvern’s Kiss dissipates quickly on contact with air, a treated weapon must be used within 2+1d10 Rounds or the poison will evaporate harmlessly.</span></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "12",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "exotic"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "foodAndDrink"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.4.0",
+    "coreVersion": "10.291",
+    "createdTime": 1670890602882,
+    "modifiedTime": 1690313546946,
+    "lastModifiedBy": "kYUjI3k8J8QQt9Qw"
+  },
+  "_id": "pgi2bEAIwgE22RDL",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "kYUjI3k8J8QQt9Qw": 3
+  },
+  "_key": "!items!pgi2bEAIwgE22RDL"
+}

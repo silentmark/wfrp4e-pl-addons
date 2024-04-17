@@ -1,0 +1,134 @@
+{
+  "type": "trapping",
+  "name": "Potency Draught",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><strong>Onset Time</strong>: [[/r 1d10]] rounds</p><p><strong>Volatility</strong>: Minor</p><p><strong>Ingredient Cost</strong> @Pay[7gc]{7 GC}</p><p><strong>Ingredient Locale</strong>: Temperate Forest</p><p><strong>Ingredient Difficulty</strong>: +0</p><p><strong>Creation Difficulty</strong>: -1 SL</p><p><strong>Creation Time</strong>: 1 month</p><p>The drinker is infused with strength and vigour. The drinker’s Strength and Toughness Bonuses are increased by 2 and they gain +2 SL to any Strength- or Toughness-based Test they make. The effects last for [[/r 1d10]] hours.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "None"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "img": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/vitality-draught.png",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/vitality-draught.png",
+      "transfer": true,
+      "_id": "JcNQL7l1k9CPRMx4",
+      "changes": [
+        {
+          "key": "system.characteristics.s.bonusMod",
+          "mode": 2,
+          "value": "2",
+          "priority": null
+        },
+        {
+          "key": "system.characteristics.t.bonusMod",
+          "mode": 2,
+          "value": "2",
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prefillDialog",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "if ((args.type == \"characteristic\" && [\"s\", \"t\"].includes(args.item)) || (args.type == \"skill\" && [\"s\", \"t\"].includes(args.item.system.characteristic.value)))\n      args.prefillModifiers.slBonus += 2",
+          "reduceQuantity": true
+        },
+        "core": {
+          "sourceId": "Item.mH1C02hTjYFXhHtg.ActiveEffect.JVpqcPGHmpE4Br4w"
+        }
+      },
+      "name": "Potency Draught",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!WIwLCdEDkyPlswuC.JcNQL7l1k9CPRMx4"
+    }
+  ],
+  "folder": "PTC5Z3dO3YcFXIkR",
+  "sort": 100196,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Potions",
+      "sort": 100196
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1677616103318,
+    "modifiedTime": 1693273575745,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "WIwLCdEDkyPlswuC",
+  "_key": "!items!WIwLCdEDkyPlswuC"
+}

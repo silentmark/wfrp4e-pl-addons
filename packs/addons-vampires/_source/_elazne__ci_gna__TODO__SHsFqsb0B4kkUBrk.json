@@ -1,0 +1,119 @@
+{
+  "_id": "SHsFqsb0B4kkUBrk",
+  "name": "Żelazne Ścięgna (TODO)",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [
+    {
+      "_id": "ZZ5mD6Z6pLPCnWcP",
+      "flags": {
+        "wfrp4e": {
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "testIndependent": false,
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Żelazne ścięgna",
+              "trigger": "opposedAttacker",
+              "script": "console.log(` --- PRE --- `)\nconsole.log(args)\n\nlet attackerTestType = args.opposeResult.attackerTestResult.characteristic;\nlet defenderTestType = args.opposeResult.defenderTestResult.characteristic; \n\nlet attackerTestCorrectType = attackerTestType === \"s\" || attackerTestType === \"ws\";\nlet defenderTestCorrectType = defenderTestType === \"s\" || defenderTestType === \"ws\";\n\n// Some information for a chat message\nlet attackerName = args.attackerTest.actor.name;\nlet defenderName = args.defenderTest.actor.name;\nlet messageContent = `<b>${attackerName}'s</b> Żelazne Ścięgna zmniejszyły PS <b>${defenderName}</b> o <b>2</b>!`;\n\nif (attackerTestCorrectType && defenderTestCorrectType) {\n  args.opposeResult.defenderTestResult.SL -= 2;\n  args.opposeResult.differenceSL = args.opposeResult.attackerTestResult.SL - args.opposeResult.defenderTestResult.SL\n  ChatMessage.create({ content : messageContent })\n}",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "actor",
+            "effectTrigger": "opposedAttacker",
+            "preventDuplicateEffects": false,
+            "script": "console.log(` --- PRE --- `)\nconsole.log(args)\n\nlet attackerTestType = args.opposeResult.attackerTestResult.characteristic;\nlet defenderTestType = args.opposeResult.defenderTestResult.characteristic; \n\nlet attackerTestCorrectType = attackerTestType === \"s\" || attackerTestType === \"ws\";\nlet defenderTestCorrectType = defenderTestType === \"s\" || defenderTestType === \"ws\";\n\n// Some information for a chat message\nlet attackerName = args.attackerTest.actor.name;\nlet defenderName = args.defenderTest.actor.name;\nlet messageContent = `<b>${attackerName}'s</b> Iron Sinews has reduced <b>${defenderName}'s</b> SL by <b>2</b>!`;\n\nif (attackerTestCorrectType && defenderTestCorrectType) {\n  args.opposeResult.defenderTestResult.SL -= 2;\n  args.opposeResult.differenceSL = args.opposeResult.attackerTestResult.SL - args.opposeResult.defenderTestResult.SL\n  ChatMessage.create({ content : messageContent })\n}"
+          }
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null,
+        "combat": null
+      },
+      "icon": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+      "tint": null,
+      "transfer": true,
+      "name": "Żelazne ścięgna",
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "_key": "!items.effects!SHsFqsb0B4kkUBrk.ZZ5mD6Z6pLPCnWcP"
+    }
+  ],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Stałeś się niesamowicie silny. W każdym przeciwstawnym teście walki wręcz lub siły, twój przeciwnik otrzymuje karę -2 PS.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "1"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "folder": "R9GP6kUptFm6hQ24",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.311",
+    "createdTime": 1707000171351,
+    "modifiedTime": 1707133266017,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 1300000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!SHsFqsb0B4kkUBrk"
+}

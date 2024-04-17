@@ -1,0 +1,196 @@
+{
+  "name": "Trująca Strzałka",
+  "type": "weapon",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/dart.png",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-core/icons/equipment/weapons/dart.png",
+      "transfer": true,
+      "name": "Trująca Strzałka",
+      "_id": "5k6pqaNoRHB5cnQ4",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "effectTrigger": "applyDamage",
+          "effectApplication": "actor",
+          "areaEffect": false,
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "if (args.opposedTest?.attackerTest?.item?.id == this.item.id) {\n    args.actor.addCondition(\"poisoned\", 2);\n}"
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!PwDJ2WToA8nx6oqa.5k6pqaNoRHB5cnQ4"
+    }
+  ],
+  "flags": {
+    "_sheetTab": "details",
+    "wfrp4e": {
+      "optimalRange": "normal"
+    },
+    "core": {},
+    "babele": {
+      "translated": true,
+      "hasTranslation": true,
+      "originalName": "Dart"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 12
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "",
+      "ss": "2",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "scarce"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "damageToItem": {
+      "type": "Number",
+      "value": 0,
+      "shield": 0
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": "+SB+1",
+      "meleeValue": "",
+      "rangedValue": "+SB+1"
+    },
+    "reach": {
+      "type": "String",
+      "label": "Reach",
+      "value": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "SBx2"
+    },
+    "skill": {
+      "type": "String",
+      "label": "Skill Override",
+      "value": ""
+    },
+    "modeOverride": {
+      "type": "String",
+      "label": "Mode Override",
+      "value": ""
+    },
+    "twohanded": {
+      "type": "Boolean",
+      "label": "Two-Handed",
+      "value": false
+    },
+    "ammunitionGroup": {
+      "type": "String",
+      "label": "Ammunition Group",
+      "value": "none"
+    },
+    "currentAmmo": {
+      "type": "Number",
+      "value": 0
+    },
+    "consumesAmmo": {
+      "value": true
+    },
+    "weaponGroup": {
+      "type": "String",
+      "label": "Weapon Group",
+      "value": "throwing"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": [
+        {
+          "name": "impale"
+        }
+      ],
+      "type": "String"
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": [],
+      "type": "String"
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    },
+    "equipped": true,
+    "loaded": {
+      "value": false,
+      "repeater": false,
+      "amt": 0
+    },
+    "offhand": {
+      "value": false
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.2",
+    "coreVersion": "11.311",
+    "createdTime": 1663627495292,
+    "modifiedTime": 1696797299712,
+    "lastModifiedBy": "Czz7IJA9DEa5LD9E"
+  },
+  "_id": "PwDJ2WToA8nx6oqa",
+  "folder": null,
+  "sort": 700000,
+  "ownership": {
+    "default": 0,
+    "Czz7IJA9DEa5LD9E": 3
+  },
+  "_key": "!items!PwDJ2WToA8nx6oqa"
+}

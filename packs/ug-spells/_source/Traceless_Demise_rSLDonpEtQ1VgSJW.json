@@ -1,0 +1,82 @@
+{
+  "_id": "rSLDonpEtQ1VgSJW",
+  "name": "Traceless Demise",
+  "permission": {
+    "default": 0,
+    "LhiA8OMMa0ToAWEe": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>When you cast this spell, you must meditate for an hour with everyone you wish to target, slowly merging the energies required to enact its eﬀects. If interrupted during that time, the spell fails. If killed while the spell remains active, anyone who was targeted in the spell&rsquo;s AoE during the ritual will melt away into a foul-smelling black slime. The spell is commonly cast upon the assassins of Clan Eshin before they embark on a hunt, ensuring that no Skaven corpses are left behind.&nbsp;</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "You"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Willpower Bonus yards",
+      "aoe": true
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus hours",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 8,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.cfRGfKJUV99YagjH"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_traceless%20demise.jpg",
+  "effects": [],
+  "_key": "!items!rSLDonpEtQ1VgSJW"
+}

@@ -1,0 +1,80 @@
+{
+  "name": "Foolmaker",
+  "type": "trapping",
+  "img": "icons/consumables/potions/bottle-conical-fumes-green.webp",
+  "effects": [],
+  "flags": {},
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>A rare substance made by combining various chemical extracts, scorpion venom, and hallucinogenic mushroom spores. Anyone that takes damage from a bolt treated with Foolmaker must make a Hard (&ndash;20) Endurance Test or immediately roll on the Stinking Drunk chart (WFRP, page 121) and apply the resulting effect. Additionally, any time they are asked a question, they must make a Difficult (&ndash;10) Willpower Test or uncontrollably blurt out an honest answer. Both effects last a number of rounds equal to 10 &ndash; Toughness Bonus. Further doses force them to roll again on the chart and extend the duration.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "rare"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.4.0",
+    "coreVersion": "10.291",
+    "createdTime": 1690313546945,
+    "modifiedTime": 1690313546945,
+    "lastModifiedBy": "kYUjI3k8J8QQt9Qw"
+  },
+  "_id": "p1oial1oHmopp6SO",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "kYUjI3k8J8QQt9Qw": 3
+  },
+  "_key": "!items!p1oial1oHmopp6SO"
+}

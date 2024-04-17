@@ -1,0 +1,82 @@
+{
+  "_id": "Ae4484yv49twcFLn",
+  "name": "Nikkit! Nikkit!",
+  "permission": {
+    "default": 0,
+    "LhiA8OMMa0ToAWEe": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You conjure a pair of large green hands that appear above your target: one grabs the target while the other rifles through their trappings in search of anything shiny enough to steal. The target suﬀers a <em>magic missile</em> with a Damage of +1d10 (ignoring Armour Points) and gains an <em>Entangled</em> Condition. You have entered a Grappling contest with your target. Your enemy can only attempt to break free of the Grapple; they cannot cause damage or entangle the hand. On your subsequent Turns, you may forgo all Free Actions and command the Grappling hand by performing an Opposed Channelling/Strength Test. If you win, you choose one of the Grappling eﬀects (<strong>WFRP4</strong> p163). While the Grapple lasts, the thieving hand operates independently of your will and tries to steal one high-value or flashy item, such as money or a magical artefact, at the end of each Round. The target is allowed a <strong>Challenging (+0) Strength</strong> or Dodge Test to resist each theft attempt. Once the target breaks free or the spell ends, the hands give you their stolen bounty and the target gains the <em>Prone</em> Condition.&nbsp;&nbsp;</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Da Lit'lest Waaagh!",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower yards"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Special",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus rounds",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 8,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.Na739NLIhpDnSN4R"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_nikkit!-nikkit!.jpg",
+  "effects": [],
+  "_key": "!items!Ae4484yv49twcFLn"
+}

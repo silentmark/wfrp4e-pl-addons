@@ -1,0 +1,118 @@
+{
+  "_id": "DhpMRsuTBgD69JW1",
+  "name": "The Purple Hand",
+  "type": "spell",
+  "img": "modules/wfrp4e-core/icons/spells/tzeentch.png",
+  "effects": [],
+  "folder": "QHpKurNbTIwSSfhX",
+  "sort": 150000,
+  "flags": {},
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>This spell is a petty curse used by Purple Hand sorcerers&nbsp; to intimidate and cajole truculent co-conspirators. Of all the non-verbal codes used by the Purple Hand the meaning of this curse is clear: mend your ways immediately or face punishment.</p>\n<p>In order to cast the spell the sorcerer must first acquire a small amount of matter from their target: a loose hair or toenail clipping will serve. Should this item be acquired and the spell successfully cast, the palms of the target&rsquo;s hands turn a deep purple. The spell&rsquo;s effects last for one hour for every level of success scored by the caster while casting the spell.</p><p>\n\n <b>Lore:</b> Targets of Spells from the Lore of Tzeentch are riven by the transformative magic of Chaos. Targets affected by a Spell from the Lore of Tzeentch must pass a Challenging (+0) Endurance Test, or gain +1 Corruption Point. Should they pass their Test, they instead gain +1 Fortune Point, which can be used as normal. Such are the whims of Tzeentch.<p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "tzeentch",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Intelligence yards",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "1",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Varies",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 3,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "34JMfpmBvTmVYPh4": 3,
+    "sAiwDCZFd21tgaDN": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1691299878976,
+    "modifiedTime": 1693273565124,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!DhpMRsuTBgD69JW1"
+}

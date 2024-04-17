@@ -1,0 +1,106 @@
+{
+  "name": "Astromancer",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>@UUID[Compendium.wfrp4e-wom.journals.j72t0e5BVIgeOMB4.JournalEntryPage.EpHoISPX7OlMGttN]{Astromancer}</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "careergroup": {
+      "type": "String",
+      "label": "Career Group",
+      "value": "Astromancer"
+    },
+    "class": {
+      "type": "String",
+      "label": "Class",
+      "value": "Academics"
+    },
+    "current": {
+      "type": "Boolean",
+      "value": false
+    },
+    "complete": {
+      "type": "Boolean",
+      "value": false
+    },
+    "level": {
+      "type": "String",
+      "label": "Career Level",
+      "value": "2"
+    },
+    "status": {
+      "tier": "s",
+      "standing": 4
+    },
+    "characteristics": [
+      "ws",
+      "int",
+      "wp",
+      "ag"
+    ],
+    "skills": [
+      "Augury",
+      "Channelling (Azyr)",
+      "Dodge",
+      "Entertain (Fortune Telling)",
+      "Intuition",
+      "Language (Magick)",
+      "Lore (Magic)",
+      "Melee (Basic)",
+      "Melee (Polearm)",
+      "Perception",
+      "Cool",
+      "Gossip",
+      "Intimidate",
+      "Language (Battle)",
+      "Lore (Astronomy)",
+      "Research"
+    ],
+    "talents": [
+      "Arcane Magic (Heavens)",
+      "Detect Artefact",
+      "Orientation",
+      "Sixth Sense"
+    ],
+    "trappings": [
+      "Ceremonial Telescope",
+      "Magical Licence",
+      "Practical Robes",
+      "Sextant"
+    ],
+    "incomeSkill": [
+      5
+    ]
+  },
+  "type": "career",
+  "folder": "EGdnaG0JFAHnazff",
+  "img": "modules/wfrp4e-wom/assets/icons/careers/astromancer-02.png",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Astromancer",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676323350509,
+    "modifiedTime": 1693273575669,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "1QuE5fMFyyAFvZIv",
+  "_key": "!items!1QuE5fMFyyAFvZIv"
+}

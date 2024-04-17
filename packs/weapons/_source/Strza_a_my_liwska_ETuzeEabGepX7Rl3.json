@@ -1,0 +1,96 @@
+{
+  "name": "Strzała myśliwska",
+  "type": "ammunition",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Specjalnie zaprojektowana strzała wykorzystywana do polowania na dziką zwierzyną. Posiada bardzo szeroki i ciężki grot, który wcina się głęboko w ciało zwierzyty i powoduje rozległe obrażenia kosztem zasięgu.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 12
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "3",
+      "bp": "0",
+      "value": ""
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "common"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "ammunitionType": {
+      "type": "String",
+      "label": "Ammunition Type",
+      "value": "bow"
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Quarter weapon"
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": "+2"
+    },
+    "qualities": {
+      "type": "String",
+      "label": "Qualities",
+      "value": [
+        {
+          "name": "impale"
+        },
+        {
+          "name": "sturdy"
+        }
+      ]
+    },
+    "flaws": {
+      "type": "String",
+      "label": "Flaws",
+      "value": [
+        {
+          "name": "unreliable"
+        }
+      ]
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "flags": {
+    "_sheetTab": "details"
+  },
+  "img": "modules/wfrp4e-core/icons/equipment/ammunition/arrow.png",
+  "_id": "ETuzeEabGepX7Rl3",
+  "effects": [],
+  "_key": "!items!ETuzeEabGepX7Rl3"
+}

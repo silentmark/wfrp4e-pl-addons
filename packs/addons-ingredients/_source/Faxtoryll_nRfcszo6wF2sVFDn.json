@@ -1,0 +1,120 @@
+{
+  "name": "Faxtoryll",
+  "type": "trapping",
+  "img": "icons/commodities/materials/slime-white.webp",
+  "effects": [
+    {
+      "_id": "rzyXt1SCCnDq5tnt",
+      "flags": {
+        "wfrp4e": {
+          "effectApplication": "actor",
+          "preventDuplicateEffects": false,
+          "effectTrigger": "invoke",
+          "script": "let bleeding = this.actor.hasCondition(\"bleeding\")\nif (bleeding)\n{\n   ui.notifications.notify(`Cleared ${bleeding.flags.wfrp4e.value} Bleeding Conditions`)\n   this.actor.removeCondition(\"bleeding\", bleeding.flags.wfrp4e.value)\n}",
+          "reduceQuantity": true,
+          "hide": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/faxtoryll.png",
+      "label": "Faxtoryll",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "_key": "!items.effects!nRfcszo6wF2sVFDn.rzyXt1SCCnDq5tnt"
+    }
+  ],
+  "flags": {
+    "_sheetTab": "description",
+    "core": {
+      "sourceId": "Compendium.wfrp4e-core.trappings.nRfcszo6wF2sVFDn"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>When smeared on a wound, poultices made from this herbal coagulant remove all Bleeding Conditions without a Heal Test. <strong>Dose</strong>: 1 per Critical Wound.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "15",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "exotic"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.4.0",
+    "coreVersion": "10.291",
+    "createdTime": 1663627495387,
+    "modifiedTime": 1690313539015,
+    "lastModifiedBy": "kYUjI3k8J8QQt9Qw"
+  },
+  "_id": "nRfcszo6wF2sVFDn",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "kYUjI3k8J8QQt9Qw": 3
+  },
+  "_key": "!items!nRfcszo6wF2sVFDn"
+}

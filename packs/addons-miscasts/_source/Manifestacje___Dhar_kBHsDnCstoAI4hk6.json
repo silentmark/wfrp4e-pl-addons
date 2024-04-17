@@ -1,0 +1,1632 @@
+{
+  "name": "Manifestacje - Dhar",
+  "formula": "1d100",
+  "results": [
+    {
+      "text": "<b>Włosy stają dęba</b>: Twoje włosy stają na sztorc na [[/r 1d10]] rund",
+      "range": [
+        1,
+        2
+      ],
+      "_id": "qqDDQR5fbJsnUsio",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.qqDDQR5fbJsnUsio"
+    },
+    {
+      "text": "<b>Wiedźmi znak</b>: Pierwsza istota, która urodzi się w promieniu dwóch kilometrów, będzie zmutowana.",
+      "range": [
+        3,
+        6
+      ],
+      "_id": "pOOkhqrh3lmSbIEh",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.pOOkhqrh3lmSbIEh"
+    },
+    {
+      "text": "<b>Skwaśniałe mleko</b>: Wszelkie mleko w promieniu 50 metrów natychmiast kwaśnieje, wino i żywność psuje się",
+      "range": [
+        7,
+        9
+      ],
+      "_id": "YrvPZajGMppXwWGu",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.YrvPZajGMppXwWGu"
+    },
+    {
+      "text": "<b>Zimne Poty</b>: Wszyscy w promieniu 30 metrów zaczynają pocić się niesamowicie. Stan utrzymuje się przez [[/r 1d10]] rund.",
+      "range": [
+        10,
+        12
+      ],
+      "_id": "VmoqEDFB69PYBBMM",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.VmoqEDFB69PYBBMM"
+    },
+    {
+      "text": "<b>Wiatry Dhar</b>: Losowe przedmioty trzymane przez postacie w zasięgu 20 metrów od czarodzieja, zostają wyrwany za pomocą Wiatrów Magii i upadają [[/r 1d10]] metrów od właściciela",
+      "range": [
+        13,
+        18
+      ],
+      "_id": "mLsOEsF49r0O5GQx",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.mLsOEsF49r0O5GQx"
+    },
+    {
+      "text": "<b>Wiedźmi Wzrok</b>: Przez krótką chwilę, wszyscy w promieniu SW od czarodzieja zaczynąją widzieć wiatry magii. Muszą wykonać Przeciętny (+20) test opanowania, lub otrzymają stan @Condition[Panika]",
+      "range": [
+        19,
+        22
+      ],
+      "_id": "SVpbJ5isqFTa2hoJ",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.SVpbJ5isqFTa2hoJ"
+    },
+    {
+      "text": "<b>Krwawienie</b>: Twój nos zaczyna krwawić, otrzymujesz 1 Stan @Condition[Krwawienie]. Uleczenie tego stanu wymaga bardzo prostego (+30) testu Leczenia lub Zręczności.",
+      "range": [
+        23,
+        23
+      ],
+      "_id": "K3gEkewAU1xwoiGw",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.K3gEkewAU1xwoiGw"
+    },
+    {
+      "text": "<b>Gnijące Paznokcie</b>: Paznokcie u twojej dłoni (losowej) gniją i odpadają. Za jakiś czas odrosną",
+      "range": [
+        24,
+        25
+      ],
+      "_id": "MByKGkd9NB7EZYwX",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.MByKGkd9NB7EZYwX"
+    },
+    {
+      "text": "<b>Woskowina</b>: Uszy czarodzieja natychmiast zatykają się przez nadmiar gęstej woskowiny. Postać otrzymuje 1 poziom Stanu @Condition[Ogłuszenie], który nie może zostać usunięty, dopóki ktoś nie wyczyści uszu postaci (udany Test Leczenia).",
+      "range": [
+        26,
+        29
+      ],
+      "_id": "H1saNaWVav3fwvMJ",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.H1saNaWVav3fwvMJ"
+    },
+    {
+      "text": "<b>Wiedźmi blask</b>: Na [[/r 1d10]] Rund postać żarzy się dziwnym blaskiem, który emituje tyle światła, co ognisko. Kolor zależny jest od Tradycji zaklęcia",
+      "range": [
+        30,
+        32
+      ],
+      "_id": "nkqOMCWbIk2g2P9U",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.nkqOMCWbIk2g2P9U"
+    },
+    {
+      "text": "<b>Straszliwe szepty</b>: Wykonaj <b>Przeciętny (+20) Test Siły Woli</b>. Jeśli się on nie powiedzie, postać otrzymuje 1 Punkt Zepsucia.",
+      "range": [
+        33,
+        34
+      ],
+      "_id": "lpkPP5opUKSAzvrr",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.lpkPP5opUKSAzvrr"
+    },
+    {
+      "text": "<b>Nerwowe drgawki</b>: Wszystkie mięśnie twojego ciała zaczynają drgać, Otrzymujesz karę -5 do wszystkich testów do końca następnej rundy.",
+      "range": [
+        35,
+        39
+      ],
+      "_id": "iDxnvGR8fIjorqcm",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.iDxnvGR8fIjorqcm"
+    },
+    {
+      "text": "<b>Nienaturalna Aura</b>: Wszystkie zwierzęta w promieniu 10 metrów, wobec których nie zostanie wykonany test Opieka nad Zwierzętami lub Tresura, uciekają skomląc.",
+      "range": [
+        40,
+        43
+      ],
+      "_id": "eEhPN23wGlA73I2n",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.eEhPN23wGlA73I2n"
+    },
+    {
+      "text": "<b>Trzęsienie duszy</b>: Cele zaklęcia otrzymują Stan @Condition[Powalenie].",
+      "range": [
+        44,
+        44
+      ],
+      "_id": "an7fFd5ubNVEdR24",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.an7fFd5ubNVEdR24"
+    },
+    {
+      "text": "<b>Mleczne Oczy</b>: Oczy celów zaklęcia zachodzą mleczną mgłą na [[/r 1d10]] godzin. Otrzymują 1 Stan @Condition[Oślepienie].",
+      "range": [
+        45,
+        46
+      ],
+      "_id": "NZ3SItDH31vRlYPN",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.NZ3SItDH31vRlYPN"
+    },
+    {
+      "text": "<b>Krnąbrne odzienie</b>: Ubrania postaci zaczynają się skręcać, jakby nagle otrzymały wolną wolę. Postać otrzymuje 1 poziom Stanu @Condition[Pochwycenie], którego Siła równa jest [[/r 5d10]].",
+      "range": [
+        47,
+        50
+      ],
+      "_id": "GwOWZbT3wcT1d5v7",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.GwOWZbT3wcT1d5v7"
+    },
+    {
+      "text": "<b>Zagłada Roślinności</b>: Wszystkie rośliny w promieniu 50 metrów usychają.",
+      "range": [
+        51,
+        54
+      ],
+      "_id": "vosTPy3wM8nqi9Ac",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.vosTPy3wM8nqi9Ac"
+    },
+    {
+      "text": "<b>Paraliż Rąk</b>: Chaotyczna energia unieruchamia palce wszystkich celów zaklęcia w ostatniej pozycji w jakiej się znajdowały. Chociaż nie jest to bolesne, nie mogą poruszać swoimi dłońmi przez [[/r 1d10]] minut.",
+      "range": [
+        55,
+        60
+      ],
+      "_id": "6Cp2UxoWYXMifypD",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.6Cp2UxoWYXMifypD"
+    },
+    {
+      "text": "<b>Eteryczny Szok</b>: Energia magiczna przenika przez twoje ciało powodując 1 Ranę z pominięciem Wytrzymałości i Pancerza",
+      "range": [
+        61,
+        64
+      ],
+      "_id": "gZG2T8aShAXSIIbt",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.gZG2T8aShAXSIIbt"
+    },
+    {
+      "text": "<b>Eteryczny Wstrząs</b>: Energia magiczna przenika przez ciała wszystkich celów zaklęcia powodując 1 Ranę z pominięciem Wytrzymałości i Pancerza",
+      "range": [
+        65,
+        68
+      ],
+      "_id": "85GbKdW9p6fK5WfR",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.85GbKdW9p6fK5WfR"
+    },
+    {
+      "text": "<b>Wyssanie duszy</b>: Postać otrzymuje 1 poziom Stanu @Condition[Zmęczenie], który utrzymuje się przez [[/r 1d10]] godzin.",
+      "range": [
+        69,
+        70
+      ],
+      "_id": "S8uvITM7ouwpNaKN",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.S8uvITM7ouwpNaKN"
+    },
+    {
+      "text": "<b>Robactwo</b>: Ze wszystkich dziur i szczelin w promieniu 50 metrów wypełzają różnej maści robaki i insekty. Nie powodują żadnej szkody poza wywoływaniem obrzydzenia/strachu/zanieczyszczenia.",
+      "range": [
+        71,
+        76
+      ],
+      "_id": "EeH47tJ85wTsBVWs",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.EeH47tJ85wTsBVWs"
+    },
+    {
+      "text": "<b>Wypalenie Splatania</b>: Ścieżki którymi płynęła do ciebie energia magiczna zanika. Otrzymujesz karę -20 do wszystkich testów Splatania na [[/r 1d10]] minut.",
+      "range": [
+        77,
+        80
+      ],
+      "_id": "t09gx9z0JfRpWfAT",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.t09gx9z0JfRpWfAT"
+    },
+    {
+      "text": "<b>Rozproszenie uwagi</b>: Jeśli postać zaangażowana jest w walkę, otrzymuje Stan @Condition[Zaskoczenie]. Jeśli nie jest to scena walki, postać ogarnia strach, serce wali jej jak młotem, nie jest w stanie skupić się na niczym przez kilka chwil.",
+      "range": [
+        81,
+        86
+      ],
+      "_id": "x0WeE5kW2YzTEsqb",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.x0WeE5kW2YzTEsqb"
+    },
+    {
+      "text": "<b>Bezbożne wizje</b>: Przez krótką chwilę postać nawiedzają bluźniercze i bezbożne wizje. Postać otrzymuje 1 poziom Stanu @Condition[Oślepienie] i musi zdać <b>Wymagający (+0) Test Opanowania</b> albo otrzymuje jeden punkt zepsucia.",
+      "range": [
+        87,
+        90
+      ],
+      "_id": "hwBtMHBGQxfCDxyJ",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.hwBtMHBGQxfCDxyJ"
+    },
+    {
+      "text": "<b>Chaotyczna dar</b>: Otrzymujesz premiowy Punkt Szczęścia (które mogą przekroczyć normalny limit). Za każdym razem, gdy postać korzysta z tych punktów, otrzymuje 1 Punkt Zepsucia. Wszelkie pozostałe Punkty Szczęścia zdobyte w ten sposób przepadają po zakończeniu sesji gry.",
+      "range": [
+        91,
+        93
+      ],
+      "_id": "0hY0JREgmHRCptG3",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.0hY0JREgmHRCptG3"
+    },
+    {
+      "text": "<b>Transmutacja Płynów</b>: Wszystkie płyny w promieniu 50 metrów zmieniają się w mocz.",
+      "range": [
+        94,
+        99
+      ],
+      "_id": "NkUyq8zeUm2GQjha",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.NkUyq8zeUm2GQjha"
+    },
+    {
+      "text": "<b>Języki w supeł</b>: Umysły wszystkich w promieniu 50 metrów od czarujacego otwierają się na zakazaną wiedzę. Wszystkie Testy językowe postaci w zasięgu (w tym Testy Rzucenia Zaklęć) otrzymują karę -10 na [[/r 1d10]] Rund.",
+      "range": [
+        100,
+        105
+      ],
+      "_id": "tLgbku1m8dGbv8DN",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.tLgbku1m8dGbv8DN"
+    },
+    {
+      "text": "<b>Zgroza!</b>: Wiatry magii rozdzierają na krótką chwilę rzeczywistość. Wszystkie postacie, które widzą czarodzieja muszą zdać <b>Trudny (-20) Test Opanowania</b> albo otrzymuje 1 poziom Stanu @Condition[Panika]",
+      "range": [
+        106,
+        106
+      ],
+      "_id": "bVR38LJzp4TV6jyt",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.bVR38LJzp4TV6jyt"
+    },
+    {
+      "text": "<b>Klątwa zepsucia</b>: Postać otrzymuje 1 Punkt Zepsucia.",
+      "range": [
+        107,
+        108
+      ],
+      "_id": "wa8eXbHlBxOIVXjY",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.wa8eXbHlBxOIVXjY"
+    },
+    {
+      "text": "<b>Przesunięcie</b>: Efekt rzuconego zaklęcia pojawia się [[/r 2d10]] kilometrów od rzucającego. W zależności od MG, jeśli to możliwe, taka sytuacja powinna mieć odpowiednie konsekwencje.",
+      "range": [
+        109,
+        114
+      ],
+      "_id": "xEeRc5q737tcZseY",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.xEeRc5q737tcZseY"
+    },
+    {
+      "text": "<b>Upiorne głosy</b>: Każdy w promieniu 50 metrów od maga, słyszy mroczne, nęcące szepty, które są emanacją Dziedziny Chaosu. Wszystkie myślące stworzenia muszą zdać <b>Przeciętny (+20) Test Opanowania</b> albo otrzymują 1 Punkt Zepsucia",
+      "range": [
+        115,
+        116
+      ],
+      "_id": "tGFEPssItEREr0g9",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.tGFEPssItEREr0g9"
+    },
+    {
+      "text": "<b>Przeklęty wzrok</b>: Oczy postaci nabierają nienaturalnego koloru, odpowiedniego dla Dhar, na [[/r 1d10]] godzin. W tym czasie postać cierpi z powodu 1 poziomu Stanu @Condition[Oślepienie], co nie może zostać wyleczone ani rozproszone żadnym sposobem",
+      "range": [
+        117,
+        122
+      ],
+      "_id": "AzoHYhmADuA60Omk",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.AzoHYhmADuA60Omk"
+    },
+    {
+      "text": "<b>Magiczny Szok</b>: Postać otrzymuje [[/r 1d10]] Obrażeń, które ignorują Bonus z Wytrzymałości oraz Punkty Pancerza. Musi także zdać <b>Przeciętny (+20) Test Odporności</b>, w przeciwnym wypadku otrzyma również 1 poziom Stanu @Condition[Oszołomienie].",
+      "range": [
+        123,
+        128
+      ],
+      "_id": "mWGPeu1viL4KJZ9M",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.mWGPeu1viL4KJZ9M"
+    },
+    {
+      "text": "<b>Magiczny Wstrząs</b>: Wszystkie cele zaklęcia otrzymują [[/r 1d10]] Obrażeń, które ignorują Bonus z Wytrzymałości oraz Punkty Pancerza. Muszą także zdać <b>Przeciętny (+20) Test Odporności</b>, w przeciwnym wypadku otrzyma również 1 poziom Stanu @Condition[Oszołomienie].",
+      "range": [
+        129,
+        129
+      ],
+      "_id": "d195ORDFgucwgWfq",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.d195ORDFgucwgWfq"
+    },
+    {
+      "text": "<b>Spacer Zepsucia</b>: Wszędzie, gdzie stąpa postać, pojawia się zepsucie. Przez najbliższe [[/r 1d10]] godzin wszelkie rośliny obok postaci mutują, a wszystkie istoty wchodzące w interakcje, otrzymują Punkt Zepsucia.",
+      "range": [
+        130,
+        130
+      ],
+      "_id": "93ewnnDhJ84haKNW",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.93ewnnDhJ84haKNW"
+    },
+    {
+      "text": "<b>Wyłysienie</b>: Wszystkie włosy z twojego ciała odpadają. Kiedyś odrosną.",
+      "range": [
+        131,
+        136
+      ],
+      "_id": "fDel2WVN6vTwadby",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.fDel2WVN6vTwadby"
+    },
+    {
+      "text": "<b>Dar języków</b>: Wszyscy w promieniu 50 metrów od czarodzieja [[/r 1d10]] Rund trajkoczą niezrozumiale. Podczas trwania tego efektu nie może porozumiewać się werbalnie ani podejmować Testów Rzucania Zaklęć, choć oprócz tego zachowuje się zupełnie normalnie.",
+      "range": [
+        137,
+        137
+      ],
+      "_id": "IUsjPLtC5blMfRyF",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.IUsjPLtC5blMfRyF"
+    },
+    {
+      "text": "<b>Uciszenie</b>: w promieniu 50 metrów od czarodzieja, pojawia się bańka wyciszenia. Wszystkie dźwięki na tym obszarze są niesłyszalne, a postacie tracą możliowść mowy. Bańka utrzymuje się [[/r 1d10]] minut.",
+      "range": [
+        138,
+        140
+      ],
+      "_id": "9UMvlsmtlAD2uiY7",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.9UMvlsmtlAD2uiY7"
+    },
+    {
+      "text": "<b>Rój</b>: Czarodziej otwiera niewielkie przejście do wymiaru chaosu w odległości 10 metrów od siebie. Rój zmutowanych pajaków, szczórów, nietoperzy czy innych dziwacznych stworzeń (decyduje MG) wypełza z tej bramy. Użyj standardowych charakterystyk, odpowiednich dla danego gatunku stworzenia, dodając Cechę Stworzenia Rój. Po [[/r 1d10]] Rundach, jeśli nie zostały zniszczone wcześniej, stwory znikają.",
+      "range": [
+        141,
+        142
+      ],
+      "_id": "NkPrKe4V943WWL72",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.NkPrKe4V943WWL72"
+    },
+    {
+      "text": "<b>Szmaciana lalka</b>: Postać zostaje wyrzucona w powietrze i leci [[/r 1d10]] metrów w losowym kierunku. Otrzymuje [[/r 1d10]] Obrażeń ignorujących Punkty Pancerza, otrzymuje również 1 Stan @Condition[Powalenie].",
+      "range": [
+        143,
+        143
+      ],
+      "_id": "r0vMaZwvvwuqP48A",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.r0vMaZwvvwuqP48A"
+    },
+    {
+      "text": "<b>Mistrz Pacynek</b>: Cele zaklęcią zostają wyrzucone w powietrze i lecą [[/r 1d10]] metrów w losowym kierunku. Otrzymują [[/r 1d10]] Obrażeń ignorujących Punkty Pancerza, otrzymuje również 1 Stan @Condition[Powalenie].",
+      "range": [
+        144,
+        145
+      ],
+      "_id": "sDoYHADVZ6BN2UUP",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.sDoYHADVZ6BN2UUP"
+    },
+    {
+      "text": "<b>Chaotyczne Przesilenie</b>: Wszystkie składniki magiczne w promieniu 50 metrów zostają skażone chaosem. Użycie ich podczas rzucania zaklęć będzie zawsze skutkować manifestacją chaosu.",
+      "range": [
+        146,
+        146
+      ],
+      "_id": "W0jtWXpkyWZLDzue",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.W0jtWXpkyWZLDzue"
+    },
+    {
+      "text": "<b>Eteryczne ręce</b>: Ręce czarodzieja stają się eteryczne. Przez ten czas nie mogą chwytać niemagicznych przedmiotów. Ataku eterycznymi rękoma nie można parować nie-magiczną bronią, a podczas obliczania obrażeń, ignoruje się niemagiczny pancerz oraz cechę Tępy.",
+      "range": [
+        147,
+        149
+      ],
+      "_id": "4nAW73mQw9PAdku9",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.4nAW73mQw9PAdku9"
+    },
+    {
+      "text": "<b>Mroczna ślepota</b>: Na [[/r 1d10]] godzin postać traci swój Talent <a class=\"talent-drag\">Percepcja Magiczna</a>. Wszelkie Testy Splatania Magii otrzymują karę -20.",
+      "range": [
+        150,
+        154
+      ],
+      "_id": "2FZVkGclsd0w7ZXS",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.2FZVkGclsd0w7ZXS"
+    },
+    {
+      "text": "<b>Chaotyczna dalekowzroczność</b>: Otrzymujesz premiową pulę [[/r 1d10]] Punktów Szczęścia (które mogą przekroczyć normalny limit). Za każdym razem, gdy postać korzysta z tych punktów, otrzymuje 1 Punkt Zepsucia. Wszelkie pozostałe Punkty Szczęścia zdobyte w ten sposób przepadają po zakończeniu sesji gry.",
+      "range": [
+        155,
+        156
+      ],
+      "_id": "R6blecNzzI5cBsv6",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.R6blecNzzI5cBsv6"
+    },
+    {
+      "text": "<b>Wyzwolenie</b>: Wszystkie zaczepy, pasy, klamry, zamki na ciele celu zaklęcia otwierają się i rozplątują. Zawartość toreb i sakiew wylatuje niczym wypchnięta niewidzialną ręką. Cele Otrzymują [[/r 1d3]] Stanów @Condition[Pochwycenie]",
+      "range": [
+        157,
+        157
+      ],
+      "_id": "BA4oOIF3W6ZlKroV",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.BA4oOIF3W6ZlKroV"
+    },
+    {
+      "text": "<b>Lewitacja</b>: Wiatry Magii porywają postać w powietrze. Na [[/r 1d10]] minut unosi się [[/r 1d10]] metrów nad ziemią. Inne postaci mogą ją przemieszczać siłą. Ponadto postać może poruszać się sama dzięki zaklęciom, skrzydłom i innym zabiegom, ale jeśli zostanie pozostawiona sama sobie, uniesie się z powrotem jak balonik. Lewitacja kończy się @Compendium[wfrp4e-core.journal-entries.IyLwbcF2271ZKPzC]{Upadkiem} (patrz strona 166).",
+      "range": [
+        158,
+        162
+      ],
+      "_id": "xPyIDXTJMJl0YR14",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.xPyIDXTJMJl0YR14"
+    },
+    {
+      "text": "<b>Wymioty</b>: Wszystkie cele zaklęcia zaczynają wymiotować, wyrzucając z siebie o wiele więcej odrażająco śmierdzących wymiocin, niż mogłoby pomieścić ciało. Postacie otrzymują 1 poziom Stanu @Condition[Oszołomienie], który utrzymuje się przez [[/r 1d10]] Rund.",
+      "range": [
+        163,
+        166
+      ],
+      "_id": "9Zd2Lye4AlQyrlpz",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.9Zd2Lye4AlQyrlpz"
+    },
+    {
+      "text": "<b>Trzęsienie Chaosu</b>: Wszystkie stworzenia w promieniu 50 metrów muszą zdać <b>Przeciętny (+20) Test Atletyki</b> albo otrzymają Stan @Condition[Powalenie].",
+      "range": [
+        167,
+        172
+      ],
+      "_id": "qwoNUgb0iSHsKeqK",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.qwoNUgb0iSHsKeqK"
+    },
+    {
+      "text": "<b>Zdrada w sercu</b>: Mroczni Bogowie nakłaniają postać do wybitnie perfidnego czynu. Jeśli postać zaatakuje lub w inny sposób zdradzi sojusznika (z całą mocą i bez ograniczeń), otrzymuje [[/r 1d6]] Punktów Szczęścia. Jeśli zmusi inną postać do wydania Punktu Przeznaczenia, sama otrzymuje 1 Punkt Przeznaczenia.",
+      "range": [
+        173,
+        175
+      ],
+      "_id": "09islSDFhqeEIcQs",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.09islSDFhqeEIcQs"
+    },
+    {
+      "text": "<b>Plugawa niemoc</b>: Postać otrzymuje 1 Punkt Zepsucia, 1 poziom Stanu @Condition[Zmęczenie] i Stan @Condition[Powalenie]",
+      "range": [
+        176,
+        181
+      ],
+      "_id": "r8vshAKFcuUd8cU0",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.r8vshAKFcuUd8cU0"
+    },
+    {
+      "text": "<b>Plugawa klątwa</b>: Wszystkie cele zaklęcia otrzymują 1 Punkt Zepsucia, 1 poziom Stanu @Condition[Zmęczenie] i Stan @Condition[Powalenie]",
+      "range": [
+        182,
+        184
+      ],
+      "_id": "I3WY08gLPypgbF8u",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.I3WY08gLPypgbF8u"
+    },
+    {
+      "text": "<b>Odór z piekła rodem</b>: To jest dopiero smród! Postać otrzymuje Cechę Stworzenia @Compendium[wfrp4e-core.traits.MVI0lXcg6vvtooAF]{Dekoncentrujący} (patrz strona 338), a najpewniej też wrogość czegokolwiek, co ma zmysł powonienia. Efekt utrzymuje się przez [[/r 1d10]] godzin.",
+      "range": [
+        185,
+        186
+      ],
+      "_id": "dWdzVlCYS90IAnB8",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.dWdzVlCYS90IAnB8"
+    },
+    {
+      "text": "<b>Wyssanie mocy</b>: Przez [[/r 1d10]] minut postać nie jest w stanie używać Talentów związanych z rzucaniem czarów (zazwyczaj Magii Tajemnej, choć może to być również Magia Chaosu lub podobny Talent).",
+      "range": [
+        187,
+        192
+      ],
+      "_id": "84LlZ70ftDHmFjMd",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.84LlZ70ftDHmFjMd"
+    },
+    {
+      "text": "<b>Wir Mocy</b>: w promieniu 50 metrów pojawia się silne pole antymagiczne, wysysające wszystkie wiatry magii. Przez [[/r 1d10]] minut postacie przebywające w tym obszarze nie są w stanie używać Talentów związanych z rzucaniem czarów (zazwyczaj Magii Tajemnej, choć może to być również Magia Chaosu lub podobny Talent). Dodatkowo, wszystkie aktywne zaklęcia w tym obszarze tracą swoją moc, a magiczne przedmioty, swoje cechy.",
+      "range": [
+        193,
+        193
+      ],
+      "_id": "jvp4F1epw8rsDNTV",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.jvp4F1epw8rsDNTV"
+    },
+    {
+      "text": "<b>Reakcja Eteru</b>: Każdy - wróg czy przyjaciel - w promieniu tylu metrów, ile wynosi Bonus z Siły Woli postaci, otrzymuje [[/r 1d10]] Obrażeń, które ignorują Bonus z Wytrzymałości i Punkty Pancerza. Wszyscy w tym promieniu otrzymują Stan @Condition[Powalenie] oraz Stan @Condition[Oszołomienie]. Jeśli na tym obszarze nie ma żadnych celów, magia nie ma się gdzie ulotnić, więc wzbiera wewnątrz czaszki, rozsadzając ją od środka. Postać ginie natychmiast.",
+      "range": [
+        194,
+        194
+      ],
+      "_id": "zEWxOrs2zywLtdbX",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.zEWxOrs2zywLtdbX"
+    },
+    {
+      "text": "<b>Eteryczne Sprzężenie</b>: Każdy w promieniu o liczbie metrów równej twojej Premii do Siły Woli - zarówno przyjaciel, jak i wróg - otrzymuje [[/r 1d10]] Ran, ignorując Premię za Wytrzymałości i Punkty Pancerza, i otrzymuje Stan @Condition[Panika] oraz [[/r 1d10]] Punktów Zepsucia. Jeśli w zasięgu nie ma żadnych celów, magia nie ma gdzie ujść, więc twoja głowa eksploduje, zabijając cię natychmiast. Za każdą postać dotkniętą wyładowaniem, otrzymujesz 1 Punkt Szczęścia.",
+      "range": [
+        195,
+        200
+      ],
+      "_id": "SoPBqGRBYPQF5JDZ",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.SoPBqGRBYPQF5JDZ"
+    },
+    {
+      "text": "<b>Miażdzące Oko</b>: Energia chaosu niszczy twoje ciało, osłabiając twoją kondycję. Tracisz 20 punktów Wytrzymałości na 1k10 godzin. Otrzymujesz też 1 Stan @Condition[Zmęczenie]",
+      "range": [
+        201,
+        202
+      ],
+      "_id": "PaPpfRr0I1hTOyYn",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.PaPpfRr0I1hTOyYn"
+    },
+    {
+      "text": "<b>Wszystko Widzące Oczy</b>: Energia chaosu niszczy ciało celów zaklęcia, osłabiając kondycję. Tracą 20 punktów Wytrzymałości na [[/r 1d10]] godzin. Otrzymują też 1 Stan @Condition[Zmęczenie]",
+      "range": [
+        203,
+        203
+      ],
+      "_id": "qpsrN09ll6z9naiE",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.qpsrN09ll6z9naiE"
+    },
+    {
+      "text": "<b>Chaotyczna moc</b>: Potężny wir magiczny pojawia się nad czarodziejem. Wszyscy w promieniu 100 metrów od czarodzieja tracą swoją moca magiczną na [[/r 1d10]] godzin. W tym czasie, czarodziej otrzymuje +10 do testów Splatania Magii oraz Języka Magicznego za każdego pozbawionego mocy czarodzieja.",
+      "range": [
+        204,
+        205
+      ],
+      "_id": "etx9MnAzjOCfAk9Z",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.etx9MnAzjOCfAk9Z"
+    },
+    {
+      "text": "<b>Złamany</b>: Twoja wola jest całkowicie złamana. Twoja charakterystyka Siły Woli zostaje zmniejszona o 20 na 1k10 godzin, a ty natychmiast otrzymujesz 1k10 Stanów @Condition[Panika].",
+      "range": [
+        206,
+        208
+      ],
+      "_id": "tnQHU1jJTrcp07tF",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.tnQHU1jJTrcp07tF"
+    },
+    {
+      "text": "<b>Zdruzgotani</b>: Wola celów zaklęcia jest całkowicie złamana. Charakterystyka Siły Woli wszystkich celów zostaje zmniejszona o 20 na 1k10 godzin, oraz natychmiast otrzymują [[/r 1d10]] Stanów @Condition[Panika].",
+      "range": [
+        209,
+        214
+      ],
+      "_id": "xE8746CFaT2kYnAa",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.xE8746CFaT2kYnAa"
+    },
+    {
+      "text": "<b>Oszołomiony</b>: Twój umysł cofa się, aby uchronić Cię przed gorszym losem. Tracisz 20 punktów Inteligencji na 1k10 godzin i zyskujesz 3 Stany @Condition[Oszołomienie].",
+      "range": [
+        215,
+        216
+      ],
+      "_id": "5FKeDUDlfaJVxLXY",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.5FKeDUDlfaJVxLXY"
+    },
+    {
+      "text": "<b>Ogłupienie</b>: umysł wszystkich celów zaklęcia cofa się, aby uchronić się przed gorszym losem. Tracą 20 punktów Inteligencji na [[/r 1d10]] godzin i zyskują 3 Stany @Condition[Oszołomienie].",
+      "range": [
+        217,
+        221
+      ],
+      "_id": "TrYFStrmWyQUjb6G",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.TrYFStrmWyQUjb6G"
+    },
+    {
+      "text": "<b>Bicz Tzeentcha</b>: Magiczna moc cię przytłacza. Otrzymujesz Stan @Condition[Nieprzytomny] na 1k10 minut.",
+      "range": [
+        222,
+        226
+      ],
+      "_id": "CE0iVhXmugjko0AJ",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.CE0iVhXmugjko0AJ"
+    },
+    {
+      "text": "<b>Macki Tzeentcha</b>: Magiczna moc przytłacza wszystkie cele zaklęcia. Otrzymują Stan @Condition[Nieprzytomny] na [[/r 1d10]] minut.",
+      "range": [
+        227,
+        229
+      ],
+      "_id": "vt6Saheh1xZkktL5",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.vt6Saheh1xZkktL5"
+    },
+    {
+      "text": "<b>Eteryczny Atak</b>: Wiatry magii uderzają w ciebie. Otrzymujesz trafienie krytyczne w losowej lokacji, dodając 20 do rzutu.",
+      "range": [
+        230,
+        235
+      ],
+      "_id": "IDIspmybbOI2aLDo",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.IDIspmybbOI2aLDo"
+    },
+    {
+      "text": "<b>Eteryczna Nawałnica</b>: Wiatry magii uderzają w cele zaklęcia. Otrzymują trafienie krytyczne w losowej lokacji, dodając 20 do rzutu.",
+      "range": [
+        236,
+        241
+      ],
+      "_id": "KzqJNpFLIbHoONFZ",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.KzqJNpFLIbHoONFZ"
+    },
+    {
+      "text": "<b>Dolegliwość Albinosów</b>: Twoja skóra i włosy są całkowicie wybielone przez szalejący Chaos. Trwale stracisz 20 ze swojej Ogłądy.",
+      "range": [
+        242,
+        246
+      ],
+      "_id": "UBKhyDOIdBekJJC0",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.UBKhyDOIdBekJJC0"
+    },
+    {
+      "text": "<b>Heretyczna Wizja</b>: Książę Demonów przedstawia wizję Chaosu. Zyskujesz 1k10 punktów Zepsucia i cierpisz z powodu Stanu @Condition[Oszołomienie], którego nie można usunąć przez taką samą liczbę rund. W dowolnym momencie po tym wydarzeniu możesz wydać 100 PD i poznać dowolne zaklęcie.",
+      "range": [
+        247,
+        248
+      ],
+      "_id": "1nFlmn4UJMT0hUmo",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.1nFlmn4UJMT0hUmo"
+    },
+    {
+      "text": "<b>Pożeracz Umysłu</b>: Twoja zdolność do używania magii zostaje wypalona, co zmniejsza Twoje umiejętności Splatania i Języka (Magiczny) do 0. Za każde pełne 24 godziny, które mijają, odzyskujesz 1k10 w każdej umiejętności, po czym możesz rzucać zaklęcia na odzyskanym poziomie umiejętności.",
+      "range": [
+        249,
+        249
+      ],
+      "_id": "BPTstlC57VlY7rLd",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.BPTstlC57VlY7rLd"
+    },
+    {
+      "text": "<b>Nieproszone Towarzystwo</b>: Wrota do innego wymiaru otwierają się i wszyscy zostają zaatakowani przez liczbę Mniejszych Demonów równą twojemu Bonusowi Siły Woli. Pojawiają się z eteru w promieniu 6 metrów od ciebie. MG powinien wybrać demony odpowiednie do sytuacji. Jeśli w nie ma Niszczycielskiej Mocy adekwatnej do sytuacji, wybierz zamiast tego Furie Chaosu.",
+      "range": [
+        250,
+        254
+      ],
+      "_id": "gnL65ovghlVKqOee",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.gnL65ovghlVKqOee"
+    },
+    {
+      "text": "<b>Demoniczny Kontrakt</b>: Pięciocentymetrowa runa Chaosu wypala się w losowej części twojego ciała. Otrzymaj 1k10 Ran (ignorując Premię z Wytrzymałości i Punkty Pancerza) oraz punkt Zepsucia. Jeśli kiedykolwiek zbierzesz 8 run, będą one zawierać kontrakt oddający twoją duszę odpowiedniej Niszczycielskiej Potęgi wybranej przez MG. Usunięcie naznaczonej skóry nie zrobi różnicy.",
+      "range": [
+        255,
+        258
+      ],
+      "_id": "Mm8PmnuK5AjIysBQ",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.Mm8PmnuK5AjIysBQ"
+    },
+    {
+      "text": "<b>Chaotyczni Słudzy</b>: 1k10 Furii Chaosu, Demonicznych Sług lub Pomniejszych Demonów pojawiają się z Eteru i wykonują twoją rozkaz przez 1k10 rund. Jeśli wydasz jakiekolwiek polecenie inne niż wypuszczenie ich z powrotem do Królestwa Chaosu, otrzymasz 1 punkt Zepsucia za każdego demona, który ci służy.",
+      "range": [
+        259,
+        262
+      ],
+      "_id": "E8N78LLPoQ06rG6y",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.E8N78LLPoQ06rG6y"
+    },
+    {
+      "text": "<b>Wrząca Krew</b>: Przez krótką chwilę twoja krew dosłownie wrze w twoich żyłach. Otrzymujesz 1k10 Ran (ignorując modyfikatory) i otrzymujesz osobne trafienia krytyczne w ciało i głowę.",
+      "range": [
+        263,
+        265
+      ],
+      "_id": "wUYwhWWFgyWSetRb",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.wUYwhWWFgyWSetRb"
+    },
+    {
+      "text": "<b>Wyrwanie Duszy</b>: Twoja dusza oddziela się od ciała. Od teraz zostajesz Upiorem. Twoje statystyki pozostają bez zmian, tak samo wolna wola. O świcie następnego dnia, jeśli twoje ciało nie zostało zniszczone, możesz wykonać Trudny (-30) Test Siły Woli, albo zmiana będzie permanentna.",
+      "range": [
+        266,
+        270
+      ],
+      "_id": "nqocWujNHPrSRwyD",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.nqocWujNHPrSRwyD"
+    },
+    {
+      "text": "<b>Dzika Magia</b>: Niekontrolowany wybuch magicznej energii zadaje [[/r 2d10]] Ran wszystkim w promieniu 30 metrów (bez względu na Pancerz i Wytrzymałość) oraz 1 trafienie krytyczne.",
+      "range": [
+        271,
+        275
+      ],
+      "_id": "dn9m561jMFL6qwIB",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.dn9m561jMFL6qwIB"
+    },
+    {
+      "text": "<b>Ślepota</b>: Magiczna energia znajduje swoje ujście twoimi oczami. Oczy gasną, stają się czarne a ty tracisz wzrok dopóki nie zostaniesz magicznie uleczony.",
+      "range": [
+        276,
+        281
+      ],
+      "_id": "y53YMs6X89S6ZwL3",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.y53YMs6X89S6ZwL3"
+    },
+    {
+      "text": "<b>Bliscy Dotknięci Chaosem</b>: Infekcja Chaosu czyni cię bezpłodnym. Również twój najbliższy krewny otrzymuje wynik z innego rzutu z tej tabeli.",
+      "range": [
+        282,
+        287
+      ],
+      "_id": "1ILazUmuUz8yHbAx",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.1ILazUmuUz8yHbAx"
+    },
+    {
+      "text": "<b>Mutujący Wiatr</b>: Wszyscy w promieniu 50 metrów otrzymują mutację fizyczną, jeśli nie zaliczą Bardzo Trudnego (-30) Testu Wytrzymałości. Jest to traktowane jako test na Potężny Wpływ Zepsucia (WFRP4, s.184). Jeśli to się nie powiedzie i zdobędzie wystarczającą liczbę punktów, aby otrzymać mutację, Test wytrzymałości opisany w zasadach automatycznie się nie powiedzie.",
+      "range": [
+        288,
+        289
+      ],
+      "_id": "faxe1Pj1X20FUOx5",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.faxe1Pj1X20FUOx5"
+    },
+    {
+      "text": "<b>Dzień Świstaka</b>: Wykonaj ponownie rzut na Manifestację Chaosu, z tymi samymi modyfikatorami. Efekt będzie powtarzać się będzie co [[/r 1d10]] minut do następnego wschodu słońca.",
+      "range": [
+        290,
+        295
+      ],
+      "_id": "Oyyq0vL5OwpgiGHx",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.Oyyq0vL5OwpgiGHx"
+    },
+    {
+      "text": "<b>Buszujący w Zbożu</b>: Gdzieś, w promieniu 2 kilometrów, wyjątkowo przebiegły demon przybywa ze swojej domeny, siać zamęt i śmierć. Jeśli to możliwe, będzie działać z rozmysłem i z ukrycia, lecz jeśli nie będzie mógł się ukryć - wywoła prawdziwą rzeź.",
+      "range": [
+        296,
+        297
+      ],
+      "_id": "VNLqKqjCJMH6zan8",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.VNLqKqjCJMH6zan8"
+    },
+    {
+      "text": "<b>Mroczne Błogosławieństwo</b>: Otrzymujesz demoniczny dar. Wylosuj dwie Mutacje Fizyczne i dwa Zepsucia Umysłu.",
+      "range": [
+        298,
+        301
+      ],
+      "_id": "iEhXBMuQY2l1SPZL",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.iEhXBMuQY2l1SPZL"
+    },
+    {
+      "text": "<b>Prawdziwa Rozpacz</b>: Wszyscy w promieniu Bonusu z Siły Woli są dotknięci ogromną rozpaczą i depresją. Muszą wykonać Bardzo Trudny (-30) Test przeciw Grozie (2).",
+      "range": [
+        302,
+        305
+      ],
+      "_id": "PlXJXBhA6dJ8GPK7",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.PlXJXBhA6dJ8GPK7"
+    },
+    {
+      "text": "<b>Chaotyczna Aura</b>: Niebo w promieniu [[\\r 1d10]] kilometrów mieni się od przepięknych kolorów. Cały obszar do następnego wschodu słońca traktowany jest jako domena Tzeentcha, co ma wpływ na efekty manifestacji chaosu podczas czarowania.",
+      "range": [
+        306,
+        311
+      ],
+      "_id": "pXXYyVpZLXySeOJj",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.pXXYyVpZLXySeOJj"
+    },
+    {
+      "text": "<b>Utrata Głowy</b>: Głowa czarodzieja odpada od ciała. Czarodziej jest żywy i wciąż może kontrolować swoje ciało, ale jego głowa nie jest już z nim połączona.",
+      "range": [
+        312,
+        315
+      ],
+      "_id": "YrVC9wdQEUxgSNis",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.YrVC9wdQEUxgSNis"
+    },
+    {
+      "text": "<b>Wezwany do Pustki</b>: Zostajesz wciągnięty do Królestwa Chaosu, na zawsze stracony, chyba że masz punkt Przeznaczenia do wydania. Jeśli to zrobisz, zaatakuje cię wizja twojego ledwo odwróconego losu: weź 1k10 punktów Zepsucia i taką samą liczbę Stanów @Condition[Oszołomienie].",
+      "range": [
+        316,
+        316
+      ],
+      "_id": "7j1HAi9ADQ9GHeV6",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.7j1HAi9ADQ9GHeV6"
+    },
+    {
+      "text": "<b>Żelazny Grobowiec</b>: Ziemia W promieniu 10 metrów od czarodzieja rozsuwa się odsłaniając pustkę. Wszyscy w zasięgu muszą wykonać Wymagający (+0) Test Atletyki, albo wpadną w czelość na wieki. Z zapadliska wyłania się Żelazny Sarkofag, który wciąga Czarodzieja na wieczność. Sarkofag jest potężnym, praktycznie nie zniszczalnym artefaktem chaosu, który będzie przywoływać Zwierzoludzi i wszelkie zepsute istoty chaosu.",
+      "range": [
+        317,
+        319
+      ],
+      "_id": "6jySWmU8NmMq1REi",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.6jySWmU8NmMq1REi"
+    },
+    {
+      "text": "<b>Skrzela</b>: Twoje płuca zmutowały w Skrzela. Masz tylko kilka minut aby znaleźć się pod wodą, gdzie od tej pory możesz wyłącznie oddychać, albo się udusisz.",
+      "range": [
+        320,
+        323
+      ],
+      "_id": "Wj1hnrf3hB1a90l5",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.Wj1hnrf3hB1a90l5"
+    },
+    {
+      "text": "<b>Powietrzna Wyspa</b>: Ziemia na której znajduje się czarodziej, w promieniu pół kilometra, wystrzela w powietrze na wysokość [[/r 1d100]] metrów. Nie wiadomo, czy latająca wyspa kiedykolwiek powróci na ziemię.",
+      "range": [
+        324,
+        327
+      ],
+      "_id": "nzXs4RNvq9pFBzeE",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.nzXs4RNvq9pFBzeE"
+    },
+    {
+      "text": "<b>Meduza</b>: Włosy maga zamieniają się w trujące węże długości pół metra. Każde ukąszenie wywołuje [[/r 1d10]] stanów @Condition[Zatrucie]. Dodatkowo, każdy kto spojrzy na węże, musi wykonać Wymagający (+0) Test Opanowania oraz Odpornośći, jeśli oba się niepowiodą, ofiara permanentnie zamienia się w kamień.",
+      "range": [
+        328,
+        328
+      ],
+      "_id": "00l9u5lF1cV9NVRo",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.00l9u5lF1cV9NVRo"
+    },
+    {
+      "text": "<b>Usta Zepsucia</b>: 99 malutkich bąbli pojawia się na twoim ciele. W bolesnym procesie, z bąbli wykluwają się drobne usta, które wykrzykują bluźniercze słowa w demonicznej mowie. Jedyne co może je uciszyć i spowodować zniknięcie, to napojenie krwią inteligentnej istoty.",
+      "range": [
+        329,
+        333
+      ],
+      "_id": "dKonKSwz4iugVioD",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.dKonKSwz4iugVioD"
+    },
+    {
+      "text": "<b>Przypadkowe Zaproszenie</b>: Książę Demonów pojawia się na twoje wezwanie. Jest wyjątkowo zirytowany, i w ramach zemsty, zabierze ze sobą kogoś bliskiego czarodziejowi.",
+      "range": [
+        334,
+        338
+      ],
+      "_id": "ed7YEm4sxm1L8zaj",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.ed7YEm4sxm1L8zaj"
+    },
+    {
+      "text": "<b>Efekt Motyla</b>: Piękny motyl w Lustrii radośnie zatrzepotał skrzydłami. Chaotyczny powiew zmienia się w potężny huragan, który nawiedza miejsce pobytu Czarodzieja, wywołując niebywałe zniszczenia.",
+      "range": [
+        339,
+        342
+      ],
+      "_id": "yLOZQofkwYGKYdfm",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.yLOZQofkwYGKYdfm"
+    },
+    {
+      "text": "<b>Przeklęta Mgła</b>: Najbliższe oczko wodne, staw lub studnia zostaje skażona chaosem. Każdej nocy z wody unosi się czarna mgła, która poszukuje żywaje istoty aby ją porwać i zmutować. Intensywność mgły jest powiązana z aktywnością Morrslieba, im bliżej planety, tym mgła jest bardziej agresywna.",
+      "range": [
+        343,
+        348
+      ],
+      "_id": "EuRW8BZmZGlUiBsV",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.EuRW8BZmZGlUiBsV"
+    },
+    {
+      "text": "<b>Zemsta Tzeentcha</b>: Twój głos staje się nosicielem plagi. Każdy kto go usłyszy, musi wykonać wymagający (+0) Test Siły Woli lub sam stanie się nosicielem plagi zarażając kolejne istoty. Dodatkowo, po [[/r 1d10]] godzinach zarażony zostaje dotknięty mutacją chaosu.",
+      "range": [
+        349,
+        354
+      ],
+      "_id": "BXOv1zC7h2EMZPIA",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.BXOv1zC7h2EMZPIA"
+    },
+    {
+      "text": "<b>Kiedy Patrzysz w Pustkę, Pustka spogląda na ciebie</b>: Magiczna manifestacja na wzór czarnej dziury manifestuje się na [/r 1d10] minut o rozmiarze [/r 1d100] metrów. Wszystko w tym obszarze zostaje nieodwracalnie pochłonięte przez Pustkę.",
+      "range": [
+        355,
+        356
+      ],
+      "_id": "fI1yvALuHXjDr0UO",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.fI1yvALuHXjDr0UO"
+    },
+    {
+      "text": "<b>Wrota Chaosu</b>: Wrota Chaosu otwierają się permanentnie w miejscu rzucenia zaklęcia. Początkowo tylko pojedyncze demony przez niego przechodzą, ale z czasem, jeśli portal nie zostanie zapieczętowany, zawędrują tędy całe armie.",
+      "range": [
+        357,
+        358
+      ],
+      "_id": "QetbzyLrx7CsSVHT",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.QetbzyLrx7CsSVHT"
+    },
+    {
+      "text": "<b>Coś się zbliża</b>: Na niebie pojawia się nowy, wyjątkowo jasny obiekt astralny. Z każdym dniem zdaje się być coraz większy. Od GMa zależy kiedy i gdzie meteoryt uderzy w ziemię.",
+      "range": [
+        359,
+        359
+      ],
+      "_id": "8GRYuxAmQjlZyOLE",
+      "type": 0,
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "",
+      "documentId": null,
+      "weight": 1,
+      "drawn": false,
+      "flags": {},
+      "_key": "!tables.results!kBHsDnCstoAI4hk6.8GRYuxAmQjlZyOLE"
+    }
+  ],
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "PRtfySS3WdJY4Oq3",
+  "flags": {
+    "wfrp4e": {
+      "key": "miscastdhar",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.2",
+    "coreVersion": "11.313",
+    "createdTime": 1685524765611,
+    "modifiedTime": 1697834213899,
+    "lastModifiedBy": "Czz7IJA9DEa5LD9E"
+  },
+  "_id": "kBHsDnCstoAI4hk6",
+  "sort": 200000,
+  "ownership": {
+    "default": 0,
+    "Czz7IJA9DEa5LD9E": 3
+  },
+  "_key": "!tables!kBHsDnCstoAI4hk6"
+}

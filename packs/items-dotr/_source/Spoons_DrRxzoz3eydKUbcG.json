@@ -1,0 +1,57 @@
+{
+  "_id": "DrRxzoz3eydKUbcG",
+  "name": "Spoons",
+  "type": "vehicleMod",
+  "img": "modules/wfrp4e-dotr/assets/icons/upgrade.png",
+  "effects": [],
+  "folder": "mqmgFBAdX7S24AT7",
+  "sort": 200001,
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Oars",
+      "sort": 200001
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Standard oars have long, narrow blades, which are good for most purposes. Spoons, as their name suggests, have a shorter, wider, curved blade that can exert more pressure on the water &mdash; but they require strength to operate properly. When using spoons, a rower may make a <strong>Strength </strong>Test when speed is required, and if successful may add his or her Strength Bonus in yards to the boat&rsquo;s Movement for that round.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "5",
+      "ss": "0",
+      "bp": "0"
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "modType": {
+      "value": "oars"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "2TbX8z7IWr0GFssP": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "hv1aja7lAR8ZyKUO": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1681859838885,
+    "modifiedTime": 1693273562880,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!DrRxzoz3eydKUbcG"
+}

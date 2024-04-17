@@ -1,0 +1,154 @@
+{
+  "name": "Writhing Worm",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You summon a huge brown worm that wriggles swiftly to your target. The target is automatically @Condition[Grappling]{Grappled} and suffers an @Condition[Entangled] Condition. The worm has a Strength of 50 for grappling. If the worm wins its Opposed Strength Test, it may perform one of the following two actions:</p><ul><li><p>Add another @Condition[Entangled] Condition.</p></li><li><p>Secrete sticky enzymes that dissolve 1 point of leather or similar armour on all hit locations. Leather items like pouches and backpacks are also dissolved.</p></li></ul><p>The worm cannot inflict Damage with grappling, nor can it be harmed by any means. The spell ends if the target breaks free.</p><p><strong>Lore:</strong> Whenever you successfully cast a spell from the Lore of Beasts, you may also gain the @UUID[Compendium.wfrp4e-core.items.pTorrE0l3VybAbtn]{Fear (1)} Creature Trait for the next [[/r 1d10]] Rounds.</p><p></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "beasts",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower yards",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "1",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus rounds",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 4,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "type": "spell",
+  "folder": "vv9Uz4QUOea8V2Yk",
+  "img": "modules/wfrp4e-core/icons/spells/beasts.png",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-core/icons/spells/beasts.png",
+      "transfer": false,
+      "_id": "RWlAyZA4B3k72p0j",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "await args.actor.addCondition(\"grappling\")\nargs.actor.addCondition(\"entangled\")"
+        }
+      },
+      "name": "Writhing Worm",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!Tt936uU4f7dITjfN.RWlAyZA4B3k72p0j"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Beasts",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676405899942,
+    "modifiedTime": 1693273575740,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "Tt936uU4f7dITjfN",
+  "_key": "!items!Tt936uU4f7dITjfN"
+}

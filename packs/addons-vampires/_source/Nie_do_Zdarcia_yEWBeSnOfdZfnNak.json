@@ -1,0 +1,115 @@
+{
+  "_id": "yEWBeSnOfdZfnNak",
+  "name": "Nie do Zdarcia",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [
+    {
+      "_id": "Lr8M3FiZ1agwUui5",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "actor",
+          "script": "fromUuid(\"Compendium.wfrp4e-core.items.UsJ2uIOOtHA7JqD5\").then(item => {\n    args.actor.createEmbeddedEntity(\"OwnedItem\", item.data)\n})",
+          "preventDuplicateEffects": false,
+          "applicationData": {
+            "avoidTest": {
+              "value": "none"
+            },
+            "testIndependent": false,
+            "prompt": false,
+            "documentType": "Item"
+          },
+          "scriptData": [
+            {
+              "label": "Nie do Zdarcia",
+              "trigger": "addItems",
+              "script": "let item = await fromUuid(\"Compendium.wfrp4e-core.items.UsJ2uIOOtHA7JqD5\");\nitem = item.toObject();\nthis.actor.createEmbeddedEntity(\"Item\", [item], {fromEffect: this.effect.id});",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ]
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null,
+        "combat": null
+      },
+      "icon": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+      "tint": null,
+      "transfer": true,
+      "name": "Nie do Zdarcia",
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "_key": "!items.effects!yEWBeSnOfdZfnNak.Lr8M3FiZ1agwUui5"
+    }
+  ],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Posiadasz Cechę Stworzenia @Compendium[wfrp4e-core.items.UsJ2uIOOtHA7JqD5]{Nie do Zdarcia}</p><p></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "1"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "folder": "IdBKVE70UjsZfSoR",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.311",
+    "createdTime": 1707137129208,
+    "modifiedTime": 1707139629241,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 1100000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!yEWBeSnOfdZfnNak"
+}

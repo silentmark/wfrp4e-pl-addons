@@ -1,0 +1,134 @@
+{
+  "name": "Ziejąca rana ramienia",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/tornarm.png",
+  "effects": [
+    {
+      "_id": "7OVwCkJ6rgnfZn81",
+      "flags": {
+        "wfrp4e": {
+          "trigger": "endRound",
+          "value": 2
+        },
+        "core": {
+          "statusId": "bleeding"
+        }
+      },
+      "changes": [],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "systems/wfrp4e/icons/conditions/bleeding.png",
+      "label": "Krwawienie",
+      "transfer": true,
+      "disabled": false,
+      "origin": null,
+      "tint": null,
+      "_key": "!items.effects!W4ZCG1J1B2620PMD.7OVwCkJ6rgnfZn81"
+    },
+    {
+      "_id": "1sDNirNcv4XZnubO",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "takeDamage",
+          "effectApplication": "actor",
+          "script": "if (args.opposedTest.result.hitloc.value == \"rArm\")\n await args.actor.addCondition(\"bleeding\", 1)",
+          "hide": false,
+          "preventDuplicateEffects": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/injuries/tornarm.png",
+      "label": "Ziejąca rana ramienia prawego",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "_key": "!items.effects!W4ZCG1J1B2620PMD.1sDNirNcv4XZnubO"
+    },
+    {
+      "label": "Ziejąca rana ramienia lewego",
+      "icon": "modules/wfrp4e-core/icons/injuries/tornarm.png",
+      "transfer": true,
+      "_id": "qR1ITCXMOsO1xKZ4",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "takeDamage",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "if (args.opposedTest.result.hitloc.value == \"lArm\")\n await args.actor.addCondition(\"bleeding\", 1)"
+        }
+      },
+      "_key": "!items.effects!W4ZCG1J1B2620PMD.qR1ITCXMOsO1xKZ4"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wfrp4e-pl.criticals.W4ZCG1J1B2620PMD"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Cios skutkuje głęboką, otwartą raną. Postać otrzymuje 2 poziomy Krwawienia. Dopóki rozcięcie nie zostanie zszyte dzięki pomocy Chirurgicznej, każda Rana otrzymana w to ramię skutkuje zwiększeniem Krwawienia o 1 poziom, ponieważ rana się otwiera i pogłębia.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "2",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Ręka",
+      "type": "String",
+      "label": "Location"
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_id": "W4ZCG1J1B2620PMD",
+  "folder": null,
+  "sort": 0,
+  "_key": "!items!W4ZCG1J1B2620PMD"
+}

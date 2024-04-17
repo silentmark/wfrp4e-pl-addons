@@ -1,0 +1,307 @@
+{
+  "_id": "HTe1YiEkqYJ3TaDI",
+  "name": "Przyśpieszenie (Niepodzielnego)",
+  "type": "spell",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_accelerate.jpg",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-unofficial-grimoire/icons/spell_accelerate.jpg",
+      "transfer": false,
+      "_id": "2r9rkLpxC6DgDjoK",
+      "changes": [
+        {
+          "key": "system.details.move.value",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        },
+        {
+          "key": "system.characteristics.i.initial",
+          "mode": 2,
+          "value": "10",
+          "priority": null
+        },
+        {
+          "key": "system.characteristics.ag.initial",
+          "mode": 2,
+          "value": "10",
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "times-up": {
+          "isPassive": false
+        },
+        "wfrp4e": {
+          "effectTrigger": "",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false
+        },
+        "autoanimations": {
+          "id": "c524911a-c0dd-48d8-9709-2f3603dfb9b0",
+          "label": "Przyśpieszenie",
+          "activeEffectType": "ontoken",
+          "menu": "aefx",
+          "macro": {
+            "enable": false,
+            "playWhen": "0"
+          },
+          "primary": {
+            "video": {
+              "dbSection": "static",
+              "menuType": "conditions",
+              "animation": "light",
+              "variant": "pulse",
+              "color": "green",
+              "enableCustom": false,
+              "customPath": ""
+            },
+            "options": {
+              "addTokenWidth": false,
+              "anchor": "0.5",
+              "delay": 0,
+              "elevation": 1000,
+              "fadeIn": 250,
+              "fadeOut": 500,
+              "isMasked": false,
+              "isRadius": false,
+              "isWait": false,
+              "opacity": 1,
+              "persistent": true,
+              "playbackRate": 1,
+              "playOn": "source",
+              "repeat": 1,
+              "repeatDelay": 250,
+              "size": 2,
+              "unbindAlpha": false,
+              "unbindVisibility": false,
+              "zIndex": 1
+            },
+            "sound": {
+              "enable": false,
+              "delay": 0,
+              "repeat": 1,
+              "repeatDelay": 250,
+              "startTime": 0,
+              "volume": 0.75
+            }
+          },
+          "secondary": {
+            "enable": false,
+            "video": {
+              "dbSection": "static",
+              "menuType": "spell",
+              "animation": "curewounds",
+              "variant": "01",
+              "color": "blue",
+              "enableCustom": false,
+              "customPath": ""
+            },
+            "sound": {
+              "enable": false,
+              "delay": 0,
+              "repeat": 1,
+              "repeatDelay": 250,
+              "startTime": 0,
+              "volume": 0.75
+            },
+            "options": {
+              "addTokenWidth": false,
+              "anchor": "0.5",
+              "delay": 0,
+              "elevation": 1000,
+              "fadeIn": 250,
+              "fadeOut": 500,
+              "isMasked": false,
+              "isRadius": true,
+              "isWait": false,
+              "opacity": 1,
+              "repeat": 1,
+              "repeatDelay": 250,
+              "size": 1.5,
+              "zIndex": 1
+            }
+          },
+          "soundOnly": {
+            "sound": {
+              "enable": false,
+              "delay": 0,
+              "repeat": 1,
+              "repeatDelay": 250,
+              "startTime": 0,
+              "volume": 0.75
+            }
+          },
+          "source": {
+            "enable": false,
+            "video": {
+              "dbSection": "static",
+              "menuType": "spell",
+              "animation": "curewounds",
+              "variant": "01",
+              "color": "blue",
+              "enableCustom": false,
+              "customPath": ""
+            },
+            "sound": {
+              "enable": false,
+              "delay": 0,
+              "repeat": 1,
+              "repeatDelay": 250,
+              "startTime": 0,
+              "volume": 0.75
+            },
+            "options": {
+              "addTokenWidth": false,
+              "anchor": "0.5",
+              "delay": 0,
+              "elevation": 1000,
+              "fadeIn": 250,
+              "fadeOut": 500,
+              "isMasked": false,
+              "isRadius": false,
+              "isWait": true,
+              "opacity": 1,
+              "repeat": 1,
+              "repeatDelay": 250,
+              "size": 1,
+              "zIndex": 1
+            }
+          },
+          "isEnabled": true,
+          "isCustomized": true,
+          "version": 5
+        }
+      },
+      "name": "Przyśpieszenie",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!HTe1YiEkqYJ3TaDI.2r9rkLpxC6DgDjoK"
+    }
+  ],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Przyspieszasz ciało celu, zwiększając +1 ruch, +10 zwinność i +10 inicjatywę. Cel zaklęcia podczas jego trwania nie może wykonywać testów splatania, języka (magiczny) ani modlitwy. Kiedy zaklęcie się kończy, cel otrzymuje stan zmęczenie na 1d10 minut.</p><p>Overcast: Dla każdego +2 PS możesz zwiększyć wartości atrybutowe o +1/ +10. za +6 PS, Twój cel zyskuje również dodatkową akcję podczas swojej tury.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Dotyk",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "1",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Bonus SW Rund",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 4,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": "Niepodzielnego"
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.2",
+    "coreVersion": "11.311",
+    "createdTime": 1668198164884,
+    "modifiedTime": 1696797178015,
+    "lastModifiedBy": "Czz7IJA9DEa5LD9E"
+  },
+  "folder": "vuh3rAKKh58ELgB5",
+  "sort": 1000000,
+  "ownership": {
+    "default": 0,
+    "Czz7IJA9DEa5LD9E": 3
+  },
+  "_key": "!items!HTe1YiEkqYJ3TaDI"
+}

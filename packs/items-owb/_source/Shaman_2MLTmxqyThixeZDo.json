@@ -1,0 +1,160 @@
+{
+  "_id": "2MLTmxqyThixeZDo",
+  "name": "Shaman",
+  "type": "trait",
+  "img": "systems/wfrp4e/icons/blank.png",
+  "effects": [
+    {
+      "_id": "vtHQSj1XPWKSu7U2",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "systems/wfrp4e/icons/blank.png",
+      "transfer": true,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "let characteristics = {\n    \"ws\" : 0,\n    \"bs\" : 0,\n    \"s\" : 0,\n    \"t\" : 5,\n    \"i\" : 15,\n    \"ag\" : 0,\n    \"dex\" : 10,\n    \"int\" : 15,\n    \"wp\" : 15,\n    \"fel\" : 0\n}\nlet skills = [\"Channelling\", \"Cool\", \"Dodge\", \"Entertain (Storytelling)\", \"Intuition\", \"Language (Magick)\", \"Lore (Magic)\", \"Perception\"]\nlet skillAdvancements = [5, 15, 10, 10, 15, 10, 10, 20]\nlet talents = [\"Arcane Magic\", \"Petty Magic\", \"Second Sight\"]\nlet trappings = [\"Hand Weapon\", \"Quarterstaff\", \"Ritual Dress incorporating many ingredients and fetishes\"]\nlet items = [];\n\nlet updateObj = this.actor.toObject();\n\nfor (let ch in characteristics)\n{\n    updateObj.system.characteristics[ch].modifier += characteristics[ch];\n}\n\nfor (let index = 0; index < skills.length; index++)\n{\n    let skill = skills[index]\n    let skillItem;\n    skillItem = updateObj.items.find(i => i.name == skill && i.type == \"skill\")\n    if (skillItem)\n        skillItem.system.advances.value += skillAdvancements[index]\n    else \n    {\n        skillItem = await game.wfrp4e.utility.findSkill(skill)\n        skillItem = skillItem.toObject();\n        skillItem.system.advances.value = skillAdvancements[index];\n        items.push(skillItem);\n    }\n}\n\nfor (let talent of talents)\n{\n    let talentItem = await game.wfrp4e.utility.findTalent(talent)\n    if (talentItem)\n    {\n        items.push(talentItem.toObject());\n    }\n    else \n    {\n        ui.notifications.warn(`Could not find ${talent}`, {permanent : true})\n    }\n}\n\nfor (let trapping of trappings) \n{\n    let trappingItem = await game.wfrp4e.utility.findItem(trapping)\n    if (trappingItem)\n    {\n        trappingItem = trappingItem.toObject()\n\n        equip(trappingItem)\n\n        items.push(trappingItem);\n    }\n    else \n    {\n        items.push({name : trapping, type : \"trapping\", \"system.trappingType.value\" : \"clothingAccessories\"})\n        //ui.notifications.warn(`Could not find ${trapping}`, {permanent : true})\n    }\n}\n\nupdateObj.name = updateObj.name += \" \" + this.effect.name\n\nawait this.actor.update(updateObj)\nthis.actor.createEmbeddedDocuments(\"Item\", items);\n\nfunction equip(item)\n{\n    if (item.type == \"armour\")\n        item.system.worn.value = true\n    else if (item.type == \"weapon\")\n        item.system.equipped = true\n    else if (item.type == \"trapping\" && item.system.trappingType.value == \"clothingAccessories\")\n        item.system.worn = true\n}"
+        }
+      },
+      "tint": null,
+      "origin": null,
+      "name": "Shaman",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!2MLTmxqyThixeZDo.vtHQSj1XPWKSu7U2"
+    },
+    {
+      "_id": "qAvOQQOsNHVDhUZZ",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "systems/wfrp4e/icons/blank.png",
+      "transfer": true,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "let choice1 = [\n    {\n        type : \"skill\",\n        name : \"Melee (Basic)\",\n        diff : {\n            system : {\n                advances : {\n                    value : 10\n                }\n            }\n        }\n    }\n]\nlet choice2 = [\n    {\n        type : \"skill\",\n        name : \"Melee (Polearm)\",\n        diff : {\n            system : {\n                advances : {\n                    value : 10\n                }\n            }\n        }\n    }\n]\n\nlet choice = await new Promise((resolve, reject) => {\n    new Dialog({\n        title : \"Choice\",\n        content : \n        `<p>\n        Select your choice\n        </p>\n        <ol>\n        <li>Melee (Basic)</li>\n        <li>Melee (Polearm)</li>\n        </ol> \n        `,\n        buttons : {\n            1 : {\n                label : \"Basic\",\n                callback : () => {\n                    resolve(choice1)\n                }\n            },\n            2 : {\n                label : \"Polearm\",\n                callback : () => {\n                    resolve(choice2)\n                }\n            }\n        }\n    }).render(true)\n}) \n\nlet updateObj = this.actor.toObject();\nlet items = []\nfor (let c of choice)\n{\n    let existing \n    if (c.type == \"skill\")\n    {\n        existing = updateObj.items.find(i => i.name == c.name && i.type == c.type)\n        if (existing && c.diff?.system?.advances?.value)\n        {\n            existing.system.advances.value += c.diff.system.advances.value\n        }\n    }\n\n    if (!existing)\n    {\n        let item = await game.wfrp4e.utility.find(c.name, c.type)\n        if (item)\n        {\n            item = item.toObject()\n            equip(item);\n                items.push(mergeObject(item, (c.diff || {})))\n        }\n        else\n            ui.notifications.warn(`Could not find ${talent}`, {permanent : true})\n    }\n\n}\nawait this.actor.update(updateObj)\nthis.actor.createEmbeddedDocuments(\"Item\", items);\n\nfunction equip(item)\n{\n    if (item.type == \"armour\")\n        item.system.worn.value = true\n    else if (item.type == \"weapon\")\n        item.system.equipped = true\n    else if (item.type == \"trapping\" && item.system.trappingType.value == \"clothingAccessories\")\n        item.system.worn = true\n}"
+        }
+      },
+      "tint": null,
+      "origin": null,
+      "name": "Skill Choice",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!2MLTmxqyThixeZDo.qAvOQQOsNHVDhUZZ"
+    },
+    {
+      "_id": "eGmLTRChIZWsa90P",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "systems/wfrp4e/icons/blank.png",
+      "transfer": true,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "let filters = [\n    {\n        property : \"type\",\n        value : \"spell\"\n    },\n    {\n        property : \"system.lore.value\",\n        value : \"petty\"\n    }\n]\n\nlet petty = await game.wfrp4e.apps.ItemDialog.createFromFilters(filters, 3, \"Choose 3 Petty Spells\")\n\n\nfilters = [\n    {\n        property : \"type\",\n        value : \"spell\"\n    },\n    {\n        property : \"system.lore.value\",\n        value : \"\"\n    }\n]\n\nlet arcane = await game.wfrp4e.apps.ItemDialog.createFromFilters(filters, 3, \"Choose 3 Arcane Spells\")\n\nlet items = petty.concat(arcane).map(i => i.toObject())\n\nthis.actor.createEmbeddedDocuments(\"Item\", items);"
+        }
+      },
+      "tint": null,
+      "origin": null,
+      "name": "Spell Choice",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!2MLTmxqyThixeZDo.eGmLTRChIZWsa90P"
+    }
+  ],
+  "folder": "7MUez20Wjn6nGCz5",
+  "sort": 300000,
+  "flags": {
+    "wfrp4e-owb1": {
+      "initialization-folder": "Templates",
+      "sort": 300000
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Petty magicians and mystics, a Shaman acts as the spiritual advisor of the warband, guiding their Chiefs and assisting in warfare with their crude but powerful spells.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "Xlvhg98mSSaskNtI": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1687730662705,
+    "modifiedTime": 1693273569622,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!2MLTmxqyThixeZDo"
+}

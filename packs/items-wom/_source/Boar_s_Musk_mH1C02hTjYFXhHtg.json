@@ -1,0 +1,118 @@
+{
+  "type": "trapping",
+  "name": "Boar's Musk",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><strong>Onset Time</strong>: 2 hours</p><p><strong>Volatility</strong>: Minor</p><p><strong>Ingredient Cost</strong> @Pay[10gc]{10 GC}</p><p><strong>Ingredient Locale</strong>: Temperate Swamp</p><p><strong>Ingredient Difficulty</strong>: +10</p><p><strong>Creation Difficulty</strong>: +0 SL</p><p><strong>Creation Time</strong>: 2 days</p><p>When consumed, this potion causes beads of foul-smelling oil to appear on the drinker’s skin. This imposes a penalty of –2 SL on all Fellowship- and Dexterity-based Tests. The drinker also gains the @UUID[Compendium.wfrp4e-core.items.MVI0lXcg6vvtooAF]{Distracting} Creature Trait, targeting both friends and foes in range. The effect wears off after [[/r 1d10]] hours.</p>"
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "None"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "img": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/vitality-draught.png",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/vitality-draught.png",
+      "transfer": true,
+      "_id": "JVpqcPGHmpE4Br4w",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prefillDialog",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "if ((args.type == \"characteristic\" && [\"fel\", \"dex\"].includes(args.item)) || (args.type == \"skill\" && [\"fel\", \"dex\"].includes(args.item.system.characteristic.value)))\n      args.prefillModifiers.slBonus -= 2",
+          "reduceQuantity": true
+        }
+      },
+      "name": "Boar's Musk",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!mH1C02hTjYFXhHtg.JVpqcPGHmpE4Br4w"
+    }
+  ],
+  "folder": "PTC5Z3dO3YcFXIkR",
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Potions",
+      "sort": 100000
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1677616103282,
+    "modifiedTime": 1693273575787,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "mH1C02hTjYFXhHtg",
+  "_key": "!items!mH1C02hTjYFXhHtg"
+}

@@ -1,0 +1,109 @@
+{
+  "name": "Zawadiacka rana",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/head.png",
+  "effects": [
+    {
+      "_id": "TPyAKE9d05Y7HuxL",
+      "flags": {
+        "wfrp4e": {
+          "trigger": "endRound",
+          "value": 1
+        },
+        "core": {
+          "statusId": "bleeding"
+        }
+      },
+      "changes": [],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "systems/wfrp4e/icons/conditions/bleeding.png",
+      "label": "Krwawienie",
+      "transfer": true,
+      "disabled": false,
+      "origin": null,
+      "tint": null,
+      "_key": "!items.effects!5128FR3FMHNGKGN0.TPyAKE9d05Y7HuxL"
+    },
+    {
+      "_id": "pnqEtu6lQlejU6CV",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "dialogChoice",
+          "effectApplication": "actor",
+          "effectData": {
+            "description": "Appropriate social test for the scar",
+            "modifier": null,
+            "slBonus": 1,
+            "successBonus": null,
+            "difficultyStep": null
+          }
+        }
+      },
+      "changes": [],
+      "disabled": true,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/injuries/head.png",
+      "label": "Zawadiacka rana",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "_key": "!items.effects!5128FR3FMHNGKGN0.pnqEtu6lQlejU6CV"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wfrp4e-pl.criticals.5128FR3FMHNGKGN0"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Mocny cios przez czoło i policzek. Postać otrzymuje 1 poziom Stanu @Condition[Krwawienie]. Po wyleczeniu takiej rany pozostaje budząca szacunek blizna, która zapewnia premię +1 PS do odpowiednich Testów w kontaktach społecznych. Premię tę można otrzymać tylko raz.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "0",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Głowa",
+      "type": "String",
+      "label": "Location"
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_id": "5128FR3FMHNGKGN0",
+  "folder": null,
+  "sort": 0,
+  "_key": "!items!5128FR3FMHNGKGN0"
+}

@@ -1,0 +1,139 @@
+{
+  "name": "Krasnoludzki Runiczny Pierścień",
+  "type": "trapping",
+  "img": "modules/wfrp4e-core/icons/equipment/clothing_and_accessories/signet-ring.png",
+  "effects": [
+    {
+      "icon": "modules/forien-armoury/icons/runes/talismanic-rune-temporary.webp",
+      "transfer": true,
+      "name": "Runa Przeznaczenia",
+      "_id": "gOJt1fMAYaLmjx4P",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "Negates the first attack that would reduce Wounds to 0.",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "preTakeDamage",
+          "effectApplication": "equipped",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "let wounds = args.actor.status.wounds.value;\nlet woundLoss = args.totalWoundLoss;\nlet woundsAfter= wounds - woundLoss;\n\nif (woundsAfter < 0) {\n  args.totalWoundLoss = 0;\n  let msg = `<strong>${game.i18n.localize('Forien.Armoury.Runes.RuneOfFate.name')}:</strong> ${game.i18n.localize('Forien.Armoury.Runes.RuneOfFate.effect')}`\n  args.extraMessages.push(msg);\n\n  this.effect.update({disabled: true});\n}",
+          "areaEffect": false
+        },
+        "forien-armoury": {
+          "isTemporary": true
+        },
+        "core": {
+          "sourceId": "Compendium.forien-armoury.forien-armoury.Item.VZyMhFCFlkPZ47J8.ActiveEffect.vdHxUWCzrQwwkl5F"
+        },
+        "times-up": {
+          "isPassive": true
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!8MpTb12W1x6ECZzt.gOJt1fMAYaLmjx4P"
+    }
+  ],
+  "flags": {
+    "_sheetTab": "details",
+    "core": {},
+    "babele": {
+      "translated": true,
+      "hasTranslation": true,
+      "originalName": "Jewellery"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Bardzo rzadki i bardzo cenny Runiczny Pierścień wykonany przez krasnoludzkich Kowali Run. Potrafi uratować od pewnej śmierci, po czym wymaga ponownego napełnienia magią runiczną. Niezwykle cenny, gdy jego ładunek jest aktywny, w przypadku zużytego łądunku, wciąż bardzo wartościowy. Zagadką jest, jakim cudem trafił w ręce Wernera.</p><p></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "100",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "common"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "clothingAccessories"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": [
+        {
+          "name": "durable",
+          "value": 3
+        }
+      ]
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.2",
+    "coreVersion": "11.311",
+    "createdTime": 1663627495176,
+    "modifiedTime": 1696767878595,
+    "lastModifiedBy": "Czz7IJA9DEa5LD9E"
+  },
+  "_id": "8MpTb12W1x6ECZzt",
+  "folder": "ZP0UuGj1tO64CDBP",
+  "sort": 125000,
+  "ownership": {
+    "default": 0,
+    "Czz7IJA9DEa5LD9E": 3
+  },
+  "_key": "!items!8MpTb12W1x6ECZzt"
+}

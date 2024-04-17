@@ -1,0 +1,82 @@
+{
+  "_id": "LFDpIur2uyqkYNKP",
+  "name": "Enthuse",
+  "permission": {
+    "default": 0,
+    "rPtCM2fgOqxK9HLk": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You project hope and enthusiasm into the mind of a living person of your size or smaller. The target gains 2 Advantage and receives a +10 bonus to all Willpower and Fellowship-based Tests. The spell has no eﬀect on creatures with any of these Traits: Bestial, Daemonic, Immunity to Psychology, Mindless, Undead.&nbsp;</p>\n<p>Overcast: For every +2 SL, you may increase the attribute eﬀect by +10.&nbsp;</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower yards"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "1",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus Rounds",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 3,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.0I7oz5Qar4PQ2DB7"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_enthuse.jpg",
+  "effects": [],
+  "_key": "!items!LFDpIur2uyqkYNKP"
+}

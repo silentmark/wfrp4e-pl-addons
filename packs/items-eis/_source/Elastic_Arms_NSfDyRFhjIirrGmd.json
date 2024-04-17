@@ -1,0 +1,81 @@
+{
+  "_id": "NSfDyRFhjIirrGmd",
+  "name": "Elastic Arms",
+  "type": "mutation",
+  "img": "modules/wfrp4e-core/icons/mutations/mutation.png",
+  "effects": [
+    {
+      "_id": "SOZwe4JHmM0IFkEw",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prePrepareItem",
+          "effectApplication": "actor",
+          "script": "if (args.item.type != \"weapon\")\n    return\n\nlet reach = args.item.reach.value\nlet reachNum = game.wfrp4e.config.reachNum[reach]\nreachNum += 2\nif (reachNum > 7)\n    reachNum = 7\n\nlet key = game.wfrp4e.utility.findKey(reachNum, game.wfrp4e.config.reachNum)\n\nargs.item.reach.value = key",
+          "preventDuplicateEffects": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/mutations/mutation.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Elastic Arms",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!NSfDyRFhjIirrGmd.SOZwe4JHmM0IFkEw"
+    }
+  ],
+  "folder": "QOjm4pUE8aywpu9Z",
+  "sort": 100001,
+  "flags": {},
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You may count any melee weapon as having a Reach up to 2 steps longer</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "mutationType": {
+      "label": "Type",
+      "type": "String",
+      "value": "physical"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Modifier"
+    },
+    "modifiesSkills": {
+      "value": false,
+      "type": "Boolean",
+      "label": "Skill Modifier?"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "sAiwDCZFd21tgaDN": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1691299878976,
+    "modifiedTime": 1693273565131,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!NSfDyRFhjIirrGmd"
+}

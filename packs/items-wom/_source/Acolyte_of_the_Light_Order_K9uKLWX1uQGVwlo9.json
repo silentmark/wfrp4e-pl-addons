@@ -1,0 +1,98 @@
+{
+  "name": "Acolyte of the Light Order",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>@UUID[Compendium.wfrp4e-wom.journals.4hwftTG3PqNnmUfK.JournalEntryPage.L1HMS581Scz2IyCJ]{Hierophant}</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "careergroup": {
+      "type": "String",
+      "label": "Career Group",
+      "value": "Hierophant"
+    },
+    "class": {
+      "type": "String",
+      "label": "Class",
+      "value": "Academics"
+    },
+    "current": {
+      "type": "Boolean",
+      "value": false
+    },
+    "complete": {
+      "type": "Boolean",
+      "value": false
+    },
+    "level": {
+      "type": "String",
+      "label": "Career Level",
+      "value": "1"
+    },
+    "status": {
+      "tier": "b",
+      "standing": 3
+    },
+    "characteristics": [
+      "i",
+      "int",
+      "wp"
+    ],
+    "skills": [
+      "Channelling (Hysh)",
+      "Dodge",
+      "Entertain (Sing)",
+      "Intuition",
+      "Language (Magick)",
+      "Lore (Magic)",
+      "Lore (Nehekhara)",
+      "Melee (Basic)",
+      "Melee (Polearm)",
+      "Perception"
+    ],
+    "talents": [
+      "Aethyric Attunement",
+      "Petty Magic",
+      "Read/Write",
+      "Second Sight"
+    ],
+    "trappings": [
+      "Candle with Holder",
+      "Grimoire",
+      "Staff"
+    ],
+    "incomeSkill": [
+      4
+    ]
+  },
+  "type": "career",
+  "folder": "EGdnaG0JFAHnazff",
+  "img": "modules/wfrp4e-wom/assets/icons/careers/hierophant-01.png",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Hierophant",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676242085600,
+    "modifiedTime": 1693273575716,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "K9uKLWX1uQGVwlo9",
+  "_key": "!items!K9uKLWX1uQGVwlo9"
+}

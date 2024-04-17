@@ -1,0 +1,74 @@
+{
+  "name": "Nadwyrężone kolano",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+  "effects": [
+    {
+      "_id": "BjIyeZdTw8TPV9qC",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prefillDialog",
+          "effectApplication": "actor",
+          "script": "if (args.type == \"skill\" && args.item.characteristic.key == \"ag\") {\n   args.prefillModifiers.modifier -= 20;\n}\nif (args.type == \"characteristic\" && args.item == \"ag\") {\n   args.prefillModifiers.modifier -= 20;\n}"
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+      "label": "Nadwyrężone kolano",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "_key": "!items.effects!1ULLFQNG40L7HK6V.BjIyeZdTw8TPV9qC"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wfrp4e-pl.criticals.1ULLFQNG40L7HK6V"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Z powodu niezdarnego kroku kolano nie wytrzymuje. Wszystkie Testy Zwinności otrzymują karę -20 na [[/r 1d10]] round.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "2",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Noga",
+      "type": "String",
+      "label": "Location"
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_id": "1ULLFQNG40L7HK6V",
+  "folder": null,
+  "sort": 0,
+  "_key": "!items!1ULLFQNG40L7HK6V"
+}

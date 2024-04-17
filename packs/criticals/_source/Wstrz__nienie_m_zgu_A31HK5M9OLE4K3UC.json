@@ -1,0 +1,169 @@
+{
+  "name": "Wstrząśnienie mózgu",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/head.png",
+  "effects": [
+    {
+      "_id": "4o8C5gO5JrPMQy7V",
+      "flags": {
+        "wfrp4e": {
+          "trigger": "endRound",
+          "effectTrigger": "dialogChoice",
+          "effectData": {
+            "description": "Tests related to hearing",
+            "modifier": "-10 * this.flags.wfrp4e.value"
+          },
+          "value": 1
+        },
+        "core": {
+          "statusId": "deafened"
+        }
+      },
+      "changes": [],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "systems/wfrp4e/icons/conditions/deafened.png",
+      "label": "Ogłuszenie",
+      "transfer": true,
+      "disabled": false,
+      "origin": null,
+      "tint": null,
+      "_key": "!items.effects!A31HK5M9OLE4K3UC.4o8C5gO5JrPMQy7V"
+    },
+    {
+      "_id": "F77tiXuPleKy6QKB",
+      "flags": {
+        "wfrp4e": {
+          "trigger": "endRound",
+          "value": 2
+        },
+        "core": {
+          "statusId": "bleeding"
+        }
+      },
+      "changes": [],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "systems/wfrp4e/icons/conditions/bleeding.png",
+      "label": "Krwawienie",
+      "transfer": true,
+      "disabled": false,
+      "origin": null,
+      "tint": null,
+      "_key": "!items.effects!A31HK5M9OLE4K3UC.F77tiXuPleKy6QKB"
+    },
+    {
+      "_id": "TYzxQVbjCM2iyLVl",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "actor",
+          "script": "let roll = (await new Roll(\"1d10\").roll()).total;\r\nawait args.actor.addCondition(\"stunned\", roll);",
+          "hide": false,
+          "preventDuplicateEffects": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/injuries/head.png",
+      "label": "Wstrząśnienie mózgu",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "_key": "!items.effects!A31HK5M9OLE4K3UC.TYzxQVbjCM2iyLVl"
+    },
+    {
+      "_id": "AyoqSH1wIlPXFrdJ",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prefillDialog",
+          "script": "args.prefillModifiers.modifier -= 10 * getProperty(this.effect, 'flags.wfrp4e.value');",
+          "value": 1
+        },
+        "core": {
+          "statusId": "fatigued"
+        }
+      },
+      "changes": [],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "systems/wfrp4e/icons/conditions/fatigued.png",
+      "label": "Zmęczenie",
+      "transfer": true,
+      "disabled": false,
+      "origin": null,
+      "tint": null,
+      "_key": "!items.effects!A31HK5M9OLE4K3UC.AyoqSH1wIlPXFrdJ"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wfrp4e-pl.criticals.A31HK5M9OLE4K3UC"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Mózg obija się wewnątrz czaszki, a krew wypływa z nosa i uszu. Postać otrzymuje 1 poziom Stanu @Condition[Ogłuszenie], 2 poziomy Stanu @Condition[Krwawienie] oraz [[/r 1d10]] poziomów Stanu @Condition[Oszołomienia]. Ponadto na 1k10 dni uznaje się ją również za Zmęczoną. Jeśli postać otrzyma kolejną Ranę Krytyczną w głowę, będąc jeszcze Zmęczoną po ostatnim wstrząśnieniu mózgu, musi wykonać Przeciętny (+20) Test Odporności. Jeśli ten się nie powiedzie, otrzymuje Stan @Condition[Nieprzytomny].</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "4",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Głowa",
+      "type": "String",
+      "label": "Location"
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_id": "A31HK5M9OLE4K3UC",
+  "folder": null,
+  "sort": 0,
+  "_key": "!items!A31HK5M9OLE4K3UC"
+}

@@ -1,0 +1,93 @@
+{
+  "_id": "kTQ4QveIJNxWq6CT",
+  "name": "Ponadczasowa Przebiegłość",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+      "transfer": true,
+      "name": "Ponadczasowa Przebiegłość",
+      "_id": "xSCU20a6turEqA7T",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "let advantage = game.settings.get(\"wfrp4e\", \"groupAdvantageValues\");\r\nif (advantage.enemies >= 2) {\r\n  advantage.enemies = advantage.enemies - 2;\r\n  game.wfrp4e.utility.updateGroupAdvantage(advantage);\r\n  this.actor.addCondition(\"surprised\");\r\n  let owner = fromUuidSync(this.effect.origin);\r\nChatMessage.create({\r\n  content: `<h3>${owner.name} - ${this.effect.name}</h3>\r\n  <p>${this.actor.name} otrzymał stan Zaskoczenie</p>`\r\n});\r\n} else {\r\n  ui.notifications.warn(\"Nie wystarczająca liczba przewag\");\r\n}"
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!kTQ4QveIJNxWq6CT.xSCU20a6turEqA7T"
+    }
+  ],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Jesteś ekspertem w zasadzkach i ukradkowych atakach, które wprawiają przeciwników w osłupienie. Możesz wydać 2 Przewagi, aby wywołać Zaskoczenie przeciwko jednemu wrogowi, nawet jeśli walka już trwa.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "i"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": "Przeciwstawne testy mające na celu wywołanie lub uniknięcie zaskoczenia"
+    }
+  },
+  "folder": "IdBKVE70UjsZfSoR",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.311",
+    "createdTime": 1698788102832,
+    "modifiedTime": 1707139629241,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 5600000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!kTQ4QveIJNxWq6CT"
+}

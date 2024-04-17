@@ -1,0 +1,352 @@
+{
+  "name": "Pole cierniowe",
+  "type": "spell",
+  "img": "modules/wfrp4e-core/icons/spells/forest-of-thorns.png",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-core/icons/spells/forest-of-thorns.png",
+      "transfer": false,
+      "_id": "F0HGPEB8N3XjLQh0",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "times-up": {
+          "isPassive": false
+        },
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "area",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "if (!this.actor.getItemTypes(\"talent\").find(x=>x.name == \"Magia Tajemna (Życia)\")) {\n    let test = await this.actor.setupCharacteristic(\"ag\", {absolute: {difficulty : \"hard\"}});\n    await test.roll();\n    if (test.result.outcome == \"failure\") {\n    ChatMessage.create({\n        content : `<p>${this.actor.name} został pochwycony przez Pole Cierniowe</p>`,\n        speaker : {alias : \"Pole Cierniowe\"},\n        flavor : \"Pole Cierniowe\"\n    });\n    await this.actor.addCondition(\"bleeding\");\n    await this.actor.addCondition(\"entangled\", 1, args.actor.characteristics.wp.value);\n    }\n}",
+          "isAsync": true
+        }
+      },
+      "name": "Pole cierniowe (AoE)",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!zT5Knx2LyPTb81j3.F0HGPEB8N3XjLQh0"
+    }
+  ],
+  "flags": {
+    "core": {},
+    "autoanimations": {
+      "id": "666ac51c-0e0b-469e-bf55-188c70541bef",
+      "label": "Pole cierniowe",
+      "macro": {
+        "enable": false,
+        "playWhen": "0"
+      },
+      "menu": "templatefx",
+      "primary": {
+        "video": {
+          "dbSection": "templatefx",
+          "menuType": "circle",
+          "animation": "armsofhadar",
+          "variant": "01",
+          "color": "darkgreen",
+          "enableCustom": false,
+          "customPath": ""
+        },
+        "sound": {
+          "enable": false,
+          "delay": 0,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "startTime": 0,
+          "volume": 0.75
+        },
+        "options": {
+          "contrast": 0,
+          "delay": 0,
+          "elevation": 0,
+          "isMasked": false,
+          "isWait": false,
+          "occlusionAlpha": 0.5,
+          "occlusionMode": "3",
+          "opacity": 1,
+          "persistent": true,
+          "persistType": "attachtemplate",
+          "playbackRate": 1,
+          "removeTemplate": false,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "rotate": 0,
+          "saturate": 0,
+          "scale": "1",
+          "tint": false,
+          "tintColor": "#FFFFFF",
+          "zIndex": 1,
+          "aboveTemplate": true
+        }
+      },
+      "secondary": {
+        "enable": false,
+        "video": {
+          "dbSection": "static",
+          "menuType": "spell",
+          "animation": "curewounds",
+          "variant": "01",
+          "color": "blue",
+          "enableCustom": false,
+          "customPath": ""
+        },
+        "sound": {
+          "enable": false,
+          "delay": 0,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "startTime": 0,
+          "volume": 0.75
+        },
+        "options": {
+          "addTokenWidth": false,
+          "anchor": "0.5",
+          "contrast": 0,
+          "delay": 0,
+          "elevation": 1000,
+          "fadeIn": 250,
+          "fadeOut": 500,
+          "isMasked": false,
+          "isRadius": true,
+          "isWait": false,
+          "opacity": 1,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "saturate": 0,
+          "size": 1.5,
+          "tint": false,
+          "tintColor": "#FFFFFF",
+          "zIndex": 1
+        }
+      },
+      "soundOnly": {
+        "sound": {
+          "enable": false,
+          "delay": 0,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "startTime": 0,
+          "volume": 0.75
+        }
+      },
+      "source": {
+        "enable": false,
+        "video": {
+          "dbSection": "static",
+          "menuType": "spell",
+          "animation": "curewounds",
+          "variant": "01",
+          "color": "blue",
+          "enableCustom": false,
+          "customPath": ""
+        },
+        "sound": {
+          "enable": false,
+          "delay": 0,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "startTime": 0,
+          "volume": 0.75
+        },
+        "options": {
+          "addTokenWidth": false,
+          "anchor": "0.5",
+          "contrast": 0,
+          "delay": 0,
+          "elevation": 1000,
+          "fadeIn": 250,
+          "fadeOut": 500,
+          "isMasked": false,
+          "isRadius": false,
+          "isWait": true,
+          "opacity": 1,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "saturate": 0,
+          "size": 1,
+          "tint": false,
+          "tintColor": "#FFFFFF",
+          "zIndex": 1
+        }
+      },
+      "target": {
+        "enable": false,
+        "video": {
+          "dbSection": "static",
+          "menuType": "spell",
+          "animation": "curewounds",
+          "variant": "01",
+          "color": "blue",
+          "enableCustom": false,
+          "customPath": ""
+        },
+        "sound": {
+          "enable": false,
+          "delay": 0,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "startTime": 0,
+          "volume": 0.75
+        },
+        "options": {
+          "addTokenWidth": false,
+          "anchor": "0.5",
+          "contrast": 0,
+          "delay": 0,
+          "elevation": 1000,
+          "fadeIn": 250,
+          "fadeOut": 500,
+          "isMasked": false,
+          "isRadius": false,
+          "opacity": 1,
+          "persistent": false,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "saturate": 0,
+          "size": 1,
+          "tint": false,
+          "tintColor": "#FFFFFF",
+          "unbindAlpha": false,
+          "unbindVisibility": false,
+          "zIndex": 1
+        }
+      },
+      "isEnabled": true,
+      "isCustomized": true,
+      "fromAmmo": false,
+      "version": 5
+    },
+    "exportSource": {
+      "world": "wfrp4",
+      "system": "wfrp4e",
+      "coreVersion": "11.311",
+      "systemVersion": "7.0.2"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Zaklęcie to można rzucić jedynie na połać ziemi (choć może to być nawet mały jej skrawek). Tworzysz gęsty splot krzewów jeżyn i pnączy pokrytych niezwykle ostrymi cierniami, które błyskawicznie wyrastają z ziemi, pokrywając cały Zasięg.</p>\n<p>&nbsp;</p>\n<p>Gdy zaklęcie jest aktywne, wszelkie próby przejścia przez ten teren piechotą wymagają zdania <strong>Trudnego (-20) Testu Zwinności</strong>, o ile postać nie ma Talentu <em>Magia Tajemna (Życie)</em>. Porażka oznacza +1 poziom <em>Krwawienia</em> i +1 poziom <em>Pochwycenia</em> o Sile równej twojej Sile Woli. Po zakończeniu zaklęcia rośliny pozostają na miejscu, ale tracą swoje nadprzyrodzone właściwości.</p><p>\n\n <b>Tradycja:</b> Zaklęcia rzucane przy pomocy Jadeitowego Wiatru <i>Ghyran</i> są przesycone życiem i najczęściej objawiają się w postaci wibrującego, zielonego światła, któremu towarzyszą naturalne zjawiska o nadprzyrodzonych właściwościach. Pnącza, podszycie, drzewa i rzeki naginają się do woli druidów. Otrzymujesz premię +10 do Testów Rzucania Zaklęć i Splatania Magii, jeśli znajdujesz się w środowisku wiejskim lub dzikim. Żywe stworzenia (np. te, które nie mają Cechy Stworzenia @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoniczny} lub  @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Ożywieniec}) będące celem magii z Tradycji Życia tracą wszystkie poziomy Stanu @Condition[Krwawienie] i @Condition[Zmęczenie] dzięki temu, że życiodajna magia przepływa przez ich ciała. Z drugiej strony stworzenia, które mają Cechę Stworzenia @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Ożywieniec}, otrzymują dodatkowe Obrażenia równe Bonusowi z Siły Woli rzucającego, które ignorują Bonus za Wytrzymałość oraz Punkty Pancerza.<p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "life",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Siła Woli metrów",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Bonus SW metrów",
+      "aoe": true
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Bonus SW Rund",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 6,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": true
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": "rId24A0JzufzIzCF"
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_id": "zT5Knx2LyPTb81j3",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.2",
+    "coreVersion": "11.311",
+    "createdTime": 1670886667646,
+    "modifiedTime": 1696797178015,
+    "lastModifiedBy": "Czz7IJA9DEa5LD9E"
+  },
+  "folder": "vuh3rAKKh58ELgB5",
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "Czz7IJA9DEa5LD9E": 3
+  },
+  "_key": "!items!zT5Knx2LyPTb81j3"
+}

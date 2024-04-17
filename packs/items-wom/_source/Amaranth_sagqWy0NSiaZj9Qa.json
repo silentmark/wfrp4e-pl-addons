@@ -1,0 +1,154 @@
+{
+  "name": "Amaranth",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Your skin takes on a faint purplish hue as you become more resistant to death and corruption. Critical Hit table rolls against you are modified by –10, and you gain the @UUID[Compendium.wfrp4e-core.items.vMYEkrWj0ip6ZOdv]{Resistance (Poison, Disease, and Chaos)} Talent. If you already know these Talents, add +1 level per +2 SL.</p><p><strong>Lore:</strong> Targets afflicted by spells from the Lore of Death are drained of life, enervated, and listless. You may assign +1 @Condition[Fatigued] Condition to any living target affected by a spell from this lore. A target may only ever have a single Fatigued Condition gained in this manner at any one time.</p><p></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "death",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "You",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "You",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus minutes",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 7,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": true,
+      "label": "Talent Levels",
+      "valuePerOvercast": {
+        "type": "value",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "value",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "type": "spell",
+  "folder": "Sp5iIzHQXN58oR03",
+  "img": "modules/wfrp4e-core/icons/spells/death.png",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-core/icons/spells/death.png",
+      "transfer": false,
+      "_id": "rbf8pyQtLQH0VorC",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "addItems",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "fromUuid(\"Compendium.wfrp4e-core.items.vMYEkrWj0ip6ZOdv\").then(item => {\n   let data = item.toObject();\n   data.name += \" (Poison, Disease, Chaos)\"\n   data.system.tests.value = data.system.tests.value.replace(\"the associated Threat\", \"Poison, Disease, and Chaos\")\n   data.system.advances.value = {{overcast.usage.other.current}}\n   Item.create(data, {fromEffect : this.effect.id, parent : this.actor})\n})"
+        }
+      },
+      "name": "Amaranth",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!sagqWy0NSiaZj9Qa.rbf8pyQtLQH0VorC"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Death",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676403419767,
+    "modifiedTime": 1693273575804,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "sagqWy0NSiaZj9Qa",
+  "_key": "!items!sagqWy0NSiaZj9Qa"
+}

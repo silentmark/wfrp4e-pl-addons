@@ -1,0 +1,74 @@
+{
+  "name": "Skręcona kostka",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+  "effects": [
+    {
+      "_id": "9dEo6xx3LZwu32td",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prefillDialog",
+          "effectApplication": "actor",
+          "script": "if (args.type == \"skill\" && args.item.characteristic.key == \"ag\") {\n   args.prefillModifiers.modifier -= 10;\n}\nif (args.type == \"characteristic\" && args.item == \"ag\") {\n   args.prefillModifiers.modifier -= 10;\n}"
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+      "label": "Skręcona kostka",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "_key": "!items.effects!MU8L927COGP1JF7P.9dEo6xx3LZwu32td"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wfrp4e-pl.criticals.MU8L927COGP1JF7P"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Niepewny krok kończy się skręceniem kostki. Wszystkie Testy Zwinności obarczone są karą -10 na [[/r 1d10]] Rund.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "1",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Noga",
+      "type": "String",
+      "label": "Location"
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_id": "MU8L927COGP1JF7P",
+  "folder": null,
+  "sort": 0,
+  "_key": "!items!MU8L927COGP1JF7P"
+}

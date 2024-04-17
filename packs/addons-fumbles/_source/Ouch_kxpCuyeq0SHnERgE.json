@@ -1,0 +1,85 @@
+{
+  "name": "Ouch",
+  "type": "critical",
+  "_id": "kxpCuyeq0SHnERgE",
+  "img": "icons/skills/melee/shield-damaged-broken-blue.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Trafisz siebie, lub ranisz o otoczenie, albo przeciwnik wykorzystuje okazję i zadaje ranę. Tracisz 1 punkt żywotności, ignorując premię do wytrzymałości i punkty pancerza</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "0",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "",
+      "type": "String",
+      "label": "Location"
+    }
+  },
+  "effects": [
+    {
+      "icon": "icons/skills/melee/shield-damaged-broken-blue.webp",
+      "transfer": true,
+      "name": "Ouch",
+      "_id": "h9S2srwI3fGiO0bu",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "await this.actor.applyBasicDamage(1, { damageType: game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL });\n\nconst target = this.actor;\nconst effectName = this.effect.name;\nsetTimeout(() => {\n    let itm = target.getItemTypes(\"critical\").find(x=>x.name == effectName);\n    target.deleteEmbeddedDocuments(\"Item\", [itm.id])\n}, 500);"
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!kxpCuyeq0SHnERgE.h9S2srwI3fGiO0bu"
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Czz7IJA9DEa5LD9E": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.305",
+    "createdTime": 1689629192693,
+    "modifiedTime": 1689795763876,
+    "lastModifiedBy": "Czz7IJA9DEa5LD9E"
+  },
+  "_key": "!items!kxpCuyeq0SHnERgE"
+}

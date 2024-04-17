@@ -1,0 +1,82 @@
+{
+  "_id": "CYHzBMiGu05WsKc7",
+  "name": "Rat Thrall",
+  "permission": {
+    "default": 0,
+    "LhiA8OMMa0ToAWEe": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You summon an ordinary brown rat. While the spell lasts, you may communicate with the rat as if you shared a common language and it will obey all of your commands even if it would cause its own death to do so. Rat thralls can fetch small objects, gnaw through ropes, and other general tasks that an ordinary rat should be able to do, but such missions are limited by the rat&rsquo;s animal intelligence.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "petty",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "You"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "You",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus hours",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 0,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.DLBwwD4nvN41sN5V"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_chittering.jpg",
+  "effects": [],
+  "_key": "!items!CYHzBMiGu05WsKc7"
+}

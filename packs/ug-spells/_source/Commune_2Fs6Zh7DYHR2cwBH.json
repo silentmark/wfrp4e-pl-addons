@@ -1,0 +1,82 @@
+{
+  "name": "Commune",
+  "permission": {
+    "default": 0,
+    "OfKMBdcUK6oV9G48": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Using your familiar as medium, you converse with the unseen spirits of the wood, river, desert, caverns, etc (ie, whichever natural locale you are in). You have no control or command over these spirits, but may ask a single question per minute of the spell’s Duration. The spirit(s) that answer will do so honestly, without bias, about the surrounding area and local events. Only you and your familiar hear the spirits answer.</p>\n<p>&nbsp;</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Druid",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "You"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "You",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus minutes",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 0,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.fwRkvRLMMGgkVQrm"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_commune.jpg",
+  "effects": [],
+  "_id": "2Fs6Zh7DYHR2cwBH",
+  "_key": "!items!2Fs6Zh7DYHR2cwBH"
+}

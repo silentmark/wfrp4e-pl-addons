@@ -1,0 +1,154 @@
+{
+  "name": "Captivating Flame",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You cause flames to dance and mesmerise observers. Target a fire source no larger than a torch. One random character who’s looking in the direction of the fire must pass a <strong>Challenging (+0) Cool</strong> Test or receive 3 @Condition[Stunned] Conditions. Mesmerised characters are oblivious to everything else until they remove all @Condition[Stunned] Conditions gained from this spell. Attacking a Stunned target instantly removes all @Condition[Stunned] Conditions gained from this spell.</p><p>With +2 SL on your Casting Test you may enchant a larger fire, such as a brazier or campfire, which affects 2 random observers. With +4 SL you may enchant a massive fire, such as a pyre or burning building, which affects all observers.</p><p>\n\n <b>Lore:</b> You may inflict +1 @Condition[Ablaze] Condition on anyone targeted by spells from the Lore of Fire, unless they also possess the Arcane Magic (Fire) Talent. Every Ablaze condition within Willpower Bonus yards adds +10 to attempts to Channel or Cast with Aqshy. <p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "fire",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Half Willpower yards",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "1 fire",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus rounds",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 3,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "type": "spell",
+  "folder": "1nRnnQNRmL8iAiA3",
+  "img": "modules/wfrp4e-core/icons/spells/fire.png",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-core/icons/spells/fire.png",
+      "transfer": false,
+      "_id": "nBW2nuFYLXLSyyTN",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "this.actor.setupSkill(game.i18n.localize(\"NAME.Cool\")).then(async test => {\n    await test.roll();\n    if (!test.succeeded)\n    {\n        this.actor.addCondition(\"stunned\", 3)\n    }\n})"
+        }
+      },
+      "name": "Captivating Flame",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!hrpvbTvv8dukcU5o.nBW2nuFYLXLSyyTN"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Fire",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676404365395,
+    "modifiedTime": 1693273575776,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "hrpvbTvv8dukcU5o",
+  "_key": "!items!hrpvbTvv8dukcU5o"
+}

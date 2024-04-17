@@ -1,0 +1,126 @@
+{
+  "_id": "R4qQc4fnxQzuNg9l",
+  "name": "Common Cold",
+  "type": "disease",
+  "img": "modules/wfrp4e-core/icons/diseases/disease.png",
+  "effects": [
+    {
+      "_id": "btkgtpkvDfV3p2v2",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
+      "transfer": true,
+      "flags": {
+        "wfrp4e": {
+          "symptom": true
+        }
+      },
+      "origin": null,
+      "tint": null,
+      "name": "Coughs and Sneezes",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!R4qQc4fnxQzuNg9l.btkgtpkvDfV3p2v2"
+    },
+    {
+      "_id": "yVcThJbtx8iXD7s0",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
+      "transfer": true,
+      "flags": {
+        "wfrp4e": {
+          "effectApplication": "actor",
+          "effectTrigger": "prepareData",
+          "symptom": true,
+          "script": "\n                    if (game.user.isUniqueGM)\n                    {\n                        let fatigued = args.actor.hasCondition(\"fatigued\")\n                        if (!fatigued)\n                        {\n                            args.actor.addCondition(\"fatigued\")\n                            ui.notifications.notify(\"Fatigued added to \" + args.actor.name + \" which cannot be removed until the Malaise symptom is gone.\")\n                        }\n                    }\n                    "
+        }
+      },
+      "origin": null,
+      "tint": null,
+      "name": "Malaise",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!R4qQc4fnxQzuNg9l.yVcThJbtx8iXD7s0"
+    }
+  ],
+  "folder": "XsC9EhjxkwhKYROH",
+  "sort": 0,
+  "flags": {
+    "wfrp4e-eis": {
+      "initialization-folder": "Diseases"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Seasonal, like the reddening of leaves in the autumn, the Common Cold is nonetheless a constant bane of  the Old World. What begins with weak coughing and sneezing might develop into something serious in a matter of days, if not tended to. Every elderly person in the Empire has their own home remedies and wards against the illness, as well as memories of it worsening and taking friends and loved ones into Morr’s embrace.</p><p>Characters with the Common Cold who again suffer from Exposure due to rain or snow will have the duration of the disease extended by [[/r 1d10]] days. If a Character ever suffers more than 14 days of the Common Cold, it develops into @UUID[Compendium.wfrp4e-eis.items.K74AhzejwTdzTc1w]{Pneumonia}.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "contraction": {
+      "label": "Contraction",
+      "value": "If you fail a Challenging (+0) Endurance Test when exposed to the elements, or when an infected person sneezes or coughs in your immediate vicinity.",
+      "type": "String"
+    },
+    "incubation": {
+      "label": "Incubation",
+      "value": "20+4d10",
+      "unit": "hours",
+      "type": "String"
+    },
+    "duration": {
+      "label": "Duration",
+      "value": "1d10",
+      "type": "String",
+      "unit": "days",
+      "active": false
+    },
+    "symptoms": {
+      "label": "Symptoms",
+      "value": "Coughs and Sneezes, Malaise",
+      "type": "String"
+    },
+    "permanent": {
+      "label": "Permanent",
+      "value": "",
+      "type": "String"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "34JMfpmBvTmVYPh4": 3,
+    "VnnpieLwbiAu3Owf": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1693273565136,
+    "modifiedTime": 1693273565136,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!R4qQc4fnxQzuNg9l"
+}

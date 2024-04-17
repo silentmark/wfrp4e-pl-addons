@@ -1,0 +1,122 @@
+{
+  "name": "Vital Growth",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You imbue a single plant or tree with <em>Ghyran</em> causing sudden growth. The target grows to its maximum natural height. You can double the maximum height for +2 SL and an additional round spent in concentration on casting the spell, triple it for +4 SL and two additional rounds of concentration, or quadruple it for +6 SL and three additional rounds of concentration.</p><p><strong>Lore:</strong> Receive a +10 bonus to Casting and Channeling rolls when in a rural or wilderness environment. Living creatures — e.g. those without the @UUID[Compendium.wfrp4e-core.items.v3uzEthcq0JRar0J]{Daemonic} or @UUID[Compendium.wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Undead} Creature Traits — targeted by Arcane Spells from the Lore of Life have all @Condition[Fatigued] and @Condition[Bleeding] Conditions removed after any other effects have been applied as life magic floods through them. Creatures with the @UUID[Compendium.wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Undead} Creature Trait, on the other hand, suffer additional Damage equal to your Willpower Bonus, ignoring Toughness Bonus and Armor Points, if affected by any spell cast with the Lore of Life.</p><p></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "life",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower Bonus yards",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "1",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Instant",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 7,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": true,
+      "label": "Height",
+      "valuePerOvercast": {
+        "type": "value",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "value",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "type": "spell",
+  "folder": "O2HAVLlkGzyX0NIV",
+  "img": "modules/wfrp4e-core/icons/spells/life.png",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Life",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676322951244,
+    "modifiedTime": 1693273575799,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "qvQMgY2ycAPYpHCO",
+  "_key": "!items!qvQMgY2ycAPYpHCO"
+}

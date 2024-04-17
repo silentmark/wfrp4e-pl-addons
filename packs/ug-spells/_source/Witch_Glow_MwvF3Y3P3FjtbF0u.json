@@ -1,0 +1,84 @@
+{
+  "name": "Witch Glow",
+  "permission": {
+    "default": 0,
+    "49AXXoPz63AAzPKB": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You select a target in range and create a subtle glowing outline around them that only someone with the <em>Second Sight </em>Talent can perceive. The GM determine the minor benefits of this glow, such as not requiring a Perception Test while Shadowing the target or being able to pinpoint the target in a crowd.<span class=\"Apple-converted-space\">&nbsp;</span></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "petty",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower yards"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "1",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus Rounds",
+      "extendable": true
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 0,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "dynamiceffects": {
+      "equipActive": false,
+      "alwaysActive": false,
+      "effects": []
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/petty_magic.jpg",
+  "_id": "MwvF3Y3P3FjtbF0u",
+  "effects": [],
+  "_key": "!items!MwvF3Y3P3FjtbF0u"
+}

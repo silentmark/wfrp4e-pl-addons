@@ -1,0 +1,72 @@
+{
+  "name": "Naderwane mięśnie pleców",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/tornbody.png",
+  "effects": [
+    {
+      "_id": "AiDPNet52D6Mwycb",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "actor",
+          "script": "let injury = await fromUuid(\"Compendium.wfrp4e-core.injuries.eWPN3CV2Eddwz8aM\");\nargs.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()]);",
+          "preventDuplicateEffects": false,
+          "hide": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/injuries/tornbody.png",
+      "label": "Naderwane mięśnie pleców",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "_key": "!items.effects!9CX9NS1P6R9S4A2V.AiDPNet52D6Mwycb"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wfrp4e-pl.criticals.9CX9NS1P6R9S4A2V"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Plecy przemieniają się w jedną wielką strefę obezwładniającego bólu. Postać otrzymuje Uraz Zerwanie mięśni (pomniejsze).</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "3",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Korpus",
+      "type": "String",
+      "label": "Location"
+    }
+  },
+  "_id": "9CX9NS1P6R9S4A2V",
+  "folder": null,
+  "sort": 0,
+  "_key": "!items!9CX9NS1P6R9S4A2V"
+}

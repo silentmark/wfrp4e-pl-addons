@@ -1,0 +1,84 @@
+{
+  "name": "Apprentice",
+  "permission": {
+    "default": 0,
+    "OfKMBdcUK6oV9G48": 3
+  },
+  "type": "career",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "careergroup": {
+      "type": "String",
+      "label": "Career Group",
+      "value": "Elementalist"
+    },
+    "class": {
+      "type": "String",
+      "label": "Class",
+      "value": "Rangers"
+    },
+    "current": {
+      "type": "Boolean",
+      "value": false
+    },
+    "complete": {
+      "type": "Boolean",
+      "value": false
+    },
+    "level": {
+      "type": "String",
+      "label": "Career Level",
+      "value": "1"
+    },
+    "status": {
+      "tier": "b",
+      "standing": 2
+    },
+    "characteristics": [
+      "ws",
+      "int",
+      "wp"
+    ],
+    "skills": [
+      "Channelling",
+      "Gossip",
+      "Language (Magick)",
+      "Lore (Nature)",
+      "Melee (Basic)",
+      "Navigation",
+      "Outdoor Survival",
+      "Swim"
+    ],
+    "talents": [
+      "Aethyric Attunement",
+      "Petty Magic",
+      "Read/Write",
+      "Second Sight"
+    ],
+    "trappings": [
+      "Grimoire",
+      "Hand Weapon"
+    ],
+    "incomeSkill": [
+      3
+    ]
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.jAJkRhZuZ69YdGFC"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/caree_elementalist.jpg",
+  "effects": [],
+  "_id": "y3PLMxwlL29Pdbg7",
+  "_key": "!items!y3PLMxwlL29Pdbg7"
+}

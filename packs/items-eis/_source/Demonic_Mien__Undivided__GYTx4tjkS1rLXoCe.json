@@ -1,0 +1,117 @@
+{
+  "_id": "GYTx4tjkS1rLXoCe",
+  "name": "Demonic Mien (Undivided)",
+  "type": "spell",
+  "img": "modules/wfrp4e-core/icons/spells/undivided.png",
+  "effects": [],
+  "folder": "SFy3nl8V2qrjRoOS",
+  "sort": 300000,
+  "flags": {},
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><span class=\"fontstyle0\">You channel the transformative power of Chaos into your own flesh, temporarily sacrificing your mortal form on the altar of your god’s will. Your body is warped, assuming aspects of a Daemon loyal to your patron god. Roll on the @Table[demonic-mien] table, and apply the relevant Trait for the duration of the spell. For every +2&nbsp;</span><span class=\"fontstyle2\">SL&nbsp;</span><span class=\"fontstyle0\">you may both extend the duration and roll again on the table. Should you roll the&nbsp;</span><span class=\"fontstyle3\">@UUID[Compendium.wfrp4e-core.items.v3uzEthcq0JRar0J]{Daemonic}&nbsp;</span><span class=\"fontstyle0\">Trait and be reduced to 0 Wounds, your soul is sucked into the Realms of Chaos as described in the Creature Traits rules.</span></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Undivided",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "You",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "You",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Fellowship Bonus Rounds",
+      "extendable": true
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 8,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "sAiwDCZFd21tgaDN": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1691299878976,
+    "modifiedTime": 1693273565128,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!GYTx4tjkS1rLXoCe"
+}

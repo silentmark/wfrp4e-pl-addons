@@ -1,0 +1,145 @@
+{
+  "name": "Pech!",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "results": [
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        1,
+        20
+      ],
+      "drawn": false,
+      "_id": "I2JjgHZdyDySP9oT",
+      "text": "Ouch",
+      "img": "icons/skills/melee/shield-damaged-broken-blue.webp",
+      "documentId": "kxpCuyeq0SHnERgE",
+      "flags": {},
+      "documentCollection": "world.fumbules-and-misfiers",
+      "_key": "!tables.results!rU9NJWcalupgV6Xz.I2JjgHZdyDySP9oT"
+    },
+    {
+      "type": 2,
+      "documentCollection": "world.fumbules-and-misfiers",
+      "weight": 1,
+      "range": [
+        21,
+        40
+      ],
+      "drawn": false,
+      "_id": "Y4fzAQycS142zQDd",
+      "text": "Uszkodzenie Broni",
+      "img": "icons/skills/melee/shield-damaged-broken-blue.webp",
+      "documentId": "UxkVD3GgdfPkI6rI",
+      "flags": {},
+      "_key": "!tables.results!rU9NJWcalupgV6Xz.Y4fzAQycS142zQDd"
+    },
+    {
+      "type": 2,
+      "documentCollection": "world.fumbules-and-misfiers",
+      "weight": 1,
+      "range": [
+        41,
+        60
+      ],
+      "drawn": false,
+      "_id": "byVnK9PONrFr8EO4",
+      "text": "Nieudany Manewr",
+      "img": "icons/skills/melee/shield-damaged-broken-blue.webp",
+      "documentId": "MSlObDPy9DJeoicb",
+      "flags": {},
+      "_key": "!tables.results!rU9NJWcalupgV6Xz.byVnK9PONrFr8EO4"
+    },
+    {
+      "type": 2,
+      "documentCollection": "world.fumbules-and-misfiers",
+      "weight": 1,
+      "range": [
+        61,
+        70
+      ],
+      "drawn": false,
+      "_id": "9m49MXllNTOVLuRv",
+      "text": "Potknięcie",
+      "img": "icons/skills/melee/shield-damaged-broken-blue.webp",
+      "documentId": "iThki2sX01ci19ow",
+      "flags": {},
+      "_key": "!tables.results!rU9NJWcalupgV6Xz.9m49MXllNTOVLuRv"
+    },
+    {
+      "type": 2,
+      "documentCollection": "world.fumbules-and-misfiers",
+      "weight": 1,
+      "range": [
+        71,
+        80
+      ],
+      "drawn": false,
+      "_id": "8TwLkLvmjJMHMj81",
+      "text": "Utrata Równowagi",
+      "img": "icons/skills/melee/shield-damaged-broken-blue.webp",
+      "documentId": "bUtlPQDqASAWPgT0",
+      "flags": {},
+      "_key": "!tables.results!rU9NJWcalupgV6Xz.8TwLkLvmjJMHMj81"
+    },
+    {
+      "type": 2,
+      "documentCollection": "world.fumbules-and-misfiers",
+      "weight": 1,
+      "range": [
+        81,
+        90
+      ],
+      "drawn": false,
+      "_id": "j7ZBp5TP2noRi8JX",
+      "text": "Bolesna Rana",
+      "img": "icons/skills/melee/shield-damaged-broken-blue.webp",
+      "documentId": "x2CRVrGpOeUUxn4d",
+      "flags": {},
+      "_key": "!tables.results!rU9NJWcalupgV6Xz.j7ZBp5TP2noRi8JX"
+    },
+    {
+      "type": 2,
+      "documentCollection": "world.fumbules-and-misfiers",
+      "weight": 1,
+      "range": [
+        91,
+        100
+      ],
+      "drawn": false,
+      "_id": "SGCkhssB3RlJeaqf",
+      "text": "Krytyczna Rana",
+      "img": "icons/skills/melee/shield-damaged-broken-blue.webp",
+      "documentId": "SxqOiUIYdiRfteOH",
+      "flags": {},
+      "_key": "!tables.results!rU9NJWcalupgV6Xz.SGCkhssB3RlJeaqf"
+    }
+  ],
+  "formula": "1d100",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": null,
+  "flags": {
+    "wfrp4e": {
+      "key": "oops",
+      "column": ""
+    },
+    "core": {}
+  },
+  "description": "",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.2",
+    "coreVersion": "11.313",
+    "createdTime": 1657737418970,
+    "modifiedTime": 1697834335913,
+    "lastModifiedBy": "Czz7IJA9DEa5LD9E"
+  },
+  "_id": "rU9NJWcalupgV6Xz",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Czz7IJA9DEa5LD9E": 3
+  },
+  "_key": "!tables!rU9NJWcalupgV6Xz"
+}

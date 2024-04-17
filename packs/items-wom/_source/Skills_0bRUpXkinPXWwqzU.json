@@ -1,0 +1,19 @@
+{
+  "name": "Skills",
+  "type": "Item",
+  "_id": "0bRUpXkinPXWwqzU",
+  "folder": null,
+  "sorting": "a",
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1691298890523,
+    "modifiedTime": 1691298982370,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "color": null,
+  "_key": "!folders!0bRUpXkinPXWwqzU"
+}

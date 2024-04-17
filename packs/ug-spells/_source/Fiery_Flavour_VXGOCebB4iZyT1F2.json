@@ -1,0 +1,84 @@
+{
+  "name": "Fiery Flavour",
+  "permission": {
+    "default": 0,
+    "JaDY9Gr5gDw8h5kN": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Your fery magic can quickly cook one serving of food to your liking or cause up to one quart of liquid to come to a furious boil. Or you may use this spell to impart the food or drink with a fery potency, such as a spicy or alcoholic favour (which could induce gastrointestinal distress in those who are not used to such potency on a failed Endurance Test). Overcast: For every +2 SL, you may double the amount of food or liquid affected.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "fire",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower Bonus yards"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Special",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Instant",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 0,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "flags": {
+    "_sheetTab": "details"
+  },
+  "img": "modules/wfrp4e-content/icons/spells/fire.png",
+  "_id": "VXGOCebB4iZyT1F2",
+  "effects": [],
+  "_key": "!items!VXGOCebB4iZyT1F2"
+}

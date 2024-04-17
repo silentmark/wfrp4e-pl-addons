@@ -1,0 +1,120 @@
+{
+  "folder": "PTC5Z3dO3YcFXIkR",
+  "name": "Boots of Sudden Remorse",
+  "type": "trapping",
+  "img": "modules/wfrp4e-core/icons/equipment/clothing_and_accessories/boots.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><strong>Boon</strong>: Silent footsteps that leave no tracks</p><p><strong>Bane</strong>: Loud “squeak”</p><p><strong>Trigger</strong>: Stealth Tests</p><p><strong>Description</strong>: These sumptuous, finely crafted leather boots make an almost imperceptible sound and leave no footprints while walking normally and so cannot be tracked. However, when attempting to be silent (any time the Character wearing the boots makes a Stealth Test), they suddenly emit a loud squeak, counting as an Astounding Failure regardless of the Test results. Curiously, this happens even if the Character takes off and carries the boots or places them in a pack during the Stealth Test. So long as the boots are somewhere on the person attempting Stealth, they emit the squeak.</p>"
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 1
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "None"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "clothingAccessories"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-core/icons/equipment/clothing_and_accessories/boots.png",
+      "transfer": true,
+      "_id": "LVUI4HT6AdWKm6Nf",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "rollTest",
+          "effectApplication": "actor",
+          "hide": true,
+          "preventDuplicateEffects": true,
+          "script": " if (args.test.item?.type == \"skill\" && args.test.item.name.includes(game.i18n.localize(\"NAME.Stealth\")))\n{ \n     args.test.result.description = \"Astounding Failure\";\n     args.test.result.outcome = \"failure\";\n       ChatMessage.create({content : \"<em>SQUEAK</em>\", speaker : ChatMessage.getSpeaker({token: this.actor.getActiveTokens()[0]?.document, actor: this.actor})}, {chatBubble : true})\n        AudioHelper.play({ src: `${game.settings.get(\"wfrp4e\", \"soundPath\")}squeek.wav` }, true);\n}"
+        },
+        "core": {
+          "sourceId": "Item.N94rLkrl2v8YLkND.ActiveEffect.l9cKTQGoujxqoMWU"
+        }
+      },
+      "name": "Boots of Sudden Remorse",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!2CuklpmPstM3b3YC.LVUI4HT6AdWKm6Nf"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Cursed Items",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1677618810970,
+    "modifiedTime": 1693273575670,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "2CuklpmPstM3b3YC",
+  "_key": "!items!2CuklpmPstM3b3YC"
+}

@@ -1,0 +1,93 @@
+{
+  "name": "Quicksand (Earth)",
+  "permission": {
+    "default": 0,
+    "49AXXoPz63AAzPKB": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You target a patch of dirt, mud or sand, churning it into magical quicksand. The thick, sucking mud traps any creatures standing in it, inflicting an @Condition[Entangled] Condition (with your Channelling Skill for its Strength). At the start of each Round, victims gain +1 @Condition[Entangled] Condition. If a victim is able to move, the quicksand counts as difficult ground (half speed; no running or sprinting). If a creature suffers more @Condition[Entangled] Conditions than its Strength Bonus, it has been sucked into the quicksand and is subject to the Suffocation rules. Non-breathing creatures do not suffocate but will likely be trapped when the spell ends.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Elementalism",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower yards"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Willpower Bonus yards",
+      "aoe": true
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus Rounds",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 9,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.57gPyoeoQjFrHBVE"
+    },
+    "dynamiceffects": {
+      "equipActive": false,
+      "alwaysActive": false,
+      "effects": []
+    },
+    "exportSource": {
+      "world": "the-old-world",
+      "system": "wfrp4e",
+      "coreVersion": "0.6.6",
+      "systemVersion": "2.1.0"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_quicksand.jpg",
+  "_id": "yfeiiGqTU7Ji5yIn",
+  "effects": [],
+  "_key": "!items!yfeiiGqTU7Ji5yIn"
+}

@@ -1,0 +1,66 @@
+{
+  "folder": "7Ate0oh7xaWNJMLc",
+  "name": "Scentless",
+  "type": "trait",
+  "img": "modules/wfrp4e-wom/assets/icons/marks/mark-azyr.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Your natural smell is replaced by the scent of clean, fresh air. Reeking fluids, noxious potions, and other sources of stench gradually lose their aroma on contact with your person. Attempts to track you using scent can be no easier than Hard (–20).</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [],
+  "sort": 300000,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Azyr",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676323657383,
+    "modifiedTime": 1693273575751,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "YLytygqH8xqXCf5h",
+  "_key": "!items!YLytygqH8xqXCf5h"
+}

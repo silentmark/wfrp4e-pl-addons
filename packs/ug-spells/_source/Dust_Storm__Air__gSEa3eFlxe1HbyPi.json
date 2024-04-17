@@ -1,0 +1,93 @@
+{
+  "name": "Dust Storm (Air)",
+  "permission": {
+    "default": 0,
+    "49AXXoPz63AAzPKB": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You conjure a whirling wind of dirt and dust within range, which you may move at will with an <b>Average (+20) Channelling </b>Test. When the storm is created and at the start of each Round thereafter, all creatures caught inside suffer a <i>magic missile </i>with a Damage of +0.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Elementalism",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower yards"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Willpower Bonus yards",
+      "aoe": true
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus Rounds",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 7,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.57gPyoeoQjFrHBVE"
+    },
+    "dynamiceffects": {
+      "equipActive": false,
+      "alwaysActive": false,
+      "effects": []
+    },
+    "exportSource": {
+      "world": "the-old-world",
+      "system": "wfrp4e",
+      "coreVersion": "0.6.6",
+      "systemVersion": "2.1.0"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_dust_storm.jpg",
+  "_id": "gSEa3eFlxe1HbyPi",
+  "effects": [],
+  "_key": "!items!gSEa3eFlxe1HbyPi"
+}

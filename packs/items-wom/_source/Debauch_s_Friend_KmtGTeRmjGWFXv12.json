@@ -1,0 +1,118 @@
+{
+  "type": "trapping",
+  "name": "Debauch's Friend",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><strong>Onset Time</strong>: [[/r 1d10]] minutes</p><p><strong>Volatility</strong>: Moderate</p><p><strong>Ingredient Cost</strong> @Pay[5gc]{5 GC}</p><p><strong>Ingredient Locale</strong>: Temperate Grassland</p><p><strong>Ingredient Difficulty</strong>: +0</p><p><strong>Creation Difficulty</strong>: +0 SL</p><p><strong>Creation Time</strong>: 1 week</p><p>The drinker automatically passes any Consume Alcohol Tests. The effect wears off after [[/r 1d10]] hours.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "None"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "img": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/vitality-draught.png",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/vitality-draught.png",
+      "transfer": true,
+      "_id": "z72QSgkrJl5LQUgM",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "rollTest",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "if (args.test.item?.type == \"skill\" && args.test.item.name == game.i18n.localize(\"NAME.ConsumeAlcohol\"))\n    args.test.result.other.push(`<strong>${this.effect.name}</strong>: Automatically passes Consume Alcohol Tests`)",
+          "reduceQuantity": true
+        }
+      },
+      "name": "Debauch's Friend",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!KmtGTeRmjGWFXv12.z72QSgkrJl5LQUgM"
+    }
+  ],
+  "folder": "PTC5Z3dO3YcFXIkR",
+  "sort": 150000,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Potions",
+      "sort": 150000
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1677616103291,
+    "modifiedTime": 1693273575718,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "KmtGTeRmjGWFXv12",
+  "_key": "!items!KmtGTeRmjGWFXv12"
+}

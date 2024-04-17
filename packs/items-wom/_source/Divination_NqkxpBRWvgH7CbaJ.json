@@ -1,0 +1,122 @@
+{
+  "name": "Divination",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You scry across time and space. Choose one of the following 3 effects:</p><ul><li><p>Learn the most auspicious time for a future action. The GM secretly rolls a <strong>Challenging (+0) Intelligence</strong> Test for you, to determine the accuracy of your prediction. Examples might include forecasting the Winds of Magic, favourable weather, or a change of guards.</p></li><li><p>Locate a lost or stolen object. You must have seen the object previously. This spell points you in the direction of the object but does not reveal its distance.</p></li><li><p>Modify a single future die roll by plus or minus 10. You must be very specific about the conditions. Examples include a creature’s next attack against you, or the next Dodge Test you attempt. You can only be under one effect of this type at a time.</p></li></ul><p><strong>Lore:</strong> Spells causing Damage ignore Armour Points from metal armour, and will arc to all other targets within 2 yards, except those with the Arcane Magic (Heavens) Talent, inflicting hits with a Damage equal to your Willpower Bonus, handled like a magical missile.</p><p></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "heavens",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "You",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "You",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Instant",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 3,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "type": "spell",
+  "folder": "dWExO2jRqil2AwZo",
+  "img": "modules/wfrp4e-core/icons/spells/heavens.png",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Heavens",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676324249244,
+    "modifiedTime": 1693273575726,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "NqkxpBRWvgH7CbaJ",
+  "_key": "!items!NqkxpBRWvgH7CbaJ"
+}

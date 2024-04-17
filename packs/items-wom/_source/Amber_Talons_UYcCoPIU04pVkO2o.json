@@ -1,0 +1,155 @@
+{
+  "name": "Amber Talons",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Your nails grow into wickedly sharp talons of crystal amber. Your unarmed attacks are magical, have a Damage equal to SL plus your Strength Bonus plus your Willpower Bonus, and inflict 1 @Condition[Bleeding] Condition whenever they cause a loss of Wounds. </p><p>\n\n <b>Lore:</b> Whenever you successfully cast a spell from the Lore of Beasts, you may also gain the @UUID[Compendium.wfrp4e-core.items.pTorrE0l3VybAbtn]{Fear (1)} Creature Trait for the next [[/r 1d10]] Rounds.<p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "beasts",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "You",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "You",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus rounds",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 6,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "type": "spell",
+  "folder": "vv9Uz4QUOea8V2Yk",
+  "img": "modules/wfrp4e-core/icons/spells/amber-talons.png",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-core/icons/spells/amber-talons.png",
+      "transfer": false,
+      "_id": "O3MAJD3g9vJi6SrP",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "addItems",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "    let amberTalons = foundry.utils.deepClone(game.wfrp4e.config.systemItems.unarmed);\n    amberTalons.name = \"Amber Talons\";\n   amberTalons.img = this.effect.icon\n    amberTalons.system.damage.value = \"SB + WPB + {{SL}}\"\n    amberTalons.system.equipped = true;\n    amberTalons.effects.push({\n        label : \"Amber Talons\",\n        transfer: false,\n        icon : this.effect.icon ,\n        flags : {\n          wfrp4e : {\n            effectApplication: \"damage\",\n            effectTrigger : \"applyDamage\",\n            hide : false,\n            preventDuplicateEffects: false,\n            script : \"if (args.totalWoundLoss >= 1)\\n{ \\n    args.actor.addCondition(\\\"bleeding\\\")\\n}\"\n          }\n        }\n      })\n    this.actor.createEmbeddedDocuments(\"Item\", [amberTalons], {fromEffect: this.effect.id})",
+          "notSelf": false
+        }
+      },
+      "name": "Amber Talons",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!UYcCoPIU04pVkO2o.O3MAJD3g9vJi6SrP"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Beasts",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676405899898,
+    "modifiedTime": 1693273575741,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "UYcCoPIU04pVkO2o",
+  "_key": "!items!UYcCoPIU04pVkO2o"
+}

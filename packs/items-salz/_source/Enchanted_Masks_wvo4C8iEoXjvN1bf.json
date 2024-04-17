@@ -1,0 +1,25 @@
+{
+  "name": "Enchanted Masks",
+  "sorting": "a",
+  "folder": "moplZwEZLUrKwd1d",
+  "type": "Item",
+  "description": "",
+  "sort": 400000,
+  "color": null,
+  "flags": {
+    "wfrp4e-salzenmund": {
+      "initialization-parent": "Salzenmund"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1692767410566,
+    "modifiedTime": 1692767410566,
+    "lastModifiedBy": "wjUQkVmn4leETiQ6"
+  },
+  "_id": "wvo4C8iEoXjvN1bf",
+  "parent": null,
+  "_key": "!folders!wvo4C8iEoXjvN1bf"
+}

@@ -1,0 +1,450 @@
+{
+  "name": "Miecz Czarnoksięstwa",
+  "type": "weapon",
+  "flags": {
+    "_sheetTab": "details",
+    "core": {},
+    "autoanimations": {
+      "id": "71b7fba6-3cdd-43c0-bd0c-9b72a29c928e",
+      "label": "Miecz Czarnoksięstwa",
+      "levels3d": {
+        "type": "explosion",
+        "data": {
+          "color01": "#FFFFFF",
+          "color02": "#FFFFFF",
+          "spritePath": "modules/levels-3d-preview/assets/particles/dust.png"
+        },
+        "sound": {
+          "enable": false
+        },
+        "secondary": {
+          "enable": false,
+          "data": {
+            "color01": "#FFFFFF",
+            "color02": "#FFFFFF",
+            "spritePath": "modules/levels-3d-preview/assets/particles/dust.png"
+          }
+        }
+      },
+      "macro": {
+        "enable": false,
+        "playWhen": "0"
+      },
+      "meleeSwitch": {
+        "video": {
+          "dbSection": "range",
+          "menuType": "weapon",
+          "animation": "arrow",
+          "variant": "regular",
+          "color": "regular"
+        },
+        "sound": {
+          "enable": false,
+          "delay": 0,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "startTime": 0,
+          "volume": 0.75
+        },
+        "options": {
+          "detect": "automatic",
+          "range": 2,
+          "returning": false,
+          "switchType": "on"
+        }
+      },
+      "menu": "melee",
+      "primary": {
+        "video": {
+          "dbSection": "melee",
+          "menuType": "weapon",
+          "animation": "falchion",
+          "variant": "01",
+          "color": "darkorangepurple",
+          "enableCustom": false,
+          "customPath": ""
+        },
+        "sound": {
+          "enable": false,
+          "delay": 0,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "startTime": 0,
+          "volume": 0.75
+        },
+        "options": {
+          "contrast": 0,
+          "delay": 0,
+          "elevation": 1000,
+          "isWait": false,
+          "opacity": 1,
+          "playbackRate": 1,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "saturate": 0,
+          "size": 1,
+          "tint": false,
+          "tintColor": "#FFFFFF",
+          "zIndex": 1
+        }
+      },
+      "secondary": {
+        "enable": false,
+        "video": {
+          "dbSection": "static",
+          "menuType": "spell",
+          "animation": "curewounds",
+          "variant": "01",
+          "color": "blue",
+          "enableCustom": false,
+          "customPath": ""
+        },
+        "sound": {
+          "enable": false,
+          "delay": 0,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "startTime": 0,
+          "volume": 0.75
+        },
+        "options": {
+          "addTokenWidth": false,
+          "anchor": "0.5",
+          "contrast": 0,
+          "delay": 0,
+          "elevation": 1000,
+          "fadeIn": 250,
+          "fadeOut": 500,
+          "isMasked": false,
+          "isRadius": true,
+          "isWait": false,
+          "opacity": 1,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "saturate": 0,
+          "size": 1.5,
+          "tint": false,
+          "tintColor": "#FFFFFF",
+          "zIndex": 1
+        }
+      },
+      "soundOnly": {
+        "sound": {
+          "enable": false,
+          "delay": 0,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "startTime": 0,
+          "volume": 0.75
+        }
+      },
+      "source": {
+        "enable": false,
+        "video": {
+          "dbSection": "static",
+          "menuType": "spell",
+          "animation": "curewounds",
+          "variant": "01",
+          "color": "blue",
+          "enableCustom": false,
+          "customPath": ""
+        },
+        "sound": {
+          "enable": false,
+          "delay": 0,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "startTime": 0,
+          "volume": 0.75
+        },
+        "options": {
+          "addTokenWidth": false,
+          "anchor": "0.5",
+          "contrast": 0,
+          "delay": 0,
+          "elevation": 1000,
+          "fadeIn": 250,
+          "fadeOut": 500,
+          "isMasked": false,
+          "isRadius": false,
+          "isWait": true,
+          "opacity": 1,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "saturate": 0,
+          "size": 1,
+          "tint": false,
+          "tintColor": "#FFFFFF",
+          "zIndex": 1
+        }
+      },
+      "target": {
+        "enable": false,
+        "video": {
+          "dbSection": "static",
+          "menuType": "spell",
+          "animation": "curewounds",
+          "variant": "01",
+          "color": "blue",
+          "enableCustom": false,
+          "customPath": ""
+        },
+        "sound": {
+          "enable": false,
+          "delay": 0,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "startTime": 0,
+          "volume": 0.75
+        },
+        "options": {
+          "addTokenWidth": false,
+          "anchor": "0.5",
+          "contrast": 0,
+          "delay": 0,
+          "elevation": 1000,
+          "fadeIn": 250,
+          "fadeOut": 500,
+          "isMasked": false,
+          "isRadius": false,
+          "opacity": 1,
+          "persistent": false,
+          "repeat": 1,
+          "repeatDelay": 250,
+          "saturate": 0,
+          "size": 1,
+          "tint": false,
+          "tintColor": "#FFFFFF",
+          "unbindAlpha": false,
+          "unbindVisibility": false,
+          "zIndex": 1
+        }
+      },
+      "isEnabled": true,
+      "isCustomized": true,
+      "fromAmmo": false,
+      "version": 5
+    }
+  },
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/sword-hw.png",
+  "_id": "3Cs46orUmf8nuRBy",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-core/icons/equipment/weapons/sword-hw.png",
+      "transfer": true,
+      "name": "Miecz Czarnoksięstwa",
+      "_id": "uJnA6QagsLlfgFIq",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "effectTrigger": "applyDamage",
+          "effectApplication": "actor",
+          "areaEffect": false,
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "if (args.opposedTest?.attackerTest?.item?.id == this.item.id) {\n\tlet modifier = this.item.flags?.wfrp4e?.miscast ?? 0;\n\tmodifier += 1;\n\tthis.item.update({ \"flags.wfrp4e.miscast\": modifier });\n\tlet total = args.opposedTest?.attackerTest?.data?.result?.roll % 10; \n\tif (total == 1) {\n\t\tChatMessage.create({ content: `<b>Miecz Czarnoksięstwa</b>: Miecz pokrył trujący jad`});\n\t\targs.actor.addCondition(\"poisoned\", 1)\n\t} else if (total == 2) { \n\t\tChatMessage.create({ content: `<b>Miecz Czarnoksięstwa</b>: Miecz zapłonął piekielnym ogniem`});\n\t\targs.actor.addCondition(\"ablaze\", 1)\n\t} else if (total == 3) { \n\t\tChatMessage.create({ content: `<b>Miecz Czarnoksięstwa</b>: Miecz oślepił plugawym światłem`});\n\t\targs.actor.addCondition(\"blinded\", 1)\n\t} else if (total == 4) { \n\t\tChatMessage.create({ content: `<b>Miecz Czarnoksięstwa</b>: Miecz zapragnął krwi`});\n\t\targs.actor.addCondition(\"bleeding\", 1)\n\t} else if (total == 5) { \n\t\tChatMessage.create({ content: `<b>Miecz Czarnoksięstwa</b>: Miecz osłabił ciało i umysł`});\n\t\targs.actor.addCondition(\"fatigued\", 1)\n\t} else if (total == 6) { \n\t\tChatMessage.create({ content: `<b>Miecz Czarnoksięstwa</b>: Miecz wyssał energię życiową`});\n\t\tlet woundsGained = Math.min(args.totalWoundLoss, args.actor.status.wounds.value);\n\t\tlet attackerWounds = duplicate(args.attacker.status.wounds);\n\t\tattackerWounds.value += woundsGained;\n\t\tif (attackerWounds.value >= attackerWounds.max) {\n\t\t\tattackerWounds.value = attackerWounds.max;\n\t\t}\n\t\targs.attacker.update({ \"system.status.wounds\": attackerWounds });\n\t} else if (total == 7) { \n\t\tChatMessage.create({ content: `<b>Miecz Czarnoksięstwa</b>: Miecz otworzył bramę chaosu.`});\n\t\tlet demonTokenId = (await warpgate.spawn(\"Gołąb Chaosu\"))[0];\n\t\tlet demonToken = game.canvas.tokens.get(demonTokenId);\n\t\tnew Sequence()\n\t\t\t.effect()\n\t\t\t\t.file(\"modules/jb2a_patreon/Library/Generic/Magic_Signs/AbjurationCircleComplete_02_Dark_Pink_800x800.webm\")\n\t\t\t\t.atLocation(demonToken)\n\t\t\t\t.scaleToObject(1.5)\n\t\t\t\t.randomRotation()\n\t\t\t.play();\n\t} else if (total == 8) { \n\t\tlet snotlings = await (new Roll(\"2d4\").roll());\n\t\tChatMessage.create({ content: `<b>Miecz Czarnoksięstwa</b>: Miecz sprowadził potężnych wojowników.`});\n\t\tfor (let i = 0; i < snotlings.total; i++) {\n\t\t\tlet demonTokenId = (await warpgate.spawn(\"Zbłąkany Snotling\"))[0];\n\t\t\tlet demonToken = game.canvas.tokens.get(demonTokenId);\n\t\t\tnew Sequence()\n\t\t\t.effect()\n\t\t\t\t.file(\"modules/jb2a_patreon/Library/Generic/Magic_Signs/AbjurationCircleComplete_02_Dark_Pink_800x800.webm\")\n\t\t\t\t.atLocation(demonToken)\n\t\t\t\t.scaleToObject(1.5)\n\t\t\t\t.randomRotation()\n\t\t\t.play();\n\t\t}\n\t} else if (total == 9) {\n\t\tChatMessage.create({ content: `<b>Miecz Czarnoksięstwa</b>: Miecz wywołał manifestację Dhar.`});\n\t\tlet chatOptions = game.wfrp4e.utility.chatDataSetup(\"\", game.settings.get(\"core\", \"rollMode\"), true);\n        let html = await game.wfrp4e.tables.formatChatRoll(\"miscastdhar\", {\n            modifier: modifier * 10,\n            showRoll: true\n          }, null);\n        chatOptions[\"content\"] = html;\n        chatOptions[\"type\"] = 0;\n        ChatMessage.create(chatOptions);\n\t\tawait this.item.update({\"flags.wfrp4e.-=miscast\": null});\n\t} else {\n\t    const roll = await this.effect.parent.setupCharacteristic(\"wp\", { appendTitle : \" - Zepsucie\", modify : { modifier : modifier * -10 } });\n\t    await roll.roll();\n\t\tif (roll.result.outcome == \"failure\") {\n\t\t\tlet newCorruption = Number.parseInt(roll.result.SL);\n\t\t\tawait this.effect.parent.update({ \"system.status.corruption.value\": newCorruption });\n\t\t\tawait this.effect.parent.checkCorruption();\n            ChatMessage.create({ content: `<b>Miecz Czarnoksięstwa</b>: Miecz wywołał zepsucie ${newCorruption} u ${this.effect.parent.name}.`});\n\t\t}\n\t\tawait this.item.update({\"flags.wfrp4e.-=miscast\": null});\n\t}\n}"
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!3Cs46orUmf8nuRBy.uJnA6QagsLlfgFIq"
+    },
+    {
+      "icon": "modules/wfrp4e-core/icons/equipment/weapons/sword-hw.png",
+      "transfer": true,
+      "name": "Miecz Czarnoksięstwa - koniec walki",
+      "_id": "dbf3Uk32jyltkedR",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "effectTrigger": "endCombat",
+          "effectApplication": "actor",
+          "areaEffect": false,
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "this.item.update(\"flags.wfrp4e.-=miscast\": null);"
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!3Cs46orUmf8nuRBy.dbf3Uk32jyltkedR"
+    }
+  ],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Broń rycerska</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 1
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "2",
+      "ss": "0",
+      "bp": "0",
+      "value": ""
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "scarce"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "damageToItem": {
+      "type": "Number",
+      "value": 0,
+      "shield": 0
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": "SB+4",
+      "meleeValue": "SB+4",
+      "rangedValue": ""
+    },
+    "reach": {
+      "type": "String",
+      "label": "Reach",
+      "value": "long"
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": ""
+    },
+    "skill": {
+      "type": "String",
+      "label": "Skill Override",
+      "value": ""
+    },
+    "modeOverride": {
+      "type": "String",
+      "label": "Mode Override",
+      "value": ""
+    },
+    "twohanded": {
+      "type": "Boolean",
+      "label": "Two-Handed",
+      "value": false
+    },
+    "ammunitionGroup": {
+      "type": "String",
+      "label": "Ammunition Group",
+      "value": "none"
+    },
+    "currentAmmo": {
+      "type": "Number",
+      "value": 0
+    },
+    "consumesAmmo": {
+      "value": true
+    },
+    "weaponGroup": {
+      "type": "String",
+      "label": "Weapon Group",
+      "value": "basic"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": [
+        {
+          "name": "fast",
+          "value": null
+        },
+        {
+          "name": "impale",
+          "value": null
+        }
+      ],
+      "type": "String"
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": [],
+      "type": "String"
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    },
+    "equipped": true,
+    "loaded": {
+      "value": false,
+      "repeater": false,
+      "amt": 0
+    },
+    "offhand": {
+      "value": false
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "folder": "ZP0UuGj1tO64CDBP",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.2",
+    "coreVersion": "11.311",
+    "createdTime": 1694632351420,
+    "modifiedTime": 1696767882861,
+    "lastModifiedBy": "Czz7IJA9DEa5LD9E"
+  },
+  "sort": 300000,
+  "ownership": {
+    "default": 0,
+    "Czz7IJA9DEa5LD9E": 3
+  },
+  "_key": "!items!3Cs46orUmf8nuRBy"
+}

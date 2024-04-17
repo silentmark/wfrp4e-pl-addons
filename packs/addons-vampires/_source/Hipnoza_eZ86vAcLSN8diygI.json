@@ -1,0 +1,58 @@
+{
+  "_id": "eZ86vAcLSN8diygI",
+  "name": "Hipnoza",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>W ramach akcji możesz wykonać przeciwstawny test dowodzenia przeciw opanowaniu, aby usunąć bezpośrednie wspomnienia celu. Wspomnienia, które mają zostać usunięte, muszą tworzyć pojedynczy blok wydarzeń, które miały miejsce w okresie określonym czasie w zależności od poziomu tego Daru Krwi, ale możesz usunąć dowolną blokadę z tego okresu – od zaledwie sekundy do całości okresu.</p><p>Jeśli wygrasz, twój przeciwnik zyskuje +1 Stan @Condition[Oszołomienie] i zapomina, co się stało. Za każde +2 PS, które zdobędziesz, zyskuje on kolejny Stan Ogłuszenia. Dodatkowe zakupy tego talentu wydłużają okres, w którym można usunąć wspomnienia.</p><table style=\"width: 99.1477%; height: 112px;\" border=\"1\"><tbody><tr style=\"height: 16px;\"><td style=\"width: 51.4327%; height: 16px;\"><p>Poziom</p></td><td style=\"width: 47.851%; height: 16px;\"><p>Czas</p></td></tr><tr style=\"height: 16px;\"><td style=\"width: 51.4327%; height: 16px;\"><p>1</p></td><td style=\"width: 47.851%; height: 16px;\"><p>Godzina</p></td></tr><tr style=\"height: 16px;\"><td style=\"width: 51.4327%; height: 16px;\"><p>2</p></td><td style=\"width: 47.851%; height: 16px;\"><p>Dzień</p></td></tr><tr style=\"height: 16px;\"><td style=\"width: 51.4327%; height: 16px;\"><p>3</p></td><td style=\"width: 47.851%; height: 16px;\"><p>Tydzień</p></td></tr><tr style=\"height: 16px;\"><td style=\"width: 51.4327%; height: 16px;\"><p>4</p></td><td style=\"width: 47.851%; height: 16px;\"><p>Miesiąc</p></td></tr><tr style=\"height: 16px;\"><td style=\"width: 51.4327%; height: 16px;\"><p>5</p></td><td style=\"width: 47.851%; height: 16px;\"><p>Cztery Miesiące</p></td></tr><tr style=\"height: 16px;\"><td style=\"width: 51.4327%; height: 16px;\"><p>6</p></td><td style=\"width: 47.851%; height: 16px;\"><p>Rok</p></td></tr></tbody></table>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "wp"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "folder": "IdBKVE70UjsZfSoR",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.311",
+    "createdTime": 1707141229988,
+    "modifiedTime": 1707141229988,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!eZ86vAcLSN8diygI"
+}

@@ -1,0 +1,66 @@
+{
+  "type": "trait",
+  "name": "Flicker",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Light seems uncomfortable in your presence. Candles flicker, lanterns dim, and fires burn low when you are around. If you succeed on a <strong>Difficult (-10) Willpower</strong> Test, you can extinguish a small flame within 20 yards, such as an approaching watchman’s lantern.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": true,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "wp",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "difficult",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "folder": "l8wVUGcsOa1Xr73u",
+  "img": "modules/wfrp4e-wom/assets/icons/marks/mark-ulgu.png",
+  "effects": [],
+  "sort": 125000,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Ulgu",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676401804948,
+    "modifiedTime": 1693273575744,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "WC1VpOQA6z7KuRRX",
+  "_key": "!items!WC1VpOQA6z7KuRRX"
+}

@@ -1,0 +1,82 @@
+{
+  "_id": "wYHqL0G5o3iGgEy6",
+  "name": "Chittering",
+  "permission": {
+    "default": 0,
+    "LhiA8OMMa0ToAWEe": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You unleash a web of insanity from the Warp, twisting the minds of all within the AoE. All non-Skaven humanoids within range must pass a <strong>Challenging (+0) Cool</strong> Test or degenerate into a mindless rat-like horde, instinctively aiding all Skaven and you in particular. They gather around you as bodyguards, following your simple instructions and attacking your foes with their hands and teeth. Targets lose their power of speech, communicating with gestures and the rat-like chittering noises that give this spell its name. When the spell ends, the targets scatter and scurry away, returning to their normal state over the span of 1d10 minutes. They gain a <em>Fatigued</em> Condition and must test against Corruption (Major).&nbsp;&nbsp;</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Warp",
+      "effect": "Warp Sorcerers gain a +10 bonus to Channelling and Language (Magick) Tests in any underground environment, such as a cavern, sewer or even a basement. Targets who suﬀer Wounds from Warp Lore spells must pass an Average (+20) Endurance Test to avoid contracting a Minor Infection."
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "You"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Willpower yards",
+      "aoe": true
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus hours",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 12,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.CQDanxCdWMwjVCb0"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_chittering.jpg",
+  "effects": [],
+  "_key": "!items!wYHqL0G5o3iGgEy6"
+}

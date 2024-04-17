@@ -1,0 +1,68 @@
+{
+  "_id": "ZpKPSSsQIcthXzSx",
+  "name": "Błogosławiona Broń",
+  "type": "trait",
+  "flags": {
+    "_sheetTab": "details",
+    "core": {}
+  },
+  "img": "modules/wfrp4e-core/icons/injuries/amputatedarm.png",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Błogosławiona broń zyskuje przeciwko tobie Cechę Druzgocąca. Woda święcona również cię rani, zadając 1k10 obrażeń na rundę kontaktu, które są modyfikowane przez twoją premię do wytrzymałości i pancerz, jak zwykle, do minimum 1 rany na rundę. Przedmioty religijne przyciśnięte do twojej nagiej skóry zadają 1 ranę na rundę, co ignoruje premię do wytrzymałości lub pancerz.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "folder": "XwxUCN1xDJMXTjBk",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.311",
+    "createdTime": 1698787638217,
+    "modifiedTime": 1698787698112,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 2000000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!ZpKPSSsQIcthXzSx"
+}

@@ -1,0 +1,58 @@
+{
+  "_id": "p2BhsVLbimxLsHdF",
+  "name": "Wygłodniała Bestia (TODO)",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Jesteś drapieżnym potworem, którego głód nie zna granic.</p><p>Możesz skorzystać z darmowej akcji, aby dobrowolnie przyjąć Cechę Stworzenia (+1) <a class=\"content-link\" draggable=\"true\" data-pack=\"wfrp4e-core.items\" data-uuid=\"Compendium.wfrp4e-core.items.Item.xneBqGOs1QS7kfUr\" data-id=\"xneBqGOs1QS7kfUr\" data-tooltip=\"Core Rulebook\"><i class=\"fas fa-suitcase\"></i>Głód</a> za każdym razem, gdy zobaczysz lub wyczujesz żywy cel. Zyskujesz wtedy <a class=\"content-link\" draggable=\"true\" data-pack=\"wfrp4e-core.items\" data-uuid=\"Compendium.wfrp4e-core.items.Item.15ENOMf345S5AL68\" data-id=\"15ENOMf345S5AL68\" data-tooltip=\"Core Rulebook\"><i class=\"fas fa-suitcase\"></i>Siłacz</a> na liczbę rund równą bonusowi z Siły Woli.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "i"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": "Testy Percepcji aby wykryć krew"
+    }
+  },
+  "folder": "R9GP6kUptFm6hQ24",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.311",
+    "createdTime": 1707130808946,
+    "modifiedTime": 1707136433712,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 1200000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!p2BhsVLbimxLsHdF"
+}

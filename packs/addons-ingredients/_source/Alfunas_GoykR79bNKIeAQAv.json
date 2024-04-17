@@ -1,0 +1,85 @@
+{
+  "name": "Alfunas",
+  "type": "trapping",
+  "img": "icons/consumables/potions/bottle-bulb-corked-labeled-blue.webp",
+  "effects": [],
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Herbs of the Empire",
+      "sort": 200000
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<h3>Bonesetters Delight</h3>\n<p><em>Alfunas </em>is the elven name for this plant, and has become its most common name throughout the Empire because the Wood Elves have a near monopoly over the supply. In the Moot we call it &lsquo;Bonewort&rsquo;; the Bretonnians call it <em>Ossefeuille </em>and the Tielans call it <em>Ossoripa</em>; some scholars call it <em>Folium Emendata</em>.</p>\n<p>In order for the paste to reach its full potency, it is advisable to let it sit in a covered jar in a cool, dry place such as a root cellar for at least two weeks. Do not let it dry out too much, though: when the surface of the paste&nbsp;begins to show cracks, seal the jar with&nbsp;wax or a cork stopper.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><strong>Locality: </strong>Coniferous Forest</p>\n<p><strong>Season: </strong>Summer, Autumn</p>\n<p><strong>Preparations:&nbsp;</strong>Poultice</p>\n<p>The fleshy leaves of this plant, ground into a paste, halve the normal healing time for a dislocated or broken bone if one dose is smeared on the site of the injury every day until healing is complete.</p>"
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "1",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "scarce"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690313554375,
+    "modifiedTime": 1690314336791,
+    "lastModifiedBy": "Czz7IJA9DEa5LD9E"
+  },
+  "_id": "GoykR79bNKIeAQAv",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "kYUjI3k8J8QQt9Qw": 3
+  },
+  "_key": "!items!GoykR79bNKIeAQAv"
+}

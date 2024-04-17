@@ -1,0 +1,72 @@
+{
+  "name": "Skręcone kolano",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+  "effects": [
+    {
+      "_id": "yJmV5ry9bcyqV5fL",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "actor",
+          "script": "let injury = await fromUuid(\"Compendium.wfrp4e-core.injuries.3S4OYOZLauXctmev\");\nargs.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()]);",
+          "preventDuplicateEffects": false,
+          "hide": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+      "label": "Skręcone kolano",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "_key": "!items.effects!0UDIQDLUBIGQLUW1.yJmV5ry9bcyqV5fL"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wfrp4e-pl.criticals.0UDIQDLUBIGQLUW1"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Postać, próbując uniknąć ciosu przeciwnika, odskakuje, ale manewr kończy się poważnym skręceniem kolana. Otrzymuje Uraz Zerwanie mięśni (poważne).</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "2",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Noga",
+      "type": "String",
+      "label": "Location"
+    }
+  },
+  "_id": "0UDIQDLUBIGQLUW1",
+  "folder": null,
+  "sort": 0,
+  "_key": "!items!0UDIQDLUBIGQLUW1"
+}

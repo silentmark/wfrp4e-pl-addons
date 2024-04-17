@@ -1,0 +1,269 @@
+{
+  "_id": "UGFmwAU94TRmdTZ9",
+  "name": "Bension of Tzeentch",
+  "type": "spell",
+  "img": "modules/wfrp4e-dotr/assets/icons/tzeentch.png",
+  "effects": [
+    {
+      "_id": "DgLV1VamZoe2oXyT",
+      "flags": {
+        "wfrp4e": {
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false
+        }
+      },
+      "changes": [
+        {
+          "key": "system.characteristics.ws.modifier",
+          "value": "10",
+          "mode": 2,
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-dotr/assets/icons/tzeentch.png",
+      "tint": null,
+      "transfer": false,
+      "origin": null,
+      "name": "Weapon Skill Bonus",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!UGFmwAU94TRmdTZ9.DgLV1VamZoe2oXyT"
+    },
+    {
+      "_id": "oSz6XAXRgrZ12MtI",
+      "flags": {
+        "wfrp4e": {
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false
+        }
+      },
+      "changes": [
+        {
+          "key": "system.characteristics.t.modifier",
+          "value": "10",
+          "mode": 2,
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-dotr/assets/icons/tzeentch.png",
+      "tint": null,
+      "transfer": false,
+      "origin": null,
+      "name": "Toughness Bonus",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!UGFmwAU94TRmdTZ9.oSz6XAXRgrZ12MtI"
+    },
+    {
+      "_id": "oRg93ouveOMcjUE5",
+      "flags": {
+        "wfrp4e": {
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false
+        }
+      },
+      "changes": [
+        {
+          "key": "system.characteristics.ag.modifier",
+          "value": "10",
+          "mode": 2,
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-dotr/assets/icons/tzeentch.png",
+      "tint": null,
+      "transfer": false,
+      "origin": null,
+      "name": "Agility Bonus",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!UGFmwAU94TRmdTZ9.oRg93ouveOMcjUE5"
+    },
+    {
+      "_id": "xDGNWrsKdjZ5Tjdl",
+      "flags": {
+        "wfrp4e": {
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false
+        }
+      },
+      "changes": [
+        {
+          "key": "system.characteristics.wp.modifier",
+          "value": "10",
+          "mode": 2,
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-dotr/assets/icons/tzeentch.png",
+      "tint": null,
+      "transfer": false,
+      "origin": null,
+      "name": "Willpower Bonus",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!UGFmwAU94TRmdTZ9.xDGNWrsKdjZ5Tjdl"
+    }
+  ],
+  "folder": "u1exIfJdxyR01hCh",
+  "sort": 100000,
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Arcane Spells of Tzeentch",
+      "sort": 100000
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You call upon the favour of Tzeentch and gain a temporary +10 bonus to one of the following Characteristics: Weapon Skill, Toughness, Agility, or Willpower.&nbsp;</p><p>\n\n <b>Lore:</b> Targets of Spells from the Lore of Tzeentch are riven by the transformative magic of Chaos. Targets affected by a Spell from the Lore of Tzeentch must pass a Challenging (+0) Endurance Test, or gain +1 Corruption Point. Should they pass their Test, they instead gain +1 Fortune Point, which can be used as normal. Such are the whims of Tzeentch.<p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "tzeentch",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "You",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "You",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus minutes",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 9,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "2TbX8z7IWr0GFssP": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "hv1aja7lAR8ZyKUO": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1681859838890,
+    "modifiedTime": 1693273562891,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!UGFmwAU94TRmdTZ9"
+}

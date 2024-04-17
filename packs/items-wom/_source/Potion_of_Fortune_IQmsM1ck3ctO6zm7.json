@@ -1,0 +1,85 @@
+{
+  "type": "trapping",
+  "name": "Potion of Fortune",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><strong>Onset Time</strong>: 1 round</p><p><strong>Volatility</strong>: Extreme</p><p><strong>Ingredient Cost</strong> @Pay[20gc]{20 GC}</p><p><strong>Ingredient Locale</strong>: Mountainsides</p><p><strong>Ingredient Difficulty</strong>: -10</p><p><strong>Creation Difficulty</strong>: -2 SL</p><p><strong>Creation Time</strong>: 2 months</p><p>The drinker may make an @UUID[JournalEntry.4spGTAnh7qc2JDqY.JournalEntryPage.IfozNVc6u3EFeglG]{Easy (+40) Augury} Test, using their Intelligence if they do not possess the Augury Skill.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "None"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "img": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/vitality-draught.png",
+  "effects": [],
+  "folder": "PTC5Z3dO3YcFXIkR",
+  "sort": 100049,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Potions",
+      "sort": 100049
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1677616103322,
+    "modifiedTime": 1693273575712,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "IQmsM1ck3ctO6zm7",
+  "_key": "!items!IQmsM1ck3ctO6zm7"
+}

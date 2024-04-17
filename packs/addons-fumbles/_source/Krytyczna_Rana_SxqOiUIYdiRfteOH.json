@@ -1,0 +1,85 @@
+{
+  "name": "Krytyczna Rana",
+  "type": "critical",
+  "_id": "SxqOiUIYdiRfteOH",
+  "img": "icons/skills/melee/shield-damaged-broken-blue.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Twój atak lub obrona była prowadzona ręką chaosu. Otrzymujesz losową ranę krytyczną -20 w losową lokację. </p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "0",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "",
+      "type": "String",
+      "label": "Location"
+    }
+  },
+  "effects": [
+    {
+      "icon": "icons/skills/melee/shield-damaged-broken-blue.webp",
+      "transfer": true,
+      "name": "Krytyczna Rana",
+      "_id": "QbB3wYXgFRNSgwx7",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "let hitLoc = await game.wfrp4e.tables.rollTable(\"hitloc\", { hideDSN: true });\nlet message =  `<div><b>Rana Krytyczna</b><<br><a class=\"table-click critical-roll\" data-modifier=\"-20\" data-table=\"critl${hitLoc.result}\"><i class=\"fas fa-list\"></i>Krytyk -20</a>`\nChatMessage.create({ content: message });\n\nconst target = this.actor;\nconst effectName = this.effect.name;\nsetTimeout(() => {\n    let itm = target.getItemTypes(\"critical\").find(x=>x.name == effectName);\n    target.deleteEmbeddedDocuments(\"Item\", [itm.id])\n}, 500);"
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!SxqOiUIYdiRfteOH.QbB3wYXgFRNSgwx7"
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Czz7IJA9DEa5LD9E": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.305",
+    "createdTime": 1689676318575,
+    "modifiedTime": 1689795736203,
+    "lastModifiedBy": "Czz7IJA9DEa5LD9E"
+  },
+  "_key": "!items!SxqOiUIYdiRfteOH"
+}

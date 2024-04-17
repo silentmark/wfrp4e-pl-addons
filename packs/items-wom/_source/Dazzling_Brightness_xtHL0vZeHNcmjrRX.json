@@ -1,0 +1,154 @@
+{
+  "name": "Dazzling Brightness",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You create a burst of purest light. Everyone in the affected area receives 1 @Condition[Blinded] Condition unless they possess the Arcane Magic (Light) Talent. Daemons receive 1 @Condition[Stunned] Condition.</p><p>\n\n <b>Lore:</b> You may inflict one @Condition[Blinded] Condition on those targeted by Lore of Light spells, unless they possess the Arcane Magic (Light) Talent. If a target has the @UUID[Compendium.wfrp4e-core.items.v3uzEthcq0JRar0J]{Daemonic} or @UUID[Compendium.wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Undead} Creature Traits, spells also inflict an additional hit with Damage equal to your Intelligence Bonus that ignores Toughness Bonus and Armor Points.<p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "light",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower yards",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Willpower Bonus yards",
+      "aoe": true
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Instant",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 5,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "type": "spell",
+  "folder": "FoB0dUA8pzSvKt0l",
+  "img": "modules/wfrp4e-core/icons/spells/light.png",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-core/icons/spells/light.png",
+      "transfer": false,
+      "_id": "1YyqMllQbpxem6x7",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "let talent = this.actor.has(\"Arcane Magic (Light)\", \"talent\")\nlet demon = this.actor.has(game.i18n.localize(\"NAME.Daemonic\"))\n\nif (!talent)\n{\n   await this.actor.addCondition(\"blinded\")\n}\n\nif (demon)\n{\n    await this.actor.addCondition(\"stunned\")\n}"
+        }
+      },
+      "name": "Dazzling Brightness",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!xtHL0vZeHNcmjrRX.1YyqMllQbpxem6x7"
+    }
+  ],
+  "sort": 600000,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Light",
+      "sort": 600000
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676243555943,
+    "modifiedTime": 1693273575812,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "xtHL0vZeHNcmjrRX",
+  "_key": "!items!xtHL0vZeHNcmjrRX"
+}

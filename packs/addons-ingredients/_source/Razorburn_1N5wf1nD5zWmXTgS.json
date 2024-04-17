@@ -1,0 +1,80 @@
+{
+  "name": "Razorburn",
+  "type": "trapping",
+  "img": "icons/consumables/potions/bottle-round-flask-fumes-purple.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<div><div><p>A potent and corrupt form of natural naphtha made from the tainted vital fluids found within Razorgors. Razorburn is used to make particularly insidious flammable explosives. Incendiary bombs made with Razorburn create unnatural flames that sear the spirit as readily as flesh and count as a Magical attack.</p><p>An unguent of Razorburn may be smeared on any weapon and set alight, granting the weapon the ability to inflict a single AblazeCondition with each strike. The fire lasts for 1d10 rounds, during which time the weapon also counts as Magical.</p><p>Use of Razorburn as a weapon is considered heretical by many faiths of the Old World, especially the Cult of Morr who have seen first hand the pathetic spiritual remains that emerge from those killed by the substance. In some provinces the punishment for being caught with a vial is to be burned at the stake. Naturally, the confiscated Razorburn is used to start the fire.</p><div><p></p></div></div></div><div><div><p></p></div><div><p><br></p></div></div>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "1",
+      "ss": "10",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "rare"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1670890602882,
+    "modifiedTime": 1690314463871,
+    "lastModifiedBy": "Czz7IJA9DEa5LD9E"
+  },
+  "_id": "1N5wf1nD5zWmXTgS",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "kYUjI3k8J8QQt9Qw": 3
+  },
+  "_key": "!items!1N5wf1nD5zWmXTgS"
+}

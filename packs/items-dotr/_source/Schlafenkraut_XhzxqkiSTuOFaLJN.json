@@ -1,0 +1,87 @@
+{
+  "_id": "XhzxqkiSTuOFaLJN",
+  "name": "Schlafenkraut",
+  "type": "trapping",
+  "img": "modules/wfrp4e-core/art/other/herbalism.webp",
+  "effects": [],
+  "folder": "SZryze7C4xnI87Ll",
+  "sort": -275000,
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Herbs of the Empire",
+      "sort": 700000
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<h3>A Restful Concoction</h3>\n<p>Known in the Moot as Dreamleaf, in Tilea as <em>Dormifolio</em>, and to the Elves as <em>Paraudiel</em>, this plant grows in open grasslands, and is especially prolific when the last snows of winter are melting. It also grows well in open marshy areas and beside streams whose banks are not too high. It is a very good sedative and sleeping-draught, and may combine with other preparations, with no fear of ill effects. The dried leaves are steeped in water which has boiled and been left to stand for a minute or so &mdash; if the water is boiling when the leaves are put in, they will scald and the resulting infusion will be unpleasantly bitter as well as less effective. The leaves can also be added to tea or mulled wine; a little honey will soften any sharpness that it adds to their flavour.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><strong>Locality</strong>: Grasslands</p>\n<p><strong>Season</strong>: Spring</p>\n<p><strong>Preparations</strong>: @UUID[Compendium.wfrp4e-dotr.journals.JhZ4qkEf569rEcsY.JournalEntryPage.uxIVUGe1gSkqbo8m#infusions]{Infusion}, @UUID[Compendium.wfrp4e-dotr.journals.JhZ4qkEf569rEcsY.JournalEntryPage.uxIVUGe1gSkqbo8m#draughts]{Draught}</p>\n<p>An infusion of Schlafenkraut takes effect [[/r 2d10 + 10]] minutes after drinking, bringing on a normal sleep; for the first four hours of this sleep, the patient&rsquo;s chances of being woken by noise are halved. A patient who is woken within this time must make a successful&nbsp;<strong>Challenging (+0) Endurance&nbsp;</strong>Test or gain three @Condition[Fatigued] Condition. After four hours the herb&rsquo;s effect wears off, and the patient sleeps normally.</p>\n<p>A draught of Schlafenkraut works in much the same way, but the effects come on a little faster but do not typically last as long. A draught of Schlafenkraut will bring on normal sleep in [[/r 1d10]] minutes, but the chances of waking are halved for only&nbsp; the first two hours of sleep.</p>\n<p>A Character may resist falling asleep due to Schlafenkraut on a successful&nbsp;<strong>Challenging (+0) Cool</strong>&nbsp;Test. If successful, the Endurance Test is still required to avoid becoming Fatigued. The @UUID[Compendium.wfrp4e-core.items.3wCtgMDNnu8MFmyk]{Immunity (Poison)} Trait renders Schlafenkraut completely ineffective.</p>"
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "10",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "rare"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "2TbX8z7IWr0GFssP": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "hv1aja7lAR8ZyKUO": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1681859838891,
+    "modifiedTime": 1693273562894,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!XhzxqkiSTuOFaLJN"
+}

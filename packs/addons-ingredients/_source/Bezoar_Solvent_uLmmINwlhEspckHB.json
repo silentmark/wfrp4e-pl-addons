@@ -1,0 +1,80 @@
+{
+  "name": "Bezoar Solvent",
+  "type": "trapping",
+  "img": "icons/sundries/survival/wetskin-leather-red.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><span style=\"font-family: serif\">An extremely useful preparation, Bezoar Solvent is named for the stones swallowed by goats to aid with digestion, and which are widely believed to cure any poison. In fact the stones have little effect on their own, and purportedly function as claimed only when combined with powerful magic.</span></p><p><span style=\"font-family: serif\">Bezoar Solvent is a mixture of alcohol and other liquids, held in a goat's stomach overnight before being distilled into a potion. On its own this does nothing — however, a single drop of any poison will turn this potion into an antidote for that poison. This is naturally extremely useful, though this utility is curtailed by its specificity. The antidote only works if a drop of the exact poison to be treated is used. Similar poisons, even fresh preparations using the same ingredients, are useless. The exact poison must be used.</span></p><p><span style=\"font-family: serif\">This is not impossible when dealing with the bite of a venomous animal, as the offending creature can often be captured and its venom extracted. However, treating deliberate poisonings is more difficult, as the perpetrator is unlikely to keep any evidence as damning as a sample of the poison they used. Once a drop of the offending poison is added to a potion of Bezoar Solvent, it may not be used to treat any other poison. Adding further poisons simply makes the mixture slightly poisonous itself.</span></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "10",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "scarce"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "foodAndDrink"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.4.0",
+    "coreVersion": "10.291",
+    "createdTime": 1670890602882,
+    "modifiedTime": 1690313539009,
+    "lastModifiedBy": "kYUjI3k8J8QQt9Qw"
+  },
+  "_id": "uLmmINwlhEspckHB",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "kYUjI3k8J8QQt9Qw": 3
+  },
+  "_key": "!items!uLmmINwlhEspckHB"
+}

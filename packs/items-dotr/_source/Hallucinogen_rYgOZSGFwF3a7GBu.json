@@ -1,0 +1,99 @@
+{
+  "_id": "rYgOZSGFwF3a7GBu",
+  "name": "Hallucinogen",
+  "type": "trait",
+  "img": "modules/wfrp4e-core/icons/traits/trait.png",
+  "effects": [
+    {
+      "_id": "LmpWdumiDha7ieF3",
+      "flags": {
+        "wfrp4e": {
+          "effectApplication": "apply",
+          "effectTrigger": "oneTime",
+          "script": "args.actor.setupCharacteristic(\"wp\").then(setupData =>{\n                    args.actor.basicTest(setupData).then(test => {\n                        if (test.result.outcome == \"failure\")\n                        {\n                            let stuns = Math.max(1, Math.abs(test.result.SL))\n                            args.actor.addCondition(\"stunned\", stuns)\n                        }\n                        })\n                    })",
+          "preventDuplicateEffects": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/traits/trait.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Hallucinogen",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!rYgOZSGFwF3a7GBu.LmpWdumiDha7ieF3"
+    }
+  ],
+  "folder": "wvnqjaHZIliUa723",
+  "sort": 800001,
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Traits",
+      "sort": 800001
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The creature exudes a hallucinogenic musk. Victims within 2 yards (more, at the GM&rsquo;s discretion, if the victim is downwind) must pass an <strong>Average (+20) Willpower</strong> Test or succumb, gaining one @Condition[Stunned] Condition for each level of failure.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "2TbX8z7IWr0GFssP": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "hv1aja7lAR8ZyKUO": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1681859838896,
+    "modifiedTime": 1693273562906,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!rYgOZSGFwF3a7GBu"
+}

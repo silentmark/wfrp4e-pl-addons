@@ -1,0 +1,98 @@
+{
+  "_id": "p2koJMixjjVp1PjV",
+  "name": "Racing Hull",
+  "type": "vehicleMod",
+  "img": "modules/wfrp4e-dotr/assets/icons/upgrade.png",
+  "effects": [
+    {
+      "_id": "YM9LffFUMjn9bLYq",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false
+        }
+      },
+      "changes": [
+        {
+          "key": "system.details.move.value",
+          "value": "2",
+          "mode": 1,
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-dotr/assets/icons/upgrade.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Racing Hull",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!p2koJMixjjVp1PjV.YM9LffFUMjn9bLYq"
+    }
+  ],
+  "folder": "mqmgFBAdX7S24AT7",
+  "sort": 200001,
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Hull",
+      "sort": 200001
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Wealthy nobles are addicted to contests and wagering, as everyone knows. In an effort to outdo their fellows, some wealthy boat owners have sunk immense sums into research and craftsmanship, in search of the perfect hull shape for speed. A racing hull is as smooth as glass and cunningly shaped to reduce drag to a bare minimum, allowing the boat to travel at up to twice its normal Movement rate.</p><p>A boat with a racing hull is tricky to control, though, and requires a <strong>Difficult (−10) Boat Handling</strong> Test every hour. On a Marginal (−1 SL) or Normal Failure, Movement cannot exceed the normal rate; on an Impressive Failure (−4 SL), Movement is half normal; and on an Astounding Failure (−6 SL or less), the hull is damaged and the boat cannot exceed half normal Movement until it is repaired at a cost equal to half the cost of the hull, as above.</p><p>Normal @UUID[Compendium.wfrp4e-dotr.journals.WR8ZAD6yw9lYgzeY.JournalEntryPage.qpdadmEFPBzFcklt]{repairs} to a racing hull cost twice the normal rate given, and require finer craftsmanship: all relevant Tests are one step more difficult than usual.</p><blockquote class=\"foundry-note\"><p>Encumbrance and Price reflects 10 ft. of length. Modify this item according to the ship it's being applied to.</p></blockquote>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "220",
+      "ss": "0",
+      "bp": "0"
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": -50
+    },
+    "modType": {
+      "value": "hull"
+    },
+    "quantity": {
+      "value": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "2TbX8z7IWr0GFssP": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "hv1aja7lAR8ZyKUO": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1681859838895,
+    "modifiedTime": 1693273562904,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!p2koJMixjjVp1PjV"
+}

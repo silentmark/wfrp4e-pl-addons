@@ -1,0 +1,82 @@
+{
+  "name": "Summer Rain",
+  "permission": {
+    "default": 0,
+    "OfKMBdcUK6oV9G48": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Your magic words conjure dark clouds out of nowhere, unleashing a torrential downpour of rain in any outdoor environment, except desert. The deluge snuffs out fire, gunfire, and explosives. All Ranged attacks count as two Range steps farther: Point Blank counts as Medium, Short counts as Extreme, and anything more distant is impossible. The surrounding area becomes difficult ground until it dries. The rain provides sustenance for local life, creating pools of clean water to drink.</p>\n<p>&nbsp;</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Seasons",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower yards"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Special",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus minutes",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 6,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.TohhsBCBpY09DlUg"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_summer_rain.jpg",
+  "effects": [],
+  "_id": "0ukxPT0q82WC0kzX",
+  "_key": "!items!0ukxPT0q82WC0kzX"
+}

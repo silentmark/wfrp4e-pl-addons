@@ -1,0 +1,58 @@
+{
+  "_id": "GUngrsQx9qAk8NM1",
+  "name": "Szybki jak Wiatr",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Potrafisz poruszać się tak szybko, że w walce zawsze działasz pierwszy. Jeśli używasz Walki Wręcz, działasz pierwszy w kolejności Inicjatywy, tak jakbyś zaatakował bronią z Cechą Szybka i zdecydował się działać pierwszy. Jeśli inny wojownik ma broń z cechą Szybka, atakuje po tobie. Jeśli dwa wampiry mają ten talent, pierwszy zaczyna wampir z wyższą inicjatywą.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "1"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "folder": "IdBKVE70UjsZfSoR",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.311",
+    "createdTime": 1707000919915,
+    "modifiedTime": 1707139629241,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 2400000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!GUngrsQx9qAk8NM1"
+}

@@ -1,0 +1,170 @@
+{
+  "name": "Wybite oko",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/head.png",
+  "effects": [
+    {
+      "_id": "4G9KjSyQNM9UFOlS",
+      "flags": {
+        "wfrp4e": {
+          "trigger": "endRound",
+          "effectTrigger": "dialogChoice",
+          "effectData": {
+            "description": "Tests related to sight",
+            "modifier": "-10 * this.flags.wfrp4e.value"
+          },
+          "value": 3,
+          "secondaryEffect": {
+            "effectTrigger": "targetPrefillDialog",
+            "script": "if (args.item && args.item.attackType=='melee') args.prefillModifiers.modifier += 10 * this.effect.conditionValue"
+          }
+        },
+        "core": {
+          "statusId": "blinded"
+        }
+      },
+      "changes": [],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "systems/wfrp4e/icons/conditions/blinded.png",
+      "label": "Oślepienie",
+      "transfer": true,
+      "disabled": false,
+      "origin": null,
+      "tint": null,
+      "_key": "!items.effects!35QDNG33S46953IK.4G9KjSyQNM9UFOlS"
+    },
+    {
+      "_id": "pSm6zIWXDFmFg3Zq",
+      "flags": {
+        "wfrp4e": {
+          "trigger": "endRound",
+          "value": 2
+        },
+        "core": {
+          "statusId": "bleeding"
+        }
+      },
+      "changes": [],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "systems/wfrp4e/icons/conditions/bleeding.png",
+      "label": "Krwawienie",
+      "transfer": true,
+      "disabled": false,
+      "origin": null,
+      "tint": null,
+      "_key": "!items.effects!35QDNG33S46953IK.pSm6zIWXDFmFg3Zq"
+    },
+    {
+      "_id": "jatRx58WzHQUA31m",
+      "flags": {
+        "wfrp4e": {
+          "trigger": "endRound",
+          "effectTrigger": "prefillDialog",
+          "script": "args.prefillModifiers.modifier -= 10 * getProperty(this.effect, 'flags.wfrp4e.value');",
+          "value": 1
+        },
+        "core": {
+          "statusId": "stunned"
+        }
+      },
+      "changes": [],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "systems/wfrp4e/icons/conditions/stunned.png",
+      "label": "Oszołomienie",
+      "transfer": true,
+      "disabled": false,
+      "origin": null,
+      "tint": null,
+      "_key": "!items.effects!35QDNG33S46953IK.jatRx58WzHQUA31m"
+    },
+    {
+      "_id": "SYIKc7QymcGfIwN9",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "actor",
+          "script": "let injury = await fromUuid(\"Compendium.wfrp4e-core.injuries.weczkAMPlTjX7lqU\");\nargs.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()]);",
+          "preventDuplicateEffects": false,
+          "hide": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/injuries/head.png",
+      "label": "Wybite oko",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "_key": "!items.effects!35QDNG33S46953IK.SYIKc7QymcGfIwN9"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wfrp4e-pl.criticals.35QDNG33S46953IK"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Cios zupełnie niszczy gałkę oczną, wywołując niezwykle silny ból. Postać otrzymuje 3 poziomy Stanu @Condition[Oślepienie], 2 poziomy Stanu @Condition[Krwawienie] i 1 poziom Stanu @Condition[Oszołomienie]. Ponadto traci oko - Amputacja (wymagająca).</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "5",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Głowa",
+      "type": "String",
+      "label": "Location"
+    }
+  },
+  "_id": "35QDNG33S46953IK",
+  "folder": null,
+  "sort": 0,
+  "_key": "!items!35QDNG33S46953IK"
+}

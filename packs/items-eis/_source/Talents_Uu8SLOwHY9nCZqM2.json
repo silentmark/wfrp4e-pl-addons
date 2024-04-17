@@ -1,0 +1,19 @@
+{
+  "name": "Talents",
+  "type": "Item",
+  "_id": "Uu8SLOwHY9nCZqM2",
+  "folder": null,
+  "sorting": "a",
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1691299903057,
+    "modifiedTime": 1691299939135,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "color": null,
+  "_key": "!folders!Uu8SLOwHY9nCZqM2"
+}

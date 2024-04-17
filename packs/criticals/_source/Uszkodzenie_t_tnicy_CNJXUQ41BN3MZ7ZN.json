@@ -1,0 +1,103 @@
+{
+  "name": "Uszkodzenie tętnicy",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/tornbody.png",
+  "effects": [
+    {
+      "_id": "fcOYmx9WLncp95Sl",
+      "flags": {
+        "wfrp4e": {
+          "trigger": "endRound",
+          "value": 4
+        },
+        "core": {
+          "statusId": "bleeding"
+        }
+      },
+      "changes": [],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "systems/wfrp4e/icons/conditions/bleeding.png",
+      "label": "Krwawienie",
+      "transfer": true,
+      "disabled": false,
+      "origin": null,
+      "tint": null,
+      "_key": "!items.effects!CNJXUQ41BN3MZ7ZN.fcOYmx9WLncp95Sl"
+    },
+    {
+      "_id": "7JMNhRyCgMlmfLLK",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "takeDamage",
+          "effectApplication": "actor",
+          "script": "if (args.opposedTest.result.hitloc.value == \"body\") {\r\n    await args.actor.addCondition(\"bleeding\", 2);\r\n}"
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/injuries/tornbody.png",
+      "label": "Uszkodzenie tętnicy",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "_key": "!items.effects!CNJXUQ41BN3MZ7ZN.7JMNhRyCgMlmfLLK"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wfrp4e-pl.criticals.CNJXUQ41BN3MZ7ZN"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Postać otrzymuje 4 poziomy Stanu @Condition[Krwawienie]. Dopóki ktoś nie udzieli jej pomocy Chirurgicznej, za każdym razem gdy postać otrzyma Ranę w korpus, otrzymuje dodatkowe 2 poziomy Stanu @Condition[Krwawienie].</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "3",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Korpus",
+      "type": "String",
+      "label": "Location"
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_id": "CNJXUQ41BN3MZ7ZN",
+  "folder": null,
+  "sort": 0,
+  "_key": "!items!CNJXUQ41BN3MZ7ZN"
+}

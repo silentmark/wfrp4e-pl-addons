@@ -1,0 +1,19 @@
+{
+  "name": "Manifestacje",
+  "sorting": "a",
+  "folder": null,
+  "type": "RollTable",
+  "_id": "PRtfySS3WdJY4Oq3",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.2",
+    "coreVersion": "11.313",
+    "createdTime": 1697834210426,
+    "modifiedTime": 1697834210426,
+    "lastModifiedBy": "Czz7IJA9DEa5LD9E"
+  },
+  "_key": "!folders!PRtfySS3WdJY4Oq3"
+}

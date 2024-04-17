@@ -1,0 +1,66 @@
+{
+  "folder": "eDa26yROvXFICcCq",
+  "name": "Catalyst",
+  "type": "trait",
+  "img": "modules/wfrp4e-wom/assets/icons/marks/mark-ghyran.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Your influence causes even destructive things to procreate. Diseases incubate twice as fast and last twice as long in Characters within 10 yards of you. In addition, unpreserved food perishes twice as fast while you are near.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [],
+  "sort": 150000,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Ghyran",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676321967717,
+    "modifiedTime": 1693273575747,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "XAiGbEwnJMhH3WPE",
+  "_key": "!items!XAiGbEwnJMhH3WPE"
+}

@@ -1,0 +1,69 @@
+{
+  "folder": "0bRUpXkinPXWwqzU",
+  "name": "Psychometry",
+  "type": "skill",
+  "img": "modules/wfrp4e-core/icons/skills/adv-skill-int.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>@UUID[JournalEntry.4spGTAnh7qc2JDqY.JournalEntryPage.oEoVBFC9iyUAJgpx]{Psychometry (Int)}</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "advanced": {
+      "value": "adv",
+      "type": "String"
+    },
+    "grouped": {
+      "value": "noSpec",
+      "type": "String"
+    },
+    "characteristic": {
+      "type": "String",
+      "label": "Characteristic",
+      "value": "int"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 0,
+      "costModifier": 0,
+      "force": false
+    },
+    "modifier": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 0
+    },
+    "total": {
+      "type": "Number",
+      "label": "Total"
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Other",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1677882906688,
+    "modifiedTime": 1693273575708,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "GxfrW2whVdNJABVQ",
+  "_key": "!items!GxfrW2whVdNJABVQ"
+}

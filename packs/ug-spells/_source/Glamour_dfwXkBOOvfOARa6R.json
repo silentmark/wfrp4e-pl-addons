@@ -1,0 +1,84 @@
+{
+  "name": "Glamour",
+  "permission": {
+    "default": 0,
+    "JaDY9Gr5gDw8h5kN": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You wreathe yourself in Ulgu, turning into a more fetching version of yourself. Your features don&rsquo;t change: they just become more exotic and intriguing to those who would normally be attracted to your Species and Gender. You gain +10 Fellowship and your maximum level in the Attractive Talent. Overcast: For each +2 SL, you may add +10 to your Fellowship.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Shadows",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "You"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "You",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower minutes",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 4,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "flags": {
+    "_sheetTab": "details"
+  },
+  "img": "modules/wfrp4e-content/icons/spells/shadow.png",
+  "_id": "dfwXkBOOvfOARa6R",
+  "effects": [],
+  "_key": "!items!dfwXkBOOvfOARa6R"
+}

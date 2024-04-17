@@ -1,0 +1,82 @@
+{
+  "_id": "onEdOsKqxZbgB2jR",
+  "name": "Wrack",
+  "permission": {
+    "default": 0,
+    "LhiA8OMMa0ToAWEe": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Your target experiences a jolt of searing pain, suﬀering SL Damage to the Hit Location, reduced by Toughness Bonus and Armour Points (minimum of 1). The pain will cause further eﬀects if a<strong> Challenging (+0)</strong> Test is failed. On a Head hit, a failed Cool Test causes 1 <em>Stunned</em> Condition. On an Arm hit, a failed Dexterity Test causes the target to drop whatever was held in that hand. On a Body hit, a failed Endurance Test causes 1 <em>Stunned</em> Condition. On a Leg hit, a failed Agility Test gives the target the <em>Prone</em> Condition.&nbsp;</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "petty",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower Bonus yards"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "1",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Instant",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 0,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.eefJG0sHkdAgUOpj"
+    }
+  },
+  "img": "systems/wfrp4e/icons/blank.png",
+  "effects": [],
+  "_key": "!items!onEdOsKqxZbgB2jR"
+}

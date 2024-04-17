@@ -1,0 +1,120 @@
+{
+  "name": "Red Griffon",
+  "type": "trapping",
+  "img": "icons/consumables/drinks/wine-amphora-clay-pink.webp",
+  "effects": [
+    {
+      "_id": "9ArLjt6oQqMDFsDu",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "invoke",
+          "effectApplication": "actor",
+          "script": "let fatigued= this.actor.hasCondition(\"fatigued\")\nif (fatigued)\n{\n   ui.notifications.notify(`Cleared ${fatigued.conditionValue} Fatigued Conditions`)\n   this.actor.removeCondition(\"fatigued\", fatigued.conditionValue)\n}",
+          "preventDuplicateEffects": false,
+          "hide": false,
+          "reduceQuantity": true
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/vitality-draught.png",
+      "label": "Vitality Draught",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "_key": "!items.effects!ZBBi7LpWvNgQgRcw.9ArLjt6oQqMDFsDu"
+    }
+  ],
+  "flags": {
+    "_sheetTab": "description",
+    "core": {
+      "sourceId": "Compendium.wfrp4e-core.trappings.ZBBi7LpWvNgQgRcw"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Drinking this draught instantly removes all Fatigued&nbsp;Conditions.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "12",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "scarce"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.4.0",
+    "coreVersion": "10.291",
+    "createdTime": 1663627495289,
+    "modifiedTime": 1690313539018,
+    "lastModifiedBy": "kYUjI3k8J8QQt9Qw"
+  },
+  "_id": "ZBBi7LpWvNgQgRcw",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "kYUjI3k8J8QQt9Qw": 3
+  },
+  "_key": "!items!ZBBi7LpWvNgQgRcw"
+}

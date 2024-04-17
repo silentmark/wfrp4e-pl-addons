@@ -1,0 +1,82 @@
+{
+  "_id": "VofMvvm1m1YP312c",
+  "name": "Mork Wants Ya!",
+  "permission": {
+    "default": 0,
+    "LhiA8OMMa0ToAWEe": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You conjure a gigantic green claw from a pulsing hole in the sky many yards above your target&rsquo;s head. Your target gains the <em>Surprised</em> Condition as the claw flies down, then grabs and lifts them into the air at a rate of four yards per Round. Once the surprise has worn oﬀ, the target may use their Action to attempt an <strong>Opposed Strength/Channellin</strong>g Test to break free. If the target wins, the claw retreats into the hole and the target falls to the ground, taking Falling Damage as if jumping down. If the target never breaks free, the spell ends as the claw attempts to squeeze the target through the hole. There is a 50% chance that the target is sucked inside, never to be seen from again (unless a Fate point is spent). Otherwise, the target falls to the ground, taking Falling Damage.&nbsp;&nbsp;</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower yards"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Special",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus rounds",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 6,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.oWXD6PymzG0sDoAu"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_mork-wants-ya!.jpg",
+  "effects": [],
+  "_key": "!items!VofMvvm1m1YP312c"
+}

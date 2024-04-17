@@ -1,0 +1,171 @@
+{
+  "name": "Bez tchu",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/tornbody.png",
+  "effects": [
+    {
+      "_id": "NrZ8LRI1dsP46RmJ",
+      "flags": {
+        "wfrp4e": {
+          "trigger": "endRound",
+          "effectTrigger": "prefillDialog",
+          "script": "args.prefillModifiers.modifier -= 10 * getProperty(this.effect, 'flags.wfrp4e.value');",
+          "value": 1
+        },
+        "core": {
+          "statusId": "stunned"
+        }
+      },
+      "changes": [],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "systems/wfrp4e/icons/conditions/stunned.png",
+      "label": "Oszołomienie",
+      "transfer": true,
+      "disabled": false,
+      "origin": null,
+      "tint": null,
+      "_key": "!items.effects!MVBM0Q35AQGDBDB9.NrZ8LRI1dsP46RmJ"
+    },
+    {
+      "_id": "uaaFc96JlTCALmeJ",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "actor",
+          "script": "if (this.actor.isOwner) {\n   args.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {absolute: {difficulty: \"average\"}}).then(async test => {\n        await test.roll();\n        if (test.result.outcome == \"failure\") {\n            await args.actor.addCondition(\"prone\");\n        }\n     });\n}",
+          "scriptData": [
+            {
+              "label": "Bez tchu",
+              "trigger": "immediate",
+              "script": "if (this.actor.isOwner) {\n   args.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {fields: {difficulty: \"average\"}}).then(async test => {\n        await test.roll();\n        if (test.result.outcome == \"failure\") {\n            await args.actor.addCondition(\"prone\");\n        }\n     });\n}",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "applicationData": {
+            "avoidTest": {
+              "value": "none"
+            },
+            "testIndependent": false,
+            "prompt": false,
+            "runAsGM": false
+          }
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/injuries/tornbody.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Bez tchu",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!MVBM0Q35AQGDBDB9.uaaFc96JlTCALmeJ"
+    },
+    {
+      "_id": "5A8VfGUQYx8Q0M0G",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prePrepareData",
+          "effectApplication": "actor",
+          "script": "args.actor.details.move.value /= 2;"
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/injuries/tornbody.png",
+      "label": "Szybkość zmniejszona o połowę",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "_key": "!items.effects!MVBM0Q35AQGDBDB9.5A8VfGUQYx8Q0M0G"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wfrp4e-pl.criticals.MVBM0Q35AQGDBDB9"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Postać otrzymuje 1 poziom Stanu @Condition[Oszołomienie]. Musi również zdać Przeciętny (+20) Test Odporności albo otrzyma Stan @Condition[Powalenie]. Szybkość zmniejsza się o połowę na [[/r 1d10]] Rund, czyli dopóki postać nie zacznie oddychać normalnie.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "0",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Korpus",
+      "type": "String",
+      "label": "Location"
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_id": "MVBM0Q35AQGDBDB9",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1710239056905,
+    "modifiedTime": 1710239058554,
+    "lastModifiedBy": "Czz7IJA9DEa5LD9E"
+  },
+  "_key": "!items!MVBM0Q35AQGDBDB9"
+}

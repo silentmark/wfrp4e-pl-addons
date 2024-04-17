@@ -1,0 +1,112 @@
+{
+  "name": "Master Pyromancer",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>@UUID[Compendium.wfrp4e-wom.journals.wjJ2wq1bzzON74vV.JournalEntryPage.itwBfr0GHErukQ3E]{Pyromancer}</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "careergroup": {
+      "type": "String",
+      "label": "Career Group",
+      "value": "Pyromancer"
+    },
+    "class": {
+      "type": "String",
+      "label": "Class",
+      "value": "Academics"
+    },
+    "current": {
+      "type": "Boolean",
+      "value": false
+    },
+    "complete": {
+      "type": "Boolean",
+      "value": false
+    },
+    "level": {
+      "type": "String",
+      "label": "Career Level",
+      "value": "3"
+    },
+    "status": {
+      "tier": "g",
+      "standing": 1
+    },
+    "characteristics": [
+      "ws",
+      "int",
+      "wp",
+      "ag",
+      "i"
+    ],
+    "skills": [
+      "Channelling (Aqshy)",
+      "Dodge",
+      "Intimidate",
+      "Intuition",
+      "Language (Battle)",
+      "Language (Magick)",
+      "Lore (Magic)",
+      "Melee (Basic)",
+      "Melee (Polearm)",
+      "Perception",
+      "Charm",
+      "Cool",
+      "Gossip",
+      "Language (Any)",
+      "Leadership",
+      "Lore (Warfare)",
+      "Animal Care",
+      "Evaluate",
+      "Research",
+      "Ride (Horse)"
+    ],
+    "talents": [
+      "Dual Wielder",
+      "Instinctive Diction",
+      "Magical Sense",
+      "Menacing"
+    ],
+    "trappings": [
+      "Apprentice",
+      "Fourth and Fifth Keys of Secrets",
+      "Light Warhorse",
+      "Magical Item",
+      "Standard Robes"
+    ],
+    "incomeSkill": [
+      5
+    ]
+  },
+  "type": "career",
+  "folder": "EGdnaG0JFAHnazff",
+  "img": "modules/wfrp4e-wom/assets/icons/careers/pyromancer-03.png",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Pyromancer",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676403635156,
+    "modifiedTime": 1693273575750,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "Y1mkEiA6meXtAjhK",
+  "_key": "!items!Y1mkEiA6meXtAjhK"
+}

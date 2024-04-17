@@ -1,0 +1,139 @@
+{
+  "folder": "YHAiBvLkh8DJqjqS",
+  "name": "Leonardo's Alchemical Powder",
+  "type": "ammunition",
+  "img": "modules/wfrp4e-core/icons/equipment/ammunition/bullet-and-powder.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>@UUID[JournalEntry.4spGTAnh7qc2JDqY.JournalEntryPage.ew9yY1K70U0wVCjS#leonardos-alchemical-powder]{Leonardo's Alchemical Powder}</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 12
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "None"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "ammunitionType": {
+      "type": "String",
+      "label": "Ammunition Type",
+      "value": "BPandEng"
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "As Weapon"
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": "+3"
+    },
+    "qualities": {
+      "type": "String",
+      "label": "Qualities",
+      "value": [
+        {
+          "name": "impale",
+          "value": null
+        },
+        {
+          "name": "penetrating",
+          "value": null
+        }
+      ]
+    },
+    "flaws": {
+      "type": "String",
+      "label": "Flaws",
+      "value": []
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    }
+  },
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-core/icons/equipment/ammunition/bullet-and-powder.png",
+      "transfer": true,
+      "_id": "N1c7930nxSXk2WZJ",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "rollWeaponTest",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "if (args.test.item.ammo?.id == this.item.id)\n{\n    if (args.test.result.misfireDamage)\n        args.test.result.misfireDamage += 2\n}"
+        }
+      },
+      "name": "Leonardo's Alchemical Powder",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!PJo3sV2OWRk9wieB.N1c7930nxSXk2WZJ"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Other",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1678997337185,
+    "modifiedTime": 1693273575728,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "PJo3sV2OWRk9wieB",
+  "_key": "!items!PJo3sV2OWRk9wieB"
+}

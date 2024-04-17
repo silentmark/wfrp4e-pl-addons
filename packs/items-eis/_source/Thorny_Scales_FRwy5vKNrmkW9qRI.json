@@ -1,0 +1,81 @@
+{
+  "_id": "FRwy5vKNrmkW9qRI",
+  "name": "Thorny Scales",
+  "type": "mutation",
+  "img": "modules/wfrp4e-core/icons/mutations/mutation.png",
+  "effects": [
+    {
+      "_id": "hJXWWbWnrXhSJeBA",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prepareData",
+          "effectApplication": "actor",
+          "script": "args.actor.status.armour[\"head\"].value += 1\nargs.actor.status.armour[\"body\"].value += 1\nargs.actor.status.armour[\"rArm\"].value += 1\nargs.actor.status.armour[\"lArm\"].value += 1\nargs.actor.status.armour[\"rLeg\"].value += 1\nargs.actor.status.armour[\"lLeg\"].value += 1",
+          "preventDuplicateEffects": true
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/mutations/mutation.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Thorny Scales",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!FRwy5vKNrmkW9qRI.hJXWWbWnrXhSJeBA"
+    }
+  ],
+  "folder": "QOjm4pUE8aywpu9Z",
+  "sort": 100001,
+  "flags": {},
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>+1 Armour Points to all locations; this mutation can only be hidden by clothing</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "mutationType": {
+      "label": "Type",
+      "type": "String",
+      "value": "physical"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Modifier"
+    },
+    "modifiesSkills": {
+      "value": false,
+      "type": "Boolean",
+      "label": "Skill Modifier?"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "sAiwDCZFd21tgaDN": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1691299878976,
+    "modifiedTime": 1693273565126,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!FRwy5vKNrmkW9qRI"
+}

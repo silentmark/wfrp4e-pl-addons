@@ -1,0 +1,166 @@
+{
+  "name": "Strzaskane kolano",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+  "effects": [
+    {
+      "_id": "VeT5PVDzmP96JWCM",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prefillDialog",
+          "script": "args.prefillModifiers.modifier -= 20;",
+          "value": null,
+          "secondaryEffect": {
+            "effectTrigger": "targetPrefillDialog",
+            "script": "if (args.type == 'weapon' && args.item.attackType=='melee') args.prefillModifiers.modifier += 20"
+          }
+        },
+        "core": {
+          "statusId": "prone"
+        }
+      },
+      "changes": [],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "systems/wfrp4e/icons/conditions/prone.png",
+      "label": "Powalenie",
+      "transfer": true,
+      "disabled": false,
+      "origin": null,
+      "tint": null,
+      "_key": "!items.effects!XK81ZVK7NBRCQLGM.VeT5PVDzmP96JWCM"
+    },
+    {
+      "_id": "frTFfaHrrJxQMQvi",
+      "flags": {
+        "wfrp4e": {
+          "trigger": "endRound",
+          "effectTrigger": "prefillDialog",
+          "script": "args.prefillModifiers.modifier -= 10 * getProperty(this.effect, 'flags.wfrp4e.value');",
+          "value": 1
+        },
+        "core": {
+          "statusId": "stunned"
+        }
+      },
+      "changes": [],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "systems/wfrp4e/icons/conditions/stunned.png",
+      "label": "Oszołomienie",
+      "transfer": true,
+      "disabled": false,
+      "origin": null,
+      "tint": null,
+      "_key": "!items.effects!XK81ZVK7NBRCQLGM.frTFfaHrrJxQMQvi"
+    },
+    {
+      "_id": "0wiLtR9wzYfqn7kK",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "actor",
+          "script": "let injury = await fromUuid(\"Compendium.wfrp4e-core.injuries.2iult41Jehz0F1O8\");\nargs.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()]);",
+          "preventDuplicateEffects": false,
+          "hide": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+      "label": "Strzaskane kolano",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "_key": "!items.effects!XK81ZVK7NBRCQLGM.0wiLtR9wzYfqn7kK"
+    },
+    {
+      "_id": "zn1gNVJsB6wLvLmH",
+      "flags": {
+        "wfrp4e": {
+          "trigger": "endRound",
+          "value": 1
+        },
+        "core": {
+          "statusId": "bleeding"
+        }
+      },
+      "changes": [],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "systems/wfrp4e/icons/conditions/bleeding.png",
+      "label": "Krwawienie",
+      "transfer": true,
+      "disabled": false,
+      "origin": null,
+      "tint": null,
+      "_key": "!items.effects!XK81ZVK7NBRCQLGM.zn1gNVJsB6wLvLmH"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wfrp4e-pl.criticals.XK81ZVK7NBRCQLGM"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Cios roztrzaskuje rzepkę, której fragmenty wbijają się w mięśnie i staw. Postać otrzymuje Stany: Powalenie, 1 poziom Stanu @Condition[Krwawienie] i 1 poziom Stanu @Condition[Oszołomienie] oraz Uraz Złamanie (poważne), padając na ziemię i trzymając się za strzaskane kolano.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "4",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Noga",
+      "type": "String",
+      "label": "Location"
+    }
+  },
+  "_id": "XK81ZVK7NBRCQLGM",
+  "folder": null,
+  "sort": 0,
+  "_key": "!items!XK81ZVK7NBRCQLGM"
+}

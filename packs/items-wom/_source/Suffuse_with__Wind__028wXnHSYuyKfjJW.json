@@ -1,0 +1,93 @@
+{
+  "folder": "hGYhx9pNsRpGWNQs",
+  "name": "Suffuse with (Wind)",
+  "type": "talent",
+  "img": "systems/wfrp4e/icons/blank.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You are suffused with one of the Winds of Magic, which those with @UUID[Compendium.wfrp4e-core.items.OEjUvJKi0xmBwbS2]{Second Sight} can perceive clinging to your body. Any successful attempts to cast spells from the lore associated with the wind within 8 yards of you gain +1 SL. You can only claim this bonus once, no matter how many sources in your vicinity are suffused with your associated Wind of Magic.</p><p>In addition, you benefit from an extra effect depending on which wind you are suffused with.</p><p>@UUID[Compendium.wfrp4e-wom.items.0Xdm4r7l2EwC4fcg]{Aqshy}: You can benefit from the Frenzy Talent and may use your Channelling (Aqshy) Skill in place of Willpower for the purposes of entering Frenzy.</p><p>@UUID[Compendium.wfrp4e-wom.items.CkMYRYCLrkMnyVm5]{Azyr}: You can use your Channelling (Azyr) Skill in place of the Perception Skill for all relevant Tests.</p><p>@UUID[Compendium.wfrp4e-wom.items.K9FPtiDLwTkC7FuO]{Chamon}: You can use your Channelling (Chamon) Skill in place of the Evaluate Skill for all relevant Tests.</p><p>@UUID[Compendium.wfrp4e-wom.items.J6K5TPxI8qIGQKKH]{Ghur}: You can use your Channelling (Ghur) Skill in place of the Charm Animal Skill and the Lore (Beasts) Skill for all relevant Tests.</p><p>@UUID[Compendium.wfrp4e-wom.items.YgDEUO0G0XcqQJqg]{Ghyran}: You can use your Channelling (Ghyran) Skill in place of the Lore (Plants, Animals, Herbs) Skill and the Animal Care Skill for all relevant Tests.</p><p>@UUID[Compendium.wfrp4e-wom.items.2cv6hhZ57iV6z5Il]{Hysh}: You can use your Channelling (Hysh) Skill in place of the Research Skill for all relevant Tests.</p><p>@UUID[Compendium.wfrp4e-wom.items.O2v9RQiFf0obskP5]{Shyish}: You can use your Channelling (Shyish) Skill in place of the Intimidate Skill for all relevant Tests.</p><p>@UUID[Compendium.wfrp4e-wom.items.EjGYZ4CgX2jZW7Ot]{Ulgu}: You can use your Channelling (Ulgu) Skill in place of the Stealth Skill for all relevant Tests.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "1"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "effects": [
+    {
+      "icon": "systems/wfrp4e/icons/blank.png",
+      "transfer": true,
+      "_id": "RYsmEWgBEUtgW7eC",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "let filters = [\n    {\n        property : \"type\",\n        value : \"talent\"\n    },\n    {\n        property : \"name\",\n        value : /Suffuse with [^\\(]/gm,\n        regex: true\n    }\n]\nlet items = await game.wfrp4e.apps.ItemDialog.createFromFilters(filters, 1)\nitems = items.map(i => i.toObject())\ndebugger\nthis.actor.createEmbeddedDocuments(\"Item\", items);\nthis.actor.items.getName(this.effect.item.name).delete() // For some reason this.effect.item.delete() throws an error\n\n"
+        }
+      },
+      "name": "Suffuse with (Wind)",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!028wXnHSYuyKfjJW.RYsmEWgBEUtgW7eC"
+    }
+  ],
+  "sort": 300000,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Talents",
+      "sort": 300000
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1677802504061,
+    "modifiedTime": 1693273575663,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "028wXnHSYuyKfjJW",
+  "_key": "!items!028wXnHSYuyKfjJW"
+}

@@ -1,0 +1,82 @@
+{
+  "name": "Winter's Sting",
+  "permission": {
+    "default": 0,
+    "OfKMBdcUK6oV9G48": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>This spell may only be cast outside. You cause a sudden and violent storm of large hail to break out. While the storm lasts, targets caught in the AoE at the beginning of their Turn suffers a magic missile with a Damage of +0 and must pass an Average (+20) Cool Test or gain a Broken Condition (to seek cover). Visibility inside and into the hail is hindered by Willpower Bonus Blinded Conditions. Fire, gunfire, and explosives will be snuffed out by the storm. The terrain becomes difficult ground until 1d10 minutes after the spell ends. Moving faster than Walk rate requires an Average (+20) Athletics Test (modified by Conditions) or the target gains the Prone Condition. Sprinting is impossible.</p>\n<p>&nbsp;</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Seasons",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower yards"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Willpower Bonus yards",
+      "aoe": true
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus rounds",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 8,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.mcjc77u87o868g8W"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_winter.jpg",
+  "effects": [],
+  "_id": "UteUWukVyR1j92CQ",
+  "_key": "!items!UteUWukVyR1j92CQ"
+}

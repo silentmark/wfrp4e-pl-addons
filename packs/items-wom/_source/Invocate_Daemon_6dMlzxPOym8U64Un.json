@@ -1,0 +1,157 @@
+{
+  "name": "Invocate Daemon",
+  "type": "spell",
+  "img": "modules/wfrp4e-core/icons/spells/daemonology.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<blockquote class=\"foundry-note\"><p>The <strong>CN</strong> of this spell equals the target Daemon's Willpower, this must be filled in accordingly in the <strong>Details</strong> tab.</p></blockquote><p><strong>Ingredients</strong>: Bounds of good taste inhibit a discussion of ingredients, but Daemons typically pay no heed to mortals unless they know at least one of the names the Daemon uses. The invoker must also cause significant mayhem, suffering, or death during the ritual.</p><p><strong>Conditions</strong>: The invoker must cast @UUID[Compendium.wfrp4e-core.items.NwVgP5msZHERwEfK]{Octagram} before beginning the ritual.</p><p><strong>Sacrifices</strong>: Each Round of Channelling the spellcaster must make an <strong>Average (+20) Endurance</strong> Test or permanently lose a point of Strength or Toughness (randomly determined).</p><p><strong>Consequences</strong>: The Daemon becomes aware that a mortal has tried to invoke it. Their reaction depends on the Daemon in question, though most find such invasions of their privacy a serious affront.</p><p>You invocate the Daemon, which manifests inside the @UUID[Compendium.wfrp4e-core.items.NwVgP5msZHERwEfK]{Octagram} you prepared earlier. It remains there for a number of days equal to the caster’s Intelligence Bonus, after which it returns to the Realms of Chaos.</p><p>You can communicate with the Daemon during this time, but it is not required to answer you or obey you in any way. Daemonologists must be prepared to make additional sacrifices and bargains once they have invoked a Daemon, but what exactly these bargains are, and what the Daemon is willing to offer in return, is left up to the Player and GM to decide.</p><p>Daemons have multifaceted identities, involving a nigh-unpronounceable true name, assorted common names, euphemistic epithets, and grandiloquent titles. Generally, the more you know the more you can bargain with, but there is a matter of etiquette. Knowledge of their true name can give power over a Daemon, but they invariably seek to destroy those who possess it. The best strategy is to use a Daemon’s common name whilst insinuating that you know their true name but also reassuring them that you will guard it respectfully. The GM may award up to +3 SL to Tests made to complete this ritual based on how much research the Daemonologist has undertaken into learning the identity of the Daemon they are invoking.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "daemonology",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 0,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": true,
+      "type": "",
+      "xp": 400
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-core/icons/spells/daemonology.png",
+      "transfer": false,
+      "_id": "AXMBttpjYU1Gueoy",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "rollChannellingTest",
+          "effectApplication": "item",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), { absolute: { difficulty: \"average\" } }).then(test => {\n    test.roll().then(test => {\n        if (test.result.outcome == \"failure\") {\n            let ch =  [\"s\", \"t\"][Math.floor(CONFIG.Dice.randomUniform() * 2)]\n            let newValue = this.actor.system.characteristics[ch].initial - 1;\n            this.actor.update({[`system.characteristics.${ch}.initial`] : newValue})\n            ChatMessage.create({content : `<strong>${this.actor.name}</strong> loses 1 point of ${game.wfrp4e.config.characteristics[ch]}`, speaker : {alias: this.item.name}})\n        }\n    });\n})"
+        },
+        "core": {
+          "sourceId": "Item.8Vuv6suWsiIujIQd.ActiveEffect.OqsTZbiU0jYV1LLS"
+        }
+      },
+      "name": "Sacrifice",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!6dMlzxPOym8U64Un.AXMBttpjYU1Gueoy"
+    }
+  ],
+  "folder": "KM54PsSqzM9r94kp",
+  "sort": 197657,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Rituals",
+      "sort": 197657
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676064772004,
+    "modifiedTime": 1693273575679,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "6dMlzxPOym8U64Un",
+  "_key": "!items!6dMlzxPOym8U64Un"
+}

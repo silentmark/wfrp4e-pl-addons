@@ -1,0 +1,117 @@
+{
+  "_id": "3TDE8Or2cx1HEXbR",
+  "name": "Foul Messenger (Undivided)",
+  "type": "spell",
+  "img": "modules/wfrp4e-core/icons/spells/undivided.png",
+  "effects": [],
+  "folder": "SFy3nl8V2qrjRoOS",
+  "sort": 400000,
+  "flags": {},
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><span class=\"fontstyle0\">You conjure forth a swarm of minor daemons shackled to&nbsp; your will. The form of the daemons will vary depending on your deity. The daemons will bear a short message (approximately 25 words) to your target. They travel almost instantaneously, and are invisible (and inaudible) to anyone without the @UUID[Compendium.wfrp4e-core.items.OEjUvJKi0xmBwbS2]{Second Sight}</span><span class=\"fontstyle2\">&nbsp;</span><span class=\"fontstyle0\">Talent even while delivering their message. Anyone with the Talent may make a&nbsp;</span><strong>Hard (–20) Perception&nbsp;</strong><span class=\"fontstyle0\"><strong>Test</strong>&nbsp;to notice the swarm, and hear their message. For every +2 SLs, you may double the length of the message.</span></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Undivided",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Fellowship miles",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Special",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Instant",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 8,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "sAiwDCZFd21tgaDN": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1691299878976,
+    "modifiedTime": 1693273565113,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!3TDE8Or2cx1HEXbR"
+}

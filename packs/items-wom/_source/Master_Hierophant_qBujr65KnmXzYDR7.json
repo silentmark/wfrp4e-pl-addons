@@ -1,0 +1,111 @@
+{
+  "name": "Master Hierophant",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>@UUID[Compendium.wfrp4e-wom.journals.4hwftTG3PqNnmUfK.JournalEntryPage.L1HMS581Scz2IyCJ]{Hierophant}</p><p></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "careergroup": {
+      "type": "String",
+      "label": "Career Group",
+      "value": "Hierophant"
+    },
+    "class": {
+      "type": "String",
+      "label": "Class",
+      "value": "Academics"
+    },
+    "current": {
+      "type": "Boolean",
+      "value": false
+    },
+    "complete": {
+      "type": "Boolean",
+      "value": false
+    },
+    "level": {
+      "type": "String",
+      "label": "Career Level",
+      "value": "3"
+    },
+    "status": {
+      "tier": "g",
+      "standing": 1
+    },
+    "characteristics": [
+      "i",
+      "int",
+      "wp",
+      "ag",
+      "ws"
+    ],
+    "skills": [
+      "Channelling (Hysh)",
+      "Dodge",
+      "Entertain (Sing)",
+      "Intuition",
+      "Language (Magick)",
+      "Lore (Magic)",
+      "Lore (Nehekhara)",
+      "Melee (Basic)",
+      "Melee (Polearm)",
+      "Perception",
+      "Charm",
+      "Cool",
+      "Gossip",
+      "Language (Any)",
+      "Leadership",
+      "Lore (Warfare)",
+      "Evaluate",
+      "Lore (Daemonology)",
+      "Research",
+      "Ride (Horse)"
+    ],
+    "talents": [
+      "Dual Wielder",
+      "Instinctive Diction",
+      "Magical Sense",
+      "Tower of Memories"
+    ],
+    "trappings": [
+      "Acolyte Apprentice",
+      "Light Warhorse",
+      "Magical Item",
+      "Standard Robes"
+    ],
+    "incomeSkill": [
+      4
+    ]
+  },
+  "type": "career",
+  "folder": "EGdnaG0JFAHnazff",
+  "img": "modules/wfrp4e-wom/assets/icons/careers/hierophant-03.png",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Hierophant",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676242085602,
+    "modifiedTime": 1693273575796,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "qBujr65KnmXzYDR7",
+  "_key": "!items!qBujr65KnmXzYDR7"
+}

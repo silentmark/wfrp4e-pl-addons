@@ -1,0 +1,82 @@
+{
+  "_id": "sOpgFWkTT1Gr9Nhd",
+  "name": "Da Evil Sun",
+  "permission": {
+    "default": 0,
+    "LhiA8OMMa0ToAWEe": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You channel great power and conjure a burning core of energy that features immense tusks and a leering face. You target a point in range and send the evil sun smashing to the ground. All targets within the Area of Eﬀect are struck by a <em>magic missil</em>e with a Damage of +12 and gain +1<em> Ablaze</em> Conditions and the <em>Prone</em> Condition. After the initial strike, the spell no longer behaves like a <em>magic missile</em>, but the fires continue to burn while the spell lasts. Anyone who moves within the AoE, or at the start of a Round, gains +1 <em>Ablaze</em> Condition.&nbsp;</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Da Big Waaagh!",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower yards"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Willpower Bonus yards",
+      "aoe": true
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus rounds",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 12,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.8byzK9gCQamoks31"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_da-evil-sun.jpg",
+  "effects": [],
+  "_key": "!items!sOpgFWkTT1Gr9Nhd"
+}

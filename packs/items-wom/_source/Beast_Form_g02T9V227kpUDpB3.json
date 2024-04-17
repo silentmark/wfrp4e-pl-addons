@@ -1,0 +1,122 @@
+{
+  "name": "Beast Form",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You infuse your very bones and flesh with <em>Ghur</em>, warping your body into that of a creature. When cast, select a new form from any of the @UUID[Compendium.wfrp4e-core.journals.3ZynTGhFpgwv6l1n.JournalEntryPage.ahM2hOJnyXcSKrdS]{Beasts of the Reikland} section of the Bestiary. You gain all the creature’s standard Traits except the @UUID[Compendium.wfrp4e-core.items.AGcJl5rHjkyIQBPP]{Bestial} Trait. Furthermore, replace your Movement, Strength, Toughness, Agility, and Dexterity with the creature’s. Recalculate your Wounds. For every +2 SL, you may include 1 of the creature’s Optional Creature Traits.</p><p>While in <em>Beast Form</em>, you look like a normal version of the creature, with amber and brown colouring. You may not speak, cast spells, or attempt to dispel. If you have lost any Wounds when the spell ends, you lose the same number of Wounds when you revert to your true form. You cannot be reduced below 0 Wounds in this way.</p><p><strong>Lore:</strong> Whenever you successfully cast a spell from the Lore of Beasts, you may also gain the @UUID[Compendium.wfrp4e-core.items.pTorrE0l3VybAbtn]{Fear (1)} Creature Trait for the next [[/r 1d10]] Rounds.</p><p></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "beasts",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "You",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "You",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower minutes",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 5,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": true,
+      "label": "Optional Traits",
+      "valuePerOvercast": {
+        "type": "value",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "value",
+        "value": 0,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "type": "spell",
+  "folder": "vv9Uz4QUOea8V2Yk",
+  "img": "modules/wfrp4e-core/icons/spells/beast-form.png",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Beasts",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676405899908,
+    "modifiedTime": 1693273575772,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "g02T9V227kpUDpB3",
+  "_key": "!items!g02T9V227kpUDpB3"
+}

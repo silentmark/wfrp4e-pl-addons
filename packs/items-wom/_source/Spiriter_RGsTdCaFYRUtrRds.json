@@ -1,0 +1,105 @@
+{
+  "name": "Spiriter",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>@UUID[Compendium.wfrp4e-wom.journals.hFQtvGpxh0D8Xfcl.JournalEntryPage.i7trRLZo2Pp05UnQ]{Spiriter}</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "careergroup": {
+      "type": "String",
+      "label": "Career Group",
+      "value": "Spiriter"
+    },
+    "class": {
+      "type": "String",
+      "label": "Class",
+      "value": "Academics"
+    },
+    "current": {
+      "type": "Boolean",
+      "value": false
+    },
+    "complete": {
+      "type": "Boolean",
+      "value": false
+    },
+    "level": {
+      "type": "String",
+      "label": "Career Level",
+      "value": "2"
+    },
+    "status": {
+      "tier": "s",
+      "standing": 3
+    },
+    "characteristics": [
+      "wp",
+      "dex",
+      "ag",
+      "int"
+    ],
+    "skills": [
+      "Channelling (Shyish)",
+      "Cool",
+      "Dodge",
+      "Intimidate",
+      "Intuition",
+      "Language (Magick)",
+      "Lore (Magic)",
+      "Melee (Basic)",
+      "Melee (Polearm)",
+      "Perception",
+      "Art (Engraving)",
+      "Endurance",
+      "Evaluate",
+      "Language (Battle)",
+      "Lore (Undead)",
+      "Research"
+    ],
+    "talents": [
+      "Arcane Magic (Death)",
+      "Detect Artefact",
+      "Fast Hands",
+      "Sixth Sense"
+    ],
+    "trappings": [
+      "Magical Licence",
+      "Practical Robes",
+      "Scythe"
+    ],
+    "incomeSkill": [
+      5
+    ]
+  },
+  "type": "career",
+  "folder": "EGdnaG0JFAHnazff",
+  "img": "modules/wfrp4e-wom/assets/icons/careers/spiriter-02.png",
+  "effects": [],
+  "sort": 150000,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Spiriter",
+      "sort": 150000
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1677814194301,
+    "modifiedTime": 1693273575733,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "RGsTdCaFYRUtrRds",
+  "_key": "!items!RGsTdCaFYRUtrRds"
+}

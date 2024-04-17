@@ -1,0 +1,101 @@
+{
+  "_id": "gsS4kMWgARWIIEFQ",
+  "name": "Sieć",
+  "type": "trait",
+  "flags": {
+    "_sheetTab": "details",
+    "core": {}
+  },
+  "img": "modules/wfrp4e-core/icons/traits/trait.png",
+  "effects": [
+    {
+      "_id": "pV0NvELZXtpJJTfi",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "applyDamage",
+          "effectApplication": "actor",
+          "script": "args.actor.addCondition(\"entangled\", 1, this.item.system.specification.value)",
+          "preventDuplicateEffects": true,
+          "areaEffect": false,
+          "hide": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/traits/trait.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Śieć",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!gsS4kMWgARWIIEFQ.pV0NvELZXtpJJTfi"
+    }
+  ],
+  "folder": "Fn9BF4AZCCMMhKOf",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Stworzenie może tworzyć sieci służące do łapania niebacznych wrogów. Za każdym razem, gdy stwór trafia przeciwników, dostają oni 1 Stan @Condition[Pochwycenie] o Sile równej podanej wartości.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "55",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.2",
+    "coreVersion": "11.311",
+    "createdTime": 1694507391393,
+    "modifiedTime": 1696797354300,
+    "lastModifiedBy": "Czz7IJA9DEa5LD9E"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Czz7IJA9DEa5LD9E": 3
+  },
+  "_key": "!items!gsS4kMWgARWIIEFQ"
+}

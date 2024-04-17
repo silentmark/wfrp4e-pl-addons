@@ -1,0 +1,57 @@
+{
+  "_id": "zaGFH3FVJGcFTRfM",
+  "name": "Hull",
+  "type": "critical",
+  "img": "systems/wfrp4e/icons/blank.png",
+  "effects": [],
+  "folder": "7kFyk5KiB6fVqbit",
+  "sort": 400001,
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Boat Critical Hits",
+      "sort": 400001
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The boat is holed and begins to ship water. It sinks in a number of minutes equal to the boat’s Toughness (see @UUID[Compendium.wfrp4e-dotr.journals.WR8ZAD6yw9lYgzeY.JournalEntryPage.8RsPoCyE5UELCb1s#holed]{Holed}). The water may ruin the cargo, if any.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "1",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "",
+      "type": "String",
+      "label": "Location"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "2TbX8z7IWr0GFssP": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "hv1aja7lAR8ZyKUO": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1681859838899,
+    "modifiedTime": 1693273562912,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!zaGFH3FVJGcFTRfM"
+}

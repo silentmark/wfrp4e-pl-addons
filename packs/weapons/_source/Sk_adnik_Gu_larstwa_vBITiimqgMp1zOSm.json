@@ -1,0 +1,58 @@
+{
+  "name": "Składnik Guślarstwa",
+  "type": "trapping",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><em>Składnik Guślarstwa można pozyskać zgodnie z zasadami Zbierania Pożywienia i Ziół. Udany Test\nWiedzy (Zielarstwa) skutkuje pozyskaniem 1 + PS składników.</em></p>\n<p><strong><em>Nie możesz rzucić żadnego zaklęcia Guślarstwa bez posiadania odpowiedniego składnika.</em></strong></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "common"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "ingredient"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    }
+  },
+  "flags": {},
+  "img": "modules/wfrp4e-pl-addons/icons/ingredients/hedgecraft.png",
+  "_id": "vBITiimqgMp1zOSm",
+  "effects": [],
+  "_key": "!items!vBITiimqgMp1zOSm"
+}

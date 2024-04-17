@@ -1,0 +1,85 @@
+{
+  "name": "Podbite oko",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/head.png",
+  "effects": [
+    {
+      "_id": "jIlysiOZ0LFz6cgj",
+      "flags": {
+        "wfrp4e": {
+          "trigger": "endRound",
+          "effectTrigger": "dialogChoice",
+          "effectData": {
+            "description": "Tests related to sight",
+            "modifier": "-10 * this.flags.wfrp4e.value"
+          },
+          "value": 2,
+          "secondaryEffect": {
+            "effectTrigger": "targetPrefillDialog",
+            "script": "if (args.item && args.item.attackType=='melee') args.prefillModifiers.modifier += 10 * this.effect.conditionValue"
+          }
+        },
+        "core": {
+          "statusId": "blinded"
+        }
+      },
+      "changes": [],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "systems/wfrp4e/icons/conditions/blinded.png",
+      "label": "Oślepienie",
+      "transfer": true,
+      "disabled": false,
+      "origin": null,
+      "tint": null,
+      "_key": "!items.effects!GLHUJL55X2T900AA.jIlysiOZ0LFz6cgj"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wfrp4e-pl.criticals.GLHUJL55X2T900AA"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Cios w oko jest na tyle mocny, że postać zaczyna łzawić z bólu. Postać otrzymuje 2 poziomy Stanu @Condition[Oślepienie].</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "2",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Głowa",
+      "type": "String",
+      "label": "Location"
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_id": "GLHUJL55X2T900AA",
+  "folder": null,
+  "sort": 0,
+  "_key": "!items!GLHUJL55X2T900AA"
+}

@@ -1,0 +1,98 @@
+{
+  "folder": "ZfDZ0VKzNc72JsLL",
+  "name": "Mark of Aqshy",
+  "type": "trait",
+  "img": "modules/wfrp4e-wom/assets/icons/marks/mark-aqshy.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The rune of <em>Aqshy</em> appears somewhere on your body. You gain the @UUID[Compendium.wfrp4e-wom.items.0Xdm4r7l2EwC4fcg]{Suffuse with Aqshy} Talent.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-wom/assets/icons/marks/mark-aqshy.png",
+      "transfer": true,
+      "_id": "zNsOVXbGOq2OR8SG",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "addItems",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "fromUuid(\"Compendium.wfrp4e-wom.items.0Xdm4r7l2EwC4fcg\").then(item => Item.create(item.toObject(), {fromEffect : this.effect.id, parent : this.actor}))"
+        }
+      },
+      "name": "Mark of Aqshy",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!wyUrk2GpyA8LJIpH.zNsOVXbGOq2OR8SG"
+    }
+  ],
+  "sort": 106250,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Aqshy",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676403898475,
+    "modifiedTime": 1693273575812,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "wyUrk2GpyA8LJIpH",
+  "_key": "!items!wyUrk2GpyA8LJIpH"
+}

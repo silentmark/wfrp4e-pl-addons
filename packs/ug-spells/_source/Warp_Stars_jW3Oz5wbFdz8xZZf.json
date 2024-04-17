@@ -1,0 +1,82 @@
+{
+  "_id": "jW3Oz5wbFdz8xZZf",
+  "name": "Warp Stars",
+  "permission": {
+    "default": 0,
+    "LhiA8OMMa0ToAWEe": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You conjure up a number of poisoned throwing stars equal to your&nbsp; Willpower Bonus and fling them at one or more targets within Range. Each star strikes as a magic missile with a Damage of +2 and inflicts a Poisoned Condition.&nbsp;</p>\n<p>Overcast: For every +3 SL, you may target another Willpower Bonus creatures.&nbsp;</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower yards"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Special",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Instant",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": "2"
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 6,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": true
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.xhJuQymF6WCXfh3r"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_warp%20stars.jpg",
+  "effects": [],
+  "_key": "!items!jW3Oz5wbFdz8xZZf"
+}

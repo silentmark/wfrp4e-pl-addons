@@ -1,0 +1,157 @@
+{
+  "name": "The First Portent of Amul",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You gain +1 Fortune point. For every +2 SL, gain +1 more. Any unused points are lost when the spell ends. </p><p>\n\n <b>Lore:</b> Spells causing Damage ignore Armour Points from metal armour, and will arc to all other targets within 2 yards, except those with the Arcane Magic (Heavens) Talent, inflicting hits with a Damage equal to your Willpower Bonus, handled like a magical missile.<p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "heavens",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "You",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "You",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Initiative Bonus rounds",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 3,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": true,
+      "label": "Fortune Points",
+      "valuePerOvercast": {
+        "type": "value",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "value",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "type": "spell",
+  "folder": "dWExO2jRqil2AwZo",
+  "img": "modules/wfrp4e-core/icons/spells/the-first-portent-of-amul.png",
+  "effects": [
+    {
+      "_id": "Gm3ogYU4CaExyDH1",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "apply",
+          "script": "let fortunePoints = {{overcast.usage.other.current}}\nlet current = this.actor.status.fortune.value\n\nthis.actor.update({\"system.status.fortune.value\" : fortunePoints + current})\n\nChatMessage.create({content : `<b>${this.actor.prototypeToken.name}</b> fortune points increased from ${current} to ${fortunePoints + current}`, speaker : {alias : this.effect.name}})",
+          "preventDuplicateEffects": false,
+          "hide": false
+        },
+        "core": {
+          "sourceId": "Compendium.wfrp4e-core.items.04Qv4t0qMMZIUhRw.ActiveEffect.z5h8gLfbvL0aMPdK"
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/spells/the-first-portent-of-amul.png",
+      "tint": null,
+      "transfer": false,
+      "origin": null,
+      "name": "The First Portent of Amul",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!Y0Ic07GPtt528zbJ.Gm3ogYU4CaExyDH1"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Heavens",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676324249300,
+    "modifiedTime": 1693273575749,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "Y0Ic07GPtt528zbJ",
+  "_key": "!items!Y0Ic07GPtt528zbJ"
+}

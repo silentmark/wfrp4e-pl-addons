@@ -1,0 +1,156 @@
+{
+  "name": "Comet of Casandora",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You channel all the Azyr you can muster and reach out to the skies, calling down a comet to wreak havoc amongst your foes. Select a target point within range. At the end of the next round, make an <strong>Average (+20) Perception</strong> Test.</p><p>For every +SL you achieve on the Perception Test, you may move your point of impact by Initiative Bonus yards. For every –SL, the GM moves the point of impact by Initiative Bonus yards in a random direction. Comet of Casandora then acts as a <em>magic missile</em> with Damage +12 that hits all targets in the Area of Effect. Targets also gain 1 @Condition[Ablaze] Condition and the @Condition[Prone] Condition.</p><p><strong>Lore:</strong> Spells causing Damage ignore Armour Points from metal armour, and will arc to all other targets within 2 yards, except those with the Arcane Magic (Heavens) Talent, inflicting hits with a Damage equal to your Willpower Bonus, handled like a magical missile.</p><p></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "heavens",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Initiative yards",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Initiative Bonus yards",
+      "aoe": true
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Special",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": "12"
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 10,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": true
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "type": "spell",
+  "folder": "dWExO2jRqil2AwZo",
+  "img": "modules/wfrp4e-core/icons/spells/comet-of-casandora.png",
+  "effects": [
+    {
+      "_id": "9QbGwFjgf1DObq78",
+      "flags": {
+        "wfrp4e": {
+          "effectApplication": "damage",
+          "effectTrigger": "applyDamage",
+          "script": "this.actor.addCondition(\"ablaze\")\nthis.actor.addCondition(\"prone\")",
+          "preventDuplicateEffects": false
+        },
+        "core": {
+          "sourceId": "Compendium.wfrp4e-core.items.208BiJLY0jXxelbd.ActiveEffect.RgMufN4ojXxwM49O"
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/spells/comet-of-casandora.png",
+      "tint": null,
+      "transfer": false,
+      "origin": null,
+      "name": "Comet of Casandora",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!ag975kP2t5zYWmSu.9QbGwFjgf1DObq78"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Heavens",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676324249238,
+    "modifiedTime": 1693273575757,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "ag975kP2t5zYWmSu",
+  "_key": "!items!ag975kP2t5zYWmSu"
+}

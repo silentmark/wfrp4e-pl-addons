@@ -1,0 +1,142 @@
+{
+  "folder": "mUI9KPN7KR2i49J6",
+  "name": "Shining Orbs",
+  "type": "trait",
+  "img": "modules/wfrp4e-wom/assets/icons/marks/mark-chamon.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Your eyes burn with agonising pain. Gain 3 @Condition[Blinded] Conditions. Once you regain your sight, your eyes become golden globes. Suffer –1 SL to all Fellowship-based Tests.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-wom/assets/icons/marks/mark-chamon.png",
+      "transfer": true,
+      "_id": "4EidJuKySe3sUhj2",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "this.actor.addCondition(\"blinded\", 3)"
+        },
+        "core": {
+          "sourceId": "Item.1Cmuim3Hi6dVk1H8.ActiveEffect.5OrnkwivnvvlxBrp"
+        }
+      },
+      "name": "Blinded",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!qfzfMXRQT0odbABG.4EidJuKySe3sUhj2"
+    },
+    {
+      "icon": "modules/wfrp4e-wom/assets/icons/marks/mark-chamon.png",
+      "transfer": true,
+      "_id": "UDJNrB6CaR2srQXZ",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prefillDialog",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "effectData": {
+            "description": "",
+            "modifier": null,
+            "slBonus": null,
+            "successBonus": null,
+            "difficultyStep": null
+          },
+          "script": "if ((args.type == \"characteristic\" && args.item == \"fel\") || (args.type == \"skill\" && args.item.system.characteristic.value == \"fel\"))\n      args.prefillModifiers.slBonus -= 1"
+        },
+        "core": {
+          "sourceId": "Item.1Cmuim3Hi6dVk1H8.ActiveEffect.V9jqgWNbs8jllRJ8"
+        }
+      },
+      "name": "Shining Orbs",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!qfzfMXRQT0odbABG.UDJNrB6CaR2srQXZ"
+    }
+  ],
+  "sort": 300000,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Chamon",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676244279148,
+    "modifiedTime": 1693273575798,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "qfzfMXRQT0odbABG",
+  "_key": "!items!qfzfMXRQT0odbABG"
+}

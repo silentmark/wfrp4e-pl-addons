@@ -1,0 +1,353 @@
+{
+  "_id": "eoxbOq03Deqlvbcd",
+  "name": "Rany Krytyczne Głowy - UiA",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    {
+      "_id": "e6yksXZnCcJfNSm1",
+      "type": 2,
+      "text": "Zawadiacka rana",
+      "img": "modules/wfrp4e-core/icons/injuries/head.png",
+      "weight": 1,
+      "range": [
+        1,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-pl-addons.criticals",
+      "documentId": "5128FR3FMHNGKGN0",
+      "_key": "!tables.results!eoxbOq03Deqlvbcd.e6yksXZnCcJfNSm1"
+    },
+    {
+      "_id": "VIpjlyRWnQAb8V1g",
+      "type": 2,
+      "text": "Bolesne uderzenie",
+      "img": "modules/wfrp4e-core/icons/injuries/head.png",
+      "weight": 1,
+      "range": [
+        4,
+        6
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-pl-addons.criticals",
+      "documentId": "3GFLE4EV45IKS62G",
+      "_key": "!tables.results!eoxbOq03Deqlvbcd.VIpjlyRWnQAb8V1g"
+    },
+    {
+      "_id": "q2gthWT0cG57BVsc",
+      "type": 2,
+      "text": "Spuchnięte oko",
+      "img": "modules/wfrp4e-core/icons/injuries/head.png",
+      "weight": 1,
+      "range": [
+        7,
+        9
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-pl-addons.criticals",
+      "documentId": "XIXWBZZ9WFYUDY0L",
+      "_key": "!tables.results!eoxbOq03Deqlvbcd.q2gthWT0cG57BVsc"
+    },
+    {
+      "_id": "WVvYzf2sGvFH540a",
+      "type": 2,
+      "text": "Prosto w ucho",
+      "img": "modules/wfrp4e-core/icons/injuries/head.png",
+      "weight": 1,
+      "range": [
+        10,
+        15
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-pl-addons.criticals",
+      "documentId": "2W66VSMJ4EYB9O29",
+      "_key": "!tables.results!eoxbOq03Deqlvbcd.WVvYzf2sGvFH540a"
+    },
+    {
+      "_id": "VxjSxeiv7JPzSkqb",
+      "type": 2,
+      "text": "Płytkie cięcie w głowę",
+      "img": "modules/wfrp4e-core/icons/injuries/head.png",
+      "weight": 1,
+      "range": [
+        16,
+        20
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-pl-addons.criticals",
+      "documentId": "4NQBBJY1DRBDSKPB",
+      "_key": "!tables.results!eoxbOq03Deqlvbcd.VxjSxeiv7JPzSkqb"
+    },
+    {
+      "_id": "m8Unl1NVj32Jc4u4",
+      "type": 2,
+      "text": "Podbite oko",
+      "img": "modules/wfrp4e-core/icons/injuries/head.png",
+      "weight": 1,
+      "range": [
+        21,
+        25
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-pl-addons.criticals",
+      "documentId": "GLHUJL55X2T900AA",
+      "_key": "!tables.results!eoxbOq03Deqlvbcd.m8Unl1NVj32Jc4u4"
+    },
+    {
+      "_id": "Scd4eJAN5IGcTZSp",
+      "type": 2,
+      "text": "Rozcięte ucho",
+      "img": "modules/wfrp4e-core/icons/injuries/head.png",
+      "weight": 1,
+      "range": [
+        26,
+        30
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-pl-addons.criticals",
+      "documentId": "BXRHIIT10G3YGZ77",
+      "_key": "!tables.results!eoxbOq03Deqlvbcd.Scd4eJAN5IGcTZSp"
+    },
+    {
+      "_id": "8j9RAmlJLuEujEWd",
+      "type": 2,
+      "text": "Uderzenie w czoło",
+      "img": "modules/wfrp4e-core/icons/injuries/head.png",
+      "weight": 1,
+      "range": [
+        31,
+        35
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-pl-addons.criticals",
+      "documentId": "M44IOM6ESF042EXB",
+      "_key": "!tables.results!eoxbOq03Deqlvbcd.8j9RAmlJLuEujEWd"
+    },
+    {
+      "_id": "7OGoD8Gr6J6sSPjc",
+      "type": 2,
+      "text": "Złamana szczęka",
+      "img": "modules/wfrp4e-core/icons/injuries/head.png",
+      "weight": 1,
+      "range": [
+        36,
+        40
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-pl-addons.criticals",
+      "documentId": "ZWRGBLGA65KII41I",
+      "_key": "!tables.results!eoxbOq03Deqlvbcd.7OGoD8Gr6J6sSPjc"
+    },
+    {
+      "_id": "gOQRYYiV741QA1A4",
+      "type": 2,
+      "text": "Poważna rana oka",
+      "img": "modules/wfrp4e-core/icons/injuries/head.png",
+      "weight": 1,
+      "range": [
+        41,
+        45
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-pl-addons.criticals",
+      "documentId": "49SJF25OFRN4D67E",
+      "_key": "!tables.results!eoxbOq03Deqlvbcd.gOQRYYiV741QA1A4"
+    },
+    {
+      "_id": "yqBBjfEUbgE68rJ8",
+      "type": 2,
+      "text": "Poważna rana ucha",
+      "img": "modules/wfrp4e-core/icons/injuries/head.png",
+      "weight": 1,
+      "range": [
+        46,
+        50
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-pl-addons.criticals",
+      "documentId": "UDWXOGTLLEBT2JXA",
+      "_key": "!tables.results!eoxbOq03Deqlvbcd.yqBBjfEUbgE68rJ8"
+    },
+    {
+      "_id": "iotDJjuz49xW7OyW",
+      "type": 2,
+      "text": "Złamany nos",
+      "img": "modules/wfrp4e-core/icons/injuries/head.png",
+      "weight": 1,
+      "range": [
+        51,
+        55
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-pl-addons.criticals",
+      "documentId": "O2L4EIUNBO7HASF0",
+      "_key": "!tables.results!eoxbOq03Deqlvbcd.iotDJjuz49xW7OyW"
+    },
+    {
+      "_id": "HSAb6D4NovpT9KVa",
+      "type": 2,
+      "text": "Zmiażdżona żuchwa",
+      "img": "modules/wfrp4e-core/icons/injuries/head.png",
+      "weight": 1,
+      "range": [
+        56,
+        60
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-pl-addons.criticals",
+      "documentId": "FST52ZQQBZ1VIRJX",
+      "_key": "!tables.results!eoxbOq03Deqlvbcd.HSAb6D4NovpT9KVa"
+    },
+    {
+      "_id": "hqq1z1TIAjL2ll4M",
+      "type": 2,
+      "text": "Zgruchotane ucho",
+      "img": "modules/wfrp4e-core/icons/injuries/head.png",
+      "weight": 1,
+      "range": [
+        61,
+        65
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-pl-addons.criticals",
+      "documentId": "9Q873T3NUYBFGL85",
+      "_key": "!tables.results!eoxbOq03Deqlvbcd.hqq1z1TIAjL2ll4M"
+    },
+    {
+      "_id": "gQBJjYVkVSmqkcUV",
+      "type": 2,
+      "text": "Rozkwaszone usta",
+      "img": "modules/wfrp4e-core/icons/injuries/head.png",
+      "weight": 1,
+      "range": [
+        66,
+        75
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-pl-addons.criticals",
+      "documentId": "0HUUQNN35TXK7EOV",
+      "_key": "!tables.results!eoxbOq03Deqlvbcd.gQBJjYVkVSmqkcUV"
+    },
+    {
+      "_id": "1IB0FdQCD1cAQpTa",
+      "type": 2,
+      "text": "Wstrząśnienie mózgu",
+      "img": "modules/wfrp4e-core/icons/injuries/head.png",
+      "weight": 1,
+      "range": [
+        76,
+        80
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-pl-addons.criticals",
+      "documentId": "A31HK5M9OLE4K3UC",
+      "_key": "!tables.results!eoxbOq03Deqlvbcd.1IB0FdQCD1cAQpTa"
+    },
+    {
+      "_id": "uZD1bKAjTuEOW534",
+      "type": 2,
+      "text": "Wybite oko",
+      "img": "modules/wfrp4e-core/icons/injuries/head.png",
+      "weight": 1,
+      "range": [
+        81,
+        85
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-pl-addons.criticals",
+      "documentId": "35QDNG33S46953IK",
+      "_key": "!tables.results!eoxbOq03Deqlvbcd.uZD1bKAjTuEOW534"
+    },
+    {
+      "_id": "gpeSfrne87U3MtiI",
+      "type": 2,
+      "text": "Oszpecający cios",
+      "img": "modules/wfrp4e-core/icons/injuries/head.png",
+      "weight": 1,
+      "range": [
+        86,
+        94
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-pl-addons.criticals",
+      "documentId": "8Z7VRDH89KJHO6HE",
+      "_key": "!tables.results!eoxbOq03Deqlvbcd.gpeSfrne87U3MtiI"
+    },
+    {
+      "_id": "G6L7lxSW6Uiht6bw",
+      "type": 2,
+      "text": "Zgruchotana szczęka",
+      "img": "modules/wfrp4e-core/icons/injuries/head.png",
+      "weight": 1,
+      "range": [
+        95,
+        99
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-pl-addons.criticals",
+      "documentId": "1EIAGK1QF3UCYHSW",
+      "_key": "!tables.results!eoxbOq03Deqlvbcd.G6L7lxSW6Uiht6bw"
+    },
+    {
+      "_id": "qq4bmbZVflQmz3n3",
+      "type": 2,
+      "text": "Strzaskana Czaszka",
+      "img": "modules/wfrp4e-core/icons/injuries/head.png",
+      "weight": 1,
+      "range": [
+        100,
+        999
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-pl-addons.criticals",
+      "documentId": "P95OD8IMBWBWWBS3",
+      "_key": "!tables.results!eoxbOq03Deqlvbcd.qq4bmbZVflQmz3n3"
+    }
+  ],
+  "formula": "d100",
+  "replacement": true,
+  "displayRoll": true,
+  "flags": {
+    "wfrp4e": {
+      "key": "crithead",
+      "column": ""
+    },
+    "core": {}
+  },
+  "folder": "uV4nClaib0g9ah6d",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.2",
+    "coreVersion": "11.313",
+    "createdTime": 1697834230105,
+    "modifiedTime": 1697834274099,
+    "lastModifiedBy": "Czz7IJA9DEa5LD9E"
+  },
+  "sort": 300000,
+  "ownership": {
+    "default": 0,
+    "Czz7IJA9DEa5LD9E": 3
+  },
+  "_key": "!tables!eoxbOq03Deqlvbcd"
+}

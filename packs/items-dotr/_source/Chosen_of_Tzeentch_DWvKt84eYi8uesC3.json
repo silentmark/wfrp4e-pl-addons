@@ -1,0 +1,114 @@
+{
+  "_id": "DWvKt84eYi8uesC3",
+  "name": "Chosen of Tzeentch",
+  "type": "career",
+  "img": "modules/wfrp4e-dotr/assets/icons/warrior4.png",
+  "effects": [],
+  "folder": "q6wORYQ28vC7PYUv",
+  "sort": 300000,
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Careers",
+      "sort": 300000
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>@UUID[Compendium.wfrp4e-dotr.journals.uHClvCto8icrUp9P.JournalEntryPage.m3m8NR3fUQjVyGOJ]{Warrior of Tzeentch}</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "careergroup": {
+      "type": "String",
+      "label": "Career Group",
+      "value": "Warrior of Tzeentch"
+    },
+    "class": {
+      "type": "String",
+      "label": "Class",
+      "value": "Warriors"
+    },
+    "current": {
+      "type": "Boolean",
+      "value": false
+    },
+    "complete": {
+      "type": "Boolean",
+      "value": false
+    },
+    "level": {
+      "type": "String",
+      "label": "Career Level",
+      "value": "4"
+    },
+    "status": {
+      "tier": "g",
+      "standing": 1
+    },
+    "characteristics": [
+      "ws",
+      "t",
+      "int",
+      "ag",
+      "wp",
+      "s"
+    ],
+    "skills": [
+      "Athletics",
+      "Charm",
+      "Gossip",
+      "Consume Alcohol",
+      "Language (Magick)",
+      "Melee (Basic)",
+      "Perception",
+      "Stealth (Rural)",
+      "Bribery",
+      "Dodge",
+      "Endurance",
+      "Intimidate",
+      "Intuition",
+      "Language (Dark Tounge)",
+      "Channelling",
+      "Leadership",
+      "Melee (Any)",
+      "Lore (Any)",
+      "Cool",
+      "Lore (Any)"
+    ],
+    "talents": [
+      "Cat-tongued",
+      "Instinctive Diction",
+      "Slayer",
+      "War Leader"
+    ],
+    "trappings": [
+      "Cohort of Chaos Warriors",
+      "Daemon-bound Weapon",
+      "Daemonic Familiar",
+      "Severed heads of two or more enemy commanders"
+    ],
+    "incomeSkill": [
+      5
+    ]
+  },
+  "ownership": {
+    "default": 0,
+    "2TbX8z7IWr0GFssP": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "hv1aja7lAR8ZyKUO": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1681859838884,
+    "modifiedTime": 1693273562880,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!DWvKt84eYi8uesC3"
+}

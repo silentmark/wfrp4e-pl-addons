@@ -1,0 +1,209 @@
+{
+  "_id": "3cht5ZtM8E2ghkRU",
+  "name": "Death Globe",
+  "type": "weapon",
+  "img": "modules/wfrp4e-horned-rat/assets/icons/death-globe.png",
+  "effects": [
+    {
+      "_id": "WJFrpnrio0t7WMCH",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-horned-rat/assets/icons/death-globe.png",
+      "transfer": false,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "let test = await args.actor.setupCharacteristic(\"t\", {absolute : {difficulty : \"hard\"}})\n    await test.roll();\n    if (test.result.outcome == \"failure\")\n    {\n        let roll = Math.ceil(CONFIG.Dice.randomUniform() * 10)\n\n        this.actor.applyBasicDamage(roll, {damageType : \n        game.wfrp4e.config.DAMAGE_TYPE.IGNORE_AP})\n    }"
+        }
+      },
+      "tint": null,
+      "origin": null,
+      "name": "Death Globe",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!3cht5ZtM8E2ghkRU.WJFrpnrio0t7WMCH"
+    },
+    {
+      "_id": "34rEop0HNKB61e4T",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-horned-rat/assets/icons/death-globe.png",
+      "transfer": true,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "preRollWeaponTest",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "if ((args.test.weapon.id == this.item.id || args.test.weapon.ammo?.id == this.item.id) && args.test.isFumble)\n{\n    args.test.result.other.push(\"@Table[poisoned-wind-globe]\")\n}"
+        }
+      },
+      "tint": null,
+      "origin": null,
+      "name": "Death Globe - Miss",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!3cht5ZtM8E2ghkRU.34rEop0HNKB61e4T"
+    }
+  ],
+  "folder": "nGPaTlfpoNth2LAG",
+  "sort": 700000,
+  "flags": {
+    "core": {
+      "sourceId": "Item.XQUUXABuxh2BpNPJ"
+    },
+    "wfrp4e-horned-rat": {
+      "initialization-folder": "Weapons",
+      "sort": 700000
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><strong>Availability:</strong> Skyre and allied clans only</p><p>This is a Poisoned Wind Globe of an even more potent variety, able to release great volumes of deadly gas. It is identical to a @UUID[Compendium.wfrp4e-horned-rat.items.YnFYheNBrpDmDtZ3]{Poisoned Wind Globe} except that its cloud is twice as big, targets must pass a <strong>Hard (–20) Toughness </strong>Test to resist its effects, and those who fail lose [[/r 1d10 # Wounds]] Wounds, modified by Toughness Bonus but not by Armour.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 1
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "special"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "damageToItem": {
+      "type": "Number",
+      "value": 0,
+      "shield": 0
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "reach": {
+      "type": "String",
+      "label": "Reach",
+      "value": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "SBx2"
+    },
+    "skill": {
+      "type": "String",
+      "label": "Skill Override",
+      "value": ""
+    },
+    "modeOverride": {
+      "type": "String",
+      "label": "Mode Override",
+      "value": ""
+    },
+    "twohanded": {
+      "type": "Boolean",
+      "label": "Two-Handed",
+      "value": false
+    },
+    "ammunitionGroup": {
+      "type": "String",
+      "label": "Ammunition Group",
+      "value": "none"
+    },
+    "currentAmmo": {
+      "type": "Number",
+      "value": 0
+    },
+    "consumesAmmo": {
+      "value": true
+    },
+    "weaponGroup": {
+      "type": "String",
+      "label": "Weapon Group",
+      "value": "throwing"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    },
+    "equipped": false,
+    "loaded": {
+      "value": false,
+      "repeater": false,
+      "amt": 0
+    },
+    "offhand": {
+      "value": false
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "AUExJb3c35oBvDuA": 3,
+    "R44a2dfsw2hWQXbE": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1687734901058,
+    "modifiedTime": 1693273568126,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!3cht5ZtM8E2ghkRU"
+}

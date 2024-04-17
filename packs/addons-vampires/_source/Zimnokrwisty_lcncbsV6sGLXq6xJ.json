@@ -1,0 +1,117 @@
+{
+  "_id": "lcncbsV6sGLXq6xJ",
+  "name": "Zimnokrwisty",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [
+    {
+      "_id": "yBejVbykKyzEQT8F",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "addItems",
+          "effectApplication": "actor",
+          "script": "fromUuid(\"Compendium.wfrp4e-core.items.mCh1KK9jomwFZcLB\").then(item => {\n   item = item.toObject()\n   this.actor.createEmbeddedDocuments(\"Item\", [item], {fromEffect : this.effect.id})\n})",
+          "preventDuplicateEffects": false,
+          "hide": false,
+          "scriptData": [
+            {
+              "label": "Zimnokrwisty",
+              "trigger": "addItems",
+              "script": "let item = await fromUuid(\"Compendium.wfrp4e-core.items.mCh1KK9jomwFZcLB\");\nitem = item.toObject();\nthis.actor.createEmbeddedDocuments(\"Item\", [item], {fromEffect : this.effect.id});",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "applicationData": {
+            "type": "document",
+            "documentType": "Item",
+            "avoidTest": {
+              "value": "none"
+            },
+            "equipTransfer": false,
+            "prompt": false
+          }
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null,
+        "combat": null
+      },
+      "icon": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+      "tint": null,
+      "transfer": true,
+      "name": "Zimnokrwisty",
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "_key": "!items.effects!lcncbsV6sGLXq6xJ.yBejVbykKyzEQT8F"
+    }
+  ],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Otrzymujesz Cechę Stworzeń @Compendium[wfrp4e-core.items.mCh1KK9jomwFZcLB]{Zimnokrwisty}.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "1"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "folder": "IdBKVE70UjsZfSoR",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.311",
+    "createdTime": 1700563536338,
+    "modifiedTime": 1707139629241,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 5000000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!lcncbsV6sGLXq6xJ"
+}

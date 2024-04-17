@@ -1,0 +1,72 @@
+{
+  "name": "Zmiażdżony łokieć",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/tornarm.png",
+  "effects": [
+    {
+      "_id": "sw8YrBAP6gfhSTSH",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "actor",
+          "script": "let injury = await fromUuid(\"Compendium.wfrp4e-core.injuries.rlDZZTj5PXjuRXa2\");\nargs.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()]);",
+          "hide": false,
+          "preventDuplicateEffects": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/injuries/tornarm.png",
+      "label": "Zmiażdżony łokieć",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "_key": "!items.effects!SIVNE52A9BBKVSR1.sw8YrBAP6gfhSTSH"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wfrp4e-pl.criticals.SIVNE52A9BBKVSR1"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Uderzenie gruchocze łokieć, rozłupując kości i chrząstkę. Postać natychmiast upuszcza wszystko, co trzymała w dłoni, i otrzymuje Złamanie (poważne).</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "3",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Ręka",
+      "type": "String",
+      "label": "Location"
+    }
+  },
+  "_id": "SIVNE52A9BBKVSR1",
+  "folder": null,
+  "sort": 0,
+  "_key": "!items!SIVNE52A9BBKVSR1"
+}

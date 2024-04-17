@@ -1,0 +1,114 @@
+{
+  "name": "Uderzenie w czoło",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/head.png",
+  "effects": [
+    {
+      "_id": "DhFtbgaZVeqb8kaH",
+      "flags": {
+        "wfrp4e": {
+          "trigger": "endRound",
+          "value": 2
+        },
+        "core": {
+          "statusId": "bleeding"
+        }
+      },
+      "changes": [],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "systems/wfrp4e/icons/conditions/bleeding.png",
+      "label": "Krwawienie",
+      "transfer": true,
+      "disabled": false,
+      "origin": null,
+      "tint": null,
+      "_key": "!items.effects!M44IOM6ESF042EXB.DhFtbgaZVeqb8kaH"
+    },
+    {
+      "_id": "sTAtmClXjBUnD5VO",
+      "flags": {
+        "wfrp4e": {
+          "trigger": "endRound",
+          "effectTrigger": "dialogChoice",
+          "effectData": {
+            "description": "Tests related to sight",
+            "modifier": "-10 * this.flags.wfrp4e.value"
+          },
+          "value": 1,
+          "secondaryEffect": {
+            "effectTrigger": "targetPrefillDialog",
+            "script": "if (args.item && args.item.attackType=='melee') args.prefillModifiers.modifier += 10 * this.effect.conditionValue"
+          }
+        },
+        "core": {
+          "statusId": "blinded"
+        }
+      },
+      "changes": [],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "systems/wfrp4e/icons/conditions/blinded.png",
+      "label": "Oślepienie",
+      "transfer": true,
+      "disabled": false,
+      "origin": null,
+      "tint": null,
+      "_key": "!items.effects!M44IOM6ESF042EXB.sTAtmClXjBUnD5VO"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wfrp4e-pl.criticals.M44IOM6ESF042EXB"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Potężny cios trafia w sam środek czoła. Postać otrzymuje 2 poziomy Stanu @Condition[Krwawienie] oraz 1 poziom Stanu @Condition[Oślepienie], który nie może zostać usunięty, dopóki Krwawienie nie zostanie wyleczone.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "2",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Głowa",
+      "type": "String",
+      "label": "Location"
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_id": "M44IOM6ESF042EXB",
+  "folder": null,
+  "sort": 0,
+  "_key": "!items!M44IOM6ESF042EXB"
+}

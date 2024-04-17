@@ -1,0 +1,84 @@
+{
+  "name": "Wind Blast",
+  "permission": {
+    "default": 0,
+    "JaDY9Gr5gDw8h5kN": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You call down raging winds from the sky. Everyone inside the Area of Effect takes a Stunned condition, which lasts until they exit the AoE or the spell ends. Those affected must pass a Hard (-20) Agility or Endurance Test or gain the Prone Condition. Ranged attacks are impossible into or within the AoE. As per the Combat Difficulty Chart (WFRP4 p161), all attacks are made at -20 inside the AoE.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "heavens",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower yards"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "AoE (Willpower Bonus yards)",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus Rounds",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 7,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "flags": {
+    "_sheetTab": "details"
+  },
+  "img": "modules/wfrp4e-content/icons/spells/heavens.png",
+  "_id": "FtrstBekPBAwtdek",
+  "effects": [],
+  "_key": "!items!FtrstBekPBAwtdek"
+}

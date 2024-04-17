@@ -1,0 +1,57 @@
+{
+  "_id": "XAFtDlv6ZF7ZKhsU",
+  "name": "Luxury Cabin",
+  "type": "vehicleMod",
+  "img": "modules/wfrp4e-dotr/assets/icons/upgrade.png",
+  "effects": [],
+  "folder": "mqmgFBAdX7S24AT7",
+  "sort": 600000,
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Superstructure",
+      "sort": 600000
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The Empire&rsquo;s wealthy like to travel in comfort and the kind of cabin that one finds on a noble&rsquo;s barge is very different from one on a trading or passenger vessel. For the indicated cost, and taking the space of two normal cabins, a traveller can ply the rivers in comfort and style. At your discretion, any <strong>Fellowship </strong>Tests made by the owner of a luxury cabin gain a +10 bonus, provided they are made within the cabin itself.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "155",
+      "ss": "0",
+      "bp": "0"
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 40
+    },
+    "modType": {
+      "value": "superstructure"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "2TbX8z7IWr0GFssP": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "hv1aja7lAR8ZyKUO": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1681859838890,
+    "modifiedTime": 1693273562892,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!XAFtDlv6ZF7ZKhsU"
+}

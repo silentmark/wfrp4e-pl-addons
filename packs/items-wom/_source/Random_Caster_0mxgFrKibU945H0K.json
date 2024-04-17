@@ -1,0 +1,98 @@
+{
+  "name": "Random Caster",
+  "type": "trait",
+  "img": "modules/wfrp4e-wom/assets/icons/tzeentch.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>@UUID[Compendium.wfrp4e-wom.actors.xtMKRZwrbINYGph2]{Xirat’p} can cast spells at random. When they are attacked, roll on the following table once per round to determine which kind of spell they cast. Having chosen the lore randomly, either choose the spell or generate randomly. More spells from the @UUID[Compendium.wfrp4e-eis.journals.IZVgB7zmTm4rK2yJ.JournalEntryPage.6aHizetwTRbkMZ7W#the-lore-of-tzeentch]{Lore of Tzeentch} can be found in the <strong>Enemy in Shadows Companion</strong> and the <strong>Death on the Reik Companion</strong>; and more spells from the @UUID[Compendium.wfrp4e-pbtt.journals.gX4TCKy0TPwS68ba.JournalEntryPage.MOIADJ2A0ZOzDGEp]{Lore of Slaanesh} are in the <strong>Power Behind the Throne Companion</strong>.</p><p>@Table[random-caster]{Random Caster}</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-wom/assets/icons/tzeentch.png",
+      "transfer": true,
+      "_id": "fC58DUwEMO42pWQ7",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "invoke",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "let spells = await game.wfrp4e.utility.findAll(\"spell\")\n\nlet lore = (await game.wfrp4e.tables.rollTable(\"random-caster\")).text\n ui.notifications.notify(lore)\nif (lore == \"GM's Choice\") {\n   return\n}\n\nelse if (lore == \"Arcane Magic\") {\n    lore = \"Arcane\"\n}\n\nelse if (lore == \"Petty Magic\") {\n    lore = \"petty\"\n}\n\nelse {\n    lore = lore.split(\" \")[2].toLowerCase();\n}\n\nlet spellsWithLore = []\nif (lore == \"Arcane\") {\n    spellsWithLore = spells.filter(i => !i.system.lore.value)\n}\nelse {\n    spellsWithLore = spells.filter(i => i.system.lore.value == lore)\n}\n\nlet selectedSpell = spellsWithLore[Math.floor(CONFIG.Dice.randomUniform() * spellsWithLore.length)]\nItem.implementation.create(selectedSpell.toObject(), { parent: this.actor}).then(item => {\n    this.actor.setupCast(item).then(test => test.roll());\n})"
+        }
+      },
+      "name": "Random Caster",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!0mxgFrKibU945H0K.fC58DUwEMO42pWQ7"
+    }
+  ],
+  "folder": "hGYhx9pNsRpGWNQs",
+  "sort": 1400000,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Talents",
+      "sort": 1300000
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676583288009,
+    "modifiedTime": 1693273575666,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "0mxgFrKibU945H0K",
+  "_key": "!items!0mxgFrKibU945H0K"
+}

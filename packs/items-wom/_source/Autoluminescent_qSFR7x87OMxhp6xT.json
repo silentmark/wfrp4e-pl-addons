@@ -1,0 +1,66 @@
+{
+  "folder": "QKpJ34g9kHICDgQA",
+  "name": "Autoluminescent",
+  "type": "trait",
+  "img": "modules/wfrp4e-wom/assets/icons/marks/mark-hysh.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You give off a constant glow, making it nearly impossible to conceal your movements. You give off soft light allowing you to see 2 yards in darkness. Further manifestations increase this by 2 yards. This cannot be turned off but becomes much dimmer when sleeping. This does not counteract the @UUID[Compendium.wfrp4e-wom.items.XOZ2be8puKPwn6t4]{Vulnerability to Darkness} manifestation.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [],
+  "sort": 200000,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Hysh",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676242306727,
+    "modifiedTime": 1693273575797,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "qSFR7x87OMxhp6xT",
+  "_key": "!items!qSFR7x87OMxhp6xT"
+}

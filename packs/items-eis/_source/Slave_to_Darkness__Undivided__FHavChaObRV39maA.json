@@ -1,0 +1,117 @@
+{
+  "_id": "FHavChaObRV39maA",
+  "name": "Slave to Darkness (Undivided)",
+  "type": "spell",
+  "img": "modules/wfrp4e-core/icons/spells/undivided.png",
+  "effects": [],
+  "folder": "SFy3nl8V2qrjRoOS",
+  "sort": 900000,
+  "flags": {},
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><span class=\"fontstyle0\">You implore your patron to take the soul of your target, replacing it with something terrible. Make an&nbsp;</span><strong>Opposed Willpower&nbsp;</strong><span class=\"fontstyle0\">Test, which you must win by at least 2+ SL. Should you do this, the victim’s soul is sent howling into the Realms of Chaos, and the remaining body is possessed by a Daemon. Unless the target spends a Fate point, control of the Character is passed to the GM. Should you not win the&nbsp;</span><strong>&nbsp;</strong><span class=\"fontstyle0\">Test by at least 2+ SL, you instead suffer a @Table[majormis], and the spell fails. Should you Fumble the Test, you are punished by your god for your arrogance. Your soul is torn from your body, never to return unless you spend a Fate point to resist this, although your patron is unlikely to be pleased if you flagrantly reject their authority in such a fashion.<br></span></p>\n<p><span class=\"fontstyle0\">Given the risks and limitations inherent in this spell, it is generally cast on victims that have been ‘prepared’ for their sacrifice; they have been bound, drugged, and/or otherwise pacified.</span></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Undivided",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Touch",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "1",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Special",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 8,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "sAiwDCZFd21tgaDN": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1691299878976,
+    "modifiedTime": 1693273565126,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!FHavChaObRV39maA"
+}

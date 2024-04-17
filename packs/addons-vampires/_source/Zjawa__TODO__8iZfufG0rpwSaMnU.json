@@ -1,0 +1,58 @@
+{
+  "_id": "8iZfufG0rpwSaMnU",
+  "name": "Zjawa (TODO)",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Jeśli osiągniesz 0 żywotności, możesz natycmiast wykonać Wymagający (+0) Test Wytrzymałości, aby wyleczyć 1 Ranę i odzyskać przytomność. Jeśli posiadasz zarówno Dar Krwi Zjawa, jak i @UUID[Compendium.world.wampiry.Item.luPaokIKrKsvRQiQ]{Bezbożna Regeneracja}, musisz użyć Zjawy, zanim będziesz mógł spróbować skorzystać z Regeneracji.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "1"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": "Perception Tests to detect blood"
+    }
+  },
+  "folder": "R9GP6kUptFm6hQ24",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.311",
+    "createdTime": 1707133236954,
+    "modifiedTime": 1707133266017,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!8iZfufG0rpwSaMnU"
+}

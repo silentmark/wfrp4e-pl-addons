@@ -1,0 +1,154 @@
+{
+  "name": "Hands of Karkora",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Pale hands burst from the ground at your targets’ feet. Targets within the area of effect must make a <strong>Challenging (+0) Dodge</strong> Test to avoid the hands. Targets caught by the hands are @UUID[Compendium.wfrp4e-core.journals.NS3YGlJQxwTggjRX.JournalEntryPage.wmA76Q2zJJ9HrkvA#grappling]{Grappled} with a Strength equal to your Willpower.</p><p>Alternatively, instead of inflicting damage on subsequent rounds, the hands pull targets underground where they begin to @UUID[Compendium.wfrp4e-core.journals.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#drowning-and-suffocation]{Suffocate}. In order to use this option the casting wizard must declare their intent to suffocate their target when casting the spell.</p><p><strong>Lore:</strong> You may inflict one @Condition[Blinded] Condition on those targeted by Lore of Light spells, unless they possess the Arcane Magic (Light) Talent. If a target has the @UUID[Compendium.wfrp4e-core.items.v3uzEthcq0JRar0J]{Daemonic} or @UUID[Compendium.wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Undead} Creature Traits, spells also inflict an additional hit with Damage equal to your Intelligence Bonus that ignores Toughness Bonus and Armor Points.</p><p></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "light",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower yards",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Willpower Bonus yards",
+      "aoe": true
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus rounds",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 8,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "type": "spell",
+  "folder": "FoB0dUA8pzSvKt0l",
+  "img": "modules/wfrp4e-core/icons/spells/light.png",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-core/icons/spells/light.png",
+      "transfer": false,
+      "_id": "ZWcHVPm5TUPoZ9Zo",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "let test = await this.actor.setupSkill(\"Dodge\");\nawait test.roll();\n\nif (test.result.outcome == \"failure\")\n{\n   this.actor.addCondition(\"grappling\")\n}"
+        }
+      },
+      "name": "Hands of Karkora",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!quSMOgFFO14bn7Mn.ZWcHVPm5TUPoZ9Zo"
+    }
+  ],
+  "sort": 900000,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Light",
+      "sort": 900000
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676243555954,
+    "modifiedTime": 1693273575798,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "quSMOgFFO14bn7Mn",
+  "_key": "!items!quSMOgFFO14bn7Mn"
+}

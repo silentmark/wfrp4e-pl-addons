@@ -1,0 +1,101 @@
+{
+  "name": "Zerwane mięśnie",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/tornarm.png",
+  "effects": [
+    {
+      "_id": "kYbKdoUQIYq3zSTN",
+      "flags": {
+        "wfrp4e": {
+          "trigger": "endRound",
+          "value": 1
+        },
+        "core": {
+          "statusId": "bleeding"
+        }
+      },
+      "changes": [],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "systems/wfrp4e/icons/conditions/bleeding.png",
+      "label": "Krwawienie",
+      "transfer": true,
+      "disabled": false,
+      "origin": null,
+      "tint": null,
+      "_key": "!items.effects!B34WN9CTTEMJ3PS0.kYbKdoUQIYq3zSTN"
+    },
+    {
+      "_id": "AdMOpRguQRPZCjVm",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "actor",
+          "script": "let injury = await fromUuid(\"Compendium.wfrp4e-core.injuries.GlShFJF2TpsNh1FX\");\nargs.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()]);",
+          "preventDuplicateEffects": false,
+          "hide": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/injuries/tornarm.png",
+      "label": "Zerwane mięśnie",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "_key": "!items.effects!B34WN9CTTEMJ3PS0.AdMOpRguQRPZCjVm"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wfrp4e-pl.criticals.B34WN9CTTEMJ3PS0"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Cios wbija się z impetem w przedramię. Postać otrzymuje 1 poziom Stanu @Condition[Krwawienie] oraz Uraz Zerwanie mięśni (pomniejsze).</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "1",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Ręka",
+      "type": "String",
+      "label": "Location"
+    }
+  },
+  "_id": "B34WN9CTTEMJ3PS0",
+  "folder": null,
+  "sort": 0,
+  "_key": "!items!B34WN9CTTEMJ3PS0"
+}

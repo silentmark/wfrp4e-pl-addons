@@ -1,0 +1,189 @@
+{
+  "name": "Transmutation of Chamon",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You wrench Chamon from the metals worn by your foes, and the earth itself, briefly transforming the flesh of your enemies into metal. This is a magic missile affecting all in the Area of Effect, with a Damage equal to your Willpower Bonus; the spell ignores Toughness Bonus and inflicts +1 @Condition[Blinded], @Condition[Deafened], and @Condition[Stunned] Condition, all of which last for the duration of the spell. All affected targets gain +1 Armour Point from the gold wrapped about their bodies, but also suffer from @UUID[Compendium.wfrp4e-core.journals.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#drowning-and-suffocation]{Suffocation}. If targets die while the spell is in effect, they are permanently encased in a shell of base metals, a macabre reminder of the risks of sorcery.</p><p><strong>Lore:</strong> Spells inflicting Damage ignore Armor Points from metal armor, and inflict bonus Damage equal to the number of Armor Points of metal armor being worn on any Hit Location struck. So, if your spell hit an Arm location protected by 2 Armor Points of metal armor, it would cause an additional +2 Damage and ignore the Armor Points.</p><p></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "metal",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower yards",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Willpower Bonus yards",
+      "aoe": true
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus Rounds",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 12,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": true
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "type": "spell",
+  "folder": "PuRXlumJzE8wmvzt",
+  "img": "modules/wfrp4e-core/icons/spells/transmutation-of-chamon.png",
+  "effects": [
+    {
+      "_id": "3LeWsNNxMeSK5FAV",
+      "flags": {
+        "wfrp4e": {
+          "effectApplication": "damage",
+          "effectTrigger": "applyDamage",
+          "script": "let applyTB = (args.damageType == game.wfrp4e.config.DAMAGE_TYPE.IGNORE_AP || args.damageType == game.wfrp4e.config.DAMAGE_TYPE.NORMAL)\n\n\nif (applyTB)\n{\n   let TB = args.actor.characteristics.t.bonus\n\n   args.totalWoundLoss += TB\n   let apIndex = args.messageElements.findIndex(i => i.includes(game.i18n.localize(\"TB\")))\n   args.messageElements[apIndex] = \"0/\" + TB + \" \" + game.i18n.localize(\"TB\")\n}\n\nargs.actor.addCondition(\"blinded\")\nargs.actor.addCondition(\"deafened\")\nargs.actor.addCondition(\"stunned\")",
+          "preventDuplicateEffects": false
+        },
+        "core": {
+          "sourceId": "Compendium.wfrp4e-core.items.oZV3ImfM1kxQUCSD.ActiveEffect.P9etlFW2PaP0Wsq5"
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/spells/transmutation-of-chamon.png",
+      "tint": null,
+      "transfer": false,
+      "origin": null,
+      "name": "Transmutation of Chamon",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!2FHU23a3IQ1mQG7c.3LeWsNNxMeSK5FAV"
+    },
+    {
+      "_id": "BQAPRm9hKjrVGYaY",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prepareData",
+          "effectApplication": "apply",
+          "script": "let AP = args.actor.status.armour\n\nAP[\"head\"].value += 1\nAP[\"rArm\"].value += 1\nAP[\"lArm\"].value += 1\nAP[\"body\"].value += 1\nAP[\"lLeg\"].value += 1\nAP[\"rLeg\"].value += 1",
+          "preventDuplicateEffects": false
+        },
+        "core": {
+          "sourceId": "Compendium.wfrp4e-core.items.oZV3ImfM1kxQUCSD.ActiveEffect.3dcW4ets6FUgMbJr"
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/spells/transmutation-of-chamon.png",
+      "tint": null,
+      "transfer": false,
+      "origin": null,
+      "name": "Transmutation (AP Increase)",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!2FHU23a3IQ1mQG7c.BQAPRm9hKjrVGYaY"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Metal",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676244822783,
+    "modifiedTime": 1693273575670,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "2FHU23a3IQ1mQG7c",
+  "_key": "!items!2FHU23a3IQ1mQG7c"
+}

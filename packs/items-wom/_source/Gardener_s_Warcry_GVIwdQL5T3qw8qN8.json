@@ -1,0 +1,185 @@
+{
+  "name": "Gardener’s Warcry",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>This spell may only target a patch of earth. You summon a small Blood Forest, covering the Area of Effect. Anyone standing in the area immediately suffers 10 Damage (modified by TB and Armour) and receives a @Condition[Bleeding] Condition from lashing branches and thorns. The Blood Forest remains until cut down or burned. Anyone passing through the Blood Forest at more than half of their Movement must make a <strong>Challenging (+0) Agility</strong> Test or receive a @Condition[Bleeding] Condition.</p><p><strong>Lore:</strong> Receive a +10 bonus to Casting and Channeling rolls when in a rural or wilderness environment. Living creatures — e.g. those without the @UUID[Compendium.wfrp4e-core.items.v3uzEthcq0JRar0J]{Daemonic} or @UUID[Compendium.wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Undead} Creature Traits — targeted by Arcane Spells from the Lore of Life have all @Condition[Fatigued] and @Condition[Bleeding] Conditions removed after any other effects have been applied as life magic floods through them. Creatures with the @UUID[Compendium.wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Undead} Creature Trait, on the other hand, suffer additional Damage equal to your Willpower Bonus, ignoring Toughness Bonus and Armor Points, if affected by any spell cast with the Lore of Life.</p><p></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "life",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower yards",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Willpower yards",
+      "aoe": true
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Instant",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 9,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "type": "spell",
+  "folder": "O2HAVLlkGzyX0NIV",
+  "img": "modules/wfrp4e-core/icons/spells/life.png",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-core/icons/spells/life.png",
+      "transfer": false,
+      "_id": "VN7ixa4mtjie6uzs",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "await this.actor.addCondition(\"bleeding\")\nthis.actor.applyBasicDamage(10);"
+        }
+      },
+      "name": "Gardener’s Warcry",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!GVIwdQL5T3qw8qN8.VN7ixa4mtjie6uzs"
+    },
+    {
+      "icon": "modules/wfrp4e-core/icons/spells/life.png",
+      "transfer": false,
+      "_id": "5kfPevtZ3MtETXDS",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "let test = await this.actor.setupCharacteristic(\"ag\");\nawait test.roll();\nif (test.result.outcome == \"failure\")\n{\n   this.actor.addCondition(\"bleeding\");\n}\n"
+        }
+      },
+      "name": "Bleeding",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!GVIwdQL5T3qw8qN8.5kfPevtZ3MtETXDS"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Life",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676322951210,
+    "modifiedTime": 1693273575707,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "GVIwdQL5T3qw8qN8",
+  "_key": "!items!GVIwdQL5T3qw8qN8"
+}

@@ -1,0 +1,84 @@
+{
+  "name": "Blood Boil",
+  "permission": {
+    "default": 0,
+    "JaDY9Gr5gDw8h5kN": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Your touch burns through armour and superheats your target&rsquo;s blood. Te target suffers a magic missile with a Damage of +3, ignoring Armour Points, and takes a Stunned Condition. Every time the Hard (-20) Endurance Test to remove the Stunned Condition fails, the target suffers a magic missile as above using the failed SL. A target killed by this spell explodes in a fountain of superheated blood, causing 1d10+1 Damage (modifed by Toughness Bonus and Armour) to anyone within 2 yards. Since the target is not literally set on fre by this spell, the Lore bonus is not applied.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "fire",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Touch"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "1",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Special",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 7,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "flags": {
+    "_sheetTab": "details"
+  },
+  "img": "modules/wfrp4e-content/icons/spells/fire.png",
+  "_id": "LLNTIEyFnAs3DpEB",
+  "effects": [],
+  "_key": "!items!LLNTIEyFnAs3DpEB"
+}

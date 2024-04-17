@@ -1,0 +1,110 @@
+{
+  "folder": "mUI9KPN7KR2i49J6",
+  "name": "Feeling A Bit Stiff",
+  "type": "trait",
+  "img": "modules/wfrp4e-wom/assets/icons/marks/mark-chamon.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><em>Chamon</em> accretes on your joints, making movement difficult. Suffer a penalty of -5 to Ag and -1 to Movement.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-wom/assets/icons/marks/mark-chamon.png",
+      "transfer": true,
+      "_id": "RSNeoZi2scJw0TnJ",
+      "changes": [
+        {
+          "key": "system.characteristics.ag.modifier",
+          "mode": 2,
+          "value": "-5",
+          "priority": null
+        },
+        {
+          "key": "system.details.move.value",
+          "mode": 2,
+          "value": "-1",
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false
+        }
+      },
+      "name": "Feeling A Bit Stiff",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!zxcLs9W5bploRtDM.RSNeoZi2scJw0TnJ"
+    }
+  ],
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Chamon",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676244279148,
+    "modifiedTime": 1693273575815,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "zxcLs9W5bploRtDM",
+  "_key": "!items!zxcLs9W5bploRtDM"
+}

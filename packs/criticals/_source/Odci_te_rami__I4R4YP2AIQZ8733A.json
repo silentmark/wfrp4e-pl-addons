@@ -1,0 +1,74 @@
+{
+  "name": "Odcięte ramię",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/tornarm.png",
+  "effects": [
+    {
+      "_id": "Te5ujLd9jiLGSVJr",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "actor",
+          "script": "await this.actor.addCondition(\"dead\");"
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/injuries/tornarm.png",
+      "label": "Odcięte ramię",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "_key": "!items.effects!I4R4YP2AIQZ8733A.Te5ujLd9jiLGSVJr"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wfrp4e-pl.criticals.I4R4YP2AIQZ8733A"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Ramię odlatuje od ciała na 1k5 metrów w losowym kierunku (patrz Rozrzut), rozbryzgując tętniczą krew, a cios przebija się przez klatkę piersiową.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "Death",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Ręka",
+      "type": "String",
+      "label": "Location"
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_id": "I4R4YP2AIQZ8733A",
+  "folder": null,
+  "sort": 0,
+  "_key": "!items!I4R4YP2AIQZ8733A"
+}

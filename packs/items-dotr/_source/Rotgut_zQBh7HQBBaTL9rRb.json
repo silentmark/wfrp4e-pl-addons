@@ -1,0 +1,87 @@
+{
+  "_id": "zQBh7HQBBaTL9rRb",
+  "name": "Rotgut",
+  "type": "trapping",
+  "img": "modules/wfrp4e-dotr/assets/items/rotgut-bottle.webp",
+  "effects": [],
+  "folder": "BklzLmZbleBRvnuC",
+  "sort": 600000,
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Other",
+      "sort": 500000
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": null
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Jean Rousseaux&rsquo;s rotgut liquor contains warpstone dust suspended in a mixture of alcohol and fermented juniper berries. He sells the mixture for @Pay[6bp]{6 brass pennies} per bottle. Even a small amount causes painful stomach cramps for five minutes (-30 to all Tests) unless the drinker makes a successful <strong>Challenging (+0) Endurance</strong> Test. Any success ensures no further&nbsp;ill effects, but Characters who fail&nbsp;must repeat the test each time they&nbsp;drink rotgut, until successful.</p>\n<p>Each drink constitutes @Corruption[minor]{Minor Exposure to Corruption}. A bottle holds 16 drinks.</p>"
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "0",
+      "bp": "6"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "None"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": ""
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "2YPkbTaOu2bI2lbq": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "hv1aja7lAR8ZyKUO": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1681859838899,
+    "modifiedTime": 1693273562911,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!zQBh7HQBBaTL9rRb"
+}

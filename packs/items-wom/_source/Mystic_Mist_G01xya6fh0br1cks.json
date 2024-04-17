@@ -1,0 +1,157 @@
+{
+  "name": "Mystic Mist",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Mystic Mist has the same effect as the @UUID[JournalEntry.7xFrgrOyYX4SVrBL.JournalEntryPage.a68AllavjryjAKv6]{Lore of Shadows} spell @UUID[Compendium.wfrp4e-wom.items.unFp2SMvY4m4wGhB]{Mystifying Miasma}, though Mòna finds it easier to cast, as reflected in the lower CN.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Mòna's Marsh Magic",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower yards",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Willpower Bonus yards",
+      "aoe": true
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus rounds",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 4,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "type": "spell",
+  "folder": "2snp4VtelKtoB1HP",
+  "img": "systems/wfrp4e/icons/blank.png",
+  "effects": [
+    {
+      "icon": "systems/wfrp4e/icons/blank.png",
+      "transfer": false,
+      "_id": "gDx2HYIPovWCJcjR",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "args.actor.addCondition(\"blinded\")\nargs.actor.addCondition(\"deafened\")\nargs.actor.addCondition(\"fatigued\")"
+        },
+        "core": {
+          "sourceId": "Item.unFp2SMvY4m4wGhB.ActiveEffect.9h0rxsBrfte4QnO7"
+        }
+      },
+      "name": "Mystic Mist",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!G01xya6fh0br1cks.gDx2HYIPovWCJcjR"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Mòna's Marsh Magic",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676584321826,
+    "modifiedTime": 1693273575706,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "G01xya6fh0br1cks",
+  "_key": "!items!G01xya6fh0br1cks"
+}

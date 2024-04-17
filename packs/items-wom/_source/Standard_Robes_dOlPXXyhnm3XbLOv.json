@@ -1,0 +1,117 @@
+{
+  "folder": "PTC5Z3dO3YcFXIkR",
+  "name": "Standard Robes",
+  "type": "trapping",
+  "img": "modules/wfrp4e-core/icons/equipment/clothing_and_accessories/robes.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>These costumes are more complex and typically include heavy coats or cloaks and distinctive headwear.</p><p>@UUID[JournalEntry.x6OdswRIafU9qGYs.JournalEntryPage.xxTcTs5H1bmevH2B#wizards-robes]{Wizard's Robes}</p><blockquote class=\"foundry-note\"><p>Before adding this Item to an Actor, rename the Active Effect and replace <strong>Lore</strong> with the appropriate value.</p><p><strong>e.g. </strong><em>To create a robes used by a Bright Wizard, the Active Effect should be named <strong>Standard Robes (Fire)</strong></em></p></blockquote>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 2
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "8",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "exotic"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "clothingAccessories"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-core/icons/equipment/clothing_and_accessories/robes.png",
+      "transfer": true,
+      "_id": "QwsWIBmagSplcAwa",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prefillDialog",
+          "effectApplication": "equipped",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "let lore = this.effect.name.split(\"(\")[1].split(\")\")[0].toLowerCase();\n\nif (args.type == \"channelling\" && args.item.system.lore.value == lore)\n    args.prefillModifiers.slBonus  += 2\nelse if ((args.type == \"channelling\" || args.type == \"cast\") && args.item.system.lore.value != lore && args.item.system.lore.value != \"petty\")\n    args.prefillModifiers.slBonus  -= 1"
+        }
+      },
+      "name": "Standard Robes (Lore)",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!dOlPXXyhnm3XbLOv.QwsWIBmagSplcAwa"
+    }
+  ],
+  "sort": 400000,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Other",
+      "sort": 400000
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1677613510623,
+    "modifiedTime": 1693273575765,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "dOlPXXyhnm3XbLOv",
+  "_key": "!items!dOlPXXyhnm3XbLOv"
+}

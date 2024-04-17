@@ -1,0 +1,122 @@
+{
+  "name": "Shroud of Invisibility",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You wrap the target in a shroud of <em>Ulgu</em>. The target becomes invisible and cannot be perceived by mundane senses. The spell will automatically fool anyone without the @UUID[Compendium.wfrp4e-core.items.OEjUvJKi0xmBwbS2]{Second Sight} Talent. Those with the Talent must pass a <strong>Challenging (+0) Perception</strong> Test to notice that someone is nearby, though they will not be able to pin down the precise location.</p><p>Targets are still perceptible to the other senses. The spell ends if the target brings attention to themselves by making loud noises or attacking someone.</p><p><strong>Lore:</strong> All spells cast from the Lore of Shadows inflicting Damage ignore all non-magical Armor Points.</p><p></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "shadow",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Touch",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "1",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus rounds",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 8,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "type": "spell",
+  "folder": "wxBwSMVLtd5DgtDb",
+  "img": "modules/wfrp4e-core/icons/spells/shroud-of-invisibility.png",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Shadow",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676402587864,
+    "modifiedTime": 1693273575810,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "vvxQwsaUu4ZMbhOn",
+  "_key": "!items!vvxQwsaUu4ZMbhOn"
+}

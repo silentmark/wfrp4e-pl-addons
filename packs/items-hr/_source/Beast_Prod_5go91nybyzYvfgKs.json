@@ -1,0 +1,180 @@
+{
+  "_id": "5go91nybyzYvfgKs",
+  "name": "Beast-Prod",
+  "type": "weapon",
+  "img": "modules/wfrp4e-horned-rat/assets/icons/skaven-weapon.png",
+  "effects": [
+    {
+      "_id": "GApAzudTkcBxo8Rt",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-horned-rat/assets/icons/skaven-weapon.png",
+      "transfer": true,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "applyDamage",
+          "effectApplication": "damage",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "let applyAP = (args.damageType == game.wfrp4e.config.DAMAGE_TYPE.IGNORE_TB || args.damageType == game.wfrp4e.config.DAMAGE_TYPE.NORMAL)\n                \n                if (applyAP) {\n                   let AP = args.AP\n                \n                   args.totalWoundLoss += AP.used\n                   let apIndex = args.messageElements.findIndex(i => i.includes(game.i18n.localize(\"AP\")))\n                   args.messageElements[apIndex] = \"0/\" + AP.value + \" \" + game.i18n.localize(\"AP\")\n                }"
+        }
+      },
+      "tint": null,
+      "origin": null,
+      "name": "Beast-Prod",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!5go91nybyzYvfgKs.GApAzudTkcBxo8Rt"
+    }
+  ],
+  "folder": "nGPaTlfpoNth2LAG",
+  "sort": 100000,
+  "flags": {
+    "wfrp4e-horned-rat": {
+      "initialization-folder": "Weapons",
+      "sort": 100000
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><strong>Availability:</strong> Moulder and allied clans only</p><p>This barbed prod is used primarily for herding @UUID[Compendium.wfrp4e-core.actors.VfJgGmCTWqb0IDSW]{Rat Ogres} and other @UUID[JournalEntry.oXly0RXc3Z3vnVrH.JournalEntryPage.qvft4GKy7q56yHgN]{Clan Moulder} creations, but at need a @UUID[Actor.vqKiWF0OuVwTnARC]{Packmaster} will turn its magical energy upon an enemy. It requires two hands and does damage as a Halberd, but ignores all armour.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 3
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "special"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "damageToItem": {
+      "type": "Number",
+      "value": 0,
+      "shield": 0
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": "SB+4"
+    },
+    "reach": {
+      "type": "String",
+      "label": "Reach",
+      "value": "long"
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": ""
+    },
+    "skill": {
+      "type": "String",
+      "label": "Skill Override",
+      "value": ""
+    },
+    "modeOverride": {
+      "type": "String",
+      "label": "Mode Override",
+      "value": ""
+    },
+    "twohanded": {
+      "type": "Boolean",
+      "label": "Two-Handed",
+      "value": true
+    },
+    "ammunitionGroup": {
+      "type": "String",
+      "label": "Ammunition Group",
+      "value": ""
+    },
+    "currentAmmo": {
+      "type": "Number",
+      "value": 0
+    },
+    "consumesAmmo": {
+      "value": true
+    },
+    "weaponGroup": {
+      "type": "String",
+      "label": "Weapon Group",
+      "value": "polearm"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": [
+        {
+          "name": "zzap",
+          "value": null
+        }
+      ]
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    },
+    "equipped": false,
+    "loaded": {
+      "value": false,
+      "repeater": false,
+      "amt": 0
+    },
+    "offhand": {
+      "value": false
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "AUExJb3c35oBvDuA": 3,
+    "R44a2dfsw2hWQXbE": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1687734901059,
+    "modifiedTime": 1693273568128,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!5go91nybyzYvfgKs"
+}

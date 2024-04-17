@@ -1,0 +1,93 @@
+{
+  "name": "Raise Champion",
+  "permission": {
+    "default": 0,
+    "49AXXoPz63AAzPKB": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You funnel <em>Dhar </em>towards the the bones of a single dead creature who was once a figure of significant power when alive. As a guideline, this requires a humanoid character or creature who had reached its third Career level or more (or equivalent in Traits). The skeletal champion will start with the <a></a><a class=\"condition-chat\" data-cond=\"Prone\"><i class=\"fas fa-user-injured\"></i> Prone</a> Condition and can follow your simple instructions to the letter. Depending on the bones used, the GM might use the creature’s former Skills and Talents added to the base Skeleton profile, or may opt to use the following sample profile instead: <strong>Raise Chariot of Bone (Ritual) </strong>This spell is a ritual—see the section on Ritual Magic for more details.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Necromancy",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Touch"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "1",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Until sunrise",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 8,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "dynamiceffects": {
+      "equipActive": false,
+      "alwaysActive": false,
+      "effects": []
+    },
+    "core": {
+      "sourceId": "Item.StzG4g6DA5eQzn0z"
+    },
+    "exportSource": {
+      "world": "the-old-world",
+      "system": "wfrp4e",
+      "coreVersion": "0.6.6",
+      "systemVersion": "2.1.0"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_absorb.jpg",
+  "effects": [],
+  "_id": "kWKjM845EITs8NnI",
+  "_key": "!items!kWKjM845EITs8NnI"
+}

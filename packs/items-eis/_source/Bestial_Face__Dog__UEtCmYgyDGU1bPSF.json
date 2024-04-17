@@ -1,0 +1,128 @@
+{
+  "_id": "UEtCmYgyDGU1bPSF",
+  "name": "Bestial Face (Dog)",
+  "type": "mutation",
+  "img": "modules/wfrp4e-core/icons/mutations/mutation.png",
+  "effects": [
+    {
+      "_id": "moBHXdKClLBZNY7E",
+      "flags": {
+        "wfrp4e": {
+          "effectApplication": "actor",
+          "preventDuplicateEffects": false
+        }
+      },
+      "changes": [
+        {
+          "key": "system.characteristics.fel.modifier",
+          "value": "-20",
+          "mode": 2,
+          "priority": null
+        },
+        {
+          "key": "system.characteristics.int.modifier",
+          "value": "-10",
+          "mode": 2,
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/mutations/mutation.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Bestial Face (Dog)",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!UEtCmYgyDGU1bPSF.moBHXdKClLBZNY7E"
+    },
+    {
+      "_id": "r76NHnJ2lQLIlnQ4",
+      "flags": {
+        "wfrp4e": {
+          "effectApplication": "actor",
+          "preventDuplicateEffects": false,
+          "effectTrigger": "addItems",
+          "script": "fromUuid(\"Compendium.wfrp4e-core.items.9h82z72XGo9tfgQS\").then(item => {\n   item = item.toObject()\n   item.system.tests.value = item.system.tests.value.replace(\"(Sense)\", \"(Smell)\") \n   item.name = item.name += \" (Smell)\"\n   this.actor.createEmbeddedDocuments(\"Item\", [item], {fromEffect : this.effect.id})\n})",
+          "hide": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/mutations/mutation.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Acute Sense",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!UEtCmYgyDGU1bPSF.r76NHnJ2lQLIlnQ4"
+    }
+  ],
+  "folder": "QOjm4pUE8aywpu9Z",
+  "sort": 0,
+  "flags": {
+    "core": {
+      "sourceId": "Item.hEYPibv60Yzu6gDi"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You feel an irresistible urge to fall to your knees and howl. As your jaw is forced to its maximum extension, you begin to choke uncontrollably as a thickly furred snout forces its way through your face. Your Human nose, lips, and teeth slough off, nothing more than relics of your former existence, replaced by the snarling face of a dog.</p>\n<p>Lose 20 Fellowship and 10 Intelligence. Gain the @UUID[Compendium.wfrp4e-core.items.9h82z72XGo9tfgQS]{Acute Sense (Smell)} Talent.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "mutationType": {
+      "label": "Type",
+      "type": "String",
+      "value": "physical"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Modifier"
+    },
+    "modifiesSkills": {
+      "value": false,
+      "type": "Boolean",
+      "label": "Skill Modifier?"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "NFEPkxWRg7qn4pyX": 3,
+    "sAiwDCZFd21tgaDN": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1691299878976,
+    "modifiedTime": 1693273565139,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!UEtCmYgyDGU1bPSF"
+}

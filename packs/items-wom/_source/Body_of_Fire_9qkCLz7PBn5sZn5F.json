@@ -1,0 +1,122 @@
+{
+  "name": "Body of Fire",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Your body is sheathed in flame and your blood becomes pyrophoric. Targets attempting to grab or grapple you suffer 8 + SL Damage and must pass a <strong>Hard (–20) Cool</strong> Test every round or let go. Every round that you Grapple with an opponent, they receive 1 @Condition[Ablaze] Condition and suffer 8 + SL additional Damage. </p><p>If you are wounded in melee combat, fiery blood squirts at your attacker, who must pass a <strong>Challenging (+0) Dodge</strong> Test or suffer a magic missile hit with Damage +3 (ignoring Armour). Your clothes and trappings are immune to fire, but you can still be damaged by fire attacks.</p><p>\n\n <b>Lore:</b> You may inflict +1 @Condition[Ablaze] Condition on anyone targeted by spells from the Lore of Fire, unless they also possess the Arcane Magic (Fire) Talent. Every Ablaze condition within Willpower Bonus yards adds +10 to attempts to Channel or Cast with Aqshy. <p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "fire",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "You",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "You",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Toughness Bonus minutes",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 5,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": true
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "type": "spell",
+  "folder": "1nRnnQNRmL8iAiA3",
+  "img": "modules/wfrp4e-core/icons/spells/fire.png",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Fire",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676404365388,
+    "modifiedTime": 1693273575690,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "9qkCLz7PBn5sZn5F",
+  "_key": "!items!9qkCLz7PBn5sZn5F"
+}

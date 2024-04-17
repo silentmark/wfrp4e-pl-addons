@@ -1,0 +1,82 @@
+{
+  "_id": "Vp1VTP1qChi0e4aE",
+  "name": "Leaky Brainz",
+  "permission": {
+    "default": 0,
+    "LhiA8OMMa0ToAWEe": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You give the evil eye to a single target, who must be a wielder of Arcane, Chaos, Petty or religious Divine magics. The target immediately suﬀers a <em>Fatigued</em> Condition.&nbsp;&nbsp;</p>\n<p><strong>Overcasting:</strong> For every +2 SL, your target gains +1 <em>Fatigued</em> Condition.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Da Lit'lest Waaagh!",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower yards"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Special",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Instant",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 5,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.G1jdhPt3P5J8VzXP"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_leaky-brainz.jpg",
+  "effects": [],
+  "_key": "!items!Vp1VTP1qChi0e4aE"
+}

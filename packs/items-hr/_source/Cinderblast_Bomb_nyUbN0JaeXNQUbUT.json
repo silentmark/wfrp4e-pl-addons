@@ -1,0 +1,172 @@
+{
+  "_id": "nyUbN0JaeXNQUbUT",
+  "name": "Cinderblast Bomb",
+  "type": "weapon",
+  "img": "modules/wfrp4e-horned-rat/assets/icons/bomb.png",
+  "effects": [],
+  "folder": "nGPaTlfpoNth2LAG",
+  "sort": 800000,
+  "flags": {
+    "wfrp4e-archives1": {
+      "initialization-folder": "Dwarf",
+      "sort": 800000
+    },
+    "wfrp4e": {
+      "optimalRange": "short"
+    },
+    "core": {
+      "sourceId": "Compendium.wfrp4e-archives1.items.nyUbN0JaeXNQUbUT"
+    },
+    "wfrp4e-horned-rat": {
+      "initialization-folder": "Weapons",
+      "sort": 800000
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>These lethal weapons are indispensable in the tunnel fighting that goes on deep beneath the Old World as the Dwarfs desperately stave off attacks by Skaven, Goblins, and worse. These bombs are typically tossed into the midst of packed enemy forces, exploding in a blast of flame and shrapnel that is terrifying to behold.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "3",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "exotic"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "damageToItem": {
+      "type": "Number",
+      "value": 0,
+      "shield": 0
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": "14"
+    },
+    "reach": {
+      "type": "String",
+      "label": "Reach",
+      "value": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "SB"
+    },
+    "skill": {
+      "type": "String",
+      "label": "Skill Override",
+      "value": ""
+    },
+    "modeOverride": {
+      "type": "String",
+      "label": "Mode Override",
+      "value": ""
+    },
+    "twohanded": {
+      "type": "Boolean",
+      "label": "Two-Handed",
+      "value": false
+    },
+    "ammunitionGroup": {
+      "type": "String",
+      "label": "Ammunition Group",
+      "value": "none"
+    },
+    "currentAmmo": {
+      "type": "Number",
+      "value": 0
+    },
+    "consumesAmmo": {
+      "value": true
+    },
+    "weaponGroup": {
+      "type": "String",
+      "label": "Weapon Group",
+      "value": "explosives"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": [
+        {
+          "value": 3,
+          "name": "blast"
+        },
+        {
+          "name": "impact"
+        },
+        {
+          "name": "penetrating"
+        }
+      ],
+      "type": "String"
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": [
+        {
+          "name": "dangerous"
+        }
+      ],
+      "type": "String"
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    },
+    "equipped": false,
+    "loaded": {
+      "value": false,
+      "repeater": false,
+      "amt": 0
+    },
+    "offhand": {
+      "value": false
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "cDOHWDhQOueUNry5": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "AUExJb3c35oBvDuA": 3,
+    "R44a2dfsw2hWQXbE": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1687734901076,
+    "modifiedTime": 1693273568159,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!nyUbN0JaeXNQUbUT"
+}

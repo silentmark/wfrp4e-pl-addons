@@ -1,0 +1,73 @@
+{
+  "name": "Zerwane więzadło",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/tornarm.png",
+  "effects": [
+    {
+      "_id": "MgpYZu22zgrLdxmf",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "actor",
+          "script": "let injury = await fromUuid(\"Compendium.wfrp4e-core.injuries.qn4ZpvTQIX4rcJDl\");\nargs.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()]);",
+          "preventDuplicateEffects": false,
+          "hide": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/injuries/tornarm.png",
+      "label": "Zerwane więzadło",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "_key": "!items.effects!IWBVGLR19I9AGYG5.MgpYZu22zgrLdxmf"
+    }
+  ],
+  "flags": {
+    "_sheetTab": "description",
+    "core": {
+      "sourceId": "Compendium.wfrp4e-pl.criticals.IWBVGLR19I9AGYG5"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Postać natychmiast upuszcza wszystko, co trzymała w dłoni. Otrzymuje Zerwanie mięśni (pomniejsze).</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "2",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Ręka",
+      "type": "String",
+      "label": "Location"
+    }
+  },
+  "_id": "IWBVGLR19I9AGYG5",
+  "folder": null,
+  "sort": 0,
+  "_key": "!items!IWBVGLR19I9AGYG5"
+}

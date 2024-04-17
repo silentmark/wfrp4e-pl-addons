@@ -1,0 +1,186 @@
+{
+  "_id": "QACw37L6Y8fNVxSR",
+  "name": "Warp Shield",
+  "type": "spell",
+  "img": "modules/wfrp4e-horned-rat/assets/icons/ruin.png",
+  "effects": [
+    {
+      "_id": "Xg4wOUl6ZecV1AIx",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-horned-rat/assets/icons/ruin.png",
+      "transfer": false,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prepareData",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "let AP = args.actor.status.armour\n\nAP[\"head\"].value += 5\nAP[\"rArm\"].value += 5\nAP[\"lArm\"].value += 5\nAP[\"body\"].value += 5\nAP[\"lLeg\"].value += 5\nAP[\"rLeg\"].value += 5"
+        }
+      },
+      "tint": null,
+      "origin": null,
+      "name": "Warp Shield",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!QACw37L6Y8fNVxSR.Xg4wOUl6ZecV1AIx"
+    },
+    {
+      "_id": "KyZLslV1AScNDxbP",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-horned-rat/assets/icons/ruin.png",
+      "transfer": false,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "preOpposedDefender",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "if (args.attackerTest.item.attackType == \"melee\")\n{\n    let content = `<b>${args.attackerTest.actor.prototypeToken.name}</b> takes ${5 + this.actor.characteristics.wp.bonus} Damage from Warp Shield to whatever location they used to attack, ignoring metal armour.`\n    args.opposedTest.result.other.push(content);\n}"
+        }
+      },
+      "tint": null,
+      "origin": null,
+      "name": "Warp Shield Damage",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!QACw37L6Y8fNVxSR.KyZLslV1AScNDxbP"
+    }
+  ],
+  "folder": "kUhYpAON43o9rF5d",
+  "sort": -81250,
+  "flags": {
+    "wfrp4e-horned-rat": {
+      "initialization-folder": "Ruin",
+      "sort": -81250
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You summon a flare of Warp-energy, shaping it around yourself as a protective shield. While the spell is in effect, all hit locations gain +5 AP. In addition, any creature that touches you — including successfully attacking you with their bare hands or with a hand-held weapon made of metal — takes a hit with Damage equal to 5 + your Willpower Bonus. This hit strikes whichever limb was used to attack you and ignores AP from metal armour.</p><p>\n\n <b>Lore:</b> <p>The Lore of Ruin channels the terrible power of Warpstone to lash out at targets, often incinerating them whole. It is focused on destruction and disintegration, and is feared throughout Skavendom and beyond.</p>  <p>This terrible power is highly invigorating and the sensation of barely restrained energy is almost addictive. Whenever you successfully cast a spell from the Lore of Ruin, you may add +1 SL to any Initiative- or Agility-based Tests for the next [[/br 1d10]] rounds.</p>  <p>Ingredients: Grey Seers use various scraps of fur, hide, bones, and crystalline Warpstone when casting spells from the Lore of Ruin.</p><p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "ruin",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "You",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "You",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus rounds",
+      "extendable": true
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 6,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "AUExJb3c35oBvDuA": 3,
+    "R44a2dfsw2hWQXbE": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1687734901067,
+    "modifiedTime": 1693273568141,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!QACw37L6Y8fNVxSR"
+}

@@ -1,0 +1,82 @@
+{
+  "_id": "RaD2n53AuW709UDn",
+  "name": "Arcane Barrier",
+  "permission": {
+    "default": 0,
+    "rPtCM2fgOqxK9HLk": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p style=\"text-align: justify;\">You create a magical barrier which prevents creatures from passing through it. The thin barrier manifests as a wall that is Willpower Bonus yards wide and high or the barrier completely fills the space of a suitable portal or passageway. To most creatures, the barrier is near-invisible, requiring an Astounding Success (6+) on a Perception Test to see the subtle shimmering energy; anyone with the Second Sight Talent will see a Lore-appropriate barrier. You may bypass your own barrier with an Average (+20) Channelling Test. A creature may attempt to push through the magical barrier by winning a Cool or Channelling Test opposed by your Channelling. If the creature loses the Test, it gains a Stunned Condition. The barrier does not impede Ranged attacks but spells will be absorbed. If a Magical attack strike the barrier, you must pass a Willpower Test or the barrier is dispelled.&nbsp;&nbsp;</p>\n<p style=\"text-align: justify;\">Overcast: For every +2 SL, you may enhance your barrier-related Channelling Tests by one step of Diﬃculty (ie, Average to Easy). For +6 SL, you may choose to increase the Duration to Willpower Bonus hours.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower Bonus yards"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Special",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus Rounds+",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 5,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.vFgLBYh57uG9Qfto"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_arcane_barrier.jpg",
+  "effects": [],
+  "_key": "!items!RaD2n53AuW709UDn"
+}

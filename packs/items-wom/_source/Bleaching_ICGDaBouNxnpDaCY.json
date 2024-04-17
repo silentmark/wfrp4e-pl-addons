@@ -1,0 +1,69 @@
+{
+  "folder": "QKpJ34g9kHICDgQA",
+  "name": "Bleaching",
+  "type": "trait",
+  "img": "modules/wfrp4e-wom/assets/icons/marks/mark-hysh.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><em>Hysh</em> swirls around your head, making your hair stand out in all directions. When the winds disappear, they have taken the pigment with them — your hair becomes completely white.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [],
+  "sort": 150000,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.XOZ2be8puKPwn6t4"
+    },
+    "wfrp4e-wom": {
+      "initialization-folder": "Hysh",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676242306727,
+    "modifiedTime": 1693273575711,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "ICGDaBouNxnpDaCY",
+  "_key": "!items!ICGDaBouNxnpDaCY"
+}

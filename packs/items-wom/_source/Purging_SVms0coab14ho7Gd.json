@@ -1,0 +1,107 @@
+{
+  "folder": "QKpJ34g9kHICDgQA",
+  "name": "Purging",
+  "type": "trait",
+  "img": "modules/wfrp4e-wom/assets/icons/marks/mark-hysh.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You feel bathed in purifying light, but this is not a gentle sensation. You must pass a <strong>Hard (–20) Endurance</strong> Test or suffer the @Symptom[Fever] Symptom for the next [[/r 2d10]] days. However, afterwards you feel energised. <em>Hysh’s</em> powers of preservation and healing have done their work. Gain +1 SL to any Tests to resist contracting disease.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-wom/assets/icons/marks/mark-hysh.png",
+      "transfer": true,
+      "_id": "F4eXbrvUtXNAwn3V",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "dialogChoice",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "effectData": {
+            "description": "Contracting DIsease",
+            "modifier": null,
+            "slBonus": 1,
+            "successBonus": null,
+            "difficultyStep": null
+          }
+        }
+      },
+      "name": "Purging",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!SVms0coab14ho7Gd.F4eXbrvUtXNAwn3V"
+    }
+  ],
+  "sort": 103125,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.XOZ2be8puKPwn6t4"
+    },
+    "wfrp4e-wom": {
+      "initialization-folder": "Hysh",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676242306727,
+    "modifiedTime": 1693273575735,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "SVms0coab14ho7Gd",
+  "_key": "!items!SVms0coab14ho7Gd"
+}

@@ -1,0 +1,157 @@
+{
+  "_id": "zelpi59bYYr4wMis",
+  "name": "Mindless",
+  "type": "trait",
+  "img": "modules/wfrp4e-core/icons/traits/trait.png",
+  "effects": [
+    {
+      "_id": "QUS9Bq5GPe532DP5",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prepareData",
+          "effectApplication": "actor",
+          "script": "args.actor.characteristics.i.value= \"-\"\n args.actor.characteristics.int.value= \"-\"\n args.actor.characteristics.wp.value= \"-\"\n args.actor.characteristics.fel.value = \"-\"",
+          "preventDuplicateEffects": true
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/traits/trait.png",
+      "tint": null,
+      "transfer": true,
+      "name": "Mindless Characteristics",
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "_key": "!items.effects!zelpi59bYYr4wMis.QUS9Bq5GPe532DP5"
+    },
+    {
+      "_id": "C1J7zPrHZYPXLTn4",
+      "flags": {
+        "wfrp4e": {
+          "effectApplication": "actor",
+          "preventDuplicateEffects": false,
+          "effectTrigger": "getInitiativeFormula",
+          "script": "args.initiative = \"-10\""
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/traits/trait.png",
+      "tint": null,
+      "transfer": true,
+      "name": "Mindless Initiative",
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "_key": "!items.effects!zelpi59bYYr4wMis.C1J7zPrHZYPXLTn4"
+    },
+    {
+      "_id": "bKtFe4CIxwOJp50B",
+      "flags": {
+        "wfrp4e": {
+          "effectApplication": "actor",
+          "preventDuplicateEffects": false,
+          "effectTrigger": "preWoundCalc",
+          "script": "args.wpb = args.sb"
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/traits/trait.png",
+      "tint": null,
+      "transfer": true,
+      "name": "Mindless Wounds Calculation",
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "_key": "!items.effects!zelpi59bYYr4wMis.bKtFe4CIxwOJp50B"
+    }
+  ],
+  "folder": "R0nd9hzOuBxoEZwj",
+  "sort": 0,
+  "flags": {
+    "wfrp4e-eis": {
+      "initialization-folder": "Traits"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><span class=\"fontstyle0\">The creature is mindless, living by base instinct or magical compulsion alone. It has no Initiative, Intelligence, Willpower, or Fellowship Characteristics, and need never Test them. For the purposes of calculating Wounds, it uses its Stength Bonus whenever Willpower Bonus is required. As it has no Initiative Characteristic, it always takes its Turn last in any Round</span> .</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "34JMfpmBvTmVYPh4": 3,
+    "VnnpieLwbiAu3Owf": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1693273565159,
+    "modifiedTime": 1693273565159,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!zelpi59bYYr4wMis"
+}

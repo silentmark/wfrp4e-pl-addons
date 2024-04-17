@@ -1,0 +1,82 @@
+{
+  "_id": "FiCgv8zO4wYpHtZy",
+  "name": "Fists o’ Gork",
+  "permission": {
+    "default": 0,
+    "LhiA8OMMa0ToAWEe": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You glow bright-green as the power of Gork surges through your body. Gain +20 to your Strength and the Champion Creature Trait if attacking and defending with your fists. For your Action, you may make separate attacks with your fists with no oﬀ-hand penalty. Each hit scored activates the Deathblow rule (see <strong>WFRP4</strong> p160) regardless of your size.&nbsp;</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Da Big Waaagh!",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "You"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "You",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus rounds",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 8,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.gQYkFHc6bFMnShQq"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_fists-o%27-gork.jpg",
+  "effects": [],
+  "_key": "!items!FiCgv8zO4wYpHtZy"
+}

@@ -1,0 +1,119 @@
+{
+  "_id": "g3oST6IdCl5Ig6Mj",
+  "name": "Szpony (TODO)",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [
+    {
+      "_id": "PfwdXujALzCIu0wU",
+      "flags": {
+        "wfrp4e": {
+          "applicationData": {
+            "type": "document",
+            "documentType": "Item",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "testIndependent": false,
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Szpony",
+              "trigger": "addItems",
+              "script": "let item = await fromUuid(\"Compendium.wfrp4e-vampires.vampires-trappings.O1Ev52ZEfxxA1Pxg\")\nitem = item.toObject();\nthis.actor.createEmbeddedEntity(\"Item\", [item], {fromEffect: this.effect.id});",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "actor",
+            "effectTrigger": "oneTime",
+            "preventDuplicateEffects": false,
+            "script": "fromUuid(\"Compendium.wfrp4e-vampires.vampires-trappings.O1Ev52ZEfxxA1Pxg\").then(item => {\n    args.actor.createEmbeddedEntity(\"OwnedItem\", item.data)\n})"
+          }
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null,
+        "combat": null
+      },
+      "icon": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+      "tint": null,
+      "transfer": true,
+      "name": "Szpony",
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "_key": "!items.effects!g3oST6IdCl5Ig6Mj.PfwdXujALzCIu0wU"
+    }
+  ],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Jeśli nie korzystasz z @UUID[Compendium.world.wampiry.Item.BRdukN8hxSBpcuUn]{Ludzkie Postaci}, możesz skorzystać z darmowej akcji, aby twoje pazury urosły dwukrotnie w stosunku do zwykłego rozmiaru. Zamiast obrażeń BS+4, teraz zadają obrażenia BS+6 i zyskują Zaletę Przebijający. Ich zasięg wzrasta z osobistego do bardzo krótkiego.</p><p>Otrzymujesz także +10 do testów Wspinaczki i Otwierania Zamku, ale otrzymujesz -20 do innych testów opartych na Zręczności, gdy twoje pazury są wyciągnięte. Nie możesz trzymać żadnej broni w żadnej ręce, z wyjątkiem Tarczy, gdy twoje szpony są odsłonięte.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "1"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "folder": "R9GP6kUptFm6hQ24",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.311",
+    "createdTime": 1707136651752,
+    "modifiedTime": 1707136651752,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!g3oST6IdCl5Ig6Mj"
+}

@@ -1,0 +1,66 @@
+{
+  "folder": "orysG5B5Ne1e1fwV",
+  "name": "Hairy",
+  "type": "trait",
+  "img": "modules/wfrp4e-wom/assets/icons/marks/mark-ghur.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You grow thick hair all over your body. When you shave it off, it regrows quickly. You don’t take penalties for Endurance Tests to withstand @UUID[Compendium.wfrp4e-core.journals.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#exposure]{Cold Exposure} if you lack the proper clothing, but you are rather unsightly.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [],
+  "sort": 125000,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Ghur",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676405245358,
+    "modifiedTime": 1693273575773,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "g7jnp1vCwqhv9eT5",
+  "_key": "!items!g7jnp1vCwqhv9eT5"
+}

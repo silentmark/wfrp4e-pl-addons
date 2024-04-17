@@ -1,0 +1,150 @@
+{
+  "name": "Agurk",
+  "type": "trapping",
+  "img": "icons/consumables/potions/bottle-bulb-corked-glowing-red.webp",
+  "effects": [
+    {
+      "_id": "jjpMGm8xXBmABtK1",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false
+        }
+      },
+      "changes": [
+        {
+          "key": "system.characteristics.dex.modifier",
+          "value": "-20",
+          "mode": 2,
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/art/other/herbalism.webp",
+      "label": "Agurk Infusion",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "_key": "!items.effects!ROzJeAQVk3EshRuN.jjpMGm8xXBmABtK1"
+    },
+    {
+      "_id": "WY3oD6VOLvKQTpTc",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "apply",
+          "script": "this.actor.addCondition(\"poisoned\", 2)",
+          "hide": false,
+          "preventDuplicateEffects": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/art/other/herbalism.webp",
+      "label": "Agurk Draught",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "_key": "!items.effects!ROzJeAQVk3EshRuN.WY3oD6VOLvKQTpTc"
+    }
+  ],
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Herbs of the Empire",
+      "sort": 100000
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<h3>The Elf Balm</h3>\n<p>Though commonly called Agurk, in the Moot we call this herb <em>Shiverweed</em>. It is also known as <em>Zitterwort </em>in the Empire, <em>Trema </em>in Tilea and <em>Gysenblat </em>in Norsca. The Elves call it <em>Echryddeillen</em>. It grows in open grasslands where the soil is well-drained but not too sandy. To prepare it, pick the leaves, strip&nbsp; and discard the stalks, and hang up to dry beside the fireplace for at least a week. This herb is useful for improving the circulation, and also for helping a patient sweat out a heavy cold. Never use it for a fever, since it can cause the patient&rsquo;s temperature to rise. To use the herb, add the leaves to a dish of boiling water, let stand for a minute or two until the water begins to take on a little colour, and then let the patient inhale the fumes for three or four minutes. After this time, the patient should start to shake &mdash; make them comfortable and keep an eye on them for three or four hours. If the trembling has not subsided by this time, you may safely administer a mild sedative. Dispose of the infusion carefully, and never let it be drunk &mdash; it can cause fatal convulsions if taken internally.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><strong>Locality:&nbsp;</strong>Grasslands</p>\n<p><strong>Season: </strong>Autumn</p>\n<p><strong>Preperatons: </strong>Infusion, Draught</p>\n<p>Inhaling the fumes from an infusion of Agurk causes mild shaking (<strong>Dexterity &ndash;20</strong>) for three hours unless the Character makes a successful&nbsp;<strong>Challenging (+0) Endurance</strong>&nbsp;Test or has an Immunity to poison.</p>\n<p>Conversely, a draught of Agurk is a potentially fatal toxin. This inflicts 2 @Condition[Poisoned] Conditions, resisted with a&nbsp;<strong>Difficult (&ndash;10) Endurance</strong>&nbsp;Test.</p>"
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "1",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "rare"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690313554374,
+    "modifiedTime": 1690314359820,
+    "lastModifiedBy": "Czz7IJA9DEa5LD9E"
+  },
+  "_id": "ROzJeAQVk3EshRuN",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "kYUjI3k8J8QQt9Qw": 3
+  },
+  "_key": "!items!ROzJeAQVk3EshRuN"
+}

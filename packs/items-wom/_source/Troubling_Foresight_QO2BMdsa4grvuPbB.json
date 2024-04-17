@@ -1,0 +1,98 @@
+{
+  "folder": "7Ate0oh7xaWNJMLc",
+  "name": "Troubling Foresight",
+  "type": "trait",
+  "img": "modules/wfrp4e-wom/assets/icons/marks/mark-azyr.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>When under stress, you are plagued with unbidden visions of the future. If you fail any Willpower-based Test by 3 SL or more, you fall @Condition[Prone] and see disturbing revelations of disaster.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-wom/assets/icons/marks/mark-azyr.png",
+      "transfer": true,
+      "_id": "YnxqtuPV3Ua4u7sq",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "rollTest",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "if (args.test.characteristicKey == \"wp\" && args.test.result.outcome == \"failure\" && args.test.result.SL <= -3)\n{\n     args.actor.addCondition(\"prone\")\n}"
+        }
+      },
+      "name": "Troubling Foresight",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!QO2BMdsa4grvuPbB.YnxqtuPV3Ua4u7sq"
+    }
+  ],
+  "sort": 500000,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Azyr",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676323657383,
+    "modifiedTime": 1693273575730,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "QO2BMdsa4grvuPbB",
+  "_key": "!items!QO2BMdsa4grvuPbB"
+}

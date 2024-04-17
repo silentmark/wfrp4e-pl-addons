@@ -1,0 +1,19 @@
+{
+  "name": "Dary Krwi",
+  "sorting": "a",
+  "folder": null,
+  "type": "Item",
+  "_id": "IdBKVE70UjsZfSoR",
+  "sort": 300000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.311",
+    "createdTime": 1698787732687,
+    "modifiedTime": 1700487863815,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "_key": "!folders!IdBKVE70UjsZfSoR"
+}

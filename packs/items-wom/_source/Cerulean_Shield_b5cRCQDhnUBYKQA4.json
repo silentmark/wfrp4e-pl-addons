@@ -1,0 +1,189 @@
+{
+  "name": "Cerulean Shield",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You encase yourself in a crackling cage of sparking electricity and Azyr. For the spell’s duration, gain +SL Armour Points to all locations against melee attacks. If attacked by metal weapons — such as daggers, swords, and spears with metal tips — your attacker takes your Willpower Bonus in Damage (this Damage is reduced by TB, but not by Armour). </p><p>\n\n <b>Lore:</b> Spells causing Damage ignore Armour Points from metal armour, and will arc to all other targets within 2 yards, except those with the Arcane Magic (Heavens) Talent, inflicting hits with a Damage equal to your Willpower Bonus, handled like a magical missile.<p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "heavens",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "You",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "You",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus rounds",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 7,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "type": "spell",
+  "folder": "dWExO2jRqil2AwZo",
+  "img": "modules/wfrp4e-core/icons/spells/cerulean-shield.png",
+  "effects": [
+    {
+      "_id": "8K0BrvugthtFTLRl",
+      "flags": {
+        "wfrp4e": {
+          "effectApplication": "apply",
+          "preventDuplicateEffects": false,
+          "effectTrigger": "preOpposedDefender",
+          "script": "if ((args.attackerTest.weapon && args.attackerTest.weapon.attackType == \"melee\") || (args.attackerTest.trait && !args.attackerTest.trait.name.includes(\"Ranged\")))\n{\n    let content = `<b>${args.attackerTest.actor.prototypeToken.name}</b> takes ${this.actor.characteristics.wp.bonus} Damage from Cerulean Shield if they used a metal weapon.`\n    args.opposedTest.result.other.push(content);\n}"
+        },
+        "core": {
+          "sourceId": "Compendium.wfrp4e-core.items.wTfoDOFOnvQykpdm.ActiveEffect.NKJv25t13M4KsYdE"
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/spells/cerulean-shield.png",
+      "tint": null,
+      "transfer": false,
+      "origin": null,
+      "name": "Cerulean Damage",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!b5cRCQDhnUBYKQA4.8K0BrvugthtFTLRl"
+    },
+    {
+      "_id": "tpufRipKuiiTa7Pe",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "preTakeDamage",
+          "effectApplication": "apply",
+          "script": "if ((args.opposedTest.attackerTest.item && args.opposedTest.attackerTest.item.attackType == \"melee\") || (args.opposedTest.attackerTest.item && !args.opposedTest.attackerTest.item.name.includes(\"Ranged\")))\n{\n    args.actor.status.armour[args.opposedTest.result.hitloc.value].value += {{SL}}\n}",
+          "preventDuplicateEffects": false
+        },
+        "core": {
+          "sourceId": "Compendium.wfrp4e-core.items.wTfoDOFOnvQykpdm.ActiveEffect.LLZJsIbfE5Y5fjYs"
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/spells/cerulean-shield.png",
+      "tint": null,
+      "transfer": false,
+      "origin": null,
+      "name": "Cerulean Shield",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!b5cRCQDhnUBYKQA4.tpufRipKuiiTa7Pe"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Heavens",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676324249234,
+    "modifiedTime": 1693273575758,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "b5cRCQDhnUBYKQA4",
+  "_key": "!items!b5cRCQDhnUBYKQA4"
+}

@@ -1,0 +1,101 @@
+{
+  "name": "Paskudnie przecięty paluch",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+  "effects": [
+    {
+      "_id": "2NSVzeLs6V2jWa8K",
+      "flags": {
+        "wfrp4e": {
+          "trigger": "endRound",
+          "value": 1
+        },
+        "core": {
+          "statusId": "bleeding"
+        }
+      },
+      "changes": [],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "systems/wfrp4e/icons/conditions/bleeding.png",
+      "label": "Krwawienie",
+      "transfer": true,
+      "disabled": false,
+      "origin": null,
+      "tint": null,
+      "_key": "!items.effects!GAQYUY7Y20G805CD.2NSVzeLs6V2jWa8K"
+    },
+    {
+      "_id": "nlxBZY9R2qxa7bkC",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "endCombat",
+          "effectApplication": "actor",
+          "script": "if (this.actor.isOwner) {\n    this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\")).then(async test => {\n      await test.roll();\n      if (test.result.outcome == \"failure\") {\n          let injury = await fromUuid(\"Compendium.wfrp4e-core.injuries.ZhMADOqoo0y8Q9bx\");\n          this.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()]);\n          this.actor.deleteEmbeddedEntity(\"ActiveEffect\", this.effect._id);\n      }\n    });\n}",
+          "preventDuplicateEffects": false,
+          "hide": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+      "label": "Paskudnie przecięty paluch",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "_key": "!items.effects!GAQYUY7Y20G805CD.nlxBZY9R2qxa7bkC"
+    }
+  ],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wfrp4e-pl.criticals.GAQYUY7Y20G805CD"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Postać otrzymuje 1 poziom Stanu @Condition[Krwawienie]. Musi także zdać Wymagający (+0) Test Odporności. Jeśli ten się nie uda, postać traci 1 palec u nogi - Amputacja (przeciętna).</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "2",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Noga",
+      "type": "String",
+      "label": "Location"
+    }
+  },
+  "_id": "GAQYUY7Y20G805CD",
+  "folder": null,
+  "sort": 0,
+  "_key": "!items!GAQYUY7Y20G805CD"
+}

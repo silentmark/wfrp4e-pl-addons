@@ -1,0 +1,84 @@
+{
+  "name": "Cloak Activity",
+  "permission": {
+    "default": 0,
+    "JaDY9Gr5gDw8h5kN": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Gathering the shadows of Ulgu about you, you disguise your actions&mdash;including the casting of this spell itself&mdash;and you appear to be doing something completely different (your choice). Your location remains the same to the observer, but you appear engaged in a different activity. For example, you can appear to all eyes to be reading a book when you are actually punching someone in the face. If your action affects someone else (ie, an attack, spell, picking pocket, etc), the victim is granted an Opposed Perception/Channelling (Ulgu) Test to see through the illusion. Those with the Second Sight Talent must pass a Difficult (-10) Perception Test to notice the illusion.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Shadows",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "You"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "You",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus Rounds",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 8,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "flags": {
+    "_sheetTab": "details"
+  },
+  "img": "modules/wfrp4e-content/icons/spells/shadow.png",
+  "_id": "tCHedkHfIDrloGVF",
+  "effects": [],
+  "_key": "!items!tCHedkHfIDrloGVF"
+}

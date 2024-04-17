@@ -1,0 +1,82 @@
+{
+  "_id": "j8o6jLst7fFjCnMv",
+  "name": "Breath",
+  "permission": {
+    "default": 0,
+    "rPtCM2fgOqxK9HLk": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You immediately make a Breath attack as if you had spent 2 Advantage to activate the Breath Creature Trait (WFRP4 p338) with a Damage Rating equal to your Willpower Bonus. You and your GM should decide in advance which type of Breath attack best suits your Magic Talent.&nbsp; Overcast: For every +2 SL achieved, you may increase Damage by +2. Note: This spell is halfway between errata and house rule. The original spell is weirdly worded and seems to have been an editing error. Former Developer Andy Law provided a version of this spell on the Ratcatcher Discord forum.&nbsp;</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Special"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Special",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Instant",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 6,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.77cnW9cDQcZqbjJ6"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_breath.jpg",
+  "effects": [],
+  "_key": "!items!j8o6jLst7fFjCnMv"
+}

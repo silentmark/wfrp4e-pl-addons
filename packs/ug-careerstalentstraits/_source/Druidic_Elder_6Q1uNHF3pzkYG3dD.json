@@ -1,0 +1,100 @@
+{
+  "name": "Druidic Elder",
+  "permission": {
+    "default": 0,
+    "OfKMBdcUK6oV9G48": 3
+  },
+  "type": "career",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "careergroup": {
+      "type": "String",
+      "label": "Career Group",
+      "value": "Druidic Priest"
+    },
+    "class": {
+      "type": "String",
+      "label": "Class",
+      "value": "Peasant"
+    },
+    "current": {
+      "type": "Boolean",
+      "value": false
+    },
+    "complete": {
+      "type": "Boolean",
+      "value": false
+    },
+    "level": {
+      "type": "String",
+      "label": "Career Level",
+      "value": "4"
+    },
+    "status": {
+      "tier": "b",
+      "standing": 5
+    },
+    "characteristics": [
+      "i",
+      "dex",
+      "wp",
+      "int",
+      "fel",
+      "ag"
+    ],
+    "skills": [
+      "Animal Care",
+      "Channelling",
+      "Charm Animal",
+      "Heal",
+      "Lore (The Old Faith)",
+      "Navigation",
+      "Outdoor Survival",
+      "Set Trap",
+      "Animal Training",
+      "Endurance",
+      "Language (Magick)",
+      "Lore (Herbs)",
+      "Melee (Basic or Polearm)",
+      "Trade (Herbalist)",
+      "Entertain (Storytelling)",
+      "Intuition",
+      "Lore (Woodland)",
+      "Stealth (Rural)",
+      "Charm",
+      "Cool or Swim"
+    ],
+    "talents": [
+      "Aethyric Attunement",
+      "Coolheaded",
+      "Magical Sense or Read/Write",
+      "Pure Soul"
+    ],
+    "trappings": [
+      "Care of Locale",
+      "Elder's Robe",
+      "Initiate"
+    ],
+    "incomeSkill": [
+      0
+    ]
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.9suBUpLUk2wAmmem"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/career_druid.jpg",
+  "effects": [],
+  "_id": "6Q1uNHF3pzkYG3dD",
+  "_key": "!items!6Q1uNHF3pzkYG3dD"
+}

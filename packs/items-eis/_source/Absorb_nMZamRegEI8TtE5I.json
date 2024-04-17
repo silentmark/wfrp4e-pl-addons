@@ -1,0 +1,66 @@
+{
+  "_id": "nMZamRegEI8TtE5I",
+  "name": "Absorb",
+  "type": "trait",
+  "img": "modules/wfrp4e-core/icons/traits/trait.png",
+  "effects": [],
+  "folder": "R0nd9hzOuBxoEZwj",
+  "sort": 0,
+  "flags": {
+    "wfrp4e-eis": {
+      "initialization-folder": "Traits"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><span class=\"fontstyle0\">At the end of the Round, if the creature has a higher Advantage than all engaged opponents, it absorbs one opponent of equal Size or smaller. An absorbed victim gains a number of </span>@Condition[Entangled] <span class=\"fontstyle0\">Conditions equal to the creature's Strength Bonus, and counts as being in a @UUID[Compendium.wfrp4e-core.journals.NS3YGlJQxwTggjRX.JournalEntryPage.wmA76Q2zJJ9HrkvA#grappling]{Grapple}. An absorbed victim loses the creature’s Strength Bonus in Wounds at the end of each Round; Armour points or Toughness Bonus do not reduce this loss. The same number of Wounds are ‘healed’ by the creature. If an absorbed victim is killed, the creature retreats to digest the suspended corpse over the next few days. Any attack that hits the creature does an equal amount of Damage to the absorbed victim.</span></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "34JMfpmBvTmVYPh4": 3,
+    "VnnpieLwbiAu3Owf": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1693273565152,
+    "modifiedTime": 1693273565152,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!nMZamRegEI8TtE5I"
+}

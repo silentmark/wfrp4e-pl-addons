@@ -1,0 +1,108 @@
+{
+  "folder": "7Ate0oh7xaWNJMLc",
+  "name": "Cerulean Eyes",
+  "type": "trait",
+  "img": "modules/wfrp4e-wom/assets/icons/marks/mark-azyr.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Your eyes become pale blue orbs which emit a faint glow. This is unnerving to others. Suffer -1 SL to all Fellowship-based Tests.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-wom/assets/icons/marks/mark-azyr.png",
+      "transfer": true,
+      "_id": "b4LQuZHisXDz5ojE",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prefillDialog",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "effectData": {
+            "description": "",
+            "modifier": null,
+            "slBonus": null,
+            "successBonus": null,
+            "difficultyStep": null
+          },
+          "script": "if ((args.type == \"characteristic\" && args.item == \"fel\") || (args.type == \"skill\" && args.item.system.characteristic.value == \"fel\"))\n      args.prefillModifiers.slBonus -= 1"
+        },
+        "core": {
+          "sourceId": "Item.1Cmuim3Hi6dVk1H8.ActiveEffect.V9jqgWNbs8jllRJ8"
+        }
+      },
+      "name": "Cerulean Eyes",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!VDEXMgSnBHon0BZv.b4LQuZHisXDz5ojE"
+    }
+  ],
+  "sort": 200000,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Azyr",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676323657383,
+    "modifiedTime": 1693273575743,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "VDEXMgSnBHon0BZv",
+  "_key": "!items!VDEXMgSnBHon0BZv"
+}

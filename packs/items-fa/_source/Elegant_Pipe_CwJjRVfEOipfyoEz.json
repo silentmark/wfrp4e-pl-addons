@@ -1,0 +1,121 @@
+{
+  "folder": "4yqmjrkdpjUayWXP",
+  "name": "Elegant Pipe",
+  "type": "trapping",
+  "_id": "CwJjRVfEOipfyoEz",
+  "img": "icons/sundries/misc/pipe-elegant.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>This pipe is so elegant it will immediately increase person's charisma. </p><p>Unless they open their uncouth mouth…</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0.4
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "1",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "scarce"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "clothingAccessories"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [
+    {
+      "icon": "icons/sundries/misc/pipe-elegant.webp",
+      "transfer": true,
+      "name": "Elegant Pipe",
+      "_id": "rRcrSC2bf8XYxx2r",
+      "changes": [
+        {
+          "key": "system.characteristics.fel.modifier",
+          "mode": 2,
+          "value": "3"
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "effectTrigger": "",
+          "effectApplication": "equipped",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": " "
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!CwJjRVfEOipfyoEz.rRcrSC2bf8XYxx2r"
+    }
+  ],
+  "sort": 300000,
+  "ownership": {
+    "default": 0,
+    "ZJyAmf2sKocHG1ud": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1701954015373,
+    "modifiedTime": 1702041724670,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_key": "!items!CwJjRVfEOipfyoEz"
+}

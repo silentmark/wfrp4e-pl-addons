@@ -1,0 +1,123 @@
+{
+  "_id": "ABlojLQ8XPBE2FUm",
+  "name": "Flensing Ruin",
+  "type": "spell",
+  "img": "modules/wfrp4e-horned-rat/assets/icons/ruin.png",
+  "effects": [],
+  "folder": "kUhYpAON43o9rF5d",
+  "sort": -100000,
+  "flags": {
+    "wfrp4e-horned-rat": {
+      "initialization-folder": "Ruin",
+      "sort": -100000
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Green ribbons of warp-energy tear the flesh from the target&rsquo;s bones. This is a <em>magic missile</em> with a Damage of +4 which ignores both armour and Toughness Bonus.</p><p>\n\n <b>Lore:</b> <p>The Lore of Ruin channels the terrible power of Warpstone to lash out at targets, often incinerating them whole. It is focused on destruction and disintegration, and is feared throughout Skavendom and beyond.</p>  <p>This terrible power is highly invigorating and the sensation of barely restrained energy is almost addictive. Whenever you successfully cast a spell from the Lore of Ruin, you may add +1 SL to any Initiative- or Agility-based Tests for the next [[/br 1d10]] rounds.</p>  <p>Ingredients: Grey Seers use various scraps of fur, hide, bones, and crystalline Warpstone when casting spells from the Lore of Ruin.</p><p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "ruin",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower Bonus yards",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "1",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Instant",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": "4"
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 6,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": true
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "AUExJb3c35oBvDuA": 3,
+    "R44a2dfsw2hWQXbE": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1687734901060,
+    "modifiedTime": 1693273568131,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!ABlojLQ8XPBE2FUm"
+}

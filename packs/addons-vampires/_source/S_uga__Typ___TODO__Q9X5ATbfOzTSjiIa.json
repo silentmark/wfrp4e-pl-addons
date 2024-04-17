@@ -1,0 +1,58 @@
+{
+  "_id": "Q9X5ATbfOzTSjiIa",
+  "name": "Sługa (Typ) (TODO)",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Możesz wybrać Sługę, który będzie Ci towarzyszyć. Będzie to istota posiadająca własną wolę i osobowość, przestrzegająca zasad dotyczących Popleczników.</p><p>Może to być @Compendium[wfrp4e-vampires.vampires-actors.mzoGPgPb9D31C0l4]{Swain or Maiden}, @Compendium[wfrp4e-vampires.vampires-actors.sc0cbUo32oMOSbwG]{Sylvanian Levy}, @Compendium[wfrp4e-vampires. wampiry-aktorzy.mG8eMLab2s33lxkY]{Patchwork Man}, @Compendium[wfrp4e-vampires.vampires-actors.DW0652rcMoEHy8OX]{Hexwraiths}, @Compendium[wfrp4e-vampires.vampires-actors.yc02shM1G46Qs8pC]{Okropności krypty}, @Compendium[wfrp4e-vampires.vampires-actors.Yj3a3Otv2PMn6Dkr]{Doom Wolf}, @Compendium[wfrp4e-vampires.vampires-actors.gnR6dX7Ba4tlFO45]{Wight Lord} lub @Compendium[wfrp4e-vampires.vampires-actors.bely0 31CV8WAj3Ag ]{Vargheist}.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "fel"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "folder": "R9GP6kUptFm6hQ24",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.311",
+    "createdTime": 1700563279312,
+    "modifiedTime": 1707133266017,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 1900000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!Q9X5ATbfOzTSjiIa"
+}

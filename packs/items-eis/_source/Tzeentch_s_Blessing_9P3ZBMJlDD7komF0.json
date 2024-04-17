@@ -1,0 +1,61 @@
+{
+  "_id": "9P3ZBMJlDD7komF0",
+  "name": "Tzeentch's Blessing",
+  "type": "talent",
+  "img": "modules/wfrp4e-eis/assets/icons/tzeentch.png",
+  "effects": [],
+  "folder": "Uu8SLOwHY9nCZqM2",
+  "sort": 0,
+  "flags": {
+    "wfrp4e-eis": {
+      "initialization-folder": "Talents"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><span class=\"fontstyle0\">Tzeentch, the Chaos God of Magic, has gifted you with a worming parasite within your mind. When you purchase this Talent, a single Spell wriggles free into your head where it takes residence, occasionally whispering to you as you sleep. The Spell can be chosen from any Colour Magic lore.</span></p>\n  <p><span class=\"fontstyle0\"><br>After this, you may purchase one more Colour Magic spell for 100 XP for every spell you have memorised from the Lore of Tzeentch.</span> </p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "1"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "34JMfpmBvTmVYPh4": 3,
+    "VnnpieLwbiAu3Owf": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1693273565119,
+    "modifiedTime": 1693273565119,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!9P3ZBMJlDD7komF0"
+}

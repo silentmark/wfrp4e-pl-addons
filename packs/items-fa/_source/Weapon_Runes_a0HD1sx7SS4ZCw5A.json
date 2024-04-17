@@ -1,0 +1,714 @@
+{
+  "name": "Weapon Runes",
+  "type": "weapon",
+  "img": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "None"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "damageToItem": {
+      "type": "Number",
+      "value": 0,
+      "shield": 0
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "reach": {
+      "type": "String",
+      "label": "Reach",
+      "value": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": ""
+    },
+    "skill": {
+      "type": "String",
+      "label": "Skill Override",
+      "value": ""
+    },
+    "modeOverride": {
+      "type": "String",
+      "label": "Mode Override",
+      "value": ""
+    },
+    "twohanded": {
+      "type": "Boolean",
+      "label": "Two-Handed",
+      "value": false
+    },
+    "ammunitionGroup": {
+      "type": "String",
+      "label": "Ammunition Group",
+      "value": ""
+    },
+    "currentAmmo": {
+      "type": "Number",
+      "value": 0
+    },
+    "consumesAmmo": {
+      "value": true
+    },
+    "weaponGroup": {
+      "type": "String",
+      "label": "Weapon Group",
+      "value": "basic"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    },
+    "equipped": false,
+    "loaded": {
+      "value": false,
+      "repeater": false,
+      "amt": 0
+    },
+    "offhand": {
+      "value": false
+    }
+  },
+  "effects": [
+    {
+      "icon": "modules/forien-armoury/icons/runes/weapon-rune-permanent.webp",
+      "transfer": true,
+      "name": "Rune of Cleaving (Permanent)",
+      "_id": "rrYqV1e44cOebej2",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "Attacks made with a weapon engraved with this Rune deal +1 Damage",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "calculateOpposedDamage",
+          "effectApplication": "equipped",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "if (args.opposedTest.attackerTest.weapon._id === this.item.id) {\n  args.damage += 1;\n  let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfCleaving.name');\n  let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfCleaving.effect');\n  args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}.`);\n}"
+        },
+        "forien-armoury": {
+          "isTemporary": false
+        }
+      },
+      "tint": "#ff0000",
+      "_key": "!items.effects!a0HD1sx7SS4ZCw5A.rrYqV1e44cOebej2"
+    },
+    {
+      "icon": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
+      "transfer": true,
+      "name": "Rune of Cleaving (Temporary)",
+      "_id": "POWvKoi6MDYkT2ba",
+      "changes": [],
+      "disabled": true,
+      "duration": {
+        "startTime": null,
+        "seconds": 60,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "Attacks made with a weapon engraved with this Rune deal +1 Damage. Lasts 1 minute.",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "calculateOpposedDamage",
+          "effectApplication": "equipped",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "if (args.opposedTest.attackerTest.weapon._id === this.item.id) {\n  args.damage += 1;\n  let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfCleaving.name');\n  let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfCleaving.effect');\n  args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}.`);\n}"
+        },
+        "forien-armoury": {
+          "isTemporary": true
+        }
+      },
+      "tint": "#e25532",
+      "_key": "!items.effects!a0HD1sx7SS4ZCw5A.POWvKoi6MDYkT2ba"
+    },
+    {
+      "icon": "modules/forien-armoury/icons/runes/weapon-rune-permanent.webp",
+      "transfer": true,
+      "name": "Rune of Fire (Permanent)",
+      "_id": "Sn4zGIuhCWKFEazu",
+      "changes": [
+        {
+          "key": "ATL.preset",
+          "mode": 2,
+          "value": "torch",
+          "priority": null
+        }
+      ],
+      "disabled": true,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "Wielder of a weapon engraved with this Rune can command it to burst into flames. Weapon illuminates area around wielder like a Torch. Additionally, any time a target hit with this weapon suffers a Critical Hit, he receices an additional Ablaze Condition.",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "applyDamage",
+          "effectApplication": "equipped",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "if (args.opposedTest.attackerTest.weapon._id === this.item.id) {\n  if (args.opposedTest.attackerTest.result.critical) {\n    args.actor.addCondition(\"ablaze\");\n    let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfFire.name');\n    let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfFire.effect');\n    args.extraMessages.push(`<strong>${rune}:</strong> ${effect}.`);\n  }\n}"
+        },
+        "forien-armoury": {
+          "isTemporary": false
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!a0HD1sx7SS4ZCw5A.Sn4zGIuhCWKFEazu"
+    },
+    {
+      "icon": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
+      "transfer": true,
+      "name": "Rune of Fire (Temporary)",
+      "_id": "P6B6O2E3y28d2eWv",
+      "changes": [
+        {
+          "key": "ATL.preset",
+          "mode": 2,
+          "value": "torch",
+          "priority": null
+        }
+      ],
+      "disabled": true,
+      "duration": {
+        "startTime": null,
+        "seconds": 60,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "Wielder of a weapon engraved with this Rune can command it to burst into flames. Weapon illuminates area around wielder like a Torch. Additionally, any time a target hit with this weapon suffers a Critical Hit, he receices an additional Ablaze Condition. Lasts 1 minute",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "applyDamage",
+          "effectApplication": "equipped",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "if (args.opposedTest.attackerTest.weapon._id === this.item.id) {\n  if (args.opposedTest.attackerTest.result.critical) {\n    args.actor.addCondition(\"ablaze\");\n    let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfFire.name');\n    let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfFire.effect');\n    args.extraMessages.push(`<strong>${rune}:</strong> ${effect}.`);\n  }\n}"
+        },
+        "forien-armoury": {
+          "isTemporary": true
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!a0HD1sx7SS4ZCw5A.P6B6O2E3y28d2eWv"
+    },
+    {
+      "icon": "modules/forien-armoury/icons/runes/weapon-rune-permanent.webp",
+      "transfer": true,
+      "name": "Rune of Fury (Permanent)",
+      "_id": "3EBeuXMNogYGRqE4",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "Wielder of a weapon engraved with this Rune gains a Furious Assault talent.",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "calculateOpposedDamage",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "if (args.opposedTest.attackerTest.weapon._id === this.item.id) {\n  if (args.opposedTest.result.winner === \"attacker\") {\n    let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfFury.name');\n    let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfFury.effect');\n    let text = `<strong>${rune}:</strong> ${effect}`;\n    args.opposedTest.result.other.push(text);\n  }\n}\n"
+        },
+        "forien-armoury": {
+          "isTemporary": false
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!a0HD1sx7SS4ZCw5A.3EBeuXMNogYGRqE4"
+    },
+    {
+      "icon": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
+      "transfer": true,
+      "name": "Rune of Fury (Temporary)",
+      "_id": "G9l7OAE88croafaV",
+      "changes": [],
+      "disabled": true,
+      "duration": {
+        "startTime": null,
+        "seconds": 60,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "Wielder of a weapon engraved with this Rune gains a Furious Assault talent. Lasts 1 minute.",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "calculateOpposedDamage",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "if (args.opposedTest.attackerTest.weapon._id === this.item.id) {\n  if (args.opposedTest.result.winner === \"attacker\") {\n    let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfFury.name');\n    let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfFury.effect');\n    let text = `<strong>${rune}:</strong> ${effect}`;\n    args.opposedTest.result.other.push(text);\n  }\n}\n"
+        },
+        "forien-armoury": {
+          "isTemporary": true
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!a0HD1sx7SS4ZCw5A.G9l7OAE88croafaV"
+    },
+    {
+      "icon": "modules/forien-armoury/icons/runes/weapon-rune-permanent.webp",
+      "transfer": true,
+      "name": "Rune of Grudges (Permanent)",
+      "_id": "JYqy95sURGksMk22",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "Character wielding weapon Engraved with this Rune can, on the first Round of Combat, nominate an enemy as the Target of this Rune. For the remainder of the Combat, you can reroll all failed attacks against the Target.",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "getInitiativeFormula",
+          "effectApplication": "equipped",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfGrudges.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfGrudges.effect');\nChatMessage.create({\n  user: game.user._id,\n  speaker: ChatMessage.getSpeaker({token: actor}),\n  content: `\n\t\t<h3>${rune}</h3>\n\t\t<p>${effect}</p>\n\t`\n});"
+        },
+        "forien-armoury": {
+          "isTemporary": false
+        }
+      },
+      "tint": "#ff0000",
+      "_key": "!items.effects!a0HD1sx7SS4ZCw5A.JYqy95sURGksMk22"
+    },
+    {
+      "icon": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
+      "transfer": true,
+      "name": "Rune of Grudges (Temporary)",
+      "_id": "68MFtzIz8l9mahU7",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "Character wielding weapon Engraved with this Rune can, on the first Round of Combat, nominate an enemy as the Target of this Rune. For the remainder of the Combat, you can reroll all failed attacks against the Target. One use only.",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "invoke",
+          "effectApplication": "equipped",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfGrudges.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfGrudges.effect');\nChatMessage.create({\n  user: game.user._id,\n  speaker: ChatMessage.getSpeaker({token: actor}),\n  content: `\n\t\t<h3>${rune}</h3>\n\t\t<p>${effect}</p>\n\t`\n});\n\nthis.effect.update({\n  flags: {\n    wfrp4e: {\n      effectTrigger: \"endCombat\",\n      script: \"this.effect.update({disabled: true});\"\n    }\n  }\n});\n"
+        },
+        "forien-armoury": {
+          "isTemporary": true
+        }
+      },
+      "tint": "#ff0000",
+      "_key": "!items.effects!a0HD1sx7SS4ZCw5A.68MFtzIz8l9mahU7"
+    },
+    {
+      "icon": "modules/forien-armoury/icons/runes/weapon-rune-permanent.webp",
+      "transfer": true,
+      "name": "Rune of Might (Permanent)",
+      "_id": "NHJJuRmQV0zdJQj8",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "Attacks made with a weapon engraved with this Rune against a target with Toughness Bonus 5 or more are treated as if the attacker had double Strength Bonus.",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "calculateOpposedDamage",
+          "effectApplication": "equipped",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "if (args.opposedTest.attackerTest.weapon._id === this.item.id) {\n  if (args.opposedTest.defenderTest.actor.characteristics.t.bonus >= 5) {\n    let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfMight.name');\n    let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfMight.effect');\n    args.damage += args.opposedTest.attackerTest.actor.characteristics.s.bonus;\n    args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}`);\n  }\n}"
+        },
+        "forien-armoury": {
+          "isTemporary": false
+        }
+      },
+      "tint": "#ff0000",
+      "_key": "!items.effects!a0HD1sx7SS4ZCw5A.NHJJuRmQV0zdJQj8"
+    },
+    {
+      "icon": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
+      "transfer": true,
+      "name": "Rune of Might (Temporary)",
+      "_id": "41cnCDVKFkw5TgVT",
+      "changes": [],
+      "disabled": true,
+      "duration": {
+        "startTime": null,
+        "seconds": 60,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "Attacks made with a weapon engraved with this Rune against a target with Toughness Bonus 5 or more are treated as if the attacker had double Strength Bonus. Lasts 1 minute.",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "calculateOpposedDamage",
+          "effectApplication": "equipped",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "if (args.opposedTest.attackerTest.weapon._id === this.item.id) {\n  if (args.opposedTest.defenderTest.actor.characteristics.t.bonus >= 5) {\n    let rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfMight.name');\n    let effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfMight.effect');\n    args.damage += args.opposedTest.attackerTest.actor.characteristics.s.bonus;\n    args.opposedTest.result.other.push(`<strong>${rune}:</strong> ${effect}`);\n  }\n}"
+        },
+        "forien-armoury": {
+          "isTemporary": true
+        }
+      },
+      "tint": "#ff0000",
+      "_key": "!items.effects!a0HD1sx7SS4ZCw5A.41cnCDVKFkw5TgVT"
+    },
+    {
+      "icon": "modules/forien-armoury/icons/runes/weapon-rune-permanent.webp",
+      "transfer": true,
+      "name": "Rune of Speed (Permanent)",
+      "_id": "9cYvjllfcFyaAfLJ",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "If the wielder is not Surprised and has this weapon in hands at the start of the Combat, he gains +1d10 bonus to his combat initiative score.",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "getInitiativeFormula",
+          "effectApplication": "equipped",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "args.initiative += ` + 1d10`;\nlet rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpeed.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpeed.effect');\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: ChatMessage.getSpeaker({token: actor}),\n  content: `\n\t\t<h3>${rune}</h3>\n\t\t<p>${effect}</p>\n\t`\n});"
+        },
+        "forien-armoury": {
+          "isTemporary": false
+        }
+      },
+      "tint": "#ff0000",
+      "_key": "!items.effects!a0HD1sx7SS4ZCw5A.9cYvjllfcFyaAfLJ"
+    },
+    {
+      "icon": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
+      "transfer": true,
+      "name": "Rune of Speed (Temporary)",
+      "_id": "z2kR53IpFshVrixt",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "If the wielder is not Surprised and has this weapon in hands at the start of the Combat, he gains +1d10 bonus to his combat initiative score. Can only be activated once.",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "invoke",
+          "effectApplication": "equipped",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "this.effect.update({\n  flags: {\n    wfrp4e: {\n      effectTrigger: \"getInitiativeFormula\",\n      script: `\nargs.initiative += ' + 1d10';\nlet rune = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpeed.name');\nlet effect = game.i18n.localize('Forien.Armoury.Runes.RuneOfSpeed.effect');\n\nChatMessage.create({\n  user: game.user._id,\n  speaker: ChatMessage.getSpeaker({token: actor}),\n  content: \\`\n    <h3>${rune}</h3>\n    <p>${effect}</p>\n  \\`\n});\nthis.effect.update({disabled: true});`\n    }\n  }\n});"
+        },
+        "forien-armoury": {
+          "isTemporary": true
+        }
+      },
+      "tint": "#ff0000",
+      "_key": "!items.effects!a0HD1sx7SS4ZCw5A.z2kR53IpFshVrixt"
+    },
+    {
+      "icon": "modules/forien-armoury/icons/runes/weapon-rune-permanent.webp",
+      "transfer": true,
+      "name": "Rune of Striking (Permanent)",
+      "_id": "zwkd7kl5SWmoriyn",
+      "changes": [
+        {
+          "key": "system.characteristics.ws.modifier",
+          "mode": 2,
+          "value": "10",
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "Weapon Engraved with this Rune grants whoever wields it additional +10 Weapon Skill.",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "",
+          "effectApplication": "equipped",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": ""
+        },
+        "forien-armoury": {
+          "isTemporary": false
+        }
+      },
+      "tint": "#ff0000",
+      "_key": "!items.effects!a0HD1sx7SS4ZCw5A.zwkd7kl5SWmoriyn"
+    },
+    {
+      "icon": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
+      "transfer": true,
+      "name": "Rune of Striking (Temporary)",
+      "_id": "pc9iH0FaxbVLKPV4",
+      "changes": [
+        {
+          "key": "system.characteristics.ws.modifier",
+          "mode": 2,
+          "value": "10",
+          "priority": null
+        }
+      ],
+      "disabled": true,
+      "duration": {
+        "startTime": null,
+        "seconds": 60,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "Weapon Engraved with this Rune grants whoever wields it additional +10 Weapon Skill. Lasts 1 minute.",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "",
+          "effectApplication": "equipped",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": ""
+        },
+        "forien-armoury": {
+          "isTemporary": true
+        }
+      },
+      "tint": "#ff0000",
+      "_key": "!items.effects!a0HD1sx7SS4ZCw5A.pc9iH0FaxbVLKPV4"
+    },
+    {
+      "icon": "modules/forien-armoury/icons/runes/weapon-rune-permanent.webp",
+      "transfer": true,
+      "name": "Rune of Durability (Permanent)",
+      "_id": "ApUMYhBlTxss0bdr",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "Weapon Engraved with this Rune gains Unbreakable Quality.",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prepareItem",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "if (args.item?._id === this.item?.id) {\n  args.item.qualities.value.push({name: \"unbreakable\", value: null});\n}",
+          "promptItem": false
+        },
+        "forien-armoury": {
+          "isTemporary": false
+        }
+      },
+      "tint": "#ff0000",
+      "_key": "!items.effects!a0HD1sx7SS4ZCw5A.ApUMYhBlTxss0bdr"
+    },
+    {
+      "icon": "modules/forien-armoury/icons/runes/weapon-rune-temporary.webp",
+      "transfer": true,
+      "name": "Rune of Durability (Temporary)",
+      "_id": "mqkO6Bpu7vsX9S3k",
+      "changes": [],
+      "disabled": true,
+      "duration": {
+        "startTime": null,
+        "seconds": 60,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "Weapon Engraved with this Rune gains Unbreakable Quality. Lasts 1 minute",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prepareItem",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "if (args.item?._id === this.item?.id) {\n  args.item.qualities.value.push({name: \"unbreakable\", value: null});\n}",
+          "promptItem": false
+        },
+        "forien-armoury": {
+          "isTemporary": true
+        }
+      },
+      "tint": "#ff0000",
+      "_key": "!items.effects!a0HD1sx7SS4ZCw5A.mqkO6Bpu7vsX9S3k"
+    }
+  ],
+  "folder": "3OEI9PiGaa4rGQHy",
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.5.9",
+    "coreVersion": "11.304",
+    "createdTime": 1688413089948,
+    "modifiedTime": 1689086257294,
+    "lastModifiedBy": "ZJyAmf2sKocHG1ud"
+  },
+  "_id": "a0HD1sx7SS4ZCw5A",
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "aDepqlKkeOa13DWo": 3
+  },
+  "_key": "!items!a0HD1sx7SS4ZCw5A"
+}

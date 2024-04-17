@@ -1,0 +1,119 @@
+{
+  "_id": "xV5BDdqYTmCRo2zN",
+  "name": "Niewrażliwość na Zepsucie",
+  "type": "trait",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-core/icons/traits/trait.png",
+  "effects": [
+    {
+      "_id": "TYy2WENXRLidY5Bs",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prefillDialog",
+          "effectApplication": "actor",
+          "script": "if ('corruption' in args.options) {\n  args.prefillModifiers.modifier += 100\n}",
+          "preventDuplicateEffects": false,
+          "hide": false,
+          "scriptData": [
+            {
+              "label": "Niewrażliwość na Zepsucie",
+              "trigger": "dialog",
+              "script": "if ('corruption' in args.options) {\n  args.prefillModifiers.modifier += 100\n}",
+              "options": {
+                "dialog": {
+                  "activateScript": "return true",
+                  "hideScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "applicationData": {
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          }
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null,
+        "combat": null
+      },
+      "icon": "modules/wfrp4e-core/icons/traits/trait.png",
+      "tint": null,
+      "transfer": true,
+      "name": "Niewrażliwość na Zepsucie",
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "_key": "!items.effects!xV5BDdqYTmCRo2zN.TYy2WENXRLidY5Bs"
+    }
+  ],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Nawet Niszczycielskie Moce nie mogą rozdzierać martwego ciała ani wypaczać nieumarłych umysłów.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>CECHY OPCJONALNE</p><p>Jeśli chcesz przyjąć zasadę, że istoty nieumarłe i wampiry nie mogą podlegać wpływowi Niszczycielskich Mocy, przeciągnij tę cechę na swoje wampiry.</p>"
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "folder": "oQSvn5c0pMt9XuAc",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.311",
+    "createdTime": 1698701398546,
+    "modifiedTime": 1706699220849,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 200000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!xV5BDdqYTmCRo2zN"
+}

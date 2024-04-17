@@ -1,0 +1,163 @@
+{
+  "name": "\"Jeszcze jeden krok\"",
+  "type": "trapping",
+  "img": "icons/equipment/finger/ring-band-engraved-scrolls-silver.webp",
+  "effects": [
+    {
+      "icon": "icons/equipment/finger/ring-band-engraved-scrolls-silver.webp",
+      "transfer": true,
+      "name": "Krok przez cienie",
+      "_id": "OatfSvcfIfB17oRt",
+      "changes": [
+        {
+          "key": "ATL.detectionModes.senseAll.range",
+          "mode": 2,
+          "value": "20",
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "invoke",
+          "effectApplication": "item",
+          "hide": false,
+          "preventDuplicateEffects": true,
+          "areaEffect": false,
+          "script": "if (this.item.name.indexOf(\"Rozładowany\") != -1) {\n\tChatMessage.create({ content: `<b>Jeszcze jeden krok</b>: Pierścień nie posiada aktywnego zaklęcia.`});\n} else {\n\tconst t = game.canvas.tokens.placeables.find(x=>x.document.actorId == this.actor._id);\n\tlet position = await warpgate.crosshairs.show({\n\t\tsize: 1,\n\t\ttag: randomID(),\n\t\tlabel: \"Krok przez cienie\",\n\t\tdrawOutline: false,\n\t\tdrawIcon: false\n\t}, { show: async (crosshair) => {\n\t\tnew Sequence()\n\t\t\t.effect()\n\t\t\t\t.from(t)\n\t\t\t\t.attachTo(crosshair)\n\t\t\t\t.persist()\n\t\t\t\t.opacity(0.5)\n\t\t\t.play();\n\t}})\n\t\t\n\tnew Sequence()\n\t\t.effect()\n\t\t\t.from(t)\n\t\t\t.fadeIn(50)\n\t\t\t.duration(550)\n\t\t\t.fadeOut(250)\n\t\t\t.filter(\"Blur\")\n\t\t\t.elevation(0)\n\t\t.effect()\n\t\t\t.file(\"modules/jb2a_patreon/Library/Generic/Smoke/SmokePuffSide01_05_Dark_Black_400x400.webm\")\n\t\t\t.atLocation(t)\n\t\t\t.scaleToObject(3)\n\t\t\t.randomRotation()\n\t\t.effect()\n\t\t\t.file(\"modules/jb2a_patreon/Library/Generic/Smoke/SmokePuffSide01_04_Dark_Black_400x400.webm\")\n\t\t\t.atLocation(t)\n\t\t\t.scaleToObject(3)\n\t\t\t.randomRotation()\n\t\t.wait(250)\n\t\t.animation()\n\t\t\t.on(t)\n\t\t\t.teleportTo(position)\n\t\t\t.snapToGrid()\n\t\t\t.waitUntilFinished()\n\t\t.effect()\n\t\t\t.file(\"modules/jb2a_patreon/Library/Generic/Smoke/SmokePuffSide01_05_Dark_Black_400x400.webm\")\n\t\t\t.atLocation(position)\n\t\t\t.scaleToObject(3)\n\t\t\t.randomRotation()\n\t\t.effect()\n\t\t\t.file(\"modules/jb2a_patreon/Library/Generic/Smoke/SmokePuffSide01_03_Dark_Black_400x400.webm\")\n\t\t\t.atLocation(position)\n\t\t\t.scaleToObject(3)\n\t\t\t.randomRotation()\n\t\t.play();\n\tthis.item.update({name: this.item.name + \" - Rozładowany\"})\n}",
+          "reduceQuantity": false
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!67RO8FC8m61jP9AJ.OatfSvcfIfB17oRt"
+    },
+    {
+      "icon": "icons/equipment/finger/ring-band-engraved-scrolls-silver.webp",
+      "transfer": true,
+      "name": "Krok przez cienie - Splatanie",
+      "_id": "wGpIfJESzi0OiyQm",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "effectTrigger": "prefillDialog",
+          "effectApplication": "actor",
+          "areaEffect": false,
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "if (args.type === \"channelling\") {\n    if (args.item.name == \"Krok przez cienie\") {\n        args.prefillModifiers.slBonus += 4;\n    } else if (args.item.lore.value == \"shadow\") {\n        args.prefillModifiers.slBonus += 2;\n    }\n}"
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!67RO8FC8m61jP9AJ.wGpIfJESzi0OiyQm"
+    }
+  ],
+  "flags": {
+    "_sheetTab": "description",
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Magiczny pierścień spowity magią Ulgu.</p><section class=\"secret\" id=\"secret-DdhcsmSOiz2zHp7g\"><p>Pierścień pozwala przechować zaklęcie \"Krok przez cienie\" i wywołać jego efekt jako akcja natychmiastowa po udanym, wymagającym, siły woli. Osoba używająca pierścienia nie musi znać się na magii, wystarczy, że wyobrazi sobie w którym miejscu chce się znaleźć w zasięgu wzroku. Po użyciu, pierścień wymaga naładowania - rzucenia zaklęcia \"Krok przez cienie\".</p><p>Dodatkowo, pierścień dodaje +3 PS przy splataniu zaklęcia \"Krok przez cienie\" oraz +1 PS do splatania magii Ulgu.</p></section>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "50",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "rare"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "clothingAccessories"
+    },
+    "worn": true,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.2",
+    "coreVersion": "11.311",
+    "createdTime": 1663627495178,
+    "modifiedTime": 1696767875594,
+    "lastModifiedBy": "Czz7IJA9DEa5LD9E"
+  },
+  "folder": "ZP0UuGj1tO64CDBP",
+  "_id": "67RO8FC8m61jP9AJ",
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "Czz7IJA9DEa5LD9E": 3
+  },
+  "_key": "!items!67RO8FC8m61jP9AJ"
+}

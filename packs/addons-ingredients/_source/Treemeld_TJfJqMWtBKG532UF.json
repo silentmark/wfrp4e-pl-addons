@@ -1,0 +1,80 @@
+{
+  "name": "Treemeld",
+  "type": "trapping",
+  "img": "icons/consumables/potions/round-cork-leaf-green.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><span style=\"font-family: serif\">Treemeld is occasionally prepared and used by the Wood Elves when even their vaunted forestcraft is insufficient to hide them from especially perceptive prey. Slathered on to any surface, it slowly takes on the appearance of the surroundings, allowing the user to blend in far more easily. It does stink rather fantastically, however, so is usually used to stalk those who lack a refined sense of smell, such as human intruders to the woods.</span></p><p><span style=\"font-family: serif\">Despite the name, Treemeld works just as well in any other environment, with the users skin taking on the grey of cut stone or the mottled browns of an Imperial midden just as well as the lush green of the forest. The smell remains a problem, but by the standards of most Empire cities it is not particularly remarkable.</span></p><p><span style=\"font-family: serif\">Covering oneself fully in Treemeld grants the user a bonus of +40 to any Stealth Tests that rely on sight. More conservative use, such as only covering one's face and hands, grants a +10 bonus and only uses a quarter of a dose.</span></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "3",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "rare"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.4.0",
+    "coreVersion": "10.291",
+    "createdTime": 1670890602882,
+    "modifiedTime": 1690313550966,
+    "lastModifiedBy": "kYUjI3k8J8QQt9Qw"
+  },
+  "_id": "TJfJqMWtBKG532UF",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "kYUjI3k8J8QQt9Qw": 3
+  },
+  "_key": "!items!TJfJqMWtBKG532UF"
+}

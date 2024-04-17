@@ -1,0 +1,154 @@
+{
+  "name": "Fly-Infested Rotweed",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You cause flies and other insects resting in the matter that makes up the @UUID[Compendium.wfrp4e-wom.actors.HKSn8iNSS9WcAuJc]{Fenbeast} to issue forth and fly around the creature. The Fenbeast gains the @UUID[Compendium.wfrp4e-core.items.MVI0lXcg6vvtooAF]{Distracting} Creature Trait.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower Bonus yards",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Any 1 Fenbeast",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower bonus minutes",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 4,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "type": "spell",
+  "folder": "9BfmjdIlIIpVtI20",
+  "img": "systems/wfrp4e/icons/blank.png",
+  "effects": [
+    {
+      "icon": "systems/wfrp4e/icons/blank.png",
+      "transfer": false,
+      "_id": "U5RLDPLWdhc8rbdk",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "addItems",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "fromUuid(\"Compendium.wfrp4e-core.items.MVI0lXcg6vvtooAF\").then(item => {\n   item = item.toObject()\n   this.actor.createEmbeddedDocuments(\"Item\", [item], {fromEffect : this.effect.id})\n})"
+        }
+      },
+      "name": "Fly-Infested Rotweed",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!PSVw1sGzaSNiys35.U5RLDPLWdhc8rbdk"
+    }
+  ],
+  "sort": -300000,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Arcane",
+      "sort": -300000
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676064409272,
+    "modifiedTime": 1693273575728,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "PSVw1sGzaSNiys35",
+  "_key": "!items!PSVw1sGzaSNiys35"
+}

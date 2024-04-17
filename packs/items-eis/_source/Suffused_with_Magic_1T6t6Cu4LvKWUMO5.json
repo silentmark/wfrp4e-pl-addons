@@ -1,0 +1,92 @@
+{
+  "_id": "1T6t6Cu4LvKWUMO5",
+  "name": "Suffused with Magic",
+  "type": "talent",
+  "img": "modules/wfrp4e-eis/assets/icons/tzeentch.png",
+  "effects": [
+    {
+      "_id": "n82gqJU3NCAgXQwY",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prefillDialog",
+          "effectApplication": "actor",
+          "script": "if (args.type == \"cast\")\n    args.prefillModifiers.slBonus += 1",
+          "preventDuplicateEffects": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-eis/assets/icons/tzeentch.png",
+      "tint": null,
+      "transfer": true,
+      "name": "Suffused with Magic",
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "_key": "!items.effects!1T6t6Cu4LvKWUMO5.n82gqJU3NCAgXQwY"
+    }
+  ],
+  "folder": "Uu8SLOwHY9nCZqM2",
+  "sort": 0,
+  "flags": {
+    "wfrp4e-eis": {
+      "initialization-folder": "Talents"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><span class=\"fontstyle0\">All spells cast within Willpower Bonus yards of you gain +1 SL to cast. This Bonus may only be claimed once per casting, no matter how many Characters with this Talent are in the vicinity.</span></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "1"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "34JMfpmBvTmVYPh4": 3,
+    "VnnpieLwbiAu3Owf": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1693273565111,
+    "modifiedTime": 1693273565111,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!1T6t6Cu4LvKWUMO5"
+}

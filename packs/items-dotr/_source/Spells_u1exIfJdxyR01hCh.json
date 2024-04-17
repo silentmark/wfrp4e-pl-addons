@@ -1,0 +1,19 @@
+{
+  "name": "Spells",
+  "type": "Item",
+  "_id": "u1exIfJdxyR01hCh",
+  "folder": null,
+  "sorting": "a",
+  "sort": 500000,
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1691300237573,
+    "modifiedTime": 1691300353712,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "color": null,
+  "_key": "!folders!u1exIfJdxyR01hCh"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "Stłuczony obojczyk",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/tornbody.png",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wfrp4e-pl.criticals.9DIJL8HNWVIA9MSV"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Losowo wyznacz ramię. Wszystko, co było trzymane w dłoni po tej stronie ciała, wypada, a ramię jest bezużyteczne przez [[/r 1d10]] Rund.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "2",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Korpus",
+      "type": "String",
+      "label": "Location"
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_id": "9DIJL8HNWVIA9MSV",
+  "folder": null,
+  "sort": 0,
+  "_key": "!items!9DIJL8HNWVIA9MSV"
+}

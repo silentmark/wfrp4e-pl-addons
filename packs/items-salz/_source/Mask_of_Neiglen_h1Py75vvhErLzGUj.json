@@ -1,0 +1,118 @@
+{
+  "name": "Mask of Neiglen",
+  "type": "trapping",
+  "img": "modules/wfrp4e-core/icons/equipment/clothing_and_accessories/mask.png",
+  "folder": "wvo4C8iEoXjvN1bf",
+  "flags": {
+    "wfrp4e-salzenmund": {
+      "initialization-folder": "Enchanted Masks",
+      "sort": 300000
+    },
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>@UUID[JournalEntry.b2odPrxVAmUf46Sz.JournalEntryPage.JDFFajCAFtjXjL0R]{The Hall of Whispering Masks}</p><p>If someone wears a mask for more than an hour or benefits from any of its effects, they are exposed to Moderate Corruption. The mask can be removed, but the effects remain for [[/r d10+4]] days. Once removed, the mask loses its enchantment.</p><p></p><p><strong>Character:</strong> Humorous, Pessimistic, Kindly</p><p><strong>Mask Type:</strong> Aspect of Neiglen</p><p><strong>Example Masks:</strong> Crow, Smiling Man, Starving Woman, Pitted Wood</p><p><strong>Effects:</strong></p><ul><li><p>Gain @UUID[Compendium.wfrp4e-core.items.zImcTgEl2XNnbu5W]{Hardy} Talent.</p></li><li><p>–20 to all attempts to resist Disease.</p></li><li><p>+20 T, –10 Ag, +5 Fel</p></li></ul>"
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "special"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "clothingAccessories"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-core/icons/equipment/clothing_and_accessories/mask.png",
+      "transfer": true,
+      "_id": "M1EJOSZA9uIyB4eF",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "update",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": true,
+          "script": "// Exit if the item being updated isn't the mask\nif (args.context === \"delete\" || this.item.id !== args.item?.id) return\n\n\nconst effectWearing = {\n  _id : \"neiglen000000000\",\n  name: \"Wearing Mask of Neiglen\",\n  icon: \"modules/wfrp4e-core/icons/equipment/clothing_and_accessories/mask.png\",\n  transfer: true,\n  flags: {\n    wfrp4e: {\n        \"effectApplication\": \"item\",\n        \"effectTrigger\": \"addItems\",\n        \"hide\" : \"false\",\n        \"preventDuplicateEffects\" : \"true\",\n        \"script\": `\n        const talents = await Promise.all([\"Hardy\"].map(game.wfrp4e.utility.findTalent))\n        this.actor.createEmbeddedDocuments(\"Item\", talents.map(i => i.toObject()), {fromEffect : 'neiglen000000000'})\n        `\n    }\n  },\n  changes : [\n    {key: \"system.characteristics.t.modifier\", mode: 2, value: 20},\n    {key: \"system.characteristics.ag.modifier\", mode: 2, value: -10},\n    {key: \"system.characteristics.fel.modifier\", mode: 2, value: 5},\n  ]\n}\n\nconst effectResisting = {\n  label: \"Mask of Neiglen - Disease Resistance Penalty\",\n  icon: \"modules/wfrp4e-core/icons/equipment/clothing_and_accessories/mask.png\",\n  transfer: true,\n  flags: {\n    wfrp4e: {\n      \"effectTrigger\": \"dialogChoice\",\n      \"effectApplication\": \"actor\",\n      \"hide\": false,\n      \"preventDuplicateEffects\": true,\n      \"effectData\": {\n          \"description\": \"All attempts to resist disease\",\n          \"modifier\": -20\n      }\n    }\n  }\n}\n\n// Apply changes when the mask is worn\n\nif (args.item.worn) {  \n  this.actor.createEmbeddedDocuments(\"ActiveEffect\", [effectWearing, effectResisting])  \n  ChatMessage.create({\n    content: `\n      ${this.actor.name} dons the <strong>${args.item.name}</strong>. <br>\n      They suffer -20 to all attempts to resist Disease.<br>\n      If they wear the mask for more than an hour or benefit from any of its effects, they are exposed to @Corruption[moderate]{Moderate Corruption}. \n      `, \n    whisper: ChatMessage.getWhisperRecipients(\"GM\") \n  }) \n}\n\n\n// Notify of lingering effects when mask is removed\n\nif (!args.item.worn) {\n  ChatMessage.create({\n    content: `\n      <strong>${args.item.name}</strong> on ${this.actor.name} has been taken off. However, the effects last for [[/br 1d10+4]] days, after which they should be manually removed.`, \n    whisper: ChatMessage.getWhisperRecipients(\"GM\") \n  })\n}\n"
+        }
+      },
+      "name": "Mask of Neiglen",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!h1Py75vvhErLzGUj.M1EJOSZA9uIyB4eF"
+    }
+  ],
+  "sort": 300000,
+  "ownership": {
+    "default": 0,
+    "wjUQkVmn4leETiQ6": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1687134833659,
+    "modifiedTime": 1693273572805,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "h1Py75vvhErLzGUj",
+  "_key": "!items!h1Py75vvhErLzGUj"
+}

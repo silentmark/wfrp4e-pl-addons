@@ -1,0 +1,112 @@
+{
+  "name": "Terror of the Faculty",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>@UUID[Compendium.wfrp4e-wom.journals.4spGTAnh7qc2JDqY.JournalEntryPage.5qc7HEs9akxw0hmR]{Beadle}</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "careergroup": {
+      "type": "String",
+      "label": "Career Group",
+      "value": "Beadle"
+    },
+    "class": {
+      "type": "String",
+      "label": "Class",
+      "value": "Warrior"
+    },
+    "current": {
+      "type": "Boolean",
+      "value": false
+    },
+    "complete": {
+      "type": "Boolean",
+      "value": false
+    },
+    "level": {
+      "type": "String",
+      "label": "Career Level",
+      "value": "4"
+    },
+    "status": {
+      "tier": "s",
+      "standing": 5
+    },
+    "characteristics": [
+      "ws",
+      "i",
+      "ag",
+      "int",
+      "wp",
+      "fel"
+    ],
+    "skills": [
+      "Consume Alcohol",
+      "Dodge",
+      "Endurance",
+      "Gamble",
+      "Gossip",
+      "Intuition",
+      "Melee (Basic)",
+      "Perception",
+      "Stealth (Urban)",
+      "Trade (Carpenter)",
+      "Athletics",
+      "Charm",
+      "Cool",
+      "Intimidate",
+      "Lore (Any)",
+      "Ranged (Blackpowder)",
+      "Entertain (Storytelling)",
+      "Heal",
+      "Melee (Any)",
+      "Track",
+      "Leadership",
+      "Lore (Any)"
+    ],
+    "talents": [
+      "Frightening",
+      "Public Speaker",
+      "Suave",
+      "Unshakable"
+    ],
+    "trappings": [
+      "Breastplate",
+      "Crew of beadles"
+    ],
+    "incomeSkill": [
+      7
+    ]
+  },
+  "type": "career",
+  "img": "modules/wfrp4e-wom/assets/icons/careers/beadle-04.png",
+  "effects": [],
+  "folder": "EGdnaG0JFAHnazff",
+  "sort": 250000,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Beadle",
+      "sort": 250000
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676144783205,
+    "modifiedTime": 1693273575687,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "8uM82n6iY777k0iC",
+  "_key": "!items!8uM82n6iY777k0iC"
+}

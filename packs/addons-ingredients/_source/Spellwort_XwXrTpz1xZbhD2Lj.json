@@ -1,0 +1,150 @@
+{
+  "name": "Spellwort",
+  "type": "trapping",
+  "img": "icons/consumables/potions/potion-bottle-stopped-labeled-red.webp",
+  "effects": [
+    {
+      "_id": "j7UOlPgkZVzFbGSH",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "rollTest",
+          "effectApplication": "apply",
+          "script": "if (args.type == \"cast\" || args.type == \"channelling\")\n   args.prefillModifiers.modifier -= 10",
+          "hide": false,
+          "preventDuplicateEffects": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/art/other/herbalism.webp",
+      "label": "Spellcasting Penalty",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "_key": "!items.effects!XwXrTpz1xZbhD2Lj.j7UOlPgkZVzFbGSH"
+    },
+    {
+      "_id": "fG177WOBKDUpbvyP",
+      "flags": {
+        "wfrp4e": {
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "effectTrigger": "dialogChoice",
+          "effectData": {
+            "description": "Resist Magic",
+            "modifier": 10,
+            "slBonus": null,
+            "successBonus": null,
+            "difficultyStep": null
+          }
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/art/other/herbalism.webp",
+      "label": "Resist Magic",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "_key": "!items.effects!XwXrTpz1xZbhD2Lj.fG177WOBKDUpbvyP"
+    }
+  ],
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Herbs of the Empire",
+      "sort": 1000000
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<h3>The Witch-Hunter's Friend</h3>\n<p>Spellwort is the name by which this plant is known in the Moot. Other names include <em>Unzauber</em>, <em>Wizard&rsquo;s Bane</em>, <em>Feuille Contraire</em> and Witch-Hunter&rsquo;s Friend. It is similar in appearance to Mage-Leaf, and someone without the proper herbal training may easily mistake the two. Made into a tea, the dried leaves can help a patient resist any kind of ailment that comes from a magical cause. It is as well to store dried Spellwort away from ingredients such as @Item[tWLwV2bXuyr3sV4R]{Graveroot} and @Item[GYkqqFzrDLaBvKux]{Mage-Leaf}, since I have found that their magical properties are sometimes diminished by sitting too close to Spellwort for a time.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><strong>Locality</strong>: Forest</p>\n<p><strong>Season</strong>: Summer</p>\n<p><strong>Preparations</strong>: Infusion, Draught</p>\n<p>Spellwort is related to @Item[Mage-Leaf]{Mage-Leaf}, but has a slightly different effect. Instead of increasing magical energy, it interferes with it. A spellcaster who drinks an infusion of Spellwort suffers a &ndash;10 penalty to all Tests related to spellcasting for a number of hours equal to 10 minus their Toughness Bonus &mdash; but enjoys a+10 bonus to all Tests made to resist the effects of magic during that time.</p>\n<p>A draught of Spellwort provides much the same drawback and benefit as an infusion, but the effects last for only one hour. However, during that hour,&nbsp; anyone who imbibes a draught of Spellwort will appear completly mundane to @Compendium[wfrp4e-core.talents.OEjUvJKi0xmBwbS2]{Second Sight}, and all traces of lingering magic about their person will be removed. This effect is lost if the subject uses any magic at all during this time, however. Witch-Hunters across the Empire have attempted to suppress any knowledge of this application of the herb, with mixed success.</p>"
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "3",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "exotic"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1690313554379,
+    "modifiedTime": 1690314522973,
+    "lastModifiedBy": "Czz7IJA9DEa5LD9E"
+  },
+  "_id": "XwXrTpz1xZbhD2Lj",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "kYUjI3k8J8QQt9Qw": 3
+  },
+  "_key": "!items!XwXrTpz1xZbhD2Lj"
+}

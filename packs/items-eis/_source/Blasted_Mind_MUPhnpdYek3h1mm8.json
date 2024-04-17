@@ -1,0 +1,50 @@
+{
+  "_id": "MUPhnpdYek3h1mm8",
+  "name": "Blasted Mind",
+  "type": "mutation",
+  "img": "modules/wfrp4e-core/icons/mutations/mutation.png",
+  "effects": [],
+  "folder": "QOjm4pUE8aywpu9Z",
+  "sort": 600001,
+  "flags": {},
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Gain the @UUID[Compendium.wfrp4e-core.items.IAWyzDfC286a9MPz]{Immunity to Psychology} Creature Trait for [[/r 1d10]]&nbsp; Rounds whenever you would take a @Condition[Broken] Condition, afterwards take [[/r 1d10]] Broken Conditions</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "mutationType": {
+      "label": "Type",
+      "type": "String",
+      "value": "mental"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Modifier"
+    },
+    "modifiesSkills": {
+      "value": false,
+      "type": "Boolean",
+      "label": "Skill Modifier?"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "sAiwDCZFd21tgaDN": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1691299878976,
+    "modifiedTime": 1693273565130,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!MUPhnpdYek3h1mm8"
+}

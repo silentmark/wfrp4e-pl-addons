@@ -1,0 +1,106 @@
+{
+  "name": "Master Owler",
+  "type": "career",
+  "img": "modules/wfrp4e-core/icons/careers/smuggler-03.png",
+  "folder": "cPTcFWSSpOVSviFW",
+  "flags": {
+    "wfrp4e-salzenmund": {
+      "initialization-folder": "Smuggling",
+      "sort": 0
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>@UUID[JournalEntry.pHTIwlH91NjUNwig.JournalEntryPage.JyC0KWmSzZmtJiri]{Owler}</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "careergroup": {
+      "type": "String",
+      "label": "Career Group",
+      "value": "Owler"
+    },
+    "class": {
+      "type": "String",
+      "label": "Class",
+      "value": "Rogue"
+    },
+    "current": {
+      "type": "Boolean",
+      "value": false
+    },
+    "complete": {
+      "type": "Boolean",
+      "value": false
+    },
+    "level": {
+      "type": "String",
+      "label": "Career Level",
+      "value": "3"
+    },
+    "status": {
+      "tier": "b",
+      "standing": 5
+    },
+    "characteristics": [
+      "i"
+    ],
+    "skills": [
+      "Animal Care",
+      "Bribery",
+      "Consume Alcohol",
+      "Endurance",
+      "Evaluate",
+      "Haggle",
+      "Melee (Basic)",
+      "Outdoor Survival",
+      "Ride (Horse)",
+      "Stealth (Rural or Urban)",
+      "Athletics",
+      "Charm",
+      "Gossip",
+      "Lore (Local)",
+      "Perception",
+      "Secret Signs (Smuggler)",
+      "Intimidate",
+      "Intuition",
+      "Lore (Law)",
+      "Lore (Roadways)",
+      ""
+    ],
+    "talents": [
+      "Briber",
+      "Fearless (Road Wardens)",
+      "Seasoned Traveller",
+      "Strong Legs"
+    ],
+    "trappings": [
+      "Draught Horse",
+      "Wagon with false floor"
+    ],
+    "incomeSkill": [
+      9
+    ]
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wjUQkVmn4leETiQ6": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1687134833790,
+    "modifiedTime": 1693273572806,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "kcUEgHvYFNdQPpDR",
+  "_key": "!items!kcUEgHvYFNdQPpDR"
+}

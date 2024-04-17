@@ -1,0 +1,82 @@
+{
+  "_id": "HTe1YiEkqYJ3TaDI",
+  "name": "Accelerate",
+  "permission": {
+    "default": 0,
+    "rPtCM2fgOqxK9HLk": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p style=\"text-align: justify;\">You speed up your target&rsquo;s senses, granting them +1 Movement, +10 Agility and +10 Combat Initiative. A target aﬀected by this spell may not make Channelling, Language (Magick), or Pray Tests. When the spell ends, the target takes a Fatigued Condition for 1d10 minutes.</p>\n<p style=\"text-align: justify;\"><strong>Overcast:</strong> For every +2 SL, you may increase the attribute benefits by +1/+10. If you overcast by +6 SL, your target also gains an extra Action during their Turn.&nbsp;</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Touch"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "1",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus Rounds",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 4,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.cAnpTGj0Z5iAMmWl"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_accelerate.jpg",
+  "effects": [],
+  "_key": "!items!HTe1YiEkqYJ3TaDI"
+}

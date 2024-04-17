@@ -1,0 +1,162 @@
+{
+  "_id": "6iYnyYuqI4fyfXaW",
+  "name": "Sign of the Beast",
+  "type": "spell",
+  "img": "modules/wfrp4e-dotr/assets/icons/tzeentch.png",
+  "effects": [
+    {
+      "_id": "DVlWOHniTk477KE3",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "dialogChoice",
+          "effectApplication": "apply",
+          "effectData": {
+            "description": "Fellowship when dealing with Beastmen",
+            "modifier": 20,
+            "slBonus": null,
+            "successBonus": null,
+            "difficultyStep": null
+          },
+          "hide": false,
+          "preventDuplicateEffects": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-dotr/assets/icons/tzeentch.png",
+      "tint": null,
+      "transfer": false,
+      "origin": null,
+      "name": "Sign of the Beast",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!6iYnyYuqI4fyfXaW.DVlWOHniTk477KE3"
+    }
+  ],
+  "folder": "u1exIfJdxyR01hCh",
+  "sort": 100001,
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Petty Spells of Tzeentch",
+      "sort": 100001
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Your face shifts subtly, displaying the mark of Tzeentch and the signs of bestial nature; Beastmen of Tzeentch know you as a friend and ally. Gain +20 to all <strong>Fellowship </strong>Tests when dealing with such creatures. Any followers or creatures of Khorne or Slaanesh suffer @UUID[Compendium.wfrp4e-core.items.0VpT5yubw4UL7j6f]{Animosity} toward you, while those of Nurgle regard you with @UUID[Compendium.wfrp4e-core.items.aE3pyW20Orvdjzj0]{Hatred}.</p><p>\n\n <b>Lore:</b> None<p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "petty",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "You",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "You",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus Rounds",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 0,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "2TbX8z7IWr0GFssP": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "hv1aja7lAR8ZyKUO": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1681859838882,
+    "modifiedTime": 1693273562876,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!6iYnyYuqI4fyfXaW"
+}

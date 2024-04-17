@@ -1,0 +1,82 @@
+{
+  "name": "Earthpower",
+  "permission": {
+    "default": 0,
+    "OfKMBdcUK6oV9G48": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>If you are within a few yards of an ogham, stone circle or sacred grove, the CN of this spell is reduced by 2. You must be in physical contact with the earth and meditate for an hour before you cast this spell. For the spell’s Duration, all your Casting Numbers are halved and when you cast a spell, you may choose which Lore effect you apply for that particular spell: Ghur, Ghyran, or Ulgu. You have become a conduit for an immense amount of power. Any failed Language (Magick) Test triggers a Minor Miscast and any Critical or Fumble becomes a Major Miscast.</p>\n<p>When the spell ends, the energy is released all at once, shocking your system. You gain a Fatigued Condition and suffer 2d10 minus Willpower Bonus Wounds (minimum of 1).</p>\n<p>&nbsp;</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Seasons",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "You"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "You",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus hours",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 12,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.sBep2AeDP0EK5t3c"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_eathpower.jpg",
+  "effects": [],
+  "_id": "qqCov3ECY0gbYuwn",
+  "_key": "!items!qqCov3ECY0gbYuwn"
+}

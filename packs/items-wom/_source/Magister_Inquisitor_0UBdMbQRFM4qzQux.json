@@ -1,0 +1,108 @@
+{
+  "name": "Magister Inquisitor",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>@UUID[Compendium.wfrp4e-wom.journals.4spGTAnh7qc2JDqY.JournalEntryPage.XqOkYrrp82Ktyszq]{Magister Vigilant}</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "careergroup": {
+      "type": "String",
+      "label": "Career Group",
+      "value": "Magister Vigilant"
+    },
+    "class": {
+      "type": "String",
+      "label": "Class",
+      "value": "Academic"
+    },
+    "current": {
+      "type": "Boolean",
+      "value": false
+    },
+    "complete": {
+      "type": "Boolean",
+      "value": false
+    },
+    "level": {
+      "type": "String",
+      "label": "Career Level",
+      "value": "3"
+    },
+    "status": {
+      "tier": "g",
+      "standing": 1
+    },
+    "characteristics": [
+      "ws",
+      "int",
+      "wp",
+      "ag",
+      "i"
+    ],
+    "skills": [
+      "Channelling (Any Colour)",
+      "Charm",
+      "Cool",
+      "Dodge",
+      "Intuition",
+      "Language (Magick)",
+      "Lore (Magic)",
+      "Melee (Basic)",
+      "Melee (Polearm)",
+      "Perception",
+      "Charm",
+      "Gossip",
+      "Intimidate",
+      "Language (Battle)",
+      "Pick Lock",
+      "Research",
+      "Navigation",
+      "Secret Signs (Any)",
+      "Sleight of Hand",
+      "Stealth (Urban)"
+    ],
+    "talents": [
+      "Break and Enter",
+      "Savvy",
+      "Shadow",
+      "Sixth Sense"
+    ],
+    "trappings": [
+      "Magical Item"
+    ],
+    "incomeSkill": [
+      9
+    ]
+  },
+  "type": "career",
+  "folder": "EGdnaG0JFAHnazff",
+  "img": "modules/wfrp4e-wom/assets/icons/careers/magister-vigilant-03.png",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Magister Vigilant",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676145624192,
+    "modifiedTime": 1693273575664,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "0UBdMbQRFM4qzQux",
+  "_key": "!items!0UBdMbQRFM4qzQux"
+}

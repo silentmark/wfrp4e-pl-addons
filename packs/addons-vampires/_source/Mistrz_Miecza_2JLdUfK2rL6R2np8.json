@@ -1,0 +1,235 @@
+{
+  "_id": "2JLdUfK2rL6R2np8",
+  "name": "Mistrz Miecza",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+      "transfer": true,
+      "name": "Mistrz Miecza (Atak)",
+      "_id": "zenH6AthaBrrxSL3",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "effectTrigger": "preOpposedAttacker",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "let advantage = game.settings.get(\"wfrp4e\", \"groupAdvantageValues\");\r\nif (advantage.enemies <= advantage.players) return;\r\n\r\nlet item = args.defenderTest.item;\r\nif (item?.attackType != 'melee') return;\r\n\r\nlet arr = item.system.qualities.value;\r\nlet talent = args.attackerTest.actor.getItemTypes(\"talent\").find(t => t.name == \"Mistrz Miecza\");\r\nlet effect = talent.effects.find(e => e.application === \"apply\");\r\nawait item.update({\"system.qualities.value\": []});\r\nawait item.update({\"flags.wfrp4e.qualities\": arr});\r\n\r\nlet msg = await ChatMessage.create({content: `<h3>${args.attackerTest.actor.name} - Mistrz Miecza</h3><p>Usunięto zalety z ${item.name}. Aby przywrócić, wciśnij: <a class=\"apply-effect\" data-effect-id=${effect.id}>Przywróć Zalety</a></p>`});\r\nlet testData = foundry.utils.deepClone(args.attackerTest.data);\r\ntestData.result.item = talent.id;\r\ntestData.preData.item = talent.id;\r\nlet update = { \"flags\": {\r\n    testData: testData,\r\n    secondTestData: args.defenderTest.data,\r\n    qualities: arr\r\n  }\r\n};\r\nmsg.update(update);",
+          "scriptData": [
+            {
+              "label": "Mistrz Miecza (Atak)",
+              "trigger": "preOpposedAttacker",
+              "script": "let advantage = game.settings.get(\"wfrp4e\", \"groupAdvantageValues\");\r\nif (advantage.enemies <= advantage.players) return;\r\n\r\nlet item = args.defenderTest.item;\r\nif (item?.attackType != 'melee') return;\r\n\r\nlet arr = item.system.qualities.value;\r\nlet talent = args.attackerTest.actor.getItemTypes(\"talent\").find(t => t.name == \"Mistrz Miecza\");\r\nlet effect = talent.effects.find(e => e.name === \"Mistrz Miecza (Przywróć Zalety)\");\r\nawait item.update({\"system.qualities.value\": []});\r\nawait item.update({\"flags.wfrp4e.qualities\": arr});\r\n\r\nlet msg = await ChatMessage.create({content: `<h3>${args.attackerTest.actor.name} - Mistrz Miecza</h3><p>Usunięto zalety z ${item.name}. Aby przywrócić, wciśnij: <a class=\"apply-effect\" data-effect-id=${effect.id}>Przywróć Zalety</a></p>`});\r\nlet testData = foundry.utils.deepClone(args.attackerTest.data);\r\ntestData.result.item = talent.id;\r\ntestData.preData.item = talent.id;\r\nlet update = { \"flags\": {\r\n    testData: testData,\r\n    secondTestData: args.defenderTest.data,\r\n    qualities: arr\r\n  }\r\n};\r\nmsg.update(update);",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "applicationData": {
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          }
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!2JLdUfK2rL6R2np8.zenH6AthaBrrxSL3"
+    },
+    {
+      "icon": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+      "transfer": true,
+      "name": "Mistrz Miecza (Obrona)",
+      "_id": "cTeyQIf74qIcVEwB",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "effectTrigger": "preOpposedDefender",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "let advantage = game.settings.get(\"wfrp4e\", \"groupAdvantageValues\");\r\nif (advantage.enemies <= advantage.players) return;\r\n\r\nlet item = args.attackerTest.item;\r\nif (item?.attackType != 'melee') return;\r\n\r\nlet arr = item.system.qualities.value;\r\nlet talent = args.defenderTest.actor.getItemTypes(\"talent\").find(t => t.name == \"Mistrz Miecza\");\r\nlet effect = talent.effects.find(e => e.application === \"apply\");\r\nawait item.update({\"system.qualities.value\": []});\r\nawait item.update({\"flags.wfrp4e.qualities\": arr});\r\n\r\nlet msg = await ChatMessage.create({content: `<h3>${args.defenderTest.actor.name} - Mistrz Miecza</h3><p>Usunięto zalety z ${item.name}. Aby przywrócić, wciśnij: <a class=\"apply-effect\" data-effect-id=${effect.id}>Przywróć Zalety</a></p>`});\r\nlet testData = foundry.utils.deepClone(args.defenderTest.data);\r\ntestData.result.item = talent.id;\r\ntestData.preData.item = talent.id;\r\nlet update = { \"flags\": {\r\n    testData: testData,\r\n    secondTestData: args.attackerTest.data,\r\n    qualities: arr\r\n  }\r\n};\r\nmsg.update(update);",
+          "scriptData": [
+            {
+              "label": "Mistrz Miecza (Obrona)",
+              "trigger": "preOpposedDefender",
+              "script": "let advantage = game.settings.get(\"wfrp4e\", \"groupAdvantageValues\");\r\nif (advantage.enemies <= advantage.players) return;\r\n\r\nlet item = args.attackerTest.item;\r\nif (item?.attackType != 'melee') return;\r\n\r\nlet arr = item.system.qualities.value;\r\nlet talent = args.defenderTest.actor.getItemTypes(\"talent\").find(t => t.name == \"Mistrz Miecza\");\r\nlet effect = talent.effects.find(e => e.name === \"Mistrz Miecza (Przywróć Zalety)\");\r\nawait item.update({\"system.qualities.value\": []});\r\nawait item.update({\"flags.wfrp4e.qualities\": arr});\r\n\r\nlet msg = await ChatMessage.create({content: `<h3>${args.defenderTest.actor.name} - Mistrz Miecza</h3><p>Usunięto zalety z ${item.name}. Aby przywrócić, wciśnij: <a class=\"apply-effect\" data-effect-id=${effect.id}>Przywróć Zalety</a></p>`});\r\nlet testData = foundry.utils.deepClone(args.defenderTest.data);\r\ntestData.result.item = talent.id;\r\ntestData.preData.item = talent.id;\r\nlet update = { \"flags\": {\r\n    testData: testData,\r\n    secondTestData: args.attackerTest.data,\r\n    qualities: arr\r\n  }\r\n};\r\nmsg.update(update);",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "applicationData": {
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          }
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!2JLdUfK2rL6R2np8.cTeyQIf74qIcVEwB"
+    },
+    {
+      "icon": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+      "transfer": true,
+      "name": "Mistrz Miecza (Przywróć Zalety)",
+      "_id": "ag3oZCmFKDhob16P",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "let msgId = this.effect.flags.wfrp4e.messageId\nlet msg = game.messages.get(msgId);\nlet test = game.wfrp4e.rolls.TestWFRP.recreate(msg.flags.secondTestData);\nlet quals = msg.flags.qualities;\ntest.item.update({\"system.qualities.value\": quals});",
+          "scriptData": [
+            {
+              "label": "Mistrz Miecza (Przywróć Zalety)",
+              "trigger": "immediate",
+              "script": "let msgId = this.effect.flags.wfrp4e.messageId\nlet msg = game.messages.get(msgId);\nlet test = game.wfrp4e.rolls.TestWFRP.recreate(msg.flags.secondTestData);\nlet quals = msg.flags.qualities;\ntest.item.update({\"system.qualities.value\": quals});",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "applicationData": {
+            "documentType": "Actor",
+            "avoidTest": {
+              "value": "none"
+            },
+            "equipTransfer": false,
+            "prompt": false
+          }
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!2JLdUfK2rL6R2np8.ag3oZCmFKDhob16P"
+    }
+  ],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Potrafisz przewidzieć ciosy swoich przeciwników. Dopóki masz większą liczbę Przewagę niż twój przeciwnik, każda Broń, którą dzierży przeciwko tobie, traci wszystkie Zalety, ale zachowuje swoje Wady.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "1"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": "Dowolny Test Przeciwstawny Walki Wręcz"
+    }
+  },
+  "folder": "IdBKVE70UjsZfSoR",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.311",
+    "createdTime": 1700513650418,
+    "modifiedTime": 1707139629241,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 5200000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!2JLdUfK2rL6R2np8"
+}

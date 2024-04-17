@@ -1,0 +1,157 @@
+{
+  "name": "The Crossed Scythes",
+  "type": "spell",
+  "img": "modules/wfrp4e-core/icons/spells/death.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<blockquote class=\"foundry-note\"><p>The <strong>CN</strong> of this spell equals the target entity's Willpower, this must be filled in accordingly in the <strong>Details</strong> tab.</p></blockquote><p><strong>Ingredients</strong>: No ingredients, though the caster requires the tools with which to create the carving.</p><p><strong>Conditions</strong>: Before commencing the ritual, the wizard must engrave a symbol of crossed downward-pointing scythes over the entrance to a tomb, cave entrance, gatehouse, or other portal. This requires an <strong>Extended Challenging (+0) Art (Engraving)</strong> Test to a total of 20 SL. Beyond this portal there must be an Undead creature the Wizard seeks to suppress.</p><p><strong>Sacrifices</strong>: Each Round of Channelling the spellcaster must make an <strong>Average (+20) Cool</strong> Test or suffer 1 Damage which cannot be reduced by Toughness Bonus or Armour Points.</p><p><strong>Consequences</strong>: The ritual fails; the entity becomes aware of the effort to contain it.</p><p>Occasionally, an Amethyst Wizard will mark a tomb with a pair of overlaid and reversed Shyish runes. Only a fool would enter such a place, for this symbol warns of great evil slumbering within and acts as a ward against its escape. If an Amethyst Wizard seeks to create such a carving, they must be gifted at channelling <em>Shyish</em> and also deft with a hammer and chisel.</p><p>Once the symbol is carved and the ritual complete, any Undead creature without the Construct Trait that tries to cross the threshold must make a <strong>Very Difficult (–30)</strong> Cool Test to do so. If the creature fails the Test, they cannot pass the engraving and must take a @Condition[Fatigued] Condition for every –SL. They must do this even if they would not normally suffer <em>Fatigued</em> Conditions.</p><p>The creature could try to cross the threshold again the following turn, but would continue to accrue @Condition[Fatigued] Conditions until they pass the Cool Test. The creature can only recover from these <em>Fatigued</em> Conditions after a full night’s rest.</p><p>Undead creatures with the Construct Trait must make a <strong>Very Difficult (-30) Endurance</strong> Test. If the creature fails the Test, they cannot pass the engraving and suffer 1 Wound for every –SL.</p><p><strong>Lore:</strong> Targets afflicted by spells from the Lore of Death are drained of life, enervated, and listless. You may assign +1 @Condition[Fatigued] Condition to any living target affected by a spell from this lore. A target may only ever have a single Fatigued Condition gained in this manner at any one time.</p><p></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "death",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 0,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": true,
+      "type": "",
+      "xp": 400
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-core/icons/spells/death.png",
+      "transfer": false,
+      "_id": "Bi5Yul41omV7mBs2",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "rollChannellingTest",
+          "effectApplication": "item",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "this.actor.setupSkill(game.i18n.localize(\"NAME.Cool\"), { absolute: { difficulty: \"average\" } }).then(test => {\n    test.roll().then(test => {\n        if (test.result.outcome == \"failure\") {\n            this.actor.modifyWounds(-1);\n            ChatMessage.create({content : `<strong>${this.actor.name}</strong> takes 1 Damage`, speaker : {alias: this.item.name}})\n        }\n    });\n})"
+        },
+        "core": {
+          "sourceId": "Item.8Vuv6suWsiIujIQd.ActiveEffect.OqsTZbiU0jYV1LLS"
+        }
+      },
+      "name": "Sacrifice",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!T5knGHUKiucXS5Fe.Bi5Yul41omV7mBs2"
+    }
+  ],
+  "folder": "Sp5iIzHQXN58oR03",
+  "sort": 200000,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Rituals",
+      "sort": 198048
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676064772004,
+    "modifiedTime": 1693273575738,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "T5knGHUKiucXS5Fe",
+  "_key": "!items!T5knGHUKiucXS5Fe"
+}

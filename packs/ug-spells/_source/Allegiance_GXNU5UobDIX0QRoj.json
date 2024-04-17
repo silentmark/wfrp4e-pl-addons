@@ -1,0 +1,82 @@
+{
+  "_id": "GXNU5UobDIX0QRoj",
+  "name": "Allegiance",
+  "permission": {
+    "default": 0,
+    "rPtCM2fgOqxK9HLk": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p style=\"text-align: justify;\">Your gentle touch momentarily calms a target of your size or smaller, even if they were your mortal foe. For any further eﬀect, the target must be able to understand your language, cannot be Immune to Psychology nor have the Bestial, Daemonic, Frenzy, Mindless, or Undead Creature Traits. If you win an Opposed Willpower Test, the creature immediately thinks of you as an ally and can be asked to help out in a fight or perform tasks according to the creature&rsquo;s abilities and personality. For instance, a noble will not perform the tasks of a servant and a dutiful soldier will not take the life of their commander. Nor can a creature be commanded to do something overly detrimental to their well-being, such as jumping oﬀ a bridge or challenging a dragon. Asking such a thing immediately breaks the enchantment. Once the spell ends, the creature remembers everything that happened.&nbsp;</p>\n<p style=\"text-align: justify;\">Overcast: For every +2 SL, you may increase your Opposed SL by +1 SL. For every +4 SL, you may increase the aﬀected size by one step.&nbsp;</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Touch"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "1",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus Rounds",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 5,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.Tw19XxdALhGKDU3a"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_allegiance.jpg",
+  "effects": [],
+  "_key": "!items!GXNU5UobDIX0QRoj"
+}

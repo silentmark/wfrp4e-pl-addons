@@ -1,0 +1,82 @@
+{
+  "_id": "4uiNFVlWe50InlYX",
+  "name": "Cloud of Flies",
+  "type": "mutation",
+  "img": "modules/wfrp4e-core/icons/mutations/mutation.png",
+  "effects": [
+    {
+      "_id": "XXCIpwVfdcffNhwz",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "addItems",
+          "effectApplication": "actor",
+          "script": "fromUuid(\"Compendium.wfrp4e-core.items.MVI0lXcg6vvtooAF\").then(item => {\n   this.actor.createEmbeddedDocuments(\"Item\", [item.toObject()], {fromEffect : this.effect.id})\n})",
+          "preventDuplicateEffects": false,
+          "hide": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/mutations/mutation.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Cloud of Flies",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!4uiNFVlWe50InlYX.XXCIpwVfdcffNhwz"
+    }
+  ],
+  "folder": "QOjm4pUE8aywpu9Z",
+  "sort": 900000,
+  "flags": {},
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Gain the @UUID[Compendium.wfrp4e-core.items.MVI0lXcg6vvtooAF]{Distracting}&nbsp;Creature Trait; this mutation cannot be hidden</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "mutationType": {
+      "label": "Type",
+      "type": "String",
+      "value": "physical"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Modifier"
+    },
+    "modifiesSkills": {
+      "value": false,
+      "type": "Boolean",
+      "label": "Skill Modifier?"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "sAiwDCZFd21tgaDN": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1691299878976,
+    "modifiedTime": 1693273565114,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!4uiNFVlWe50InlYX"
+}

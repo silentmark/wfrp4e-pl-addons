@@ -1,0 +1,101 @@
+{
+  "folder": "QKpJ34g9kHICDgQA",
+  "name": "Mark of Hysh",
+  "type": "trait",
+  "img": "modules/wfrp4e-wom/assets/icons/marks/mark-hysh.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The rune of <em>Hysh</em> appears somewhere on your body. You gain the @UUID[Compendium.wfrp4e-wom.items.2cv6hhZ57iV6z5Il]{Suffuse with Hysh} Talent</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-wom/assets/icons/marks/mark-hysh.png",
+      "transfer": true,
+      "_id": "gZxkzelgtQWsLIYe",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "addItems",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "fromUuid(\"Compendium.wfrp4e-wom.items.2cv6hhZ57iV6z5Il\").then(item => Item.create(item.toObject(), {fromEffect : this.effect.id, parent : this.actor}))"
+        }
+      },
+      "name": "Mark of Hysh",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!6hj5T5xamVvjLKDH.gZxkzelgtQWsLIYe"
+    }
+  ],
+  "sort": 106250,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.XOZ2be8puKPwn6t4"
+    },
+    "wfrp4e-wom": {
+      "initialization-folder": "Hysh",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676242306727,
+    "modifiedTime": 1693273575680,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "6hj5T5xamVvjLKDH",
+  "_key": "!items!6hj5T5xamVvjLKDH"
+}

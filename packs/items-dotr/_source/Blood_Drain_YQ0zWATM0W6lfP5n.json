@@ -1,0 +1,129 @@
+{
+  "_id": "YQ0zWATM0W6lfP5n",
+  "name": "Blood Drain",
+  "type": "trait",
+  "img": "modules/wfrp4e-core/icons/traits/trait.png",
+  "effects": [
+    {
+      "_id": "NaJwMnmBtpU5wGfO",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "applyDamage",
+          "effectApplication": "actor",
+          "script": "args.actor.addCondition(\"bleeding\")\n\nargs.attacker.setFlag(\"wfrp4e\", \"isAttached\", args.actor.name)",
+          "preventDuplicateEffects": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/traits/trait.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Blood Drain",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!YQ0zWATM0W6lfP5n.NaJwMnmBtpU5wGfO"
+    },
+    {
+      "_id": "1JQs2q83d8GmgznY",
+      "flags": {
+        "wfrp4e": {
+          "effectApplication": "actor",
+          "preventDuplicateEffects": false,
+          "effectTrigger": "endRound",
+          "script": "if (this.actor.getFlag(\"wfrp4e\", \"isAttached\")) {\n  let roll = (await new Roll(\"1d10\").roll()).total\n  if (roll == 9 || roll == 10)\n    ChatMessage.create({ content: `Leech attached to ${this.actor.getFlag(\"wfrp4e\", \"isAttached\")} gorges and falls off.`, speaker: { alias: this.effect.name } })\n}"
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/traits/trait.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Gorge Check",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!YQ0zWATM0W6lfP5n.1JQs2q83d8GmgznY"
+    }
+  ],
+  "folder": "wvnqjaHZIliUa723",
+  "sort": 900001,
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Traits",
+      "sort": 900001
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>If the leech scores a wounding blow it becomes attached to its victim, inflicting 1 @Condition[Bleeding] condition until killed or gorged. To see whether it is gorged, roll a [[/r 1d10]] each Round: if the result is a 9 or 10 it drops off, otherwise it keeps feeding. Fire or some irritants (salt, acid, etc.) will cause it to release its hold and try to flee. Simply pulling it off inflicts 1 @Condition[Bleeding] condition.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "2TbX8z7IWr0GFssP": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "hv1aja7lAR8ZyKUO": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1681859838891,
+    "modifiedTime": 1693273562894,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!YQ0zWATM0W6lfP5n"
+}

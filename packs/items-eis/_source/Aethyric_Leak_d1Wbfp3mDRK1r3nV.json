@@ -1,0 +1,126 @@
+{
+  "_id": "d1Wbfp3mDRK1r3nV",
+  "name": "Aethyric Leak",
+  "type": "mutation",
+  "img": "modules/wfrp4e-core/icons/mutations/mutation.png",
+  "effects": [
+    {
+      "_id": "CnfJryZOhwFya12f",
+      "flags": {
+        "wfrp4e": {
+          "effectApplication": "actor",
+          "preventDuplicateEffects": false,
+          "effectTrigger": "addItems",
+          "script": "fromUuid(\"Compendium.wfrp4e-core.items.qdMbxW09FUoYBzmB\").then(item => {\n   this.actor.createEmbeddedDocuments(\"Item\", [item.toObject()], {fromEffect : this.effect.id})\n})",
+          "hide": false
+        }
+      },
+      "changes": [
+        {
+          "key": "system.characteristics.fel.modifier",
+          "mode": 2,
+          "value": "-5",
+          "priority": null
+        },
+        {
+          "key": "system.characteristics.int.modifier",
+          "mode": 2,
+          "value": "-5",
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/mutations/mutation.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Aethyric Leak",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!d1Wbfp3mDRK1r3nV.CnfJryZOhwFya12f"
+    },
+    {
+      "_id": "JCuQrFhVURXIqUhQ",
+      "flags": {
+        "wfrp4e": {
+          "effectApplication": "actor",
+          "preventDuplicateEffects": false,
+          "effectTrigger": "addItems",
+          "script": "fromUuid(\"Compendium.wfrp4e-core.items.qdMbxW09FUoYBzmB\").then(item => {\n   this.actor.createEmbeddedDocuments(\"Item\", [item.toObject()], {fromEffect : this.effect.id})\n})",
+          "hide": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/mutations/mutation.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Witch!",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!d1Wbfp3mDRK1r3nV.JCuQrFhVURXIqUhQ"
+    }
+  ],
+  "folder": "QOjm4pUE8aywpu9Z",
+  "sort": 100001,
+  "flags": {},
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Gain the @UUID[Compendium.wfrp4e-core.items.qdMbxW09FUoYBzmB]{Witch!} Talent</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "mutationType": {
+      "label": "Type",
+      "type": "String",
+      "value": "mental"
+    },
+    "modifier": {
+      "value": "-5 Fellowship, -5 Intelligence",
+      "type": "String",
+      "label": "Modifier"
+    },
+    "modifiesSkills": {
+      "value": false,
+      "type": "Boolean",
+      "label": "Skill Modifier?"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "sAiwDCZFd21tgaDN": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1691299878976,
+    "modifiedTime": 1693273565146,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!d1Wbfp3mDRK1r3nV"
+}

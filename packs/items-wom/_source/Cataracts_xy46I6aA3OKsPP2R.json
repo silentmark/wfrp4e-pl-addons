@@ -1,0 +1,108 @@
+{
+  "type": "trait",
+  "name": "Cataracts",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>White film covers your eyes. Though you can still see, your stare is unnerving. You suffer –1 SL to all Fellowship-based Tests.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "folder": "n9mUPYSb6xsPYtcx",
+  "img": "modules/wfrp4e-wom/assets/icons/marks/mark-shyish.png",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-wom/assets/icons/marks/mark-shyish.png",
+      "transfer": true,
+      "_id": "8pVQzrLAZtkDpNGu",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prefillDialog",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "effectData": {
+            "description": "",
+            "modifier": null,
+            "slBonus": null,
+            "successBonus": null,
+            "difficultyStep": null
+          },
+          "script": "if ((args.type == \"characteristic\" && args.item == \"fel\") || (args.type == \"skill\" && args.item.system.characteristic.value == \"fel\"))\n      args.prefillModifiers.slBonus -= 1"
+        },
+        "core": {
+          "sourceId": "Item.1Cmuim3Hi6dVk1H8.ActiveEffect.V9jqgWNbs8jllRJ8"
+        }
+      },
+      "name": "Cataracts",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!xy46I6aA3OKsPP2R.8pVQzrLAZtkDpNGu"
+    }
+  ],
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Shyish",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676402828411,
+    "modifiedTime": 1693273575812,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "xy46I6aA3OKsPP2R",
+  "_key": "!items!xy46I6aA3OKsPP2R"
+}

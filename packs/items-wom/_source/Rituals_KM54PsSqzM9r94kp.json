@@ -1,0 +1,19 @@
+{
+  "name": "Rituals",
+  "sorting": "a",
+  "folder": "2snp4VtelKtoB1HP",
+  "type": "Item",
+  "_id": "KM54PsSqzM9r94kp",
+  "sort": 100000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": null,
+    "modifiedTime": 1691299271064,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!folders!KM54PsSqzM9r94kp"
+}

@@ -1,0 +1,154 @@
+{
+  "_id": "V6e12LkGpJPxuzWO",
+  "name": "Ring of Protection against Undead",
+  "type": "trapping",
+  "img": "modules/wfrp4e-core/icons/equipment/clothing_and_accessories/signet-ring.png",
+  "effects": [
+    {
+      "_id": "syRXiBX6eqQVFkG6",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "takeDamage",
+          "effectApplication": "equipped",
+          "script": "if (args.attacker.has(\"Undead\") && !args.attacker.has(\"Ethereal\"))\n{\n    args.totalWoundLoss =  Math.floor(args.totalWoundLoss / 2)\n    args.messageElements.push(\"Halved (Ring)\")\n}",
+          "preventDuplicateEffects": true
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/equipment/clothing_and_accessories/signet-ring.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Protection Against Undead",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!V6e12LkGpJPxuzWO.syRXiBX6eqQVFkG6"
+    },
+    {
+      "_id": "ytkHNxwXElbHRXxu",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "dialogChoice",
+          "effectApplication": "equipped",
+          "effectData": {
+            "description": "Involves Undead without Ethereal",
+            "modifier": 10,
+            "slBonus": null,
+            "successBonus": null,
+            "difficultyStep": null
+          },
+          "preventDuplicateEffects": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/equipment/clothing_and_accessories/signet-ring.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Bonus against Undead",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!V6e12LkGpJPxuzWO.ytkHNxwXElbHRXxu"
+    }
+  ],
+  "folder": "BklzLmZbleBRvnuC",
+  "sort": 400000,
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Other",
+      "sort": 100000
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The wearer of the Ring of Protection against Undead takes half normal damage from all attacks by enemies with the @UUID[Compendium.wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Undead} Creature Trait that do not also have the @UUID[Compendium.wfrp4e-core.items.tNWrJUOArwfWXsPw]{Ethereal} Creature Trait, and gains a bonus of + 10 to all tests for all spells, Skills, and Traits pertaining to such creatures.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "None"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "clothingAccessories"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "2TbX8z7IWr0GFssP": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "hv1aja7lAR8ZyKUO": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1681859838890,
+    "modifiedTime": 1693273562892,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!V6e12LkGpJPxuzWO"
+}

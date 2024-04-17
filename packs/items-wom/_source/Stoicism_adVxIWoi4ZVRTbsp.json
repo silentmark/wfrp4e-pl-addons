@@ -1,0 +1,107 @@
+{
+  "folder": "QKpJ34g9kHICDgQA",
+  "name": "Stoicism",
+  "type": "trait",
+  "img": "modules/wfrp4e-wom/assets/icons/marks/mark-hysh.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Given your wisdom, you have a deeper understanding of the nature of the Realm of Chaos and how emotions can feed its influence. You must resist Psychology Tests when you are able to, even if you feel that to do so is not in your interest. Gain +2 SL to Cool Tests made to resist Psychology.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-wom/assets/icons/marks/mark-hysh.png",
+      "transfer": true,
+      "_id": "Ik6Go7ALNM6LpdQB",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "dialogChoice",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "effectData": {
+            "description": "Cool tests to resist Psychology",
+            "modifier": null,
+            "slBonus": 2,
+            "successBonus": null,
+            "difficultyStep": null
+          }
+        }
+      },
+      "name": "Stoicism",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!adVxIWoi4ZVRTbsp.Ik6Go7ALNM6LpdQB"
+    }
+  ],
+  "sort": 300000,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.XOZ2be8puKPwn6t4"
+    },
+    "wfrp4e-wom": {
+      "initialization-folder": "Hysh",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676242306727,
+    "modifiedTime": 1693273575757,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "adVxIWoi4ZVRTbsp",
+  "_key": "!items!adVxIWoi4ZVRTbsp"
+}

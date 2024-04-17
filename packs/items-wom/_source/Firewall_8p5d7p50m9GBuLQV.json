@@ -1,0 +1,155 @@
+{
+  "name": "Firewall",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You channel a streak of Aqshy, creating a wall of flame. The Firewall is Willpower Bonus yards wide and 1 yard deep. For every +2 SL on your Casting Test you may extend the length by Willpower Bonus yards. Anyone crossing the firewall gains 1 @Condition[Ablaze] Condition and suffers a <em>magic missile</em> hit with a Damage equal to your Willpower Bonus.</p><p><strong>Lore:</strong> You may inflict +1 @Condition[Ablaze] Condition on anyone targeted by spells from the Lore of Fire, unless they also possess the Arcane Magic (Fire) Talent. Every Ablaze condition within Willpower Bonus yards adds +10 to attempts to Channel or Cast with Aqshy.</p><p></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "fire",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower yards",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "AoE (Special)",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus rounds",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": "Willpower Bonus"
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 6,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": true
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": true,
+      "label": "Length (yds.)",
+      "valuePerOvercast": {
+        "type": "characteristic",
+        "value": 1,
+        "SL": false,
+        "characteristic": "wp",
+        "bonus": true
+      },
+      "initial": {
+        "type": "characteristic",
+        "value": 1,
+        "SL": false,
+        "characteristic": "wp",
+        "bonus": true,
+        "additional": ""
+      }
+    }
+  },
+  "type": "spell",
+  "folder": "1nRnnQNRmL8iAiA3",
+  "img": "modules/wfrp4e-core/icons/spells/firewall.png",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-core/icons/spells/firewall.png",
+      "transfer": false,
+      "_id": "5Bm3FBg38JXIECHc",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "applyDamage",
+          "effectApplication": "damage",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "args.actor.addCondition(\"ablaze\")"
+        }
+      },
+      "name": "Firewall",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!8p5d7p50m9GBuLQV.5Bm3FBg38JXIECHc"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Fire",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676404365407,
+    "modifiedTime": 1693273575687,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "8p5d7p50m9GBuLQV",
+  "_key": "!items!8p5d7p50m9GBuLQV"
+}

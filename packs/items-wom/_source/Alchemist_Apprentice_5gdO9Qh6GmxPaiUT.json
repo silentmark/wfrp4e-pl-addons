@@ -1,0 +1,97 @@
+{
+  "name": "Alchemist Apprentice",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>@UUID[Compendium.wfrp4e-wom.journals.kLTWtoz5d7Yt2zAJ.JournalEntryPage.aYYDra6LCt6daz0s]{Alchemist}</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "careergroup": {
+      "type": "String",
+      "label": "Career Group",
+      "value": "Alchemist"
+    },
+    "class": {
+      "type": "String",
+      "label": "Class",
+      "value": "Academics"
+    },
+    "current": {
+      "type": "Boolean",
+      "value": false
+    },
+    "complete": {
+      "type": "Boolean",
+      "value": false
+    },
+    "level": {
+      "type": "String",
+      "label": "Career Level",
+      "value": "1"
+    },
+    "status": {
+      "tier": "b",
+      "standing": 4
+    },
+    "characteristics": [
+      "t",
+      "int",
+      "wp"
+    ],
+    "skills": [
+      "Channelling (Chamon)",
+      "Evaluate",
+      "Haggle",
+      "Intuition",
+      "Language (Magick)",
+      "Lore (Magic)",
+      "Melee (Basic)",
+      "Melee (Polearm)",
+      "Perception",
+      "Trade (Alchemist)"
+    ],
+    "talents": [
+      "Aethyric Attunement",
+      "Petty Magic",
+      "Read/Write",
+      "Second Sight"
+    ],
+    "trappings": [
+      "Grimoire",
+      "Staff"
+    ],
+    "incomeSkill": [
+      4
+    ]
+  },
+  "type": "career",
+  "folder": "EGdnaG0JFAHnazff",
+  "img": "modules/wfrp4e-wom/assets/icons/careers/alchemist-01.png",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Alchemist",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676244062451,
+    "modifiedTime": 1693273575678,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "5gdO9Qh6GmxPaiUT",
+  "_key": "!items!5gdO9Qh6GmxPaiUT"
+}

@@ -1,0 +1,60 @@
+{
+  "_id": "EImPMcvAAsqes7mK",
+  "name": "Raised Gunwales (Typical Barge or Patrol Boat)",
+  "type": "vehicleMod",
+  "img": "modules/wfrp4e-dotr/assets/icons/upgrade.png",
+  "effects": [],
+  "folder": "mqmgFBAdX7S24AT7",
+  "sort": 1000000,
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Superstructure",
+      "sort": 1000000
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The hull extends upward to about waist height on a Human character. As well as blocking high waves from washing onto the deck and potentially swamping the boat, gunwales offer @UUID[Compendium.wfrp4e-core.journals.NS3YGlJQxwTggjRX.JournalEntryPage.wmA76Q2zJJ9HrkvA#combat-difficulty]{medium cover} to anyone crouching on the deck; ranged attacks against them are Hard.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "30",
+      "ss": "0",
+      "bp": "0"
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 35
+    },
+    "modType": {
+      "value": "superstructure"
+    },
+    "quantity": {
+      "value": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "2TbX8z7IWr0GFssP": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "hv1aja7lAR8ZyKUO": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1681859838885,
+    "modifiedTime": 1693273562881,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!EImPMcvAAsqes7mK"
+}

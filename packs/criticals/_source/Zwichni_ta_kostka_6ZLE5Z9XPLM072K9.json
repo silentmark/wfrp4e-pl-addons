@@ -1,0 +1,73 @@
+{
+  "name": "Zwichnięta kostka",
+  "type": "critical",
+  "img": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+  "effects": [
+    {
+      "_id": "rtWfTN6wJ4BbJslf",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "actor",
+          "script": "let injury = await fromUuid(\"Compendium.wfrp4e-core.injuries.nF5z1OEhpi4t6a6S\");\nargs.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()]);",
+          "preventDuplicateEffects": false,
+          "hide": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+      "label": "Zwichnięta kostka",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "_key": "!items.effects!6ZLE5Z9XPLM072K9.rtWfTN6wJ4BbJslf"
+    }
+  ],
+  "flags": {
+    "_sheetTab": "description",
+    "core": {
+      "sourceId": "Compendium.wfrp4e-pl.criticals.6ZLE5Z9XPLM072K9"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>W wyniku zwichnięcia postać otrzymuje Uraz Zerwanie mięśni (pomniejsze).</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "1",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "Noga",
+      "type": "String",
+      "label": "Location"
+    }
+  },
+  "_id": "6ZLE5Z9XPLM072K9",
+  "folder": null,
+  "sort": 0,
+  "_key": "!items!6ZLE5Z9XPLM072K9"
+}

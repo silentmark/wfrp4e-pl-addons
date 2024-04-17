@@ -1,0 +1,82 @@
+{
+  "name": "Autumn's Decay",
+  "permission": {
+    "default": 0,
+    "OfKMBdcUK6oV9G48": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>A ray of dark green light projects outwards from your fingertips towards an AoE of Willpower Bonus yards. Any dead, organic material (wood, leather, plant or cloth fibre) in the path of the ray will immediately rot and turn to dust or sludge. Creatures may pass a Difficult (-10) Dodge Test to avoid their trappings being destroyed, but will otherwise be unaffected. The only exceptions are creatures with the Construct and Undead Traits. Such creatures take a magic missile with a Damage of +5.</p>\n<p>&nbsp;</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Seasons",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower yards"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Special",
+      "aoe": true
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Instant",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 5,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.e0SMDKuIGk0FZkjU"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_autumn.jpg",
+  "effects": [],
+  "_id": "6IKDvrUqTAO45MoO",
+  "_key": "!items!6IKDvrUqTAO45MoO"
+}

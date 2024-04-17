@@ -1,0 +1,121 @@
+{
+  "_id": "XcQpzJG9aCD4cND8",
+  "name": "Wand of Jet",
+  "type": "trapping",
+  "img": "modules/wfrp4e-dotr/assets/icons/wand-of-jet.png",
+  "effects": [
+    {
+      "_id": "nHSkfHnpTQMIxDib",
+      "flags": {
+        "wfrp4e": {
+          "effectApplication": "equipped",
+          "effectTrigger": "prePrepareItem",
+          "script": "if (args.item.type == \"spell\")\n{\n   args.item.cn.value -=2\n   if (args.item.cn.value < 0)\n      args.item.cn.value = 0\n}",
+          "preventDuplicateEffects": false,
+          "hide": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-dotr/assets/icons/wand-of-jet.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Wand of Jet",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!XcQpzJG9aCD4cND8.nHSkfHnpTQMIxDib"
+    }
+  ],
+  "folder": "BklzLmZbleBRvnuC",
+  "sort": 300000,
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Other",
+      "sort": 0
+    },
+    "core": {
+      "sourceId": "Item.XcQpzJG9aCD4cND8"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "None"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "clothingAccessories"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "UdVZifxU9puzXm93": 3,
+    "hv1aja7lAR8ZyKUO": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1681859838891,
+    "modifiedTime": 1693273562893,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!XcQpzJG9aCD4cND8"
+}

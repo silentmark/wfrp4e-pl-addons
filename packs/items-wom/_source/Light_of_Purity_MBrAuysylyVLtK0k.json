@@ -1,0 +1,122 @@
+{
+  "name": "Light of Purity",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You imbue a single light source with purifying magic. Everyone within the light’s radius gains the @UUID[Compendium.wfrp4e-core.items.vMYEkrWj0ip6ZOdv]{Resistance (Disease)} Talent. Furthermore, wizards receive a bonus to dispel Dark and Chaos spells equal to the total SL on your Casting Test. Range and duration are determined by the @UUID[Compendium.wfrp4e-core.journals.sLomXnc8R8518cWN.JournalEntryPage.fiXbxW3H96StJWmH]{light source} to a maximum of 1 mile and 1 day.</p><p><strong>Lore:</strong> You may inflict one @Condition[Blinded] Condition on those targeted by Lore of Light spells, unless they possess the Arcane Magic (Light) Talent. If a target has the @UUID[Compendium.wfrp4e-core.items.v3uzEthcq0JRar0J]{Daemonic} or @UUID[Compendium.wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Undead} Creature Traits, spells also inflict an additional hit with Damage equal to your Intelligence Bonus that ignores Toughness Bonus and Armor Points.</p><p></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "light",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Special",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "1 (maximum)",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Special",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 6,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "type": "spell",
+  "folder": "FoB0dUA8pzSvKt0l",
+  "img": "modules/wfrp4e-core/icons/spells/light.png",
+  "effects": [],
+  "sort": 750000,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Light",
+      "sort": 750000
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676243555959,
+    "modifiedTime": 1693273575721,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "MBrAuysylyVLtK0k",
+  "_key": "!items!MBrAuysylyVLtK0k"
+}

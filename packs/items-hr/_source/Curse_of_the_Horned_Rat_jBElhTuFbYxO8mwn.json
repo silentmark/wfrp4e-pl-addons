@@ -1,0 +1,123 @@
+{
+  "_id": "jBElhTuFbYxO8mwn",
+  "name": "Curse of the Horned Rat",
+  "type": "spell",
+  "img": "systems/wfrp4e/icons/blank.png",
+  "effects": [],
+  "folder": "LpgX7gl1wmh3SebP",
+  "sort": 100000,
+  "flags": {
+    "wfrp4e-horned-rat": {
+      "initialization-folder": "Arcane",
+      "sort": 100000
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>With a sickening lurch, the fabric of reality is torn by the twisting power of the Great Horned One. The target creature, and any others within a number of yards equal to your Willpower Bonus, must make a <strong>Challenging (+0) Endurance</strong> Test or be transformed into Skaven of size appropriate to the original victim, nominally under your command. Most become @UUID[Compendium.wfrp4e-core.actors.F1vAZZcmVKkRw8xn]{Clanrats} or @UUID[Compendium.wfrp4e-core.actors.kl4qHg0mqWOApBqH]{Stormvermin}, but Ogres typically become @UUID[Compendium.wfrp4e-core.actors.VfJgGmCTWqb0IDSW]{Rat Ogres}. They are as loyal as any Skaven, with vague memories of tunnels, betrayal, and the dark of the Under-Empire replacing those of their old life. Their nature is like that of any Skaven, and victims are unlikely to follow commands that would result in their death unless failing to follow those commands appears likely to be just as fatal.</p>\n<p>The forms of most humanoids were never intended to become as the Skaven, who despite being known colloquially as ratmen are far more rat than man. In most cases the spell&rsquo;s victims will revert to their true forms after the spell has ended, though all will bear some mark of what was done to them. This often takes the form of a patch of fur, a malformed tail or yellowed, pointed teeth. The victim may spend a Fate point to resist the effects of this spell, or to revert to their true form if already under its effect.</p>\n<blockquote class=\"sidebar\">\n<h3 style=\"text-align: center;\"><em>Is It Fun To Be A Rat?</em></h3>\n<p><em>It could be! Note that this is the sort of spell that could effectively end a Character&rsquo;s career, as they scuttle off with their Skaven allies only to wake up in the Under-Empire, enslaved to the very creatures they briefly thought were their kin. However, it could also be an excellent way to start an interesting adventure, with Characters plunging into the underdark to track down a Skaven who was once &mdash; and might be again &mdash; their comrade.</em></p>\n<p><em>Regardless, a canny GM will pay close attention to their Characters&rsquo; Fate Points before unleashing this particular horror upon them.</em></p>\n</blockquote>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower yards",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "AoE (Willpower Bonus yards)",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus hours",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 19,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "AUExJb3c35oBvDuA": 3,
+    "R44a2dfsw2hWQXbE": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1687734901074,
+    "modifiedTime": 1693273568155,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!jBElhTuFbYxO8mwn"
+}

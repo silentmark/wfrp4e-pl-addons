@@ -1,0 +1,104 @@
+{
+  "name": "Shadowmancer",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>@UUID[Compendium.wfrp4e-wom.journals.7xFrgrOyYX4SVrBL.JournalEntryPage.eZxfheujk03euEN4]{Shadowmancer}</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "careergroup": {
+      "type": "String",
+      "label": "Career Group",
+      "value": "Shadowmancer"
+    },
+    "class": {
+      "type": "String",
+      "label": "Class",
+      "value": "Academics"
+    },
+    "current": {
+      "type": "Boolean",
+      "value": false
+    },
+    "complete": {
+      "type": "Boolean",
+      "value": false
+    },
+    "level": {
+      "type": "String",
+      "label": "Career Level",
+      "value": "2"
+    },
+    "status": {
+      "tier": "s",
+      "standing": 3
+    },
+    "characteristics": [
+      "int",
+      "wp",
+      "fel",
+      "i"
+    ],
+    "skills": [
+      "Channelling (Ulgu)",
+      "Dodge",
+      "Intuition",
+      "Language (Magick)",
+      "Lore (Magic)",
+      "Melee (Basic)",
+      "Melee (Polearm)",
+      "Perception",
+      "Secret Signs (Grey Order)",
+      "Stealth (Urban)",
+      "Charm",
+      "Cool",
+      "Entertain (Acting)",
+      "Gossip",
+      "Intimidate",
+      "Language (Any)"
+    ],
+    "talents": [
+      "Arcane Magic (Shadows)",
+      "Detect Artefact",
+      "Fast Hands",
+      "Sixth Sense"
+    ],
+    "trappings": [
+      "Magical Licence",
+      "Practical Robes"
+    ],
+    "incomeSkill": [
+      3
+    ]
+  },
+  "type": "career",
+  "folder": "EGdnaG0JFAHnazff",
+  "img": "modules/wfrp4e-wom/assets/icons/careers/shadowmancer-02.png",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Shadowmancer",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676401395594,
+    "modifiedTime": 1693273575782,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "jRxK82URXmYjFor2",
+  "_key": "!items!jRxK82URXmYjFor2"
+}

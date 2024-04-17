@@ -1,0 +1,58 @@
+{
+  "_id": "lzXeW8A4OkFiAwxH",
+  "name": "Kroczący po Wodzie",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Po pomyślnym wykonaniu Wymagającego (+0) Testu Opanowania, możesz przejść, przebrnąć lub przepłynąć zbiornik wodny bez odniesienia obrażeń lub jakichkolwiek negatywnych skutków. Musisz rzucić ponownie za każde nowe przekroczenie akwenu lub 100 metrów wody. Wzięcie tego Daru Krwi po raz drugi oznacza, że jesteś całkowicie odporny na wodę i nie musisz w ogóle rzucać.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "2"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "folder": "IdBKVE70UjsZfSoR",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.311",
+    "createdTime": 1707139629105,
+    "modifiedTime": 1707139629241,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 1300000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!lzXeW8A4OkFiAwxH"
+}

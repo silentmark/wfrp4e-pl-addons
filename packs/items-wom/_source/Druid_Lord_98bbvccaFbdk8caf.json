@@ -1,0 +1,113 @@
+{
+  "name": "Druid Lord",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>@UUID[Compendium.wfrp4e-wom.journals.Q9sQhbDN8NUHXYdA.JournalEntryPage.KGWoTLSkr4Gj2AlR]{Druid}</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "careergroup": {
+      "type": "String",
+      "label": "Career Group",
+      "value": "Druid"
+    },
+    "class": {
+      "type": "String",
+      "label": "Class",
+      "value": "Academics"
+    },
+    "current": {
+      "type": "Boolean",
+      "value": false
+    },
+    "complete": {
+      "type": "Boolean",
+      "value": false
+    },
+    "level": {
+      "type": "String",
+      "label": "Career Level",
+      "value": "4"
+    },
+    "status": {
+      "tier": "g",
+      "standing": 2
+    },
+    "characteristics": [
+      "ws",
+      "i",
+      "ag",
+      "int",
+      "wp",
+      "fel"
+    ],
+    "skills": [
+      "Channelling (Ghyran)",
+      "Charm Animal",
+      "Dodge",
+      "Intuition",
+      "Language (Magick)",
+      "Lore (Magic)",
+      "Melee (Basic)",
+      "Melee (Polearm)",
+      "Outdoor Survival",
+      "Perception",
+      "Charm",
+      "Gossip",
+      "Intimidate",
+      "Language (Any)",
+      "Language (Battle)",
+      "Navigation",
+      "Animal Care",
+      "Evaluate",
+      "Lore (Plants)",
+      "Ride (Horse)",
+      "Language (Any)",
+      "Lore (Any)"
+    ],
+    "talents": [
+      "Combat Aware",
+      "Frightening",
+      "Iron Will",
+      "War Wizard"
+    ],
+    "trappings": [
+      "Elaborate Robes",
+      "Garden Retreat",
+      "Library (Magic)"
+    ],
+    "incomeSkill": [
+      4
+    ]
+  },
+  "type": "career",
+  "folder": "EGdnaG0JFAHnazff",
+  "img": "modules/wfrp4e-wom/assets/icons/careers/druid-04.png",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Druid",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676321756006,
+    "modifiedTime": 1693273575689,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "98bbvccaFbdk8caf",
+  "_key": "!items!98bbvccaFbdk8caf"
+}

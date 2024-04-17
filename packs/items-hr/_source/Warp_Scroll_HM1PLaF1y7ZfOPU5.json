@@ -1,0 +1,86 @@
+{
+  "_id": "HM1PLaF1y7ZfOPU5",
+  "name": "Warp Scroll",
+  "type": "trapping",
+  "img": "modules/wfrp4e-horned-rat/assets/icons/skaven-equipment.png",
+  "effects": [],
+  "folder": "tgyh4rPxrQ50iOfJ",
+  "sort": 0,
+  "flags": {
+    "wfrp4e-horned-rat": {
+      "initialization-folder": "Magic Items",
+      "sort": 0
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><strong>Availability:</strong> Pestilens and allied clans only</p><p>Plague Priests going to war often bring along copies of key passages from the great Liber Bubonicus, written in Warpstone-infused ink on the cured hides of defeated enemies. Each scroll contains one spell from the @UUID[JournalEntry.yGkrRqB7Cf0aiuCA.JournalEntryPage.Mn2r16uO3nJRhOzy#the-lore-of-plague]{Lore of Plague}, which may be cast once by reading the scroll out loud. No Casting Test is necessary, and there is no chance of a miscast or a critical.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "None"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": ""
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "AUExJb3c35oBvDuA": 3,
+    "R44a2dfsw2hWQXbE": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1687734901063,
+    "modifiedTime": 1693273568135,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!HM1PLaF1y7ZfOPU5"
+}

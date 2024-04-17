@@ -1,0 +1,118 @@
+{
+  "_id": "X6elMJcLKft2mMgd",
+  "name": "Lodowata Obecność",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [
+    {
+      "_id": "yBejVbykKyzEQT8F",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "addItems",
+          "effectApplication": "actor",
+          "script": "fromUuid(\"Compendium.wfrp4e-core.items.7HSUM2iPZLX4ueIW\").then(item => {\n   item = item.toObject()\n   this.actor.createEmbeddedDocuments(\"Item\", [item], {fromEffect : this.effect.id})\n})",
+          "preventDuplicateEffects": false,
+          "hide": false,
+          "scriptData": [
+            {
+              "label": "Lodowata Obecność",
+              "trigger": "addItems",
+              "script": "let item = await fromUuid(\"Compendium.wfrp4e-core.items.7HSUM2iPZLX4ueIW\");\nitem = item.toObject();\nthis.actor.createEmbeddedDocuments(\"Item\", [item], {fromEffect : this.effect.id});",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "applicationData": {
+            "documentType": "Item",
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false,
+            "type": "document",
+            "testIndependent": false,
+            "equipTransfer": false
+          }
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null,
+        "combat": null
+      },
+      "icon": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+      "tint": null,
+      "transfer": true,
+      "name": "Lodowata Obecność",
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "_key": "!items.effects!X6elMJcLKft2mMgd.yBejVbykKyzEQT8F"
+    }
+  ],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Otrzymujesz Cechę Stworzeń @Compendium[wfrp4e-core.items.7HSUM2iPZLX4ueIW]{Lodowaty Uścisk}.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "1"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "folder": "IdBKVE70UjsZfSoR",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.311",
+    "createdTime": 1700563423718,
+    "modifiedTime": 1707139629241,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 4000000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!X6elMJcLKft2mMgd"
+}

@@ -1,0 +1,104 @@
+{
+  "folder": "eDa26yROvXFICcCq",
+  "name": "Aura of Growth",
+  "type": "trait",
+  "img": "modules/wfrp4e-wom/assets/icons/marks/mark-ghyran.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You emit an aura of growth and vigour. Remaining in one place for any extended period causes a noticeable boost in the life and colour of the surrounding flora, no matter where you reside. Any Outdoor Survival Tests you make to find food benefit from +1 SL.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-wom/assets/icons/marks/mark-ghyran.png",
+      "transfer": true,
+      "_id": "vjN4bafHeMwwrLqB",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "dialogChoice",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "effectData": {
+            "description": "Outdoor Survival Tests to find food",
+            "modifier": null,
+            "slBonus": 1,
+            "successBonus": null,
+            "difficultyStep": null
+          }
+        }
+      },
+      "name": "Aura of Growth",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!WLJ6RyFWt4PAP6pm.vjN4bafHeMwwrLqB"
+    }
+  ],
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Ghyran",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676321967717,
+    "modifiedTime": 1693273575746,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "WLJ6RyFWt4PAP6pm",
+  "_key": "!items!WLJ6RyFWt4PAP6pm"
+}

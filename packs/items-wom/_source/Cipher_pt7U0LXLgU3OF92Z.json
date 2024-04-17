@@ -1,0 +1,98 @@
+{
+  "type": "trait",
+  "name": "Cipher",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You become less remarkable. A long nose becomes shorter, a scar less visible. Your face becomes less recognisable and more generic. You gain the @UUID[Compendium.wfrp4e-core.items.5KP9sOoLSGvj9EXp]{Beneath Notice} Talent.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "folder": "l8wVUGcsOa1Xr73u",
+  "img": "modules/wfrp4e-wom/assets/icons/marks/mark-ulgu.png",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-wom/assets/icons/marks/mark-ulgu.png",
+      "transfer": true,
+      "_id": "luvBBflpL4Mfqcdr",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "addItems",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "fromUuid(\"Compendium.wfrp4e-core.items.5KP9sOoLSGvj9EXp\").then(item => {\n    let data = item.toObject();\n    Item.create(data, {fromEffect : this.effect.id, parent : this.actor});\n})"
+        }
+      },
+      "name": "Cipher",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!pt7U0LXLgU3OF92Z.luvBBflpL4Mfqcdr"
+    }
+  ],
+  "sort": 200000,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Ulgu",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676401804946,
+    "modifiedTime": 1693273575794,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "pt7U0LXLgU3OF92Z",
+  "_key": "!items!pt7U0LXLgU3OF92Z"
+}

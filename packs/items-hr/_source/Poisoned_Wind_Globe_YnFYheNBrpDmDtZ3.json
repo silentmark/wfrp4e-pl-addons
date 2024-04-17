@@ -1,0 +1,209 @@
+{
+  "_id": "YnFYheNBrpDmDtZ3",
+  "name": "Poisoned Wind Globe",
+  "type": "weapon",
+  "img": "modules/wfrp4e-horned-rat/assets/icons/poisoned-wind-globe.png",
+  "effects": [
+    {
+      "_id": "HiTsdSOBnweJ4NvN",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-horned-rat/assets/icons/poisoned-wind-globe.png",
+      "transfer": false,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "let test = await args.actor.setupCharacteristic(\"t\")\n    await test.roll();\n    if (test.result.outcome == \"failure\")\n    {\n        let damage = 4\n\n        this.actor.applyBasicDamage(damage, {damageType : \n        game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL})\n    }"
+        }
+      },
+      "tint": null,
+      "origin": null,
+      "name": "Poisoned Wind Globe",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!YnFYheNBrpDmDtZ3.HiTsdSOBnweJ4NvN"
+    },
+    {
+      "_id": "9kECZlO8hHwOB11S",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-horned-rat/assets/icons/poisoned-wind-globe.png",
+      "transfer": true,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "rollWeaponTest",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "if ((args.test.weapon.id == this.item.id || args.test.weapon.ammo?.id == this.item.id) && args.test.isFumble)\n{\n    args.test.result.other.push(\"@Table[poisoned-wind-globe]\")\n}"
+        }
+      },
+      "tint": null,
+      "origin": null,
+      "name": "Poisoned Wind Globe - Miss",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!YnFYheNBrpDmDtZ3.9kECZlO8hHwOB11S"
+    }
+  ],
+  "folder": "nGPaTlfpoNth2LAG",
+  "sort": 700000,
+  "flags": {
+    "core": {
+      "sourceId": "Item.XQUUXABuxh2BpNPJ"
+    },
+    "wfrp4e-horned-rat": {
+      "initialization-folder": "Weapons",
+      "sort": 700000
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><strong>Availability:</strong> Skyre and allied clans only</p><p>A @UUID[JournalEntry.oXly0RXc3Z3vnVrH.JournalEntryPage.SJRe53QCz0UDC1Dn]{Clan Skryre} innovation, these small hollow glass spheres contain a noxious gas. When thrown, the sphere shatters, dispersing the poison. If the globe fails to hit its target, consult the following table: @Table[poisoned-wind-globe]{Poisoned Wind Globe}</p><p>When the globe shatters, it releases a cloud of poisonous gas 3 yards in diameter and 3 yards high. The cloud persists for [[/br 1d10–1 # Rounds]] rounds (a roll of 1 indicating that there is a draught or breeze strong enough to disperse it instantly). Every Character within the cloud must make a <strong>Challenging (+0) Toughness</strong> Test, modified by @UUID[Compendium.wfrp4e-core.items.vMYEkrWj0ip6ZOdv]{Resistance (Poison)} and similar Talents or Traits, or suffer a +4 Damage hit that ignores armour and Toughness. A target must repeat the Test every round they remain in the cloud. </p><p>Poisoned Wind Globes are sometimes deployed as traps, using a simple tripwire. If a Character fails to spot the tripwire — <strong>Challenging (+0) Perception</strong> Test — the trap is sprung, and the globe shatters at the Character’s feet. Treat these as any other attack with this weapon, centred on the triggering Character.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "special"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "damageToItem": {
+      "type": "Number",
+      "value": 0,
+      "shield": 0
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "reach": {
+      "type": "String",
+      "label": "Reach",
+      "value": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "SBx3"
+    },
+    "skill": {
+      "type": "String",
+      "label": "Skill Override",
+      "value": ""
+    },
+    "modeOverride": {
+      "type": "String",
+      "label": "Mode Override",
+      "value": ""
+    },
+    "twohanded": {
+      "type": "Boolean",
+      "label": "Two-Handed",
+      "value": false
+    },
+    "ammunitionGroup": {
+      "type": "String",
+      "label": "Ammunition Group",
+      "value": "none"
+    },
+    "currentAmmo": {
+      "type": "Number",
+      "value": 0
+    },
+    "consumesAmmo": {
+      "value": true
+    },
+    "weaponGroup": {
+      "type": "String",
+      "label": "Weapon Group",
+      "value": "throwing"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    },
+    "equipped": false,
+    "loaded": {
+      "value": false,
+      "repeater": false,
+      "amt": 0
+    },
+    "offhand": {
+      "value": false
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "AUExJb3c35oBvDuA": 3,
+    "R44a2dfsw2hWQXbE": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1687734901071,
+    "modifiedTime": 1693273568148,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!YnFYheNBrpDmDtZ3"
+}

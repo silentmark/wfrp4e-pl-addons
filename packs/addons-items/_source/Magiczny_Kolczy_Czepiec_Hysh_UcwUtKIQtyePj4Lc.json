@@ -1,0 +1,205 @@
+{
+  "name": "Magiczny Kolczy Czepiec Hysh",
+  "type": "armour",
+  "flags": {
+    "_sheetTab": "details",
+    "core": {}
+  },
+  "img": "modules/wfrp4e-core/icons/equipment/armour/mail-shirt.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Jeden z najbardziej popularnych pancerzy, nie wymagający wysokiego poziomu rzemiosła. Przez setki lat kolczuga była oznaką wyższego statusu, chętnie ozdabiana kółkami z metali kolorowych - wykańczano nimi najczęściej krawędzie, by nie osłabiać konstrukcji. Sposób łączenia i tworzenia splotów jest bardzo różna, często zależna od regionu i poziomu rzemiosła. Kolczuga to pancerz tak rozpowszechniony, że każdy (jeśli nie dotykał) przynajmniej widział ją z daleka.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 2
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "50",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "scarce"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "damageToItem": {
+      "type": "Number",
+      "value": 0,
+      "shield": 0
+    },
+    "worn": {
+      "type": "Boolean",
+      "label": "Worn",
+      "value": true
+    },
+    "armorType": {
+      "type": "String",
+      "label": "Armour Type",
+      "value": "heavy"
+    },
+    "penalty": {
+      "type": "String",
+      "label": "Penalty",
+      "value": ""
+    },
+    "qualities": {
+      "type": "String",
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "type": "String",
+      "label": "Flaws",
+      "value": []
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": "Warstwa Uzupełniająca, Kolczuga, Metal"
+    },
+    "AP": {
+      "head": 2,
+      "lArm": 0,
+      "rArm": 0,
+      "lLeg": 0,
+      "rLeg": 0,
+      "body": 0
+    },
+    "APdamage": {
+      "head": 0,
+      "lArm": 0,
+      "rArm": 0,
+      "lLeg": 0,
+      "rLeg": 0,
+      "body": 0
+    },
+    "maxAP": {
+      "head": 0,
+      "lArm": 2,
+      "rArm": 2,
+      "lLeg": 0,
+      "rLeg": 0,
+      "body": 0
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-core/icons/equipment/armour/mail-shirt.png",
+      "transfer": true,
+      "name": "Magiczny Pancerz Hysh",
+      "_id": "lg8ygLyDu3WqpOUo",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "effectTrigger": "targetPrefillDialog",
+          "effectApplication": "actor",
+          "areaEffect": false,
+          "hide": false,
+          "preventDuplicateEffects": true,
+          "script": ""
+        },
+        "core": {
+          "sourceId": "Actor.WycQDKAbmtesAJmz.Item.uLDt9MhNbpIkvd7E.ActiveEffect.WusLejEWuPHwDBQn"
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!UcwUtKIQtyePj4Lc.lg8ygLyDu3WqpOUo"
+    },
+    {
+      "icon": "modules/wfrp4e-core/icons/equipment/armour/mail-shirt.png",
+      "transfer": true,
+      "name": "Magiczny Pancerz Hysh - Oślepienie",
+      "_id": "qOVgqaOS7xWT7pLC",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "effectTrigger": "takeDamage",
+          "effectApplication": "actor",
+          "areaEffect": false,
+          "hide": false,
+          "preventDuplicateEffects": true,
+          "script": ""
+        },
+        "core": {
+          "sourceId": "Actor.WycQDKAbmtesAJmz.Item.uLDt9MhNbpIkvd7E.ActiveEffect.y9Cdja5FH9xmvXvO"
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!UcwUtKIQtyePj4Lc.qOVgqaOS7xWT7pLC"
+    }
+  ],
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.2",
+    "coreVersion": "11.311",
+    "createdTime": 1675639492194,
+    "modifiedTime": 1696767880724,
+    "lastModifiedBy": "Czz7IJA9DEa5LD9E"
+  },
+  "_id": "UcwUtKIQtyePj4Lc",
+  "folder": "ZP0UuGj1tO64CDBP",
+  "sort": 103125,
+  "ownership": {
+    "default": 0,
+    "Czz7IJA9DEa5LD9E": 3
+  },
+  "_key": "!items!UcwUtKIQtyePj4Lc"
+}

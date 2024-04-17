@@ -1,0 +1,93 @@
+{
+  "name": "Walk on Water (Water)",
+  "permission": {
+    "default": 0,
+    "49AXXoPz63AAzPKB": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Water magically repels your feet slightly while you move, allowing you to cross rivers, streams, lakes, marshes, pools, mud, slippery ground and the like without difficulty. You must step onto the watery surface within a minute of casting and the spell ends when you step onto dry land.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Elementalism",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "You"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "You",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Special",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 2,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.57gPyoeoQjFrHBVE"
+    },
+    "dynamiceffects": {
+      "equipActive": false,
+      "alwaysActive": false,
+      "effects": []
+    },
+    "exportSource": {
+      "world": "the-old-world",
+      "system": "wfrp4e",
+      "coreVersion": "0.6.6",
+      "systemVersion": "2.1.0"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_walk_on_water.jpg",
+  "_id": "3ZETDQ5IA4CqDOek",
+  "effects": [],
+  "_key": "!items!3ZETDQ5IA4CqDOek"
+}

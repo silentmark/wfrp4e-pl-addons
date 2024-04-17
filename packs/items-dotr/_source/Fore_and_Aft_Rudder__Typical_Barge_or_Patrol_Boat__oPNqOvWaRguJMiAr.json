@@ -1,0 +1,96 @@
+{
+  "_id": "oPNqOvWaRguJMiAr",
+  "name": "Fore-and-Aft Rudder (Typical Barge or Patrol Boat)",
+  "type": "vehicleMod",
+  "img": "modules/wfrp4e-dotr/assets/icons/upgrade.png",
+  "effects": [
+    {
+      "_id": "qplGSo2QoZxC7I9K",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prefillDialog",
+          "effectApplication": "actor",
+          "script": "if (args.options.vehicle && args.options.handling)\n{\n    args.prefillModifiers.modifier += 20\n}",
+          "hide": false,
+          "preventDuplicateEffects": false
+        }
+      },
+      "changes": [
+        {
+          "key": "system.details.move.value",
+          "value": "-1",
+          "mode": 2,
+          "priority": null
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-dotr/assets/icons/upgrade.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Fore-and-Aft Rudder",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!oPNqOvWaRguJMiAr.qplGSo2QoZxC7I9K"
+    }
+  ],
+  "folder": "mqmgFBAdX7S24AT7",
+  "sort": 700000,
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Steering",
+      "sort": 700000
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>For maximum manoeuvrability, a second rudder may be added to the bow of the boat. This reduces the boat&rsquo;s Movement score by &ndash;1, but given a trained crewmember at both rudders, all <strong>Boat Handling</strong> Tests involving steering receive a +20 bonus.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "60",
+      "ss": "0",
+      "bp": "0"
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 55
+    },
+    "modType": {
+      "value": "steering"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "2TbX8z7IWr0GFssP": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "hv1aja7lAR8ZyKUO": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1681859838895,
+    "modifiedTime": 1693273562903,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!oPNqOvWaRguJMiAr"
+}

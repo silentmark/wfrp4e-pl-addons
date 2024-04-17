@@ -1,0 +1,66 @@
+{
+  "name": "Dooming",
+  "type": "trait",
+  "img": "modules/wfrp4e-core/icons/traits/trait.png",
+  "folder": "bcsBo6VcLKfBnjXc",
+  "flags": {
+    "wfrp4e-salzenmund": {
+      "initialization-folder": "Spites of the Laurelorn",
+      "sort": 0
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The Dooming trait works as if the creature had the @UUID[Compendium.wfrp4e-core.items.5muSFXd6oc760uVj]{Blessed (Morr)} Trait and access to the @UUID[Compendium.wfrp4e-core.items.itARFNqBAbwNDAAy]{Dooming} Miracle. However, Despairs are not beholden to any Human god, and while their abilities mirror those of priests of Morr, they are an innate talent of the Spites. The Spite uses its Willpower for Dooming, not the <em>Invoke</em> Talent.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": true,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "wp",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wjUQkVmn4leETiQ6": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1687134833766,
+    "modifiedTime": 1693273572806,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "jBtGmJvbm8x4w4mW",
+  "_key": "!items!jBtGmJvbm8x4w4mW"
+}

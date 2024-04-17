@@ -1,0 +1,130 @@
+{
+  "_id": "haU1lwDNVna2TnHe",
+  "name": "Spider Venom Arrows",
+  "type": "ammunition",
+  "img": "systems/wfrp4e/icons/blank.png",
+  "effects": [
+    {
+      "_id": "L3IVW8KnM36pqksu",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "systems/wfrp4e/icons/blank.png",
+      "transfer": true,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "applyDamage",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "let testCallback = test => {\n    test.roll().then(test => {\n        console.log(test)\n        if (test.result.outcome == \"failure\") {\n            test.actor.addCondition(\"poisoned\")\n            if (test.actor.status.wounds.value == 0)\n                test.actor.addCondition(\"unconscious\")\n        }\n    })\n}\n\ndebugger\n\nif (this.actor.isOwner) {\n    if (args.actor.items.getName(\"Endurance\"))\n        args.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), { context: { failure: \"1 @Condition[Poisoned] Condition Gained\", success: \"Resisted @Condition[Poisoned] Condition\" } }).then(testCallback)\n    else\n        args.actor.setupCharacteristic(\"t\", { context: { failure: \"1 @Condition[Poisoned] Condition Gained\", success: \"Resisted @Condition[Poisoned] Condition\" } }).then(testCallback)\n}"
+        }
+      },
+      "tint": null,
+      "origin": null,
+      "name": "Spider Venom Arrows",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!haU1lwDNVna2TnHe.L3IVW8KnM36pqksu"
+    }
+  ],
+  "folder": "9WFcylfbh9ys2bLd",
+  "sort": 100000,
+  "flags": {
+    "wfrp4e-owb1": {
+      "initialization-folder": "The Cluster-Eye Tribe",
+      "sort": 100000
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The Goblins of the Drakwald, especially the Forest Goblins who make alliance with the many terrible Spiders of that place, quickly learn to put their allies venom to work. Most arrows are dipped in Spider Venom, which quickly weakens most targets, or even renders most targets unconcious.</p>\n<p>Targets wounded by these arrows dipped in Spider Venom must make a <strong>Challenging (+0) Endurance</strong> Test. If they fail, they are inflicted with 1 @Condition[Poisoned] condition. Spider venom is tailored not to kill victims but to render them unconcious. Targets reduced to 0 wounds while suffering a Poisoned condition from these arrows become Unconcious, but are not at risk of death from any remaining Poisoned conditions as wuold normally be the case.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "None"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "ammunitionType": {
+      "type": "String",
+      "label": "Ammunition Type",
+      "value": "bow"
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": ""
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "qualities": {
+      "type": "String",
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "type": "String",
+      "label": "Flaws",
+      "value": []
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "Xlvhg98mSSaskNtI": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1687730662724,
+    "modifiedTime": 1693273569625,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!haU1lwDNVna2TnHe"
+}

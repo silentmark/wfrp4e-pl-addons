@@ -1,0 +1,188 @@
+{
+  "name": "Gehenna’s Golden Globe",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You create a magical, golden sphere that transforms those it touches into statues. Targets within the AoE are affected as if by the @UUID[Compendium.wfrp4e-wom.items.JFbQIzH3eX1dSH9I]{Golden Touch} spell. This spell uses the random vortex rules.</p><p><strong>Lore:</strong> Spells inflicting Damage ignore Armor Points from metal armor, and inflict bonus Damage equal to the number of Armor Points of metal armor being worn on any Hit Location struck. So, if your spell hit an Arm location protected by 2 Armor Points of metal armor, it would cause an additional +2 Damage and ignore the Armor Points.</p><p></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "metal",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Random Vortex",
+      "vortex": true
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "2 * Willpower Bonus yards",
+      "aoe": true
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus rounds",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 13,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "type": "spell",
+  "folder": "PuRXlumJzE8wmvzt",
+  "img": "modules/wfrp4e-core/icons/spells/metal.png",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-core/icons/spells/metal.png",
+      "transfer": false,
+      "_id": "AB9Lz5MovUNx6WTX",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prepareData",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "\nthis.actor.characteristics.t.bonus = 10\n\nthis.actor.details.move.value = 0;\nthis.actor.details.move.walk= 0;\nthis.actor.details.move.run = 0;\n\nif (this.actor.token)\n{\n     this.actor.token.texture.tint = \"#FFD700\"\n}"
+        },
+        "core": {
+          "sourceId": "Item.JFbQIzH3eX1dSH9I.ActiveEffect.yxZfRfhqOSDXMJYb"
+        }
+      },
+      "name": "Golden Touch",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!2t3wuPlBohihPhza.AB9Lz5MovUNx6WTX"
+    },
+    {
+      "icon": "modules/wfrp4e-core/icons/spells/metal.png",
+      "transfer": false,
+      "_id": "8M12tLzNyhPuYuK1",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "let test = await this.actor.setupCharacteristic(\"wp\");\nawait test.roll();"
+        }
+      },
+      "name": "Willpower Test",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!2t3wuPlBohihPhza.8M12tLzNyhPuYuK1"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Metal",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676244822759,
+    "modifiedTime": 1693273575673,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "2t3wuPlBohihPhza",
+  "_key": "!items!2t3wuPlBohihPhza"
+}

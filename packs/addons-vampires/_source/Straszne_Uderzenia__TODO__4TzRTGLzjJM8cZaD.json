@@ -1,0 +1,119 @@
+{
+  "_id": "4TzRTGLzjJM8cZaD",
+  "name": "Straszne Uderzenia (TODO)",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [
+    {
+      "_id": "zEbxkNU8lsU0DmV5",
+      "flags": {
+        "wfrp4e": {
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "testIndependent": false,
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Straszne Uderzenia",
+              "trigger": "applyDamage",
+              "script": "// Get levels in Terrible Blows\nlet actorTerribleBlows = args.attacker.data.talents.find(talent=> talent.name === \"Terrible Blows\");\nlet terribleBlowsLevel = actorTerribleBlows.data.advances.value;\n\n// Add a message to remind players\nlet attackerName = args.attacker.name;\nlet defenderName = args.actor.name;\nlet messageContent = `<b>${attackerName}'s</b> Terrible Blows deal <b>${terribleBlowsLevel}</b> to <b>${defenderName}</b>`;\n\n// Now set minimum wound loss from the level of Terrible Blows\nif (args.totalWoundLoss <= 0) {\n  args.totalWoundLoss += terribleBlowsLevel ;\n  ChatMessage.create({content: messageContent});\n}",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "actor",
+            "effectTrigger": "applyDamage",
+            "preventDuplicateEffects": false,
+            "script": "// Get levels in Terrible Blows\nlet actorTerribleBlows = args.attacker.data.talents.find(talent=> talent.name === \"Terrible Blows\");\nlet terribleBlowsLevel = actorTerribleBlows.data.advances.value;\n\n// Add a message to remind players\nlet attackerName = args.attacker.name;\nlet defenderName = args.actor.name;\nlet messageContent = `<b>${attackerName}'s</b> Terrible Blows deal <b>${terribleBlowsLevel}</b> to <b>${defenderName}</b>`;\n\n// Now set minimum wound loss from the level of Terrible Blows\nif (args.totalWoundLoss <= 0) {\n  args.totalWoundLoss += terribleBlowsLevel ;\n  ChatMessage.create({content: messageContent});\n}"
+          }
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null,
+        "combat": null
+      },
+      "icon": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+      "tint": null,
+      "transfer": true,
+      "name": "Straszne Uderzenia",
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "_key": "!items.effects!4TzRTGLzjJM8cZaD.zEbxkNU8lsU0DmV5"
+    }
+  ],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Minimalne obrażenia, jakie zadajesz w walce wręcz, po uwzględnieniu premii do pancerza i wytrzymałości, zwiększają się o +1 na każdy poziom tego Daru Krwi.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "s"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "folder": "R9GP6kUptFm6hQ24",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.311",
+    "createdTime": 1707136744149,
+    "modifiedTime": 1707136744149,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!4TzRTGLzjJM8cZaD"
+}

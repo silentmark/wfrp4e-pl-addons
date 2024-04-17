@@ -1,0 +1,111 @@
+{
+  "_id": "KoPj0rsFrR8bmweR",
+  "name": "Master Magus",
+  "type": "career",
+  "img": "modules/wfrp4e-eis/assets/icons/magus4.png",
+  "effects": [],
+  "folder": "QeoD6AzEAdnBpCXy",
+  "sort": 0,
+  "flags": {
+    "_sheetTab": "details",
+    "wfrp4e-eis": {
+      "initialization-folder": "Careers"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>@UUID[Compendium.wfrp4e-eis.journals.IZVgB7zmTm4rK2yJ.JournalEntryPage.okL3l1pH269uRycI]{Cult Magus of Tzeentch}</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "careergroup": {
+      "type": "String",
+      "label": "Career Group",
+      "value": "Cult Magus of Tzeentch"
+    },
+    "class": {
+      "type": "String",
+      "label": "Class",
+      "value": ""
+    },
+    "current": {
+      "type": "Boolean",
+      "value": false
+    },
+    "complete": {
+      "type": "Boolean",
+      "value": false
+    },
+    "level": {
+      "type": "String",
+      "label": "Career Level",
+      "value": "4"
+    },
+    "status": {
+      "tier": "g",
+      "standing": 2
+    },
+    "characteristics": [
+      "fel",
+      "wp",
+      "int",
+      "i",
+      "ag",
+      "t"
+    ],
+    "skills": [
+      "Channelling (Dhar)",
+      "Entertain (Acting)",
+      "Intuition",
+      "Language (Magick)",
+      "Lore (Tzeentch)",
+      "Perception",
+      "Secret Signs (Cultist)",
+      "Stealth (Urban)",
+      "Charm",
+      "Cool",
+      "Dodge",
+      "Endurance",
+      "Research",
+      "Sleight of Hand",
+      "Entertain (Storytelling)",
+      "Intimidate",
+      "Leadership",
+      "Melee (Basic)",
+      "Language (Dark Tongue)",
+      "Lore (Any)"
+    ],
+    "talents": [
+      "Commanding Presence",
+      "Frightening",
+      "Impassioned Zeal",
+      "Savant (Tzeentch)"
+    ],
+    "trappings": [
+      "Chaos Cult",
+      "Terrible Destiny"
+    ],
+    "incomeSkill": [
+      3
+    ]
+  },
+  "ownership": {
+    "default": 0,
+    "gayF6NJkrMg4HTG0": 3,
+    "VnnpieLwbiAu3Owf": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1693273565130,
+    "modifiedTime": 1693273565130,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!KoPj0rsFrR8bmweR"
+}

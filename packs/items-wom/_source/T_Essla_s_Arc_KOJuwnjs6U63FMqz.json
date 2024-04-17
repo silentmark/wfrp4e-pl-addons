@@ -1,0 +1,156 @@
+{
+  "name": "T’Essla’s Arc",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>A crackling bolt of lightning shoots from your fingertips, striking your target. This is a magic missile with Damage +10 that inflicts 1 @Condition[Blinded] Condition. </p><p>\n\n <b>Lore:</b> Spells causing Damage ignore Armour Points from metal armour, and will arc to all other targets within 2 yards, except those with the Arcane Magic (Heavens) Talent, inflicting hits with a Damage equal to your Willpower Bonus, handled like a magical missile.<p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "heavens",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower yards",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "1",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Instant",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": "10"
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 7,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": true
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "type": "spell",
+  "folder": "dWExO2jRqil2AwZo",
+  "img": "modules/wfrp4e-core/icons/spells/tesslas-arc.png",
+  "effects": [
+    {
+      "_id": "0VT3GNn7ow0EWLqR",
+      "flags": {
+        "wfrp4e": {
+          "effectApplication": "damage",
+          "effectTrigger": "applyDamage",
+          "script": "args.actor.addCondition(\"blinded\")",
+          "preventDuplicateEffects": false
+        },
+        "core": {
+          "sourceId": "Compendium.wfrp4e-core.items.r3BgUFaaCzsLIUDi.ActiveEffect.mZeuk9vqhH1nn27h"
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/spells/tesslas-arc.png",
+      "tint": null,
+      "transfer": false,
+      "origin": null,
+      "name": "T'Essla's Arc",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!KOJuwnjs6U63FMqz.0VT3GNn7ow0EWLqR"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Heavens",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676324249298,
+    "modifiedTime": 1693273575717,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "KOJuwnjs6U63FMqz",
+  "_key": "!items!KOJuwnjs6U63FMqz"
+}

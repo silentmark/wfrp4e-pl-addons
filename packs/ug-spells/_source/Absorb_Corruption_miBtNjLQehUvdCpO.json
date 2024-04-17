@@ -1,0 +1,82 @@
+{
+  "name": "Absorb Corruption",
+  "permission": {
+    "default": 0,
+    "OfKMBdcUK6oV9G48": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You lay your hands on a character or mundane animal of your Size or smaller and remove 1 Corruption point from it, absorbing it into your soul. In the process you must make an Endurance Test against Minor Exposure to Corruption. Casting this spell on a creature with the Corruption Creature Trait has no effect unless the GM wishes it to.</p>\n<p><strong>Overcast</strong>: For every +3 SL, you may absorb another Corruption point but you must make another Test against Corruption (Minor) exposure.</p>\n<p>&nbsp;</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Seasons",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Touch"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "1",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Instant",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 12,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.57gPyoeoQjFrHBVE"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_absorb.jpg",
+  "effects": [],
+  "_id": "miBtNjLQehUvdCpO",
+  "_key": "!items!miBtNjLQehUvdCpO"
+}

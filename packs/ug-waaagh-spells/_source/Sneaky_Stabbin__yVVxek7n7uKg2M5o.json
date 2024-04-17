@@ -1,0 +1,82 @@
+{
+  "_id": "yVVxek7n7uKg2M5o",
+  "name": "Sneaky Stabbin’",
+  "permission": {
+    "default": 0,
+    "LhiA8OMMa0ToAWEe": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You bewitch the blades of your allies, so that they seek out the weakest points in their enemies&rsquo; armour. Your targets gain +1 Advantage, and their attacks gain the Penetrating Weapon Quality (<strong>WFRP</strong>, page 298) which lasts for as long as they have Advantage.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Da Lit'lest Waaagh!",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower yards"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Fellowship Bonus Goblins",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Special",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 2,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.CPdUL0bFateh0RNX"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_sneaky-stabbin%E2%80%99.jpg",
+  "effects": [],
+  "_key": "!items!yVVxek7n7uKg2M5o"
+}

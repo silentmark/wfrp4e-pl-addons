@@ -1,0 +1,129 @@
+{
+  "name": "Terror",
+  "type": "trait",
+  "img": "systems/wfrp4e/icons/blank.png",
+  "folder": "bcsBo6VcLKfBnjXc",
+  "flags": {
+    "wfrp4e-salzenmund": {
+      "initialization-folder": "Spites of the Laurelorn",
+      "sort": 0
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Terrors are rarely seen in the daytime, preferring the dark and shadows. Their greatest joy is in frightening people, finding their expressions of utmost terror hilarious, and they compete with one another to adopt the most frightening forms they can imagine. </p>"
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "2",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [
+    {
+      "icon": "systems/wfrp4e/icons/blank.png",
+      "transfer": true,
+      "_id": "YzvoIAPi9UYeICmP",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "let characteristics = {\n  \"ws\" : 5,\n  \"bs\" : 0,\n  \"s\" : -15,\n  \"t\" : 0,\n  \"i\" : 20,\n  \"ag\" : 0,\n  \"dex\" : 0,\n  \"int\" : 5,\n  \"wp\" : 10,\n  \"fel\" : 10\n}\nlet skills = [\"Charm\", \"Intimidate\", \"Melee (Basic)\"]\nlet skillAdvancements = [7, 60, 7]\nlet talents = [\"Menacing\", \"Shadow\"]\nlet traits = [\"Distracting\"]\nlet trappings = []\nlet items = [];\nlet spells = [];\n\nlet updateObj = this.actor.toObject();\n\nfor (let ch in characteristics)\n{\n  updateObj.system.characteristics[ch].modifier += characteristics[ch];\n}\n\nfor (let index = 0; index < skills.length; index++)\n{\n  let skill = skills[index]\n  let skillItem;\n  skillItem = updateObj.items.find(i => i.name == skill && i.type == \"skill\")\n  if (skillItem)\n      skillItem.system.advances.value += skillAdvancements[index]\n  else \n  {\n      skillItem = await game.wfrp4e.utility.findSkill(skill)\n      skillItem = skillItem.toObject();\n      skillItem.system.advances.value = skillAdvancements[index];\n      items.push(skillItem);\n  }\n}\n\nfor (let talent of talents)\n{\n  let talentItem = await game.wfrp4e.utility.findTalent(talent)\n  if (talentItem)\n  {\n      items.push(talentItem.toObject());\n  }\n  else \n  {\n      ui.notifications.warn(`Could not find ${talent}`, {permanent : true})\n  }\n}\n\nconst traitRegex = /(?:,?(.+?)(\\+?\\d{1,2}\\+?)?\\s*?(?:\\((.+?)\\)\\s*(\\+?\\d{1,2})?|,|$))/gm\nfor (let trait of traits)\n{\n  let traitMatches = trait.matchAll(traitRegex).next().value\n  let traitName = traitMatches[1]\n  let traitVal = traitMatches[2] || traitMatches[4] // could be match 2 or 4 depending on if there's a specialization\n  let traitSpec = traitMatches[3]\n\n  let traitItem;\n  try {\n      traitItem = await WFRP_Utility.findItem(traitName, \"trait\")\n  }\n  catch { }\n  if (!traitItem) {\n      ui.notifications.warn(`Could not find ${trait}`, {permanent : true})\n  }\n  traitItem = traitItem.toObject()\n\n  if (Number.isNumeric(traitVal))\n  {\n      traitItem.system.specification.value = traitName.includes('Weapon','Horns','Tail','Tentacles','Bite') ? traitVal - parseInt(characteristicValues[3]/10) : traitVal;\n      traitItem.name = (traitItem.name +  ` ${traitSpec ? \"(\"+ traitSpec + \")\" : \"\"}`).trim()\n  }\n  else \n      traitItem.system.specification.value = traitSpec\n\n  items.push(traitItem)\n\n}\n\nfor (let trapping of trappings) \n{\n  let trappingItem = await game.wfrp4e.utility.findItem(trapping)\n  if (trappingItem)\n  {\n      trappingItem = trappingItem.toObject()\n\n      equip(trappingItem)\n\n      items.push(trappingItem);\n  }\n  else \n  {\n      ui.notifications.warn(`Could not find ${trapping}`, {permanent : true})\n  }\n}\n\nfor (let spell of spells) \n{\n  let spellItem = await game.wfrp4e.utility.findItem(spell)\n  if (spellItem)\n  {\n      spellItem = spellItem.toObject()\n\n      items.push(spellItem);\n  }\n  else \n  {\n      ui.notifications.warn(`Could not find ${spell}`, {permanent : true})\n  }\n}\n\nupdateObj.name = updateObj.name += \" \" + this.effect.name\n\nawait this.actor.update(updateObj)\nthis.actor.createEmbeddedDocuments(\"Item\", items);\n\n\nfunction equip(item)\n{\n  if (item.type == \"armour\")\n      item.worn = true\n  else if (item.type == \"weapon\")\n      item.equipped = true\n  else if (item.type == \"trapping\" && item.trappingType?.value == \"clothingAccessories\")\n      item.worn = true\n}"
+        }
+      },
+      "name": "Terror",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!CUd7aFDbW1b6WA2j.YzvoIAPi9UYeICmP"
+    },
+    {
+      "icon": "systems/wfrp4e/icons/blank.png",
+      "transfer": true,
+      "_id": "g0JsSbkV8xtXogpH",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": true,
+          "script": "fromUuid(\"Compendium.wfrp4e-core.items.kJNAY1YRaCy9IgmT\").then(item => {\n  let terrorTraitItem = item.toObject()\n  terrorTraitItem.system.specification.value = Number(this.effect.item.system.specification.value) \n  this.actor.createEmbeddedDocuments(\"Item\", [terrorTraitItem])\n})"
+        }
+      },
+      "name": "Terror Trait",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!CUd7aFDbW1b6WA2j.g0JsSbkV8xtXogpH"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wjUQkVmn4leETiQ6": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1687134833751,
+    "modifiedTime": 1693273572802,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "CUd7aFDbW1b6WA2j",
+  "_key": "!items!CUd7aFDbW1b6WA2j"
+}

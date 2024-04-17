@@ -1,0 +1,140 @@
+{
+  "name": "Zbrojnikowa Kamizela",
+  "type": "armour",
+  "flags": {
+    "_sheetTab": "details",
+    "core": {
+      "sourceId": "Compendium.wfrp4e-pl.armoury.d1ATRhuwIdl4FFZS"
+    }
+  },
+  "img": "modules/wfrp4e-core/icons/equipment/armour/mail-shirt.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Pancerz kryty Pancerz wykonany z małych, metalowych płytek - zamontowany do skóry lub tkaniny przybierał najróżniejsze formy, kroje i kolory przez lata. Min. zbrojaa łuskowa, lamelkowa, brygantyna, zbrojnikowa, płaty, brynia i wiele innych. Używana od początków obróbki metalu - do teraz. Wraz z czasem powstały coraz skuteczniejsze metody łączenia oraz zmniejszały się koszty produkcji. Ozdabiana na najbardziej rozmaite sposoby - od malowania płytek, poprzez pokrywanie zbroi ozdobnymi tkaninam oraz stosowania kolorowych metali. Pancerz kryty cenią postacie lubiące uniwersalność lub średnio zamożne. Jego szeroka dostępność, łatwość produkcji oraz dobre parametry obronne sprawiają, iż zdecydowanie jest on najbardziej popularnym typem pancerza.</p><p><br></p><p>Żelazo, stal, brąz, spiż - metale te ceniono zawsze za ich wytrzymałość. Stworzenie z nich pancerzy zakrywających całe ciało wymagało jednak zamocowania ich do czegoś, co trzymałoby je w miejscu. Poradzono sobie z tym wykonując metalowe płytki montowane do skóry lub tkaniny. Płytki te można odlewać, kuć lub formować na wszelkie kształty i sposoby. Mocowanie odbywa się przez naszywanie, nitowanie, zszywanie lub łączenie metalowymi kółeczkami blaszek metalowych. Sam materiał musiał też być odpowiednio gruby i wytrzymały, aby możliwe było przymocowanie do niego płytek. Małe elementy metalowe, łatwe do wykucia i zamontowania - zapewniały dobrą ochronę. Niedoskonałości tego typu pancerza rekompensuje łatwość wykonania oraz relatywnie niska cena. Zasadniczo wyróżniamy sześć podstawowych rodzajów pancerza krytego. Jego różnorodność pozwala nam jednak stworzyć nowe typy i rodzaje.</p><p><br></p><p><strong>Zbroja zbrojnikowa</strong> – długie, metalowe, rozklepane pręty przynitowane do skóry. Ze względu na sztywność są w stanie przykryć tylko duże płaskie powierzchnie, zostawiając otwarte stawy. Grubość metalowych elementów pozwala poczuć się bezpiecznym od większości ciosów, jednak wiele miejsc pozostaje nieosłoniętych, by zaoszczędzić na wadze.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 3
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "5",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "common"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "damageToItem": {
+      "type": "Number",
+      "value": 0,
+      "shield": 0
+    },
+    "worn": {
+      "type": "Boolean",
+      "label": "Worn",
+      "value": false
+    },
+    "armorType": {
+      "type": "String",
+      "label": "Armour Type",
+      "value": "medium"
+    },
+    "penalty": {
+      "type": "String",
+      "label": "Penalty",
+      "value": ""
+    },
+    "qualities": {
+      "type": "String",
+      "label": "Qualities",
+      "value": [
+        {
+          "name": "impenetrable",
+          "value": null
+        }
+      ]
+    },
+    "flaws": {
+      "type": "String",
+      "label": "Flaws",
+      "value": [
+        {
+          "name": "weakpoints",
+          "value": null
+        }
+      ]
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": "Warstwa Zewnętrzna, Metal"
+    },
+    "AP": {
+      "head": 0,
+      "lArm": 0,
+      "rArm": 0,
+      "lLeg": 0,
+      "rLeg": 0,
+      "body": 1
+    },
+    "APdamage": {
+      "head": 0,
+      "lArm": 0,
+      "rArm": 0,
+      "lLeg": 0,
+      "rLeg": 0,
+      "body": 0
+    },
+    "maxAP": {
+      "head": 0,
+      "lArm": 2,
+      "rArm": 2,
+      "lLeg": 0,
+      "rLeg": 0,
+      "body": 0
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "effects": [],
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.3.0",
+    "coreVersion": "10.291",
+    "createdTime": 1675639492194,
+    "modifiedTime": 1675815874978,
+    "lastModifiedBy": "Czz7IJA9DEa5LD9E"
+  },
+  "_id": "d1ATRhuwIdl4FFZS",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Czz7IJA9DEa5LD9E": 3
+  },
+  "_key": "!items!d1ATRhuwIdl4FFZS"
+}

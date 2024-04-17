@@ -1,0 +1,104 @@
+{
+  "_id": "kWdlpy80pa2ygBUN",
+  "name": "Silny Jad",
+  "type": "trait",
+  "flags": {
+    "_sheetTab": "description",
+    "core": {}
+  },
+  "img": "modules/wfrp4e-core/icons/traits/trait.png",
+  "effects": [
+    {
+      "_id": "cwsT8KWhr0OgtWc1",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "applyDamage",
+          "effectApplication": "actor",
+          "script": "if (args.totalWoundLoss > 0)\n    args.actor.addCondition(\"poisoned\", 2)",
+          "preventDuplicateEffects": true,
+          "areaEffect": false,
+          "hide": false
+        },
+        "core": {
+          "sourceId": "Actor.OjfRR2nBaATI3YSg.Item.kWdlpy80pa2ygBUN.ActiveEffect.cwsT8KWhr0OgtWc1"
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/traits/trait.png",
+      "origin": "Actor.YyISwYFXZCHWBJjk.Item.O09MlLXzbspKindJ",
+      "tint": null,
+      "transfer": true,
+      "name": "Silny Jad",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!kWdlpy80pa2ygBUN.cwsT8KWhr0OgtWc1"
+    }
+  ],
+  "folder": "Fn9BF4AZCCMMhKOf",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Ataki stworzenia są zatrute lub jadowite. Przeciwnicy, którym zadało ono Rany, otrzymują Stan @Condition[Zatrucie]. Jeśli nie jest podany poziom Trudności uniknięcia efektów jadu, domyślnie jest on Wymagający.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "Trudny",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.2",
+    "coreVersion": "11.311",
+    "createdTime": 1694505540574,
+    "modifiedTime": 1696797361723,
+    "lastModifiedBy": "Czz7IJA9DEa5LD9E"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Czz7IJA9DEa5LD9E": 3
+  },
+  "_key": "!items!kWdlpy80pa2ygBUN"
+}

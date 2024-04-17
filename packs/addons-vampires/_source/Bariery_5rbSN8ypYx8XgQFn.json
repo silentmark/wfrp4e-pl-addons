@@ -1,0 +1,68 @@
+{
+  "_id": "5rbSN8ypYx8XgQFn",
+  "name": "Bariery",
+  "type": "trait",
+  "flags": {
+    "_sheetTab": "details",
+    "core": {}
+  },
+  "img": "modules/wfrp4e-core/icons/injuries/amputatedarm.png",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Nie możesz przekroczyć progu żadnego mieszkania należącego do innej osoby bez uprzedniego zaproszenia. Po otrzymaniu zaproszenia możesz przychodzić i wychodzić, kiedy chcesz, do czasu zmiany właściciela mieszkania lub chyba, że zostanie ono zmienione. Zaproszenie nie musi być ustne, ale osoba zapraszająca musi mieć zamiar Cię zaprosić.</p><p>Nieruchomości niemieszkalne nie są wliczane do celów tej Słabości. Jeśli odwiedzasz miejsce publiczne (np. pub) z prywatnymi pomieszczeniami mieszkalnymi, bariera znajduje się na progu pomiędzy przestrzenią publiczną a częścią mieszkalną.</p><p>Twój dom, kiedy byłeś śmiertelnikiem, nie ma barier, pod warunkiem, że od tego czasu nie wprowadziła się do niego żadna inna rodzina. Ta słabość jest szczególnie powszechna u Nekrarchów.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "folder": "XwxUCN1xDJMXTjBk",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.311",
+    "createdTime": 1698787634711,
+    "modifiedTime": 1698787698112,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 1800000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!5rbSN8ypYx8XgQFn"
+}

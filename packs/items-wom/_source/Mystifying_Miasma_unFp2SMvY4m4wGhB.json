@@ -1,0 +1,154 @@
+{
+  "name": "Mystifying Miasma",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You conjure forth a swirling mass of mist shot through with roiling shadow that confounds the senses. Anyone within the mist without the <em>Arcane Magic (Shadows)</em> Talent is affected by the miasma, gaining 1 @Condition[Blinded], @Condition[Deafened], and @Condition[Fatigued] Condition, which remain for the spell’s duration. Affected creatures that attempt to move must pass a <strong>Challenging (+0) Perception</strong> Test or gain the @Condition[Prone] Condition.</p><p>If the spell is dispelled, anyone affected by the miasma must make an <strong>Easy (+40) Initiative</strong> Test or gain a @Condition[Stunned] Condition.</p><p><strong>Lore:</strong> All spells cast from the Lore of Shadows inflicting Damage ignore all non-magical Armor Points.</p><p></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "shadow",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower yards",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Willpower Bonus yards",
+      "aoe": true
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus rounds",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 6,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "type": "spell",
+  "folder": "wxBwSMVLtd5DgtDb",
+  "img": "modules/wfrp4e-core/icons/spells/mystifying-miasma.png",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-core/icons/spells/mystifying-miasma.png",
+      "transfer": false,
+      "_id": "9h0rxsBrfte4QnO7",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "args.actor.addCondition(\"blinded\")\nargs.actor.addCondition(\"deafened\")\nargs.actor.addCondition(\"fatigued\")"
+        }
+      },
+      "name": "Mystifying Miasma",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!unFp2SMvY4m4wGhB.9h0rxsBrfte4QnO7"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Shadow",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676402587851,
+    "modifiedTime": 1693273575809,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "unFp2SMvY4m4wGhB",
+  "_key": "!items!unFp2SMvY4m4wGhB"
+}

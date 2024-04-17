@@ -1,0 +1,58 @@
+{
+  "_id": "687Q5zW2SKDwqSKB",
+  "name": "Przepych",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Możesz wykorzystać swój wrodzony wampirzy talent do kamuflażu, aby dokonać zmian w swoim wyglądzie bez dodatkowych przedmiotów.</p><p>Używając @UUID[Compendium.world.wampiry.Item.BRdukN8hxSBpcuUn]{Ludzkiej Postaci}, możesz wykonać Akcję, dzięki której będziesz wyglądać bardziej atrakcyjnie (+10 Ogłady), brzydko (+10 Zastraszenia) lub niepodobnie do siebie (+10 Występy (Aktorstwo)) przez liczbę minut równą Twojemu Bonusowi do Siły Woli + PS.</p><p>Możesz przedłużyć efekt na czas nieokreślony o jedną minutę za każdy PS zdobyty w Wydłużonym Teście Opanowania. Naśladowanie wyglądu innej osoby wymaga godziny studiowania jej twarzy i manier, a następnie Wymagającego (+0) Testu Intuicji. Jeśli dana osoba ma inne pochodzenie etniczne, inny gatunek, płeć, wiek lub wzrost, zwiększy to Trudność Testu.</p><p>Jeśli test się powiedzie, twój wygląd fizyczny przekona większość ludzi, chociaż każdy, kto bardzo dobrze zna postać którą udajesz (na przykład członek rodziny lub bliski przyjaciel) może wykonać Test Przeciwstawny Intuicji/Występy (Aktorstwa), aby zdać sobie sprawę, że coś jest nie tak. Jeśli wygra, nie będą pewni, co jest nie tak, chyba że wyrzucą 6 lub więcej PS, ale będą patrzeć na ciebie podejrzliwie i otrzymasz karę -20 do wszystkich testów Ogłady przeciwko tej osobie.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "fel"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": "Testy Charyzmy gdy jesteś w przebraniu"
+    }
+  },
+  "folder": "IdBKVE70UjsZfSoR",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.311",
+    "createdTime": 1707139992297,
+    "modifiedTime": 1707139992297,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!687Q5zW2SKDwqSKB"
+}

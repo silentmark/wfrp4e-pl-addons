@@ -1,0 +1,125 @@
+{
+  "name": "Przeszywana Kamizelka",
+  "type": "armour",
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.wfrp4e-pl.armoury.0TcZUb9Y7tHIrMsv"
+    }
+  },
+  "img": "modules/wfrp4e-pl-addons/icons/long-gambeson.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Przeszywanica jest pierwszą i najważniejszą warstwą ochrony dla każdego wojownika. Odpowiednio wykonana absorbuje energię ciosów, może też stanowić warstwę izolacyjną przed zimnem. Dopasowana nie krępuje ruchów i pozwala na wygodne noszenie innych zbroi na sobie. Wewnętrzna warstwa pancerza może zostać wzmocniona i ulepszona do standardu zbroi średniej lub ciężkiej.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 1
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "15",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "common"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "damageToItem": {
+      "type": "Number",
+      "value": 0,
+      "shield": 0
+    },
+    "worn": {
+      "type": "Boolean",
+      "label": "Worn",
+      "value": false
+    },
+    "armorType": {
+      "type": "String",
+      "label": "Armour Type",
+      "value": "light"
+    },
+    "penalty": {
+      "type": "String",
+      "label": "Penalty",
+      "value": ""
+    },
+    "qualities": {
+      "type": "String",
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "type": "String",
+      "label": "Flaws",
+      "value": []
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": "Warstwa Podstawowa, Przeszywnica"
+    },
+    "AP": {
+      "head": 0,
+      "lArm": 0,
+      "rArm": 0,
+      "lLeg": 0,
+      "rLeg": 0,
+      "body": 1
+    },
+    "APdamage": {
+      "head": 0,
+      "lArm": 0,
+      "rArm": 0,
+      "lLeg": 0,
+      "rLeg": 0,
+      "body": 0
+    },
+    "maxAP": {
+      "head": 0,
+      "lArm": 1,
+      "rArm": 1,
+      "lLeg": 1,
+      "rLeg": 1,
+      "body": 1
+    }
+  },
+  "effects": [],
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.3.0",
+    "coreVersion": "10.291",
+    "createdTime": 1675639492192,
+    "modifiedTime": 1675815874974,
+    "lastModifiedBy": "Czz7IJA9DEa5LD9E"
+  },
+  "_id": "0TcZUb9Y7tHIrMsv",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Czz7IJA9DEa5LD9E": 3
+  },
+  "_key": "!items!0TcZUb9Y7tHIrMsv"
+}

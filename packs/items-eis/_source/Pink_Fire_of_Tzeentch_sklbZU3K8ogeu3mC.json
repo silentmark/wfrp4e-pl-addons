@@ -1,0 +1,148 @@
+{
+  "_id": "sklbZU3K8ogeu3mC",
+  "name": "Pink Fire of Tzeentch",
+  "type": "spell",
+  "img": "modules/wfrp4e-core/icons/spells/tzeentch.png",
+  "effects": [
+    {
+      "_id": "1a0uY9XWM9tSfqEl",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "applyDamage",
+          "effectApplication": "damage",
+          "script": "args.actor.addCondition(\"ablaze\")",
+          "preventDuplicateEffects": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/spells/tzeentch.png",
+      "tint": null,
+      "transfer": false,
+      "origin": null,
+      "name": "Pink Fire of Tzeentch",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!sklbZU3K8ogeu3mC.1a0uY9XWM9tSfqEl"
+    }
+  ],
+  "folder": "QHpKurNbTIwSSfhX",
+  "sort": 1300000,
+  "flags": {},
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><span class=\"fontstyle0\">Swirling bolts of pink fire arc from your outstretched fingertips, causing reality to scream in anguish. </span><span class=\"fontstyle2\"><em>Pink Fire of Tzeentch </em></span><span class=\"fontstyle0\">is a </span><span class=\"fontstyle2\"><em>magic missile</em></span><span class=\"fontstyle0\">. Targets affected suffer a +6 Damage hit, and gain +</span>1 @Condition[Ablaze] <span class=\"fontstyle0\">Condition.</span></p><p><span class=\"fontstyle0\">Should a Character of size Small or larger be reduced to 0 Wounds by this spell, or while suffering from an <em>Ablaze</em> Condition caused by </span><span class=\"fontstyle2\"><em>Pink Fire of Tzeentch</em></span><span class=\"fontstyle0\">, roll a [[/r 1d10]]. On a roll of 9, a @UUID[Compendium.wfrp4e-eis.actors.iDy8SDTwJSlCzZMl]{Pink Horror} claws its way out of the target’s writhing corpse, killing the individual.</span></p><p><strong>Lore:</strong> Targets of Spells from the Lore of Tzeentch are riven by the transformative magic of Chaos. Targets affected by a Spell from the Lore of Tzeentch must pass a Challenging (+0) Endurance Test, or gain +1 Corruption Point. Should they pass their Test, they instead gain +1 Fortune Point, which can be used as normal. Such are the whims of Tzeentch.</p><p></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "tzeentch",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Intelligence yards",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "1",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Instant",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": "6"
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 6,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": true
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "sAiwDCZFd21tgaDN": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1691299878976,
+    "modifiedTime": 1693273565155,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!sklbZU3K8ogeu3mC"
+}

@@ -1,0 +1,58 @@
+{
+  "_id": "ZMfN9jafRUKIs2WE",
+  "name": "Mroczny Majestat",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Możesz rozkazywać liczbie stworzeń równej dwukrotności Twojej Siły Woli.</p><p>Za każdy poziom tego Daru Krwi zwiększasz podstawową liczbę stworzeń, którymi możesz dowodzić o swoją Siłą Woli. Tak więc, jeśli posiadasz Mroczny Majestat 3, możesz dowodzić liczbą stworzeń równą czterokrotności Twojej Siły Woli.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "fel"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": "Testy Charyzmy związane z nieumarłymi lub ghulami"
+    }
+  },
+  "folder": "IdBKVE70UjsZfSoR",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.311",
+    "createdTime": 1700571341758,
+    "modifiedTime": 1707139629241,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 3000000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!ZMfN9jafRUKIs2WE"
+}

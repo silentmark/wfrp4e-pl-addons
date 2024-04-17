@@ -1,0 +1,80 @@
+{
+  "name": "Witchbane",
+  "type": "trapping",
+  "img": "icons/consumables/potions/potion-bottle-corked-white.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><span style=\"font-family: serif\">The Dreadmaw is a horrific beast, and much ink has been spilled on their exploits. They have been known to devour many greater beasts alive, and from the inside. Such is their voracity that they consume not merely flesh, but whatever essence of the winds of magic themselves is wrapped up instead their target.</span></p><p><span style=\"font-family: serif\">It is this trait which Alchemists exploit when they create the potion known as Witchbane. Using ground up teeth taken from the creature, a potion is created which grants the imbiber some measure of protection from magic. After consumption, the user gains the Magic Resistance 3 Creature Trait, reducing the SL of any spell affecting it by 3. This effect lasts for one hour.</span></p><p><span style=\"font-family: serif\">Multiple doses may be consumed at once, with each one adding an additional 1 to the Magic Resistance rating and increasing the duration by one hour. It is said that, should enough be consumed, the effect may even become permanent. This is ill advised, however. For each dose consumed after the first the imbiber must make a Challenging (+0) Endurance Test. If they fail, they begin to ooze the thick, poisonous slime that coats every Dreadmaw. They receive one Poisoned Condition each round, as does anyone touching them without taking appropriate protective measures such as the use of thick gloves. This lasts for ten Rounds, after which, if they are still alive, the effect ends and all Poisoned Conditions gained from this effect are removed.</span></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "36",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "rare"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "foodAndDrink"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.4.0",
+    "coreVersion": "10.291",
+    "createdTime": 1670890602882,
+    "modifiedTime": 1690313550966,
+    "lastModifiedBy": "kYUjI3k8J8QQt9Qw"
+  },
+  "_id": "g9AQKCEpY4k0GfdP",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "kYUjI3k8J8QQt9Qw": 3
+  },
+  "_key": "!items!g9AQKCEpY4k0GfdP"
+}

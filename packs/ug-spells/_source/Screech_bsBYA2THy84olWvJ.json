@@ -1,0 +1,82 @@
+{
+  "_id": "bsBYA2THy84olWvJ",
+  "name": "Screech",
+  "permission": {
+    "default": 0,
+    "LhiA8OMMa0ToAWEe": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You throw back your head and stretch your vocal cords to emit a high-pitched scream that carries a very long distance. Most creatures can barely hear the magical screech, but the sensitive ears of Skaven and some beasts of the wild will hear it. Screech is just a call and carries no information, though the tone can convey an emotion such as anger, desperation, fear or eagerness. Any Skaven hearing the call can choose to ignore it.&nbsp;</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower Bonus miles"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "You",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Instant",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 3,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.ZYp75ycroVsX2F3e"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_screech.jpg",
+  "effects": [],
+  "_key": "!items!bsBYA2THy84olWvJ"
+}

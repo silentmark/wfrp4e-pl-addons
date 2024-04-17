@@ -1,0 +1,82 @@
+{
+  "_id": "E96bUGUuWiMIikp5",
+  "name": "Aethyric Arrow",
+  "permission": {
+    "default": 0,
+    "rPtCM2fgOqxK9HLk": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p style=\"text-align: justify;\">You conjure a floating Magical arrow and use your hands to &lsquo;throw&rsquo; it at the target. To do this, both your hands must be empty and free. Make a normal Ranged (Throwing) attack using your Willpower score in place of the weapon&rsquo;s Range. Damage is calculated for a Bow and Arrow but with your Willpower Bonus in place of Strength Bonus. If any arrow wounds a target, you gain a maximum of 1 Advantage for these attacks.&nbsp;</p>\n<p style=\"text-align: justify;\">Overcast: For every +2 SL, you may conjure an additional arrow, using a Free Attack to target any creature in range and roll another Ranged Test.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Special"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Special",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Instant",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 2,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.qSnDfLfUhWX5hrdx"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_aetheric_arrow.jpg",
+  "effects": [],
+  "_key": "!items!E96bUGUuWiMIikp5"
+}

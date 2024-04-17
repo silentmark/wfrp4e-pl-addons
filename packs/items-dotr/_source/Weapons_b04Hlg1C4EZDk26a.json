@@ -1,0 +1,19 @@
+{
+  "name": "Weapons",
+  "type": "Item",
+  "_id": "b04Hlg1C4EZDk26a",
+  "folder": "uhtegEO9diTreju3",
+  "sorting": "a",
+  "sort": 100000,
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1691300237578,
+    "modifiedTime": 1691300374614,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "color": null,
+  "_key": "!folders!b04Hlg1C4EZDk26a"
+}

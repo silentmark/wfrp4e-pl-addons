@@ -1,0 +1,82 @@
+{
+  "name": "Animal Mastery",
+  "permission": {
+    "default": 0,
+    "OfKMBdcUK6oV9G48": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You initiate a non-verbal, telepathic connection with a mundane animal your size or smaller. You communicate freely with the animal according to its Intelligence. While doing so, you cannot speak with others or cast spells. Depending on the animal’s nature and personality, you can even give it simple commands, although the GM may ask you to perform an Opposed Charm Animal or Animal Training Test versus its Willpower.</p>\n<p>Overcast: For every +2 SL, you gain a +20 bonus to any Charm Animal or Animal Training Test undertaken while the spell lasts. For +3 SL, the spell will target a Large creature.</p>\n<p>&nbsp;</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Seasons",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower Bonus yards"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "1",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus minutes",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 4,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.cUI9MSAjKt6LzPl4"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_animal_mastery.jpg",
+  "effects": [],
+  "_id": "cfqy7hncrtTN563g",
+  "_key": "!items!cfqy7hncrtTN563g"
+}

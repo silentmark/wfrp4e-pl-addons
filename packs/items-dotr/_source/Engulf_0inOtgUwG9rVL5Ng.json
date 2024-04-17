@@ -1,0 +1,129 @@
+{
+  "_id": "0inOtgUwG9rVL5Ng",
+  "name": "Engulf",
+  "type": "trait",
+  "img": "modules/wfrp4e-core/icons/traits/trait.png",
+  "effects": [
+    {
+      "_id": "MFcM8HX6AfW7lpdn",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "applyDamage",
+          "effectApplication": "actor",
+          "script": "args.actor.addCondition(\"entangled\")\nlet engulfEffect = args.attacker.effects.find(i => i.name == \"Engulfed\")\ngame.wfrp4e.utility.applyEffectToTarget(engulfEffect , [{actor : args.actor}])",
+          "preventDuplicateEffects": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/traits/trait.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Engulf",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!0inOtgUwG9rVL5Ng.MFcM8HX6AfW7lpdn"
+    },
+    {
+      "_id": "NLDsJVFl5LFz4zkE",
+      "flags": {
+        "wfrp4e": {
+          "effectApplication": "apply",
+          "preventDuplicateEffects": false,
+          "effectTrigger": "endRound",
+          "script": "this.actor.addCondition(\"entangled\")\nlet msg = `<b>${this.actor.prototypeToken.name}</b> loses 1 Wound and gains 1 @Condition[Entangled] Condition.`\nChatMessage.create({content : msg, speaker : {alias : this.effect.name}})\nthis.actor.modifyWounds(-1)"
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/traits/trait.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Engulfed",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!0inOtgUwG9rVL5Ng.NLDsJVFl5LFz4zkE"
+    }
+  ],
+  "folder": "wvnqjaHZIliUa723",
+  "sort": 700001,
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Traits",
+      "sort": 700001
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>If the creature is of sufficient size, any successful attacks it makes engulfs a victim, even if they cause no Damage, inflicting one @Condition[Entangled] Condition with a Strength equal to that of the creature. At the beginning of each Round, engulfed victims gain one more @Condition[Entangled] Condition, and automatically lose 1 Wound as powerful enzymes begin digestion. If the creature is not of sufficient size to fully engulf a victim, it may still be large enough to immobilise a struck location. The creature can make no more attacks against fully engulfed victims, but it can still attack others if they are close enough.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "2TbX8z7IWr0GFssP": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "hv1aja7lAR8ZyKUO": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1681859838881,
+    "modifiedTime": 1693273562872,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!0inOtgUwG9rVL5Ng"
+}

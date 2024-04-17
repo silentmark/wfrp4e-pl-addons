@@ -1,0 +1,98 @@
+{
+  "type": "trait",
+  "name": "Vauge",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>When speaking you are often unsure of yourself, given to obfuscation and hesitation. Sugger -1 SL to all Charm and Gossip Tests.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "folder": "l8wVUGcsOa1Xr73u",
+  "img": "modules/wfrp4e-wom/assets/icons/marks/mark-ulgu.png",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-wom/assets/icons/marks/mark-ulgu.png",
+      "transfer": true,
+      "_id": "RXU3emi33QYQ4Y6c",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prefillDialog",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "if (args.type == \"skill\" && [\"Charm\", \"Gossip\"].includes(args.item.name))\n   args.prefillModifiers.slBonus -= 1;"
+        }
+      },
+      "name": "Vauge",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!9vsXHT9mJaOdxxpK.RXU3emi33QYQ4Y6c"
+    }
+  ],
+  "sort": 400000,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Ulgu",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676401804933,
+    "modifiedTime": 1693273575690,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "9vsXHT9mJaOdxxpK",
+  "_key": "!items!9vsXHT9mJaOdxxpK"
+}

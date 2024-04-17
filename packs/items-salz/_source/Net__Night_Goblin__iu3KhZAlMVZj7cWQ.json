@@ -1,0 +1,147 @@
+{
+  "name": "Net (Night Goblin)",
+  "type": "weapon",
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/net.png",
+  "folder": "Klweq6sEcMramSWI",
+  "flags": {
+    "wfrp4e-salzenmund": {
+      "initialization-folder": "Da Shiny Moon Tribe",
+      "sort": 0
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>@UUID[JournalEntry.Qn1nkhIjC38ky3uu]{Da Shiny Moon Tribe}</p><p>Nets, weighted down with rocks, are a favoured Night Goblin weapon. Da Shiny Moons set @UUID[Compendium.wfrp4e-salzenmund.items.Item.7tHPKOUU95QsRnIa]{traps} with them, catching up unsuspecting creatures or hapless wanderers to take back to the tribe.</p>"
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "None"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "damageToItem": {
+      "type": "Number",
+      "value": 0,
+      "shield": 0
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "reach": {
+      "type": "String",
+      "label": "Reach",
+      "value": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "SB x 2"
+    },
+    "skill": {
+      "type": "String",
+      "label": "Skill Override",
+      "value": "Ranged (Net)"
+    },
+    "modeOverride": {
+      "type": "String",
+      "label": "Mode Override",
+      "value": ""
+    },
+    "twohanded": {
+      "type": "Boolean",
+      "label": "Two-Handed",
+      "value": false
+    },
+    "ammunitionGroup": {
+      "type": "String",
+      "label": "Ammunition Group",
+      "value": "none"
+    },
+    "currentAmmo": {
+      "type": "Number",
+      "value": 0
+    },
+    "consumesAmmo": {
+      "value": false
+    },
+    "weaponGroup": {
+      "type": "String",
+      "label": "Weapon Group",
+      "value": "entangling"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": [
+        {
+          "name": "entangle",
+          "value": null
+        }
+      ]
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": "Entangle (Strength 40)"
+    },
+    "equipped": false,
+    "loaded": {
+      "value": false,
+      "repeater": false,
+      "amt": 0
+    },
+    "offhand": {
+      "value": false
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "wjUQkVmn4leETiQ6": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1687134833769,
+    "modifiedTime": 1693273572806,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "iu3KhZAlMVZj7cWQ",
+  "_key": "!items!iu3KhZAlMVZj7cWQ"
+}

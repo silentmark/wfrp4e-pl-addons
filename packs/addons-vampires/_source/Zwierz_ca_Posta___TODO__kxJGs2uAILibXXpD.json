@@ -1,0 +1,58 @@
+{
+  "_id": "kxJGs2uAILibXXpD",
+  "name": "Zwierzęca Postać (TODO)",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>W ramach Akcji możesz przemienić się w dowolne zwierzę nie większe od psa domowego - w postaci swojego @Compendium[wfrp4e-vampires.vampires-actors.cYUAFqnIvF3CkmMY]{Wampirycznego Chowańca}. Twoje rzeczy zmieniają się wraz z tobą i pojawiają się ponownie, gdy przyjmujesz swoją zwykłą formę.</p><p>Zyskujesz wszystkie cechy tego zwierzęcia, ale zachowujesz własną Inicjatywę, Inteligencję, Siłę Woli, Ogładę i Rany.</p><p>Możesz wrócić, kiedy tylko chcesz i możesz używać tej zdolności tak często, jak potrzebujesz. Przy drugim zakupie tego Daru Krwi przemiana (w każdą stronę) staje się Akcją natychmiastową.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "2"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "folder": "R9GP6kUptFm6hQ24",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.311",
+    "createdTime": 1706999433827,
+    "modifiedTime": 1707133266017,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 900000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!kxJGs2uAILibXXpD"
+}

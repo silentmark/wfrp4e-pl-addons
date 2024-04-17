@@ -1,0 +1,82 @@
+{
+  "_id": "62UZZRRz7iMnJcJZ",
+  "name": "Gaze o’ Mork",
+  "permission": {
+    "default": 0,
+    "LhiA8OMMa0ToAWEe": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Your eyes glow green with the power of Waaagh! and you unleash a destructive blast of seething magical energy. The beam is 1-yard wide and extends as far as your Willpower yards. Unless absorbed by an inanimate object with a Toughness Bonus of 6 or greater, the beam will destroy and pass through any lesser obstacle. Any creature in the path of the beam suﬀers a <em>magic missile </em>with a Damage of +6. The beam will destroy all Armour Points on a struck Location. If there is uncertainty whether or not a creature is within the path of the beam, make a 1d10 roll: <strong>1-5</strong> miss, <strong>6-10</strong> hit.&nbsp;</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Da Big Waaagh!",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower yards"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Special",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Instant",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 6,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.uW4t9dcRjyVr6xev"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_gaz-o%27-mork.jpg",
+  "effects": [],
+  "_key": "!items!62UZZRRz7iMnJcJZ"
+}

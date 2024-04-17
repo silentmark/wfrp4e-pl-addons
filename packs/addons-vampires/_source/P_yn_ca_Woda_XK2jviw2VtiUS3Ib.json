@@ -1,0 +1,68 @@
+{
+  "_id": "XK2jviw2VtiUS3Ib",
+  "name": "Płynąca Woda",
+  "type": "trait",
+  "flags": {
+    "_sheetTab": "details",
+    "core": {}
+  },
+  "img": "modules/wfrp4e-core/icons/injuries/amputatedarm.png",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Bieżąca woda ma na ciebie działanie oczyszczające, zmywając skazę z twojego ciała i duszy. Musisz zdać Wymagająćy (+0) Test Odporności, aby zbliżyć się na odległość mniejszą niż 2 metry do dowolnego zbiornika wodnego z prądem, pod warunkiem, że ma on co najmniej metr średnicy i głębokość stopy.</p><p>Jeśli wejdziesz do takiego zbiornika wodnego, zyskujesz +1 Stan Podpalenia na rundę — pali Cię woda, która jest dla ciebie jak kwas, a nie dosłownie płomienie. Nie możesz usunąć tych Stanów za pomocą testu atletyki, ale kiedy opuścisz wodę, będą one usuwane w tempie jednego na rundę. Jeśli możesz przejść przez wodę i nie zmoknąć (na przykład, jeśli przeskoczysz ją, przelecisz nad nią lub skorzystasz z mostu), nie odniesiesz żadnych negatywnych skutków.</p><p>Strzygi często cierpią z powodu tej Słabości.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "folder": "XwxUCN1xDJMXTjBk",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.311",
+    "createdTime": 1698787682239,
+    "modifiedTime": 1698787698112,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 1100000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!XK2jviw2VtiUS3Ib"
+}

@@ -1,0 +1,49 @@
+{
+  "_id": "4Q0rDMBIs2YtZbfX",
+  "name": "Chittercast (Rating)",
+  "permission": {
+    "default": 0,
+    "LhiA8OMMa0ToAWEe": 3
+  },
+  "type": "talent",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Before you roll any Channelling or Language (Magick) Test, you may call upon the fickle will of the Horned Rat to aid you in your spellcasting. If the Test succeeds, add your Chittercast Rating in SL to your Test. When you call upon this power, roll an extra 1d10. This die does not provide a bonus but it counts towards Miscast possibilities. A roll of triples increases the Miscast severity by one table.&nbsp;</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "1"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.5pkdOTh4jRZFstie"
+    }
+  },
+  "img": "systems/wfrp4e/icons/blank.png",
+  "effects": [],
+  "_key": "!items!4Q0rDMBIs2YtZbfX"
+}

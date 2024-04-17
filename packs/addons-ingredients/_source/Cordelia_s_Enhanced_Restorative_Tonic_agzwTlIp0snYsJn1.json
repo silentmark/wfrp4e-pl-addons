@@ -1,0 +1,89 @@
+{
+  "name": "Cordelia's Enhanced Restorative Tonic",
+  "type": "trapping",
+  "img": "icons/consumables/potions/potion-bottle-stopped-labeled-red.webp",
+  "effects": [],
+  "flags": {
+    "_sheetTab": "details",
+    "wfrp4e-ua1": {
+      "initialization-folder": "Ubersreik Adventures I"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Restores twice the imbiber&rsquo;s Toughness Bonus in Wounds.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Requires a <strong>Difficult (&minus;10) Endurance</strong>&nbsp;Test be passed or a side effect is suffered for a number of minutes equal to the number of Success Levels the roll failed by. Roll [[/r 1d10]] to determine the Condition used as a side effect: 1-3: Blinded (3), 4-6: Broken (1), 7-9: Stunned (1), 10: Unconscious.</p>"
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "15",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "None"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.4.0",
+    "coreVersion": "10.291",
+    "createdTime": 1690313539012,
+    "modifiedTime": 1690313539012,
+    "lastModifiedBy": "kYUjI3k8J8QQt9Qw"
+  },
+  "_id": "agzwTlIp0snYsJn1",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "kYUjI3k8J8QQt9Qw": 3
+  },
+  "_key": "!items!agzwTlIp0snYsJn1"
+}

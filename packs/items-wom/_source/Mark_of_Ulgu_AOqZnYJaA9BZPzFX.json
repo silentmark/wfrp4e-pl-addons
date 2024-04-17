@@ -1,0 +1,98 @@
+{
+  "type": "trait",
+  "name": "Mark of Ulgu",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The rune of Ulgu appears somewhere on your body. You gain the @UUID[Compendium.wfrp4e-wom.items.EjGYZ4CgX2jZW7Ot]{Suffuse with Ulgu} Talent.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "folder": "l8wVUGcsOa1Xr73u",
+  "img": "modules/wfrp4e-wom/assets/icons/marks/mark-ulgu.png",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-wom/assets/icons/marks/mark-ulgu.png",
+      "transfer": true,
+      "_id": "2mU46F1gjnQRRodd",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "addItems",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "fromUuid(\"Compendium.wfrp4e-wom.items.EjGYZ4CgX2jZW7Ot\").then(item => Item.create(item.toObject(), {fromEffect : this.effect.id, parent : this.actor}))"
+        }
+      },
+      "name": "Mark of Ulgu",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!AOqZnYJaA9BZPzFX.2mU46F1gjnQRRodd"
+    }
+  ],
+  "sort": 106250,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Ulgu",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676401804952,
+    "modifiedTime": 1693273575694,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "AOqZnYJaA9BZPzFX",
+  "_key": "!items!AOqZnYJaA9BZPzFX"
+}

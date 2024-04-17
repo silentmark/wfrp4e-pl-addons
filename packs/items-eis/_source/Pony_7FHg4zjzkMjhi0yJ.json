@@ -1,0 +1,86 @@
+{
+  "_id": "7FHg4zjzkMjhi0yJ",
+  "name": "Pony",
+  "type": "trapping",
+  "img": "modules/wfrp4e-eis/assets/icons/pony-donkey-mule.png",
+  "effects": [],
+  "folder": "7AP1Hx1JHl8Pc4jQ",
+  "sort": 0,
+  "flags": {
+    "_sheetTab": "description",
+    "wfrp4e-eis": {
+      "initialization-folder": "Mounts and Vehicles"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>@UUID[Actor.12ARFrc7Dokxc72q]{Pony}</p>\n<p>Carrying Capacity: 14</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "10",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "common"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "misc"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "34JMfpmBvTmVYPh4": 3,
+    "VnnpieLwbiAu3Owf": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1693273565117,
+    "modifiedTime": 1693273565117,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!7FHg4zjzkMjhi0yJ"
+}

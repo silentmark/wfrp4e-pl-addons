@@ -1,0 +1,145 @@
+{
+  "name": "Dekoncentrujący",
+  "type": "trait",
+  "img": "modules/wfrp4e-core/icons/traits/trait.png",
+  "effects": [
+    {
+      "_id": "et9TgrjWHZYQI7OJ",
+      "flags": {
+        "wfrp4e": {
+          "effectApplication": "area",
+          "effectTrigger": "prefillDialog",
+          "script": "let flags = this.effect.flags;\nif (flags && flags?.wfrp4e?.actorId != this.actor.id) {\n    args.prefillModifiers.modifier -= 20;\n}\n\n",
+          "preventDuplicateEffects": false,
+          "hide": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/traits/trait.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Dekoncentrujący (AoE)",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!MVI0lXcg6vvtooAF.et9TgrjWHZYQI7OJ"
+    },
+    {
+      "icon": "modules/wfrp4e-core/icons/traits/trait.png",
+      "transfer": true,
+      "name": "Dekoncentrujący",
+      "_id": "xnpaKApnnhudtQa7",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "effectTrigger": "startTurn",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": true,
+          "script": "let token = this.actor.getActiveTokens()[0];\nlet uuid = this.item.uuid;\nlet template = token.attachedTemplates.find(x=>x.getFlag(\"wfrp4e\", \"itemuuid\") == uuid);\nif (!template)\n{\n    const templateData = {\n            t: \"circle\",\n            user: game.userId,\n            distance: 3,\n            direction: 0,\n            x: token.center.x,\n            y: token.center.y,\n            fillColor: game.user.color,\n            texture: 'modules/jb2a_patreon/Library/Generic/Smoke/SmokeRing_01_Dark_Black_800x800.webm'\n    };\n    let templateDoc = await MeasuredTemplateDocument.create(templateData, {parent: canvas.scene});\n    templateDoc.object.attachToken(token);\n    templateDoc.setFlag(\"wfrp4e\", \"itemuuid\", this.item.uuid);\n}\n"
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!MVI0lXcg6vvtooAF.xnpaKApnnhudtQa7"
+    }
+  ],
+  "flags": {
+    "_sheetTab": "details",
+    "core": {},
+    "babele": {
+      "translated": true,
+      "hasTranslation": true,
+      "originalName": "Distracting"
+    },
+    "exportSource": {
+      "world": "wfrp4",
+      "system": "wfrp4e",
+      "coreVersion": "11.311",
+      "systemVersion": "7.0.2"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Stworzenie rozprasza lub dezorientuje wrogów, być może wydzielając usypiający zapach lub powalający smród, a może ze względu na przerażająco dziwaczny wygląd. Wszystkie żywe cele w promieniu tylu metrów, ile wynosi jego Bonus z Wytrzymałości, dostają karę -20 do wszystkich Testów. Cel może dostać tę karę tylko raz - bez względu na to, jak wielu jest dekoncentrujących wrogów.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.2",
+    "coreVersion": "11.311",
+    "createdTime": 1663652878976,
+    "modifiedTime": 1696797301557,
+    "lastModifiedBy": "Czz7IJA9DEa5LD9E"
+  },
+  "_id": "MVI0lXcg6vvtooAF",
+  "folder": "Fn9BF4AZCCMMhKOf",
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "Czz7IJA9DEa5LD9E": 3
+  },
+  "_key": "!items!MVI0lXcg6vvtooAF"
+}

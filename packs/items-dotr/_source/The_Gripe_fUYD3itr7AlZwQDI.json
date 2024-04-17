@@ -1,0 +1,132 @@
+{
+  "_id": "fUYD3itr7AlZwQDI",
+  "name": "The Gripe",
+  "type": "disease",
+  "img": "modules/wfrp4e-core/icons/diseases/disease.png",
+  "effects": [
+    {
+      "_id": "Ygi0VxiqbLQAevKN",
+      "flags": {
+        "wfrp4e": {
+          "effectApplication": "actor",
+          "effectTrigger": "prefillDialog",
+          "symptom": true,
+          "script": "\n          if (args.test.result.outcome == \"failure\")\n          {\n            let SL = Number(argrs.result.SL)\n            if (SL <= -2 && SL > -4)\n              args.actor.addCondition(\"stunned\")\n            else if (SL <= -4 && SL > -6)\n              ChatMessage.create({content: this.actor.prototypeToken.name + \" must make a <b>Willpower</b> Test or fall @Condition[Prone].\", speaker : {alias: this.effect.name}})\n            else if (SL <= -6)\n              args.actor.addCondition(\"unconscious\")\n          }"
+        }
+      },
+      "changes": [],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
+      "transfer": true,
+      "disabled": false,
+      "origin": null,
+      "tint": null,
+      "name": "Gripes",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!fUYD3itr7AlZwQDI.Ygi0VxiqbLQAevKN"
+    },
+    {
+      "_id": "xUYIuqMMjAixDW1Y",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prefillDialog",
+          "effectApplication": "actor",
+          "script": "args.prefillModifiers.modifier -= 20",
+          "hide": true,
+          "preventDuplicateEffects": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/diseases/disease.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "The Gripes",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!fUYD3itr7AlZwQDI.xUYIuqMMjAixDW1Y"
+    }
+  ],
+  "folder": "cuSAaKvV7LGfpqtd",
+  "sort": 200001,
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Diseases",
+      "sort": 200001
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The patient is seized by the sharp abdominal pains that give the disease its name. They strike without pattern or warning, and may be accompanied by Fever, Flux, and Vomiting.</p>\n<p>Almost every herbalist and rural crone in the Empire claims to have an infallible cure; they all take the form of a broth or tea, and while ingredients vary, none seems to be more effective than any other. The only real treatment for this disease is liquids to replace those lost, and time.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "contraction": {
+      "label": "Contraction",
+      "value": "Exposure to dirty water; Test as in description",
+      "type": "String"
+    },
+    "incubation": {
+      "label": "Incubation",
+      "value": "2",
+      "unit": "hours",
+      "type": "String"
+    },
+    "duration": {
+      "label": "Duration",
+      "value": "2d10",
+      "type": "String",
+      "unit": "days",
+      "active": false
+    },
+    "symptoms": {
+      "label": "Symptoms",
+      "value": "Gripes",
+      "type": "String"
+    },
+    "permanent": {
+      "label": "Permanent",
+      "value": "",
+      "type": "String"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "2TbX8z7IWr0GFssP": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "hv1aja7lAR8ZyKUO": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1681859838893,
+    "modifiedTime": 1693273562897,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!fUYD3itr7AlZwQDI"
+}

@@ -1,0 +1,191 @@
+{
+  "name": "Driving Intent",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You bestow a target with clarity and resolve, providing a +\t2 SL to tests to resist Charm and Intimidation. When cast upon yourself, you may instead choose to receive a +2 SL bonus to Charm Tests, provided you only speak the truth. The College of Light frowns upon this latter application as a form of glamour.</p><p>\n\n <b>Lore:</b> You may inflict one @Condition[Blinded] Condition on those targeted by Lore of Light spells, unless they possess the Arcane Magic (Light) Talent. If a target has the @UUID[Compendium.wfrp4e-core.items.v3uzEthcq0JRar0J]{Daemonic} or @UUID[Compendium.wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Undead} Creature Traits, spells also inflict an additional hit with Damage equal to your Intelligence Bonus that ignores Toughness Bonus and Armor Points.<p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "light",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Touch",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "1",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus hours",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 4,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "type": "spell",
+  "folder": "FoB0dUA8pzSvKt0l",
+  "img": "modules/wfrp4e-core/icons/spells/light.png",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-core/icons/spells/light.png",
+      "transfer": false,
+      "_id": "sm7rvZb0gFxkdbZ3",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prefillDialog",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "if (args.type == \"skill\" && (args.item.name == \"Charm\"))\n   args.prefillModifiers.slBonus += 2"
+        }
+      },
+      "name": "Driving Intent (Self)",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!8SCyGqSBjYnj4KQn.sm7rvZb0gFxkdbZ3"
+    },
+    {
+      "icon": "modules/wfrp4e-core/icons/spells/light.png",
+      "transfer": false,
+      "_id": "mIV4wobIjhqYo3qw",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "dialogChoice",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "effectData": {
+            "description": "Resist Charm and Intimidation",
+            "modifier": null,
+            "slBonus": 2,
+            "successBonus": null,
+            "difficultyStep": null
+          }
+        }
+      },
+      "name": "Driving Intent",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!8SCyGqSBjYnj4KQn.mIV4wobIjhqYo3qw"
+    }
+  ],
+  "sort": 475000,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Light",
+      "sort": 475000
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676243555945,
+    "modifiedTime": 1693273575685,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "8SCyGqSBjYnj4KQn",
+  "_key": "!items!8SCyGqSBjYnj4KQn"
+}

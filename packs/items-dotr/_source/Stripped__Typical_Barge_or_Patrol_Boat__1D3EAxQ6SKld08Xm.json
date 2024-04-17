@@ -1,0 +1,89 @@
+{
+  "_id": "1D3EAxQ6SKld08Xm",
+  "name": "Stripped (Typical Barge or Patrol Boat)",
+  "type": "vehicleMod",
+  "img": "modules/wfrp4e-dotr/assets/icons/upgrade.png",
+  "effects": [
+    {
+      "_id": "VlvmB4YrPgYO7s7K",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prefillDialog",
+          "effectApplication": "actor",
+          "script": "this.actor.status.carries.max +=  this.actor.status.carries.max * 0.75",
+          "hide": false,
+          "preventDuplicateEffects": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-dotr/assets/icons/upgrade.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Stripped",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!1D3EAxQ6SKld08Xm.VlvmB4YrPgYO7s7K"
+    }
+  ],
+  "folder": "mqmgFBAdX7S24AT7",
+  "sort": 1500000,
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Superstructure",
+      "sort": 1500000
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>A boat can be stripped of all cabins and superstructures, either to lighten it or to maximize cargo space. Stripping a standard boat costs the indicated amount; building a stripped boat costs 75% of the normal price. Weight is reduced as shown above, and cargo space is increased by 75% over the normal capacity.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "150",
+      "ss": "0",
+      "bp": "0"
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": -45
+    },
+    "modType": {
+      "value": "superstructure"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "2TbX8z7IWr0GFssP": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "hv1aja7lAR8ZyKUO": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1681859838881,
+    "modifiedTime": 1693273562873,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!1D3EAxQ6SKld08Xm"
+}

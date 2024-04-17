@@ -1,0 +1,87 @@
+{
+  "_id": "tWLwV2bXuyr3sV4R",
+  "name": "Graveroot",
+  "type": "trapping",
+  "img": "modules/wfrp4e-core/art/other/herbalism.webp",
+  "effects": [],
+  "folder": "SZryze7C4xnI87Ll",
+  "sort": -200000,
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Herbs of the Empire",
+      "sort": 400000
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<h3>Grave Matters</h3>\n<p>Also known as Grabwort, Dead Man&rsquo;s Finger, Ghostbane and Morr&rsquo;s Root, Graveroot is attracted to shady, sheltered locations with slightly damp soil. It flourishes especially in graveyards, which, together with its well-known magical properties, has led some people to theorise that it somehow feeds on the magical energies of the bodies buried beneath it. The root, when dried and grated, may be used in a number of preparations and magical spells concerning the Undead, and it actually seems to affect them as poison would affect a living creature. An infusion of the root seems to have no particular effect on a living patient, except to cause vomiting at higher concentrations. Less well known is the fact that a hot poultice made from both the leaves and root of this plant speeds the healing of infected wounds caused by undead creatures.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><strong>Locality:&nbsp;</strong>Forest clearlings, graveyards</p>\n<p><strong>Season: </strong>Autumn, Winter</p>\n<p><strong>Preparations: </strong>@UUID[Compendium.wfrp4e-dotr.journals.JhZ4qkEf569rEcsY.JournalEntryPage.uxIVUGe1gSkqbo8m#raw]{Raw}, @UUID[Compendium.wfrp4e-dotr.journals.JhZ4qkEf569rEcsY.JournalEntryPage.uxIVUGe1gSkqbo8m#poultices]{Poultice}, @UUID[Compendium.wfrp4e-dotr.journals.JhZ4qkEf569rEcsY.JournalEntryPage.uxIVUGe1gSkqbo8m#draughts]{Draught}</p>\n<p>A poultice of Graveroot, smeared on a @UUID[Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb] caused by an @UUID[Compendium.wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Undead} creature with the @UUID[Compendium.wfrp4e-core.items.V0c3qBU1CMm8bmsW]{Infected} Trait, grants the patient a +20 bonus to all Tests made that day against the Festering Wound. It has no effect on Festering Wounds caused by creatures that are not Undead.</p>\n<p>Somewhat strangely, a properly prepared draught of Graveroot induces a deathly pallor in any who consume it, and the imbibers flesh becomes cold to the touch for [[/r 1d10+2]] hours. If there is any useful purpose to such draughts, it is remains unknown to most.</p>"
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "5",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "rare"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "2TbX8z7IWr0GFssP": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "hv1aja7lAR8ZyKUO": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1681859838897,
+    "modifiedTime": 1693273562906,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!tWLwV2bXuyr3sV4R"
+}

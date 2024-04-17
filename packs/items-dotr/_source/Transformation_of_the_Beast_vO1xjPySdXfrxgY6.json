@@ -1,0 +1,187 @@
+{
+  "_id": "vO1xjPySdXfrxgY6",
+  "name": "Transformation of the Beast",
+  "type": "spell",
+  "img": "modules/wfrp4e-dotr/assets/icons/tzeentch.png",
+  "effects": [
+    {
+      "_id": "n2wuyH4xO3fXg4qo",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "addItems",
+          "effectApplication": "apply",
+          "script": "await fromUuid(\"Compendium.wfrp4e-core.items.VUJUZVN3VYhOaPjj\").then(item => {\n   item = item.toObject()\n   item.system.specification.value = 1\n   this.actor.createEmbeddedDocuments(\"Item\", [item], {fromEffect : this.effect.id})\n})\n\nawait fromUuid(\"Compendium.wfrp4e-core.items.fjd1u9VAgiYzhBRp\").then(item => {\n   this.actor.createEmbeddedDocuments(\"Item\", [item.toObject()], {fromEffect : this.effect.id})\n})\n\nawait fromUuid(\"Compendium.wfrp4e-core.items.BqPZn6q3VHn9HUrW\").then(item => {\n   item = item.toObject()\n   item.system.specification.value = 6\n   this.actor.createEmbeddedDocuments(\"Item\", [item], {fromEffect : this.effect.id})\n})",
+          "hide": false,
+          "preventDuplicateEffects": false
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-dotr/assets/icons/tzeentch.png",
+      "tint": null,
+      "transfer": false,
+      "origin": null,
+      "name": "Gor Traits",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!vO1xjPySdXfrxgY6.n2wuyH4xO3fXg4qo"
+    },
+    {
+      "_id": "dnQwRr07zpLGtBdO",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prePrepareData",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "let gorCharacteristics = {\n    \"ws\": 45,\n    \"bs\": 30,\n    \"s\": 35,\n    \"t\": 45,\n    \"i\": 30,\n    \"ag\": 35,\n    \"dex\": 25,\n    \"int\": 25,\n    \"wp\": 30,\n    \"fel\": 25\n}\nfor (let char in this.actor.characteristics) {\n    if (this.actor.characteristics[char].initial < gorCharacteristics[char])\n        this.actor.characteristics[char].initial = gorCharacteristics[char]\n}"
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-dotr/assets/icons/tzeentch.png",
+      "tint": null,
+      "transfer": false,
+      "origin": null,
+      "name": "Gor Stats",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!vO1xjPySdXfrxgY6.dnQwRr07zpLGtBdO"
+    }
+  ],
+  "folder": "u1exIfJdxyR01hCh",
+  "sort": 700000,
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Arcane Spells of Tzeentch",
+      "sort": 700000
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You channel the power of Tzeentch, and your body transforms into that of a @UUID[Compendium.wfrp4e-core.actors.R37OtN5gmPWCYOP3]{Gor}. You gain the following temporary benefits:</p>\n<p><strong>Characteristics</strong>: use your own characteristic or that of a Gor, whichever is better.</p>\n<p><strong>Traits</strong>: gain @UUID[Compendium.wfrp4e-core.items.VUJUZVN3VYhOaPjj]{Armour 1}, @UUID[Compendium.wfrp4e-core.items.fjd1u9VAgiYzhBRp]{Fury}, and @UUID[Compendium.wfrp4e-core.items.BqPZn6q3VHn9HUrW]{Horns +6}</p>\n<p><strong>Skills</strong>: gain Beast Tongue but lose the ability to speak intelligibly in any other language.</p><p>\n\n <b>Lore:</b> Targets of Spells from the Lore of Tzeentch are riven by the transformative magic of Chaos. Targets affected by a Spell from the Lore of Tzeentch must pass a Challenging (+0) Endurance Test, or gain +1 Corruption Point. Should they pass their Test, they instead gain +1 Fortune Point, which can be used as normal. Such are the whims of Tzeentch.<p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "tzeentch",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "You",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "You",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus Rounds",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 12,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "gayF6NJkrMg4HTG0": 3,
+    "VnnpieLwbiAu3Owf": 3,
+    "hv1aja7lAR8ZyKUO": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1681859838897,
+    "modifiedTime": 1693273562908,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!vO1xjPySdXfrxgY6"
+}

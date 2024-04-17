@@ -1,0 +1,173 @@
+{
+  "_id": "OYJVv928kh7Io5YL",
+  "name": "Pech! Broń Miotana",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "results": [
+    {
+      "_id": "mlf7q0wwgodcacme",
+      "type": 0,
+      "text": "Trzymając lub przygotowując broń, uderzasz się w nos, otrzymujesz 1 Ranę (bez względu na WT i PP)",
+      "range": [
+        1,
+        20
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 20,
+      "_key": "!tables.results!OYJVv928kh7Io5YL.mlf7q0wwgodcacme"
+    },
+    {
+      "_id": "eeqlrvj1ahcfgugt",
+      "type": 0,
+      "text": "Niepewny chwyt broni sprawia, że trafiasz siebie w stopę. Otrzymujesz normalne obrażenia od broni uwzględniając WT i PP (min 1 rana).",
+      "range": [
+        21,
+        30
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 21,
+      "rangeH": 30,
+      "_key": "!tables.results!OYJVv928kh7Io5YL.eeqlrvj1ahcfgugt"
+    },
+    {
+      "_id": "7kfbnsmu0rrjhdvl",
+      "type": 0,
+      "text": "Twoja broń rozpada się. Spadasz na koniec kolejności inicjatywy próbując pozbierać się z szoku.",
+      "range": [
+        31,
+        40
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 31,
+      "rangeH": 40,
+      "_key": "!tables.results!OYJVv928kh7Io5YL.7kfbnsmu0rrjhdvl"
+    },
+    {
+      "_id": "fhpbz3i8f1bbk9l0",
+      "type": 0,
+      "text": "Rozluźniasz chwyt na broni. Twoja następna akcja ma karę -10.",
+      "range": [
+        41,
+        50
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 41,
+      "rangeH": 50,
+      "_key": "!tables.results!OYJVv928kh7Io5YL.fhpbz3i8f1bbk9l0"
+    },
+    {
+      "_id": "0vki6wc2gsfvbm06",
+      "type": 0,
+      "text": "Potykasz się i tracisz swój następny Ruch, aby odzyskać równowagę.",
+      "range": [
+        51,
+        60
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 51,
+      "rangeH": 60,
+      "_key": "!tables.results!OYJVv928kh7Io5YL.0vki6wc2gsfvbm06"
+    },
+    {
+      "_id": "5p9pmwivbniellve",
+      "type": 0,
+      "text": "Zamach jest tak potężny, że tracisz równowagę i upadasz. Otrzymujesz Stan @Condition[Powalenie] oraz twoja runda się kończy.",
+      "range": [
+        61,
+        70
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 61,
+      "rangeH": 70,
+      "_key": "!tables.results!OYJVv928kh7Io5YL.5p9pmwivbniellve"
+    },
+    {
+      "_id": "pe80jiau2a4vz7tk",
+      "type": 0,
+      "text": "Nadwyrężasz mięsień w głównej ręcę. Ból kończy twoją rundę. Otrzymujesz Ranę Krytyczną, 2 Punkty Obrażeń oraz Naderwany Mięsień (Pomniejszy)",
+      "range": [
+        71,
+        80
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 71,
+      "rangeH": 80,
+      "_key": "!tables.results!OYJVv928kh7Io5YL.pe80jiau2a4vz7tk"
+    },
+    {
+      "_id": "a2r7m4i5j2nyh4o0",
+      "type": 0,
+      "text": "Nadwyrężasz mięsień w plecach. Ból kończy twoją rundę. Otrzymujesz Ranę Krytyczną, 3 Punkty Obrażeń oraz Naderwany Mięsień (Poważny)",
+      "range": [
+        81,
+        90
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 81,
+      "rangeH": 90,
+      "_key": "!tables.results!OYJVv928kh7Io5YL.a2r7m4i5j2nyh4o0"
+    },
+    {
+      "_id": "cdgnhnu117w1bj2b",
+      "type": 0,
+      "text": "Atak jest kompletną porażką, trafiając losowego sojusznika. Wartość Jedności służy za PS. Jeśli nie ma sojuszników w pobliżu, otrzymujesz 1 Stan @Condition[Oszołomienie] oraz 1 Stan @Condition[Krawienie].",
+      "range": [
+        91,
+        99
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 91,
+      "rangeH": 99,
+      "_key": "!tables.results!OYJVv928kh7Io5YL.cdgnhnu117w1bj2b"
+    },
+    {
+      "_id": "wzrcgevniqpalahs",
+      "type": 0,
+      "text": "Coś pęka w twojej głównej ręce. Rzuć na Ranę Krytyczną ręki.",
+      "range": [
+        100,
+        100
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 100,
+      "rangeH": 100,
+      "_key": "!tables.results!OYJVv928kh7Io5YL.wzrcgevniqpalahs"
+    }
+  ],
+  "formula": "1d100",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": null,
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "Czz7IJA9DEa5LD9E": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "oopsthrowing",
+      "column": ""
+    }
+  },
+  "_key": "!tables!OYJVv928kh7Io5YL"
+}

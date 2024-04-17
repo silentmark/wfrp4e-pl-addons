@@ -1,0 +1,82 @@
+{
+  "_id": "igYpLU2U6Bel1jQd",
+  "name": "Panic",
+  "permission": {
+    "default": 0,
+    "rPtCM2fgOqxK9HLk": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You induce a sudden urge to flee in your target, inflicting a Broken Condition upon a failed Cool Test. The spell has no eﬀect on creatures with any of these Traits: Bestial, Daemonic, Immunity to Psychology, Mindless, Undead.&nbsp;</p>\n<p>Overcast: For every +2 SL, you may add 1 Broken Condition.&nbsp;</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower Bonus yards"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "1",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Instant",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 6,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.PtpEXXQbVhR2PZY4"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_panic.jpg",
+  "effects": [],
+  "_key": "!items!igYpLU2U6Bel1jQd"
+}

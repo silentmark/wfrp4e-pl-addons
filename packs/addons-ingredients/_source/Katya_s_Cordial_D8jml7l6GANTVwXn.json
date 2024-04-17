@@ -1,0 +1,118 @@
+{
+  "name": "Katya's Cordial",
+  "type": "trapping",
+  "img": "icons/consumables/potions/flask-decorated-label-pink.webp",
+  "effects": [
+    {
+      "_id": "sxcJkDbYoXmNQKPF",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "prefillDialog",
+          "effectApplication": "apply",
+          "script": "if (args.type == \"characteristic\" && (args.item == \"fel\"))\n{\n    args.prefillModifiers.modifier -= 20\n}\nelse if (args.type == \"skill\" && args.item.characteristic.key == \"fel\")\n{\n     args.prefillModifiers.modifier -= 20\n}",
+          "preventDuplicateEffects": true
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/vitality-draught.png",
+      "label": "Katya's Cordial After Effects",
+      "tint": null,
+      "transfer": false,
+      "origin": null,
+      "_key": "!items.effects!D8jml7l6GANTVwXn.sxcJkDbYoXmNQKPF"
+    }
+  ],
+  "flags": {
+    "_sheetTab": "details",
+    "wfrp4e-starter-set": {
+      "initialization-folder": "Ubersreik"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>A sweet-scented suspension with a glistening-pink pearlescence, and a fiery taste. This potion subtly enhances the drinker&rsquo;s attractiveness, for a cost. While under its inﬂuence, the drinker receives the benefit of the @Compendium[wfrp4e-core.talents.6l3jvIAvrKxt0lA9]{Attractive} talent. however, after it wears off, the drinker suffers a penalty of -20 to all Fellowship tests for [[/r 1d10]]&nbsp;days as skin and eyes slowly excretes a foul-smelling, yellowish discharge.&nbsp;</p>\n<p>Duration:&nbsp;[[/r 1d10]] hours&nbsp;</p>"
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "0",
+      "ss": "6",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "None"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "source": {
+      "type": "String",
+      "label": "Source"
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.4.0",
+    "coreVersion": "10.291",
+    "createdTime": 1690313550959,
+    "modifiedTime": 1690313550959,
+    "lastModifiedBy": "kYUjI3k8J8QQt9Qw"
+  },
+  "_id": "D8jml7l6GANTVwXn",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "kYUjI3k8J8QQt9Qw": 3
+  },
+  "_key": "!items!D8jml7l6GANTVwXn"
+}

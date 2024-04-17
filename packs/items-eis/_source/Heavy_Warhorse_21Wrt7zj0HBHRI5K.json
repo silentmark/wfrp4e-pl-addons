@@ -1,0 +1,86 @@
+{
+  "_id": "21Wrt7zj0HBHRI5K",
+  "name": "Heavy Warhorse",
+  "type": "trapping",
+  "img": "modules/wfrp4e-eis/assets/icons/heavy-warhorse.png",
+  "effects": [],
+  "folder": "7AP1Hx1JHl8Pc4jQ",
+  "sort": 0,
+  "flags": {
+    "_sheetTab": "description",
+    "wfrp4e-eis": {
+      "initialization-folder": "Mounts and Vehicles"
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>@UUID[Actor.NJxgxApkhZixXYEj]{Heavy Warhorse} (aka Destrier)</p>\n<p>Carrying Capacity: 20</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Price can double or triple in times of tension or war when nobody wants to part with military hardware.</p>"
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": "230",
+      "ss": "0",
+      "bp": "0"
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "scarce"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": 0
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "misc"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "34JMfpmBvTmVYPh4": 3,
+    "VnnpieLwbiAu3Owf": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1693273565112,
+    "modifiedTime": 1693273565112,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!21Wrt7zj0HBHRI5K"
+}

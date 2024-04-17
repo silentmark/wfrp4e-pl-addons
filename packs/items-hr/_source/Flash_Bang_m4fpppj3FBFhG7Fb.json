@@ -1,0 +1,155 @@
+{
+  "_id": "m4fpppj3FBFhG7Fb",
+  "name": "Flash-Bang",
+  "type": "spell",
+  "img": "modules/wfrp4e-horned-rat/assets/icons/stealth.png",
+  "effects": [
+    {
+      "_id": "YetXJJSd7GMoPXLP",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-horned-rat/assets/icons/stealth.png",
+      "transfer": false,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "let test = await args.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"))\n    await test.roll();\n    if (test.result.outcome == \"failure\") {\n\n    let add = 0\n\n    if (test.result.roll % 11 == 0 || test.result.roll == 100) add = 1 // can't use isFumble if no hit location\n\n     await args.actor.addCondition(\"stunned\", Math.max(1, Math.abs(test.result.SL)) + add)\n     await args.actor.addCondition(\"blinded\", Math.max(1, Math.abs(test.result.SL)))\n\n    }"
+        }
+      },
+      "tint": null,
+      "origin": null,
+      "name": "Flash-Bang",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!m4fpppj3FBFhG7Fb.YetXJJSd7GMoPXLP"
+    }
+  ],
+  "folder": "Z7BCpnuCa1IbMurX",
+  "sort": -12500,
+  "flags": {
+    "wfrp4e-horned-rat": {
+      "initialization-folder": "Stealth",
+      "sort": -12500
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You gesture with one paw and create a bright, loud explosion. Every creature (not including yourself ) within the area of effect must make a successful <strong>Challenging (+0) Endurance</strong> Test or gain one @Condition[Blinded] and one @Condition[Stunned] Condition for each level of failure. On a Critical failure, the victim gains one additional @Condition[Stunned] Condition. This spell does not affect anyone with the @UUID[Compendium.wfrp4e-core.items.3O9clK7LGyuLTHPW]{Arcane Magic (Stealth)} Talent.</p><p>\n\n <b>Lore:</b> <p>The Lore of Stealth draws on the power of <em>Dhar</em>, infused with a particularly large portion of <em>Ulgu</em>, to confuse and conceal. It is unclear whether this lore remains similar to how it is practised in Cathay, or if the Sorcerers of Clan Eshin have corrupted a more noble form of stealthy magic. Regardless, spells of this lore specialise in concealing the sorcerer from prying eyes, using magic to distract or diminish signs of the Skaven&rsquo;s presence.</p><p>The Lore of Stealth wreathes the wielder in threads of magic that obfuscate their presence. Whenever you successfully cast a spell from the Lore of Stealth, you gain the @UUID[Compendium.wfrp4e-core.items.OzwDT6kzoLYeeR2d]{Stealthy} Creature Trait for [[/br 1d10]] rounds.</p><p>Ingredients: Clan Eshin Sorcerers use small scraps of paper with assorted runes inscribed on them, which are then coated in powdered Warpstone. When used as an ingredient, the Warpstone powder is consumed, but the scraps of paper remain and can be coated again and reused. The characters used are of no known form of written Queekish, and the Sorcerers of Clan Eshin are in no rush to explain either their meaning or providence.</p><p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "stealth",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "You",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "AoE (Willpower Bonus yards)",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Instant",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 6,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "AUExJb3c35oBvDuA": 3,
+    "R44a2dfsw2hWQXbE": 3
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1687734901075,
+    "modifiedTime": 1693273568157,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!items!m4fpppj3FBFhG7Fb"
+}

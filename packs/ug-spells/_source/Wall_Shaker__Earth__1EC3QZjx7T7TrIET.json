@@ -1,0 +1,93 @@
+{
+  "name": "Wall Shaker (Earth)",
+  "permission": {
+    "default": 0,
+    "49AXXoPz63AAzPKB": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You cause the ground to shake and rumble, cracking the foundations and supports of all buildings in range. Perform an <strong>Opposed Channelling/ Toughness </strong>Test against each building (you roll once and the GM rolls for each building):</p>\n<table style=\"height: 96px;\" border=\"1\">\n<tbody>\n<tr style=\"height: 31px;\">\n<td style=\"height: 31px; width: 153px;\">\n<p><strong>Building Materials</strong></p>\n</td>\n<td style=\"width: 95px;\">\n<p><strong>T</strong></p>\n</td>\n<td style=\"width: 151px;\">\n<p><strong>Building Materials</strong></p>\n</td>\n<td style=\"height: 31px; width: 103px;\">\n<p><strong>T</strong></p>\n</td>\n</tr>\n<tr style=\"height: 31px;\">\n<td style=\"height: 31px; width: 153px;\">\n<p>Grass/Mud/Thatch&nbsp;</p>\n</td>\n<td style=\"width: 95px;\">40</td>\n<td style=\"width: 151px;\">Solid Timber</td>\n<td style=\"height: 31px; width: 103px;\">75</td>\n</tr>\n<tr style=\"height: 17px;\">\n<td style=\"height: 17px; width: 153px;\">Wattle/Daub</td>\n<td style=\"width: 95px;\">55</td>\n<td style=\"width: 151px;\">Brick Structure</td>\n<td style=\"height: 17px; width: 103px;\">90</td>\n</tr>\n<tr style=\"height: 17px;\">\n<td style=\"height: 17px; width: 153px;\">Clay/Light Timber</td>\n<td style=\"width: 95px;\">65</td>\n<td style=\"width: 151px;\">Stone Structure</td>\n<td style=\"height: 17px; width: 103px;\">100</td>\n</tr>\n</tbody>\n</table>\n<p>&nbsp;</p>\n<p>Each Test you win collapses the targeted building (per GM’s discretion). All creatures inside suffer Collapsing Damage. The aftershock of this spell reverberates for miles around, alerting anyone with the <em>Second Sight </em>Talent, who may be hostile to such flagrant use of devastating force.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Elementalism",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower yards"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Special",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Instant",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 16,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": ""
+    },
+    "dynamiceffects": {
+      "equipActive": false,
+      "alwaysActive": false,
+      "effects": []
+    },
+    "exportSource": {
+      "world": "the-old-world",
+      "system": "wfrp4e",
+      "coreVersion": "0.6.6",
+      "systemVersion": "2.1.0"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_wall_shaker.jpg",
+  "_id": "1EC3QZjx7T7TrIET",
+  "effects": [],
+  "_key": "!items!1EC3QZjx7T7TrIET"
+}

@@ -1,0 +1,61 @@
+{
+  "name": "Magical Assistant",
+  "type": "talent",
+  "img": "modules/wfrp4e-core/icons/talents/talent.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>This Talent is specific to @UUID[Compendium.wfrp4e-wom.actors.5c8TPGmO1Wx2zu9z]{Power Familiars}. No other Character Species has access to this Talent.</p><p>The familiar may assist the wizard who created them with any Channelling, Lore (Magic), or Language (Magick) Tests they make. They can also assist with Research Tests, provided the research is into a magical innovation or discovery. The assistant provides a bonus of +20 to these Tests rather than the normal +10 (see @UUID[Compendium.wfrp4e-core.journals.NS3YGlJQxwTggjRX.JournalEntryPage.lQThXbnpgQ30VBXR#assistance]{Assistance}).</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "1"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "effects": [],
+  "folder": "hGYhx9pNsRpGWNQs",
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Talents",
+      "sort": 100000
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1677818094167,
+    "modifiedTime": 1693273575732,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "RD7Y5pspnsVW1wX7",
+  "_key": "!items!RD7Y5pspnsVW1wX7"
+}

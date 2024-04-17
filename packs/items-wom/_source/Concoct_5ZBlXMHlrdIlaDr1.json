@@ -1,0 +1,61 @@
+{
+  "name": "Concoct",
+  "type": "talent",
+  "img": "modules/wfrp4e-core/icons/talents/concoct.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You are skilled at making potions, philtres, and draughts on the go. You may take one free @UUID[Compendium.wfrp4e-core.journals.gLDW6JBuoYuzCoya.JournalEntryPage.RQLJYU3OyA0WUoPG]{Crafting} Endeavour or @UUID[JournalEntry.CpVn7Hp5hz7NmpYu.JournalEntryPage.hS8fXNOVs0vTvpiD]{Brew Potion} Endeavour to use Trade (Apothecary) or Trade (Alchemist) without the need for a workshop or laboratory. Other Crafting Endeavours are not affected.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "int"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": "Trade (Apothecary) and Trade (Alchemist)"
+    }
+  },
+  "effects": [],
+  "folder": "hGYhx9pNsRpGWNQs",
+  "sort": 1200000,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Talents",
+      "sort": 1200000
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676493535593,
+    "modifiedTime": 1693273575677,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "5ZBlXMHlrdIlaDr1",
+  "_key": "!items!5ZBlXMHlrdIlaDr1"
+}

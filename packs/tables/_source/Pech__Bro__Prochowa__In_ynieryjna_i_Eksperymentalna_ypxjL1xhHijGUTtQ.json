@@ -1,0 +1,173 @@
+{
+  "_id": "ypxjL1xhHijGUTtQ",
+  "name": "Pech! Broń Prochowa, Inżynieryjna i Eksperymentalna",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "results": [
+    {
+      "_id": "cqy0da1wvt8sdgx0",
+      "type": 0,
+      "text": "Trzymając lub przygotowując broń, uderzasz się w nos, otrzymujesz 1 Ranę (bez względu na WT i PP)",
+      "range": [
+        1,
+        20
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 1,
+      "rangeH": 20,
+      "_key": "!tables.results!ypxjL1xhHijGUTtQ.cqy0da1wvt8sdgx0"
+    },
+    {
+      "_id": "oplkee3ophr8xksx",
+      "type": 0,
+      "text": "Twoja broń niewypala. Możesz użyć Wolnej Akcji oraz Ruchu aby przeładować na następną rundę.",
+      "range": [
+        21,
+        30
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 21,
+      "rangeH": 30,
+      "_key": "!tables.results!ypxjL1xhHijGUTtQ.oplkee3ophr8xksx"
+    },
+    {
+      "_id": "agvhnq4qs6hlthzk",
+      "type": 0,
+      "text": "Twoja broń zacina się poważnie. Broń otrzymuje 1 punkt obrażeń. Spadasz na koniec kolejności inicjatywy próbując ją odblokować.",
+      "range": [
+        31,
+        40
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 31,
+      "rangeH": 40,
+      "_key": "!tables.results!ypxjL1xhHijGUTtQ.agvhnq4qs6hlthzk"
+    },
+    {
+      "_id": "e8ayshck88gfwppu",
+      "type": 0,
+      "text": "Rozluźniasz chwyt na broni i upuszczasz ją. Twoja następna akcja ma karę -10.",
+      "range": [
+        41,
+        50
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 41,
+      "rangeH": 50,
+      "_key": "!tables.results!ypxjL1xhHijGUTtQ.e8ayshck88gfwppu"
+    },
+    {
+      "_id": "0j5f08xxl5pwbi1t",
+      "type": 0,
+      "text": "Potykasz się i tracisz swój następny Ruch, aby odzyskać równowagę.",
+      "range": [
+        51,
+        60
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 51,
+      "rangeH": 60,
+      "_key": "!tables.results!ypxjL1xhHijGUTtQ.0j5f08xxl5pwbi1t"
+    },
+    {
+      "_id": "n2ggw8kmsuifvi3i",
+      "type": 0,
+      "text": "Powolne wypalanie. Nic się nie dzieje, aczkolwiek w następnej rundzie spowoduje Ranę Krytyczną u celu.",
+      "range": [
+        61,
+        70
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 61,
+      "rangeH": 70,
+      "_key": "!tables.results!ypxjL1xhHijGUTtQ.n2ggw8kmsuifvi3i"
+    },
+    {
+      "_id": "2br9h26lt9t84yyr",
+      "type": 0,
+      "text": "Nadwyrężasz mięsień w głównej ręcę. Ból kończy twoją rundę. Otrzymujesz Ranę Krytyczną, 2 Punkty Obrażeń oraz Naderwany Mięsień (Pomniejszy)",
+      "range": [
+        71,
+        80
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 71,
+      "rangeH": 80,
+      "_key": "!tables.results!ypxjL1xhHijGUTtQ.2br9h26lt9t84yyr"
+    },
+    {
+      "_id": "hthiy4uzrannsbvb",
+      "type": 0,
+      "text": "Broń się przepala. Broń jest bezużyteczna a kolejna próba jej użycia zakończy się eksplozją.",
+      "range": [
+        81,
+        90
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 81,
+      "rangeH": 90,
+      "_key": "!tables.results!ypxjL1xhHijGUTtQ.hthiy4uzrannsbvb"
+    },
+    {
+      "_id": "dbgnjufwembuw58w",
+      "type": 0,
+      "text": "Atak jest kompletną porażką, trafiając losowego sojusznika. Wartość Jedności służy za PS. Jeśli nie ma sojuszników w pobliżu, otrzymujesz 1 Stan @Condition[Oszołomienie].",
+      "range": [
+        91,
+        99
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 91,
+      "rangeH": 99,
+      "_key": "!tables.results!ypxjL1xhHijGUTtQ.dbgnjufwembuw58w"
+    },
+    {
+      "_id": "86d0fby4hq8j4vp8",
+      "type": 0,
+      "text": "Twoja broń wybucha, odłamki trafiają ciebie w ręk i korpus. Rzuć na dwie osobne Rany Krytyczne.",
+      "range": [
+        100,
+        100
+      ],
+      "drawn": false,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "rangeL": 100,
+      "rangeH": 100,
+      "_key": "!tables.results!ypxjL1xhHijGUTtQ.86d0fby4hq8j4vp8"
+    }
+  ],
+  "formula": "1d100",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": null,
+  "sort": 0,
+  "permission": {
+    "default": 0,
+    "Czz7IJA9DEa5LD9E": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "oopsblackpowder",
+      "column": ""
+    }
+  },
+  "_key": "!tables!ypxjL1xhHijGUTtQ"
+}

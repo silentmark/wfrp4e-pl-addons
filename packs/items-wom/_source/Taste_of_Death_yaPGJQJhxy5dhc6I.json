@@ -1,0 +1,185 @@
+{
+  "name": "Taste of Death",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You make living enemies acutely aware of their own mortality. Your primary target must test for @Corruption[minor]{Minor Exposure to Corruption}, and then pass a <strong>Challenging (+0) Cool</strong> Test or receive an @Condition[Unconscious] Condition. Enemies standing within your Initiative Bonus yards of the primary target must pass an <strong>Average (+20) Cool</strong> Test or receive a @Condition[Stunned] Condition. </p><p>Everyone who fails their Cool Test must also pass a <strong>Easy (+40) Cool</strong> Test or receive a @Condition[Fatigued] Condition and Psychology (Despair). For the next week, victims of Despair receive a @Condition[Fatigued] Condition every morning upon awakening.</p><p>\n\n <b>Lore:</b> Targets afflicted by spells from the Lore of Death are drained of life, enervated, and listless. You may assign +1 @Condition[Fatigued] Condition to any living target affected by a spell from this lore. A target may only ever have a single Fatigued Condition gained in this manner at any one time.<p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "death",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Willpower / 2 yards",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "1",
+      "aoe": true
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Instant",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 7,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "type": "spell",
+  "folder": "Sp5iIzHQXN58oR03",
+  "img": "modules/wfrp4e-core/icons/spells/death.png",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-core/icons/spells/death.png",
+      "transfer": false,
+      "_id": "3dczObwnneW9SCmX",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "if (this.actor.type == \"character\")  \n  this.actor.corruptionDialog(\"minor\")\n\nthis.actor.setupSkill(game.i18n.localize(\"NAME.Cool\"), {appendTitle : \" - \" + this.effect.name}).then(async test => {\n           await test.roll();\n           if(!test.succeeded)\n               this.actor.addCondition(\"unconscious\")\n    })"
+        }
+      },
+      "name": "Taste of Death",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!yaPGJQJhxy5dhc6I.3dczObwnneW9SCmX"
+    },
+    {
+      "icon": "modules/wfrp4e-core/icons/spells/death.png",
+      "transfer": false,
+      "_id": "72MNg8enqsteRky9",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "apply",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "this.actor.setupSkill(game.i18n.localize(\"NAME.Cool\"), {absolute : {difficulty : \"average\"}}).then(async test => {\n           await test.roll();\n           if(!test.succeeded)\n               this.actor.addCondition(\"stunned\")\n    })"
+        }
+      },
+      "name": "Secondary Targets",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!yaPGJQJhxy5dhc6I.72MNg8enqsteRky9"
+    }
+  ],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Death",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676403419816,
+    "modifiedTime": 1693273575813,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "yaPGJQJhxy5dhc6I",
+  "_key": "!items!yaPGJQJhxy5dhc6I"
+}

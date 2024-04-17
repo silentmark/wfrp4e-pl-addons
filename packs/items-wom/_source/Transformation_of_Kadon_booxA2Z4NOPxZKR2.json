@@ -1,0 +1,122 @@
+{
+  "name": "Transformation of Kadon",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You transform yourself into a monstrous beast. The creature must be Size Large or Enormous. The monster type is determined by the GM. Examples include:</p><ul><li><p><strong>Amber or Elven Wizard</strong>: @UUID[Compendium.wfrp4e-core.actors.MLtDY4bwzGQpaABN]{Demigryph}, @UUID[Compendium.wfrp4e-core.actors.LZttdCIxmFr1sGsS]{Dragon}, @UUID[Compendium.wfrp4e-core.actors.RiXpMLex8SZf6gaQ]{Hippogryph}, @UUID[Compendium.wfrp4e-empire-ruins.actors.pkOKYojzxGEcaKaC]{Great Eagle}, @UUID[Compendium.wfrp4e-core.actors.8g9rnHLiZ1pJcPPt]{Griffon}</p></li><li><p><strong>Beastman Shaman, Witch, Chaos Sorcerer</strong>: @UUID[Compendium.wfrp4e-core.actors.XtVkAVgZRIIgrBXb]{Manticore}, @UUID[Compendium.wfrp4e-core.actors.A4G4bTYxot3ZygZO]{Hydra}, @UUID[Compendium.wfrp4e-core.actors.9q8QzWB4o7aj6ZxL]{Jabberslythe}, @UUID[Compendium.wfrp4e-core.actors.KeB0khEeq462qTJw]{Wyvern}</p></li></ul><p>You retain your original Intelligence and Willpower scores; all other Characteristics are replaced with the monster’s. You cannot cast spells in this form. All your Skills and Talents are replaced with the monster’s Skills and Creature Traits.</p><p>If you achieve +4 or more SL on your Casting Test, you may either:</p><ul><li><p>Choose 1 Optional Creature Trait, or:</p></li><li><p>Cast the transformation on someone else instead, as a Touch spell. Unwilling targets may resist with an <strong>Opposed Willpower</strong> Test.</p></li></ul><p><strong>Lore:</strong> Whenever you successfully cast a spell from the Lore of Beasts, you may also gain the @UUID[Compendium.wfrp4e-core.items.pTorrE0l3VybAbtn]{Fear (1)} Creature Trait for the next [[/r 1d10]] Rounds.</p><p></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "beasts",
+      "effectString": "",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "You or Touch",
+      "vortex": false
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "You or 1 (maximum)",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus rounds",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 14,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "ritual": {
+      "value": false,
+      "type": "",
+      "xp": 0
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "skill": {
+      "value": ""
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": ""
+    },
+    "wind": {
+      "value": ""
+    },
+    "overcast": {
+      "enabled": false,
+      "label": "",
+      "valuePerOvercast": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      },
+      "initial": {
+        "type": "",
+        "value": 1,
+        "SL": false,
+        "characteristic": "",
+        "bonus": false
+      }
+    }
+  },
+  "type": "spell",
+  "folder": "vv9Uz4QUOea8V2Yk",
+  "img": "modules/wfrp4e-core/icons/spells/beasts.png",
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Beasts",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676405899935,
+    "modifiedTime": 1693273575760,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "booxA2Z4NOPxZKR2",
+  "_key": "!items!booxA2Z4NOPxZKR2"
+}

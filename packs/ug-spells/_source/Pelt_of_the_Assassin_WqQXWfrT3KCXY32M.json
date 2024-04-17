@@ -1,0 +1,82 @@
+{
+  "_id": "WqQXWfrT3KCXY32M",
+  "name": "Pelt of the Assassin",
+  "permission": {
+    "default": 0,
+    "LhiA8OMMa0ToAWEe": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You channel the ever-shifting magics of the Warp and match your fur colour to your surroundings. You gain 1 Armour Point to each location and a +40 bonus to all Stealth Tests made in any environment except full daylight. You cannot cast this spell if you are wearing non-magical armour.&nbsp; &nbsp;</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Warp",
+      "effect": "Warp Sorcerers gain a +10 bonus to Channelling and Language (Magick) Tests in any underground environment, such as a cavern, sewer or even a basement. Targets who suﬀer Wounds from Warp Lore spells must pass an Average (+20) Endurance Test to avoid contracting a Minor Infection."
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "You"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "You",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Willpower Bonus minutes",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 6,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.eIM57lj8CUgBDEz9"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_pelt%20of%20the%20assassin.jpg",
+  "effects": [],
+  "_key": "!items!WqQXWfrT3KCXY32M"
+}

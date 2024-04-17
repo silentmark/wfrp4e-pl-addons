@@ -1,0 +1,104 @@
+{
+  "folder": "orysG5B5Ne1e1fwV",
+  "name": "Musk",
+  "type": "trait",
+  "img": "modules/wfrp4e-wom/assets/icons/marks/mark-ghur.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You exude a strong natural musk. Fellowship Tests made when interacting with Gold Status Characters suffer –1 SL when you are within 5 yards.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-wom/assets/icons/marks/mark-ghur.png",
+      "transfer": true,
+      "_id": "N7KKyyk7AezVqDql",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "dialogChoice",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "effectData": {
+            "description": "Fellowship Tests when interacting with Gold Status",
+            "modifier": null,
+            "slBonus": -1,
+            "successBonus": null,
+            "difficultyStep": null
+          }
+        }
+      },
+      "name": "Musk",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!ECC4NaIkLRuXdVIW.N7KKyyk7AezVqDql"
+    }
+  ],
+  "sort": 103125,
+  "ownership": {
+    "default": 0,
+    "Oxrm36DvLya7eQ7D": 3
+  },
+  "flags": {
+    "wfrp4e-wom": {
+      "initialization-folder": "Ghur",
+      "sort": 0
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.0",
+    "coreVersion": "11.307",
+    "createdTime": 1676405245358,
+    "modifiedTime": 1693273575702,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_id": "ECC4NaIkLRuXdVIW",
+  "_key": "!items!ECC4NaIkLRuXdVIW"
+}

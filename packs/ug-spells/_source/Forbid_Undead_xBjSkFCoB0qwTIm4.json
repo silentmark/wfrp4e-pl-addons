@@ -1,0 +1,88 @@
+{
+  "name": "Forbid Undead",
+  "permission": {
+    "default": 0,
+    "49AXXoPz63AAzPKB": 3
+  },
+  "type": "spell",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>You touch the door of a building and guard it from intrusion by the undead. While the spell lasts, any creature with the <i>Undead </i>Trait must win an <b>Opposed Willpower </b>Test to remain or trespass inside the building; otherwise, the creature suffers a <a></a><a class=\"condition-chat\" data-cond=\"Broken\"><i class=\"fas fa-user-injured\"></i> Broken</a> Condition and must leave, suffering SL+1 Wounds per Round (ignoring Toughness Bonus and Armour Points). The range of this spell is limited to a single structure (such as a house or shop) no greater than Willpower yards in length, width, and height.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "lore": {
+      "type": "String",
+      "label": "Lore",
+      "value": "Necromancy",
+      "effect": ""
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "Touch"
+    },
+    "target": {
+      "type": "String",
+      "label": "Target",
+      "value": "Special",
+      "aoe": false
+    },
+    "duration": {
+      "type": "String",
+      "label": "Duration",
+      "value": "Until sunrise",
+      "extendable": false
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "value": ""
+    },
+    "cn": {
+      "type": "Number",
+      "label": "Casting Number",
+      "value": 4,
+      "SL": 0
+    },
+    "magicMissile": {
+      "type": "Boolean",
+      "label": "Magic Missile",
+      "value": false
+    },
+    "memorized": {
+      "type": "Boolean",
+      "label": "Memorized",
+      "value": false
+    },
+    "ingredients": [],
+    "currentIng": {
+      "type": "Number",
+      "label": "Ingredient",
+      "value": 0
+    },
+    "wind": {
+      "value": ""
+    }
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.GZ5R6sapMWGHEIlm"
+    },
+    "exportSource": {
+      "world": "the-old-world",
+      "system": "wfrp4e",
+      "coreVersion": "0.6.6",
+      "systemVersion": "2.1.0"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/spell_forbid_undead.jpg",
+  "effects": [],
+  "_id": "xBjSkFCoB0qwTIm4",
+  "_key": "!items!xBjSkFCoB0qwTIm4"
+}

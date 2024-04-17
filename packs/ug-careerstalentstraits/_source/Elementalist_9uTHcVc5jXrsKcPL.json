@@ -1,0 +1,91 @@
+{
+  "name": "Elementalist",
+  "permission": {
+    "default": 0,
+    "OfKMBdcUK6oV9G48": 3
+  },
+  "type": "career",
+  "data": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "careergroup": {
+      "type": "String",
+      "label": "Career Group",
+      "value": "Elementalist"
+    },
+    "class": {
+      "type": "String",
+      "label": "Class",
+      "value": "Rangers"
+    },
+    "current": {
+      "type": "Boolean",
+      "value": false
+    },
+    "complete": {
+      "type": "Boolean",
+      "value": false
+    },
+    "level": {
+      "type": "String",
+      "label": "Career Level",
+      "value": "2"
+    },
+    "status": {
+      "tier": "b",
+      "standing": 4
+    },
+    "characteristics": [
+      "ws",
+      "int",
+      "wp",
+      "ag"
+    ],
+    "skills": [
+      "Channelling",
+      "Gossip",
+      "Language (Magick)",
+      "Lore (Nature)",
+      "Melee (Basic)",
+      "Navigation",
+      "Outdoor Survival",
+      "Swim",
+      "Animal Care or Heal",
+      "Dodge",
+      "Endurance",
+      "Intuition",
+      "Lore (Herbs)",
+      "Stealth (Any)"
+    ],
+    "talents": [
+      "Beneath Notice or Sixth Sense",
+      "Arcane Magic (Elementalism)",
+      "Resistance (Corruption)",
+      "Trade (Herbalist)"
+    ],
+    "trappings": [
+      "Healing Poultice",
+      "Trade Tools (Herbalist)"
+    ],
+    "incomeSkill": [
+      3
+    ]
+  },
+  "flags": {
+    "core": {
+      "sourceId": "Item.CWCRAJyCLAHppzFr"
+    }
+  },
+  "img": "modules/wfrp4e-unofficial-grimoire/icons/caree_elementalist.jpg",
+  "effects": [],
+  "_id": "9uTHcVc5jXrsKcPL",
+  "_key": "!items!9uTHcVc5jXrsKcPL"
+}

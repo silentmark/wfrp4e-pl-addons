@@ -1,0 +1,19 @@
+{
+  "name": "Arcane Marks",
+  "sorting": "a",
+  "folder": null,
+  "type": "Item",
+  "_id": "n0rPQBeA5eKVJvBm",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "6.6.1",
+    "coreVersion": "11.305",
+    "createdTime": 1691299357656,
+    "modifiedTime": 1691299357656,
+    "lastModifiedBy": "sAiwDCZFd21tgaDN"
+  },
+  "_key": "!folders!n0rPQBeA5eKVJvBm"
+}
