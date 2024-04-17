@@ -120,6 +120,10 @@ export default class AutoMiss {
           game.wfrp4e.config.conditions['tokencover.cover.MEDIUM'] = "Zasłona przed Strzałem (Średnia)";
           game.wfrp4e.config.conditions['tokencover.cover.LOW'] = "Zasłona przed Strzałem (Słaba)";
           game.wfrp4e.config.conditions['tokencover.cover.HIGH'] = "Zasłona przed Strzałem (Silna)";
+
+          game.wfrp4e.config.conditionDescriptions['tokencover.cover.MEDIUM'] = "Zasłona przed Strzałem (Średnia) - Zapewnia -20 do ataków dystansowych";
+          game.wfrp4e.config.conditionDescriptions['tokencover.cover.LOW'] = "Zasłona przed Strzałem (Słaba) - Zapewnia -10 do ataków dystansowych";
+          game.wfrp4e.config.conditionDescriptions['tokencover.cover.HIGH'] = "Zasłona przed Strzałem (Silna) - Zapewnia -30 do ataków dystansowych";
           
         }, 20000);
       });
