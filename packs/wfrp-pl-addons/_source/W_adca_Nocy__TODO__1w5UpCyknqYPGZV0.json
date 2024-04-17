@@ -1,0 +1,58 @@
+{
+  "_id": "1w5UpCyknqYPGZV0",
+  "name": "Władca Nocy (TODO)",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Twoi nieumarli sojusznicy i stwory są chronieni przez twoją mroczną obecność. Otrzymują cechę @UUID[Compendium.wfrp4e-core.items.Item.Bvd2aZ0gQUXHfCTh]{Ochrona (9)} chroniącą przed obrażeniami niemagicznymi, jeśli znajdują się w odległości bonus z Siły Woli metrów od Ciebie. Każdy dodatkowy zakup tego Daru Krwi zmniejsza wartość rzutu Ochrony o 1.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "fel"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "folder": "R9GP6kUptFm6hQ24",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1707133408901,
+    "modifiedTime": 1713356301502,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!1w5UpCyknqYPGZV0"
+}

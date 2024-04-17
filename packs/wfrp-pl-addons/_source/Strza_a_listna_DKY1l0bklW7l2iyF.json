@@ -1,0 +1,100 @@
+{
+  "name": "Strzała listna",
+  "type": "ammunition",
+  "flags": {
+    "_sheetTab": "details",
+    "core": {}
+  },
+  "img": "modules/wfrp4e-core/icons/equipment/ammunition/arrow.png",
+  "_id": "DKY1l0bklW7l2iyF",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Standardowa strzała porządnej jakości. Nie sprawdza się tak dobrze przeciwko opancerzonym wrogom jak wariant wojskowy.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 12
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 0,
+      "ss": 3,
+      "bp": 0
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "common"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "ammunitionType": {
+      "type": "String",
+      "label": "Ammunition Type",
+      "value": "bow"
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "As weapon"
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "qualities": {
+      "type": "String",
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "type": "String",
+      "label": "Flaws",
+      "value": []
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    }
+  },
+  "folder": "6IN1BCHZdqB1fabF",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1713354687805,
+    "modifiedTime": 1713354874131,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 850000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!DKY1l0bklW7l2iyF"
+}

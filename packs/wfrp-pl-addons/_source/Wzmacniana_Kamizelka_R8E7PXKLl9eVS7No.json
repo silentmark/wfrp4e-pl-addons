@@ -1,0 +1,115 @@
+{
+  "name": "Wzmacniana Kamizelka",
+  "type": "armour",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-pl-addons/icons/gambeson-shirt.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Pancerz wzmacniany to przeszywanica zakładana pod średnią zbroję. Łączy w sobie zalety gambesonu z dodatkową ochroną płatów wygarbowanej skóry, naszytych lub zszytych naprzemiennie z materiałem.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 2
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 2,
+      "ss": 0,
+      "bp": 0
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "scarce"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "damageToItem": {
+      "type": "Number",
+      "value": 0,
+      "shield": 0
+    },
+    "worn": {
+      "type": "Boolean",
+      "label": "Worn",
+      "value": false
+    },
+    "armorType": {
+      "type": "String",
+      "label": "Armour Type",
+      "value": "medium"
+    },
+    "penalty": {
+      "type": "String",
+      "label": "Penalty",
+      "value": ""
+    },
+    "qualities": {
+      "type": "String",
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "type": "String",
+      "label": "Flaws",
+      "value": []
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": "Warstwa Podstawowa, Warstwa Uzupełniająca, Przeszywnica"
+    },
+    "AP": {
+      "head": 0,
+      "lArm": 0,
+      "rArm": 0,
+      "lLeg": 0,
+      "rLeg": 0,
+      "body": 2
+    },
+    "APdamage": {
+      "head": 0,
+      "lArm": 0,
+      "rArm": 0,
+      "lLeg": 0,
+      "rLeg": 0,
+      "body": 0
+    }
+  },
+  "effects": [],
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1675637717886,
+    "modifiedTime": 1713355090291,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "_id": "R8E7PXKLl9eVS7No",
+  "folder": "mr1rSz4jHf9DYCyF",
+  "sort": 200000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!R8E7PXKLl9eVS7No"
+}

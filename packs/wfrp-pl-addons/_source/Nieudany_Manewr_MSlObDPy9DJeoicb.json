@@ -1,0 +1,117 @@
+{
+  "name": "Nieudany Manewr",
+  "type": "critical",
+  "_id": "MSlObDPy9DJeoicb",
+  "img": "icons/skills/melee/shield-damaged-broken-blue.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Przeciwnicy zdobywają 1 Przewagę. </p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "0",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "effects": [
+    {
+      "icon": "icons/skills/melee/shield-damaged-broken-blue.webp",
+      "transfer": true,
+      "name": "Nieudany Manewr",
+      "_id": "7QYa4vk3bpcH29Ya",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "hide": false,
+          "areaEffect": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "testIndependent": false,
+            "prompt": false,
+            "runAsGM": false
+          },
+          "scriptData": [
+            {
+              "label": "Nieudany Manewr",
+              "trigger": "immediate",
+              "script": "let advantage = game.settings.get(\"wfrp4e\", \"groupAdvantageValues\");\nlet advantages = \"enemies\"; \nif (this.actor.getActiveTokens()[0].document.disposition != 1) {\n    advantages = \"players\";\n}\nlet n = advantage[advantages];\nn += 1;\nawait WFRP_Utility.updateGroupAdvantage({[advantages] : n});\n\nconst target = this.actor;\nconst effectName = this.effect.name;\nsetTimeout(() => {\n    let itm = target.getItemTypes(\"critical\").find(x=>x.name == effectName);\n    target.deleteEmbeddedDocuments(\"Item\", [itm.id])\n}, 500);",
+              "options": {
+                "dialog": {
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": true
+                }
+              }
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "actor",
+            "effectTrigger": "oneTime",
+            "preventDuplicateEffects": false,
+            "script": "let advantage = game.settings.get(\"wfrp4e\", \"groupAdvantageValues\");\r\nlet advantages = \"enemies\"; \r\nif (this.actor.getActiveTokens()[0].document.disposition != 1) {\r\n    advantages = \"players\";\r\n}\r\nlet n = advantage[advantages];\r\nn += 1;\r\nawait WFRP_Utility.updateGroupAdvantage({[advantages] : n});\r\n\r\nconst target = this.actor;\r\nconst effectName = this.effect.name;\r\nsetTimeout(() => {\r\n    let itm = target.getItemTypes(\"critical\").find(x=>x.name == effectName);\r\n    target.deleteEmbeddedDocuments(\"Item\", [itm.id])\r\n}, 500);"
+          }
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!MSlObDPy9DJeoicb.7QYa4vk3bpcH29Ya"
+    }
+  ],
+  "folder": "nost2pGVYD3gcBGR",
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1689673485241,
+    "modifiedTime": 1713358208273,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!MSlObDPy9DJeoicb"
+}

@@ -1,0 +1,116 @@
+{
+  "name": "Uszkodzenie Broni",
+  "type": "critical",
+  "_id": "UxkVD3GgdfPkI6rI",
+  "img": "icons/skills/melee/shield-damaged-broken-blue.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Broń ulega uszkodzeniu i otrzymuje 1 punkt uszkodzeń</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "0",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "effects": [
+    {
+      "icon": "icons/skills/melee/shield-damaged-broken-blue.webp",
+      "transfer": true,
+      "name": "Uszkodzenie Broni",
+      "_id": "c4KDNOxrVyjsYLHR",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "testIndependent": false,
+            "prompt": false,
+            "runAsGM": false
+          },
+          "scriptData": [
+            {
+              "label": "Uszkodzenie Broni",
+              "trigger": "immediate",
+              "script": "const weapons = this.actor.items.filter(x=>x.equipped && x.type == \"weapon\");\nconst weapon = weapons[Math.floor(Math.random() * weapons.length)];\nconst w = weapon.toObject();\nlet regex = /\\d{1,3}/gm;\nconst maxDamage = Number(regex.exec(weapon.damage.value)[0] || 0) + Number(weapon.properties.qualities.durable?.value || 0) || 999\nw.system.damageToItem.value = Math.min(maxDamage, w.system.damageToItem.value + 1);\nif (maxDamage == w.system.damageToItem.value) {\n    w.system.equipped = false\n}\nthis.actor.updateEmbeddedDocuments(\"Item\", [w]);\n\nconst target = this.actor;\nconst effectName = this.effect.name;\nsetTimeout(() => {\n    let itm = target.getItemTypes(\"critical\").find(x=>x.name == effectName);\n    target.deleteEmbeddedDocuments(\"Item\", [itm.id])\n}, 500);",
+              "options": {
+                "dialog": {
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": true
+                }
+              }
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "actor",
+            "effectTrigger": "oneTime",
+            "preventDuplicateEffects": false,
+            "script": "const weapons = this.actor.items.filter(x=>x.equipped && x.type == \"weapon\");\nconst weapon = weapons[Math.floor(Math.random() * weapons.length)];\nconst w = weapon.toObject();\nlet regex = /\\d{1,3}/gm;\nconst maxDamage = Number(regex.exec(weapon.damage.value)[0] || 0) + Number(weapon.properties.qualities.durable?.value || 0) || 999\nw.system.damageToItem.value = Math.min(maxDamage, w.system.damageToItem.value + 1);\nif (maxDamage == w.system.damageToItem.value) {\n    w.system.equipped = false\n}\nthis.actor.updateEmbeddedDocuments(\"Item\", [w]);\n\nconst target = this.actor;\nconst effectName = this.effect.name;\nsetTimeout(() => {\n    let itm = target.getItemTypes(\"critical\").find(x=>x.name == effectName);\n    target.deleteEmbeddedDocuments(\"Item\", [itm.id])\n}, 500);"
+          }
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!UxkVD3GgdfPkI6rI.c4KDNOxrVyjsYLHR"
+    }
+  ],
+  "folder": "nost2pGVYD3gcBGR",
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1689672604423,
+    "modifiedTime": 1713358381983,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!UxkVD3GgdfPkI6rI"
+}

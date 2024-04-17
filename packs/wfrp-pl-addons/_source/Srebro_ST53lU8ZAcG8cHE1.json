@@ -1,0 +1,64 @@
+{
+  "_id": "ST53lU8ZAcG8cHE1",
+  "name": "Srebro",
+  "type": "trait",
+  "flags": {
+    "_sheetTab": "details",
+    "core": {}
+  },
+  "img": "modules/wfrp4e-core/icons/injuries/amputatedarm.png",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Srebro, jako metal oczyszczający, jest dla ciebie przekleństwem. Srebrna broń zyskuje cechę Druzgocąca, gdy zostanie użyta przeciwko tobie. Srebrne przedmioty są również bolesne w kontakcie z twoją gołą skórą, zadając 1 ranę na rundę co ignoruje premię do wytrzymałości i pancerz.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "folder": "XwxUCN1xDJMXTjBk",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698787688016,
+    "modifiedTime": 1713356305122,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 900000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!ST53lU8ZAcG8cHE1"
+}

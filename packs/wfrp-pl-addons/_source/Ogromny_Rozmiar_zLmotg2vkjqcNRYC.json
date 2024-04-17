@@ -1,0 +1,117 @@
+{
+  "_id": "zLmotg2vkjqcNRYC",
+  "name": "Ogromny Rozmiar",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [
+    {
+      "_id": "yBejVbykKyzEQT8F",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "actor",
+          "script": "fromUuid(\"Compendium.wfrp4e-core.items.8slW8CJ2oVTxeQ6q\").then(item => {\n    args.actor.createEmbeddedEntity(\"OwnedItem\", item.data)\n})",
+          "preventDuplicateEffects": false,
+          "applicationData": {
+            "avoidTest": {
+              "value": "none"
+            },
+            "testIndependent": false,
+            "prompt": false,
+            "documentType": "Item",
+            "type": "document",
+            "equipTransfer": false
+          },
+          "scriptData": [
+            {
+              "label": "Ogromny Rozmiar",
+              "trigger": "addItems",
+              "script": "let item = await fromUuid(\"Compendium.wfrp4e-core.items.8slW8CJ2oVTxeQ6q\");\nitem = item.toObject();\nitem.system.specification.value = \"Duży\"\nawait this.actor.createEmbeddedDocuments(\"Item\", [item],  {fromEffect : this.effect.id});\nawait this.actor.system.checkSize();",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ]
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null,
+        "combat": null
+      },
+      "icon": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+      "tint": null,
+      "transfer": true,
+      "name": "Ogromny Rozmiar",
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "_key": "!items.effects!zLmotg2vkjqcNRYC.yBejVbykKyzEQT8F"
+    }
+  ],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Masz teraz ponad 3 metry wzrostu. Otrzymujesz cechę @Compendium[wfrp4e-core.items.8slW8CJ2oVTxeQ6q]{Rozmiar} i stajesz się duży.</p><p>Kiedy użyjesz daru @UUID[Compendium.world.wampiry.Item.BRdukN8hxSBpcuUn]{Ludzka Postać} powrócisz do Średniego Rozmiaru, ale będziesz co najmniej o kilanaście centymetrów wyższy niż byłeś przed przemianą w wampira. Będzie to wyraźny znak twojej bezbożnej natury dla tych, którzy znali cię, gdy byłeś śmiertelnikiem.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "1"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "folder": "IdBKVE70UjsZfSoR",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1707040738121,
+    "modifiedTime": 1713356301502,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 300000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!zLmotg2vkjqcNRYC"
+}

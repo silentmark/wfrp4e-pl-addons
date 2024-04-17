@@ -1,0 +1,117 @@
+{
+  "_id": "3QBgzZ14F9r2tIon",
+  "name": "Zepsuta Niewinność",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+      "transfer": true,
+      "name": "Zepsuta Niewinność",
+      "_id": "OQkhPKZeiLkYBgTR",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "effectTrigger": "opposedDefender",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": false,
+          "script": "let item = args.attackerTest.item;\nif (item?.attackType != 'melee' && item?.attackType != 'ranged' && args.attackerTest.type != 'cast') return;\nif (args.opposedTest.result.winner == \"attacker\") {\n  setTimeout(async () => {\n    let firstTest = await args.attackerTest.actor.setupSkill(game.i18n.localize(\"NAME.Cool\"), { title: \"Zepsuta Niewinność - Opanowanie\" });\n    await firstTest.roll();\n    let target = args.defenderTest.actor.getActiveTokens()[0];\n    await firstTest.createOpposedMessage(target);\n    let secondTest = await args.defenderTest.actor.setupSkill(game.i18n.localize(\"NAME.Charm\"), { title: \"Zepsuta Niewinność - Charyzma\" });\n    await secondTest.roll();\n    let msg = secondTest.opposedMessages[0];\n    let op = msg.getOppose();\n    let opr = op.resultMessage.getOpposedTest();\n    if (opr.result.winner == \"defender\") {\n        ChatMessage.create({content: \"Nie udało się zadać obrażeń - Talent Zepsuta Niewinność\"});\n        let oldMsg = args.attackerTest.opposedMessages[0];\n        let oldOp = oldMsg.getOppose();\n        let oldOpr = oldOp.resultMessage;\n        let $c = $(oldOpr.content);\n        $c.find(\".opposed-card\").css('text-decoration','line-through');\n        let attackerName = args.attackerTest.actor.name;\n        $c.find(\".opposed-card\").parent().append('<div class=\"opposed-card\"><div><b>' + attackerName + '</b> Przegrał z powodu Zepsutej Niewinności</div></div>');\n        oldOpr.update({content: $c[0].outerHTML})\n    }\n  }, 1000);\n}",
+          "scriptData": [
+            {
+              "label": "Zepsuta Niewinność",
+              "trigger": "opposedDefender",
+              "script": "let item = args.attackerTest.item;\nif (item?.attackType != 'melee' && item?.attackType != 'ranged' && args.attackerTest.type != 'cast') return;\nif (args.opposedTest.result.winner == \"attacker\") {\n  setTimeout(async () => {\n    let firstTest = await args.attackerTest.actor.setupSkill(game.i18n.localize(\"NAME.Cool\"), { title: \"Zepsuta Niewinność - Opanowanie\" });\n    await firstTest.roll();\n    let target = args.defenderTest.actor.getActiveTokens()[0];\n    await firstTest.createOpposedMessage(target);\n    let secondTest = await args.defenderTest.actor.setupSkill(game.i18n.localize(\"NAME.Charm\"), { title: \"Zepsuta Niewinność - Charyzma\" });\n    await secondTest.roll();\n    let msg = secondTest.opposedMessages[0];\n    let op = msg.getOppose();\n    let opr = op.resultMessage.getOpposedTest();\n    if (opr.result.winner == \"defender\") {\n        ChatMessage.create({content: \"Nie udało się zadać obrażeń - Talent Zepsuta Niewinność\"});\n        let oldMsg = args.attackerTest.opposedMessages[0];\n        let oldOp = oldMsg.getOppose();\n        let oldOpr = oldOp.resultMessage;\n        let $c = $(oldOpr.content);\n        $c.find(\".opposed-card\").css('text-decoration','line-through');\n        let attackerName = args.attackerTest.actor.name;\n        $c.find(\".opposed-card\").parent().append('<div class=\"opposed-card\"><div><b>' + attackerName + '</b> Przegrał z powodu Zepsutej Niewinności</div></div>');\n        oldOpr.update({content: $c[0].outerHTML})\n    }\n  }, 1000);\n}",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "applicationData": {
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          }
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!3QBgzZ14F9r2tIon.OQkhPKZeiLkYBgTR"
+    }
+  ],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Albo wyglądasz tak pięknie, albo tak niewinnie, że twoi wrogowie muszą dwa razy pomyśleć, zanim cię skrzywdzą. Każda czująca istota, która chce Cię skrzywdzić musi w tym celu wygrać <strong>Przeciwstawny Test Opanowania/Charyzma.</strong></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "1"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "folder": "IdBKVE70UjsZfSoR",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1700563760888,
+    "modifiedTime": 1713356301502,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 4200000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!3QBgzZ14F9r2tIon"
+}

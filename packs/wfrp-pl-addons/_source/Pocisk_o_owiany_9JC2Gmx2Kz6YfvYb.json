@@ -1,0 +1,107 @@
+{
+  "name": "Pocisk ołowiany",
+  "type": "ammunition",
+  "flags": {
+    "_sheetTab": "details",
+    "core": {}
+  },
+  "img": "modules/wfrp4e-core/icons/equipment/ammunition/stone-bullet.png",
+  "_id": "9JC2Gmx2Kz6YfvYb",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 12
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 0,
+      "ss": 0,
+      "bp": 4
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "common"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "ammunitionType": {
+      "type": "String",
+      "label": "Ammunition Type",
+      "value": "sling"
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "-10"
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": "+1"
+    },
+    "qualities": {
+      "type": "String",
+      "label": "Qualities",
+      "value": [
+        {
+          "name": "pummel"
+        },
+        {
+          "name": "unbreakable"
+        }
+      ]
+    },
+    "flaws": {
+      "type": "String",
+      "label": "Flaws",
+      "value": []
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    }
+  },
+  "folder": "6IN1BCHZdqB1fabF",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1713354623454,
+    "modifiedTime": 1713354894161,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 600000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!9JC2Gmx2Kz6YfvYb"
+}

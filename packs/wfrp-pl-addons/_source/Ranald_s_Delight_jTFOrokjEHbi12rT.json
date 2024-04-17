@@ -1,0 +1,250 @@
+{
+  "name": "Ranald's Delight",
+  "type": "trapping",
+  "img": "icons/commodities/materials/powder-grey.webp",
+  "effects": [
+    {
+      "_id": "TApb9RQHQJcksYYL",
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": false
+          },
+          "scriptData": [],
+          "_legacyData": {
+            "effectApplication": "actor",
+            "effectTrigger": "",
+            "preventDuplicateEffects": false
+          }
+        }
+      },
+      "changes": [
+        {
+          "key": "system.details.move.value",
+          "mode": 2,
+          "value": "1",
+          "priority": null
+        },
+        {
+          "key": "system.characteristics.ws.modifier",
+          "mode": 2,
+          "value": "10",
+          "priority": null
+        },
+        {
+          "key": "system.characteristics.s.modifier",
+          "mode": 2,
+          "value": "10",
+          "priority": null
+        },
+        {
+          "key": "system.characteristics.t.modifier",
+          "mode": 2,
+          "value": "10",
+          "priority": null
+        },
+        {
+          "key": "system.characteristics.ag.modifier",
+          "mode": 2,
+          "value": "10",
+          "priority": null
+        },
+        {
+          "key": "system.characteristics.s.calculationBonusModifier",
+          "mode": 2,
+          "value": "-1",
+          "priority": null
+        },
+        {
+          "key": "system.characteristics.t.calculationBonusModifier",
+          "mode": 2,
+          "value": "-1",
+          "priority": null
+        }
+      ],
+      "duration": {
+        "startTime": null,
+        "seconds": 10800,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/equipment/drugs_and_poisons/ranalds-delight.png",
+      "transfer": true,
+      "disabled": true,
+      "tint": null,
+      "origin": null,
+      "name": "Ranald's Delight",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!jTFOrokjEHbi12rT.TApb9RQHQJcksYYL"
+    },
+    {
+      "_id": "vLMdJ6dsFuAAIee5",
+      "changes": [
+        {
+          "key": "system.details.move.value",
+          "mode": 2,
+          "value": "-2",
+          "priority": null
+        },
+        {
+          "key": "system.characteristics.ws.modifier",
+          "mode": 2,
+          "value": "-20",
+          "priority": null
+        },
+        {
+          "key": "system.characteristics.s.modifier",
+          "mode": 2,
+          "value": "-20",
+          "priority": null
+        },
+        {
+          "key": "system.characteristics.t.modifier",
+          "mode": 2,
+          "value": "-20",
+          "priority": null
+        },
+        {
+          "key": "system.characteristics.ag.modifier",
+          "mode": 2,
+          "value": "-20",
+          "priority": null
+        },
+        {
+          "key": "system.characteristics.s.calculationBonusModifier",
+          "mode": 2,
+          "value": "2",
+          "priority": null
+        },
+        {
+          "key": "system.characteristics.t.calculationBonusModifier",
+          "mode": 2,
+          "value": "2",
+          "priority": null
+        }
+      ],
+      "disabled": true,
+      "duration": {
+        "startTime": null,
+        "seconds": 86400,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/equipment/drugs_and_poisons/ranalds-delight.png",
+      "transfer": true,
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": false
+          },
+          "scriptData": [],
+          "_legacyData": {
+            "effectApplication": "actor",
+            "effectTrigger": "",
+            "preventDuplicateEffects": false
+          }
+        }
+      },
+      "tint": null,
+      "origin": null,
+      "name": "Ranald's Delight After Effects",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!jTFOrokjEHbi12rT.vLMdJ6dsFuAAIee5"
+    }
+  ],
+  "flags": {
+    "_sheetTab": "description",
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>This highly-addictive stimulant is a synthetic compound made from sulphur, mercury and other elements. Inhaling the powder provides a bonus of +1 to Movement, and +10 to WS, S, T, and Agi. This last for 3 hours, after which the user suffers a penalty of &ndash;2 Movement and &ndash;20 on Weapon Skill, Strength, Toughness, and Agility. <strong>Duration</strong>: 1 day.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 0,
+      "ss": 18,
+      "bp": 0
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "scarce"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1663627495296,
+    "modifiedTime": 1713356216795,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "_id": "jTFOrokjEHbi12rT",
+  "folder": "kro4u2Gy3c3f4tDQ",
+  "sort": 3800000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!jTFOrokjEHbi12rT"
+}

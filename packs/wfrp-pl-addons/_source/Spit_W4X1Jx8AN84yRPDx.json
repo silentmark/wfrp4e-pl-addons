@@ -1,0 +1,87 @@
+{
+  "name": "Spit",
+  "type": "trapping",
+  "img": "icons/commodities/materials/bowl-liquid-white.webp",
+  "effects": [],
+  "flags": {
+    "_sheetTab": "description",
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Extracted from Chameleoleeches found in the marshes of the Empire, this extraordinarily powerful hallucinogen brings visions of something deeply desired, such as a lost lover, a dead friend, or a missing child. Called Spit on the streets, it’s popular with those lost to despair. Upon exposure, you must pass a <strong>Very Hard (–30) Toughness</strong> Test or be lost to a fully real fantasy, which is a matter for the GM to handle. <strong>Duration</strong>: 1d10 minutes.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 1,
+      "ss": 5,
+      "bp": 0
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "rare"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1663627495286,
+    "modifiedTime": 1713356216795,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "_id": "W4X1Jx8AN84yRPDx",
+  "folder": "kro4u2Gy3c3f4tDQ",
+  "sort": 1600000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!W4X1Jx8AN84yRPDx"
+}

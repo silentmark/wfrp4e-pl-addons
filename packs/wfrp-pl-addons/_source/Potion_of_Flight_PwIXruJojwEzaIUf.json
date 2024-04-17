@@ -1,0 +1,138 @@
+{
+  "name": "Potion of Flight",
+  "type": "trapping",
+  "img": "icons/consumables/potions/bottle-ornate-bat-teal.webp",
+  "effects": [
+    {
+      "_id": "5TiNnr51ZsUc65t7",
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "reduceQuantity": true,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": false
+          },
+          "scriptData": [
+            {
+              "label": "Potion of Flight",
+              "trigger": "manual",
+              "script": "fromUuid(\"Compendium.wfrp4e-core.traits.EO05HX7jql0g605A\").then(item => {\n   item = item.toObject()\n   item.data.specification.value = this.actor.characteristics.ag.value\n   this.actor.createEmbeddedDocuments(\"Item\", [item])\n   ui.notifications.notify(item.name += \" added\")\n})"
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "actor",
+            "effectTrigger": "invoke",
+            "preventDuplicateEffects": false,
+            "script": "fromUuid(\"Compendium.wfrp4e-core.traits.EO05HX7jql0g605A\").then(item => {\n   item = item.toObject()\n   item.data.specification.value = this.actor.characteristics.ag.value\n   this.actor.createEmbeddedDocuments(\"Item\", [item])\n   ui.notifications.notify(item.name += \" added\")\n})"
+          }
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/vitality-draught.png",
+      "tint": null,
+      "transfer": false,
+      "origin": null,
+      "name": "Potion of Flight",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!PwIXruJojwEzaIUf.5TiNnr51ZsUc65t7"
+    }
+  ],
+  "flags": {
+    "_sheetTab": "details",
+    "core": {},
+    "wfrp4e-dotr": {
+      "initialization-folder": "Other",
+      "sort": 1100000
+    }
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>When drunk, this potion affects the drinker as a <a class=\"entity-link content-link\" draggable=\"true\" data-pack=\"wfrp4e-core.items\" data-id=\"9wmmln3DunIqGXM2\">Flight</a> Spell. </p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>The effect lasts for 20 Rounds, minus the drinker’s Toughness bonus.</p>"
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 10,
+      "ss": 0,
+      "bp": 0
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "scarce"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1690313550961,
+    "modifiedTime": 1713356216795,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "_id": "PwIXruJojwEzaIUf",
+  "folder": "kro4u2Gy3c3f4tDQ",
+  "sort": 2900000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!PwIXruJojwEzaIUf"
+}

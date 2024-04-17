@@ -1,0 +1,86 @@
+{
+  "name": "Last Gasp",
+  "type": "trapping",
+  "img": "icons/skills/toxins/symbol-poison-drop-skull-green.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><span style=\"font-family: serif\">If forced down the throat of a corpse no older than a day, this brew returns the body to a brief semblance of life. It can barely move, speaking in a deathly whisper that is barely audible. The former corpse may be asked three questions. It need not answer, but will not lie, similar to the spell Dying Words. Unfortunately, the alchemical concoction is unstable. If the creature is asked only three questions it will return to restful slumber after a few minutes. However, if it is asked a fourth, the body will rise as a Thing from the Dead Wood, hostile to everyone it sees.</span></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 15,
+      "ss": 0,
+      "bp": 0
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "exotic"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1670890602882,
+    "modifiedTime": 1713356216795,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "_id": "eX3TOeFk3ZRKG02Q",
+  "folder": "kro4u2Gy3c3f4tDQ",
+  "sort": 4900000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!eX3TOeFk3ZRKG02Q"
+}

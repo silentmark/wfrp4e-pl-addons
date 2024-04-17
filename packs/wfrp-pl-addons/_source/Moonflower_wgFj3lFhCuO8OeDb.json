@@ -1,0 +1,87 @@
+{
+  "name": "Moonflower",
+  "type": "trapping",
+  "img": "icons/commodities/materials/bowl-powder-yellow.webp",
+  "effects": [],
+  "flags": {
+    "_sheetTab": "details",
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>This tranquilizer is a dried moss which grows only on leaves in the Laurelorn forest. Elves use Moonﬂower to treat Black Plague, granting a bonus of +30 to any associated Tests for Elves to resist the disease, otherwise it has no effect on their species. Others can inhale vapors from boiling the moss and if they fail a <strong>Very Hard (–30) Willpower</strong> Test will gain an Unconscious Condition; if passed, they receive a bonus of +20 to Cool Tests and gain a Fatigued Condition. Moonﬂower is used by the most expensive Physicians as an anesthetic. <strong>Duration</strong>: 1d10+5 hours.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 5,
+      "ss": 0,
+      "bp": 0
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "scarce"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1663627495391,
+    "modifiedTime": 1713356216795,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "_id": "wgFj3lFhCuO8OeDb",
+  "folder": "kro4u2Gy3c3f4tDQ",
+  "sort": 5900000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!wgFj3lFhCuO8OeDb"
+}

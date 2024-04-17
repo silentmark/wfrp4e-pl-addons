@@ -1,0 +1,19 @@
+{
+  "name": "Trafienia Krytyczne",
+  "sorting": "a",
+  "folder": null,
+  "type": "RollTable",
+  "_id": "uV4nClaib0g9ah6d",
+  "sort": 100000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1697834224097,
+    "modifiedTime": 1713356358635,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "_key": "!folders!uV4nClaib0g9ah6d"
+}

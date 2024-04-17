@@ -1,0 +1,104 @@
+{
+  "name": "Strzała iglicowa",
+  "type": "ammunition",
+  "flags": {
+    "_sheetTab": "details",
+    "core": {}
+  },
+  "img": "modules/wfrp4e-core/icons/equipment/ammunition/arrow.png",
+  "_id": "LNu45jrHZ1Hwd5vu",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Rodzaj strzały używany przez żołnierzy podczas bitew, opracowana aby przebijać część pancerzy noszonych przez wrogich wojaków.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 12
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 0,
+      "ss": 8,
+      "bp": 0
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "scarce"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "ammunitionType": {
+      "type": "String",
+      "label": "Ammunition Type",
+      "value": "bow"
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "As weapon"
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "qualities": {
+      "type": "String",
+      "label": "Qualities",
+      "value": [
+        {
+          "name": "penetrating"
+        }
+      ]
+    },
+    "flaws": {
+      "type": "String",
+      "label": "Flaws",
+      "value": []
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    }
+  },
+  "folder": "6IN1BCHZdqB1fabF",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1713354686656,
+    "modifiedTime": 1713354872745,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 900000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!LNu45jrHZ1Hwd5vu"
+}

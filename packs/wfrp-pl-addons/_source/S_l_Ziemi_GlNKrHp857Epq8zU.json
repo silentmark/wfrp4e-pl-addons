@@ -1,0 +1,64 @@
+{
+  "_id": "GlNKrHp857Epq8zU",
+  "name": "Sól Ziemi",
+  "type": "trait",
+  "flags": {
+    "_sheetTab": "details",
+    "core": {}
+  },
+  "img": "modules/wfrp4e-core/icons/injuries/amputatedarm.png",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Czy to z powodu przesądów, czy z powodu duchowego rozłączenia z życiodajną ziemią, możesz spać w pełni tylko wtedy, gdy jesteś w ziemi z ziem, które jeszcze za życia nazywałeś domem. Musisz spać z co najmniej dwiema garściami tej ziemi każdego dnia, inaczej zyskasz +1 Stan Zmęczenia, gdy wstaniesz wieczorem. Stany te nie mogą zostać usunięte, dopóki nie prześpisz całego dnia z dwiema garściami swojej ojczystej ziemi, chociaż nie możesz spaść poniżej 10 w żadnej Charakterystyce przez ich kary.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "folder": "XwxUCN1xDJMXTjBk",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698787685248,
+    "modifiedTime": 1713356305122,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 700000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!GlNKrHp857Epq8zU"
+}

@@ -1,0 +1,118 @@
+{
+  "name": "Pocisk-petarda",
+  "type": "ammunition",
+  "flags": {
+    "_sheetTab": "details",
+    "core": {}
+  },
+  "img": "modules/wfrp4e-core/icons/equipment/ammunition/stone-bullet.png",
+  "_id": "D0dl15C1lLVS3g02",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Pocisk do procy, który przy uderzeniu eksploduje w niewielkim wybuchu, rozsyłając po okolicy malutkie fragmenty.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 0,
+      "ss": 0,
+      "bp": 5
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "rare"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "ammunitionType": {
+      "type": "String",
+      "label": "Ammunition Type",
+      "value": "sling"
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": "-20"
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": ""
+    },
+    "qualities": {
+      "type": "String",
+      "label": "Qualities",
+      "value": [
+        {
+          "name": "blast",
+          "value": "2"
+        },
+        {
+          "name": "damaging"
+        }
+      ]
+    },
+    "flaws": {
+      "type": "String",
+      "label": "Flaws",
+      "value": [
+        {
+          "name": "dangerous"
+        },
+        {
+          "name": "imprecise"
+        },
+        {
+          "name": "unrecoverable"
+        }
+      ]
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    }
+  },
+  "folder": "6IN1BCHZdqB1fabF",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1713354645290,
+    "modifiedTime": 1713354834250,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 700000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!D0dl15C1lLVS3g02"
+}

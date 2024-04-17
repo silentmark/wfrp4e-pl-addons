@@ -1,0 +1,86 @@
+{
+  "name": "Flesh Blister",
+  "type": "trapping",
+  "img": "icons/skills/toxins/poison-bottle-corked-fire-green.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><span style=\"font-family: serif\">Unlike most animal derived poisons, which are typically concentrated by the alchemist to increase their efficiency, poisons derived from Arachnarok venom must be weakened in order that they can be safely stored and deployed without killing the poisoner. The very touch of this poison is enough to make flesh blister and melt away, and consuming even a dose is almost always lethal.</span></p><p><span style=\"font-family: serif\">A treated weapon must be used within the hour or the poison will evaporate harmlessly. Blades coated with this venom take on a dappled greenish hue that rarely fades, marking their wielders as extremely untrustworthy.</span></p><p><span style=\"font-family: serif\">A weapon coated in Flesh Blister which inflicts at least 1 Wound automatically inflicts an additional 1d10 Wounds. Anyone unfortunate enough to consume Flesh Blister in any form must make a Hard (-20) Endurance Test or suffer an immediate Critical Hit to the torso.</span></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 3,
+      "ss": 0,
+      "bp": 0
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "rare"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1670893530940,
+    "modifiedTime": 1713356216795,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "_id": "q0q90cx0a4HrhfYO",
+  "folder": "kro4u2Gy3c3f4tDQ",
+  "sort": 7300000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!q0q90cx0a4HrhfYO"
+}

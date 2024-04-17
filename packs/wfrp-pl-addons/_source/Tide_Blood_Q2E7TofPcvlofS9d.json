@@ -1,0 +1,86 @@
+{
+  "name": "Tide Blood",
+  "type": "trapping",
+  "img": "icons/consumables/potions/vial-cork-red.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><span style=\"font-family: serif\">One of the most infamous ‘curatives’ in the Old World, Tide Blood’s main ingredient is blood taken from the liver of a mature Merwyrm as well as bits of other organs, and hence its name. It has phenomenally powerful regenerative qualities — it is also, conversely, highly toxic. The imbiber immediately takes 3 Poisoned Conditions that cannot be resisted at first, recovers a number of Wounds equal to their Toughness Bonus, and acquires the Regenerate Creature Trait. It’s then up to Ranald if their regenerating can outpace their poisoning. When all Poisoned Conditions are lost, so too is Regenerate.</span></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 18,
+      "ss": 0,
+      "bp": 0
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "rare"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "foodAndDrink"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1670890602882,
+    "modifiedTime": 1713356216795,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "_id": "Q2E7TofPcvlofS9d",
+  "folder": "kro4u2Gy3c3f4tDQ",
+  "sort": 1100000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!Q2E7TofPcvlofS9d"
+}

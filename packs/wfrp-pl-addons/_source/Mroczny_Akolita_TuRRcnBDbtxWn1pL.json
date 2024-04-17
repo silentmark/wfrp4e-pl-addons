@@ -1,0 +1,58 @@
+{
+  "_id": "TuRRcnBDbtxWn1pL",
+  "name": "Mroczny Akolita",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Twoje zaklęcia są trudniejsze do rozproszenia niż zwykle. Każda próba rozproszenia zawsze spowoduje <strong>Pomniejszą Manifestację Chaosu </strong><a class=\"table-click\" data-table=\"miscastdhar\"><strong>Dhar</strong></a> jeśli się powiedzie, lub <strong>Większą Manifestację Chaosu </strong><a class=\"table-click\" data-table=\"miscastdhar\" data-modifier=\"100\"><strong>Dhar</strong></a> jeśli się nie powiedzie.</p><p>Ponadto Krytyczny Sukces liczy się jako @Corruption[minor]{Pomniejsze Zepsucie}, podczas gdy Krytyczna Porażka liczy się jako @Corruption[moderate]{Umiarkowane Zepsucie}</p><p>Wampiry nie odczuwają tych efektów, ale konsekwencje mogą dotknąć pobliską żywą istotę (zwykle taką, która jest połączona z wampirem próbującym rozproszyć magię).</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "wp"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": "Przeciwstawne Testy Języka (Magicznego)"
+    }
+  },
+  "folder": "IdBKVE70UjsZfSoR",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1700570763287,
+    "modifiedTime": 1713356301502,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 4300000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!TuRRcnBDbtxWn1pL"
+}

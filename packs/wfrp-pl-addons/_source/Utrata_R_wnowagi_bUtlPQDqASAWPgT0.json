@@ -1,0 +1,117 @@
+{
+  "name": "Utrata Równowagi",
+  "type": "critical",
+  "_id": "bUtlPQDqASAWPgT0",
+  "img": "icons/skills/melee/shield-damaged-broken-blue.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Postać wykonała wyjątkowo niefortynną Akcję, która wytraciła ją z równowagi, odsłoniła i zdezorientowała. Postać otrzymuje karę do wszystkich testów -20 do końca Następnej Rundy.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "0",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "effects": [
+    {
+      "icon": "icons/skills/melee/shield-damaged-broken-blue.webp",
+      "transfer": true,
+      "name": "Utrata Równowagi",
+      "_id": "IwQcLVie72Yx8US9",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": 2,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "testIndependent": false,
+            "prompt": false,
+            "runAsGM": false
+          },
+          "scriptData": [
+            {
+              "label": "Utrata Równowagi",
+              "trigger": "dialog",
+              "script": "args.prefillModifiers.modifier = -20;",
+              "options": {
+                "dialog": {
+                  "activateScript": "return true",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "actor",
+            "effectTrigger": "prefillDialog",
+            "preventDuplicateEffects": false,
+            "script": "args.prefillModifiers.modifier = -20;"
+          }
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!bUtlPQDqASAWPgT0.IwQcLVie72Yx8US9"
+    }
+  ],
+  "folder": "nost2pGVYD3gcBGR",
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1689674572769,
+    "modifiedTime": 1713358445019,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!bUtlPQDqASAWPgT0"
+}

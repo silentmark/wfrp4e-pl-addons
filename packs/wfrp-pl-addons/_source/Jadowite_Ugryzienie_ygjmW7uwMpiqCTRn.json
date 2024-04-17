@@ -1,0 +1,119 @@
+{
+  "_id": "ygjmW7uwMpiqCTRn",
+  "name": "Jadowite Ugryzienie",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [
+    {
+      "_id": "P4q57ZSExzC8N5Fu",
+      "flags": {
+        "wfrp4e": {
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "testIndependent": false,
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Jadowite Ugryzienie",
+              "trigger": "addItems",
+              "script": "let item = await fromUuid(\"Compendium.wfrp4e-core.items.gFkRm9wS65qe18Xv\");\nitem = item.toObject();\nargs.actor.createEmbeddedEntity(\"OwnedItem\", item);",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "actor",
+            "effectTrigger": "oneTime",
+            "preventDuplicateEffects": false,
+            "script": "fromUuid(\"Compendium.wfrp4e-core.traits.gFkRm9wS65qe18Xv\").then(item => {\n    args.actor.createEmbeddedEntity(\"OwnedItem\", item.data)\n})"
+          }
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null,
+        "combat": null
+      },
+      "icon": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+      "tint": null,
+      "transfer": true,
+      "name": "Jadowite Ugryzienie",
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "_key": "!items.effects!ygjmW7uwMpiqCTRn.P4q57ZSExzC8N5Fu"
+    }
+  ],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Otrzymujesz cechę stworzenia @Compendium[wfrp4e-core.items.gFkRm9wS65qe18Xv]{Jad} z na Wymagającym poziomie. Każdy dodatkowy zakup zwiększa Trudność testu o jeden.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "s"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "folder": "IdBKVE70UjsZfSoR",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1706909958283,
+    "modifiedTime": 1713356301502,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 3600000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!ygjmW7uwMpiqCTRn"
+}

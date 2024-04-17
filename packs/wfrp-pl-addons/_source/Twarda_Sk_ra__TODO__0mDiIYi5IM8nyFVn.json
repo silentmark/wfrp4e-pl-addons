@@ -1,0 +1,119 @@
+{
+  "_id": "0mDiIYi5IM8nyFVn",
+  "name": "Twarda Skóra (TODO)",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [
+    {
+      "_id": "4tTqJxSaZM8GNlZP",
+      "flags": {
+        "wfrp4e": {
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "testIndependent": false,
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Twarda Skóra",
+              "trigger": "takeDamage",
+              "script": "console.log(args)\n\n// Get some necessary values\nlet toughnessValue = args.actor.data.data.characteristics.t.bonus;\nlet damageDealtBeforeToughHide = args.totalWoundLoss;\nlet weaponQualities = args.opposeData.attackerTestResult.weapon.properties.qualities;\nlet weaponHasPummelQuality = weaponQualities.includes(\"Pummel\");\n\n// Add a message to remind players\nlet attackerName = args.attacker.name;\nlet defenderName = args.actor.name;\nlet messageContent = `<b>${defenderName}'s</b> Tough Hide reduces <b>${attackerName}'s</b> damage by <b>${toughnessValue}</b>!`;\n\nif (weaponHasPummelQuality) {\n  args.totalWoundLoss -= toughnessValue;\n  ChatMessage.create({content: messageContent});\n}",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "actor",
+            "effectTrigger": "takeDamage",
+            "preventDuplicateEffects": false,
+            "script": "console.log(args)\n\n// Get some necessary values\nlet toughnessValue = args.actor.data.data.characteristics.t.bonus;\nlet damageDealtBeforeToughHide = args.totalWoundLoss;\nlet weaponQualities = args.opposeData.attackerTestResult.weapon.properties.qualities;\nlet weaponHasPummelQuality = weaponQualities.includes(\"Pummel\");\n\n// Add a message to remind players\nlet attackerName = args.attacker.name;\nlet defenderName = args.actor.name;\nlet messageContent = `<b>${defenderName}'s</b> Tough Hide reduces <b>${attackerName}'s</b> damage by <b>${toughnessValue}</b>!`;\n\nif (weaponHasPummelQuality) {\n  args.totalWoundLoss -= toughnessValue;\n  ChatMessage.create({content: messageContent});\n}"
+          }
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null,
+        "combat": null
+      },
+      "icon": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+      "tint": null,
+      "transfer": true,
+      "name": "Twarda Skóra",
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "_key": "!items.effects!0mDiIYi5IM8nyFVn.4tTqJxSaZM8GNlZP"
+    }
+  ],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Twoje ciało jest jak garbowana skóra, a kości jak stal, dzięki czemu możesz zlekceważyć większość skutków tępych ran. Dodajesz swój Bonus z Wytrzymałości po raz drugi, zmniejszając otrzymywane Rany przeciwko broniom z Cechą Ogłuszający.</p><p>Jeśli taki atak normalnie zignorowałby twój Bonus z Wytrzymałości, ignoruje jedynie Twój standardowy bonus z Wytrzymałości, a nie dodatkową premię zapewnianą przez ten Dar Krwi.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "1"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "folder": "R9GP6kUptFm6hQ24",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1707137092922,
+    "modifiedTime": 1713356301502,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!0mDiIYi5IM8nyFVn"
+}

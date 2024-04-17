@@ -1,0 +1,64 @@
+{
+  "_id": "VEEzW4dHX1GzrfcC",
+  "name": "Klątwa Nocy",
+  "type": "trait",
+  "flags": {
+    "_sheetTab": "details",
+    "core": {}
+  },
+  "img": "modules/wfrp4e-core/icons/traits/trait.png",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Wszystkie wampiry posiadają Klątwę Nocy. Wszystkie wampiry są wrażliwe @Compendium[wfrp4e-vampires.vampires-traits.hedrlo8n8aXDC76E]{Światło Słoneczne} i muszą dodatkowo:</p><p>Rzuć na 5 losowych słabości w @Compendium[wfrp4e-vampires.vampires-journals.0Nva16Bc52LUZ6a7]{Słabości (Tabela)} lub</p><p>lub 5 słabości w @Compendium[wfrp4e-vampires.vampires-journals.Q6OgsvyzoyswuUQH]{Słabości (Linie Krwi)}.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "#",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "folder": "oQSvn5c0pMt9XuAc",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698787656772,
+    "modifiedTime": 1713356298092,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 400000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!VEEzW4dHX1GzrfcC"
+}

@@ -1,0 +1,58 @@
+{
+  "_id": "cnxpUjDXy3OJPUfe",
+  "name": "Spirytystyczny Wzrok",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Widzisz i rozpoznajesz duchy, zjawy i innych eterycznych nieumarłych. Te stworzenia również są świadome twojej percepcji, na dobre i na złe.</p><p>Możesz także wykonać Wymagający (+0) Test Intuicji, aby określić, jak silny lub słaby jest cel (np. na podstawie pozostałych ran lub wieku).</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "fel"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": "Testy Charyzmy lub Dowodzenia podczas kontaktu z Duchami"
+    }
+  },
+  "folder": "IdBKVE70UjsZfSoR",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1706909290903,
+    "modifiedTime": 1713356301502,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 3300000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!cnxpUjDXy3OJPUfe"
+}

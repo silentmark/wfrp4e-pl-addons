@@ -1,0 +1,138 @@
+{
+  "name": "Focusing Philtre",
+  "type": "trapping",
+  "img": "icons/consumables/potions/potion-vial-corked-labeled-purple.webp",
+  "effects": [
+    {
+      "_id": "NIRhXPLO5leTz7hM",
+      "flags": {
+        "wfrp4e": {
+          "applicationData": {
+            "type": "target"
+          },
+          "scriptData": [
+            {
+              "label": "Focusing Philtre",
+              "trigger": "dialog",
+              "script": "if (args.type == \"characteristic\" && (args.item == \"int\"))\n{\n    args.prefillModifiers.modifier += 20\n}\nelse if (args.type == \"skill\" && args.item.characteristic.key == \"int\")\n{\n     args.prefillModifiers.modifier += 20\n}\nelse if (args.type == \"skill\" && args.item.name == \"Endurance\")\n{\n     args.prefillModifiers.modifier += 20\n}",
+              "options": {
+                "dialog": {
+                  "activateScript": "return true"
+                }
+              }
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "apply",
+            "effectTrigger": "prefillDialog",
+            "preventDuplicateEffects": true,
+            "script": "if (args.type == \"characteristic\" && (args.item == \"int\"))\n{\n    args.prefillModifiers.modifier += 20\n}\nelse if (args.type == \"skill\" && args.item.characteristic.key == \"int\")\n{\n     args.prefillModifiers.modifier += 20\n}\nelse if (args.type == \"skill\" && args.item.name == \"Endurance\")\n{\n     args.prefillModifiers.modifier += 20\n}"
+          }
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/vitality-draught.png",
+      "tint": null,
+      "transfer": false,
+      "origin": null,
+      "name": "Focusing Philtre",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!lTsRQp3AmDBcXg9L.NIRhXPLO5leTz7hM"
+    }
+  ],
+  "flags": {
+    "_sheetTab": "details",
+    "wfrp4e-starter-set": {
+      "initialization-folder": "Ubersreik"
+    },
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><span style=\"box-sizing: border-box; user-select: text; font-family: Calibri; font-size: 14.6667px; color: #231f20;\">A dark, bitter draught, this philtre focuses the mind and aids concentration. it gives a +20 bonus to Intelligence and Endurance tests. When its effects wear off, gain 1 @Condition[Fatigued]&nbsp;</span><span style=\"box-sizing: border-box; user-select: text; font-family: Calibri; font-size: 14.6667px; color: #231f20;\">condition that lasts for at least a day.&nbsp;</span></p>\n    <p><span style=\"box-sizing: border-box; user-select: text; font-family: Calibri; font-size: 14.6667px; font-weight: bold; color: #231f20;\">Duration:&nbsp;</span>[[/r 1d10]]<span style=\"box-sizing: border-box; user-select: text; font-family: Calibri; font-size: 14.6667px; color: #231f20;\">&nbsp;hours.&nbsp;</span></p>"
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 0,
+      "ss": 5,
+      "bp": 0
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "None"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1690313550958,
+    "modifiedTime": 1713356216795,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "_id": "lTsRQp3AmDBcXg9L",
+  "folder": "kro4u2Gy3c3f4tDQ",
+  "sort": 6400000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!lTsRQp3AmDBcXg9L"
+}

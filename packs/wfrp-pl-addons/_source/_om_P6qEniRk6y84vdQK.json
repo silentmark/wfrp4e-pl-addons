@@ -1,0 +1,146 @@
+{
+  "name": "Łom",
+  "type": "weapon",
+  "flags": {
+    "_sheetTab": "details",
+    "core": {}
+  },
+  "img": "modules/wfrp4e-core/icons/equipment/tools_and_kits/crowbar.png",
+  "_id": "P6qEniRk6y84vdQK",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Broń bandytów</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 1
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 0,
+      "ss": 2,
+      "bp": 6
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "common"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "damageToItem": {
+      "type": "Number",
+      "value": 0,
+      "shield": 0
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": "SB+3"
+    },
+    "reach": {
+      "type": "String",
+      "label": "Reach",
+      "value": "average"
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": ""
+    },
+    "skill": {
+      "type": "String",
+      "label": "Skill Override",
+      "value": ""
+    },
+    "modeOverride": {
+      "type": "String",
+      "label": "Mode Override",
+      "value": ""
+    },
+    "twohanded": {
+      "type": "Boolean",
+      "label": "Two-Handed",
+      "value": true
+    },
+    "ammunitionGroup": {
+      "type": "String",
+      "label": "Ammunition Group",
+      "value": "none"
+    },
+    "currentAmmo": {
+      "value": "0"
+    },
+    "consumesAmmo": {
+      "value": true
+    },
+    "weaponGroup": {
+      "type": "String",
+      "label": "Weapon Group",
+      "value": "twohanded"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": [
+        {
+          "name": "pummel"
+        },
+        {
+          "name": "slow"
+        }
+      ]
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    },
+    "equipped": false,
+    "loaded": {
+      "value": false,
+      "repeater": false,
+      "amt": 0
+    },
+    "offhand": {
+      "value": false
+    }
+  },
+  "folder": "RKhbBsYxmSRidjCm",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1713354599740,
+    "modifiedTime": 1713354701902,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 2000000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!P6qEniRk6y84vdQK"
+}

@@ -1,0 +1,86 @@
+{
+  "name": "Dreamwine",
+  "type": "trapping",
+  "img": "icons/consumables/drinks/tea-jug-gourd-brown.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><span style=\"font-family: serif\">Consuming a glass of Dreamwine calls for a Challenging (+0) Consume Alcohol Test. If you fail the test, apply the usual effects with the following additions:</span></p><p><span style=\"font-family: serif\">Whilst under the effects of Dreamwine, the drinker benefits from the Sixth Sense and Magical SenseTalents and gains a +2 SL bonus to any Intuition-based Tests they make.</span></p><p><span style=\"font-family: serif\">The drinker chooses whether they want an extra Fortune Point (which must be spent that session), or to make a roll on the Augury Table using their Intelligence rather than the Augury Skill.</span></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><span style=\"font-family: serif\">Whether the drinker passes or fails the Consume Alcohol Test, they must Test for Moderate Exposure to Corruption (WFRP, page 182). They must also pass an Average (+20) Cool Test or ‘hear the call’. A drinker can hear the call a number of times equal to their Willpower Bonus, at which point they must either spend a Fate Point or abandon their life in search of the Grey Mountain vineyards where the wine is produced.</span></p>"
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 4,
+      "ss": 0,
+      "bp": 0
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "exotic"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "foodAndDrink"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1670882292433,
+    "modifiedTime": 1713356216795,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "_id": "2qkNK1FSsFuqO1pN",
+  "folder": "kro4u2Gy3c3f4tDQ",
+  "sort": 7100000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!2qkNK1FSsFuqO1pN"
+}

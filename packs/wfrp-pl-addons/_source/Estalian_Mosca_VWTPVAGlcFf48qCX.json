@@ -1,0 +1,90 @@
+{
+  "name": "Estalian Mosca",
+  "type": "trapping",
+  "img": "icons/consumables/potions/bottle-corked-empty.webp",
+  "effects": [],
+  "flags": {
+    "wfrp4e-pbtt": {
+      "initialization-folder": "Power Behind the Throne",
+      "sort": 300000
+    },
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Estalian <em>Mosca</em> is a clear, oily liquid that is usually consumed in food or drink. Each dose increases Toughness and Agility by +10 and lowers both Intelligence and Willpower by –10. In addition, all @Condition[Fatigued] Conditions are removed and no more can be gained until the dose wears off. The effects last for a number of hours equal to the imbiber’s Toughness Bonus.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p></p>"
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 0,
+      "ss": 15,
+      "bp": 0
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "rare"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1690313550958,
+    "modifiedTime": 1713356216795,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "_id": "VWTPVAGlcFf48qCX",
+  "folder": "kro4u2Gy3c3f4tDQ",
+  "sort": 7400000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!VWTPVAGlcFf48qCX"
+}

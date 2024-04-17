@@ -1,0 +1,146 @@
+{
+  "name": "Sztylet trójzębny",
+  "type": "weapon",
+  "flags": {
+    "_sheetTab": "details",
+    "core": {}
+  },
+  "img": "modules/wfrp4e-core/icons/equipment/weapons/dagger2.png",
+  "_id": "vgbJdNWyTYo9HfQu",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Broń szlachecka</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 3,
+      "ss": 0,
+      "bp": 0
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "exotic"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "damageToItem": {
+      "type": "Number",
+      "value": 0,
+      "shield": 0
+    },
+    "damage": {
+      "type": "String",
+      "label": "Damage",
+      "dice": "",
+      "value": "SB+2"
+    },
+    "reach": {
+      "type": "String",
+      "label": "Reach",
+      "value": "short"
+    },
+    "range": {
+      "type": "String",
+      "label": "Range",
+      "value": ""
+    },
+    "skill": {
+      "type": "String",
+      "label": "Skill Override",
+      "value": ""
+    },
+    "modeOverride": {
+      "type": "String",
+      "label": "Mode Override",
+      "value": ""
+    },
+    "twohanded": {
+      "type": "Boolean",
+      "label": "Two-Handed",
+      "value": false
+    },
+    "ammunitionGroup": {
+      "type": "String",
+      "label": "Ammunition Group",
+      "value": "none"
+    },
+    "currentAmmo": {
+      "value": "0"
+    },
+    "consumesAmmo": {
+      "value": true
+    },
+    "weaponGroup": {
+      "type": "String",
+      "label": "Weapon Group",
+      "value": "parry"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": [
+        {
+          "name": "defensive"
+        },
+        {
+          "name": "trapblade"
+        }
+      ]
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": ""
+    },
+    "equipped": false,
+    "loaded": {
+      "value": false,
+      "repeater": false,
+      "amt": 0
+    },
+    "offhand": {
+      "value": false
+    }
+  },
+  "folder": "RKhbBsYxmSRidjCm",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1713354696111,
+    "modifiedTime": 1713354701902,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 1000000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!vgbJdNWyTYo9HfQu"
+}

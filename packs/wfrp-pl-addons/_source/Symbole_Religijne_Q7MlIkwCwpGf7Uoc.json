@@ -1,0 +1,64 @@
+{
+  "_id": "Q7MlIkwCwpGf7Uoc",
+  "name": "Symbole Religijne",
+  "type": "trait",
+  "flags": {
+    "_sheetTab": "details",
+    "core": {}
+  },
+  "img": "modules/wfrp4e-core/icons/injuries/amputatedarm.png",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Bogowie odrzucają twoją nieuświęconą obecność. Musisz wykonać Wymagający (+0) Test Opanowania, aby znaleźć się w promieniu 2 metrów od symboli religijnych. Ten, kto wierzy w jego moc, musi szczerze dzierżyć ten symbol, chociaż wystarczy każdy symbol religijny (w tym symbole kultu Chaosu).</p><p>Masz także trudności z postawieniem stopy w miejscach kultu religijnego, takich jak świątynie czy kościoły, gdzie Próba staje się Trudna (-10).</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "folder": "XwxUCN1xDJMXTjBk",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698787692319,
+    "modifiedTime": 1713356305122,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 200000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!Q7MlIkwCwpGf7Uoc"
+}

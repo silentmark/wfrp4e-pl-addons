@@ -1,0 +1,86 @@
+{
+  "name": "Two-Headed Tincture",
+  "type": "trapping",
+  "img": "icons/consumables/potions/potion-tube-corked-glowing-red.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<div><div><p>A mixture of Ambhisbaena venom taken from each head is commonly cited as a cure for most poisons. This is not entirely true — Amphisbaena can be used to create a powerful antidote, but it is in fact the blood that is the key ingredient. It is said that this is because each head so often bites the other that the blood of the creature becomes a powerful antidote.</p><p>A preparation of Amphisbaena blood grants a +40 bonus to resist the effects of any poison.</p><div><p></p></div></div></div><div><div><p></p></div><div><p><br></p></div></div>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 4,
+      "ss": 10,
+      "bp": 0
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "exotic"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "foodAndDrink"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1670890602882,
+    "modifiedTime": 1713356216795,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "_id": "RjZRPc5zZvBkac8x",
+  "folder": "kro4u2Gy3c3f4tDQ",
+  "sort": 1000000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!RjZRPc5zZvBkac8x"
+}

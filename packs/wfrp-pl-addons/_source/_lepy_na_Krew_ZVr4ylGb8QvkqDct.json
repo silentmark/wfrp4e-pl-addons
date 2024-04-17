@@ -1,0 +1,136 @@
+{
+  "name": "Ślepy na Krew",
+  "type": "trapping",
+  "img": "icons/consumables/potions/bottle-round-label-cork-red.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Większość osób, które spróbują \"Ślepego na Krew\", nie bierze tego po raz drugi. Choć niewątpliwie przydatne, koszt polegania na nim jest często wysoki. Wchłonięcie tej substancji daje użytkownikowi cechę @UUID[Compendium.wfrp4e-core.items.Item.wMwSRDmgiF2IdCJr]{Nie Czuje Bólu}, pozwalając mu ignorować skutki większości ran krytycznych, z wyjątkiem amputacji. Widziano wojowników, którzy walczą dalej, gdy zostaną przedziurawieni tuzinem strzał lub gdy będą śmiertelnie bladzi z powodu utraty krwi. Efekt ten utrzymuje się przez godzinę, po czym znika, a pełny efekt wszystkich ran natychmiast się uaktywnia. </p><p>Zauważ, że nie chroni to użytkownika przed uzyskaniem Krytycznej Rany lub śmiercią z jej powodu. Po prostu pozwala im ignorować większość ich efektów.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Bloodblind </p>"
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 1,
+      "ss": 0,
+      "bp": 0
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "rare"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "foodAndDrink"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    }
+  },
+  "effects": [
+    {
+      "icon": "icons/consumables/potions/bottle-round-label-cork-red.webp",
+      "transfer": true,
+      "name": "Ślepy na Krew",
+      "_id": "Mqkb9Z0DJXufxDVd",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": 3600,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "areaEffect": false,
+          "hide": false,
+          "reduceQuantity": true,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Item"
+          },
+          "scriptData": [
+            {
+              "label": "Ślepy na Krew",
+              "trigger": "manual",
+              "script": "let item = await fromUuid(\"Compendium.wfrp4e-core.traits.Item.wMwSRDmgiF2IdCJr\")\nthis.actor.createEmbeddedDocuments(\"Item\", [item.toObject()], {fromEffect : this.effect.id})"
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "item",
+            "effectTrigger": "invoke",
+            "preventDuplicateEffects": true,
+            "script": "let item = await fromUuid(\"Compendium.wfrp4e-core.traits.Item.wMwSRDmgiF2IdCJr\")\nthis.actor.createEmbeddedDocuments(\"Item\", [item.toObject()], {fromEffect : this.effect.id})"
+          }
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!ZVr4ylGb8QvkqDct.Mqkb9Z0DJXufxDVd"
+    }
+  ],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1670890602882,
+    "modifiedTime": 1713356216795,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "_id": "ZVr4ylGb8QvkqDct",
+  "folder": "kro4u2Gy3c3f4tDQ",
+  "sort": 700000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!ZVr4ylGb8QvkqDct"
+}

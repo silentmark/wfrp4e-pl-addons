@@ -1,0 +1,58 @@
+{
+  "_id": "wdT0mtU6ixw2dqjv",
+  "name": "Łupieżca Umysłu (TODO)",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Możesz użyć swojej przerażającej woli, aby złamać umysły innych.</p><p>W swojej Akcji możesz wydać wszystkie Przewagi (minimum 2), na przeciwstawny Test Opanowania. Jeśli ci się to uda, twój przeciwnik otrzyma stan Oszołomienie oraz jeden dodatkowy stan Oszołomienia za każdy zdobyty dodatkowy poziom w Łupieżcy Umysłu. Jeśli wygrasz o 6+ PS, twój przeciwnik zamiast tego otrzyma +1 Stan Paniki. Jeśli celem jest osoba rzucająca zaklęcia, Testowi można przeciwstawić Język (Magiczny) jako przeciwzaklęcie</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "i"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "folder": "R9GP6kUptFm6hQ24",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1706911509234,
+    "modifiedTime": 1713356301502,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 1400000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!wdT0mtU6ixw2dqjv"
+}

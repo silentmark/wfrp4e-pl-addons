@@ -1,0 +1,359 @@
+{
+  "_id": "mWund84ACUAmVxua",
+  "name": "Rany Krytyczne Nóg - UiA",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    {
+      "_id": "e6yksXZnCcJfNSm1",
+      "type": 2,
+      "text": "Stłuczony palec",
+      "img": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+      "weight": 1,
+      "range": [
+        1,
+        10
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "TMjbr94rrtCqM6bk",
+      "_key": "!tables.results!mWund84ACUAmVxua.e6yksXZnCcJfNSm1"
+    },
+    {
+      "_id": "VIpjlyRWnQAb8V1g",
+      "type": 2,
+      "text": "Utrata równowagi",
+      "img": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+      "weight": 1,
+      "range": [
+        11,
+        20
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "WRAuBX80vCwlnB0N",
+      "_key": "!tables.results!mWund84ACUAmVxua.VIpjlyRWnQAb8V1g"
+    },
+    {
+      "_id": "q2gthWT0cG57BVsc",
+      "type": 2,
+      "text": "Skręcona kostka",
+      "img": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+      "weight": 1,
+      "range": [
+        21,
+        25
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "9j0KwH1Je1RiuZX2",
+      "_key": "!tables.results!mWund84ACUAmVxua.q2gthWT0cG57BVsc"
+    },
+    {
+      "_id": "WVvYzf2sGvFH540a",
+      "type": 2,
+      "text": "Płytkie cięcie w nogę",
+      "img": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+      "weight": 1,
+      "range": [
+        26,
+        40
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "wTGR340dwvAgwA9v",
+      "_key": "!tables.results!mWund84ACUAmVxua.WVvYzf2sGvFH540a"
+    },
+    {
+      "_id": "VxjSxeiv7JPzSkqb",
+      "type": 2,
+      "text": "Cios w udo",
+      "img": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+      "weight": 1,
+      "range": [
+        41,
+        45
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "2ibzDR7EeMEq2QAe",
+      "_key": "!tables.results!mWund84ACUAmVxua.VxjSxeiv7JPzSkqb"
+    },
+    {
+      "_id": "m8Unl1NVj32Jc4u4",
+      "type": 2,
+      "text": "Zwichnięta kostka",
+      "img": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+      "weight": 1,
+      "range": [
+        46,
+        50
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "wbbDM7rUetyWYgLt",
+      "_key": "!tables.results!mWund84ACUAmVxua.m8Unl1NVj32Jc4u4"
+    },
+    {
+      "_id": "Scd4eJAN5IGcTZSp",
+      "type": 2,
+      "text": "Nadwyrężone kolano",
+      "img": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+      "weight": 1,
+      "range": [
+        51,
+        55
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "wnYgHZm503oOERSf",
+      "_key": "!tables.results!mWund84ACUAmVxua.Scd4eJAN5IGcTZSp"
+    },
+    {
+      "_id": "8j9RAmlJLuEujEWd",
+      "type": 2,
+      "text": "Paskudnie przecięty paluch",
+      "img": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+      "weight": 1,
+      "range": [
+        56,
+        60
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "9UjOMeBtKdoL5S34",
+      "_key": "!tables.results!mWund84ACUAmVxua.8j9RAmlJLuEujEWd"
+    },
+    {
+      "_id": "7OGoD8Gr6J6sSPjc",
+      "type": 2,
+      "text": "Paskudne cięcie",
+      "img": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+      "weight": 1,
+      "range": [
+        61,
+        65
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "JcAgEHxuY9hwB4y5",
+      "_key": "!tables.results!mWund84ACUAmVxua.7OGoD8Gr6J6sSPjc"
+    },
+    {
+      "_id": "gOQRYYiV741QA1A4",
+      "type": 2,
+      "text": "Skręcone kolano",
+      "img": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+      "weight": 1,
+      "range": [
+        66,
+        70
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "TxXIUDqoon9TivpO",
+      "_key": "!tables.results!mWund84ACUAmVxua.gOQRYYiV741QA1A4"
+    },
+    {
+      "_id": "yqBBjfEUbgE68rJ8",
+      "type": 2,
+      "text": "Porąbana noga",
+      "img": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+      "weight": 1,
+      "range": [
+        71,
+        75
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "uU2ibNRgeEjuSN7e",
+      "_key": "!tables.results!mWund84ACUAmVxua.yqBBjfEUbgE68rJ8"
+    },
+    {
+      "_id": "iotDJjuz49xW7OyW",
+      "type": 2,
+      "text": "Poszarpane udo",
+      "img": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+      "weight": 1,
+      "range": [
+        76,
+        80
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "AUZLQkyu9kiqmzsq",
+      "_key": "!tables.results!mWund84ACUAmVxua.iotDJjuz49xW7OyW"
+    },
+    {
+      "_id": "HSAb6D4NovpT9KVa",
+      "type": 2,
+      "text": "Zerwane ścięgno",
+      "img": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+      "weight": 1,
+      "range": [
+        81,
+        85
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "9MKzpUh761nGa76M",
+      "_key": "!tables.results!mWund84ACUAmVxua.HSAb6D4NovpT9KVa"
+    },
+    {
+      "_id": "hqq1z1TIAjL2ll4M",
+      "type": 2,
+      "text": "Rozerwana łydka",
+      "img": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+      "weight": 1,
+      "range": [
+        86,
+        90
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "heJZbvL0uXqKbljR",
+      "_key": "!tables.results!mWund84ACUAmVxua.hqq1z1TIAjL2ll4M"
+    },
+    {
+      "_id": "gQBJjYVkVSmqkcUV",
+      "type": 2,
+      "text": "Strzaskane kolano",
+      "img": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+      "weight": 1,
+      "range": [
+        91,
+        95
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "njocSqK1sMPTi5K4",
+      "_key": "!tables.results!mWund84ACUAmVxua.gQBJjYVkVSmqkcUV"
+    },
+    {
+      "_id": "1IB0FdQCD1cAQpTa",
+      "type": 2,
+      "text": "Zwichnięte kolano",
+      "img": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+      "weight": 1,
+      "range": [
+        96,
+        105
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "8GrHGyhYlbdxqluu",
+      "_key": "!tables.results!mWund84ACUAmVxua.1IB0FdQCD1cAQpTa"
+    },
+    {
+      "_id": "uZD1bKAjTuEOW534",
+      "type": 2,
+      "text": "Zmiażdżona stopa",
+      "img": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+      "weight": 1,
+      "range": [
+        106,
+        115
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "NPhLsxsUV8wwdKWj",
+      "_key": "!tables.results!mWund84ACUAmVxua.uZD1bKAjTuEOW534"
+    },
+    {
+      "_id": "gpeSfrne87U3MtiI",
+      "type": 2,
+      "text": "Odcięta stopa",
+      "img": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+      "weight": 1,
+      "range": [
+        115,
+        120
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "BzIaW1w6eTUFWgkk",
+      "_key": "!tables.results!mWund84ACUAmVxua.gpeSfrne87U3MtiI"
+    },
+    {
+      "_id": "G6L7lxSW6Uiht6bw",
+      "type": 2,
+      "text": "Przecięte ścięgna",
+      "img": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+      "weight": 1,
+      "range": [
+        121,
+        125
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "9s7eE2U30R774sxO",
+      "_key": "!tables.results!mWund84ACUAmVxua.G6L7lxSW6Uiht6bw"
+    },
+    {
+      "_id": "qq4bmbZVflQmz3n3",
+      "type": 2,
+      "text": "Strzaskana miednica",
+      "img": "modules/wfrp4e-core/icons/injuries/tornleg.png",
+      "weight": 1,
+      "range": [
+        126,
+        999
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "F9aFPBvoCdxg8oFJ",
+      "_key": "!tables.results!mWund84ACUAmVxua.qq4bmbZVflQmz3n3"
+    }
+  ],
+  "formula": "1d100",
+  "replacement": true,
+  "displayRoll": true,
+  "flags": {
+    "wfrp4e": {
+      "key": "critleg",
+      "column": ""
+    },
+    "core": {},
+    "exportSource": {
+      "world": "wfrp4",
+      "system": "wfrp4e",
+      "coreVersion": "11.315",
+      "systemVersion": "7.0.3"
+    }
+  },
+  "folder": "uV4nClaib0g9ah6d",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1683278964517,
+    "modifiedTime": 1713357572374,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!tables!mWund84ACUAmVxua"
+}

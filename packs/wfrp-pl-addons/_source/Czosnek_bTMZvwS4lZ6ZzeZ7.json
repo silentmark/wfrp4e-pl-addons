@@ -1,0 +1,64 @@
+{
+  "_id": "bTMZvwS4lZ6ZzeZ7",
+  "name": "Czosnek",
+  "type": "trait",
+  "flags": {
+    "_sheetTab": "details",
+    "core": {}
+  },
+  "img": "modules/wfrp4e-core/icons/injuries/amputatedarm.png",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Często postrzegana jako jedna z głównych wad wszystkich wampirów, ta słabość jest w rzeczywistości dość rzadka. Jednakże wampiry lubią to, ponieważ daje im to przewagę nad niczego niepodejrzewającymi śmiertelnikami, którzy uważali, że są bezpieczni przed wampirzymi grabieżami.</p><p>Jeśli posiadasz tę słabość, otrzymujesz karę -20 do wszystkich testów w promieniu sześciu metrów od czosnku.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "folder": "XwxUCN1xDJMXTjBk",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698787641489,
+    "modifiedTime": 1713356305122,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 1900000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!bTMZvwS4lZ6ZzeZ7"
+}

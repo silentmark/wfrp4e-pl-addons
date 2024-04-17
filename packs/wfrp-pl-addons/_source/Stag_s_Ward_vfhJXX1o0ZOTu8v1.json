@@ -1,0 +1,86 @@
+{
+  "name": "Stag's Ward",
+  "type": "trapping",
+  "img": "icons/consumables/potions/potion-flask-pink-red.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><span style=\"font-family: serif\">A potion crafted from the organs of a Great Stag, it is often confusingly referred to as a universal antidote. However, Stag's Ward is completely useless in the treatment of poisons that have already been consumed. Instead the potion comes in to its own when used before the imbiber has been exposed to a poison, natural or otherwise. For one hour after consuming this preparation the imbiber is immune to all Poisoned Conditions, along with any other effect of a poison.</span></p><p><span style=\"font-family: serif\">The Great Stag is considered sacred to many, most especially the Eonir of the Laurelorn and their cousins in Athel Loren. Those known for creating this potion are often marked for death by Wood Elves who learn of it.</span></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 3,
+      "ss": 0,
+      "bp": 0
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "rare"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "foodAndDrink"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1670890602882,
+    "modifiedTime": 1713356216795,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "_id": "vfhJXX1o0ZOTu8v1",
+  "folder": "kro4u2Gy3c3f4tDQ",
+  "sort": 1500000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!vfhJXX1o0ZOTu8v1"
+}

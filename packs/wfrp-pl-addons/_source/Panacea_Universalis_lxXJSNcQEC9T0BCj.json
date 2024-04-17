@@ -1,0 +1,86 @@
+{
+  "name": "Panacea Universalis",
+  "type": "trapping",
+  "img": "icons/consumables/potions/bottle-round-corked-orante-red.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>1d10 rounds</p><p><span style=\"font-family: serif\">Panacea Universalis is a healing draught of tremendous efficacy. Once the potion takes effect, the drinker recovers three times their Toughness Bonus in Wounds immediately. They also recover from any Bleeding or Fatigued Conditions. Critical Injuries may also be healed — refer to the Panacea Universalis Critical Healing table.</span></p><hr><p><span style=\"font-family: serif\">ANACEA UNIVERSALIS CRITICAL HEALING</span></p><p><span style=\"font-family: serif\">Critical Injury_______________________________Healed on a...</span></p><p><span style=\"font-family: serif\">Minor Broken Bone__________________________Challenging (+0) Endurance Test</span></p><p><span style=\"font-family: serif\">Major Broken Bone__________________________Difficult (–10) Endurance Test</span></p><p><span style=\"font-family: serif\">Minor Torn Muscle__________________________Easy (+40) EnduranceTest</span></p><p><span style=\"font-family: serif\">Major Torn Muscle__________________________Average (+20) EnduranceTest</span></p><hr><p><span style=\"font-family: serif\">Multiple Critical Injuries may be healed this way, although Amputations are unfortunately beyond the ability of Panacea Universalis to treat.</span></p><p><span style=\"font-family: serif\">Finally, any diseases are cured on an Average (+20) Endurance Test. Roll once per disease if the drinker has more than one.</span></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 10,
+      "ss": 0,
+      "bp": 0
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "rare"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "foodAndDrink"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1670890602882,
+    "modifiedTime": 1713356216795,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "_id": "lxXJSNcQEC9T0BCj",
+  "folder": "kro4u2Gy3c3f4tDQ",
+  "sort": 4000000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!lxXJSNcQEC9T0BCj"
+}

@@ -1,0 +1,64 @@
+{
+  "name": "Przymus",
+  "type": "trait",
+  "flags": {
+    "_sheetTab": "details",
+    "core": {}
+  },
+  "img": "modules/wfrp4e-core/icons/injuries/amputatedarm.png",
+  "effects": [],
+  "_id": "TFccHQ7jTVZXRXRY",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Przymus jest powodowany przez nadprzyrodzone źródła, które wpływają na umysł i emocje.</p><p>Kiedy znajdujesz się w stanie przymusu, masz silne pragnienie wykonania danego ci polecenia. Jeśli natychmiast nie zanegujesz Stanu za pomocą Punktu Determinacji, nie będziesz mógł wydać ani odzyskać Punktów Determinacji ani Punktów Żywotności, dopóki polecenie nie zostanie wykonane.</p><p>Do czasu wykonania, otrzymujesz karę -10 do wszystkich testów, które nie realizują celów wydanych ci poleceń. Efekty z wielu przymusów kumulują się.</p><p>Warunki przymusu rozwiązują się automatycznie, gdy wykonasz polecenie najlepiej jak potrafisz. Jeśli wykonasz swoje zadanie, zyskasz +1 Stan Zmęczenia i odzyskasz +1 Determinacji.</p><p>Jeśli nie uda ci się ukończyć zadania po godzinie, możesz wykonać Trudny (+0) Test Opanowania, aby usunąc 1 Stan Przymusu i natychmiast zyskać +1 Stan Zmęczenia, jeśli to zrobisz. Możesz rzucić jeszcze raz w każdej kolejnej godzinie, aż wszystkie Stany Przymusu zostaną usunięte i zyskasz +1 Stan Zmęczenia za każdy Stan Przymusu usunięty w ten sposób.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "folder": "XwxUCN1xDJMXTjBk",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698787684015,
+    "modifiedTime": 1713356305122,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 600000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!TFccHQ7jTVZXRXRY"
+}

@@ -1,0 +1,336 @@
+{
+  "_id": "hZe9Gt5bRiQ08WQ7",
+  "name": "Rany Krytyczne Korpusu - UiA",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    {
+      "_id": "e6yksXZnCcJfNSm1",
+      "type": 2,
+      "text": "Bez tchu",
+      "img": "modules/wfrp4e-core/icons/injuries/tornbody.png",
+      "weight": 1,
+      "range": [
+        1,
+        15
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "UC2zRorETcI8rheP",
+      "_key": "!tables.results!hZe9Gt5bRiQ08WQ7.e6yksXZnCcJfNSm1"
+    },
+    {
+      "_id": "q2gthWT0cG57BVsc",
+      "type": 2,
+      "text": "Cios w bebechy",
+      "img": "modules/wfrp4e-core/icons/injuries/tornbody.png",
+      "weight": 1,
+      "range": [
+        16,
+        25
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "VAKUqXH9nGyBXiGy",
+      "_key": "!tables.results!hZe9Gt5bRiQ08WQ7.q2gthWT0cG57BVsc"
+    },
+    {
+      "_id": "WVvYzf2sGvFH540a",
+      "type": 2,
+      "text": "Poniżej pasa!",
+      "img": "modules/wfrp4e-core/icons/injuries/tornbody.png",
+      "weight": 1,
+      "range": [
+        26,
+        30
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "l5X3wwVvctgQ4k2Q",
+      "_key": "!tables.results!hZe9Gt5bRiQ08WQ7.WVvYzf2sGvFH540a"
+    },
+    {
+      "_id": "VxjSxeiv7JPzSkqb",
+      "type": 2,
+      "text": "Cios w krzyż",
+      "img": "modules/wfrp4e-core/icons/injuries/tornbody.png",
+      "weight": 1,
+      "range": [
+        31,
+        35
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "K0WjEuCqGDUwAPE6",
+      "_key": "!tables.results!hZe9Gt5bRiQ08WQ7.VxjSxeiv7JPzSkqb"
+    },
+    {
+      "_id": "m8Unl1NVj32Jc4u4",
+      "type": 2,
+      "text": "Stłuczone żebra",
+      "img": "modules/wfrp4e-core/icons/injuries/broken-body.png",
+      "weight": 1,
+      "range": [
+        36,
+        40
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "RLBB8XHqLDM4XejE",
+      "_key": "!tables.results!hZe9Gt5bRiQ08WQ7.m8Unl1NVj32Jc4u4"
+    },
+    {
+      "_id": "Scd4eJAN5IGcTZSp",
+      "type": 2,
+      "text": "Stłuczony obojczyk",
+      "img": "modules/wfrp4e-core/icons/injuries/tornbody.png",
+      "weight": 1,
+      "range": [
+        41,
+        45
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "P6opRTvzX1rgzfgE",
+      "_key": "!tables.results!hZe9Gt5bRiQ08WQ7.Scd4eJAN5IGcTZSp"
+    },
+    {
+      "_id": "8j9RAmlJLuEujEWd",
+      "type": 2,
+      "text": "Nierówne cięcie",
+      "img": "modules/wfrp4e-core/icons/injuries/tornbody.png",
+      "weight": 1,
+      "range": [
+        46,
+        50
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "S8sbrHd9zxaYiDFJ",
+      "_key": "!tables.results!hZe9Gt5bRiQ08WQ7.8j9RAmlJLuEujEWd"
+    },
+    {
+      "_id": "7OGoD8Gr6J6sSPjc",
+      "type": 2,
+      "text": "Połamane żebra",
+      "img": "modules/wfrp4e-core/icons/injuries/tornbody.png",
+      "weight": 1,
+      "range": [
+        51,
+        55
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "AXRma6wqpD5jvpuM",
+      "_key": "!tables.results!hZe9Gt5bRiQ08WQ7.7OGoD8Gr6J6sSPjc"
+    },
+    {
+      "_id": "gOQRYYiV741QA1A4",
+      "type": 2,
+      "text": "Ziejąca rana korpusu",
+      "img": "modules/wfrp4e-core/icons/injuries/tornbody.png",
+      "weight": 1,
+      "range": [
+        56,
+        60
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "GmRF7GF7SZq6qeyj",
+      "_key": "!tables.results!hZe9Gt5bRiQ08WQ7.gOQRYYiV741QA1A4"
+    },
+    {
+      "_id": "yqBBjfEUbgE68rJ8",
+      "type": 2,
+      "text": "Bolesne cięcie",
+      "img": "modules/wfrp4e-core/icons/injuries/tornbody.png",
+      "weight": 1,
+      "range": [
+        61,
+        65
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "GsBi7iz9z5tj9PiM",
+      "_key": "!tables.results!hZe9Gt5bRiQ08WQ7.yqBBjfEUbgE68rJ8"
+    },
+    {
+      "_id": "iotDJjuz49xW7OyW",
+      "type": 2,
+      "text": "Uszkodzenie tętnicy",
+      "img": "modules/wfrp4e-core/icons/injuries/tornbody.png",
+      "weight": 1,
+      "range": [
+        66,
+        70
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "sgBDLL1iLenHJ5um",
+      "_key": "!tables.results!hZe9Gt5bRiQ08WQ7.iotDJjuz49xW7OyW"
+    },
+    {
+      "_id": "HSAb6D4NovpT9KVa",
+      "type": 2,
+      "text": "Naderwane mięśnie pleców",
+      "img": "modules/wfrp4e-core/icons/injuries/tornbody.png",
+      "weight": 1,
+      "range": [
+        71,
+        75
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "cWK3kNzvujhWi9jQ",
+      "_key": "!tables.results!hZe9Gt5bRiQ08WQ7.HSAb6D4NovpT9KVa"
+    },
+    {
+      "_id": "hqq1z1TIAjL2ll4M",
+      "type": 2,
+      "text": "Złamane biodro",
+      "img": "modules/wfrp4e-core/icons/injuries/tornbody.png",
+      "weight": 1,
+      "range": [
+        76,
+        80
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "LdqCjnTAiiRZU1Sq",
+      "_key": "!tables.results!hZe9Gt5bRiQ08WQ7.hqq1z1TIAjL2ll4M"
+    },
+    {
+      "_id": "gQBJjYVkVSmqkcUV",
+      "type": 2,
+      "text": "Poważna rana klatki piersiowej",
+      "img": "modules/wfrp4e-core/icons/injuries/tornbody.png",
+      "weight": 1,
+      "range": [
+        81,
+        85
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "zNzlJWzCqmyLtnFS",
+      "_key": "!tables.results!hZe9Gt5bRiQ08WQ7.gQBJjYVkVSmqkcUV"
+    },
+    {
+      "_id": "1IB0FdQCD1cAQpTa",
+      "type": 2,
+      "text": "Rana brzucha",
+      "img": "modules/wfrp4e-core/icons/injuries/tornbody.png",
+      "weight": 1,
+      "range": [
+        86,
+        90
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "pjJagbErW5tu3LJR",
+      "_key": "!tables.results!hZe9Gt5bRiQ08WQ7.1IB0FdQCD1cAQpTa"
+    },
+    {
+      "_id": "uZD1bKAjTuEOW534",
+      "type": 2,
+      "text": "Strzaskana klatka piersiowa",
+      "img": "modules/wfrp4e-core/icons/injuries/tornbody.png",
+      "weight": 1,
+      "range": [
+        91,
+        95
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "MZuAg4zB17prHXaG",
+      "_key": "!tables.results!hZe9Gt5bRiQ08WQ7.uZD1bKAjTuEOW534"
+    },
+    {
+      "_id": "gpeSfrne87U3MtiI",
+      "type": 2,
+      "text": "Złamany obojczyk",
+      "img": "modules/wfrp4e-core/icons/injuries/tornbody.png",
+      "weight": 1,
+      "range": [
+        96,
+        110
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "39906D4BcVGzsiQp",
+      "_key": "!tables.results!hZe9Gt5bRiQ08WQ7.gpeSfrne87U3MtiI"
+    },
+    {
+      "_id": "G6L7lxSW6Uiht6bw",
+      "type": 2,
+      "text": "Krwotok wewnętrzny",
+      "img": "modules/wfrp4e-core/icons/injuries/tornbody.png",
+      "weight": 1,
+      "range": [
+        111,
+        115
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "jma54Iat01N9X4Fb",
+      "_key": "!tables.results!hZe9Gt5bRiQ08WQ7.G6L7lxSW6Uiht6bw"
+    },
+    {
+      "_id": "qq4bmbZVflQmz3n3",
+      "type": 2,
+      "text": "Rozpłatanie",
+      "img": "modules/wfrp4e-core/icons/injuries/tornbody.png",
+      "weight": 1,
+      "range": [
+        116,
+        999
+      ],
+      "drawn": false,
+      "flags": {},
+      "documentCollection": "wfrp4e-core.items",
+      "documentId": "jY9wCTf7q86zk96P",
+      "_key": "!tables.results!hZe9Gt5bRiQ08WQ7.qq4bmbZVflQmz3n3"
+    }
+  ],
+  "formula": "1d100",
+  "replacement": true,
+  "displayRoll": true,
+  "flags": {
+    "wfrp4e": {
+      "key": "critbody",
+      "column": ""
+    }
+  },
+  "folder": "uV4nClaib0g9ah6d",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1683278962869,
+    "modifiedTime": 1713357570509,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 300000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!tables!hZe9Gt5bRiQ08WQ7"
+}

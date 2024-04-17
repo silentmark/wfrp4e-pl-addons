@@ -1,0 +1,144 @@
+{
+  "name": "Pech!",
+  "_id": "eA5VC0IlajInHD9q",
+  "img": "systems/wfrp4e/ui/buttons/d10.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        1,
+        20
+      ],
+      "drawn": false,
+      "_id": "iFurm8GP4bxK1AxV",
+      "text": "Ouch",
+      "img": "icons/skills/melee/shield-damaged-broken-blue.webp",
+      "documentId": "kxpCuyeq0SHnERgE",
+      "flags": {},
+      "documentCollection": "wfrp4e-pl-addons.wfrp-pl-addons",
+      "_key": "!tables.results!eA5VC0IlajInHD9q.iFurm8GP4bxK1AxV"
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        21,
+        40
+      ],
+      "drawn": false,
+      "_id": "SHdllKlk5uQ15VxQ",
+      "text": "Uszkodzenie Broni",
+      "img": "icons/skills/melee/shield-damaged-broken-blue.webp",
+      "documentId": "UxkVD3GgdfPkI6rI",
+      "flags": {},
+      "documentCollection": "wfrp4e-pl-addons.wfrp-pl-addons",
+      "_key": "!tables.results!eA5VC0IlajInHD9q.SHdllKlk5uQ15VxQ"
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        41,
+        60
+      ],
+      "drawn": false,
+      "_id": "SIOpvLIGVYFNl4RE",
+      "text": "Nieudany Manewr",
+      "img": "icons/skills/melee/shield-damaged-broken-blue.webp",
+      "documentId": "MSlObDPy9DJeoicb",
+      "flags": {},
+      "documentCollection": "wfrp4e-pl-addons.wfrp-pl-addons",
+      "_key": "!tables.results!eA5VC0IlajInHD9q.SIOpvLIGVYFNl4RE"
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        61,
+        70
+      ],
+      "drawn": false,
+      "_id": "C8gvT5zVmNhpTbCF",
+      "text": "Potknięcie",
+      "img": "icons/skills/melee/shield-damaged-broken-blue.webp",
+      "documentId": "iThki2sX01ci19ow",
+      "flags": {},
+      "documentCollection": "wfrp4e-pl-addons.wfrp-pl-addons",
+      "_key": "!tables.results!eA5VC0IlajInHD9q.C8gvT5zVmNhpTbCF"
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        71,
+        80
+      ],
+      "drawn": false,
+      "_id": "84s6vTuNgNBMczVR",
+      "text": "Utrata Równowagi",
+      "img": "icons/skills/melee/shield-damaged-broken-blue.webp",
+      "documentId": "bUtlPQDqASAWPgT0",
+      "flags": {},
+      "documentCollection": "wfrp4e-pl-addons.wfrp-pl-addons",
+      "_key": "!tables.results!eA5VC0IlajInHD9q.84s6vTuNgNBMczVR"
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        81,
+        90
+      ],
+      "drawn": false,
+      "_id": "NYCEgp50E4MmsdkM",
+      "text": "Bolesna Rana",
+      "img": "icons/skills/melee/shield-damaged-broken-blue.webp",
+      "documentId": "x2CRVrGpOeUUxn4d",
+      "flags": {},
+      "documentCollection": "wfrp4e-pl-addons.wfrp-pl-addons",
+      "_key": "!tables.results!eA5VC0IlajInHD9q.NYCEgp50E4MmsdkM"
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        91,
+        100
+      ],
+      "drawn": false,
+      "_id": "AtWha8qVxGkiWS12",
+      "text": "Krytyczna Rana",
+      "img": "icons/skills/melee/shield-damaged-broken-blue.webp",
+      "documentId": "SxqOiUIYdiRfteOH",
+      "flags": {},
+      "documentCollection": "wfrp4e-pl-addons.wfrp-pl-addons",
+      "_key": "!tables.results!eA5VC0IlajInHD9q.AtWha8qVxGkiWS12"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "flags": {
+    "wfrp4e": {
+      "key": "oops",
+      "column": ""
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1713356408849,
+    "modifiedTime": 1713356712920,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "formula": "1d100",
+  "_key": "!tables!eA5VC0IlajInHD9q"
+}

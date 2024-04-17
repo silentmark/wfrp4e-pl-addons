@@ -1,0 +1,90 @@
+{
+  "name": "Tarrabeth",
+  "type": "trapping",
+  "img": "icons/consumables/potions/round-decorated-snake-green.webp",
+  "effects": [],
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Herbs of the Empire",
+      "sort": 1200000
+    },
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<h3>Tarrabeth</h3>\n<p>Tarrabeth is an elven name, and the herb is found mostly in the deep forests where the Wood Elves live. There are few other names for the herb, although I have heard it called Emperor&rsquo;s Wort in some cities, often by Humans who came by the herb dishonestly and use a Human name in order to avoid the wrath of the authorities. For the best effect, the leaves should be boiled until they completely disintegrate; the mixture is then strained, boiled down to the consistency of melted cheese, and left to cool.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><strong>Locality</strong>: Mixed forest</p>\n<p><strong>Season</strong>: Summer</p>\n<p><strong>Preparations</strong>: Poultice</p>\n<p>Smeared on a wound, a poultice of Tarrabeth sends the patient into a deep sleep lasting for 24 hours. The Endurance Test made to @JournalEntry[Healing]{recover Wounds} that day is <strong>Very Easy (+60).</strong></p>\n<p>Applied to a blade, or more commonly an arrow head, too little of the Herb will be introduced to cause the deep sleep for which Tarrabeth is known. However, those wounded by such a weapon will still find themselves becoming terribly tired, and must make a <strong>Challenging (+0) Endurance</strong> Test or suffer one @Condition[Fatigued] Condition. A single dose of Tarrabeth can treat one weapon, or three arrows or bolts.</p>"
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 0,
+      "ss": 10,
+      "bp": 0
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "common"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1690313554379,
+    "modifiedTime": 1713356216795,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "_id": "rO3d16KikVqfoqwn",
+  "folder": "kro4u2Gy3c3f4tDQ",
+  "sort": 800000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!rO3d16KikVqfoqwn"
+}

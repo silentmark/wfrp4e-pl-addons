@@ -1,0 +1,58 @@
+{
+  "_id": "RCFXrKWP9dByRUM1",
+  "name": "Eteryczna Mgła (TODO)",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Raz dziennie możesz podjąć akcję, aby przemienić siebie i cały swój dobytek w niesamowity opar.</p><p>Będąc w tej formie, nie możesz przyjmować Obrażeń w zwykły sposób i jesteś traktowany jakbyś miał cechy @Compendium[wfrp4e-core.items.tNWrJUOArwfWXsPw]{Eteryczny} i @Compendium[wfrp4e-core.items.EO05HX7jql0g605A]{Lot}.</p><p>Dryfujesz z normalną szybkością ruchu.</p><p>Aby odzyskać swoją zwykłą formę, musisz w tym celu użyć innej Akcji. Przy drugim zakupie tego Daru Krwi przemiana (w każdą stronę) staje się Akcją bezpłatną.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "2"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "folder": "R9GP6kUptFm6hQ24",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1706999292782,
+    "modifiedTime": 1713356301502,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 600000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!RCFXrKWP9dByRUM1"
+}

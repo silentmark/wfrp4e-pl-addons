@@ -1,0 +1,89 @@
+{
+  "name": "Basilisk's Baleful Bile",
+  "type": "trapping",
+  "img": "icons/consumables/potions/potion-flask-corked-tied-necklace-teal.webp",
+  "effects": [],
+  "flags": {
+    "wfrp4e-starter-set": {
+      "initialization-folder": "Ubersreik"
+    },
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>This poison is created from combining ﬂuids from the eyes and poison sacks of a freshly slain Basilisk. It is a foul tasting poison, and anyone ingesting food or drink laced with Basilisk&rsquo;s Baleful Bile will be called to take an<strong> Easy (+40) Perception</strong> Test. Success indicates they detect the taint of something wrong before suﬀering the bile&rsquo;s eﬀects, but gain the @Condition[Stunned] Condition for one Round whilst they vomit it up. If ingested, the concoction inﬂicts 2 @Condition[Poisoned] Conditions, resisted with a <strong>Difficult (-10) Endurance</strong> Test. If the target fails to resist the @Condition[Poisoned] Conditions, they are permanently turned to stone.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 10,
+      "ss": 0,
+      "bp": 0
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "exotic"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1690313546944,
+    "modifiedTime": 1713356216795,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "_id": "cCMhuudYsHlP1t56",
+  "folder": "kro4u2Gy3c3f4tDQ",
+  "sort": 8200000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!cCMhuudYsHlP1t56"
+}

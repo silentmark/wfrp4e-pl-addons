@@ -1,0 +1,119 @@
+{
+  "_id": "AOIP6rpqLH2LHHDu",
+  "name": "Atak Językiem (TODO)",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [
+    {
+      "_id": "Cgbxaja98Tj9yz4Y",
+      "flags": {
+        "wfrp4e": {
+          "applicationData": {
+            "type": "document",
+            "documentType": "Item",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "testIndependent": false,
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Atak Językiem",
+              "trigger": "addItems",
+              "script": "let item = await fromUuid(\"Compendium.wfrp4e-core.items.xg6z63j6BH5AaqLL\");\nitem = item.toObject();\nawait this.actor.createEmbeddedEntity(\"Item\", [item], {fromEffect: this.effect.id});",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "actor",
+            "effectTrigger": "oneTime",
+            "preventDuplicateEffects": false,
+            "script": "fromUuid(\"Compendium.wfrp4e-core.traits.xg6z63j6BH5AaqLL\").then(item => {\n    args.actor.createEmbeddedEntity(\"OwnedItem\", item.data)\n})"
+          }
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null,
+        "combat": null
+      },
+      "icon": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+      "tint": null,
+      "transfer": true,
+      "name": "Atak Językiem",
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "_key": "!items.effects!AOIP6rpqLH2LHHDu.Cgbxaja98Tj9yz4Y"
+    }
+  ],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Otrzymujesz cechę @Compendium[wfrp4e-core.items.xg6z63j6BH5AaqLL]{Atak Językiem (Zasięg)} z obrażeniami BS+3. Zasięg jest równy Bonusowi do umiejętności strzeleckich w metrach.</p><p>Każdy dodatkowy zakup zwiększa obrażenia i zasięg w metrach o jeden.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "s"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "folder": "R9GP6kUptFm6hQ24",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1707136926034,
+    "modifiedTime": 1713356301502,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!AOIP6rpqLH2LHHDu"
+}

@@ -1,0 +1,58 @@
+{
+  "_id": "iecljrk7B33GELOf",
+  "name": "Mrożące Spojrzenie (TODO)",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Możesz wykorzystać swoją akcję aby wykonać Test Przeciwny Charyzmy przeciw Opanowaniu z dowolną osobą, którą masz w polu widzenia. Jeśli wygrasz, ofiara liczy się jako Bezradny Cel (otrzymuje stan Oszołomienie, Panika i Unieruchomienie) do końca następnej rundy. Możesz utrzymać tę moc przez kilka tur wykorzystując swoją akcję i dodając kolejne stany, ale twoja ofiara może raz na turę podjąć próbę ucieczki w celu przełamania stanów Paniki i Oszołomienia. Kiedy odrywasz wzrok od celu (nie wykorzystujesz kolejnych akcji do podtrzymania spojrzenia), stany zostją usunięte na koniec następnej rundy.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "1"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "folder": "R9GP6kUptFm6hQ24",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1706910625741,
+    "modifiedTime": 1713356301502,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 1600000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!iecljrk7B33GELOf"
+}

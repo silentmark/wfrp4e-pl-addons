@@ -1,0 +1,115 @@
+{
+  "_id": "8mo3edGpxDW9SLZP",
+  "name": "Mroczne Przeznaczenie",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [
+    {
+      "_id": "V30h5B2MhWr5qbH5",
+      "flags": {
+        "wfrp4e": {
+          "effectTrigger": "oneTime",
+          "effectApplication": "actor",
+          "script": "args.actor.system.status.fate.value += 1;\nargs.actor.system.status.fortune.value += 1;",
+          "preventDuplicateEffects": false,
+          "hide": false,
+          "scriptData": [
+            {
+              "label": "Mroczne Przeznaczenie",
+              "trigger": "prepareData",
+              "script": "args.actor.system.status.fate.value += 1;\nargs.actor.system.status.fortune.value += 1;",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "applicationData": {
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false,
+            "documentType": "Actor"
+          }
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null,
+        "combat": null
+      },
+      "icon": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+      "tint": null,
+      "transfer": true,
+      "name": "Mroczne Przeznaczenie",
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "_key": "!items.effects!8mo3edGpxDW9SLZP.V30h5B2MhWr5qbH5"
+    }
+  ],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Gdzieś jakieś bóstwo uśmiecha się do ciebie.</p><p>Być może Khaine, bóg morderstwa, widział rozlew krwi, który spowodowałeś i przemoc, którą zaszczepiasz w sercach innych, pomimo twojej zimnej, pozbawionej emocji natury. Być może to sam Nagash prowadzi twoją rękę ku niewysłowionemu losowi.</p><p>Niezależnie od powodu, masz Punkty Mrocznego Losu. Za każdy poziom tego Daru Krwi otrzymujesz +1 Punkt Mrocznego Losu i +1 Punkt Mrocznej Fortuny. Możesz je wydać tak, jakby były zwykłymi Punktami Losu i Fortuny, a te ostatnie odświeżają się jak zwykle.</p><p>Jednakże, podczas gdy Los można odzyskać poprzez akty bohaterstwa, Mroczny Los powinien być nagradzany za akty czystej nikczemności i zła.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "wp"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "folder": "IdBKVE70UjsZfSoR",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1700570909142,
+    "modifiedTime": 1713356301502,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 3800000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!8mo3edGpxDW9SLZP"
+}

@@ -1,0 +1,116 @@
+{
+  "name": "Potknięcie",
+  "type": "critical",
+  "_id": "iThki2sX01ci19ow",
+  "img": "icons/skills/melee/shield-damaged-broken-blue.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Tracisz równowagę, musisz poświęcić swój Ruch, aby ją odzyskać i wykonać Wymagający test Zwinności albo otrzymujesz stan Powalenie. Jeśli w tej Turze Ruch został już wykorzystany, test otrzymuje modyfikator -30.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "0",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "effects": [
+    {
+      "icon": "icons/skills/melee/shield-damaged-broken-blue.webp",
+      "transfer": true,
+      "name": "Potknięcie",
+      "_id": "mO1ftEkeppe3WsPP",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "testIndependent": false,
+            "prompt": false,
+            "runAsGM": false
+          },
+          "scriptData": [
+            {
+              "label": "Potknięcie",
+              "trigger": "immediate",
+              "script": "let test = await this.actor.setupCharacteristic(\"ag\", { title: \"Test Zwinności przed upadkiem\" });\nif (test) {\n    await test.roll();\n    if (test.result.outcome !== \"success\") {\n        this.actor.addCondition(\"prone\");\n    }\n}\nconst target = this.actor;\nconst effectName = this.effect.name;\nsetTimeout(() => {\n    let itm = target.getItemTypes(\"critical\").find(x=>x.name == effectName);\n    target.deleteEmbeddedDocuments(\"Item\", [itm.id])\n}, 500);",
+              "options": {
+                "dialog": {
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": true
+                }
+              }
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "actor",
+            "effectTrigger": "oneTime",
+            "preventDuplicateEffects": false,
+            "script": "let test = await this.actor.setupCharacteristic(\"ag\", { title: \"Test Zwinności przed upadkiem\" });\r\nif (test) {\r\n    await test.roll();\r\n    if (test.result.outcome !== \"success\") {\r\n        this.actor.addCondition(\"prone\");\r\n    }\r\n}\r\nconst target = this.actor;\r\nconst effectName = this.effect.name;\r\nsetTimeout(() => {\r\n    let itm = target.getItemTypes(\"critical\").find(x=>x.name == effectName);\r\n    target.deleteEmbeddedDocuments(\"Item\", [itm.id])\r\n}, 500);"
+          }
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!iThki2sX01ci19ow.mO1ftEkeppe3WsPP"
+    }
+  ],
+  "folder": "nost2pGVYD3gcBGR",
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1689673768390,
+    "modifiedTime": 1713358280410,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!iThki2sX01ci19ow"
+}

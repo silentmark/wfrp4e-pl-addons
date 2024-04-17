@@ -1,0 +1,117 @@
+{
+  "_id": "7Ddegr33vugOq2x4",
+  "name": "Gęsta Krew",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [
+    {
+      "icon": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+      "transfer": true,
+      "name": "Gęsta Krew",
+      "_id": "22y9YlaksJ9cCPmC",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "effectTrigger": "takeDamage",
+          "effectApplication": "actor",
+          "hide": false,
+          "preventDuplicateEffects": true,
+          "script": "if (args.opposedTest?.attackerTest?.item?.attackType == 'melee') {\n  let test = await args.attacker.setupSkill(game.i18n.localize(\"NAME.Dodge\"));\n  await test.roll();\n  if (test.result.outcome == \"failure\") {\n    const effectData = {\n            name: \"Gęsta Krew (Kara do testów związanych z mobilnością)\",\n            icon: this.effect.icon,\n            duration: {\n              rounds: 2\n            },\n            flags: {\n              wfrp4e: {\n                effectApplication: \"actor\",\n                effectTrigger: \"prefillDialog\",\n                script: `if (args.type == \"skill\" || args.type == \"weapon\" || args.type == \"trait\" || args.type == \"characteristic\") args.prefillModifiers.modifier -= 20`,\n              }\n            }\n          };\n    if (game.user.isGM) {\n      await args.attacker.createEmbeddedDocuments(\"ActiveEffect\", [effectData]);\n    } else {\n      let effect = new CONFIG.ActiveEffect.documentClass(effectData);\n      let token = args.attacker.getActiveTokens()[0];\n      const payload = { effect, targets: [token], scene: canvas.scene.id };\n      await game.wfrp4e.utility.awaitSocket(game.user, \"applyEffects\", payload, \"invoking effect\");\n    }\n  }\n}",
+          "scriptData": [
+            {
+              "label": "Gęsta Krew",
+              "trigger": "takeDamage",
+              "script": "if (args.opposedTest?.attackerTest?.item?.attackType == 'melee') {\n  let test = await args.attacker.setupSkill(game.i18n.localize(\"NAME.Dodge\"));\n  await test.roll();\n  if (test.result.outcome == \"failure\") {\n    const effectData = {\n            name: \"Gęsta Krew (Kara do testów związanych z mobilnością)\",\n            icon: this.effect.icon,\n            duration: {\n              rounds: 2\n            },\n            flags: {\n              wfrp4e: {\n                scriptData: [{\n                  trigger: \"dialog\",\n                            label : \"Kara do testów związanych z mobilnością\",\n                            script : `args.prefillModifiers.modifier -= 20`,\n                            options : {\n                                dialog : {\n                                    activateScript : \"return ['ws', 'bs', 'ag', 'i', 's', 'wt'].includes(args.characteristic)\"\n                                }\n                            }\n                  \n                }]\n              }\n            }\n          };\n    await args.attacker.createEmbeddedDocuments(\"ActiveEffect\", [effectData]);\n  }\n}",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "applicationData": {
+            "avoidTest": {
+              "value": "none"
+            },
+            "prompt": false
+          }
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!7Ddegr33vugOq2x4.22y9YlaksJ9cCPmC"
+    }
+  ],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Twoja krew jest lepka i tryska z dużą siłą, gdy otrzymujesz obrażenia. Każdy wróg, który zada ci co najmniej jedną ranę, musi zdać <strong>Wymagający (+0) test uników</strong> lub otrzymać -20 do jakichkolwiek testów związanych z mobilnością, w tym walką, przez dwie rundy.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "t"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "folder": "IdBKVE70UjsZfSoR",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1700561177735,
+    "modifiedTime": 1713356301502,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 4400000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!7Ddegr33vugOq2x4"
+}

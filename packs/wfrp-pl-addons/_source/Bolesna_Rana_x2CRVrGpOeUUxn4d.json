@@ -1,0 +1,116 @@
+{
+  "name": "Bolesna Rana",
+  "type": "critical",
+  "_id": "x2CRVrGpOeUUxn4d",
+  "img": "icons/skills/melee/shield-damaged-broken-blue.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Twój atak lub obrona była wyjątkowo niefortunna. Otrzymujesz 1k10 obrażeń plus statystyki broni w losową lokację.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "0",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "effects": [
+    {
+      "icon": "icons/skills/melee/shield-damaged-broken-blue.webp",
+      "transfer": true,
+      "name": "Bolesna Rana",
+      "_id": "3QvtWYgT5jAPhWd5",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "testIndependent": false,
+            "prompt": false,
+            "runAsGM": false
+          },
+          "scriptData": [
+            {
+              "label": "Bolesna Rana",
+              "trigger": "immediate",
+              "script": "const weapons = this.actor.items.filter(x=>x.equipped && x.type == \"weapon\");\nconst weapon = weapons[Math.floor(Math.random() * weapons.length)];\nlet damage = weapon.Damage;\nlet hitLoc = await game.wfrp4e.tables.rollTable(\"hitloc\", { hideDSN: true });\nlet roll = await new Roll(\"1d10\").roll();\ndamage += roll.total;\n\nawait this.actor.applyBasicDamage(damage, {loc: hitLoc.result });\nconst target = this.actor;\nconst effectName = this.effect.name;\nsetTimeout(() => {\n    let itm = target.getItemTypes(\"critical\").find(x=>x.name == effectName);\n    target.deleteEmbeddedDocuments(\"Item\", [itm.id])\n}, 500);",
+              "options": {
+                "dialog": {
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": true
+                }
+              }
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "actor",
+            "effectTrigger": "oneTime",
+            "preventDuplicateEffects": false,
+            "script": "const weapons = this.actor.items.filter(x=>x.equipped && x.type == \"weapon\");\nconst weapon = weapons[Math.floor(Math.random() * weapons.length)];\nlet damage = weapon.Damage;\nlet hitLoc = await game.wfrp4e.tables.rollTable(\"hitloc\", { hideDSN: true });\nlet roll = await new Roll(\"1d10\").roll();\ndamage += roll.total;\n\nawait this.actor.applyBasicDamage(damage, {loc: hitLoc.result });\nconst target = this.actor;\nconst effectName = this.effect.name;\nsetTimeout(() => {\n    let itm = target.getItemTypes(\"critical\").find(x=>x.name == effectName);\n    target.deleteEmbeddedDocuments(\"Item\", [itm.id])\n}, 500);"
+          }
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!x2CRVrGpOeUUxn4d.3QvtWYgT5jAPhWd5"
+    }
+  ],
+  "folder": "nost2pGVYD3gcBGR",
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1689675461795,
+    "modifiedTime": 1713358027565,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 400000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!x2CRVrGpOeUUxn4d"
+}

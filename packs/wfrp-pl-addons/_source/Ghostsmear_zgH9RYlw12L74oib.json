@@ -1,0 +1,86 @@
+{
+  "name": "Ghostsmear",
+  "type": "trapping",
+  "img": "icons/commodities/materials/liquid-purple.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Spirits, spectres, ghosts, banshees and other ethereal undead that would normally only be harmed by magical weapons can be damaged by a weapon coated in Ghostsmear. </p><p>One application lasts an hour under ideal conditions, but may be washed from the blade sooner if it is raining heavily or the blade becomes submerged. Additionally, if the weapon is used to injure a living creature while covered in Ghostsmear, the effect is instantly dismissed as the infusion of living blood renders the oil inert.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><span style=\"font-family: serif\">Ghostsmear is never offered for sale, but only created at need by devout priests of Morr. It requires 3 Gold Crowns worth of ingredients and a night of fevered prayer to create. Ghostsmear can be stored for one year before losing its effects.’</span></p>"
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 7,
+      "ss": 0,
+      "bp": 0
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "exotic"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1670883615546,
+    "modifiedTime": 1713356216795,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "_id": "zgH9RYlw12L74oib",
+  "folder": "kro4u2Gy3c3f4tDQ",
+  "sort": 6100000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!zgH9RYlw12L74oib"
+}

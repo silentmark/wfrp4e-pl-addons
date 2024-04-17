@@ -1,0 +1,126 @@
+{
+  "name": "Lekkie Płytowe Naramienniki",
+  "type": "armour",
+  "flags": {
+    "_sheetTab": "details",
+    "core": {}
+  },
+  "img": "modules/wfrp4e-core/icons/equipment/armour/mail-shirt.png",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Daje najwięcej ochrony ze wszystkich dostępnych pancerzy. Najdroższy i najbardziej pożądany. Lśniący poncerz budzi respekt i jest marzeniem każdego wojownika. Grube blachy są bardzo wytrzymałe, jednak ich ozdabianie bywa kłopotliwe. Najbardziej popularne wytrawianie ich kwasem - aplikacje z metali kolorowych lub dodatkowe wypustki i haczyki do wieszania ozdób. Używana najczęściej przez rycerzy i elitarnych żołnierzy. Sama produkcja dość skomplikowana, a najrózniejsze gildie prześcigają się w coraz to nowszych metodach łączenia, zawiasach, konstrukcjach i dodatkowych elementach, wzmocnieniach i ozdobnikach. Pancerz płytowy jest modny oraz stanowi symbol statusu.</p><p><br></p><p><strong>Lekka zbroja płytowa</strong> – Blachy zakrywające całą powierzchnię ciała, jednak zdecydowanie lżejsze niż typowa płyta. Jej Największą zaletą w walce jest bycie trudna do odróżnienia od zwykłej płyty od której jest o połowę tańsza. Ze względu na wygodę i poręczność stosowana jest przez oficerów lekkiej kawalerii, bądź używana jako zbroja paradna.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 2
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 8,
+      "ss": 0,
+      "bp": 0
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "scarce"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "damageToItem": {
+      "type": "Number",
+      "value": 0,
+      "shield": 0
+    },
+    "worn": {
+      "type": "Boolean",
+      "label": "Worn",
+      "value": false
+    },
+    "armorType": {
+      "type": "String",
+      "label": "Armour Type",
+      "value": "heavy"
+    },
+    "penalty": {
+      "type": "String",
+      "label": "Penalty",
+      "value": ""
+    },
+    "qualities": {
+      "type": "String",
+      "label": "Qualities",
+      "value": [
+        {
+          "name": "impenetrable",
+          "value": null
+        }
+      ]
+    },
+    "flaws": {
+      "type": "String",
+      "label": "Flaws",
+      "value": [
+        {
+          "name": "weakpoints",
+          "value": null
+        }
+      ]
+    },
+    "special": {
+      "type": "String",
+      "label": "Special",
+      "value": "Warstwa Zewnętrzna, Metal"
+    },
+    "AP": {
+      "head": 0,
+      "lArm": 1,
+      "rArm": 1,
+      "lLeg": 0,
+      "rLeg": 0,
+      "body": 0
+    },
+    "APdamage": {
+      "head": 0,
+      "lArm": 0,
+      "rArm": 0,
+      "lLeg": 0,
+      "rLeg": 0,
+      "body": 0
+    }
+  },
+  "effects": [],
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1675639492194,
+    "modifiedTime": 1713355090291,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "_id": "jB8oYU29ivCvnjCk",
+  "folder": "mr1rSz4jHf9DYCyF",
+  "sort": 3700000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!jB8oYU29ivCvnjCk"
+}

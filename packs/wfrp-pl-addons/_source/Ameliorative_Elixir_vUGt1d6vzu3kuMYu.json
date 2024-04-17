@@ -1,0 +1,137 @@
+{
+  "name": "Ameliorative Elixir",
+  "type": "trapping",
+  "img": "icons/consumables/potions/bottle-round-corked-orange.webp",
+  "effects": [
+    {
+      "_id": "39pBDLe966yHGvLh",
+      "flags": {
+        "wfrp4e": {
+          "applicationData": {
+            "type": "target"
+          },
+          "scriptData": [
+            {
+              "label": "Ameliorative Elixir",
+              "trigger": "dialog",
+              "script": "if (args.type == \"characteristic\" && (args.item == \"wp\"))\n{\n    args.prefillModifiers.modifier += 10\n}\nelse if (args.type == \"skill\" && (args.item.characteristic.key == \"wp\"))\n{\n     args.prefillModifiers.modifier += 10\n}\n\nif (args.type == \"characteristic\" && (args.item == \"ag\" || args.item == \"i\" || args.item == \"int\"))\n{\n    args.prefillModifiers.modifier -= 10\n}\nelse if (args.type == \"skill\" && (args.item.characteristic.key == \"ag\" || args.item.characteristic.key == \"i\" || args.item.characteristic.value  == \"int\"))\n{\n     args.prefillModifiers.modifier -= 10\n}",
+              "options": {
+                "dialog": {
+                  "activateScript": "return true"
+                }
+              }
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "apply",
+            "effectTrigger": "prefillDialog",
+            "preventDuplicateEffects": true,
+            "script": "if (args.type == \"characteristic\" && (args.item == \"wp\"))\n{\n    args.prefillModifiers.modifier += 10\n}\nelse if (args.type == \"skill\" && (args.item.characteristic.key == \"wp\"))\n{\n     args.prefillModifiers.modifier += 10\n}\n\nif (args.type == \"characteristic\" && (args.item == \"ag\" || args.item == \"i\" || args.item == \"int\"))\n{\n    args.prefillModifiers.modifier -= 10\n}\nelse if (args.type == \"skill\" && (args.item.characteristic.key == \"ag\" || args.item.characteristic.key == \"i\" || args.item.characteristic.value  == \"int\"))\n{\n     args.prefillModifiers.modifier -= 10\n}"
+          }
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/vitality-draught.png",
+      "tint": null,
+      "transfer": false,
+      "origin": null,
+      "name": "Ameliorative Elixir",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!vUGt1d6vzu3kuMYu.39pBDLe966yHGvLh"
+    }
+  ],
+  "flags": {
+    "wfrp4e-starter-set": {
+      "initialization-folder": "Ubersreik"
+    },
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><span style=\"font-family: Calibri\">Containing Weirdroot, this earthy, thick potion brings a sense of euphoria and pleasant hallucinations. the potion gives a +10 bonus to Willpower tests, but a penalty of –10 to Agility, Initiative, and Intelligence tests.</span></p><p><span style=\"font-family: Calibri\"><strong>Duration: </strong>[[/r 1d10 * 10]] minutes.</span></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p></p>"
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 0,
+      "ss": 1,
+      "bp": 4
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "None"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1690313550955,
+    "modifiedTime": 1713356216795,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "_id": "vUGt1d6vzu3kuMYu",
+  "folder": "kro4u2Gy3c3f4tDQ",
+  "sort": 8600000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!vUGt1d6vzu3kuMYu"
+}

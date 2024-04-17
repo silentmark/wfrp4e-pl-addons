@@ -1,0 +1,86 @@
+{
+  "name": "Clearmind",
+  "type": "trapping",
+  "img": "icons/consumables/potions/bottle-round-label-cork-yellow.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><span style=\"font-family: serif\">Rare due to the difficulty of acquiring the necessary ingredients, this mixture has the effect of strengthening the mind of the imbiber, allowing them to make decisions requiring cold, rational thought that might be clouded by emotion. However, those unused to it find that they often struggle to react quickly when surprised.</span></p><p><span style=\"font-family: serif\">On consuming this potion, the imbiber gains the Cold-blooded Creature Trait and may reverse any failed Willpower based Tests. If they gain a Surprised Condition, this Condition is not lost the first time it should be (which is typically at the end of the Round or if they victim is attacked).</span></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 3,
+      "ss": 0,
+      "bp": 0
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "rare"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "foodAndDrink"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1670890602882,
+    "modifiedTime": 1713356216795,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "_id": "TRXQBPQ5W3maxLhr",
+  "folder": "kro4u2Gy3c3f4tDQ",
+  "sort": 7900000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!TRXQBPQ5W3maxLhr"
+}

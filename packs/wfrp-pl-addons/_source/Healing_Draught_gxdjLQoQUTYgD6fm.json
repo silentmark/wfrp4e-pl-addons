@@ -1,0 +1,134 @@
+{
+  "name": "Healing Draught",
+  "type": "trapping",
+  "img": "icons/consumables/potions/potion-bottle-corked-labeled-red.webp",
+  "effects": [
+    {
+      "_id": "K7C1LFtqdLQ5bhFS",
+      "flags": {
+        "wfrp4e": {
+          "reduceQuantity": true,
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": false
+          },
+          "scriptData": [
+            {
+              "label": "Healing Draught",
+              "trigger": "manual",
+              "script": "let wounds = this.actor.status.wounds\nif (wounds.value == 0)\n  return ui.notifications.error(\"No effect at 0 Wounds\")\n\nui.notifications.notify(`Healed ${this.actor.characteristics.t.bonus} Wounds`)\nthis.actor.modifyWounds(this.actor.characteristics.t.bonus)"
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "actor",
+            "effectTrigger": "invoke",
+            "preventDuplicateEffects": false,
+            "script": "let wounds = this.actor.status.wounds\nif (wounds.value == 0)\n  return ui.notifications.error(\"No effect at 0 Wounds\")\n\nui.notifications.notify(`Healed ${this.actor.characteristics.t.bonus} Wounds`)\nthis.actor.modifyWounds(this.actor.characteristics.t.bonus)"
+          }
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/icons/equipment/herbs_and_draughts/healing-draught.png",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Healing Draught",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!gxdjLQoQUTYgD6fm.K7C1LFtqdLQ5bhFS"
+    }
+  ],
+  "flags": {
+    "_sheetTab": "details",
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>If you have more than 0 Wounds, recover Toughness Bonus Wounds immediately. If you are at 0 Wounds, you will recover only 1 Wound.<br><strong>Dose</strong>: 1 per encounter.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 0,
+      "ss": 10,
+      "bp": 0
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "scarce"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1663627495294,
+    "modifiedTime": 1713356216795,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "_id": "gxdjLQoQUTYgD6fm",
+  "folder": "kro4u2Gy3c3f4tDQ",
+  "sort": 4400000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!gxdjLQoQUTYgD6fm"
+}

@@ -1,0 +1,134 @@
+{
+  "name": "Speckled Rustwort",
+  "type": "trapping",
+  "img": "icons/commodities/flowers/cornflower-gold.webp",
+  "effects": [
+    {
+      "_id": "j7UOlPgkZVzFbGSH",
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "target"
+          },
+          "scriptData": [
+            {
+              "label": "Nauea",
+              "trigger": "rollTest",
+              "script": "if (this.actor.isOwner && args.test.result.outcome == \"failure\")\n                {\n                    let applicableCharacteristics = [\"ws\", \"bs\", \"s\", \"fel\", \"ag\", \"t\", \"dex\"]\n                    if (applicableCharacteristics.includes(args.test.result.characteristic))\n                        this.actor.addCondition(\"stunned\")\n                    else if (args.test.result.skill && applicableCharacteristics.includes(args.test.result.skill.data.characteristic.value))\n                        this.actor.addCondition(\"stunned\")\n                    else if (args.test.result.weapon)\n                        this.actor.addCondition(\"stunned\")\n\n                }"
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "apply",
+            "effectTrigger": "rollTest",
+            "preventDuplicateEffects": false,
+            "script": "if (this.actor.isOwner && args.test.result.outcome == \"failure\")\n                {\n                    let applicableCharacteristics = [\"ws\", \"bs\", \"s\", \"fel\", \"ag\", \"t\", \"dex\"]\n                    if (applicableCharacteristics.includes(args.test.result.characteristic))\n                        this.actor.addCondition(\"stunned\")\n                    else if (args.test.result.skill && applicableCharacteristics.includes(args.test.result.skill.data.characteristic.value))\n                        this.actor.addCondition(\"stunned\")\n                    else if (args.test.result.weapon)\n                        this.actor.addCondition(\"stunned\")\n\n                }"
+          }
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/art/other/herbalism.webp",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Nauea",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!10DNDv9cpd3dA2hw.j7UOlPgkZVzFbGSH"
+    }
+  ],
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Herbs of the Empire",
+      "sort": 900000
+    },
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<h3>A Poxy Treatment</h3>\n<p>This herb is unusual among those used to treat poxes, in that it must be eaten; most are applied to the rash in a salve or poultice. Many have tried to do the same with Speckled Restwort, but it has no effect at all when applied externally.</p>\n<p>Some find the taste of the leaves bitter, and it is permissible to add a spoonful of honey to a dose, especially in the case of children. Avoid overdosing, though, as it can lead to constipation.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><strong>Locality</strong>: Hills</p>\n<p><strong>Season</strong>: Spring</p>\n<p><strong>Preparations</strong>: Raw, Draught</p>\n<p>This herb is ingested to combat the effects of @Compendium[wfrp4e-core.items.BC4QyBeYAiw8cRuM]{Packer&rsquo;s Pox}. If one dose of Speckled Rustwort is taken every day, all Tests connected with the disease gain a +10 bonus.</p>\n<p>A draught of Rustworth does not provide this protection, but can be used to treat an active case of Packer&rsquo;s Pox. Each dose reduces the duration of the disease by [[/r 1d10]] days. Taking more than one dose in a single day, however, causes Nausea for the following [[/r 1d10]] hours.&nbsp;</p>"
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 2,
+      "ss": 0,
+      "bp": 0
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "rare"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1690313554379,
+    "modifiedTime": 1713356216795,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "_id": "10DNDv9cpd3dA2hw",
+  "folder": "kro4u2Gy3c3f4tDQ",
+  "sort": 1900000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!10DNDv9cpd3dA2hw"
+}

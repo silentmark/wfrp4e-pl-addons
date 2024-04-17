@@ -1,0 +1,64 @@
+{
+  "_id": "3oddbuzQ8MqWJ2Z9",
+  "name": "Wiek",
+  "type": "trait",
+  "flags": {
+    "_sheetTab": "details",
+    "core": {}
+  },
+  "img": "modules/wfrp4e-core/icons/traits/trait.png",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Wszystkie wampiry z czasem uczą się efektywniej odżywiać. Zależy to od Twojego wieku. Im jesteś starszy, tym dłużej możesz wytrzymać bez jedzenia – nazywa się to interwałem jedzenia. Jeśli Twoja przerwa między karmieniami jest wyrażona w godzinach, musisz nakarmić się po liczbie godzin równej Twojej Premii za Wytrzymałość, z wyłączeniem godzin spędzonych na spaniu.</p><p> </p><table border=\"1\"><tbody><tr><td><p>Wiek</p></td><td><p>Okres Bycia Nieumarłymi</p></td><td><p>Interwał Jedzenia</p></td></tr><tr><td><p>1</p></td><td><p>do 6 tygodni</p></td><td><p>Godziny</p></td></tr><tr><td><p>2</p></td><td><p>do 1 roku</p></td><td><p>Noce</p></td></tr><tr><td><p>3</p></td><td><p>do 10 lat</p></td><td><p>Tygodnie</p></td></tr><tr><td><p>4</p></td><td><p>do 100 lat</p></td><td><p>Miesiące</p></td></tr><tr><td><p>5</p></td><td><p>Ponad 100 lat</p></td><td><p>Kwartały</p></td></tr></tbody></table>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "rollable": {
+      "value": false,
+      "damage": false,
+      "skill": "",
+      "label": "Rollable",
+      "type": "Boolean",
+      "rollCharacteristic": "",
+      "bonusCharacteristic": "",
+      "dice": "",
+      "defaultDifficulty": "challenging",
+      "SL": true,
+      "attackType": "melee"
+    },
+    "specification": {
+      "value": "#",
+      "type": "String",
+      "label": "Specification"
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    }
+  },
+  "folder": "oQSvn5c0pMt9XuAc",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698787702182,
+    "modifiedTime": 1713356298092,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!3oddbuzQ8MqWJ2Z9"
+}

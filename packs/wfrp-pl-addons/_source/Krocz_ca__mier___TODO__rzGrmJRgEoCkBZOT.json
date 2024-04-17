@@ -1,0 +1,119 @@
+{
+  "_id": "rzGrmJRgEoCkBZOT",
+  "name": "Krocząca Śmierć (TODO)",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [
+    {
+      "_id": "ekNkTqUQs7qfNgEW",
+      "flags": {
+        "wfrp4e": {
+          "applicationData": {
+            "type": "document",
+            "documentType": "Item",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "testIndependent": false,
+            "prompt": false
+          },
+          "scriptData": [
+            {
+              "label": "Krocząca Śmierć",
+              "trigger": "addItems",
+              "script": "// Get the level of the Walking Death trait\n// Remember this is _before_ adding, so undefined = 1, 1 = 2 etc.\nlet actorWalkingDeathTalent = args.actor.data.talents.find(talent => talent.name === \"Walking Death\");\nlet actorWalkingDeathTalentLevel = actorWalkingDeathTalent?.data.advances.value;\nif(actorWalkingDeathTalentLevel == null) {\n\tactorWalkingDeathTalentLevel = 1;\n} else {\n\tactorWalkingDeathTalentLevel +=1;\n}\n\n// Check if the Actor has the Terror trait\nlet actorTerrorTrait =  args.actor.data.traits.find(trait => trait.name === \"Terror\");\nlet actorTerrorTraitSpecificationValue = parseInt(actorTerrorTrait?.specificationValue);\nlet actorHasTerrorTrait = !(actorTerrorTrait == null);\n\n// Now, if the actor doesn't have the Terror trait, add it here with rating 1\nif (!actorHasTerrorTrait) {\n  fromUuid(\"Compendium.wfrp4e-core.traits.kJNAY1YRaCy9IgmT\").then(item => {\n    item.data.data.specification.value = 1;\n    args.actor.createEmbeddedEntity(\"OwnedItem\", item.data)\n  });\n} else {\n\t// First delete the old Terror trait\n\tlet ActorTerrorTraitId = actorTerrorTrait._id;\n    args.actor.deleteEmbeddedEntity(\"OwnedItem\", ActorTerrorTraitId);\n\t\n\t// Then add the Terror trait with the new rating\n\tfromUuid(\"Compendium.wfrp4e-core.traits.kJNAY1YRaCy9IgmT\").then(item => {\n    item.data.data.specification.value = actorTerrorTraitSpecificationValue \n\t+ 1;\n    args.actor.createEmbeddedEntity(\"OwnedItem\", item.data)\n  });\n}",
+              "options": {
+                "dialog": {
+                  "hideScript": "",
+                  "activateScript": "",
+                  "submissionScript": "",
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": false
+                }
+              }
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "actor",
+            "effectTrigger": "oneTime",
+            "preventDuplicateEffects": false,
+            "script": "// Get the level of the Walking Death trait\n// Remember this is _before_ adding, so undefined = 1, 1 = 2 etc.\nlet actorWalkingDeathTalent = args.actor.data.talents.find(talent => talent.name === \"Walking Death\");\nlet actorWalkingDeathTalentLevel = actorWalkingDeathTalent?.data.advances.value;\nif(actorWalkingDeathTalentLevel == null) {\n\tactorWalkingDeathTalentLevel = 1;\n} else {\n\tactorWalkingDeathTalentLevel +=1;\n}\n\n// Check if the Actor has the Terror trait\nlet actorTerrorTrait =  args.actor.data.traits.find(trait => trait.name === \"Terror\");\nlet actorTerrorTraitSpecificationValue = parseInt(actorTerrorTrait?.specificationValue);\nlet actorHasTerrorTrait = !(actorTerrorTrait == null);\n\n// Now, if the actor doesn't have the Terror trait, add it here with rating 1\nif (!actorHasTerrorTrait) {\n  fromUuid(\"Compendium.wfrp4e-core.traits.kJNAY1YRaCy9IgmT\").then(item => {\n    item.data.data.specification.value = 1;\n    args.actor.createEmbeddedEntity(\"OwnedItem\", item.data)\n  });\n} else {\n\t// First delete the old Terror trait\n\tlet ActorTerrorTraitId = actorTerrorTrait._id;\n    args.actor.deleteEmbeddedEntity(\"OwnedItem\", ActorTerrorTraitId);\n\t\n\t// Then add the Terror trait with the new rating\n\tfromUuid(\"Compendium.wfrp4e-core.traits.kJNAY1YRaCy9IgmT\").then(item => {\n    item.data.data.specification.value = actorTerrorTraitSpecificationValue \n\t+ 1;\n    args.actor.createEmbeddedEntity(\"OwnedItem\", item.data)\n  });\n}"
+          }
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null,
+        "combat": null
+      },
+      "icon": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+      "tint": null,
+      "transfer": true,
+      "name": "Krocząca Śmierć",
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "_key": "!items.effects!rzGrmJRgEoCkBZOT.ekNkTqUQs7qfNgEW"
+    }
+  ],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Jeśli chcesz, możesz ujawnić swoją nieumarłą naturę, przybierając potworne i śmiercionośne oblicze. Tymczasowo zyskujesz cechę @Compendium[wfrp4e-core.items.kJNAY1YRaCy9IgmT]{Groza} ze współczynnikiem 1.</p><p>Jeśli posiadasz już Grozę, Chodząca Śmierć dodaje +1 do wartości tej cechy za każdy poziom tego Krwawego Daru.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "t"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "folder": "R9GP6kUptFm6hQ24",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1707139321934,
+    "modifiedTime": 1713356301502,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!rzGrmJRgEoCkBZOT"
+}

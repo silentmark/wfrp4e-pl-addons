@@ -1,0 +1,58 @@
+{
+  "_id": "v2APkVZUo3yZia0e",
+  "name": "Diabelski Płacz (TODO)",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Możesz wydać wszystkie punkty Przewag (minimum 2), aby wydać straszliwy krzyk, który wbija się w serca żywych stworzeń i wypełnia je palącą agonią.</p><p>Jest to darmowy atak, który wpływa na wszystkie żywe cele w promieniu liczby metrów równej twojej inicjatywie, powodując +3 stany @Condition[Ogłuszenie].</p><p>Drugi zakup Daru Krwi dodaje +1k10 Obrażeń do efektu, który ignoruje premię do Wytrzymałości i Punkty Pancerza.</p><p>Trzeci zakup Daru Krwi dodaje Przeciętny (+20) Test Odporności dla wszystkich celów, aby uniknąć uzyskania +1 Stanu @Condition[Panika] oraz dodatkowe +1k10 Obrażeń.</p><p>Każde kolejne wykupienie talentu dodaje kolejne +1k10 Obrażeń oraz zwiększa trudność Testu Odporności o 1.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "wp"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "folder": "R9GP6kUptFm6hQ24",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1706998910152,
+    "modifiedTime": 1713356301502,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 300000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!v2APkVZUo3yZia0e"
+}

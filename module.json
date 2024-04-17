@@ -21,39 +21,6 @@
   ],
   "packs": [
     {
-      "label": "WFRP - Pancerze",
-      "name": "addons-armoury",
-      "path": "packs/addons-armoury",
-      "type": "Item",
-      "ownership": {
-          "PLAYER": "OBSERVER",
-          "ASSISTANT": "OWNER"
-      },
-      "system": "wfrp4e"
-    },
-    {
-      "label": "WFRP - Pech",
-      "name": "addons-fumbles",
-      "path": "packs/addons-fumbles",
-      "type": "Item",
-      "ownership": {
-          "PLAYER": "OBSERVER",
-          "ASSISTANT": "OWNER"
-      },
-      "system": "wfrp4e"
-    },
-    {
-      "label": "WFRP - Mikstury",
-      "name": "addons-ingredients",
-      "path": "packs/addons-ingredients",
-      "type": "Item",
-      "ownership": {
-          "PLAYER": "OBSERVER",
-          "ASSISTANT": "OWNER"
-      },
-      "system": "wfrp4e"
-    },
-    {
       "label": "WFRP - Przedmioty",
       "name": "addons-items",
       "path": "packs/addons-items",
@@ -65,9 +32,9 @@
       "system": "wfrp4e"
     },
     {
-      "label": "WFRP - Manifestacje",
-      "name": "addons-miscasts",
-      "path": "packs/addons-miscasts",
+      "label": "WFRP PL Addons - Tabele",
+      "name": "wfrp-pl-addons-tables",
+      "path": "packs/wfrp-pl-addons-tables",
       "type": "RollTable",
       "ownership": {
           "PLAYER": "OBSERVER",
@@ -76,31 +43,9 @@
       "system": "wfrp4e"
     },
     {
-      "label": "WFRP - Tabele",
-      "name": "addons-tables",
-      "path": "packs/addons-tables",
-      "type": "RollTable",
-      "ownership": {
-          "PLAYER": "OBSERVER",
-          "ASSISTANT": "OWNER"
-      },
-      "system": "wfrp4e"
-    },
-    {
-      "label": "WFRP - Wampiry",
-      "name": "addons-vampires",
-      "path": "packs/addons-vampires",
-      "type": "Item",
-      "ownership": {
-          "PLAYER": "OBSERVER",
-          "ASSISTANT": "OWNER"
-      },
-      "system": "wfrp4e"
-    },
-    {
-      "label": "WFRP - Broń",
-      "name": "addons-weapons",
-      "path": "packs/addons-weapons",
+      "label": "WFRP PL Addons",
+      "name": "wfrp-pl-addons",
+      "path": "packs/wfrp-pl-addons",
       "type": "Item",
       "ownership": {
           "PLAYER": "OBSERVER",

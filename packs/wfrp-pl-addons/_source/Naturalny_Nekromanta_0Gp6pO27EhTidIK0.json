@@ -1,0 +1,58 @@
+{
+  "_id": "0Gp6pO27EhTidIK0",
+  "name": "Naturalny Nekromanta",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Możesz intuicyjnie dowodzić nieumarłymi stworzeniami i ghulami, jeśli znajdują się w promieniu 100 metrów. Możesz dowodzić liczbą stworzeń równą Twojej Siły Woli, nawet jeśli nie posiadasz Nekromancji.</p><p>Proste polecenia, takie jak atak, obrona, znajdź lub śledź, są automatyczne i mogą zostać wydane wraz z darmową akcją wszystkim stworzeniom jednocześnie.</p><p>Możesz wydawać bardziej skomplikowane polecenia lub rozkazy na odległość większą niż 100 metrów korzystając z wymagającego (+0) testu dowodzenia.</p><p>Większość Nieumarłych i Ghuli nie oprze się Twoim rozkazom, choć wyjątkowo potężny Nieumarły może, jeśli MG uzna to za stosowne. Jeśli nauczysz się Nekromancji, nie doświadczysz manifestacji chaosu w wyniku wyrzucenia dubletu w zdanych testach Splatania Magii (Dhar) lub Języka (Magicznego).</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "1"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "folder": "IdBKVE70UjsZfSoR",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1707141041114,
+    "modifiedTime": 1713356301502,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!0Gp6pO27EhTidIK0"
+}

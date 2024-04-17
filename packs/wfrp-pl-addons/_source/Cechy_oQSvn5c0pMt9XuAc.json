@@ -1,0 +1,19 @@
+{
+  "name": "Cechy",
+  "sorting": "a",
+  "folder": "sZeWPSxQeYqz52Aa",
+  "type": "Item",
+  "_id": "oQSvn5c0pMt9XuAc",
+  "sort": 100000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1698787620837,
+    "modifiedTime": 1713356298196,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "_key": "!folders!oQSvn5c0pMt9XuAc"
+}

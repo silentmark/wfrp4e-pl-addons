@@ -1,0 +1,134 @@
+{
+  "name": "Valerian",
+  "type": "trapping",
+  "img": "icons/consumables/potions/potion-flask-corked-yellow.webp",
+  "effects": [
+    {
+      "_id": "Hveh99XxZCQYNT89",
+      "flags": {
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "target"
+          },
+          "scriptData": [
+            {
+              "label": "Valerian Infusion",
+              "trigger": "immediate",
+              "script": "args.actor.modifyWounds(1)"
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "apply",
+            "effectTrigger": "oneTime",
+            "preventDuplicateEffects": false,
+            "script": "args.actor.modifyWounds(1)"
+          }
+        }
+      },
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/wfrp4e-core/art/other/herbalism.webp",
+      "tint": null,
+      "transfer": true,
+      "origin": null,
+      "name": "Valerian Infusion",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!USYIGWygB03fwvMl.Hveh99XxZCQYNT89"
+    }
+  ],
+  "flags": {
+    "wfrp4e-dotr": {
+      "initialization-folder": "Herbs of the Empire",
+      "sort": 1400000
+    },
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<h3>Strong Tea</h3>\n<p>Valerian is called Strong Tea in the Moot; this confuses some outside visitors, but any Halfling knows from the context of the conversation whether this or some other kind of tea is meant. The Elves call it <em>Taillegas </em>and the Bretonnians <em>Th&eacute; de M&eacute;decin</em>.</p>\n<p>It is important to air-dry the leaves in a cool, dry place. Before brewing, they should be inspected carefully for any trace of limp-rot, a fungus which is particularly attracted to these leaves. Even a slight infestation can make the tea ineffective; a serious amount can turn it poisonous.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><strong>Locality</strong>: Mixed forest</p>\n<p><strong>Season</strong>: Spring</p>\n<p><strong>Preparations</strong>: Raw</p>\n<p>Prepared as an infusion, a cup of Valerian tea restores 1 Wound to the drinker. The dose may be repeated once per day, but Valerian has no effect on Critical Wounds.</p>"
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 0,
+      "ss": 5,
+      "bp": 0
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "common"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1690313554380,
+    "modifiedTime": 1713356216795,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "_id": "USYIGWygB03fwvMl",
+  "folder": "kro4u2Gy3c3f4tDQ",
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!USYIGWygB03fwvMl"
+}

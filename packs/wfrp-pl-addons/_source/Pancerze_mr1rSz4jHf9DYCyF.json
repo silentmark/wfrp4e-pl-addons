@@ -1,0 +1,19 @@
+{
+  "name": "Pancerze",
+  "sorting": "a",
+  "folder": null,
+  "type": "Item",
+  "_id": "mr1rSz4jHf9DYCyF",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1713354923622,
+    "modifiedTime": 1713354923622,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "_key": "!folders!mr1rSz4jHf9DYCyF"
+}

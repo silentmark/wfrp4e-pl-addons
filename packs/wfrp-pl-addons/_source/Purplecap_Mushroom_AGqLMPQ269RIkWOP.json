@@ -1,0 +1,86 @@
+{
+  "name": "Purplecap Mushroom",
+  "type": "trapping",
+  "img": "icons/consumables/mushrooms/umbontae-bumpy-purple.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<div><div><p>These mushrooms are tainted by the magic emanating from the cave and eating them grants powerful visions of the past and future. </p><p>Within d10 turns of consuming a Purple Cap the Character needs to make a test as if they had consumed a Piece or Weirdroot. If they succumb their eyesight dims and they see colourful patterns swirling through the air around them, reminiscent of Cacklespit’s paintings. Vague shapes, almost like lifeforms, swim through the air. Gradually, the Character begins to experience vivid visions.</p><p></p><div><p></p></div></div></div><div><div><p></p></div><div><p><br></p></div></div>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": "<div><div><p>1d100</p><p>01-10     The First Ones. The world is ice. Glowing figures of light descend into the gorge and everything begins to melt.</p><p>11-20     Weary wanderers. An endless line of Dwarfs troops through the gorge towards the Character, clad in golden armour. They are tired and as they march, they slowly sink into the ground. There is an overwhelming air of melancholy.</p><p>21-30      The Final Battle Begins. Sigmar strides wearily through the Lower Gorge accompanied by a wolf and a boar. A winged figure looms above him and he raises his hammer. The Character feels hot and agitated.</p><p>31-40      Shadows Return. The Character is back in Bogenhafen, part of Teugen’s ritual. They know what’s about to happen, but they can’t stop it. Everything happens as it did before, but the ritual is prevented by the Character chanting a prayer to Sigmar. Teugen dies in a holy light. (note, if the Character did not participate in Enemy In Shadows, reroll this vision)</p><p>41-50      The Great Green. The Character finds themselves transported to an endless rocky plain, filled with orcs and goblins fighting. Above these greenskins, two huge orcs loom in the sky, having their own fist fight. One of the figures (Mork... or perhaps Gork) notices the Character, leans down and flicks them away with a massive finger. ‘ZOG OFF HUMIE. DIS AIN’T FER YOU’, he bellows.</p><p>51-60      Taking flight. Hordes of Madcraw Goblins surge up the gorge like a green tide which washes over the Character. As they pass, each one grows a pair of black greasy wings and flies south.</p><p>61-70      The Return. The Character looks up the gorge towards the waterfall and sees themselves and the rest of the party returning from the cave. They look haunted and slightly hysterical.</p><p>71-80      The Watchers. Nine inhuman eyes appear burning in the sky, each one distinct from the others. They spin in a circle and the Character becomes dizzy and ecstatic.</p><p>81-90      The Folded World. The Character stands still as his compatriots fold into themselves like paper. The gorge folds up, the sky folds up and they are left alone in a void. A voice speaks to them from nothingness, ‘It is in balance.’</p><p>91-00      Altdorf Aflame. The Character feels themselves shoot up into the air and hover over Altdorf. Purple and pink tentacles spread across the city, originating in the Cathedral of Sigmar.</p></div></div>"
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 0,
+      "ss": 0,
+      "bp": 0
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "None"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": ""
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1686572569320,
+    "modifiedTime": 1713356216795,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "_id": "AGqLMPQ269RIkWOP",
+  "folder": "kro4u2Gy3c3f4tDQ",
+  "sort": 3500000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!AGqLMPQ269RIkWOP"
+}

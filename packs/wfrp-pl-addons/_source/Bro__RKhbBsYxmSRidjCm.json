@@ -1,0 +1,19 @@
+{
+  "name": "Broń",
+  "sorting": "a",
+  "folder": null,
+  "type": "Item",
+  "_id": "RKhbBsYxmSRidjCm",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1713354563996,
+    "modifiedTime": 1713354563996,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "_key": "!folders!RKhbBsYxmSRidjCm"
+}

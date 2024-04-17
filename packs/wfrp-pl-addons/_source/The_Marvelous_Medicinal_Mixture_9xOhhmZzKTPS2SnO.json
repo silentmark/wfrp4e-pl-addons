@@ -1,0 +1,90 @@
+{
+  "name": "The Marvelous Medicinal Mixture",
+  "type": "trapping",
+  "img": "icons/consumables/potions/bottle-corked-green.webp",
+  "effects": [],
+  "flags": {
+    "_sheetTab": "details",
+    "wfrp4e-starter-set": {
+      "initialization-folder": "Ubersreik"
+    },
+    "core": {}
+  },
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>A cloying fish-scented healing liquid, anyone wishing to take this concoction must first pass an <strong>Average (+20) Cool</strong> test. This done, the drinker receives 1 @Condition[Fatigued] condition, which can only be removed after a good night’s rest.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p> The potion offers no other effect. However, it tastes so bad von Holzenauer’s customers remain convinced of its efficacy to cure almost any malaise.</p>"
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 0,
+      "ss": 8,
+      "bp": 0
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "None"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    }
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1690313539020,
+    "modifiedTime": 1713356216795,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "_id": "9xOhhmZzKTPS2SnO",
+  "folder": "kro4u2Gy3c3f4tDQ",
+  "sort": 900000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!9xOhhmZzKTPS2SnO"
+}

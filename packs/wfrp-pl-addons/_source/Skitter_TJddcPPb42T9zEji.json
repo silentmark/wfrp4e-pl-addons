@@ -1,0 +1,86 @@
+{
+  "name": "Skitter",
+  "type": "trapping",
+  "img": "icons/commodities/gems/gem-fragments-turquoise.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><span style=\"font-family: serif\">A new drug of obscure origin, Skitter has hit the streets of Nuln hard and is spreading fast. Those who consume it find themselves in a potent, blissful trance that can sometimes last days. You must pass a Very Hard (–30) Toughness Test, gaining the Unconscious Condition for a number of hours equal to twice –SL, to a minimum of 4.</span></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><span style=\"font-family: serif\">A dose counts as Minor Corruption, but if the slumber caused lasts for more than 8 hours it becomes Moderate Corruption. After waking, you must pass a Hard (–20) Toughness Test or gain a FatiguedCondition that lasts 3 days or until another dose is taken</span></p>"
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 0,
+      "ss": 2,
+      "bp": 0
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "scarce"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "drugsPoisonsHerbsDraughts"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1670884084128,
+    "modifiedTime": 1713356216795,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "_id": "TJddcPPb42T9zEji",
+  "folder": "kro4u2Gy3c3f4tDQ",
+  "sort": 2300000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!TJddcPPb42T9zEji"
+}

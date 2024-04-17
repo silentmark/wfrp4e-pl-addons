@@ -1,0 +1,116 @@
+{
+  "name": "Ouch",
+  "type": "critical",
+  "_id": "kxpCuyeq0SHnERgE",
+  "img": "icons/skills/melee/shield-damaged-broken-blue.webp",
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Trafisz siebie, lub ranisz o otoczenie, albo przeciwnik wykorzystuje okazję i zadaje ranę. Tracisz 1 punkt żywotności, ignorując premię do wytrzymałości i punkty pancerza</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "wounds": {
+      "value": "0",
+      "type": "String",
+      "label": "Wounds"
+    },
+    "modifier": {
+      "value": "",
+      "type": "String",
+      "label": "Test Modifier"
+    },
+    "location": {
+      "value": "",
+      "type": "String",
+      "label": "Location"
+    },
+    "prompt": false
+  },
+  "effects": [
+    {
+      "icon": "icons/skills/melee/shield-damaged-broken-blue.webp",
+      "transfer": true,
+      "name": "Ouch",
+      "_id": "h9S2srwI3fGiO0bu",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "flags": {
+        "times-up": {
+          "isPassive": true
+        },
+        "wfrp4e": {
+          "hide": false,
+          "applicationData": {
+            "type": "document",
+            "documentType": "Actor",
+            "equipTransfer": false,
+            "avoidTest": {
+              "value": "none"
+            },
+            "testIndependent": false,
+            "prompt": false,
+            "runAsGM": false
+          },
+          "scriptData": [
+            {
+              "label": "Ouch",
+              "trigger": "immediate",
+              "script": "await this.actor.applyBasicDamage(1, { damageType: game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL });\n\nconst target = this.actor;\nconst effectName = this.effect.name;\nsetTimeout(() => {\n    let itm = target.getItemTypes(\"critical\").find(x=>x.name == effectName);\n    target.deleteEmbeddedDocuments(\"Item\", [itm.id])\n}, 500);",
+              "options": {
+                "dialog": {
+                  "targeter": false
+                },
+                "immediate": {
+                  "deleteEffect": true
+                }
+              }
+            }
+          ],
+          "_legacyData": {
+            "effectApplication": "actor",
+            "effectTrigger": "oneTime",
+            "preventDuplicateEffects": false,
+            "script": "await this.actor.applyBasicDamage(1, { damageType: game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL });\n\nconst target = this.actor;\nconst effectName = this.effect.name;\nsetTimeout(() => {\n    let itm = target.getItemTypes(\"critical\").find(x=>x.name == effectName);\n    target.deleteEmbeddedDocuments(\"Item\", [itm.id])\n}, 500);"
+          }
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!kxpCuyeq0SHnERgE.h9S2srwI3fGiO0bu"
+    }
+  ],
+  "folder": "nost2pGVYD3gcBGR",
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1689629192693,
+    "modifiedTime": 1713358258863,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 200000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!kxpCuyeq0SHnERgE"
+}

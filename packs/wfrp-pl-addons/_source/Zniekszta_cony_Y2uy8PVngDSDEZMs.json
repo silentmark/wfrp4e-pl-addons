@@ -1,0 +1,58 @@
+{
+  "_id": "Y2uy8PVngDSDEZMs",
+  "name": "Zniekształcony",
+  "type": "talent",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-vampires/assets/icons/blood-gift.webp",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p>Stałeś się w jakiś sposób potwornie obrzydliwy. Niezależnie od tego, czy jesteś pokryty pękającymi krostami, czy też twoja skóra gnije, jesteś całkowicie odrażający.</p><p>Jeśli nie jesteś pod wpływem Ludzkiego Wyglądu, posiadasz Cechę @UUID[Compendium.wfrp4e-core.items.Item.kJNAY1YRaCy9IgmT]{Groza (1)}. Jeśli posiadasz już Grozę, Zniekształcony dodaje +1 do jej wartości za każdy poziom tego Krwawego Daru.</p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "max": {
+      "type": "String",
+      "label": "Max Advances",
+      "value": "t"
+    },
+    "advances": {
+      "type": "Number",
+      "label": "Advances",
+      "value": 1,
+      "force": false
+    },
+    "career": {
+      "value": "",
+      "type": "String",
+      "label": "Career"
+    },
+    "tests": {
+      "type": "String",
+      "label": "Tests",
+      "value": ""
+    }
+  },
+  "folder": "IdBKVE70UjsZfSoR",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1707082491722,
+    "modifiedTime": 1713356301502,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 1000000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!Y2uy8PVngDSDEZMs"
+}

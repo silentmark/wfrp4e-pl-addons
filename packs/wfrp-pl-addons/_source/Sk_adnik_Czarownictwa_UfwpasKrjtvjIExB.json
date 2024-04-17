@@ -1,0 +1,86 @@
+{
+  "name": "Składnik Czarownictwa",
+  "type": "trapping",
+  "flags": {
+    "core": {}
+  },
+  "img": "modules/wfrp4e-pl-addons/icons/ingredients/witchcraft.png",
+  "_id": "UfwpasKrjtvjIExB",
+  "effects": [],
+  "system": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "value": "<p><em>Cena składnika zależy od zaklęcia, do którego jest przeznaczony. Ustaw cenę na X p, gdzie X jest równe PZ. </em></p>\n<p><em>Ewentualnie czarownica może poszukać składników na własną rękę, używając Umiejętności Sztuka Przetrwania. Udany Test skutkuje pozyskaniem 1 + PS składników.</em></p>\n<p><strong>Testy Rzucania zaklęć i Splatania Magii z tej Tradycji skutkują automatyczną Manifestacją, chyba że do rzucenia zaklęcia używane są składniki. Za to składnik nie chroni przed późniejszymi Manifestacjami, jeśli takie się pojawią...</strong></p>"
+    },
+    "gmdescription": {
+      "type": "String",
+      "label": "Description",
+      "value": ""
+    },
+    "quantity": {
+      "type": "Number",
+      "label": "Quantity",
+      "value": 1
+    },
+    "encumbrance": {
+      "type": "Number",
+      "label": "Encumbrance",
+      "value": 0
+    },
+    "price": {
+      "type": "String",
+      "label": "Price",
+      "gc": 0,
+      "ss": 0,
+      "bp": 0
+    },
+    "availability": {
+      "type": "String",
+      "label": "Availability",
+      "value": "common"
+    },
+    "location": {
+      "type": "Number",
+      "label": "Location",
+      "value": ""
+    },
+    "trappingType": {
+      "type": "String",
+      "label": "Trapping Type",
+      "value": "ingredient"
+    },
+    "worn": false,
+    "spellIngredient": {
+      "type": "String",
+      "value": ""
+    },
+    "qualities": {
+      "label": "Qualities",
+      "value": []
+    },
+    "flaws": {
+      "label": "Flaws",
+      "value": []
+    },
+    "damageToItem": {
+      "value": null,
+      "shield": null
+    }
+  },
+  "folder": "f3oZ6vhhmRKFZhkz",
+  "_stats": {
+    "systemId": "wfrp4e",
+    "systemVersion": "7.0.3",
+    "coreVersion": "11.315",
+    "createdTime": 1713354740855,
+    "modifiedTime": 1713354748936,
+    "lastModifiedBy": "NBxjSXoDTuPJSWHT"
+  },
+  "sort": 900000,
+  "ownership": {
+    "default": 0,
+    "NBxjSXoDTuPJSWHT": 3
+  },
+  "_key": "!items!UfwpasKrjtvjIExB"
+}
