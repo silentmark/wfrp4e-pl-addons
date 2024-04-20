@@ -26,6 +26,7 @@ export default {
         "scripts/prayer-nerf.mjs",
         "scripts/reroll-initiative.mjs",
         "scripts/windsofmagic.mjs",
+        "scripts/diseases.mjs"
     ],
     output: {
         dir : path.join(modulePath, "scripts")

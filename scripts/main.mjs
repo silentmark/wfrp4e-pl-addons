@@ -11,6 +11,7 @@ import AutoOutnumbered from './auto-outnumbered.mjs';
 import AutoCombat from './auto-combat.mjs';
 import AutoMiss from './auto-miss.mjs';
 import PF2eHeresy from './pf2e-heresy.mjs';
+import Diseases from './diseases.mjs';
 
 class Main {
     constructor() {
@@ -26,6 +27,7 @@ class Main {
         this.autoCombat = new AutoCombat();
         this.autoMiss = new AutoMiss();
         this.pf2eHeresy = new PF2eHeresy();
+        this.diseases = new Diseases();
 
         this.customPrefillModifiers = {};
     }
@@ -58,6 +60,7 @@ class Main {
         this.autoCombat.setup();
         this.autoMiss.setup();
         this.pf2eHeresy.setup();
+        this.diseases.setup();
     }
 
     ready() {
@@ -260,6 +263,15 @@ Hooks.once("init", () => {
     game.settings.register("wfrp4e-pl-addons", "pf2eHeresy.Enable", {
         name: "wfrp4epladdon.pf2eHeresy.Enable",
         hint: "wfrp4epladdon.pf2eHeresy.EnableHint",
+        scope: "world",
+        config: true,
+        default: false,
+        type: Boolean
+    });
+
+    game.settings.register("wfrp4e-pl-addons", "customDiseases.Enable", {
+        name: "wfrp4epladdon.customDiseases.Enable",
+        hint: "wfrp4epladdon.customDiseases.EnableHint",
         scope: "world",
         config: true,
         default: false,
