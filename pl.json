@@ -60,6 +60,12 @@
     "wfrp4epladdon.customDiseases.Enable": "Zmodyfikowane zasady chorób i symptomów",
     "wfrp4epladdon.customDiseases.EnableHint": "",
 
+    "wfrp4epladdon.socketTests.Mode": "Socket Tests Mode",
+    "wfrp4epladdon.socketTests.ModeHint": "Socket Tests is a feature that allows GMs (and sometimes players) request a specific test from an actor owned by another user. In normal circumstances, any Test that is initialized either from Actor Sheet, Token Action Hud, Macro or effect, will be either started in context of executing user or failed in case of lack of permissions to do so. This feature will allow one of three options. <br/><b>Never</b> - will always start a test in context of the user that is executing the test (original system behavior).<br/><br/><b>Always</b> - When test is initialized by GM in context of the actor that has non-GM owner online, test dialog will be opened for non-GM player, and vice-versa - when Player would initialized a test for not owned actor, a test dialog would be opened for GM. (this option can be suspended temporarly by pressing Ctrl Key)<br/><b>On Ctrl Key Pressed</b> - The opposite of Always - initialized test will have its Test Dialog window opened for owninig player only when Ctrl Key is pressed. Otherwise, game will work as if this feature was disabled.",
+    "wfrp4epladdon.socketTests.OnKeyPress": "On Ctrl Key Pressed",
+    "wfrp4epladdon.socketTests.Always": "Always (unless Ctrl is pressed)",
+    "wfrp4epladdon.socketTests.Never": "Never",
+
     "WFRP4EADDON.Symptom.Malaise": "Apatia (Lekka)",
     "WFRP4EADDON.Symptom.MalaiseModerate": "Apatia (Zaawansowana)",
     "WFRP4EADDON.Symptom.MalaiseSevere": "Apatia (Martwota)",

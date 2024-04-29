@@ -12,6 +12,7 @@ import AutoCombat from './auto-combat.mjs';
 import AutoMiss from './auto-miss.mjs';
 import PF2eHeresy from './pf2e-heresy.mjs';
 import Diseases from './diseases.mjs';
+import SocketTests from './socket-tests.mjs';
 
 class Main {
     constructor() {
@@ -28,6 +29,7 @@ class Main {
         this.autoMiss = new AutoMiss();
         this.pf2eHeresy = new PF2eHeresy();
         this.diseases = new Diseases();
+        this.socketTests = new SocketTests();
 
         this.customPrefillModifiers = {};
     }
@@ -276,6 +278,21 @@ Hooks.once("init", () => {
         config: true,
         default: false,
         type: Boolean
+    });
+
+      // Should scroll have replaced Description with one from the spell as well?
+    game.settings.register("wfrp4e-pl-addons", "socketTests.mode", {
+        name: 'wfrp4epladdon.socketTests.Mode',
+        hint: 'wfrp4epladdon.socketTests.ModeHint',
+        scope: 'world',
+        config: false,
+        default: 'onKeyPress',
+        type: String,
+        choices: {
+        'onKeyPress': 'wfrp4epladdon.socketTests.OnKeyPress',
+        'always': 'wfrp4epladdon.socketTests.Always',
+        'never': 'wfrp4epladdon.socketTests.Never',
+        }
     });
 });
 

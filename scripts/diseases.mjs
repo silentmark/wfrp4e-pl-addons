@@ -3,6 +3,420 @@ import {constants} from './constants.mjs';
 
 export default class Diseases {
 
+/*
+          symptoms.malaise = "WFRP4EADDON.Symptom.Malaise";
+          symptoms.malaiseModerate = "WFRP4EADDON.Symptom.MalaiseModerate";
+          symptoms.malaiseSevere = "WFRP4EADDON.Symptom.MalaiseSevere";
+          
+          symptoms.flux = "WFRP4EADDON.Symptom.Flux";
+          symptoms.fluxModerate = "WFRP4EADDON.Symptom.FluxModerate";
+          symptoms.fluxSevere = "WFRP4EADDON.Symptom.FluxSevere";
+
+          symptoms.buboes = "WFRP4EADDON.Symptom.Buboes";
+          symptoms.buboesModerate = "WFRP4EADDON.Symptom.BuboesModerate";
+          symptoms.buboesSevere = "WFRP4EADDON.Symptom.BuboesSevere";
+
+          symptoms.gangrene = "WFRP4EADDON.Symptom.Gangrene";
+
+          symptoms.fever = "WFRP4EADDON.Symptom.Fever";
+          symptoms.feverModerate = "WFRP4EADDON.Symptom.FeverModerate";
+          symptoms.feverSevere = "WFRP4EADDON.Symptom.FeverSevere";
+
+          symptoms.coughsAndSneezes = "WFRP4EADDON.Symptom.CoughsAndSneezes";
+          symptoms.coughsAndSneezesModerate = "WFRP4EADDON.Symptom.CoughsAndSneezesModerate";
+          symptoms.coughsAndSneezesSevere = "WFRP4EADDON.Symptom.CoughsAndSneezesSevere";
+
+          symptoms.convulsions = "WFRP4EADDON.Symptom.Convulsions";
+          symptoms.convulsionsModerate = "WFRP4EADDON.Symptom.ConvulsionsModerate";
+          symptoms.convulsionsSevere = "WFRP4EADDON.Symptom.ConvulsionsSevere";
+
+          symptoms.nausea = "WFRP4EADDON.Symptom.Nausea";
+          symptoms.nauseaModerate = "WFRP4EADDON.Symptom.NauseaModerate";
+          symptoms.nauseaSevere = "WFRP4EADDON.Symptom.NauseaSevere";
+
+          symptoms.lingering = "WFRP4EADDON.Symptom.Lingering";
+          symptoms.lingeringModerate = "WFRP4EADDON.Symptom.LingeringModerate";
+          symptoms.lingeringSevere = "WFRP4EADDON.Symptom.LingeringSevere";
+
+          symptoms.wounded = "WFRP4EADDON.Symptom.Wounded";
+          symptoms.woundedModerate = "WFRP4EADDON.Symptom.WoundedModerate";
+          symptoms.woundedSevere = "WFRP4EADDON.Symptom.WoundedSevere";
+
+          symptoms.blight = "WFRP4EADDON.Symptom.Blight";
+          symptoms.blightModerate = "WFRP4EADDON.Symptom.BlightModerate";
+          symptoms.blightSevere = "WFRP4EADDON.Symptom.BlightSevere";
+
+          symptoms.pox = "WFRP4EADDON.Symptom.Pox";
+          symptoms.poxModerate = "WFRP4EADDON.Symptom.PoxModerate";
+          symptoms.poxSevere = "WFRP4EADDON.Symptom.PoxSevere";
+
+          symptoms.vertigo = "WFRP4EADDON.Symptom.Vertigo";
+          symptoms.vertigoModerate = "WFRP4EADDON.Symptom.VertigoModerate";
+          symptoms.vertigoSevere = "WFRP4EADDON.Symptom.VertigoSevere";
+
+          symptoms.purblind = "WFRP4EADDON.Symptom.Purblind";
+          symptoms.purblindModerate = "WFRP4EADDON.Symptom.PurblindModerate";
+          symptoms.purblindSevere = "WFRP4EADDON.Symptom.PurblindSevere";
+
+          symptoms.wasting = "WFRP4EADDON.Symptom.Wasting";
+          symptoms.wastingModerate = "WFRP4EADDON.Symptom.WastingModerate";
+          symptoms.wastingSevere = "WFRP4EADDON.Symptom.WastingSevere";
+
+          symptoms.dementia = "WFRP4EADDON.Symptom.Dementia";
+          symptoms.dementiaModerate = "WFRP4EADDON.Symptom.DementiaModerate";
+          symptoms.dementiaSevere = "WFRP4EADDON.Symptom.DementiaSevere";
+
+          symptoms.delirium = "WFRP4EADDON.Symptom.Delirium";
+          symptoms.swelling = "WFRP4EADDON.Symptom.Swelling";
+*/
+
+  symptomEffects = {
+    blight: {
+      name: "Uwiąd (Lekki)",
+      icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+      transfer: true,
+      flags: {
+        wfrp4e: {
+          symptom: true,
+          scriptData: [{
+            label: "Uwiąd (Lekki)",
+            trigger: "manual",
+            script: ` let difficulty = "veasy";
+                      let test = await args.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {context : {failure : args.actor.name + " umiera z powodu Uwiądu"}, absolute: {difficulty}, appendTitle : " - Uwiąd"});
+                      await test.roll();
+                      if (test.result.outcome == "failure") {
+                              await args.actor.addCondition("dead");
+                      }
+                    `,
+              }]
+          }
+        },
+    },
+
+    blightModerate: {
+      name: "Uwiąd (Umiarkowany)",
+      icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+      transfer: true,
+      flags: {
+        wfrp4e: {
+          symptom: true,
+          scriptData: [{
+            label: "Uwiąd (Lekki)",
+            trigger: "manual",
+            script: ` let difficulty = "easy";
+                      let test = await args.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {context : {failure : args.actor.name + " umiera z powodu Uwiądu"}, absolute: {difficulty}, appendTitle : " - Uwiąd"});
+                      await test.roll();
+                      if (test.result.outcome == "failure") {
+                              await args.actor.addCondition("dead");
+                      }
+                    `
+              }]
+          }
+        },
+    },
+
+    blightSevere: {
+      name: "Uwiąd (Poważny)",
+      icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+      transfer: true,
+      flags: {
+        wfrp4e: {
+          symptom: true,
+          scriptData: [{
+            label: "Uwiąd (Lekki)",
+            trigger: "manual",
+            script: ` let difficulty = "average";
+                      let test = await args.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {context : {failure : args.actor.name + " umiera z powodu Uwiądu"}, absolute: {difficulty}, appendTitle : " - Uwiąd"});
+                      await test.roll();
+                      if (test.result.outcome == "failure") {
+                              await args.actor.addCondition("dead");
+                      }
+                    `
+              }]
+          }
+        },
+    },
+
+    buboes: {
+      name: "Dymienica (Lekka)",
+      icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+      transfer: true,
+      flags: {
+        wfrp4e: {
+          symptom: true,
+          scriptData: [{
+            label: "Dymienica (Lekka)",
+            trigger: "dialog",
+            script: `args.prefillModifiers.modifier -= 5`,
+            options : {
+              dialog : {
+                  hideScript : `let applicableCharacteristics = ["ws", "bs", "s", "fel", "ag", "t", "dex"]; 
+                                return args.type != 'weapon' &&
+                                      !(args.type == 'characteristic' && applicableCharacteristics.includes(args.item)) &&
+                                      !(args.type == 'skill' && applicableCharacteristics.includes(args.item.characteristic.key))`,
+                  activateScript : `let applicableCharacteristics = ["ws", "bs", "s", "fel", "ag", "t", "dex"]; 
+                                    return args.type == 'weapon' || 
+                                           (args.type == 'characteristic' && applicableCharacteristics.includes(args.item)) || 
+                                           (args.type == 'skill' && applicableCharacteristics.includes(args.item.characteristic.key))`
+                }
+              }
+            }]
+          }
+        },
+    },
+
+    buboesModerate: {
+      name: "Dymienica (Umiarkowana)",
+      icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+      transfer: true,
+      flags: {
+        wfrp4e: {
+          symptom: true,
+          scriptData: [{
+            label: "Dymienica (Umiarkowana)",
+            trigger: "dialog",
+            script: `args.prefillModifiers.modifier -= 10`,
+            options : {
+              dialog : {
+                  hideScript : `let applicableCharacteristics = ["ws", "bs", "s", "fel", "ag", "t", "dex"]; 
+                                return args.type != 'weapon' &&
+                                      !(args.type == 'characteristic' && applicableCharacteristics.includes(args.item)) &&
+                                      !(args.type == 'skill' && applicableCharacteristics.includes(args.item.characteristic.key))`,
+                  activateScript : `let applicableCharacteristics = ["ws", "bs", "s", "fel", "ag", "t", "dex"]; 
+                                    return args.type == 'weapon' || 
+                                            (args.type == 'characteristic' && applicableCharacteristics.includes(args.item)) || 
+                                            (args.type == 'skill' && applicableCharacteristics.includes(args.item.characteristic.key))`
+                }
+              }
+            }]
+          }
+        },
+    },
+
+    buboesSevere: {
+      name: "Dymienica (Poważna)",
+      icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+      transfer: true,
+      flags: {
+        wfrp4e: {
+          symptom: true,
+          scriptData: [{
+            label: "Dymienica (Poważna)",
+            trigger: "dialog",
+            script: `args.prefillModifiers.modifier -= 20`,
+            options : {
+              dialog : {
+                  hideScript : `let applicableCharacteristics = ["ws", "bs", "s", "fel", "ag", "t", "dex"]; 
+                                return args.type != 'weapon' &&
+                                      !(args.type == 'characteristic' && applicableCharacteristics.includes(args.item)) &&
+                                      !(args.type == 'skill' && applicableCharacteristics.includes(args.item.characteristic.key))`,
+                  activateScript : `let applicableCharacteristics = ["ws", "bs", "s", "fel", "ag", "t", "dex"]; 
+                                    return args.type == 'weapon' || 
+                                            (args.type == 'characteristic' && applicableCharacteristics.includes(args.item)) || 
+                                            (args.type == 'skill' && applicableCharacteristics.includes(args.item.characteristic.key))`
+                }
+              }
+            }]
+          }
+        },
+    },
+  
+    "WFRP4E.Symptom.Convulsions": {
+  name: "Konwulsje",
+  icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+  transfer: true,
+  flags: {
+    wfrp4e: {
+      effectApplication: "actor",
+      effectTrigger: "prefillDialog",
+      symptom: true,
+      script: `
+                        let modifier = 0
+                        if (this.effect.name.includes("Umiarkowany"))
+                            modifier = -20
+                        else
+                            modifier = -10
+                        
+                        let applicableCharacteristics = ["ws", "bs", "s", "ag", "t", "dex"]
+                        if (args.type == "weapon")
+                            args.prefillModifiers.modifier += modifier
+                        else if (args.type == "characteristic") {
+                            if (applicableCharacteristics.includes(args.item))
+                                args.prefillModifiers.modifier += modifier
+                        }
+                        else if (args.type == "skill") {
+                            if (applicableCharacteristics.includes(args.item.characteristic.key))
+                                args.prefillModifiers.modifier += modifier
+                        }`,
+    },
+  },
+},
+"WFRP4E.Symptom.Fever": {
+  name: "Gorączka",
+  icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+  transfer: true,
+  flags: {
+    wfrp4e: {
+      effectApplication: "actor",
+      effectTrigger: "prefillDialog",
+      symptom: true,
+      script: `
+                       
+                    let applicableCharacteristics = ["ws", "bs", "s", "fel", "ag", "t", "dex"]
+    
+                    if (args.type == "weapon")
+                        args.prefillModifiers.modifier -= 10
+                    else if (args.type == "characteristic") {
+                        if (applicableCharacteristics.includes(args.item))
+                            args.prefillModifiers.modifier -= 10
+                    }
+                    else if (args.type == "skill") {
+                        if (applicableCharacteristics.includes(args.item.characteristic.key))
+                            args.prefillModifiers.modifier -= 10
+                    }`,
+      otherEffects: ["blight", "wounded"],
+    },
+  },
+},
+    "WFRP4E.Symptom.Flux": {
+  name: "Biegunka",
+  icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+  transfer: true,
+  flags: {
+    wfrp4e: {
+      symptom: true,
+    },
+  },
+},
+    "WFRP4E.Symptom.Lingering": {
+  name: "Nawroty",
+  icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+  transfer: true,
+  flags: {
+    wfrp4e: {
+      symptom: true,
+    },
+  },
+},
+    "WFRP4E.Symptom.CoughsandSneezes": {
+  name: "Kaszel i katar",
+  icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+  transfer: true,
+  flags: {
+    wfrp4e: {
+      symptom: true,
+    },
+  },
+},
+    "WFRP4E.Symptom.Gangrene": {
+  name: "Gangrena",
+  icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+  transfer: true,
+  flags: {
+    wfrp4e: {
+      effectApplication: "actor",
+      effectTrigger: "prefillDialog",
+      symptom: true,
+      script: `
+                        if (args.type == "characteristic" && args.item == "fel") {
+                            if (args.item == "fel")
+                                args.prefillModifiers.modifier -= 10
+                        }
+                        else if (args.type == "skill") {
+                            if (args.item.characteristic.key == "fel")
+                                args.prefillModifiers.modifier -= 10
+                        }
+                    }`,
+    },
+  },
+},
+    "WFRP4E.Symptom.Malaise": {
+  name: "Apatia",
+  icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+  transfer: true,
+  flags: {
+    wfrp4e: {
+      effectApplication: "actor",
+      effectTrigger: "prepareData",
+      symptom: true,
+      script: `
+                    if (game.user.isUniqueGM) {
+                        let fatigued = args.actor.hasCondition("fatigued")
+                        if (!fatigued) {
+                            args.actor.addCondition("fatigued")
+                            ui.notifications.notify("Stan Zmęczenia dodany do " + args.actor.name + " który nie może zostać usunięty, dopóki symptom Apatii nie zostanie wyleczony.")
+                        }
+                    }
+                    `,
+    },
+  },
+},
+    "WFRP4E.Symptom.Nausea": {
+  name: "Nudności",
+  icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+  transfer: true,
+  flags: {
+    wfrp4e: {
+      effectApplication: "actor",
+      effectTrigger: "rollTest",
+      symptom: true,
+      script: `
+                    if (this.actor.isOwner && args.test.result.outcome == "failure") {
+                        let applicableCharacteristics = ["ws", "bs", "s", "fel", "ag", "t", "dex"]
+                        if (applicableCharacteristics.includes(args.test.characteristicKey))
+                            this.actor.addCondition("stunned")
+                    }
+                    `,
+    },
+  },
+},
+    "WFRP4E.Symptom.Pox": {
+  name: "Wysypka",
+  icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+  transfer: true,
+  flags: {
+    wfrp4e: {
+      effectApplication: "actor",
+      effectTrigger: "prefillDialog",
+      symptom: true,
+      script: `
+                        if (args.type == "characteristic" && args.item == "fel")
+                                args.prefillModifiers.modifier -= 10
+                        else if (args.type == "skill") {
+                            if (args.item.characteristic.key == "fel")
+                                args.prefillModifiers.modifier -= 10
+                        }`,
+    },
+  },
+},
+    "WFRP4E.Symptom.Wounded": {
+  name: "Uciążliwa Rana",
+  icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+  transfer: true,
+  flags: {
+    wfrp4e: {
+      effectApplication: "actor",
+      effectTrigger: "invoke",
+      symptom: true,
+      script: `
+                        if (this.actor.isOwner) {
+                            args.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {absolute: {difficulty : "average"}}).then(async test => {
+                                await test.roll();
+                                if (test.result.outcome == "failure") {
+                                    let disease = await fromUuid("Compendium.wfrp4e-core.diseases.kKccDTGzWzSXCBOb");
+                                    args.actor.createEmbeddedDocuments("Item", [disease.toObject()])
+                                }
+                            });
+                        }`,
+    },
+  },
+},
+};
+
+
+
+
+
   setup() {
     if (game.settings.get("wfrp4e-pl-addons", "customDiseases.Enable")) {
 
