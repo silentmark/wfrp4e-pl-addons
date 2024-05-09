@@ -1,13 +1,8 @@
 export default class SocketTests {
-
-    bindHooks() {
-        Hooks.on("ready", this.#registerSocketTestHacks.bind(this));
-    }
-
       /**
    * On load, replace default setup methods for ActorWfrp4e prototype and register global event listeners
    */
-  #registerSocketTestHacks() {
+  ready() {
     if (game.settings.get("wfrp4e-pl-addons", "socketTests.mode") === 'never') return;
 
     game.wfrp4e.socket.setupSocketTest = async function(payload) {
@@ -36,7 +31,7 @@ export default class SocketTests {
 
     Reflect.defineProperty(ActorWfrp4e.prototype, "_setupSocketTest", { value:
         async function (dialogData, dialogClassName) {
-            const isSocketTest = game.modules.get(constants.moduleId).api.socketTests.isSocketTest();
+            const isSocketTest = SocketTests.isSocketTest();
             let owner = game.wfrp4e.utility.getActiveDocumentOwner(this);
             if (owner.id != game.user.id && isSocketTest) {
                 owner.updateTokenTargets([]);
@@ -206,9 +201,9 @@ export default class SocketTests {
     });
   }
 
-  isSocketTest() {
+  static isSocketTest() {
     const socketTestMode = game.settings.get("wfrp4e-pl-addons", "socketTests.mode");
-    const isControl = game.keyboard.isModifierActive(KeyboardManager.CONTROL_KEY_STRING);
+    const isControl = game.keyboard.isModifierActive('Control');
 
     if (socketTestMode === 'always' && !isControl) {
       return true;

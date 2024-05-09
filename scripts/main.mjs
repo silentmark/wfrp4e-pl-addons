@@ -67,6 +67,7 @@ class Main {
 
     ready() {
         this.armoury.ready();
+        this.socketTests.ready();
     }
 }
 
@@ -285,7 +286,7 @@ Hooks.once("init", () => {
         name: 'wfrp4epladdon.socketTests.Mode',
         hint: 'wfrp4epladdon.socketTests.ModeHint',
         scope: 'world',
-        config: false,
+        config: true,
         default: 'onKeyPress',
         type: String,
         choices: {
