@@ -133,12 +133,18 @@ export default class AutoOutnumbered {
           }
   
           const talent = targetToken.actor.itemTypes["talent"].find(x => x.name == game.i18n.localize("NAME.CombatMaster"));
-          if(talent?.length > 0) {
+          if(talent) {
             outnumbering -= talent.advances * targetSizeNum;
-            tooltips.push(game.i18n.localize("NAME.CombatMaster"))
+            tooltip += ", " + game.i18n.localize("NAME.CombatMaster") + " (" + talent.advances + ")";
           }
+          const vampireGift = targetToken.actor.itemTypes["talent"].find(x => x.name == game.i18n.localize("Samotny Rycerz"));
+          if (vampireGift) {
+            outnumbering = targetSizeNum;
+            tooltip = "Przewaga Liczebna: brak, przeciwnik to Samotny Rycerz";
+          }
+
           outnumbering = Math.floor(outnumbering / targetSizeNum) - 1;
-          if (outnumbering > 0) {
+          if (outnumbering >= 0) {
             const outnumberFinalModifier = Math.min(outnumbering * outnumberingModifier, maxOutnumberingMultiplier * outnumberingModifier);
             let newScript = new WFRP4eScript({
               script: 'args.prefillModifiers.modifier += ' + outnumberFinalModifier,

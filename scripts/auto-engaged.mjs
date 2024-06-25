@@ -119,7 +119,6 @@ export default class AutoEngaged {
           }
       });
 
-
       Hooks.on('wfrp4e:rollWeaponTest', (test, cardOptions) => {
         if (test.item.attackType == "melee" && test.context.targets?.length > 0) {
           const tokens = test.context.targets.map(t => game.wfrp4e.utility.getToken(t));
@@ -127,12 +126,10 @@ export default class AutoEngaged {
           if (game.user.isGM) {
             tokens.forEach(t => t.actor.addCondition("engaged"));
           } else {
-            tokens.forEach(t => game.wfrp4e.socket.executeOnOwner(this, "addCondition", {condition: "engaged", actorId: t.actor.id}));
+            tokens.forEach(t => game.wfrp4e.socket.executeOnOwner(t.actor, "addCondition", {condition: "engaged", actorId: t.actor.id}));
           }
         }
       });
-
-
 
       Hooks.on('wfrp4e:rollTraitTest', (test, cardOptions) => {
         if (test.item.attackType == "melee" && test.context.targets?.length > 0) {
@@ -141,7 +138,7 @@ export default class AutoEngaged {
           if (game.user.isGM) {
             tokens.forEach(t => t.actor.addCondition("engaged"));
           } else {        
-            tokens.forEach(t => game.wfrp4e.socket.executeOnOwner(this, "addCondition", {condition: "engaged", actorId: t.actor.id}));
+            tokens.forEach(t => game.wfrp4e.socket.executeOnOwner(t.actor, "addCondition", {condition: "engaged", actorId: t.actor.id}));
           }
         }
       });
