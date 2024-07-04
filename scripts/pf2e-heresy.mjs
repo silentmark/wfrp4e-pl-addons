@@ -2,6 +2,50 @@ export default class PF2eHeresy {
 
     setup() {
         if (game.settings.get("wfrp4e-pl-addons", "pf2eHeresy.Enable")) {
+
+            Reflect.defineProperty(ActorWfrp4e.prototype, 'showDualWielding', { value: 
+                function(weapon) {
+                    if (!weapon.offhand.value) {
+                      return !this.noOffhand
+                    }
+                    return false;
+                  }
+            });
+
+            Reflect.defineProperty(WeaponDialog.prototype, 'computeAmbidextrous', { value:
+                function () {
+                    if (this.actor.flags.ambi) {
+                        const ambiMod = Math.min(20, this.actor.flags.ambi * 10)
+                        this.fields.modifier += ambiMod;
+                        this.tooltips.addModifier(ambiMod, game.i18n.localize("NAME.Ambi"));
+                    }
+                }
+            })
+
+            const dualwielder = {
+                name: game.i18n.localize("EFFECT.DualWielder"),
+                icon: "modules/wfrp4e-core/icons/talents/dual-wielder.png",
+                statuses : ["dualwielder"],
+                flags : {
+                    wfrp4e : {
+                        applicationData : {},
+                        scriptData : [
+                            {
+                                label : game.i18n.localize("EFFECT.DualWielder"),
+                                trigger : "dialog",
+                                script : `args.prefillModifiers.modifier += 10`,
+                                options : {
+                                    dialog : {
+                                        hideScript : `return !args.item?.system.attackType || !this.actor.hasCondition('multiattacks') || !this.actor.has(game.i18n.localize("NAME.DualWielder"), "talent")`,
+                                        activateScript : `return args.item?.system.attackType && this.actor.hasCondition('multiattacks') && this.actor.has(game.i18n.localize("NAME.DualWielder"), "talent")`
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+
             const multiattacks = {
                 icon: "modules/wfrp4e-pl-addons/icons/multiattacks.png", 
                 id: "multiattacks", 
@@ -109,6 +153,8 @@ export default class PF2eHeresy {
 
                     game.wfrp4e.config.statusEffects.splice(9, 0, defensive);
                     game.wfrp4e.config.conditions.defensive = "Pozycja obronna";
+
+                    game.wfrp4e.config.systemEffects.dualwielder = dualwielder;
 
                     game.wfrp4e.config.conditionDescriptions['multispell'] = "<b>Wielokrotne Czarowanie</b>: Postać ma w swojej Turze standarodowo 3 akcje. Rzucenie zaklęcia kosztuje liczbę akcji zależną od PZ Zaklęcia. Zaklęcia magii prostej kosztują 1 akcję. Zaklęcia magii tajemnej: zależy od PZ oraz Bonusu z siły woli. Rzucenie zaklęcia o PZ poniżej BSW kosztuje 1 akcje, rzucenie zaklęcia powyżej BSW kosztuje 2 akcje, rzucenie zaklęcia o PZ powyżej 2x BSW kosztuje 3 akcje. Każde kolejne rzucenie czaru w danej turze zwiększa o +50 (kumulatywnie) wynik na ewentualny rzut na tabelę manifestacji. ";
                     
