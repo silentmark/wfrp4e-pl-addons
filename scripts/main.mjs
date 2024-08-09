@@ -13,6 +13,7 @@ import AutoMiss from './auto-miss.mjs';
 import PF2eHeresy from './pf2e-heresy.mjs';
 import Diseases from './diseases.mjs';
 import SocketTests from './socket-tests.mjs';
+import VariousExtensions from './various-extensions.mjs'
 
 class Main {
     constructor() {
@@ -30,6 +31,7 @@ class Main {
         this.pf2eHeresy = new PF2eHeresy();
         this.diseases = new Diseases();
         this.socketTests = new SocketTests();
+        this.variousExtensions = new VariousExtensions();
 
         this.customPrefillModifiers = {};
     }
@@ -63,6 +65,7 @@ class Main {
         this.autoMiss.setup();
         this.pf2eHeresy.setup();
         this.diseases.setup();
+        this.variousExtensions.setup();
     }
 
     ready() {
@@ -295,6 +298,20 @@ Hooks.once("init", () => {
         'never': 'wfrp4epladdon.socketTests.Never',
         }
     });
+    
+    game.settings.register("wfrp4e", "templateCollisionMethod", {
+        name: `SETTINGS.templateCollisionMethod`,
+        hint: `SETTINGS.templateCollisionMethodHint`,
+        scope: 'world',
+        config: true,
+        type: String,
+        choices: {
+          "centerPoint": "SETTINGS.templateCollisionCenterPoint",
+          "grid": "SETTINGS.templateCollisionGrid",
+          "area": "SETTINGS.templateCollisionArea"
+        },
+    });
+  
 });
 
 export default Main;

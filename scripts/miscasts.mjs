@@ -2,6 +2,21 @@ export default class Miscasts {
 
   setup() {
     if (game.settings.get("wfrp4e-pl-addons", "alternativeMiscasts.Enable")) {
+      Hooks.on("renderChatMessage", async (app, html, messageData) => {
+        if (!app.getTest) {
+          return;
+        }
+
+        let castTest = app.getTest();
+        if (castTest?.result?.mis) {
+          jQuery(html)
+          .find(".card-content")
+          .append(
+            jQuery(`<a class ="table-click fumble-roll" data-tooltip="${castTest.result.tooltips.miscast}" data-modifier="${castTest.result.miscastModifier}" data-table="${castTest.result.miscastTable}"><i class="fas fa-list"></i> ${castTest.result.mis}</a>`));
+        }
+      });
+
+
       Reflect.defineProperty(TestWFRP.prototype, '_handleMiscasts', { value:
         function(miscastCounter)  {
             const maxRandom = 25;
@@ -35,11 +50,19 @@ export default class Miscasts {
                   modifier = 0;
                 }
               }
-              let spellCn = Math.max(Number.parseInt(this.item.cn.SL), Number.parseInt(this.item.cn.value)) * 3;
-              console.log("Modyfikator z Punktów Zaklęcia: " + spellCn);
-              this.result.tooltips.miscast.push("Modyfikator z Punktów Zaklęcia: " + spellCn);
-              globalModifier += spellCn;
-              
+
+              if (this.item.system.ritual.value) {
+                let spellCn = Math.floor(Math.max(Number.parseInt(this.item.cn.SL), Number.parseInt(this.item.cn.value)) / 3);
+                console.log("Modyfikator z Punktów Rytuału: " + spellCn);
+                this.result.tooltips.miscast.push("Modyfikator z Punktów Rytuału: " + spellCn);
+                globalModifier += spellCn;
+              } else {
+                let spellCn = Math.max(Number.parseInt(this.item.cn.SL), Number.parseInt(this.item.cn.value)) * 3;
+                console.log("Modyfikator z Punktów Zaklęcia: " + spellCn);
+                this.result.tooltips.miscast.push("Modyfikator z Punktów Zaklęcia: " + spellCn);
+                globalModifier += spellCn;
+              }
+
               if (!this.item.system.memorized.value) {
                 let random = Math.floor(Math.random() * maxRandom) + 50;
                 console.log("Modyfikator z Księgi Zaklęć: " + random);

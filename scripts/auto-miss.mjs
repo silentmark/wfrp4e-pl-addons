@@ -5,7 +5,79 @@ export default class AutoMiss {
   processedMessages = [];
 
   setup() {
-    if (game.modules.get("tokencover")?.active && game.settings.get("wfrp4e-pl-addons", "autoMiss.Enabled")) {
+    if (game.modules.get("levelsautocover")?.active && game.settings.get("wfrp4e-pl-addons", "autoMiss.Enabled")) {
+
+
+      const duckEffectData = {
+        "name": "Kucanie",
+        "duration": {
+          "seconds": 99999
+        },
+        "img": "/modules/wfrp4e-pl-addons/icons/ducking.png",
+        "tint": "#ffffff",
+        "flags": {
+          "wfrp4e": {
+            "ducking": true,
+            "applicationData": {
+              "type": "document",
+              "documentType": "Actor",
+            },
+            "scriptData": [
+              {
+                "label": "Kucanie",
+                "script": "args.fields.modifier -= 20;",
+                "trigger": "dialog",
+                "options": {
+                  "dialog": {
+                    "hideScript": "return ![\"ws\", \"bs\", \"s\", \"ag\", \"t\", \"dex\"].includes(args.characteristic)",
+                    "activateScript": "return [\"ws\", \"bs\", \"s\", \"ag\", \"t\", \"dex\"].includes(args.characteristic)",
+                    "submissionScript": "",
+                    "targeter": false
+                  }
+                }
+              }
+            ]
+          }
+        }
+      };
+
+      Hooks.on("renderTokenHUD", (data, hud, drawData) => {
+        let token = data.object.document;
+            let active = token.getFlag("wfrp4e-pl-addons", "ducking") || false;
+            let toggleDuckbtn = `
+                    <div class="control-icon${ active ? " active" : ""}" id="toggleDuck">
+                      <img src="/modules/wfrp4e-pl-addons/icons/ducking.png" width="36" height="36" title='Kucnij'></i>
+                    </div>`;
+            const controlIcons = hud.find("div.control-icon");
+            controlIcons.last().after(toggleDuckbtn);
+            $(hud.find(`div[id="toggleDuck"]`)).on("click", toggDuck);
+
+            async function toggDuck() {
+              active = !active;
+              await token.setFlag("wfrp4e-pl-addons", "ducking", !(token.getFlag("wfrp4e-pl-addons", "ducking") || false));
+
+              let hudbtn = hud.find(`div[id="toggleDuck"]`);
+              if (active) {
+                hudbtn.addClass("active");
+                await token.setFlag('wall-height', 'tokenHeight', parseInt(token.actor.details.height.value) / 250);
+                let e = token.actor.effects.find(x=>x.flags?.wfrp4e.ducking);
+                if (!e) {
+                  await token.actor.createEmbeddedDocuments("ActiveEffect", [duckEffectData]);
+                }
+              }
+              else {
+                hudbtn.removeClass("active");
+                await token.setFlag('wall-height', 'tokenHeight', parseInt(token.actor.details.height.value) / 100);
+                let e = token.actor.effects.find(x=>x.flags?.wfrp4e.ducking);
+                if (e) {
+                  await token.actor.deleteEmbeddedDocuments("ActiveEffect", [e.id]);
+                }
+              }
+              if (data.object?.id) {
+                canvas.tokens.get(data.object.id)?.updateSource()
+              }
+            }
+      });
 
       Hooks.on("renderChatMessage", async (app, html, messageData) => {
         if (!game.user.isGM || !app.getTest) {
@@ -80,14 +152,9 @@ export default class AutoMiss {
           const shooter = test.actor.getActiveTokens()[0];
           const target = game.canvas.tokens.get(test.context.targets[0].token);
 
-          const coverClass = game.modules.get("tokencover").api.CoverCalculator
-          const cover = new coverClass(shooter, target);
+          const cover = AutoCover.calculateCover(shooter, target, {apiMode: true});
 
-          let tokens = [];
-          const blockingObjects = cover.calc.blockingObjects.tokens;
-          if (blockingObjects.size > 0) {      
-            tokens = Array.from(blockingObjects);
-          }
+          let tokens = cover.obstructingTokens;
 
           if ((test.result.roll - test.result.target) <= 20) {
             if (tokens.length > 0 &&  Math.random() < 0.5) {

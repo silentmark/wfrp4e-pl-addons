@@ -6,10 +6,10 @@ export default class SocketTests {
     if (game.settings.get("wfrp4e-pl-addons", "socketTests.mode") === 'never') return;
 
     game.wfrp4e.socket.setupSocketTest = async function(payload) {
-        let dialogData = payload.dialogData;
+        let dialogData = foundry.utils.deepClone(payload.dialogData);
         let dialogClass = eval(payload.dialogClassName);
         let actorId = payload.actorId; 
-        let messageId = payload.messageId;
+        let messageId = payload.socketMessageId;
         let actor = game.actors.get(actorId);
         let owner = game.wfrp4e.utility.getActiveDocumentOwner(actor);
         if (owner.id == game.user.id) {
@@ -19,13 +19,7 @@ export default class SocketTests {
                 }
             }
             let test = await actor._setupTest(dialogData, dialogClass);
-            let message = game.messages.get(messageId);
-            if (test) {
-                return test.data;
-            } else {
-                await message.delete();
-                return null;
-            }
+            return test?.data;
         }
     }
 

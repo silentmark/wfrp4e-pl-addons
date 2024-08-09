@@ -135,8 +135,19 @@ export default class PF2eHeresy {
             };
 
             Hooks.on("createToken", async (token, data, user) => {
+                if (!game.user.isGM) return;
+                
                 if (game.canvas.grid.type == CONST.GRID_TYPES.GRIDLESS) {
-                    await token.update({texture: {src: token.actor.img}});
+                    if (token.actor.getFlag("wfrp4e", "oldTexture") == undefined) {
+                        let oldTexture = token.actor.prototypeToken.texture.src;
+                        await token.actor.setFlag("wfrp4e", "oldTexture", oldTexture);
+                    }
+                    setTimeout(() => token.update({texture: {src: token.actor.img}}), 500);
+                } else {
+                    let oldTexture = token.actor.getFlag("wfrp4e", "oldTexture");
+                    if (oldTexture) {
+                        setTimeout(() => token.update({texture: {src: oldTexture}}), 500);
+                    }
                 }
             });
 
@@ -155,6 +166,7 @@ export default class PF2eHeresy {
                     game.wfrp4e.config.conditions.defensive = "Pozycja obronna";
 
                     game.wfrp4e.config.systemEffects.dualwielder = dualwielder;
+                    delete game.wfrp4e.config.systemItems.defensive;
 
                     game.wfrp4e.config.conditionDescriptions['multispell'] = "<b>Wielokrotne Czarowanie</b>: Postać ma w swojej Turze standarodowo 3 akcje. Rzucenie zaklęcia kosztuje liczbę akcji zależną od PZ Zaklęcia. Zaklęcia magii prostej kosztują 1 akcję. Zaklęcia magii tajemnej: zależy od PZ oraz Bonusu z siły woli. Rzucenie zaklęcia o PZ poniżej BSW kosztuje 1 akcje, rzucenie zaklęcia powyżej BSW kosztuje 2 akcje, rzucenie zaklęcia o PZ powyżej 2x BSW kosztuje 3 akcje. Każde kolejne rzucenie czaru w danej turze zwiększa o +50 (kumulatywnie) wynik na ewentualny rzut na tabelę manifestacji. ";
                     
@@ -164,6 +176,358 @@ export default class PF2eHeresy {
 
                     game.wfrp4e.config.conditionDescriptions['defensive'] = "<b>Pozycja obronna</b>: 1 akcja, zapewnia +20 do następnej tury podczas obrony. Jeśli postać ma Tarczę, jej punkty pancerza liczą się wyłącznie jeśli postać wykorzysta tę akcję. Dodatkowo, jeśli postać ma Tarczę, korzystając z tej akcji może blokować ataki dystansowe, które są wymierzone na wprost w nią."
                     
+
+                    const bleeding = game.wfrp4e.config.statusEffects.find(x => x.id == "bleeding");
+                    bleeding.flags.wfrp4e.applicationData.conditionTrigger = "startTurn";
+                    bleeding.flags.wfrp4e.scriptData[0].script = `
+                                        let actor = this.actor;
+                                        let effect = this.effect;
+                                        let bleedingAmt;
+                                        let bleedingRoll;
+                                        let msg = ""
+            
+                                        let damage = effect.conditionValue;
+                                        let scriptArgs = {msg, damage};
+                                        await Promise.all(actor.runScripts("preApplyCondition", {effect, data : scriptArgs}))
+                                        msg = scriptArgs.msg;
+                                        damage = scriptArgs.damage;
+                                        msg += await actor.applyBasicDamage(damage, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL, minimumOne : false, suppressMsg : true})
+            
+                                        if (actor.status.wounds.value == 0 && !actor.hasCondition("unconscious"))
+                                        {
+                                            let test = await actor.setupSkill(game.i18n.localize("NAME.Endurance"));
+                                            await test.roll();
+                                            if (test.result.outcome == "failure")
+                                            {
+                                                await actor.addCondition("unconscious")
+                                                msg += "<br>" + game.i18n.format("BleedUnc", {name: actor.prototypeToken.name })
+                                            }
+                                        }
+            
+                                        if (actor.hasCondition("unconscious"))
+                                        {
+                                            bleedingAmt = effect.conditionValue;
+                                            bleedingRoll = (await new Roll("1d100").roll()).total;
+                                            if (bleedingRoll <= bleedingAmt * 10)
+                                            {
+                                                msg += "<br>" + game.i18n.format("BleedFail", {name: actor.prototypeToken.name}) + " (" + game.i18n.localize("Rolled") + " " + bleedingRoll + ")";
+                                                await actor.addCondition("dead")
+                                            }
+                                            else if (bleedingRoll % 11 == 0)
+                                            {
+                                                msg += "<br>" + game.i18n.format("BleedCrit", { name: actor.prototypeToken.name } ) + " (" + game.i18n.localize("Rolled") + bleedingRoll + ")"
+                                                await actor.removeCondition("bleeding")
+                                            }
+                                            else
+                                            {
+                                                msg += "<br>" + game.i18n.localize("BleedRoll") + ": " + bleedingRoll;
+                                            }
+                                        }
+            
+                                        await Promise.all(actor.runScripts("applyCondition", {effect, data : {bleedingRoll}}))
+                                        if (args.suppressMessage)
+                                        {
+                                            let messageData = game.wfrp4e.utility.chatDataSetup(msg);
+                                            messageData.speaker = {alias: this.effect.name}
+                                            messageData.flavor = this.effect.name;
+                                            return messageData
+                                        }
+                                        else
+                                        {
+                                            return this.script.scriptMessage(msg)
+                                        }
+                                        `
+
+                    const poisoned = game.wfrp4e.config.statusEffects.find(x => x.id == "poisoned");
+                    poisoned.flags.wfrp4e.applicationData.conditionTrigger = "startTurn";
+                    poisoned.flags.wfrp4e.scriptData = [
+                        {
+                            trigger: "manual",
+                            label : "Zatrucie - Obrażenia",
+                            script : `
+                            let actor = this.actor;
+                            let effect = this.effect;
+                            let msg = ""
+
+                            let damage = effect.conditionValue;
+                            let scriptArgs = {msg, damage};
+
+                            await Promise.all(actor.runScripts("preApplyCondition", {effect, data : scriptArgs}))
+                            
+                            msg = scriptArgs.msg;
+                            damage = scriptArgs.damage;
+                            msg += await actor.applyBasicDamage(damage, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL, suppressMsg : true})
+                            
+                            await Promise.all(actor.runScripts("applyCondition", {effect}))
+
+                            if (args.suppressMessage)
+                            {
+                                let messageData = game.wfrp4e.utility.chatDataSetup(msg);
+                                messageData.speaker = {alias: this.effect.name}
+                                return messageData
+                            }
+                            else
+                            {
+                                return this.script.scriptMessage(msg)
+                            }
+                            `
+                        },
+                        {
+                            trigger: "manual",
+                            label : "Zatrucie - Odporność",
+                            script : `
+                            let actor = this.actor;
+                            let effect = this.effect;
+                            let msg = ""
+                            let test = await actor.setupSkill(game.i18n.localize("NAME.Endurance"), {appendTitle : " - Zatrucie"})
+                            await test.roll();
+                            if (test.result.outcome == "success")
+                            {
+                                await actor.removeCondition("poisoned", Math.min(test.result.SL, effect.conditionValue));
+                                msg += "<br/>Liczba usuniętych stanów Zatrucia: " + Math.min(test.result.SL, effect.conditionValue);
+                            }
+                            else
+                            {
+                                msg += "<br/>Nie udało się usunąć stanu Zatrucia";
+                            }
+
+                            if (args.suppressMessage)
+                            {
+                                let messageData = game.wfrp4e.utility.chatDataSetup(msg);
+                                messageData.speaker = {alias: this.effect.name}
+                                return messageData
+                            }
+                            else
+                            {
+                                return this.script.scriptMessage(msg)
+                            }
+                            `
+                        },
+                        {
+                            trigger: "dialog",
+                            label : "Zatrucie",
+                            script : `args.fields.modifier -= 10 * this.effect.conditionValue`,
+                            options : {
+                                dialog : {
+                                    activateScript : "return true"
+                                }
+                            }
+                        }
+                    ]
+
+                    const ablaze = game.wfrp4e.config.statusEffects.find(x => x.id == "ablaze");
+                    ablaze.flags.wfrp4e.applicationData.conditionTrigger = "startTurn";
+
+                    const stunned = game.wfrp4e.config.statusEffects.find(x => x.id == "stunned");
+                    stunned.flags.wfrp4e = {
+                        value: 1,
+                        applicationData : {
+                            conditionTrigger : "startTurn"
+                        },
+                        scriptData: [
+                            {
+                                trigger: "manual", 
+                                label: "Oszołomienie - Odporność", 
+                                script: `
+                                let actor = this.actor;
+                                let effect = this.effect;
+                                let msg = "<h2>" + game.i18n.localize("WFRP4E.ConditionName.Stunned") + "</h2>"
+                                
+                                let conditionValue = effect.conditionValue;
+                                let damage = effect.conditionValue;
+                                let scriptArgs = {msg, damage};
+                                await Promise.all(actor.runScripts("preApplyCondition", {effect, data : scriptArgs}))
+                                
+                                let test = await actor.setupSkill(game.i18n.localize("NAME.Endurance"), {appendTitle : " - Oszołomienie"})
+                                await test.roll();
+                                if (test.result.outcome == "success")
+                                {
+                                    await actor.removeCondition("stunned", Math.min(test.result.SL, conditionValue));
+                                    msg += "Liczba usuniętych stanów Oszołomienia: " + Math.min(test.result.SL, conditionValue);
+                                }
+                                else
+                                {
+                                    msg += "Nie udało się usunąć stanu Oszołomienia";
+                                }
+                                let messageData = game.wfrp4e.utility.chatDataSetup(msg);
+                                messageData.speaker = {alias: actor.prototypeToken.name}
+                                await Promise.all(actor.runScripts("applyCondition", {effect, data : {messageData}}))
+                                if (args.suppressMessage)
+                                {
+                                    let messageData = game.wfrp4e.utility.chatDataSetup(msg);
+                                    messageData.speaker = {alias: this.actor.prototypeToken.name}
+                                    messageData.flavor = this.effect.name
+                                    return messageData
+                                }
+                                else
+                                {
+                                    return this.script.scriptMessage(msg)
+                                }
+                                `
+                            },
+                            {
+                                trigger: "dialog",
+                                label : "Kara do wszystkich testów (Oszołomienie)",
+                                script : `args.fields.modifier -= 10 * this.effect.conditionValue`,
+                                options : {
+                                    dialog : {
+                                        activateScript : "return true"
+                                    }
+                                }
+                            },
+                            {
+                                trigger: "dialog",
+                                label : "Oszołomienie - Bonus do testów Ataku",
+                                script : `args.fields.slBonus += 1`,
+                                options : {
+                                    dialog : {
+                                        hideScript : "return args.item?.system.attackType != 'melee'",
+                                        activateScript : "return args.item?.system.attackType == 'melee'",
+                                        targeter: true
+                                    }
+                                }
+                            }
+                        ]
+                    }
+
+                    const entangled = game.wfrp4e.config.statusEffects.find(x => x.id == "entangled");
+                    entangled.flags.wfrp4e = {
+                        value: 1,  
+                        trigger: "startTurn",
+                        applicationData : {
+                            conditionTrigger : "startTurn"
+                        },
+                        scriptData: [
+                            {
+                                trigger: "manual",
+                                label: "Pochwycenie",
+                                script: `
+                                    let actor = this.actor;
+                                    let effect = this.effect;
+                                    let msg = "<h2>Pochwycenie</h2>";
+    
+                                    let conditionValue = effect.conditionValue;
+                                    let conditionStrength = effect.flags.wfrp4e.extra;
+                                    let scriptArgs = {msg, conditionValue, conditionStrength};
+                                    await Promise.all(actor.runScripts("preApplyCondition", {effect, data : scriptArgs}))
+                                    let test = await actor.setupCharacteristic("s", {appendTitle : " - Pochwycenie vs " + conditionStrength})
+                                    await test.roll();
+                                    if (conditionStrength) 
+                                    {
+                                        const roll = await new Roll("1d100").roll();
+                                        await game.dice3d.showForRoll(roll, game.user, true, null, false);
+                                        const opponentSl = Math.floor(Number.parseInt(conditionStrength) / 10) - Math.floor(roll.total/ 10);
+                                        if (test.result.SL - opponentSl > 0)
+                                        {
+                                            await actor.removeCondition("entangled", Math.min(test.result.SL - opponentSl, conditionValue));
+                                            msg += "Punkty sukcesu z Testu Przeciwstawnego: " + opponentSl + " (" + roll.total + " vs " + conditionStrength + ")<br/>";
+                                            msg += "Liczba usuniętych stanów Pochwycenie: " + Math.min(test.result.SL - opponentSl, conditionValue);
+                                        } 
+                                        else 
+                                        {
+                                            msg += "Punkty sukcesu z Testu Przeciwstawnego: " + opponentSl + " (" + roll.total + " vs " + conditionStrength + ")<br/>";
+                                            msg += "Nie udało się usunąć stanu Pochwycenie";
+                                        }
+                                    } 
+                                    else 
+                                    {
+                                        if (test.result.outcome == "success") 
+                                        {
+                                            await actor.removeCondition("entangled", Math.min(test.result.SL, conditionValue));
+                                            msg += "Liczba usuniętych stanów Pochwycenie: " + Math.min(test.result.SL, conditionValue);
+                                        }
+                                        else 
+                                        {
+                                            msg += "Nie udało się usunąć stanu Pochwycenie";
+                                        }
+                                    }
+                                    let messageData = game.wfrp4e.utility.chatDataSetup(msg);
+                                    messageData.speaker = {alias: actor.prototypeToken.name}
+                                    await Promise.all(actor.runScripts("applyCondition", {effect, data : {messageData}}))
+                                    if (args.suppressMessage)
+                                    {
+                                        let messageData = game.wfrp4e.utility.chatDataSetup(msg);
+                                        messageData.speaker = {alias: this.actor.prototypeToken.name}
+                                        messageData.flavor = this.effect.name
+                                        return messageData
+                                    }
+                                    else
+                                    {
+                                        return this.script.scriptMessage(msg)
+                                    }
+                                `
+                            },
+                            {
+                                trigger: "dialog",
+                                label : "Pochwycenie - Testy związane z ruchem",
+                                script : `args.fields.modifier -= 10 * this.effect.conditionValue`,
+                                options : {
+                                    dialog : {
+                                        activateScript : "return ['ws', 'bs', 'ag'].includes(args.characteristic)"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+
+                    const broken = game.wfrp4e.config.statusEffects.find(x => x.id == "broken");
+                    broken.flags.wfrp4e =  {
+                        value: 1,
+                        applicationData : {
+                            conditionTrigger : "startTurn"
+                        },
+                        scriptData: [
+                            {
+                                trigger: "manual",
+                                label: "Panika",
+                                script: 
+                                `
+                                    let actor = this.actor;
+                                    let effect = this.effect;
+                                    let msg = "<h2>" + game.i18n.localize("WFRP4E.ConditionName.Broken") + "</h2>";
+                                    let conditionValue = effect.conditionValue;
+                                    let scriptArgs = {msg, conditionValue};
+                                    await Promise.all(actor.runScripts("preApplyCondition", {effect, data : scriptArgs}))
+                                    let test = await actor.setupSkill(game.i18n.localize("NAME.Cool"), {appendTitle : " - Panika"})
+                                    await test.roll();
+                                    if (test.result.outcome == "success")
+                                    {
+                                        await actor.removeCondition("broken", Math.min(test.result.SL, conditionValue));
+                                        msg += "Liczba usuniętych stanów Paniki: " + Math.min(test.result.SL, conditionValue);
+                                    }
+                                    else
+                                    {
+                                        msg += "Nie udało się usunąć stanu Paniki";
+                                    }
+                                    let messageData = game.wfrp4e.utility.chatDataSetup(msg);
+                                    messageData.speaker = {alias: actor.prototypeToken.name}
+                                    await Promise.all(actor.runScripts("applyCondition", {effect, data : {messageData}}))
+                                    if (args.suppressMessage)
+                                    {
+                                        let messageData = game.wfrp4e.utility.chatDataSetup(msg);
+                                        messageData.speaker = {alias: this.actor.prototypeToken.name}
+                                        messageData.flavor = this.effect.name
+                                        return messageData
+                                    }
+                                    else
+                                    {
+                                        return this.script.scriptMessage(msg)
+                                    }
+                                `
+                            },
+                            {
+                                trigger: "dialog",
+                                label : "Panika - Wszystkie testy nie związane z ucieczką i ukrywaniem się.",
+                                script : `args.fields.modifier -= 10 * this.effect.conditionValue`,
+                                options : {
+                                    dialog : {
+                                        activateScript : "return !args.skill?.name?.includes(game.i18n.localize('NAME.Stealth')) && args.skill?.name != game.i18n.localize('NAME.Athletics')"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+
                 }, 10000);
                 let f = async function(combat, combatant) {
                     await combatant.actor.removeCondition("multiattacks", 99);

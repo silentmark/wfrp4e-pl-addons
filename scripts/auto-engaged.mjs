@@ -16,6 +16,7 @@ export default class AutoEngaged {
         if (game.user.isGM) {
             if (data.x > 0 || data.y > 0) {
               let token = game.canvas.tokens.get(tokenDocument.id);
+              if (!token || !token.hitArea) return;
 
               let originalTokenX = token.x;
               let originalTokenY = token.y;
