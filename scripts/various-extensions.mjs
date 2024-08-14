@@ -9,7 +9,24 @@ export default class VariousExtensions {
 
         Reflect.defineProperty(WeaponTest.prototype, 'postTest', { value:
             async function () {
-                await super.postTest();
+                if (this.result.critical && this.item.properties?.qualities.warpstone) {
+                    this.result.other.push(`@Corruption[minor]{Minor Exposure to Corruption}`)
+                }
+
+                if (this.options.corruption) {
+                    await this.handleCorruptionResult();
+                }
+                if (this.options.mutate) {
+                    await this.handleMutationResult()
+                }
+            
+                if (this.options.extended) {
+                    await this.handleExtendedTest()
+                }
+            
+                if (this.options.income) {
+                    await this.handleIncomeTest()
+                }
                 await this.handleAmmo();
             }
         });
@@ -253,7 +270,7 @@ export default class VariousExtensions {
         
             // Emit the HTML as a chat message
             chatOptions["content"] = `<h2>Unhandled Promise Rejection</h2><p>${reason}</p><p>${stackTrace}</p>`
-            ChatMessage.create(chatOptions);
+            //ChatMessage.create(chatOptions);
         };
   
         window.oncustomerror = function(customMessage, error) {
@@ -267,7 +284,7 @@ export default class VariousExtensions {
   
             // Emit the HTML as a chat message
             chatOptions["content"] = `<h2>${customMessage}</h2><p>${message}</p><p>${stackTrace}</p>`;
-            ChatMessage.create(chatOptions);
+            //ChatMessage.create(chatOptions);
         }
   
         Hooks.on("error", (location, error, data) => {
