@@ -5,7 +5,7 @@ export default class RerollInitiative {
             Hooks.on("preUpdateCombat", (combat, update, options, userId) => {
                 if (!game.user.isUniqueGM) return;
 
-                const roundUpdate = hasProperty(update, "round");
+                const roundUpdate = foundry.utils.hasProperty(update, "round");
                 if (!roundUpdate) return;
         
                 // If we are not moving forward through the rounds, return
@@ -15,7 +15,7 @@ export default class RerollInitiative {
             });
             
             Hooks.on("updateCombat", async (combat, update, options, userId) => {
-                const shouldReroll = getProperty(options, `wfrp4e-pl-addons.shouldReroll`);        
+                const shouldReroll = foundry.utils.getProperty(options, `wfrp4e-pl-addons.shouldReroll`);        
                 if (!shouldReroll || !game.user.isUniqueGM) return;
         
                 const combatantIds = combat.combatants.map(c => c.id);

@@ -180,7 +180,7 @@ export default class AutoCombat {
                 if (opposeMessage) {
                   let opposedTest = opposeMessage.getOppose();
                   let updateMsg = await opposedTest.defender.applyDamage(opposedTest.resultMessage.getOpposedTest(), game.wfrp4e.config.DAMAGE_TYPE.NORMAL)
-                  await OpposedWFRP.updateOpposedMessage(updateMsg, opposedTest.resultMessage.id);
+                  await game.wfrp4e.opposedHandler.updateOpposedMessage(updateMsg, opposedTest.resultMessage.id);
                 }
               }
             }
@@ -230,7 +230,7 @@ export default class AutoCombat {
                     if (item.attackType != "ranged") {
                       let actor = target.actor;
                       let stuffToUse = [];
-                      let dodge = actor.getItemTypes("skill").find(sk => sk.name == game.i18n.localize("NAME.Dodge"));
+                      let dodge = actor.itemTags["skill"].find(sk => sk.name == game.i18n.localize("NAME.Dodge"));
                       if (dodge) {
                         stuffToUse.push(dodge);
                       }
@@ -277,7 +277,7 @@ export default class AutoCombat {
                       let opposedTest = resultMessage.getOpposedTest();
                       if (opposedTest.opposeResult.winner == "attacker") {
                         updateMsg = await opposedTest.defenderTest.actor.applyDamage(opposedTest, game.wfrp4e.config.DAMAGE_TYPE.NORMAL)
-                        await OpposedWFRP.updateOpposedMessage(updateMsg, resultMessage.id);
+                        await game.wfrp4e.opposedHandler.updateOpposedMessage(updateMsg, resultMessage.id);
                       }
                     } else {
                       if (target.actor?.flags?.wfrp4e?.autoCombat) {
@@ -289,7 +289,7 @@ export default class AutoCombat {
             
                         if (opposedTest.opposeResult.winner == "attacker") { 
                           updateMsg = await opposedTest.defenderTest.actor.applyDamage(opposedTest, game.wfrp4e.config.DAMAGE_TYPE.NORMAL)
-                          await OpposedWFRP.updateOpposedMessage(updateMsg, resultMessage.id);
+                          await game.wfrp4e.opposedHandler.updateOpposedMessage(updateMsg, resultMessage.id);
                         } 
                       }
                     }

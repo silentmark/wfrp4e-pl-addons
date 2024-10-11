@@ -1,11 +1,11 @@
 export default class SocketTests {
       /**
-   * On load, replace default setup methods for ActorWfrp4e prototype and register global event listeners
+   * On load, replace default setup methods for ActorWFRP4e prototype and register global event listeners
    */
   ready() {
     if (game.settings.get("wfrp4e-pl-addons", "socketTests.mode") === 'never') return;
 
-    game.wfrp4e.socket.setupSocketTest = async function(payload) {
+    SocketHandlers.setupSocketTest = async function(payload) {
         let dialogData = foundry.utils.deepClone(payload.dialogData);
         let dialogClass = eval(payload.dialogClassName);
         let actorId = payload.actorId; 
@@ -23,7 +23,7 @@ export default class SocketTests {
         }
     }
 
-    Reflect.defineProperty(ActorWfrp4e.prototype, "_setupSocketTest", { value:
+    Reflect.defineProperty(ActorWFRP4e.prototype, "_setupSocketTest", { value:
         async function (dialogData, dialogClassName) {
             const isSocketTest = SocketTests.isSocketTest();
             let owner = game.wfrp4e.utility.getActiveDocumentOwner(this);
@@ -52,7 +52,7 @@ export default class SocketTests {
                 let msg = await ChatMessage.create(chatData);
         
                 let payload = { dialogData, dialogClassName, userId: game.user.id, actorId: this.id };
-                let testData = await game.wfrp4e.socket.executeOnUserAndWait(owner.id, "setupSocketTest", payload);
+                let testData = await SocketHandlers.executeOnUserAndWait(owner.id, "setupSocketTest", payload);
                 msg.delete();
                 if (testData) {    
                   const test = game.wfrp4e.rolls.TestWFRP.recreate(testData);
@@ -67,7 +67,7 @@ export default class SocketTests {
         }
     });
     
-    Reflect.defineProperty(ActorWfrp4e.prototype, "setupCharacteristic", { value: 
+    Reflect.defineProperty(ActorWFRP4e.prototype, "setupCharacteristic", { value: 
         async function (characteristic, options = {}) {
             let dialogData = {
               fields : options.fields || {},
@@ -82,7 +82,7 @@ export default class SocketTests {
           }
     });
 
-    Reflect.defineProperty(ActorWfrp4e.prototype, "setupWeapon", { value:
+    Reflect.defineProperty(ActorWFRP4e.prototype, "setupWeapon", { value:
         async function(weapon, options = {}) {
             let dialogData = {
               fields : options.fields || {},
@@ -97,7 +97,7 @@ export default class SocketTests {
           }
     });
     
-    Reflect.defineProperty(ActorWfrp4e.prototype, "setupSkill", { value:
+    Reflect.defineProperty(ActorWFRP4e.prototype, "setupSkill", { value:
         async function(skill, options = {}) {
             if (typeof (skill) === "string") {
               let skillName = skill
@@ -132,7 +132,7 @@ export default class SocketTests {
         }
     });
     
-    Reflect.defineProperty(ActorWfrp4e.prototype, "setupCast", { value:
+    Reflect.defineProperty(ActorWFRP4e.prototype, "setupCast", { value:
         async function(spell, options = {}) {
 
             let dialogData = {
@@ -148,7 +148,7 @@ export default class SocketTests {
           }
     });
     
-    Reflect.defineProperty(ActorWfrp4e.prototype, "setupChannell", { value:
+    Reflect.defineProperty(ActorWFRP4e.prototype, "setupChannell", { value:
         async function(spell, options = {}) {
             let dialogData = {
               fields : options.fields || {},
@@ -163,7 +163,7 @@ export default class SocketTests {
           }
     });
     
-    Reflect.defineProperty(ActorWfrp4e.prototype, "setupPrayer", { value:
+    Reflect.defineProperty(ActorWFRP4e.prototype, "setupPrayer", { value:
         async function(prayer, options = {}) {
             let dialogData = {
               fields : options.fields || {},
@@ -179,7 +179,7 @@ export default class SocketTests {
     });
 
     
-    Reflect.defineProperty(ActorWfrp4e.prototype, "setupTrait", { value:
+    Reflect.defineProperty(ActorWFRP4e.prototype, "setupTrait", { value:
         async function(trait, options = {}) {
             let dialogData = {
               fields : options.fields || {},

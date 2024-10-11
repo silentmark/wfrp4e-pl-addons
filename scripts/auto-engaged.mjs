@@ -2,7 +2,7 @@ export default class AutoEngaged {
 
   setup() {
     if (game.settings.get("wfrp4e-pl-addons", "autoEngaged.Enable")) {
-        game.wfrp4e.socket.addCondition = async function(payload) {
+          SocketHandlers.addCondition = async function(payload) {
           let condition = payload.condition;
           let actorId = payload.actorId; 
           let actor = game.actors.get(actorId);
@@ -127,7 +127,7 @@ export default class AutoEngaged {
           if (game.user.isGM) {
             tokens.forEach(t => t.actor.addCondition("engaged"));
           } else {
-            tokens.forEach(t => game.wfrp4e.socket.executeOnOwner(t.actor, "addCondition", {condition: "engaged", actorId: t.actor.id}));
+            tokens.forEach(t => SocketHandlers.executeOnOwner(t.actor, "addCondition", {condition: "engaged", actorId: t.actor.id}));
           }
         }
       });
@@ -139,7 +139,7 @@ export default class AutoEngaged {
           if (game.user.isGM) {
             tokens.forEach(t => t.actor.addCondition("engaged"));
           } else {        
-            tokens.forEach(t => game.wfrp4e.socket.executeOnOwner(t.actor, "addCondition", {condition: "engaged", actorId: t.actor.id}));
+            tokens.forEach(t => SocketHandlers.executeOnOwner(t.actor, "addCondition", {condition: "engaged", actorId: t.actor.id}));
           }
         }
       });

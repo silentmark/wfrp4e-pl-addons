@@ -73,187 +73,200 @@ export default class Diseases {
   symptomEffects = {
     blight: {
       name: "Uwiąd (Lekki)",
-      icon: "modules/wfrp4e-core/icons/diseases/disease.png",
-      transfer: true,
+      img: "modules/wfrp4e-core/icons/diseases/disease.png",
+      system: {
+        condition : { },
+        scriptData: [{
+          label: "Uwiąd (Lekki)",
+          trigger: "manual",
+          script: ` let difficulty = "veasy";
+                    let test = await args.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {context : {failure : args.actor.name + " umiera z powodu Uwiądu"}, absolute: {difficulty}, appendTitle : " - Uwiąd"});
+                    await test.roll();
+                    if (test.result.outcome == "failure") {
+                            await args.actor.addCondition("dead");
+                    }
+                  `,
+            }]
+      },
       flags: {
         wfrp4e: {
-          symptom: true,
-          scriptData: [{
-            label: "Uwiąd (Lekki)",
-            trigger: "manual",
-            script: ` let difficulty = "veasy";
-                      let test = await args.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {context : {failure : args.actor.name + " umiera z powodu Uwiądu"}, absolute: {difficulty}, appendTitle : " - Uwiąd"});
-                      await test.roll();
-                      if (test.result.outcome == "failure") {
-                              await args.actor.addCondition("dead");
-                      }
-                    `,
-              }]
+          symptom: true
           }
-        },
+        }
     },
 
     blightModerate: {
       name: "Uwiąd (Umiarkowany)",
-      icon: "modules/wfrp4e-core/icons/diseases/disease.png",
-      transfer: true,
+      img: "modules/wfrp4e-core/icons/diseases/disease.png",
+      system: {
+        condition : { },
+        scriptData: [{
+          label: "Uwiąd (Lekki)",
+          trigger: "manual",
+          script: ` let difficulty = "easy";
+                    let test = await args.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {context : {failure : args.actor.name + " umiera z powodu Uwiądu"}, absolute: {difficulty}, appendTitle : " - Uwiąd"});
+                    await test.roll();
+                    if (test.result.outcome == "failure") {
+                            await args.actor.addCondition("dead");
+                    }
+                  `
+            }]
+        }
+      },
       flags: {
         wfrp4e: {
-          symptom: true,
-          scriptData: [{
-            label: "Uwiąd (Lekki)",
-            trigger: "manual",
-            script: ` let difficulty = "easy";
-                      let test = await args.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {context : {failure : args.actor.name + " umiera z powodu Uwiądu"}, absolute: {difficulty}, appendTitle : " - Uwiąd"});
-                      await test.roll();
-                      if (test.result.outcome == "failure") {
-                              await args.actor.addCondition("dead");
-                      }
-                    `
-              }]
-          }
-        },
+          symptom: true
+        }
     },
 
     blightSevere: {
       name: "Uwiąd (Poważny)",
-      icon: "modules/wfrp4e-core/icons/diseases/disease.png",
-      transfer: true,
+      img: "modules/wfrp4e-core/icons/diseases/disease.png",
+      system: {
+        condition : { },
+        scriptData: [{
+          label: "Uwiąd (Lekki)",
+          trigger: "manual",
+          script: ` let difficulty = "average";
+                    let test = await args.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {context : {failure : args.actor.name + " umiera z powodu Uwiądu"}, absolute: {difficulty}, appendTitle : " - Uwiąd"});
+                    await test.roll();
+                    if (test.result.outcome == "failure") {
+                            await args.actor.addCondition("dead");
+                    }
+                  `
+            }]
+        }
+      },
       flags: {
         wfrp4e: {
-          symptom: true,
-          scriptData: [{
-            label: "Uwiąd (Lekki)",
-            trigger: "manual",
-            script: ` let difficulty = "average";
-                      let test = await args.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {context : {failure : args.actor.name + " umiera z powodu Uwiądu"}, absolute: {difficulty}, appendTitle : " - Uwiąd"});
-                      await test.roll();
-                      if (test.result.outcome == "failure") {
-                              await args.actor.addCondition("dead");
-                      }
-                    `
-              }]
-          }
+          symptom: true
         },
     },
 
     buboes: {
       name: "Dymienica (Lekka)",
-      icon: "modules/wfrp4e-core/icons/diseases/disease.png",
-      transfer: true,
+      img: "modules/wfrp4e-core/icons/diseases/disease.png",
+      system: {
+        condition : { },
+        scriptData: [{
+          label: "Dymienica (Lekka)",
+          trigger: "dialog",
+          script: `args.prefillModifiers.modifier -= 5`,
+          options : {
+              hideScript : `let applicableCharacteristics = ["ws", "bs", "s", "fel", "ag", "t", "dex"]; 
+                            return args.type != 'weapon' &&
+                                  !(args.type == 'characteristic' && applicableCharacteristics.includes(args.item)) &&
+                                  !(args.type == 'skill' && applicableCharacteristics.includes(args.item.characteristic.key))`,
+              activateScript : `let applicableCharacteristics = ["ws", "bs", "s", "fel", "ag", "t", "dex"]; 
+                                return args.type == 'weapon' || 
+                                        (args.type == 'characteristic' && applicableCharacteristics.includes(args.item)) || 
+                                        (args.type == 'skill' && applicableCharacteristics.includes(args.item.characteristic.key))`
+            }
+          }]
+        }
+      },
       flags: {
         wfrp4e: {
-          symptom: true,
-          scriptData: [{
-            label: "Dymienica (Lekka)",
-            trigger: "dialog",
-            script: `args.prefillModifiers.modifier -= 5`,
-            options : {
-              dialog : {
-                  hideScript : `let applicableCharacteristics = ["ws", "bs", "s", "fel", "ag", "t", "dex"]; 
-                                return args.type != 'weapon' &&
-                                      !(args.type == 'characteristic' && applicableCharacteristics.includes(args.item)) &&
-                                      !(args.type == 'skill' && applicableCharacteristics.includes(args.item.characteristic.key))`,
-                  activateScript : `let applicableCharacteristics = ["ws", "bs", "s", "fel", "ag", "t", "dex"]; 
-                                    return args.type == 'weapon' || 
-                                           (args.type == 'characteristic' && applicableCharacteristics.includes(args.item)) || 
-                                           (args.type == 'skill' && applicableCharacteristics.includes(args.item.characteristic.key))`
-                }
-              }
-            }]
-          }
+          symptom: true
         },
     },
 
     buboesModerate: {
       name: "Dymienica (Umiarkowana)",
-      icon: "modules/wfrp4e-core/icons/diseases/disease.png",
-      transfer: true,
+      img: "modules/wfrp4e-core/icons/diseases/disease.png",
+      system: {
+        condition : { },
+        scriptData: [{
+          label: "Dymienica (Umiarkowana)",
+          trigger: "dialog",
+          script: `args.prefillModifiers.modifier -= 10`,
+          options : {
+              hideScript : `let applicableCharacteristics = ["ws", "bs", "s", "fel", "ag", "t", "dex"]; 
+                            return args.type != 'weapon' &&
+                                  !(args.type == 'characteristic' && applicableCharacteristics.includes(args.item)) &&
+                                  !(args.type == 'skill' && applicableCharacteristics.includes(args.item.characteristic.key))`,
+              activateScript : `let applicableCharacteristics = ["ws", "bs", "s", "fel", "ag", "t", "dex"]; 
+                                return args.type == 'weapon' || 
+                                        (args.type == 'characteristic' && applicableCharacteristics.includes(args.item)) || 
+                                        (args.type == 'skill' && applicableCharacteristics.includes(args.item.characteristic.key))`
+              }
+          }]
+        }
+      },
       flags: {
         wfrp4e: {
-          symptom: true,
-          scriptData: [{
-            label: "Dymienica (Umiarkowana)",
-            trigger: "dialog",
-            script: `args.prefillModifiers.modifier -= 10`,
-            options : {
-              dialog : {
-                  hideScript : `let applicableCharacteristics = ["ws", "bs", "s", "fel", "ag", "t", "dex"]; 
-                                return args.type != 'weapon' &&
-                                      !(args.type == 'characteristic' && applicableCharacteristics.includes(args.item)) &&
-                                      !(args.type == 'skill' && applicableCharacteristics.includes(args.item.characteristic.key))`,
-                  activateScript : `let applicableCharacteristics = ["ws", "bs", "s", "fel", "ag", "t", "dex"]; 
-                                    return args.type == 'weapon' || 
-                                            (args.type == 'characteristic' && applicableCharacteristics.includes(args.item)) || 
-                                            (args.type == 'skill' && applicableCharacteristics.includes(args.item.characteristic.key))`
-                }
-              }
-            }]
-          }
+          symptom: true
         },
     },
 
     buboesSevere: {
       name: "Dymienica (Poważna)",
-      icon: "modules/wfrp4e-core/icons/diseases/disease.png",
-      transfer: true,
+      img: "modules/wfrp4e-core/icons/diseases/disease.png",
+      system: {
+        condition : { },
+        scriptData: [{
+          label: "Dymienica (Poważna)",
+          trigger: "dialog",
+          script: `args.prefillModifiers.modifier -= 20`,
+          options : {
+              hideScript : `let applicableCharacteristics = ["ws", "bs", "s", "fel", "ag", "t", "dex"]; 
+                            return args.type != 'weapon' &&
+                                  !(args.type == 'characteristic' && applicableCharacteristics.includes(args.item)) &&
+                                  !(args.type == 'skill' && applicableCharacteristics.includes(args.item.characteristic.key))`,
+              activateScript : `let applicableCharacteristics = ["ws", "bs", "s", "fel", "ag", "t", "dex"]; 
+                                return args.type == 'weapon' || 
+                                        (args.type == 'characteristic' && applicableCharacteristics.includes(args.item)) || 
+                                        (args.type == 'skill' && applicableCharacteristics.includes(args.item.characteristic.key))`
+            }
+          }]
+        }
+      },
       flags: {
         wfrp4e: {
-          symptom: true,
-          scriptData: [{
-            label: "Dymienica (Poważna)",
-            trigger: "dialog",
-            script: `args.prefillModifiers.modifier -= 20`,
-            options : {
-              dialog : {
-                  hideScript : `let applicableCharacteristics = ["ws", "bs", "s", "fel", "ag", "t", "dex"]; 
-                                return args.type != 'weapon' &&
-                                      !(args.type == 'characteristic' && applicableCharacteristics.includes(args.item)) &&
-                                      !(args.type == 'skill' && applicableCharacteristics.includes(args.item.characteristic.key))`,
-                  activateScript : `let applicableCharacteristics = ["ws", "bs", "s", "fel", "ag", "t", "dex"]; 
-                                    return args.type == 'weapon' || 
-                                            (args.type == 'characteristic' && applicableCharacteristics.includes(args.item)) || 
-                                            (args.type == 'skill' && applicableCharacteristics.includes(args.item.characteristic.key))`
-                }
-              }
-            }]
-          }
+          symptom: true
         },
     },
   
+    //TODO: those are not yet ready!!!!!
     "WFRP4E.Symptom.Convulsions": {
   name: "Konwulsje",
-  icon: "modules/wfrp4e-core/icons/diseases/disease.png",
-  transfer: true,
+  img: "modules/wfrp4e-core/icons/diseases/disease.png",
+  system: {
+    transferData: {
+      effectApplication: "actor",
+      effectTrigger: "prefillDialog"
+    }
+  },
+  scriptData: [{
+    script: `
+    let modifier = 0
+    if (this.effect.name.includes("Umiarkowany"))
+        modifier = -20
+    else
+        modifier = -10
+    
+    let applicableCharacteristics = ["ws", "bs", "s", "ag", "t", "dex"]
+    if (args.type == "weapon")
+        args.prefillModifiers.modifier += modifier
+    else if (args.type == "characteristic") {
+        if (applicableCharacteristics.includes(args.item))
+            args.prefillModifiers.modifier += modifier
+    }
+    else if (args.type == "skill") {
+        if (applicableCharacteristics.includes(args.item.characteristic.key))
+            args.prefillModifiers.modifier += modifier
+    }`
+  }],
   flags: {
     wfrp4e: {
-      effectApplication: "actor",
-      effectTrigger: "prefillDialog",
       symptom: true,
-      script: `
-                        let modifier = 0
-                        if (this.effect.name.includes("Umiarkowany"))
-                            modifier = -20
-                        else
-                            modifier = -10
-                        
-                        let applicableCharacteristics = ["ws", "bs", "s", "ag", "t", "dex"]
-                        if (args.type == "weapon")
-                            args.prefillModifiers.modifier += modifier
-                        else if (args.type == "characteristic") {
-                            if (applicableCharacteristics.includes(args.item))
-                                args.prefillModifiers.modifier += modifier
-                        }
-                        else if (args.type == "skill") {
-                            if (applicableCharacteristics.includes(args.item.characteristic.key))
-                                args.prefillModifiers.modifier += modifier
-                        }`,
+      
     },
   },
 },
 "WFRP4E.Symptom.Fever": {
   name: "Gorączka",
-  icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+  img: "modules/wfrp4e-core/icons/diseases/disease.png",
   transfer: true,
   flags: {
     wfrp4e: {
@@ -280,7 +293,7 @@ export default class Diseases {
 },
     "WFRP4E.Symptom.Flux": {
   name: "Biegunka",
-  icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+  img: "modules/wfrp4e-core/icons/diseases/disease.png",
   transfer: true,
   flags: {
     wfrp4e: {
@@ -290,7 +303,7 @@ export default class Diseases {
 },
     "WFRP4E.Symptom.Lingering": {
   name: "Nawroty",
-  icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+  img: "modules/wfrp4e-core/icons/diseases/disease.png",
   transfer: true,
   flags: {
     wfrp4e: {
@@ -300,7 +313,7 @@ export default class Diseases {
 },
     "WFRP4E.Symptom.CoughsandSneezes": {
   name: "Kaszel i katar",
-  icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+  img: "modules/wfrp4e-core/icons/diseases/disease.png",
   transfer: true,
   flags: {
     wfrp4e: {
@@ -310,7 +323,7 @@ export default class Diseases {
 },
     "WFRP4E.Symptom.Gangrene": {
   name: "Gangrena",
-  icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+  img: "modules/wfrp4e-core/icons/diseases/disease.png",
   transfer: true,
   flags: {
     wfrp4e: {
@@ -332,7 +345,7 @@ export default class Diseases {
 },
     "WFRP4E.Symptom.Malaise": {
   name: "Apatia",
-  icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+  img: "modules/wfrp4e-core/icons/diseases/disease.png",
   transfer: true,
   flags: {
     wfrp4e: {
@@ -353,7 +366,7 @@ export default class Diseases {
 },
     "WFRP4E.Symptom.Nausea": {
   name: "Nudności",
-  icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+  img: "modules/wfrp4e-core/icons/diseases/disease.png",
   transfer: true,
   flags: {
     wfrp4e: {
@@ -372,7 +385,7 @@ export default class Diseases {
 },
     "WFRP4E.Symptom.Pox": {
   name: "Wysypka",
-  icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+  img: "modules/wfrp4e-core/icons/diseases/disease.png",
   transfer: true,
   flags: {
     wfrp4e: {
@@ -391,7 +404,7 @@ export default class Diseases {
 },
     "WFRP4E.Symptom.Wounded": {
   name: "Uciążliwa Rana",
-  icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+  img: "modules/wfrp4e-core/icons/diseases/disease.png",
   transfer: true,
   flags: {
     wfrp4e: {

@@ -17,29 +17,30 @@ export default class AutoMiss {
         "tint": "#ffffff",
         "flags": {
           "wfrp4e": {
-            "ducking": true,
-            "applicationData": {
+            "ducking": true
+          }
+        },
+        "system": {
+          "transferData" : {
               "type": "document",
               "documentType": "Actor",
             },
-            "scriptData": [
-              {
-                "label": "Kucanie",
-                "script": "args.fields.modifier -= 20;",
-                "trigger": "dialog",
-                "options": {
-                  "dialog": {
-                    "hideScript": "return ![\"ws\", \"bs\", \"s\", \"ag\", \"t\", \"dex\"].includes(args.characteristic)",
-                    "activateScript": "return [\"ws\", \"bs\", \"s\", \"ag\", \"t\", \"dex\"].includes(args.characteristic)",
-                    "submissionScript": "",
-                    "targeter": false
-                  }
-                }
+          "condition" : { },
+          "scriptData": [
+            {
+              "label": "Kucanie",
+              "script": "args.fields.modifier -= 20;",
+              "trigger": "dialog",
+              "options": {
+                "hideScript": "return ![\"ws\", \"bs\", \"s\", \"ag\", \"t\", \"dex\"].includes(args.characteristic)",
+                "activateScript": "return [\"ws\", \"bs\", \"s\", \"ag\", \"t\", \"dex\"].includes(args.characteristic)",
+                "submissionScript": "",
+                "targeter": false
               }
-            ]
-          }
+            }
+          ]
         }
-      };
+      }
 
       Hooks.on("renderTokenHUD", (data, hud, drawData) => {
         let token = data.object.document;

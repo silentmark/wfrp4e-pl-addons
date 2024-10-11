@@ -19,12 +19,19 @@ export default class Armours {
     setup() {
         if (game.settings.get("wfrp4e-pl-addons", "alternativeArmour.Enable")) {
 
+            Reflect.defineProperty(ArmourModel.prototype, 'isMetal', { 
+                get() {
+                    return this.properties.qualities.metal?.key == "metal";
+                }
+            });
+
+            
             Reflect.defineProperty(SkillDialog.prototype, '_computeArmour', { value: 
                 function () {
                     let wearingMedium = 0;
                     let wearingHeavy = 0;
                 
-                    for (let a of this.actor.itemTypes["armour"].filter(i => i.isEquipped)) {
+                    for (let a of this.actor.itemTags["armour"].filter(i => i.isEquipped)) {
                         if (a.properties.qualities.practical) {
                             continue;
                         }
@@ -51,35 +58,7 @@ export default class Armours {
                     }
                 }
             });
-        
-        
-            Reflect.defineProperty(StandardStatusModel.prototype, 'addArmourItem', { value:
-                function (item) {
-                    // If the armor protects a certain location, add the AP value of the armor to the AP object's location value
-                    // Then pass it to addLayer to parse out important information about the armor layer, namely qualities/flaws
-                    for (let loc in item.system.currentAP) {
-                        if (item.system.currentAP[loc] > 0) {
-                  
-                          this.armour[loc].value += item.system.currentAP[loc];
-                  
-                          let layer = {
-                            value: item.system.currentAP[loc],
-                            armourType: item.system.armorType.value, // used for sound
-                            source : item
-                          }
-                  
-                          let properties = item.system.properties
-                          layer.impenetrable = !!properties.qualities.impenetrable;
-                          layer.partial = !!properties.flaws.partial;
-                          layer.weakpoints = !!properties.flaws.weakpoints;
-                          layer.magical = item.system.isMagical;
-                          layer.metal = !!properties.qualities.metal;
-                  
-                          this.armour[loc].layers.push(layer);
-                        }
-                      }
-                }
-            });
+
         }
     }
 }

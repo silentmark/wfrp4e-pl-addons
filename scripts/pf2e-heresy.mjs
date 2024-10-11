@@ -3,7 +3,7 @@ export default class PF2eHeresy {
     setup() {
         if (game.settings.get("wfrp4e-pl-addons", "pf2eHeresy.Enable")) {
 
-            Reflect.defineProperty(ActorWfrp4e.prototype, 'showDualWielding', { value: 
+            Reflect.defineProperty(ActorWFRP4e.prototype, 'showDualWielding', { value: 
                 function(weapon) {
                     if (!weapon.offhand.value) {
                       return !this.noOffhand
@@ -24,120 +24,110 @@ export default class PF2eHeresy {
 
             const dualwielder = {
                 name: game.i18n.localize("EFFECT.DualWielder"),
-                icon: "modules/wfrp4e-core/icons/talents/dual-wielder.png",
+                img: "modules/wfrp4e-core/icons/talents/dual-wielder.png",
                 statuses : ["dualwielder"],
-                flags : {
-                    wfrp4e : {
-                        applicationData : {},
-                        scriptData : [
-                            {
-                                label : game.i18n.localize("EFFECT.DualWielder"),
-                                trigger : "dialog",
-                                script : `args.prefillModifiers.modifier += 10`,
-                                options : {
-                                    dialog : {
-                                        hideScript : `return !args.item?.system.attackType || !this.actor.hasCondition('multiattacks') || !this.actor.has(game.i18n.localize("NAME.DualWielder"), "talent")`,
-                                        activateScript : `return args.item?.system.attackType && this.actor.hasCondition('multiattacks') && this.actor.has(game.i18n.localize("NAME.DualWielder"), "talent")`
-                                    }
-                                }
+                system: {
+                    condition : { },
+                    scriptData : [
+                        {
+                            label : game.i18n.localize("EFFECT.DualWielder"),
+                            trigger : "dialog",
+                            script : `args.prefillModifiers.modifier += 10`,
+                            options : {
+                                hideScript : `return !args.item?.system.attackType || !this.actor.hasCondition('multiattacks') || !this.actor.has(game.i18n.localize("NAME.DualWielder"), "talent")`,
+                                activateScript : `return args.item?.system.attackType && this.actor.hasCondition('multiattacks') && this.actor.has(game.i18n.localize("NAME.DualWielder"), "talent")`
                             }
-                        ]
-                    }
+                        }
+                    ]
                 }
             }
 
             const multiattacks = {
-                icon: "modules/wfrp4e-pl-addons/icons/multiattacks.png", 
+                img: "modules/wfrp4e-pl-addons/icons/multiattacks.png", 
                 id: "multiattacks", 
                 statuses: ["multiattacks"],
                 name: game.i18n.localize("WFRP4E.ConditionName.Multiattacks"),
-                flags: {
-                    wfrp4e: {
-                        value: 1,
-                        scriptData: [
-                            {
-                                trigger: "dialog",
-                                label : game.i18n.localize("WFRP4E.ConditionName.Multiattacks"),
-                                script : `args.prefillModifiers.modifier -= (this.effect.conditionValue * 30)`,
-                                options : {
-                                    dialog : {
-                                        hideScript : "return !args.item?.system.attackType && !args.skill?.name?.includes(game.i18n.localize('NAME.Dodge'))",
-                                        activateScript : "return args.item?.system.attackType || args.skill?.name?.includes(game.i18n.localize('NAME.Dodge'))"
-                                    }
-                                }
+                system: {
+                    condition : {
+                        value : 1,
+                        numbered: true,
+                    },
+                    scriptData: [
+                        {
+                            trigger: "dialog",
+                            label : game.i18n.localize("WFRP4E.ConditionName.Multiattacks"),
+                            script : `args.prefillModifiers.modifier -= (this.effect.conditionValue * 30)`,
+                            options : {
+                                hideScript : "return !args.item?.system.attackType && !args.skill?.name?.includes(game.i18n.localize('NAME.Dodge'))",
+                                activateScript : "return args.item?.system.attackType || args.skill?.name?.includes(game.i18n.localize('NAME.Dodge'))"
                             }
-                        ]
-                    }
+                        }
+                    ]
                 }
             };
 
             const multiChannelling = {
-                icon: "modules/wfrp4e-pl-addons/icons/multichannelling.png", 
+                img: "modules/wfrp4e-pl-addons/icons/multichannelling.png", 
                 id: "multichannelling", 
                 statuses: ["multichannelling"],
                 name: game.i18n.localize("WFRP4E.ConditionName.Multichannelling"),
-                flags: {
-                    wfrp4e: {
-                        value: 1,
-                        scriptData: [
-                            {
-                                trigger: "dialog",
-                                label : game.i18n.localize("WFRP4E.ConditionName.Multichannelling"),
-                                script : `args.prefillModifiers.modifier -= (this.effect.conditionValue * 30)`,
-                                options : {
-                                    dialog : {
-                                        hideScript : "return args.type != 'channelling'",
-                                        activateScript : "return args.type == 'channelling'"
-                                    }
-                                }
+                system: {
+                    condition : {
+                        value : 1,
+                        numbered: true,
+                    },
+                    scriptData: [
+                        {
+                            trigger: "dialog",
+                            label : game.i18n.localize("WFRP4E.ConditionName.Multichannelling"),
+                            script : `args.prefillModifiers.modifier -= (this.effect.conditionValue * 30)`,
+                            options : {
+                                hideScript : "return args.type != 'channelling'",
+                                activateScript : "return args.type == 'channelling'"
                             }
-                        ]
-                    }
+                        }
+                    ]
                 }
             };
 
             const multispell = {
-                icon: "modules/wfrp4e-pl-addons/icons/multispell.png", 
+                img: "modules/wfrp4e-pl-addons/icons/multispell.png", 
                 id: "multispell", 
                 statuses: ["multispell"],
                 name: game.i18n.localize("WFRP4E.ConditionName.Multispell"),
-                flags: {
-                    wfrp4e: {
-                        value: 1
+                system: {
+                    condition : {
+                        value : 1,
+                        numbered: true,
                     }
                 }
             };
 
             const defensive = {
-                icon: "icons/svg/shield.svg",
+                img: "icons/svg/shield.svg",
                 id: "defensive",
                 statuses : ["defensive"],
                 name: game.i18n.localize("WFRP4E.ConditionName.Defensive"),
-                flags : {
-                    wfrp4e : {
-                        value: null,
-                        applicationData : {},
-                        scriptData : [
-                            {
-                                label : game.i18n.localize("WFRP4E.ConditionName.Defensive"),
-                                trigger : "dialog",
-                                script : `args.prefillModifiers.modifier += 20`,
-                                options : {
-                                    dialog : {
-                                        hideScript : "return !this.actor.isOpposing",
-                                        activateScript : `return this.actor.isOpposing`
-                                    }
-                                }
+                system: {
+                    condition : { },
+                    scriptData : [
+                        {
+                            label : game.i18n.localize("WFRP4E.ConditionName.Defensive"),
+                            trigger : "dialog",
+                            script : `args.prefillModifiers.modifier += 20`,
+                            options : {
+                                hideScript : "return !this.actor.isOpposing",
+                                activateScript : `return this.actor.isOpposing`
                             }
-                        ]
-                    }
+                        }
+                    ]
                 }
             };
 
             Hooks.on("createToken", async (token, data, user) => {
                 if (!game.user.isGM) return;
                 
-                if (game.canvas.grid.type == CONST.GRID_TYPES.GRIDLESS) {
+                if (!game.combat?.active) {
                     if (token.actor.getFlag("wfrp4e", "oldTexture") == undefined) {
                         let oldTexture = token.actor.prototypeToken.texture.src;
                         await token.actor.setFlag("wfrp4e", "oldTexture", oldTexture);
@@ -152,6 +142,25 @@ export default class PF2eHeresy {
             });
 
             Hooks.on("ready", () => {
+
+                CombatHelpers.startCombat.push(async function(combat, data) {
+                    for (let token of game.canvas.tokens.placeables) {
+                        let oldTexture = token.actor.getFlag("wfrp4e", "oldTexture");
+                        if (oldTexture) {
+                            setTimeout(() => token.document.update({texture: {src: oldTexture}}), 500);
+                        }
+                    }
+                });
+                CombatHelpers.endCombat.push(async function(combat, data) {
+                    for (let token of game.canvas.tokens.placeables) {
+                        if (token.actor.getFlag("wfrp4e", "oldTexture") == undefined) {
+                            let oldTexture = token.actor.prototypeToken.texture.src;
+                            await token.actor.setFlag("wfrp4e", "oldTexture", oldTexture);
+                        }
+                        setTimeout(() => token.document.update({texture: {src: token.actor.img}}), 500);
+                    }
+                });
+
                 setTimeout(() => {
                     game.wfrp4e.config.statusEffects.splice(9, 0, multiattacks);
                     game.wfrp4e.config.conditions.multiattacks = "Atak Wielokrotny";
@@ -178,8 +187,11 @@ export default class PF2eHeresy {
                     
 
                     const bleeding = game.wfrp4e.config.statusEffects.find(x => x.id == "bleeding");
-                    bleeding.flags.wfrp4e.applicationData.conditionTrigger = "startTurn";
-                    bleeding.flags.wfrp4e.scriptData[0].script = `
+                    bleeding.system = bleeding.system || {};
+                    bleeding.system.condition = bleeding.system.condition || {};
+                    bleeding.system.condition.trigger = "startTurn";
+                    bleeding.system.scriptData = bleeding.system.scriptData || [];
+                    bleeding.system.scriptData[0].script = `
                                         let actor = this.actor;
                                         let effect = this.effect;
                                         let bleedingAmt;
@@ -239,8 +251,11 @@ export default class PF2eHeresy {
                                         `
 
                     const poisoned = game.wfrp4e.config.statusEffects.find(x => x.id == "poisoned");
-                    poisoned.flags.wfrp4e.applicationData.conditionTrigger = "startTurn";
-                    poisoned.flags.wfrp4e.scriptData = [
+                    poisoned.system = poisoned.system || {};
+                    poisoned.system.condition = poisoned.system.condition || {};
+                    poisoned.system.condition.trigger = "startTurn";
+                    poisoned.system.scriptData = poisoned.system.scriptData || [];
+                    poisoned.system.scriptData = [
                         {
                             trigger: "manual",
                             label : "Zatrucie - Obrażenia",
@@ -308,27 +323,27 @@ export default class PF2eHeresy {
                             label : "Zatrucie",
                             script : `args.fields.modifier -= 10 * this.effect.conditionValue`,
                             options : {
-                                dialog : {
-                                    activateScript : "return true"
-                                }
+                                activateScript : "return true"
                             }
                         }
                     ]
 
                     const ablaze = game.wfrp4e.config.statusEffects.find(x => x.id == "ablaze");
-                    ablaze.flags.wfrp4e.applicationData.conditionTrigger = "startTurn";
+                    ablaze.system = ablaze.system || {};
+                    ablaze.system.condition = ablaze.system.condition || {};
+                    ablaze.system.condition.trigger = "startTurn";
 
                     const stunned = game.wfrp4e.config.statusEffects.find(x => x.id == "stunned");
-                    stunned.flags.wfrp4e = {
-                        value: 1,
-                        applicationData : {
-                            conditionTrigger : "startTurn"
+                    stunned.system = {
+                        condition : {
+                            value : 1,
+                            numbered: true,
+                            trigger: "startTurn"
                         },
-                        scriptData: [
-                            {
-                                trigger: "manual", 
-                                label: "Oszołomienie - Odporność", 
-                                script: `
+                        scriptData: [{
+                            trigger: "manual", 
+                            label: "Oszołomienie - Odporność", 
+                            script: `
                                 let actor = this.actor;
                                 let effect = this.effect;
                                 let msg = "<h2>" + game.i18n.localize("WFRP4E.ConditionName.Stunned") + "</h2>"
@@ -364,38 +379,32 @@ export default class PF2eHeresy {
                                     return this.script.scriptMessage(msg)
                                 }
                                 `
-                            },
-                            {
+                            }, {
                                 trigger: "dialog",
                                 label : "Kara do wszystkich testów (Oszołomienie)",
                                 script : `args.fields.modifier -= 10 * this.effect.conditionValue`,
                                 options : {
-                                    dialog : {
-                                        activateScript : "return true"
-                                    }
+                                    activateScript : "return true"
                                 }
-                            },
-                            {
+                            }, {
                                 trigger: "dialog",
                                 label : "Oszołomienie - Bonus do testów Ataku",
                                 script : `args.fields.slBonus += 1`,
                                 options : {
-                                    dialog : {
-                                        hideScript : "return args.item?.system.attackType != 'melee'",
-                                        activateScript : "return args.item?.system.attackType == 'melee'",
-                                        targeter: true
-                                    }
+                                    hideScript : "return args.item?.system.attackType != 'melee'",
+                                    activateScript : "return args.item?.system.attackType == 'melee'",
+                                    targeter: true
                                 }
                             }
                         ]
                     }
 
                     const entangled = game.wfrp4e.config.statusEffects.find(x => x.id == "entangled");
-                    entangled.flags.wfrp4e = {
-                        value: 1,  
-                        trigger: "startTurn",
-                        applicationData : {
-                            conditionTrigger : "startTurn"
+                    entangled.system = {
+                        condition : {
+                            value : 1,
+                            numbered: true,
+                            trigger: "startTurn"
                         },
                         scriptData: [
                             {
@@ -462,19 +471,18 @@ export default class PF2eHeresy {
                                 label : "Pochwycenie - Testy związane z ruchem",
                                 script : `args.fields.modifier -= 10 * this.effect.conditionValue`,
                                 options : {
-                                    dialog : {
-                                        activateScript : "return ['ws', 'bs', 'ag'].includes(args.characteristic)"
-                                    }
+                                    activateScript : "return ['ws', 'bs', 'ag'].includes(args.characteristic)"
                                 }
                             }
                         ]
                     }
 
                     const broken = game.wfrp4e.config.statusEffects.find(x => x.id == "broken");
-                    broken.flags.wfrp4e =  {
-                        value: 1,
-                        applicationData : {
-                            conditionTrigger : "startTurn"
+                    broken.system =  {
+                        condition: {
+                            value: 1,
+                            numbered: true,
+                            trigger: "startTurn"
                         },
                         scriptData: [
                             {
@@ -520,14 +528,11 @@ export default class PF2eHeresy {
                                 label : "Panika - Wszystkie testy nie związane z ucieczką i ukrywaniem się.",
                                 script : `args.fields.modifier -= 10 * this.effect.conditionValue`,
                                 options : {
-                                    dialog : {
-                                        activateScript : "return !args.skill?.name?.includes(game.i18n.localize('NAME.Stealth')) && args.skill?.name != game.i18n.localize('NAME.Athletics')"
-                                    }
+                                    activateScript : "return !args.skill?.name?.includes(game.i18n.localize('NAME.Stealth')) && args.skill?.name != game.i18n.localize('NAME.Athletics')"
                                 }
                             }
                         ]
                     }
-
                 }, 10000);
                 let f = async function(combat, combatant) {
                     await combatant.actor.removeCondition("multiattacks", 99);
@@ -535,7 +540,7 @@ export default class PF2eHeresy {
                     await combatant.actor.removeCondition("multispell", 99);
                     await combatant.actor.removeCondition("defensive", 99);
                 }
-                game.wfrp4e.combat.scripts.startTurn.push(f);
+                CombatHelpers.startTurn.push(f);
             });
         }
     }

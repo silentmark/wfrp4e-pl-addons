@@ -53,10 +53,13 @@ export default class WindsOfMagic {
             Hooks.on("updateCombat", async function (combat, updateData) {
                 if (game.user.isGM) {
                     if (typeof(updateData.round) === 'undefined' && typeof(updateData.turn) === 'undefined') {
-                        return
+                        return;
+                    }
+                    if (!combat.combatants.get(combat.current.combatantId)) {
+                        return;
                     }
                     let actor = game.actors.get(combat.combatants.get(combat.current.combatantId).actorId);
-                    let skills = actor.getItemTypes('skill').filter(x=> x.name.startsWith('Splatanie Magii'));
+                    let skills = actor.itemTags['skill'].filter(x=> x.name.startsWith('Splatanie Magii'));
                     if (skills.length == 0) {
                         return;
                     }
@@ -71,22 +74,18 @@ export default class WindsOfMagic {
                                 if (!effect) {
                                     effect = {
                                         name: 'Wiatry Magii (' + wind + ')',
-                                        icon: "modules/wfrp4e-core/icons/spells/octagram.png",
-                                        transfer: false,
-                                        flags: {
-                                            wfrp4e: {
+                                        img: "modules/wfrp4e-core/icons/spells/octagram.png",
+                                        system: {
+                                            condition : { },
                                             scriptData: [{
                                                 label: 'Wiatry Magii (' + wind + ')',
                                                 trigger: "dialog",
                                                 script : `args.prefillModifiers.modifier += ${modifier};`,
                                                 options : {
-                                                    dialog : {
-                                                            hideScript : `return args.type != 'channelling' || game.wfrp4e.config.magicWind[args.item?.lore?.value] != '${wind}'`,
-                                                            activateScript : `return args.type == "channelling" && game.wfrp4e.config.magicWind[args.item?.lore?.value] == '${wind}'`
-                                                        }
-                                                    }
-                                                }]
-                                            }
+                                                    hideScript : `return args.type != 'channelling' || game.wfrp4e.config.magicWind[args.item?.lore?.value] != '${wind}'`,
+                                                    activateScript : `return args.type == "channelling" && game.wfrp4e.config.magicWind[args.item?.lore?.value] == '${wind}'`
+                                                }
+                                            }]
                                         }
                                     }
                                     await actor.createEmbeddedDocuments("ActiveEffect", [effect])
@@ -97,24 +96,21 @@ export default class WindsOfMagic {
                                 let script = `
                                     let suffusedWithMagicEffect = {
                                         name: 'Nasycenie Magią',
-                                        icon: "modules/wfrp4e-core/icons/spells/tzeentch.png",
+                                        img: "modules/wfrp4e-core/icons/spells/tzeentch.png",
                                         duration: {
                                             rounds: 1
                                         },
-                                        flags: {
-                                            wfrp4e: {
-                                                scriptData: {
+                                        system: {
+                                            condition : { },
+                                            scriptData: [{
                                                     trigger: "dialog",
                                                     label: "@effect.name",                                            
                                                     script : "args.prefillModifiers.slBonus += 1;",
                                                     options : {
-                                                        dialog : {
-                                                            hideScript : "return args.type != 'cast'",
-                                                            activateScript : "return args.type == 'cast'"
-                                                        }
+                                                        hideScript : "return args.type != 'cast'",
+                                                        activateScript : "return args.type == 'cast'"
                                                     }
-                                                },
-                                                preventDuplicateEffects: true
+                                                }]
                                             }
                                         }
                                     };
@@ -142,21 +138,19 @@ export default class WindsOfMagic {
                                 if (!effect) {
                                     effect = {
                                         name: 'Złowrogie Wpływy Tzeentcha',
-                                        icon: "modules/wfrp4e-core/icons/spells/tzeentch.png",
-                                        transfer: false,
-                                        flags: {
-                                            wfrp4e: {
-                                                scriptData: [{
-                                                    label: "Złowrogie Wpływy Tzeentcha (Czarowanie)",
-                                                    trigger: "rollCastTest",
-                                                    script : script
-                                                },
-                                                {
-                                                    label: "Złowrogie Wpływy Tzeentcha (Splatanie)",
-                                                    trigger: "rollChannellingTest",
-                                                    script : script
-                                                }]
-                                            }
+                                        img: "modules/wfrp4e-core/icons/spells/tzeentch.png",
+                                        system: {
+                                            condition : { },
+                                            scriptData: [{
+                                                label: "Złowrogie Wpływy Tzeentcha (Czarowanie)",
+                                                trigger: "rollCastTest",
+                                                script : script
+                                            },
+                                            {
+                                                label: "Złowrogie Wpływy Tzeentcha (Splatanie)",
+                                                trigger: "rollChannellingTest",
+                                                script : script
+                                            }]
                                         }
                                     }
                                     await actor.createEmbeddedDocuments("ActiveEffect", [effect])
@@ -378,13 +372,13 @@ export default class WindsOfMagic {
                                 return;
                             }
                             let actor = game.canvas.tokens.controlled[0].actor;
-                            let skill = actor.getItemTypes("skill").find(x => x.name == "Język (Magiczny)");
+                            let skill = actor.itemTags["skill"].find(x => x.name == "Język (Magiczny)");
                             if (!skill) {
                                 return;
                             }
                             let spell = spells[messageId];
                             let dispelValue = spell.test.data.result.itemData.system.cn.value + Number.parseInt(spell.test.data.result.SL);
-                            let dispelTest = actor.getItemTypes("extendedTest").find(x => x.getFlag('wfrp4e-pl-addons', 'messageId') == messageId);
+                            let dispelTest = actor.itemTags["extendedTest"].find(x => x.getFlag('wfrp4e-pl-addons', 'messageId') == messageId);
                             if (!dispelTest) {
                                 let dispelTestData = {
                                     name : "Rozpraszanie Zaklęcia - " + spell.test.data.result.itemData.name,

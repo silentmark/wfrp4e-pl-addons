@@ -16,11 +16,11 @@ export default class PrayerNerf {
                 let tooltip = "Liczba wysłuchanych modlitw: " + prayers[args.item.id];
                 const modifier = prayers[args.item.id] * -10;
                 tooltip += ` (${modifier})`;
-                let newScript = new WFRP4eScript({
+                let newScript = new WarhammerScript({
                     script: 'args.prefillModifiers.modifier += ' + modifier,
                     label:  tooltip,
                     trigger: 'dialog',
-                    options: { dialog: { activateScript: "return true" } }
+                    options: {  activateScript: "return true" }
                   });
                 return newScript;
             }

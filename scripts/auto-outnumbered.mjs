@@ -146,11 +146,11 @@ export default class AutoOutnumbered {
           outnumbering = Math.floor(outnumbering / targetSizeNum) - 1;
           if (outnumbering >= 0) {
             const outnumberFinalModifier = Math.min(outnumbering * outnumberingModifier, maxOutnumberingMultiplier * outnumberingModifier);
-            let newScript = new WFRP4eScript({
+            let newScript = new WarhammerScript({
               script: 'args.prefillModifiers.modifier += ' + outnumberFinalModifier,
               label: tooltip,
               trigger: 'dialog',
-              options: { dialog: { activateScript: "return true" } }
+              options: { activateScript: "return true" }
             });
             return newScript;
           }

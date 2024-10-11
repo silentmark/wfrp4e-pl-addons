@@ -13,6 +13,7 @@ import AutoMiss from './auto-miss.mjs';
 import PF2eHeresy from './pf2e-heresy.mjs';
 import Diseases from './diseases.mjs';
 import SocketTests from './socket-tests.mjs';
+import AreaHelpersExtension from './area-helpers.mjs';
 import VariousExtensions from './various-extensions.mjs'
 
 class Main {
@@ -32,6 +33,7 @@ class Main {
         this.diseases = new Diseases();
         this.socketTests = new SocketTests();
         this.variousExtensions = new VariousExtensions();
+        this.areaHelpers = new AreaHelpersExtension();
 
         this.customPrefillModifiers = {};
     }
@@ -48,6 +50,7 @@ class Main {
     autoCombat;
     autoMiss;
     pf2eHeresy;
+    areaHelpers;
 
     customPrefillModifiers;
 
@@ -66,6 +69,7 @@ class Main {
         this.pf2eHeresy.setup();
         this.diseases.setup();
         this.variousExtensions.setup();
+        this.areaHelpers.setup();
     }
 
     ready() {
@@ -284,7 +288,6 @@ Hooks.once("init", () => {
         type: Boolean
     });
 
-      // Should scroll have replaced Description with one from the spell as well?
     game.settings.register("wfrp4e-pl-addons", "socketTests.mode", {
         name: 'wfrp4epladdon.socketTests.Mode',
         hint: 'wfrp4epladdon.socketTests.ModeHint',
@@ -298,17 +301,20 @@ Hooks.once("init", () => {
         'never': 'wfrp4epladdon.socketTests.Never',
         }
     });
+
     
-    game.settings.register("wfrp4e", "templateCollisionMethod", {
+    
+    game.settings.register("wfrp4e-pl-addons", "templateCollisionMethod", {
         name: `SETTINGS.templateCollisionMethod`,
         hint: `SETTINGS.templateCollisionMethodHint`,
         scope: 'world',
         config: true,
         type: String,
         choices: {
-          "centerPoint": "SETTINGS.templateCollisionCenterPoint",
-          "grid": "SETTINGS.templateCollisionGrid",
-          "area": "SETTINGS.templateCollisionArea"
+            "default": "SETTINGS.templateCollisionMethodDefault",
+            "centerPoint": "SETTINGS.templateCollisionCenterPoint",
+            "grid": "SETTINGS.templateCollisionGrid",
+            "area": "SETTINGS.templateCollisionArea"
         },
     });
   

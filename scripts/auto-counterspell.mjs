@@ -11,7 +11,7 @@ export default class AutoCounterSpell {
                     let actorIds = combat.combatants.map(x=>x.actorId);
                     for (let i = 0; i < actorIds.length; i++) { 
                         let actor = game.actors.get(actorIds[i]);
-                        let skills = actor.getItemTypes('skill').filter(x=> x.name === "Język (Magiczny)");
+                        let skills = actor.itemTags['skill'].filter(x=> x.name === "Język (Magiczny)");
                         if (skills.length == 0) {
                             continue;
                         }
@@ -22,7 +22,7 @@ export default class AutoCounterSpell {
                     await combat.setFlag('wfrp4e-pl-addons', 'casters', casters);
                 }
             };
-            game.wfrp4e.combat.scripts.startTurn.push(updateCombatCasters);
+            CombatHelpers.startTurn.push(updateCombatCasters);
 
             let castOpposedClicked = async function(event) {
                 if(game.combats.active) {
