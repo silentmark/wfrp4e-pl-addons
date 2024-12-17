@@ -241,7 +241,7 @@
           "effectApplication": "apply",
           "hide": false,
           "preventDuplicateEffects": false,
-          "script": "let trait = await fromUuid(\"Compendium.wfrp4e-core.items.gFkRm9wS65qe18Xv\");\ntrait = trait.toObject();\ntrait.system.specification.value = \"Średni\";\nawait this.actor.createEmbeddedDocuments(\"Item\", [trait]);\nlet effect = {\n    label: 'Gift of the Spider-god',\n    icon: \"modules/wfrp4e-unofficial-grimoire/icons/spell_gift-of-the-spider-god.jpg\",\n    transfer: false,\n    changes: [\n        { key: 'system.details.move.value', \n          value: '1', \n          mode: 2\n        }\n    ]\n};\nawait this.actor.createEmbeddedDocuments(\"ActiveEffect\", [effect]);",
+          "script": "let trait = await fromUuid(\"Compendium.wfrp4e-core.items.gFkRm9wS65qe18Xv\");\ntrait = trait.toObject();\ntrait.system.specification.value = \"Średni\";\nawait this.actor.createEmbeddedDocuments(\"Item\", [trait]);\nlet effect = {\n    label: 'Gift of the Spider-god',\n    img: \"modules/wfrp4e-unofficial-grimoire/icons/spell_gift-of-the-spider-god.jpg\",\n    transfer: false,\n    changes: [\n        { key: 'system.details.move.value', \n          value: '1', \n          mode: 2\n        }\n    ]\n};\nawait this.actor.createEmbeddedDocuments(\"ActiveEffect\", [effect]);",
           "areaEffect": false
         },
         "autoanimations": {

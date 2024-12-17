@@ -3,14 +3,15 @@ export default class Miscasts {
   setup() {
     if (game.settings.get("wfrp4e-pl-addons", "alternativeMiscasts.Enable")) {
       Hooks.on("renderChatMessage", async (app, html, messageData) => {
-        if (!app.getTest) {
+        if (!app?.system?.test) {
           return;
         }
 
-        let castTest = app.getTest();
+        let castTest = app.system.test;
         if (castTest?.result?.mis) {
           jQuery(html)
-          .find(".card-content")
+          .find(".card-content.test-data")
+          .next()
           .append(
             jQuery(`<a class ="table-click fumble-roll" data-tooltip="${castTest.result.tooltips.miscast}" data-modifier="${castTest.result.miscastModifier}" data-table="${castTest.result.miscastTable}"><i class="fas fa-list"></i> ${castTest.result.mis}</a>`));
         }
@@ -116,7 +117,7 @@ export default class Miscasts {
                 this.result.tooltips.miscast.push("Magia Dhar przy 88: " + random);
                 globalModifier += random;
               }
-              if (this instanceof CastTest && this.actor.hasCondition("multispell")) {
+              if (this instanceof game.wfrp4e.rolls.CastTest && this.actor.hasCondition("multispell")) {
                 let multiSpell = this.actor.hasCondition("multispell").conditionValue * 50;
                 console.log("Wielokrotne Czarowanie: " + multiSpell);
                 this.result.tooltips.miscast.push("Wielokrotne Czarowanie: " + multiSpell);
@@ -135,7 +136,7 @@ export default class Miscasts {
                 this.result.tooltips.miscast.push("Użyto składnika kontroli: " + -random);
                 globalModifier -= -random;
               }
-              if (this instanceof CastTest && this.actor.itemTypes["talent"].find(x=>x.name == "Precyzyjne Inkantowanie")) {
+              if (this instanceof game.wfrp4e.rolls.CastTest && this.actor.itemTypes["talent"].find(x=>x.name == "Precyzyjne Inkantowanie")) {
                 let random = Math.floor(Math.random() * maxRandom) + 50;
                 console.log("Precyzyjne Inkantowanie: " + -random);
                 this.result.tooltips.miscast.push("Precyzyjne Inkantowanie: " + -random);

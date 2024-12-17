@@ -1,2 +1,7 @@
 wfrp4e-pl-addons.zip
 node_modules
+*.log
+LOCK
+LOG
+LOG.old
+dist/*

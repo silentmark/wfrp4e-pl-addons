@@ -1,8 +1,9 @@
 import fs from "fs";
 import path from "path";
+import watch from "rollup-plugin-watch";
 import foundryPath from "./foundry-path.mjs";
-import copy from 'rollup-plugin-copy-watch';
 import jscc from 'rollup-plugin-jscc';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
 
 let manifest = JSON.parse(fs.readFileSync("./module.json"))
 
@@ -30,26 +31,14 @@ export default {
         "scripts/socket-tests.mjs"
     ],
     output: {
-        dir : path.join(modulePath, "scripts")
+        dir : path.join(modulePath, "dist")
     },
-    watch : {
-        clearScreen: true
-    }, 
     plugins: [
-        jscc({      
+        jscc({
             values : {_ENV :  process.env.NODE_ENV}
         }),
-        copy({
-            targets : [
-                {src : "./module.json", dest : modulePath},
-                {src : "./pl.json", dest : modulePath},
-                {src : "./scripts/*", dest :  path.join(modulePath, "scripts")},
-                {src : "./templates/*", dest : path.join(modulePath, "templates")},
-                {src : "./packs/*", dest :  path.join(modulePath, "packs")},
-                {src : "./icons/*", dest :  path.join(modulePath, "icons")}
-            ],
-            watch: ["module.json", "scripts/*", "templates/*", "icons/*"]
-        })
+        watch({ dir: "scripts" }),
+		nodeResolve()
     ],
     onwarn(warning, warn) {
         // suppress eval warnings

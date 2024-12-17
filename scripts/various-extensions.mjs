@@ -1,8 +1,8 @@
 export default class VariousExtensions {
     setup() {
-        SocketHandlers.handleDualWielder =  async function() {
-            let message = game.messages.get(messageId);
-            let test = message.getTest();
+        SocketHandlers.handleDualWielder =  async function(data) {
+            let message = game.messages.get(data.messageId);
+            let test = message.system.test;
             await test.handleDualWielder();
             return true;
         }
@@ -73,7 +73,7 @@ export default class VariousExtensions {
                 await this.colorWinnerAndLoser()
             
                 if (this.opposedTest.attackerTest.handleDualWielder && this.opposedTest.opposeResult.winner == "attacker") {
-                    let owner = game.wfrp4e.utility.getActiveDocumentOwner(this.opposedTest.attackerTest.actor);
+                    let owner = warhammer.utility.getActiveDocumentOwner(this.opposedTest.attackerTest.actor);
                     SocketHandlers.executeOnUserAndWait(owner.id, "handleDualWielder", {messageId: this.attackerMessage.id}); 
                     //we dont want to await this one.
                 }

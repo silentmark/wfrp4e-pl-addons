@@ -81,11 +81,11 @@ export default class AutoMiss {
       });
 
       Hooks.on("renderChatMessage", async (app, html, messageData) => {
-        if (!game.user.isGM || !app.getTest) {
+        if (!game.user.isGM || !app?.system?.test) {
           return;
         }
 
-        let test = app.getTest();
+        let test = app.system.test;
         if (!test || game.modules.get(constants.moduleId).api.autoMiss.processedMessages.indexOf(app.id) != -1 || test?.weapon?.attackType != "ranged") return;
 
         game.modules.get(constants.moduleId).api.autoMiss.processedMessages.push(app.id);

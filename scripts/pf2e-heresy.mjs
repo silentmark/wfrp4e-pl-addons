@@ -534,11 +534,11 @@ export default class PF2eHeresy {
                         ]
                     }
                 }, 10000);
-                let f = async function(combat, combatant) {
-                    await combatant.actor.removeCondition("multiattacks", 99);
-                    await combatant.actor.removeCondition("multichannelling", 99);
-                    await combatant.actor.removeCondition("multispell", 99);
-                    await combatant.actor.removeCondition("defensive", 99);
+                let f = async function(combat, updateData) {
+                    await combat.combatant.actor.removeCondition("multiattacks", 99);
+                    await combat.combatant.actor.removeCondition("multichannelling", 99);
+                    await combat.combatant.actor.removeCondition("multispell", 99);
+                    await combat.combatant.actor.removeCondition("defensive", 99);
                 }
                 CombatHelpers.startTurn.push(f);
             });

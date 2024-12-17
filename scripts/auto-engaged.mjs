@@ -6,7 +6,7 @@ export default class AutoEngaged {
           let condition = payload.condition;
           let actorId = payload.actorId; 
           let actor = game.actors.get(actorId);
-          let owner = game.wfrp4e.utility.getActiveDocumentOwner(actor);
+          let owner = warhammer.utility.getActiveDocumentOwner(actor);
           if (owner.id == game.user.id) {
             await actor.addCondition(condition);
           }

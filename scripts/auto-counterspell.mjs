@@ -2,7 +2,7 @@ export default class AutoCounterSpell {
 
     setup() {
         if (game.settings.get("wfrp4e-pl-addons", "counterSpells.Enable")) {
-            let updateCombatCasters = async function (combat, currentCombatant) {
+            let updateCombatCasters = async function (combat, updateData) {
                 if (game.user.isGM && combat.active) {
                     let casters = combat.getFlag('wfrp4e-pl-addons', 'casters');
                     if (!casters) {
@@ -32,7 +32,7 @@ export default class AutoCounterSpell {
                     const actorId = button.attr("data-actor");
                     const messageId = button.parents('.message').prev().attr("data-message-id");
                     const message = game.messages.get(messageId);
-                    const test = message.getTest();
+                    const test = message.system.test;
                     const token = game.scenes.current.tokens.get(tokenId);
                     await test.createOpposedMessage(token);
                     
@@ -102,7 +102,7 @@ export default class AutoCounterSpell {
 
                         const messageId = attackerTest.data.context.messageId;
                         const message = game.messages.get(messageId);
-                        const test = message.getTest();
+                        const test = message.system.test;
                         test.preData.SL = opposedData.data.opposeResult.differenceSL;
                         await test.updateMessageFlags();
                         await test.computeResult();

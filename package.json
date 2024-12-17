@@ -1,18 +1,24 @@
 {
   "devDependencies": {
+    "@eslint/js": "^9.6.0",
     "@foundryvtt/foundryvtt-cli": "1.0.2",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@stylistic/eslint-plugin-js": "^2.3.0",
     "cross-env": "^7.0.3",
-    "fs": "^0.0.1-security",
-    "fs-extra": "^10.1.0",
-    "path": "^0.12.7",
-    "rollup": "^4.13.0",
-    "rollup-plugin-copy": "^3.5.0",
-    "rollup-plugin-copy-watch": "^0.0.1",
-    "rollup-plugin-jscc": "^2.0.0"
+    "eslint": "^9.6.0",
+    "eslint-plugin-jsdoc": "^48.5.2",
+    "rollup": "^4.18.0",
+    "rollup-plugin-copy": "^3.5.0"
   },
   "scripts": {
-    "build": "cross-env NODE_ENV=development rollup --config rollup.config.js --watch",
+    "build": "cross-env NODE_ENV=development rollup --config rollup.config.js",
     "pack": "node dbpacker.js"
   },
-  "type" : "module"
+  "type": "module",
+  "dependencies": {
+    "eslint-linter-browserify": "^9.12.0",
+    "rollup-plugin-copy-watch": "^0.0.1",
+    "rollup-plugin-jscc": "^2.0.0",
+    "rollup-plugin-watch": "^1.0.4"
+  }
 }

@@ -209,8 +209,8 @@ export default class WindsOfMagic {
                     return;
                 }
                 const combat = game.combats.active;
-                if (combat && combat.round != 0 && combat.turns && combat.active && app?.getTest) {//combat started
-                    let test = app.getTest();
+                if (combat && combat.round != 0 && combat.turns && combat.active && app?.system?.test) {//combat started
+                    let test = app.system.test;
                     if ((test?.constructor?.name == "WomCastTest" && test.result.castOutcome == "success") ||
                         (test?.constructor?.name == "WeaponTest" && test.result.outcome == "success" && test.weapon?.areaEffects?.length)) {
                         let newMessage = jQuery(html).find(".message-content").append(jQuery('<div class="card-content"><a class="chat-button card-track-spell" style="width: 100%">Śledź zaklęcie / Efekt</a></div>'))
@@ -218,7 +218,7 @@ export default class WindsOfMagic {
                             let messageId = messageData.message._id;
                             let userId = messageData.user.id;
                             let message = game.messages.get(messageId);
-                            let test = message.getTest();
+                            let test = message.system.test;
                                 
                             let spells = combat.getFlag('wfrp4e-pl-addons', 'spells');
                             if (!spells) {

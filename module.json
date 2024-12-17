@@ -9,7 +9,7 @@
     }
   ],
   "esmodules": [
-    "/scripts/main.mjs"
+    "/dist/main.js"
   ],
   "languages": [
     {
@@ -76,7 +76,7 @@
     ]
   },
   "compatibility": {
-    "minimum": "11",
+    "minimum": "12",
     "verified": "12",
     "maximum": "12"
   }

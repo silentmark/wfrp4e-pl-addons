@@ -11,7 +11,7 @@ export default class SocketTests {
         let actorId = payload.actorId; 
         let messageId = payload.socketMessageId;
         let actor = game.actors.get(actorId);
-        let owner = game.wfrp4e.utility.getActiveDocumentOwner(actor);
+        let owner = warhammer.utility.getActiveDocumentOwner(actor);
         if (owner.id == game.user.id) {
             for (let propName of dialogData.datasets) {
                 if (dialogData.data[propName]) {
@@ -26,7 +26,7 @@ export default class SocketTests {
     Reflect.defineProperty(ActorWFRP4e.prototype, "_setupSocketTest", { value:
         async function (dialogData, dialogClassName) {
             const isSocketTest = SocketTests.isSocketTest();
-            let owner = game.wfrp4e.utility.getActiveDocumentOwner(this);
+            let owner = warhammer.utility.getActiveDocumentOwner(this);
             if (owner.id != game.user.id && isSocketTest) {
                 owner.updateTokenTargets([]);
                 owner.updateTokenTargets(Array.from(game.user.targets.map(x=>x.id)));

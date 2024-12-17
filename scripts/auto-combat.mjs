@@ -131,18 +131,18 @@ export default class AutoCombat {
       });
 
       Hooks.on("renderChatMessage", async (app, html, messageData) => {
-        if (!game.user.isGM || !game.combat?.active || !app.getTest) {
+        if (!game.user.isGM || !game.combat?.active || !app?.system?.test) {
           return;
         }
 
-        let castTest = app.getTest();
+        let castTest = app.system.test;
         if (castTest?.constructor?.name == "WomCastTest" && castTest.result.castOutcome == "success") {
           let newMessage = jQuery(html).find(".message-content").append(jQuery('<div class="card-content"><a class="chat-button card-apply-spell" style="width: 100%">Zastosuj do wszystkich Celów</a></div>'))
           newMessage.find(".card-apply-spell").click(async function () {
             let messageId = messageData.message._id;
             let userId = messageData.user.id;
             let message = game.messages.get(messageId);
-            let castTest = message.getTest();
+            let castTest = message.system.test;
             let user = game.users.get(userId)
             let targets = Array.from(user.targets).map(t => t.actor.speakerData(t.document))
 
@@ -164,7 +164,7 @@ export default class AutoCombat {
               }
 
               message = game.messages.get(messageId);
-              castTest = message.getTest();
+              castTest = message.system.test;
               for(let i = 0; i < castTest.opposedMessages.length; i++) {
                 let opposeMessage = castTest.opposedMessages[i];
                 if (opposeMessage) {
@@ -174,7 +174,7 @@ export default class AutoCombat {
               }
 
               message = game.messages.get(messageId);
-              castTest = message.getTest();
+              castTest = message.system.test;
               for(let i = 0; i < castTest.opposedMessages.length; i++) {
                 let opposeMessage = castTest.opposedMessages[i];
                 if (opposeMessage) {

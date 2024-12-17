@@ -1,4 +1,4 @@
-export default class AreaHelpersExtension {
+class AreaHelpersExtension {
     setup() {
         if (game.settings.get("wfrp4e-pl-addons", "templateCollisionMethod") != 'default') {
 
@@ -217,3 +217,5 @@ export default class AreaHelpersExtension {
         }
     }
 }
+
+export { AreaHelpersExtension as default };
