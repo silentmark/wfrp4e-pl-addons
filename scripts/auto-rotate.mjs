@@ -54,7 +54,7 @@ export default class AutoRotate {
                     }
                     else if ((attackAngle >= rearRange1Min && attackAngle <= rearRange1Max) || attackAngle >= rearRange2Min && attackAngle <= rearRange2Max) {
                         let newScript = new WarhammerScript({
-                            script: 'args.prefillModifiers.modifier += ' + flankingBonus,
+                            script: 'args.fields.modifier += ' + flankingBonus,
                             label:  `Atak z flanki (+${flankingBonus})`,
                             trigger: 'dialog',
                             options: { activateScript: "return true" }
@@ -63,7 +63,7 @@ export default class AutoRotate {
                     }
                     else if (attackAngle > backRange1Min && attackAngle < backRange1Max) {
                         let newScript = new WarhammerScript({
-                            script: 'args.prefillModifiers.modifier += ' + backBonus,
+                            script: 'args.fields.modifier += ' + backBonus,
                             label:  `Atak od tyłu (+${backBonus})`,
                             trigger: 'dialog',
                             options: { activateScript: "return true" }

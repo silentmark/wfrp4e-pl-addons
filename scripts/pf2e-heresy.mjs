@@ -32,7 +32,7 @@ export default class PF2eHeresy {
                         {
                             label : game.i18n.localize("EFFECT.DualWielder"),
                             trigger : "dialog",
-                            script : `args.prefillModifiers.modifier += 10`,
+                            script : `args.fields.modifier += 10`,
                             options : {
                                 hideScript : `return !args.item?.system.attackType || !this.actor.hasCondition('multiattacks') || !this.actor.has(game.i18n.localize("NAME.DualWielder"), "talent")`,
                                 activateScript : `return args.item?.system.attackType && this.actor.hasCondition('multiattacks') && this.actor.has(game.i18n.localize("NAME.DualWielder"), "talent")`
@@ -56,7 +56,7 @@ export default class PF2eHeresy {
                         {
                             trigger: "dialog",
                             label : game.i18n.localize("WFRP4E.ConditionName.Multiattacks"),
-                            script : `args.prefillModifiers.modifier -= (this.effect.conditionValue * 30)`,
+                            script : `args.fields.modifier -= (this.effect.conditionValue * 30)`,
                             options : {
                                 hideScript : "return !args.item?.system.attackType && !args.skill?.name?.includes(game.i18n.localize('NAME.Dodge'))",
                                 activateScript : "return args.item?.system.attackType || args.skill?.name?.includes(game.i18n.localize('NAME.Dodge'))"
@@ -80,7 +80,7 @@ export default class PF2eHeresy {
                         {
                             trigger: "dialog",
                             label : game.i18n.localize("WFRP4E.ConditionName.Multichannelling"),
-                            script : `args.prefillModifiers.modifier -= (this.effect.conditionValue * 30)`,
+                            script : `args.fields.modifier -= (this.effect.conditionValue * 30)`,
                             options : {
                                 hideScript : "return args.type != 'channelling'",
                                 activateScript : "return args.type == 'channelling'"
@@ -114,7 +114,7 @@ export default class PF2eHeresy {
                         {
                             label : game.i18n.localize("WFRP4E.ConditionName.Defensive"),
                             trigger : "dialog",
-                            script : `args.prefillModifiers.modifier += 20`,
+                            script : `args.fields.modifier += 20`,
                             options : {
                                 hideScript : "return !this.actor.isOpposing",
                                 activateScript : `return this.actor.isOpposing`
@@ -123,23 +123,36 @@ export default class PF2eHeresy {
                     ]
                 }
             };
-
-            Hooks.on("createToken", async (token, data, user) => {
-                if (!game.user.isGM) return;
-                
-                if (!game.combat?.active) {
-                    if (token.actor.getFlag("wfrp4e", "oldTexture") == undefined) {
-                        let oldTexture = token.actor.prototypeToken.texture.src;
-                        await token.actor.setFlag("wfrp4e", "oldTexture", oldTexture);
-                    }
-                    setTimeout(() => token.update({texture: {src: token.actor.img}}), 500);
-                } else {
-                    let oldTexture = token.actor.getFlag("wfrp4e", "oldTexture");
-                    if (oldTexture) {
-                        setTimeout(() => token.update({texture: {src: oldTexture}}), 500);
-                    }
+            
+            const aiming = {
+                img: "icons/svg/shield.svg",
+                id: "aim",
+                statuses : ["aim"],
+                name: game.i18n.localize("WFRP4E.ConditionName.Aim"),
+                system: {
+                    condition : { },
+                    scriptData : [
+                        {
+                            label : game.i18n.localize("WFRP4E.ConditionName.Aim") + " - Kara do obrony",
+                            trigger : "dialog",
+                            script : `args.fields.modifier -= 30`,
+                            options : {
+                                hideScript : "return args.item?.system.attackType != 'melee' && !args.skill?.name?.includes(game.i18n.localize('NAME.Dodge'))",
+                                activateScript : "return args.item?.system.attackType == 'melee' || args.skill?.name?.includes(game.i18n.localize('NAME.Dodge'))"
+                            }
+                        },
+                        {
+                            label : game.i18n.localize("WFRP4E.ConditionName.Aim") + " - Bonus do ataku dystansowego",
+                            trigger : "dialog",
+                            script : `args.fields.SL += args.actor.system.characteristics.bs.bonus`,
+                            options : {
+                                hideScript : "return args.item?.system.attackType != 'melee' && !args.skill?.name?.includes(game.i18n.localize('NAME.Dodge'))",
+                                activateScript : "return args.item?.system.attackType == 'melee' || args.skill?.name?.includes(game.i18n.localize('NAME.Dodge'))"
+                            }
+                        }
+                    ],
                 }
-            });
+            };
 
             Hooks.on("ready", () => {
 
@@ -174,6 +187,9 @@ export default class PF2eHeresy {
                     game.wfrp4e.config.statusEffects.splice(9, 0, defensive);
                     game.wfrp4e.config.conditions.defensive = "Pozycja obronna";
 
+                    game.wfrp4e.config.statusEffects.splice(9, 0, aiming);
+                    game.wfrp4e.config.conditions.defensive = "Celowanie";
+
                     game.wfrp4e.config.systemEffects.dualwielder = dualwielder;
                     delete game.wfrp4e.config.systemItems.defensive;
 
@@ -185,6 +201,7 @@ export default class PF2eHeresy {
 
                     game.wfrp4e.config.conditionDescriptions['defensive'] = "<b>Pozycja obronna</b>: 1 akcja, zapewnia +20 do następnej tury podczas obrony. Jeśli postać ma Tarczę, jej punkty pancerza liczą się wyłącznie jeśli postać wykorzysta tę akcję. Dodatkowo, jeśli postać ma Tarczę, korzystając z tej akcji może blokować ataki dystansowe, które są wymierzone na wprost w nią."
                     
+                    game.wfrp4e.config.conditionDescriptions['aim'] = "<b>Celowanie</b>: 1 akcja, zapewnia +Bonus US SL do następnej tury podczas ataków dystansowych. Niestety, z powodu skupienia na celu, postać jest bardziej podatna na ataki w walce wręcz (-30 do unikow i parowania)."
 
                     const bleeding = game.wfrp4e.config.statusEffects.find(x => x.id == "bleeding");
                     bleeding.system = bleeding.system || {};
@@ -539,6 +556,7 @@ export default class PF2eHeresy {
                     await combat.combatant.actor.removeCondition("multichannelling", 99);
                     await combat.combatant.actor.removeCondition("multispell", 99);
                     await combat.combatant.actor.removeCondition("defensive", 99);
+                    await combat.combatant.actor.removeCondition("aim", 99);
                 }
                 CombatHelpers.startTurn.push(f);
             });

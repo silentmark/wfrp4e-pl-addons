@@ -17,7 +17,7 @@ export default class PrayerNerf {
                 const modifier = prayers[args.item.id] * -10;
                 tooltip += ` (${modifier})`;
                 let newScript = new WarhammerScript({
-                    script: 'args.prefillModifiers.modifier += ' + modifier,
+                    script: 'args.fields.modifier += ' + modifier,
                     label:  tooltip,
                     trigger: 'dialog',
                     options: {  activateScript: "return true" }

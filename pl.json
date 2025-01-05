@@ -13,6 +13,8 @@
    "WFRP4E.ConditionName.Multiattacks": "Atak Wielokrotny",
    "WFRP4E.ConditionName.Multichannelling": "Wielokrotne Splatanie",
    "WFRP4E.ConditionName.Multispell": "Wielokrotne Czarowanie",
+   "WFRP4E.ConditionName.Defensive": "Pozycja Obronna",
+   "WFRP4E.ConditionName.Aim": "Celowanie",
 
    "wfrp4epladdon.alternativeArmour.Enable": "Aktywuj alternatywne zasady Pancerzy", 
    "wfrp4epladdon.alternativeArmour.EnableHint": "Zmienia kategorie pancerzy oraz zasady ich łączenia oraz udostępnia dodatkowe kompendium z dedykowanymi pancerzami.", 

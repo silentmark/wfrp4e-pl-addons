@@ -147,7 +147,7 @@ export default class AutoOutnumbered {
           if (outnumbering >= 0) {
             const outnumberFinalModifier = Math.min(outnumbering * outnumberingModifier, maxOutnumberingMultiplier * outnumberingModifier);
             let newScript = new WarhammerScript({
-              script: 'args.prefillModifiers.modifier += ' + outnumberFinalModifier,
+              script: 'args.fields.modifier += ' + outnumberFinalModifier,
               label: tooltip,
               trigger: 'dialog',
               options: { activateScript: "return true" }

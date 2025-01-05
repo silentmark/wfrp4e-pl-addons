@@ -80,7 +80,7 @@ export default class WindsOfMagic {
                                             scriptData: [{
                                                 label: 'Wiatry Magii (' + wind + ')',
                                                 trigger: "dialog",
-                                                script : `args.prefillModifiers.modifier += ${modifier};`,
+                                                script : `args.fields.modifier += ${modifier};`,
                                                 options : {
                                                     hideScript : `return args.type != 'channelling' || game.wfrp4e.config.magicWind[args.item?.lore?.value] != '${wind}'`,
                                                     activateScript : `return args.type == "channelling" && game.wfrp4e.config.magicWind[args.item?.lore?.value] == '${wind}'`
@@ -105,7 +105,7 @@ export default class WindsOfMagic {
                                             scriptData: [{
                                                     trigger: "dialog",
                                                     label: "@effect.name",                                            
-                                                    script : "args.prefillModifiers.slBonus += 1;",
+                                                    script : "args.fields.slBonus += 1;",
                                                     options : {
                                                         hideScript : "return args.type != 'cast'",
                                                         activateScript : "return args.type == 'cast'"
