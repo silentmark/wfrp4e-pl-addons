@@ -3,77 +3,6 @@ import { constants } from './constants.mjs';
 
 export default class Diseases {
 
-  /*
-            symptoms.malaise = "WFRP4EADDON.Symptom.Malaise";
-            symptoms.malaiseModerate = "WFRP4EADDON.Symptom.MalaiseModerate";
-            symptoms.malaiseSevere = "WFRP4EADDON.Symptom.MalaiseSevere";
-            
-            symptoms.flux = "WFRP4EADDON.Symptom.Flux";
-            symptoms.fluxModerate = "WFRP4EADDON.Symptom.FluxModerate";
-            symptoms.fluxSevere = "WFRP4EADDON.Symptom.FluxSevere";
-  
-            symptoms.buboes = "WFRP4EADDON.Symptom.Buboes";
-            symptoms.buboesModerate = "WFRP4EADDON.Symptom.BuboesModerate";
-            symptoms.buboesSevere = "WFRP4EADDON.Symptom.BuboesSevere";
-  
-            symptoms.gangrene = "WFRP4EADDON.Symptom.Gangrene";
-  
-            symptoms.fever = "WFRP4EADDON.Symptom.Fever";
-            symptoms.feverModerate = "WFRP4EADDON.Symptom.FeverModerate";
-            symptoms.feverSevere = "WFRP4EADDON.Symptom.FeverSevere";
-  
-            symptoms.coughsAndSneezes = "WFRP4EADDON.Symptom.CoughsAndSneezes";
-            symptoms.coughsAndSneezesModerate = "WFRP4EADDON.Symptom.CoughsAndSneezesModerate";
-            symptoms.coughsAndSneezesSevere = "WFRP4EADDON.Symptom.CoughsAndSneezesSevere";
-  
-            symptoms.convulsions = "WFRP4EADDON.Symptom.Convulsions";
-            symptoms.convulsionsModerate = "WFRP4EADDON.Symptom.ConvulsionsModerate";
-            symptoms.convulsionsSevere = "WFRP4EADDON.Symptom.ConvulsionsSevere";
-  
-            symptoms.nausea = "WFRP4EADDON.Symptom.Nausea";
-            symptoms.nauseaModerate = "WFRP4EADDON.Symptom.NauseaModerate";
-            symptoms.nauseaSevere = "WFRP4EADDON.Symptom.NauseaSevere";
-  
-            symptoms.lingering = "WFRP4EADDON.Symptom.Lingering";
-            symptoms.lingeringModerate = "WFRP4EADDON.Symptom.LingeringModerate";
-            symptoms.lingeringSevere = "WFRP4EADDON.Symptom.LingeringSevere";
-  
-            symptoms.wounded = "WFRP4EADDON.Symptom.Wounded";
-            symptoms.woundedModerate = "WFRP4EADDON.Symptom.WoundedModerate";
-            symptoms.woundedSevere = "WFRP4EADDON.Symptom.WoundedSevere";
-  
-            symptoms.blight = "WFRP4EADDON.Symptom.Blight";
-            symptoms.blightModerate = "WFRP4EADDON.Symptom.BlightModerate";
-            symptoms.blightSevere = "WFRP4EADDON.Symptom.BlightSevere";
-  
-            symptoms.pox = "WFRP4EADDON.Symptom.Pox";
-            symptoms.poxModerate = "WFRP4EADDON.Symptom.PoxModerate";
-            symptoms.poxSevere = "WFRP4EADDON.Symptom.PoxSevere";
-  
-            symptoms.vertigo = "WFRP4EADDON.Symptom.Vertigo";
-            symptoms.vertigoModerate = "WFRP4EADDON.Symptom.VertigoModerate";
-            symptoms.vertigoSevere = "WFRP4EADDON.Symptom.VertigoSevere";
-  
-            symptoms.purblind = "WFRP4EADDON.Symptom.Purblind";
-            symptoms.purblindModerate = "WFRP4EADDON.Symptom.PurblindModerate";
-            symptoms.purblindSevere = "WFRP4EADDON.Symptom.PurblindSevere";
-  
-            symptoms.wasting = "WFRP4EADDON.Symptom.Wasting";
-            symptoms.wastingModerate = "WFRP4EADDON.Symptom.WastingModerate";
-            symptoms.wastingSevere = "WFRP4EADDON.Symptom.WastingSevere";
-  
-            symptoms.dementia = "WFRP4EADDON.Symptom.Dementia";
-            symptoms.dementiaModerate = "WFRP4EADDON.Symptom.DementiaModerate";
-            symptoms.dementiaSevere = "WFRP4EADDON.Symptom.DementiaSevere";
-  
-            symptoms.delirium = "WFRP4EADDON.Symptom.Delirium";
-            symptoms.swelling = "WFRP4EADDON.Symptom.Swelling";
-  */
-
-
-
-
-
   symptomEffects = {
     blight: {
       name: "Uwiąd (Lekki)",
@@ -86,7 +15,7 @@ export default class Diseases {
           label: "Uwiąd (Lekki)",
           trigger: "manual",
           script: ` let difficulty = "veasy";
-                    let test = await args.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {context : {failure : args.actor.name + " umiera z powodu Uwiądu"}, absolute: {difficulty}, appendTitle : " - Uwiąd"});
+                    let test = await args.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {context : {failure : args.actor.name + " umiera z powodu Uwiądu"}, fields: {difficulty}, appendTitle : " - Uwiąd"});
                     await test.roll();
                     if (test.result.outcome == "failure") {
                             await args.actor.addCondition("dead");
@@ -112,18 +41,18 @@ export default class Diseases {
           label: "Uwiąd (Umiarkowany)",
           trigger: "manual",
           script: ` let difficulty = "easy";
-                    let test = await args.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {context : {failure : args.actor.name + " umiera z powodu Uwiądu"}, absolute: {difficulty}, appendTitle : " - Uwiąd"});
+                    let test = await args.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {context : {failure : args.actor.name + " umiera z powodu Uwiądu"}, fields: {difficulty}, appendTitle : " - Uwiąd"});
                     await test.roll();
                     if (test.result.outcome == "failure") {
                             await args.actor.addCondition("dead");
                     }
                   `
         }]
-      }
-    },
-    flags: {
-      wfrp4e: {
-        symptom: true
+      },
+      flags: {
+        wfrp4e: {
+          symptom: true
+        }
       }
     },
 
@@ -138,19 +67,19 @@ export default class Diseases {
           label: "Uwiąd (Poważny)",
           trigger: "manual",
           script: ` let difficulty = "average";
-                    let test = await args.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {context : {failure : args.actor.name + " umiera z powodu Uwiądu"}, absolute: {difficulty}, appendTitle : " - Uwiąd"});
+                    let test = await args.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {context : {failure : args.actor.name + " umiera z powodu Uwiądu"}, fields: {difficulty}, appendTitle : " - Uwiąd"});
                     await test.roll();
                     if (test.result.outcome == "failure") {
                             await args.actor.addCondition("dead");
                     }
                   `
         }]
-      }
-    },
-    flags: {
-      wfrp4e: {
-        symptom: true
       },
+      flags: {
+        wfrp4e: {
+          symptom: true
+        },
+      }
     },
 
     buboes: {
@@ -163,18 +92,24 @@ export default class Diseases {
         scriptData: [{
           label: "Dymienica (Lekka)",
           trigger: "dialog",
-          script: `args.fields.modifier -= 5`,
+          script: `
+          if (args.characteristic == "ws" || args.characteristic == "bs") {
+            args.fields.modifier -= 10;
+          } else {
+            args.fields.modifier -= 5
+          }
+          `,
           options: {
-            hideScript: `return !["ws", "bs", "s", "fel", "ag", "t", "dex"].includes(args.characteristic)`,
-            activateScript: `return ["ws", "bs", "s", "fel", "ag", "t", "dex"].includes(args.characteristic)`,
+            hideScript: `return !["ws", "bs", "t", "s", "fel"].includes(args.characteristic)`,
+            activateScript: `return ["ws", "bs", "t", "s", "fel"].includes(args.characteristic)`,
           }
         }]
-      }
-    },
-    flags: {
-      wfrp4e: {
-        symptom: true
       },
+      flags: {
+        wfrp4e: {
+          symptom: true
+        },
+      }
     },
 
     buboesModerate: {
@@ -187,17 +122,23 @@ export default class Diseases {
         scriptData: [{
           label: "Dymienica (Umiarkowana)",
           trigger: "dialog",
-          script: `args.fields.modifier -= 10`,
+          script: `
+          if (args.characteristic == "ws" || args.characteristic == "bs") {
+            args.fields.modifier -= 20;
+          } else {
+            args.fields.modifier -= 15
+          }
+          `,
           options: {
-            hideScript: `return !["ws", "bs", "s", "fel", "ag", "t", "dex"].includes(args.characteristic)`,
-            activateScript: `return ["ws", "bs", "s", "fel", "ag", "t", "dex"].includes(args.characteristic)`,
+            hideScript: `return !["ws", "bs", "t", "s", "fel"].includes(args.characteristic)`,
+            activateScript: `return ["ws", "bs", "t", "s", "fel"].includes(args.characteristic)`,
           }
         }]
-      }
-    },
-    flags: {
-      wfrp4e: {
-        symptom: true
+      },
+      flags: {
+        wfrp4e: {
+          symptom: true
+        },
       },
     },
 
@@ -211,21 +152,21 @@ export default class Diseases {
         scriptData: [{
           label: "Dymienica (Poważna)",
           trigger: "dialog",
-          script: `args.fields.modifier -= 20`,
+          script: `args.fields.modifier -= 30`,
           options: {
-            hideScript: `return !["ws", "bs", "s", "fel", "ag", "t", "dex"].includes(args.characteristic)`,
-            activateScript: `return ["ws", "bs", "s", "fel", "ag", "t", "dex"].includes(args.characteristic)`,
+            hideScript: `return !["ws", "bs", "t", "s", "fel"].includes(args.characteristic)`,
+            activateScript: `return ["ws", "bs", "t", "s", "fel"].includes(args.characteristic)`,
           }
         }]
-      }
-    },
-    flags: {
-      wfrp4e: {
-        symptom: true
+      },
+      flags: {
+        wfrp4e: {
+          symptom: true
+        },
       },
     },
 
-    "convulsions": {
+    convulsions: {
       name: "Konwulsje (Lekkie)",
       img: "modules/wfrp4e-core/icons/diseases/disease.png",
       system: {
@@ -236,10 +177,10 @@ export default class Diseases {
           {
             trigger: "dialog",
             label: "Konwulsje (Lekkie)",
-            script: `args.fields.modifier -= 10;`,
+            script: `args.fields.SL -= 2;`,
             options: {
-              hideScript: `return !["ws", "bs", "s", "ag", "t", "dex"].includes(args.characteristic)`,
-              activateScript: `return ["ws", "bs", "s", "ag", "t", "dex"].includes(args.characteristic)`,
+              hideScript: `return !["ws", "bs", "dex", "ag", "wp"].includes(args.characteristic)`,
+              activateScript: `return ["ws", "bs", "dex", "ag", "wp"].includes(args.characteristic)`,
             }
           }
         ]
@@ -251,7 +192,7 @@ export default class Diseases {
       },
     },
 
-    "convulsionsModerate": {
+    convulsionsModerate: {
       name: "Konwulsje (Umiarkowane)",
       img: "modules/wfrp4e-core/icons/diseases/disease.png",
       system: {
@@ -262,10 +203,10 @@ export default class Diseases {
           {
             trigger: "dialog",
             label: "Konwulsje (Umiarkowane)",
-            script: `args.fields.modifier -= 20;`,
+            script: `args.fields.SL -= 4;`,
             options: {
-              hideScript: `return !["ws", "bs", "s", "ag", "t", "dex"].includes(args.characteristic)`,
-              activateScript: `return ["ws", "bs", "s", "ag", "t", "dex"].includes(args.characteristic)`,
+              hideScript: `return !["ws", "bs", "dex", "ag", "wp"].includes(args.characteristic)`,
+              activateScript: `return ["ws", "bs", "dex", "ag", "wp"].includes(args.characteristic)`,
             }
           }
         ]
@@ -277,7 +218,7 @@ export default class Diseases {
       },
     },
 
-    "convulsionsSevere": {
+    convulsionsSevere: {
       name: "Konwulsje (Poważne)",
       img: "modules/wfrp4e-core/icons/diseases/disease.png",
       system: {
@@ -288,10 +229,10 @@ export default class Diseases {
           {
             trigger: "dialog",
             label: "Konwulsje (Poważne) - Unieruchomienie",
-            script: `args.fields.modifier -= 200;`,
+            script: `args.fields.SL -= 6;`,
             options: {
-              hideScript: `return !["ws", "bs", "s", "ag", "t", "dex"].includes(args.characteristic)`,
-              activateScript: `return ["ws", "bs", "s", "ag", "t", "dex"].includes(args.characteristic)`,
+              hideScript: `return !["ws", "bs", "dex", "ag", "wp"].includes(args.characteristic)`,
+              activateScript: `return ["ws", "bs", "dex", "ag", "wp"].includes(args.characteristic)`,
             }
           }
         ]
@@ -303,7 +244,7 @@ export default class Diseases {
       },
     },
 
-    "fever": {
+    fever: {
       name: "Gorączka (Lekka)",
       img: "modules/wfrp4e-core/icons/diseases/disease.png",
       flags: {
@@ -321,15 +262,15 @@ export default class Diseases {
             label: "Gorączka (Lekka)",
             script: `args.fields.modifier -= 10`,
             options: {
-              hideScript: `return !["ws", "bs", "s", "fel", "ag", "t", "dex"].includes(args.characteristic)`,
-              activateScript: `return ["ws", "bs", "s", "fel", "ag", "t", "dex"].includes(args.characteristic)`,
+              hideScript: `return !["ws", "bs", "i", "t", "int"].includes(args.characteristic)`,
+              activateScript: `return ["ws", "bs", "i", "t", "int"].includes(args.characteristic)`,
             }
           }
         ]
       }
     },
 
-    "feverModerate": {
+    feverModerate: {
       name: "Gorączka (Umiarkowana)",
       img: "modules/wfrp4e-core/icons/diseases/disease.png",
       flags: {
@@ -347,14 +288,15 @@ export default class Diseases {
             label: "Gorączka (Umiarkowana)",
             script: `args.fields.modifier -= 20`,
             options: {
-              activateScript: `return true`,
+              hideScript: `return !["ws", "bs", "i", "t", "int", "s", "fel", "dex"].includes(args.characteristic)`,
+              activateScript: `return ["ws", "bs", "i", "t", "int", "s", "fel", "dex"].includes(args.characteristic)`,
             }
           }
         ]
       }
     },
 
-    "feverSevere": {
+    feverSevere: {
       name: "Gorączka (Poważna)",
       img: "modules/wfrp4e-core/icons/diseases/disease.png",
       flags: {
@@ -369,17 +311,29 @@ export default class Diseases {
         scriptData: [
           {
             trigger: "dialog",
-            label: "Gorączka (Poważna) - Utrata Przytomności",
-            script: `args.fields.modifier -= 200`,
+            label: "Gorączka (Poważna)",
+            script: `args.fields.modifier -= 40`,
             options: {
               activateScript: `return true`,
             }
+          },
+          {
+            trigger: "rollTest",
+            label: "Utrata Przytomności",
+            script: `
+            if (args.test.failed) {
+              let test = await this.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {fields: {difficulty : "average"}, appendTitle : " - Utrata przytomoności z gorączki"});
+              await test.roll();
+              if (test.failed) {
+                  this.actor.addCondition("unconscious")
+              }
+          }`
           }
         ]
       }
     },
 
-    "flux": {
+    flux: {
       name: "Biegunka (Lekka)",
       img: "modules/wfrp4e-core/icons/diseases/disease.png",
       transfer: true,
@@ -390,7 +344,7 @@ export default class Diseases {
       },
     },
 
-    "fluxModerate": {
+    fluxModerate: {
       name: "Biegunka (Umiarkowana)",
       img: "modules/wfrp4e-core/icons/diseases/disease.png",
       transfer: true,
@@ -401,7 +355,7 @@ export default class Diseases {
       },
     },
 
-    "fluxSevere": {
+    fluxSevere: {
       name: "Biegunka (Poważna)",
       img: "modules/wfrp4e-core/icons/diseases/disease.png",
       transfer: true,
@@ -412,7 +366,7 @@ export default class Diseases {
       },
     },
 
-    "gangrene": {
+    gangrene: {
       name: "Gangrena",
       img: "modules/wfrp4e-core/icons/diseases/disease.png",
       flags: {
@@ -454,7 +408,7 @@ export default class Diseases {
             trigger: "manual",
             label: "Uwiąd (Umiarkowany)",
             script: ` let difficulty = "easy";
-                    let test = await args.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {context : {failure : args.actor.name + " umiera z powodu Uwiądu"}, absolute: {difficulty}, appendTitle : " - Uwiąd"});
+                    let test = await args.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {context : {failure : args.actor.name + " umiera z powodu Uwiądu"}, fields: {difficulty}, appendTitle : " - Uwiąd"});
                     await test.roll();
                     if (test.result.outcome == "failure") {
                             await args.actor.addCondition("dead");
@@ -465,8 +419,8 @@ export default class Diseases {
       }
     },
 
-    "lingering": {
-      name: "Nawroty (Sporadyczne)",
+    lingering: {
+      name: "Nawroty (Bardzo Łatwy)",
       img: "modules/wfrp4e-core/icons/diseases/disease.png",
       flags: {
         wfrp4e: {
@@ -475,8 +429,8 @@ export default class Diseases {
       },
     },
 
-    "lingeringModerate": {
-      name: "Nawroty (Umiarkowane)",
+    lingeringModerate: {
+      name: "Nawroty (Łatwy)",
       img: "modules/wfrp4e-core/icons/diseases/disease.png",
       flags: {
         wfrp4e: {
@@ -485,8 +439,8 @@ export default class Diseases {
       },
     },
 
-    "lingeringSevere": {
-      name: "Nawroty (Poważne)",
+    lingeringSevere: {
+      name: "Nawroty (Przeciętny)",
       img: "modules/wfrp4e-core/icons/diseases/disease.png",
       flags: {
         wfrp4e: {
@@ -495,7 +449,7 @@ export default class Diseases {
       },
     },
 
-    "coughsAndSneezes": {
+    coughsAndSneezes: {
       name: "Kaszel i katar (Lekki)",
       img: "modules/wfrp4e-core/icons/diseases/disease.png",
       flags: {
@@ -505,7 +459,7 @@ export default class Diseases {
       },
     },
 
-    "coughsAndSneezesModerate": {
+    coughsAndSneezesModerate: {
       name: "Kaszel i katar (Umiarkowany)",
       img: "modules/wfrp4e-core/icons/diseases/disease.png",
       system: {
@@ -526,7 +480,7 @@ export default class Diseases {
       }
     },
 
-    "coughsAndSneezesSevere": {
+    coughsAndSneezesSevere: {
       name: "Kaszel i katar (Poważny)",
       img: "modules/wfrp4e-core/icons/diseases/disease.png",
       flags: {
@@ -554,7 +508,7 @@ export default class Diseases {
       }
     },
 
-    "malaise": {
+    malaise: {
       name: "Apatia (Lekka)",
       img: "modules/wfrp4e-core/icons/diseases/disease.png",
       flags: {
@@ -582,7 +536,7 @@ export default class Diseases {
       }
     },
 
-    "malaiseModerate": {
+    malaiseModerate: {
       name: "Apatia (Umiarkowana)",
       img: "modules/wfrp4e-core/icons/diseases/disease.png",
       flags: {
@@ -616,7 +570,7 @@ export default class Diseases {
       }
     },
 
-    "malaiseSevere": {
+    malaiseSevere: {
       name: "Apatia (Poważna)",
       img: "modules/wfrp4e-core/icons/diseases/disease.png",
       flags: {
@@ -655,7 +609,7 @@ export default class Diseases {
       }
     },
 
-    "nausea": {
+    nausea: {
       name: "Nudności (Lekkie)",
       img: "modules/wfrp4e-core/icons/diseases/disease.png",
       flags: {
@@ -685,7 +639,7 @@ export default class Diseases {
       }
     },
 
-    "nauseaModerate": {
+    nauseaModerate: {
       name: "Nudności (Umiarkowane)",
       img: "modules/wfrp4e-core/icons/diseases/disease.png",
       flags: {
@@ -715,7 +669,7 @@ export default class Diseases {
       }
     },
 
-    "nauseaSevere": {
+    nauseaSevere: {
       name: "Nudności (Poważne)",
       img: "modules/wfrp4e-core/icons/diseases/disease.png",
       flags: {
@@ -746,7 +700,7 @@ export default class Diseases {
       }
     },
 
-    "pox": {
+    pox: {
       name: "Wysypka (Lekka)",
       img: "modules/wfrp4e-core/icons/diseases/disease.png",
       flags: {
@@ -772,7 +726,7 @@ export default class Diseases {
       }
     },
 
-    "poxModerate": {
+    poxModerate: {
       name: "Wysypka (Umiarkowana)",
       img: "modules/wfrp4e-core/icons/diseases/disease.png",
       flags: {
@@ -797,7 +751,7 @@ export default class Diseases {
       }
     },
 
-    "poxSevere": {
+    poxSevere: {
       name: "Wysypka (Poważna)",
       img: "modules/wfrp4e-core/icons/diseases/disease.png",
       flags: {
@@ -822,7 +776,7 @@ export default class Diseases {
       }
     },
 
-    "wounded": {
+    wounded: {
       name: "Uciążliwa Rana (Lekka)",
       img: "modules/wfrp4e-core/icons/diseases/disease.png",
       flags: {
@@ -854,7 +808,7 @@ export default class Diseases {
       }
     },
 
-    "woundedModerate": {
+    woundedModerate: {
       name: "Uciążliwa Rana (Umiarkowana)",
       img: "modules/wfrp4e-core/icons/diseases/disease.png",
       flags: {
@@ -886,7 +840,7 @@ export default class Diseases {
       }
     },
 
-    "woundedSevere": {
+    woundedSevere: {
       name: "Uciążliwa Rana (Poważna)",
       img: "modules/wfrp4e-core/icons/diseases/disease.png",
       flags: {
@@ -917,11 +871,379 @@ export default class Diseases {
         ]
       }
     },
+
+    vertigo: {
+      name: "Zawroty Głowy (Lekkie)",
+      img: "modules/wfrp4e-core/icons/diseases/disease.png",
+      flags: {
+        wfrp4e: {
+          symptom: true,
+        }
+      },
+      system: {
+        transferData: {
+          type: "document"
+        },
+        scriptData: [
+          {
+            label: "Zawroty Głowy (Lekkie)",
+            trigger: "dialog",
+            script: "args.fields.slBonus -= 10;",
+            options: {
+              activateScript: "return true;",
+              hideScript: `
+                    const applicableCharacteristics = ["ws", "bs", "ag", "int", "dex"];
+                    return args.type !== "weapon" && !applicableCharacteristics.includes(args.data.characteristic);
+                  `,
+              submissionScript: "",
+              targeter: false
+            }
+          }
+        ]
+      }
+    },
+
+    vertigoModerate: {
+      name: "Zawroty Głowy (Umiarkowane)",
+      img: "modules/wfrp4e-core/icons/diseases/disease.png",
+      flags: {
+        wfrp4e: {
+          symptom: true,
+        }
+      },
+      system: {
+        transferData: {
+          type: "document"
+        },
+        scriptData: [
+          {
+            label: "Zawroty Głowy (Umiarkowane)",
+            trigger: "dialog",
+            script: "args.fields.slBonus -= 30;",
+            options: {
+              activateScript: "return true;",
+              hideScript: `
+                    const applicableCharacteristics = ["ws", "bs", "ag", "int", "dex"];
+                    return args.type !== "weapon" && !applicableCharacteristics.includes(args.data.characteristic);
+                  `,
+              submissionScript: "",
+              targeter: false
+            }
+          }
+        ]
+      }
+    },
+
+    vertigoSevere: {
+      name: "Zawroty Głowy (Poważne)",
+      img: "modules/wfrp4e-core/icons/diseases/disease.png",
+      flags: {
+        wfrp4e: {
+          symptom: true,
+        }
+      },
+      system: {
+        transferData: {
+          type: "document"
+        },
+        scriptData: [
+          {
+            label: "Zawroty Głowy (Poważne)",
+            trigger: "dialog",
+            script: "args.fields.slBonus -= 50;",
+            options: {
+              activateScript: "return true;",
+              hideScript: `
+                const applicableCharacteristics = ["ws", "bs", "ag", "int", "dex"];
+                return args.type !== "weapon" && !applicableCharacteristics.includes(args.data.characteristic);
+              `,
+              submissionScript: "",
+              targeter: false
+            }
+          }
+        ]
+      }
+    },
+
+    pureblind: {
+      name: "Niedowidzenie (Lekkie)",
+      icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+      flags: {
+        wfrp4e: {
+          symptom: true,
+        }
+      },
+      system: {
+        transferData: {
+          type: "document"
+        },
+        scriptData: [
+          {
+            label: "Niedowidzenie (Lekkie)",
+            trigger: "dialog",
+            script: `args.fields.modifier -= 10;`,
+            options: {
+              activateScript: "return true;",
+              hideScript: `
+                let applicableSkills = ["NAME.Art",  "NAME.Dodge",  "NAME.Drive",  "NAME.Evaluate",  "NAME.Melee",  "NAME.Navigation",  "NAME.Perception",  "NAME.PickLock",  "NAME.Ranged",  "NAME.Research",  "NAME.Ride",  "NAME.Row",  "NAME.Sail",  "NAME.SecretSigns",  "NAME.SetTrap",  "NAME.Stealth",  "NAME.Track"];
+                applicableSkills = applicableSkills.map(s => game.i18n.localize(s));
+                let applicableCharacteristics = ["ws", "bs", "ag", "dex"];
+                
+                return !(
+                  (args.type === "weapon") ||
+                  (args.type === "characteristic" && applicableCharacteristics.includes(args.item)) ||
+                  (args.type === "skill" && applicableSkills.includes(args.item.name))
+                )
+              `,
+              submissionScript: ""
+            }
+          }
+        ]
+      }
+    },
+
+    pureblindModerate: {
+      name: "Niedowidzenie (Umiarkowane)",
+      icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+      flags: {
+        wfrp4e: {
+          symptom: true,
+        }
+      },
+      system: {
+        transferData: {
+          type: "document"
+        },
+        scriptData: [
+          {
+            label: "Niedowidzenie (Umiarkowane)",
+            trigger: "dialog",
+            script: `args.fields.modifier -= 20;`,
+            options: {
+              activateScript: "return true;",
+              hideScript: `
+                let applicableSkills = ["NAME.Art",  "NAME.Dodge",  "NAME.Drive",  "NAME.Evaluate",  "NAME.Melee",  "NAME.Navigation",  "NAME.Perception",  "NAME.PickLock",  "NAME.Ranged",  "NAME.Research",  "NAME.Ride",  "NAME.Row",  "NAME.Sail",  "NAME.SecretSigns",  "NAME.SetTrap",  "NAME.Stealth",  "NAME.Track"];
+                applicableSkills = applicableSkills.map(s => game.i18n.localize(s));
+                let applicableCharacteristics = ["ws", "bs", "ag", "dex"];
+                
+                return !(
+                  (args.type === "weapon") ||
+                  (args.type === "characteristic" && applicableCharacteristics.includes(args.item)) ||
+                  (args.type === "skill" && applicableSkills.includes(args.item.name))
+                )
+              `,
+              submissionScript: ""
+            }
+          }
+        ]
+      }
+    },
+
+    pureblindSevere: {
+      name: "Niedowidzenie (Poważne)",
+      icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+      flags: {
+        wfrp4e: {
+          symptom: true,
+        }
+      },
+      system: {
+        transferData: {
+          type: "document"
+        },
+        scriptData: [
+          {
+            label: "Niedowidzenie (Poważne)",
+            trigger: "dialog",
+            script: `args.fields.modifier -= 40;`,
+            options: {
+              activateScript: "return true;",
+              hideScript: `
+                let applicableSkills = ["NAME.Art",  "NAME.Dodge",  "NAME.Drive",  "NAME.Evaluate",  "NAME.Melee",  "NAME.Navigation",  "NAME.Perception",  "NAME.PickLock",  "NAME.Ranged",  "NAME.Research",  "NAME.Ride",  "NAME.Row",  "NAME.Sail",  "NAME.SecretSigns",  "NAME.SetTrap",  "NAME.Stealth",  "NAME.Track"];
+                applicableSkills = applicableSkills.map(s => game.i18n.localize(s));
+                let applicableCharacteristics = ["ws", "bs", "ag", "dex"];
+                
+                return !(
+                  (args.type === "weapon") ||
+                  (args.type === "characteristic" && applicableCharacteristics.includes(args.item)) ||
+                  (args.type === "skill" && applicableSkills.includes(args.item.name))
+                )
+              `,
+              submissionScript: ""
+            }
+          }
+        ]
+      }
+    },
+
+    wasting: {
+      name: "Wyniszczenie (Lekkie)",
+      img: "modules/wfrp4e-core/icons/diseases/disease.png",
+      flags: {
+        wfrp4e: {
+          symptom: true,
+        }
+      },
+      system: {
+        transferData: {
+          type: "document"
+        },
+        scriptData: [
+          {
+            label: "Wyniszczenie (Lekkie)",
+            trigger: "prePrepareData",
+            script: `
+            args.actor.system.characteristics.ws.modifier -= 10;
+            args.actor.system.characteristics.bs.modifier -= 10;
+            args.actor.system.characteristics.s.modifier -= 10;
+            args.actor.system.characteristics.t.modifier -= 10;
+            args.actor.system.characteristics.ag.modifier -= 10;
+            args.actor.system.characteristics.dex.modifier -= 10;
+          `
+          }
+        ]
+      }
+    },
+
+    wastingModerate: {
+      name: "Wyniszczenie (Umiarkowane)",
+      img: "modules/wfrp4e-core/icons/diseases/disease.png",
+      flags: {
+        wfrp4e: {
+          symptom: true,
+        }
+      },
+      system: {
+        transferData: {
+          type: "document"
+        },
+        scriptData: [
+          {
+            label: "Wyniszczenie (Umiarkowane)",
+            trigger: "prePrepareData",
+            script: `
+            args.actor.system.characteristics.ws.modifier -= 20;
+            args.actor.system.characteristics.bs.modifier -= 20;
+            args.actor.system.characteristics.s.modifier -= 20;
+            args.actor.system.characteristics.t.modifier -= 20;
+            args.actor.system.characteristics.ag.modifier -= 20;
+            args.actor.system.characteristics.dex.modifier -= 20;
+          `
+          }
+        ]
+      }
+    },
+
+    wastingSevere: {
+      name: "Wyniszczenie (Poważne)",
+      img: "modules/wfrp4e-core/icons/diseases/disease.png",
+      flags: {
+        wfrp4e: {
+          symptom: true,
+        }
+      },
+      system: {
+        transferData: {
+          type: "document"
+        },
+        scriptData: [
+          {
+            label: "Wyniszczenie (Poważne)",
+            trigger: "prePrepareData",
+            script: `
+            args.actor.system.characteristics.ws.modifier -= 30;
+            args.actor.system.characteristics.bs.modifier -= 30;
+            args.actor.system.characteristics.s.modifier -= 30;
+            args.actor.system.characteristics.t.modifier -= 30;
+            args.actor.system.characteristics.ag.modifier -= 30;
+            args.actor.system.characteristics.dex.modifier -= 30;
+          `
+          }
+        ]
+      }
+    },
+
+    dementia: {
+      name: "Demencja (Lekka)",
+      img: "modules/wfrp4e-core/icons/diseases/disease.png",
+      flags: {
+        wfrp4e: {
+          symptom: true,
+        }
+      },
+      system: {
+        transferData: {
+          type: "document"
+        },
+        scriptData: [
+          {
+            label: "Demencja (Lekka)",
+            trigger: "prePrepareData",
+            script: `
+            args.actor.system.characteristics.i.modifier -= 15;
+            args.actor.system.characteristics.int.modifier -= 15;
+            args.actor.system.characteristics.wp.modifier -= 15;
+            args.actor.system.characteristics.fel.modifier -= 15;
+          `
+          }
+        ]
+      }
+    },
+
+    dementiaModerate: {
+      name: "Demencja (Umiarkowana)",
+      img: "modules/wfrp4e-core/icons/diseases/disease.png",
+      flags: {
+        wfrp4e: {
+          symptom: true,
+        }
+      },
+      system: {
+        transferData: {
+          type: "document"
+        },
+        scriptData: [
+          {
+            label: "Demencja (Umiarkowana)",
+            trigger: "prePrepareData",
+            script: `
+            args.actor.system.characteristics.i.modifier -= 30;
+            args.actor.system.characteristics.int.modifier -= 30;
+            args.actor.system.characteristics.wp.modifier -= 30;
+            args.actor.system.characteristics.fel.modifier -= 30;
+          `
+          }
+        ]
+      }
+    },
+
+    dementiaSevere: {
+      name: "Demencja (Poważna)",
+      img: "modules/wfrp4e-core/icons/diseases/disease.png",
+      flags: {
+        wfrp4e: {
+          symptom: true,
+        }
+      },
+      system: {
+        transferData: {
+          type: "document"
+        },
+        scriptData: [
+          {
+            label: "Demencja (Poważna)",
+            trigger: "prePrepareData",
+            script: `
+            args.actor.system.characteristics.i.modifier -= 45;
+            args.actor.system.characteristics.int.modifier -= 45;
+            args.actor.system.characteristics.wp.modifier -= 45;
+            args.actor.system.characteristics.fel.modifier -= 45;
+          `
+          }
+        ]
+      }
+    }
   };
-
-
-
-
 
   setup() {
     if (game.settings.get("wfrp4e-pl-addons", "customDiseases.Enable")) {
@@ -1126,6 +1448,8 @@ export default class Diseases {
 
         symptomsTreat.delirium = "WFRP4EADDON.SymptomTreatment.Delirium";
         symptomsTreat.swelling = "WFRP4EADDON.SymptomTreatment.Swelling";
+
+        game.wfrp4e.config.symptomEffects = new Diseases().symptomEffects;
 
         for (let el in symptoms) {
           if (typeof symptoms[el] === "string") {
