@@ -155,25 +155,6 @@ export default class PF2eHeresy {
             };
 
             Hooks.on("ready", () => {
-
-                CombatHelpers.startCombat.push(async function(combat, data) {
-                    for (let token of game.canvas.tokens.placeables) {
-                        let oldTexture = token.actor.getFlag("wfrp4e", "oldTexture");
-                        if (oldTexture) {
-                            setTimeout(() => token.document.update({texture: {src: oldTexture}}), 500);
-                        }
-                    }
-                });
-                CombatHelpers.endCombat.push(async function(combat, data) {
-                    for (let token of game.canvas.tokens.placeables) {
-                        if (token.actor.getFlag("wfrp4e", "oldTexture") == undefined) {
-                            let oldTexture = token.actor.prototypeToken.texture.src;
-                            await token.actor.setFlag("wfrp4e", "oldTexture", oldTexture);
-                        }
-                        setTimeout(() => token.document.update({texture: {src: token.actor.img}}), 500);
-                    }
-                });
-
                 setTimeout(() => {
                     game.wfrp4e.config.statusEffects.splice(9, 0, multiattacks);
                     game.wfrp4e.config.conditions.multiattacks = "Atak Wielokrotny";

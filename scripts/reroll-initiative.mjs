@@ -11,7 +11,7 @@ export default class RerollInitiative {
                 if (reroll == update.round) return;
         
                 // If we are not moving forward through the rounds, return
-                if (update.round < 2 || update.round < combat.previous.round) return;
+                if (update.round < 2 || update.round <= combat.previous.round) return;
         
                 setProperty(options, `wfrp4e-pl-addons.shouldReroll`, true);
             });
