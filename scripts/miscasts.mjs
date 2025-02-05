@@ -18,6 +18,30 @@ export default class Miscasts {
       });
 
 
+      Reflect.defineProperty(ChannelTest.prototype, 'computeTables', { value:
+        function()  {
+          if (this.result.mis) {
+            this.result.tables.miscast = {
+                label : "Manifestacja Chaosu",
+                class : "fumble-roll",
+                key : this.result.miscastTable
+            }
+          }
+        }
+      });
+
+      Reflect.defineProperty(CastTest$1.prototype, 'computeTables', { value:
+        function()  {
+          if (this.result.mis) {
+            this.result.tables.miscast = {
+                label : "Manifestacja Chaosu",
+                class : "fumble-roll",
+                key : this.result.miscastTable
+            }
+          }
+        }
+      });
+
       Reflect.defineProperty(TestWFRP.prototype, '_handleMiscasts', { value:
         function(miscastCounter)  {
             const maxRandom = 25;

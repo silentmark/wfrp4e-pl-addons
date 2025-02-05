@@ -189,31 +189,34 @@ export default class PF2eHeresy {
                     bleeding.system.condition = bleeding.system.condition || {};
                     bleeding.system.condition.trigger = "startTurn";
                     bleeding.system.scriptData = bleeding.system.scriptData || [];
-                    bleeding.system.scriptData[0].script = `
+                    bleeding.system.scriptData[0].script = `let uiaBleeding = game.settings.get("wfrp4e", "uiaBleeding");
                                         let actor = this.actor;
                                         let effect = this.effect;
                                         let bleedingAmt;
                                         let bleedingRoll;
                                         let msg = ""
-            
                                         let damage = effect.conditionValue;
                                         let scriptArgs = {msg, damage};
                                         await Promise.all(actor.runScripts("preApplyCondition", {effect, data : scriptArgs}))
                                         msg = scriptArgs.msg;
                                         damage = scriptArgs.damage;
                                         msg += await actor.applyBasicDamage(damage, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL, minimumOne : false, suppressMsg : true})
-            
                                         if (actor.status.wounds.value == 0 && !actor.hasCondition("unconscious"))
                                         {
-                                            let test = await actor.setupSkill(game.i18n.localize("NAME.Endurance"));
-                                            await test.roll();
-                                            if (test.result.outcome == "failure")
-                                            {
+                                            addBleedingUnconscious = async () => {
                                                 await actor.addCondition("unconscious")
                                                 msg += "<br>" + game.i18n.format("BleedUnc", {name: actor.prototypeToken.name })
                                             }
+                                            if (uiaBleeding) {
+                                                test = await actor.setupSkill(game.i18n.localize("NAME.Endurance"), {appendTitle : " - " + this.effect.name, skipTargets: true, fields : {difficulty : "challenging"}});
+                                                await test.roll();
+                                                if (test.failed) {
+                                                    await addBleedingUnconscious();
+                                                }
+                                            } else {
+                                                await addBleedingUnconscious();
+                                            }
                                         }
-            
                                         if (actor.hasCondition("unconscious"))
                                         {
                                             bleedingAmt = effect.conditionValue;
@@ -233,7 +236,6 @@ export default class PF2eHeresy {
                                                 msg += "<br>" + game.i18n.localize("BleedRoll") + ": " + bleedingRoll;
                                             }
                                         }
-            
                                         await Promise.all(actor.runScripts("applyCondition", {effect, data : {bleedingRoll}}))
                                         if (args.suppressMessage)
                                         {
@@ -244,7 +246,7 @@ export default class PF2eHeresy {
                                         }
                                         else
                                         {
-                                            return this.script.scriptMessage(msg)
+                                            return this.script.message(msg)
                                         }
                                         `
 
@@ -281,7 +283,7 @@ export default class PF2eHeresy {
                             }
                             else
                             {
-                                return this.script.scriptMessage(msg)
+                                return this.script.message(msg)
                             }
                             `
                         },
@@ -312,7 +314,7 @@ export default class PF2eHeresy {
                             }
                             else
                             {
-                                return this.script.scriptMessage(msg)
+                                return this.script.message(msg)
                             }
                             `
                         },
@@ -374,7 +376,7 @@ export default class PF2eHeresy {
                                 }
                                 else
                                 {
-                                    return this.script.scriptMessage(msg)
+                                    return this.script.message(msg)
                                 }
                                 `
                             }, {
@@ -460,7 +462,7 @@ export default class PF2eHeresy {
                                     }
                                     else
                                     {
-                                        return this.script.scriptMessage(msg)
+                                        return this.script.message(msg)
                                     }
                                 `
                             },
@@ -517,7 +519,7 @@ export default class PF2eHeresy {
                                     }
                                     else
                                     {
-                                        return this.script.scriptMessage(msg)
+                                        return this.script.message(msg)
                                     }
                                 `
                             },
