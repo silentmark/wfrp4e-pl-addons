@@ -15,6 +15,7 @@ import Diseases from './diseases.mjs';
 import SocketTests from './socket-tests.mjs';
 import AreaHelpersExtension from './area-helpers.mjs';
 import VariousExtensions from './various-extensions.mjs'
+import CombatDistances from './combat-distance.mjs';
 
 class Main {
     constructor() {
@@ -34,8 +35,7 @@ class Main {
         this.socketTests = new SocketTests();
         this.variousExtensions = new VariousExtensions();
         this.areaHelpers = new AreaHelpersExtension();
-
-        this.customPrefillModifiers = {};
+        this.combatDistance = new CombatDistances();
     }
 
     armoury;
@@ -51,8 +51,9 @@ class Main {
     autoMiss;
     pf2eHeresy;
     areaHelpers;
-
-    customPrefillModifiers;
+    combatDistance;
+    diseases;
+    socketTests;
 
     setup() {
         this.armoury.setup();
@@ -70,6 +71,7 @@ class Main {
         this.diseases.setup();
         this.variousExtensions.setup();
         this.areaHelpers.setup();
+        this.combatDistance.setup();
     }
 
     ready() {
@@ -88,25 +90,6 @@ Hooks.on("ready", () => {
 
 Hooks.once("init", () => {
     game.modules.get(constants.moduleId).api = new Main();
-
-    const originalComputeScripts = RollDialog.prototype.computeScripts;
-    Reflect.defineProperty(RollDialog.prototype, 'computeScripts', { value: 
-        async function() {
-            const obj = game.modules.get(constants.moduleId).api.customPrefillModifiers
-            const functions = Object.getOwnPropertyNames(obj).filter(function (p) { return typeof obj[p] === 'function' });
-            for (let func of functions) {
-                let funcObj = game.modules.get(constants.moduleId).api.customPrefillModifiers[func];
-                let resultScript = await funcObj.call(funcObj, this);
-                if (resultScript && !this.data.scripts.find(x => x.label == resultScript.label)) {
-                    this.data.scripts.push(resultScript);
-                    resultScript.scriptCount = 1;
-                    resultScript.isActive = true;
-                }
-            }
-            await originalComputeScripts.call(this);
-        } 
-    });
-
     CONFIG.supportedLanguages["pl"] = "pl";
 
     // Add enable/disable setting for arrow reclamation feature

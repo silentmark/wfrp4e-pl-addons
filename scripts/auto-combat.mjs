@@ -1,6 +1,8 @@
 
 export default class AutoCombat {
 
+  static Messages = new Map();
+
   setup() {
     if (game.settings.get("wfrp4e-pl-addons", "autoCombat.Enabled")) {
 
@@ -44,7 +46,7 @@ export default class AutoCombat {
         if (arr.length > 0) {
           return;
         }
-        if (combat.current && combat.active) {
+        if (combat.current && combat.active && combat.current.tokenId) {
           let token = game.scenes.current.tokens.get(combat.current.tokenId);
           let tokenObj = game.canvas.tokens.get(combat.current.tokenId);
           let actor = token.actor;
@@ -80,7 +82,7 @@ export default class AutoCombat {
           let target = potentialTargets[0].object;
           let distance = game.canvas.grid.measureDistance({ x: tokenObj.x, y: tokenObj.y }, { x: target.x, y: target.y }, { gridSpaces: true });
           if (distance <= 2) {//melee
-            let stuffToUse = actor.itemTypes["weapon"].filter(w => w.attackType == "melee");
+            let stuffToUse = actor.itemTags["weapon"].filter(w => w.attackType == "melee");
             if (stuffToUse.length > 0) {
               let setupItem = stuffToUse[0];
               for (let i = 1; i < stuffToUse.length; i++) {
@@ -109,7 +111,7 @@ export default class AutoCombat {
               await test.roll();
             }
           } else {
-            let stuffToUse = actor.itemTypes["weapon"].filter(w => w.attackType == "ranged");
+            let stuffToUse = actor.itemTags["weapon"].filter(w => w.attackType == "ranged");
             if (stuffToUse.length > 0) {
               let setupItem = stuffToUse[0];
               if (setupItem.currentAmmo.value && actor.items.get(setupItem.currentAmmo.value).quantity.value > 0) {
@@ -131,7 +133,7 @@ export default class AutoCombat {
       });
 
       Hooks.on("renderChatMessage", async (app, html, messageData) => {
-        if (!game.user.isGM || !game.combat?.active || !app?.system?.test) {
+        if (!game.user.isGM || !game.combat?.active || !(app?.system?.test || app?.system?.opposedData) ) {
           return;
         }
 
@@ -208,22 +210,24 @@ export default class AutoCombat {
           });
         }
 
-        if (game.ready && app.flags?.wfrp4e?.opposeData?.attackerMessageId && app.flags?.wfrp4e?.opposeData?.messageId && !app.flags.wfrp4e.opposeData.resultMessageId) {
-          let msg = game.messages.get(app.flags.wfrp4e.opposeData.attackerMessageId);
-          let postFunction = msg?.flags?.testData?.preData?.rollClass;
+        if (game.ready && app.system.constructor.name == 'OpposedHandlerMessage' && app.system.opposedData.attackerMessageId) {
+          let msg = game.messages.get(app.system.opposedData.attackerMessageId);
+          let postFunction = msg?.system?.test?.preData?.rollClass;
           if (postFunction == "WeaponTest" || postFunction == "TraitTest") {
             let speaker;
-            if (msg.flags.testData.context.speaker.actor) {
-              speaker = game.actors.get(msg.flags.testData.context.speaker.actor);
+            if (msg.system.test.context.speaker.actor) {
+              speaker = game.actors.get(msg.system.test.context.speaker.actor);
             } else {
-              let speakerToken = game.canvas.tokens.get(msg.flags.testData.context.speaker.token);
+              let speakerToken = game.canvas.tokens.get(msg.system.test.context.speaker.token);
               speaker = speakerToken.actor;
             }
-            let item = speaker.items.get(msg.flags.testData.preData.item);
-            if (msg.flags?.testData?.context?.targets 
-                && msg.flags?.testData?.context?.targets.length > 0
-                && msg.flags?.testData?.context?.opposedMessageIds?.length === 0) {
-                  let target = game.scenes.current.tokens.get(app.flags.wfrp4e.opposeData.targetSpeakerData.token);
+            let item = speaker.items.get(msg.system.test.preData.item);
+            if (msg.system.test.context.targets 
+                && msg.system.test.context.targets.length > 0
+                && !app.system.opposedData.defenderMessageId
+                && !AutoCombat.Messages.get(msg.id)) {
+                  AutoCombat.Messages.set(msg.id, msg);
+                  let target = game.scenes.current.tokens.get(app.system.opposedData.targetSpeakerData.token);
                   if (target.actor?.flags?.wfrp4e?.autoCombat && target.actor.flags.wfrp4e.autoCombat > 0) {
                     let updateMsg;
                     let resultMessage;
@@ -234,7 +238,7 @@ export default class AutoCombat {
                       if (dodge) {
                         stuffToUse.push(dodge);
                       }
-                      stuffToUse = stuffToUse.concat(actor.itemTypes["weapon"].filter(w => w.attackType == "melee"));
+                      stuffToUse = stuffToUse.concat(actor.itemTags["weapon"].filter(w => w.attackType == "melee"));
 
                       let setupItem = dodge; 
                       for (let i = 0; i < stuffToUse.length; i++) {
@@ -273,19 +277,21 @@ export default class AutoCombat {
                         test = await actor.setupWeapon(setupItem, {bypass: true});
                       }
                       await test.roll();
-                      resultMessage = game.messages.get(app.flags.wfrp4e.opposeData.resultMessageId);
-                      let opposedTest = resultMessage.getOpposedTest();
+                      let appNew = game.messages.get(app.id);
+                      resultMessage = game.messages.get(appNew.system.opposedData.resultMessageId);
+                      let opposedTest = resultMessage.system.opposedTest;
                       if (opposedTest.opposeResult.winner == "attacker") {
                         updateMsg = await opposedTest.defenderTest.actor.applyDamage(opposedTest, game.wfrp4e.config.DAMAGE_TYPE.NORMAL)
                         await game.wfrp4e.opposedHandler.updateOpposedMessage(updateMsg, resultMessage.id);
                       }
                     } else {
                       if (target.actor?.flags?.wfrp4e?.autoCombat) {
-                        let message = game.messages.get(app.flags.wfrp4e.opposeData.messageId);
-                        await message.getOppose().resolveUnopposed();
-            
-                        resultMessage = game.messages.get(app.flags.wfrp4e.opposeData.resultMessageId);
-                        let opposedTest = resultMessage.getOpposedTest();
+                        await sleep(500);
+                        let message = game.messages.get(app.id);
+                        await message.system.opposedHandler.resolveUnopposed();
+                        message = game.messages.get(app.id);
+                        resultMessage = game.messages.get(message.system.opposedData.resultMessageId);
+                        let opposedTest = resultMessage.system.opposedTest;
             
                         if (opposedTest.opposeResult.winner == "attacker") { 
                           updateMsg = await opposedTest.defenderTest.actor.applyDamage(opposedTest, game.wfrp4e.config.DAMAGE_TYPE.NORMAL)

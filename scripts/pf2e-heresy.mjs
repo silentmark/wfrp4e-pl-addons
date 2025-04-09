@@ -3,21 +3,26 @@ export default class PF2eHeresy {
     setup() {
         if (game.settings.get("wfrp4e-pl-addons", "pf2eHeresy.Enable")) {
 
-            Reflect.defineProperty(ActorWFRP4e.prototype, 'showDualWielding', { value: 
-                function(weapon) {
-                    if (!weapon.offhand.value) {
-                      return !this.noOffhand
-                    }
-                    return false;
+            Reflect.defineProperty(WeaponTest.prototype, 'computeDualWielder', { value: 
+                function() {
+                    this.result.canDualWield = !this.weapon.system.offhand.value && !this.actor.noOffhand && !this.context.edited;
                   }
             });
 
             Reflect.defineProperty(WeaponDialog.prototype, 'computeAmbidextrous', { value:
                 function () {
+
+                    // we don't stack off hand penalty in multi-attack case. 
+                    // we only add this modifier, in case this is first off-hand attack.
+                    if (!this.actor.hasCondition('multiattacks')) {
+                        this.fields.modifier += -20
+                        this.tooltips.add("modifier", -20, game.i18n.localize("SHEET.Offhand"))
+                    }
+
+                    const ambiMod = Math.min(20, this.actor.flags.ambi * 10) // TODO could be handled by ambidextrous effect 
+                    this.fields.modifier += ambiMod;
                     if (this.actor.flags.ambi) {
-                        const ambiMod = Math.min(20, this.actor.flags.ambi * 10)
-                        this.fields.modifier += ambiMod;
-                        this.tooltips.addModifier(ambiMod, game.i18n.localize("NAME.Ambi"));
+                      this.tooltips.add("modifier", ambiMod, game.i18n.localize("NAME.Ambi"));
                     }
                 }
             })
@@ -125,9 +130,9 @@ export default class PF2eHeresy {
             };
             
             const aiming = {
-                img: "icons/svg/shield.svg",
-                id: "aim",
-                statuses : ["aim"],
+                img: "icons/svg/eye.svg",
+                id: "aiming",
+                statuses : ["aiming"],
                 name: game.i18n.localize("WFRP4E.ConditionName.Aim"),
                 system: {
                     condition : { },
@@ -144,10 +149,10 @@ export default class PF2eHeresy {
                         {
                             label : game.i18n.localize("WFRP4E.ConditionName.Aim") + " - Bonus do ataku dystansowego",
                             trigger : "dialog",
-                            script : `args.fields.SL += args.actor.system.characteristics.bs.bonus`,
+                            script : `args.fields.successBonus += args.actor.system.characteristics.bs.bonus`,
                             options : {
-                                hideScript : "return args.item?.system.attackType != 'melee' && !args.skill?.name?.includes(game.i18n.localize('NAME.Dodge'))",
-                                activateScript : "return args.item?.system.attackType == 'melee' || args.skill?.name?.includes(game.i18n.localize('NAME.Dodge'))"
+                                hideScript : "return args.item?.system.attackType != 'ranged'",
+                                activateScript : "return args.item?.system.attackType == 'ranged'"
                             }
                         }
                     ],
@@ -169,7 +174,7 @@ export default class PF2eHeresy {
                     game.wfrp4e.config.conditions.defensive = "Pozycja obronna";
 
                     game.wfrp4e.config.statusEffects.splice(9, 0, aiming);
-                    game.wfrp4e.config.conditions.defensive = "Celowanie";
+                    game.wfrp4e.config.conditions.aiming = "Celowanie";
 
                     game.wfrp4e.config.systemEffects.dualwielder = dualwielder;
                     delete game.wfrp4e.config.systemItems.defensive;
@@ -182,7 +187,7 @@ export default class PF2eHeresy {
 
                     game.wfrp4e.config.conditionDescriptions['defensive'] = "<b>Pozycja obronna</b>: 1 akcja, zapewnia +20 do następnej tury podczas obrony. Jeśli postać ma Tarczę, jej punkty pancerza liczą się wyłącznie jeśli postać wykorzysta tę akcję. Dodatkowo, jeśli postać ma Tarczę, korzystając z tej akcji może blokować ataki dystansowe, które są wymierzone na wprost w nią."
                     
-                    game.wfrp4e.config.conditionDescriptions['aim'] = "<b>Celowanie</b>: 1 akcja, zapewnia +Bonus US SL do następnej tury podczas ataków dystansowych. Niestety, z powodu skupienia na celu, postać jest bardziej podatna na ataki w walce wręcz (-30 do unikow i parowania)."
+                    game.wfrp4e.config.conditionDescriptions['aiming'] = "<b>Celowanie</b>: 1 akcja, zapewnia +Bonus US SL do następnej tury podczas ataków dystansowych. Niestety, z powodu skupienia na celu, postać jest bardziej podatna na ataki w walce wręcz (-30 do unikow i parowania)."
 
                     const bleeding = game.wfrp4e.config.statusEffects.find(x => x.id == "bleeding");
                     bleeding.system = bleeding.system || {};
@@ -539,7 +544,8 @@ export default class PF2eHeresy {
                     await combat.combatant.actor.removeCondition("multichannelling", 99);
                     await combat.combatant.actor.removeCondition("multispell", 99);
                     await combat.combatant.actor.removeCondition("defensive", 99);
-                    await combat.combatant.actor.removeCondition("aim", 99);
+                    await combat.combatant.actor.removeCondition("aiming", 99);
+                    await combat.combatant.actor.removeSystemEffect("dualwielder");
                 }
                 CombatHelpers.startTurn.push(f);
             });

@@ -1,10 +1,4 @@
 export default class CircleHelper {
-    static registerHelpers() {
-      Handlebars.registerHelper('progressCircle', function(data) {
-        return CeUtility.getProgressCircleHtml(data);
-      });
-    }
-  
     static getProgressCircleHtml(data) {
       return `<svg class="progress-ring progress-ring--${data.class}" viewBox="0 0 ${data.diameter} ${data.diameter}" width="${data.diameter}" height="${data.diameter}">
         <circle

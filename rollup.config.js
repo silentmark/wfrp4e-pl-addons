@@ -20,7 +20,7 @@ export default {
         "scripts/auto-outnumbered.mjs",
         "scripts/auto-rotate.mjs",
         "scripts/constants.mjs",
-        "scripts/helper.mjs",
+        "scripts/circle-helper.mjs",
         "scripts/main.mjs",
         "scripts/miscasts.mjs",
         "scripts/pf2e-heresy.mjs",
@@ -28,6 +28,7 @@ export default {
         "scripts/reroll-initiative.mjs",
         "scripts/windsofmagic.mjs",
         "scripts/diseases.mjs",
+        "scripts/combat-distance.mjs",
         "scripts/socket-tests.mjs"
     ],
     output: {

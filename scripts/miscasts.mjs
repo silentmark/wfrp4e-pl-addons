@@ -2,29 +2,14 @@ export default class Miscasts {
 
   setup() {
     if (game.settings.get("wfrp4e-pl-addons", "alternativeMiscasts.Enable")) {
-      Hooks.on("renderChatMessage", async (app, html, messageData) => {
-        if (!app?.system?.test) {
-          return;
-        }
-
-        let castTest = app.system.test;
-        if (castTest?.result?.mis) {
-          jQuery(html)
-          .find(".card-content.test-data")
-          .next()
-          .append(
-            jQuery(`<a class ="table-click fumble-roll" data-tooltip="${castTest.result.tooltips.miscast}" data-modifier="${castTest.result.miscastModifier}" data-table="${castTest.result.miscastTable}"><i class="fas fa-list"></i> ${castTest.result.mis}</a>`));
-        }
-      });
-
-
       Reflect.defineProperty(ChannelTest.prototype, 'computeTables', { value:
         function()  {
           if (this.result.mis) {
             this.result.tables.miscast = {
                 label : "Manifestacja Chaosu",
                 class : "fumble-roll",
-                key : this.result.miscastTable
+                key : this.result.miscastTable,
+                modifier: this.result.miscastModifier
             }
           }
         }
@@ -36,7 +21,8 @@ export default class Miscasts {
             this.result.tables.miscast = {
                 label : "Manifestacja Chaosu",
                 class : "fumble-roll",
-                key : this.result.miscastTable
+                key : this.result.miscastTable,
+                modifier: this.result.miscastModifier
             }
           }
         }

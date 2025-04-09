@@ -1,8 +1,8 @@
-import {constants} from './constants.mjs';
+import { constants } from './constants.mjs';
 
 export default class AutoMiss {
 
-  processedMessages = [];
+  static Messages = new Map();
 
   setup() {
     if (game.modules.get("levelsautocover")?.active && game.settings.get("wfrp4e-pl-addons", "autoMiss.Enabled")) {
@@ -21,11 +21,11 @@ export default class AutoMiss {
           }
         },
         "system": {
-          "transferData" : {
-              "type": "document",
-              "documentType": "Actor",
-            },
-          "condition" : { },
+          "transferData": {
+            "type": "document",
+            "documentType": "Actor",
+          },
+          "condition": {},
           "scriptData": [
             {
               "label": "Kucanie",
@@ -40,44 +40,44 @@ export default class AutoMiss {
             }
           ]
         }
-      }
+      };
 
       Hooks.on("renderTokenHUD", (data, hud, drawData) => {
         let token = data.object.document;
-            let active = token.getFlag("wfrp4e-pl-addons", "ducking") || false;
-            let toggleDuckbtn = `
-                    <div class="control-icon${ active ? " active" : ""}" id="toggleDuck">
+        let active = token.getFlag("wfrp4e-pl-addons", "ducking") || false;
+        let toggleDuckbtn = `
+                    <div class="control-icon${active ? " active" : ""}" id="toggleDuck">
                       <img src="/modules/wfrp4e-pl-addons/icons/ducking.png" width="36" height="36" title='Kucnij'></i>
                     </div>`;
-            const controlIcons = hud.find("div.control-icon");
-            controlIcons.last().after(toggleDuckbtn);
-            $(hud.find(`div[id="toggleDuck"]`)).on("click", toggDuck);
+        const controlIcons = hud.find("div.control-icon");
+        controlIcons.last().after(toggleDuckbtn);
+        $(hud.find(`div[id="toggleDuck"]`)).on("click", toggDuck);
 
-            async function toggDuck() {
-              active = !active;
-              await token.setFlag("wfrp4e-pl-addons", "ducking", !(token.getFlag("wfrp4e-pl-addons", "ducking") || false));
+        async function toggDuck() {
+          active = !active;
+          await token.setFlag("wfrp4e-pl-addons", "ducking", !(token.getFlag("wfrp4e-pl-addons", "ducking") || false));
 
-              let hudbtn = hud.find(`div[id="toggleDuck"]`);
-              if (active) {
-                hudbtn.addClass("active");
-                await token.setFlag('wall-height', 'tokenHeight', parseInt(token.actor.details.height.value) / 250);
-                let e = token.actor.effects.find(x=>x.flags?.wfrp4e.ducking);
-                if (!e) {
-                  await token.actor.createEmbeddedDocuments("ActiveEffect", [duckEffectData]);
-                }
-              }
-              else {
-                hudbtn.removeClass("active");
-                await token.setFlag('wall-height', 'tokenHeight', parseInt(token.actor.details.height.value) / 100);
-                let e = token.actor.effects.find(x=>x.flags?.wfrp4e.ducking);
-                if (e) {
-                  await token.actor.deleteEmbeddedDocuments("ActiveEffect", [e.id]);
-                }
-              }
-              if (data.object?.id) {
-                canvas.tokens.get(data.object.id)?.updateSource()
-              }
+          let hudbtn = hud.find(`div[id="toggleDuck"]`);
+          if (active) {
+            hudbtn.addClass("active");
+            await token.setFlag('wall-height', 'tokenHeight', parseInt(token.actor.details.height.value) / 250);
+            let e = token.actor.effects.find(x => x.flags?.wfrp4e.ducking);
+            if (!e) {
+              await token.actor.createEmbeddedDocuments("ActiveEffect", [duckEffectData]);
             }
+          }
+          else {
+            hudbtn.removeClass("active");
+            await token.setFlag('wall-height', 'tokenHeight', parseInt(token.actor.details.height.value) / 100);
+            let e = token.actor.effects.find(x => x.flags?.wfrp4e.ducking);
+            if (e) {
+              await token.actor.deleteEmbeddedDocuments("ActiveEffect", [e.id]);
+            }
+          }
+          if (data.object?.id) {
+            canvas.tokens.get(data.object.id)?.updateSource();
+          }
+        }
       });
 
       Hooks.on("renderChatMessage", async (app, html, messageData) => {
@@ -86,9 +86,11 @@ export default class AutoMiss {
         }
 
         let test = app.system.test;
-        if (!test || game.modules.get(constants.moduleId).api.autoMiss.processedMessages.indexOf(app.id) != -1 || test?.weapon?.attackType != "ranged") return;
+        if (!test || AutoMiss.Messages.get(app.id) || app.getFlag("wfrp4e-pl-addons", "autoMiss") || test?.weapon?.attackType != "ranged") return;
+        
+        await app.setFlag("wfrp4e-pl-addons", "autoMiss", true);
 
-        game.modules.get(constants.moduleId).api.autoMiss.processedMessages.push(app.id);
+        AutoMiss.Messages.set(app.id, app);
         if (test.weapon?.weaponGroup?.value == 'throwing' && test.result.outcome == "failure") {
           let position = (await new Roll('1d8').roll()).total;
           let distance = game.canvas.grid.size * Math.abs(Number.parseInt(test.result.SL));
@@ -119,7 +121,7 @@ export default class AutoMiss {
           let tokensInArea = game.canvas.tokens.placeables.filter(t => t.x >= x && t.y >= y && t.x + t.w <= x && t.y + t.h <= y);
           if (tokensInArea.length > 0) {
             let newTarget = tokensInArea[Math.floor(Math.random() * tokensInArea.length)];
-            let testData = app.flags.testData;
+            let testData = app.system.testData;
             testData.context.edited = true;
             testData.context.previousResult = duplicate(test.result);
             testData.preData.slBonus = 0;
@@ -144,23 +146,23 @@ export default class AutoMiss {
           const area = new PIXI.Circle(tokenX, tokenY, pixelDistance + (game.canvas.grid.w / 2));
 
           for (let tok of canvas.tokens.placeables) {
-            if (tok.actor != null && tok.id != target.id && !tok.actor.hasCondition("dead") && area.contains(tok.center.x, tok.center.y)) { 
-              await ChatMessage.create({content: `Rozrzut zranił również: <b>(${tok.name})</b>`});
+            if (tok.actor != null && tok.id != target.id && !tok.actor.hasCondition("dead") && area.contains(tok.center.x, tok.center.y)) {
+              await ChatMessage.create({ content: `Rozrzut zranił również: <b>(${tok.name})</b>` });
               await test.createOpposedMessage(tok);
             }
           }
-          } else if (test?.result?.outcome == "failure" && test?.context?.targets?.length > 0 && test.context.targets[0] && test.context.targets[0].token && game.canvas?.tokens) {
+        } else if (test?.result?.outcome == "failure" && test?.context?.targets?.length > 0 && test.context.targets[0] && test.context.targets[0].token && game.canvas?.tokens) {
           const shooter = test.actor.getActiveTokens()[0];
           const target = game.canvas.tokens.get(test.context.targets[0].token);
 
-          const cover = AutoCover.calculateCover(shooter, target, {apiMode: true});
+          const cover = AutoCover.calculateCover(shooter, target, { apiMode: true });
 
           let tokens = cover.obstructingTokens;
 
           if ((test.result.roll - test.result.target) <= 20) {
-            if (tokens.length > 0 &&  Math.random() < 0.5) {
+            if (tokens.length > 0 && Math.random() < 0.5) {
               const newTarget = tokens[Math.floor(Math.random() * tokens.length)];
-              let testData = app.flags.testData;
+              let testData = app.system.testData;
               testData.context.edited = true;
               testData.context.previousResult = duplicate(test.result);
               testData.preData.slBonus = 0;
@@ -173,68 +175,53 @@ export default class AutoMiss {
               let newTest = TestWFRP.recreate(testData);
               await newTest.roll();
             } else {
-              let randomTokens = [];
-              let tokenX = target.x;
-              let tokenY = target.y;
+              let target = game.canvas.tokens.get(test.context.targets[0].token);
 
-              let wx = target.hitArea.width / game.canvas.grid.grid.w;
-              let hy = target.hitArea.height / game.canvas.grid.grid.h;
-              
-              let hitAreaX = target.hitArea.width;
-              let hitAreaY = target.hitArea.height;
-              let gridX = game.canvas.grid.grid.w;
-              let gridY = game.canvas.grid.grid.h;
+              const tokenX = target.center.x;
+              const tokenY = target.center.y;
+              const tokenWidth = target.getSize().width;
 
-              let surroundings = [];
-              surroundings.push({x: tokenX - gridX, y: tokenY - gridY});
-              surroundings.push({x: tokenX + hitAreaX, y: tokenY + hitAreaY});
-              surroundings.push({x: tokenX - gridX, y: tokenY + hitAreaY});
-              surroundings.push({x: tokenX + hitAreaX, y: tokenY - gridY});
-              for (let i = 0; i < wx; i++) {
-                surroundings.push({x: tokenX + gridX * i, y: tokenY - gridY});
-                surroundings.push({x: tokenX + gridX * i, y: tokenY + hitAreaY});
-              }
-              for (let i = 0; i < hy; i++) {
-                surroundings.push({x: tokenX - gridX, y: tokenY + gridY * i});
-                surroundings.push({x: tokenX + hitAreaX, y: tokenY + gridY * i});
+              const reachRadius = ((canvas.scene.grid.size / canvas.scene.grid.distance) * 1.25) + (tokenWidth / 2);
+              const newTargets = [];
+
+              function checkIntersection(x1, y1, r1, x2, y2, r2) {
+                const dx = x1 - x2;
+                const dy = y1 - y2;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                return distance < (r1 + r2);
               }
 
-              for (const pos of surroundings) {
-                const LAMBDA = 5;
-                let x1 = pos.x + LAMBDA;
-                let y1 = pos.y + LAMBDA;
-                let w1 = target.hitArea.x + target.hitArea.width - (LAMBDA*2);
-                let h1 = target.hitArea.y + target.hitArea.height - (LAMBDA*2);
+              for (let tok of canvas.tokens.placeables) {
+                if (tok.id != target.id && tok.id != shooter.id) {
+                  const otherTokenWidth = tok.getSize().width;
+                  const otherTokenRadius = otherTokenWidth / 2;
 
-                for (let tok of canvas.tokens.placeables) {
-                  if (tok.actor != null && tok.id != target.id && !tok.actor.hasCondition("dead")) {
-                    let x2 = tok.x;
-                    let y2 = tok.y;
-                    let w2 = tok.hitArea.x + tok.hitArea.width;
-                    let h2 = tok.hitArea.y + tok.hitArea.height;
-                    
-                    if (!(x2 > w1 + x1 || x1 > w2 + x2 || y2 > h1 + y1 || y1 > h2 + y2)) {
-                      if (randomTokens.indexOf(tok.id) === -1) {
-                        randomTokens.push(tok.id);
-                      }
-                    }
+                  // Check for intersection between original token reach and other token
+                  if (checkIntersection(tokenX, tokenY, reachRadius, tok.center.x, tok.center.y, otherTokenRadius)) {
+                    newTargets.push(tok);
                   }
                 }
               }
-              if (randomTokens.length == 0) return;
-              const newTarget = game.canvas.tokens.get(randomTokens[Math.floor(Math.random() * randomTokens.length)]);
-              let testData = app.flags.testData;
-              testData.context.edited = true;
-              testData.context.previousResult = duplicate(test.result);
-              testData.preData.slBonus = 0;
-              testData.preData.successBonus = 0;
-              testData.preData.roll = test.result.roll;
-              testData.preData.target = test.target + 20;
-              testData.context.targets[0].token = newTarget.id;
-              testData.preData.other.push(`Ups, trafiono inny cel związany walką: <b>(${newTarget.name})</b>`);
-              delete testData.context.messageId;
-              let newTest = TestWFRP.recreate(testData);
-              await newTest.roll();
+
+              if (newTargets.length > 0) {
+                const newTarget = game.canvas.tokens.get(newTargets[Math.floor(Math.random() * newTargets.length)]);
+                let testData = app.system.testData;
+                testData.context.edited = true;
+                testData.context.previousResult = duplicate(test.result);
+                testData.preData.slBonus = 0;
+                testData.preData.successBonus = 0;
+                testData.preData.roll = test.result.roll;
+                testData.preData.target = test.target + 20;
+                if (!testData.context.targets) {
+                  testData.context.targets = [{ token: newTarget.id }];
+                } else {
+                  testData.context.targets[0].token = newTarget.id;
+                }
+                testData.preData.other.push(`Ups, trafiono inny cel w pobliżu: <b>(${newTarget.name})</b>`);
+                delete testData.context.messageId;
+                let newTest = TestWFRP.recreate(testData);
+                await newTest.roll();
+              }
             }
           }
         }

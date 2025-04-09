@@ -1,11 +1,9 @@
-import CircleHelper from "./helper.mjs";
+import CircleHelper from "./circle-helper.mjs";
 
 export default class WindsOfMagic {
 
     setup () {
         if (game.settings.get("wfrp4e-pl-addons", "windsOfMagicCombatRolls.Enable")) {
-            CircleHelper.registerHelpers();
-
             Hooks.on("createCombat", async function (combat) {
                 if (game.user.isGM) {
                     let winds = Object.values(game.wfrp4e.config.magicWind).filter(x => x != game.i18n.localize("None")).filter((value, index, array) => array.indexOf(value) === index);
@@ -104,7 +102,7 @@ export default class WindsOfMagic {
                                             condition : { },
                                             scriptData: [{
                                                     trigger: "dialog",
-                                                    label: "@effect.name",                                            
+                                                    label: "Nasycenie Magią",
                                                     script : "args.fields.slBonus += 1;",
                                                     options : {
                                                         hideScript : "return args.type != 'cast'",
@@ -115,10 +113,19 @@ export default class WindsOfMagic {
                                         }
                                     };
                                     if (args.test.result.roll.toString() == '99') {
-                                        let demonTokenId = (await warpgate.spawn("${deamonName}"))[0];
-                                        let demonToken = game.canvas.tokens.get(demonTokenId);
-                                        let caster = this.actor;
-                                        setTimeout(async function () {
+                                        const demon = game.actors.find(x=>x.name == "${deamonName}");
+                                        if (demon) {
+                                            const options = {
+                                                updateData: {
+                                                    token: { alpha: 0 }
+                                                },
+                                                count: 1
+                                            }
+                                            const [creature] = await new Portal()
+                                                .addCreature(demon.uuid, options)
+                                                .spawn();
+
+                                            await Sequencer.Helpers.wait(200)
                                             new Sequence()
                                                 .effect()
                                                 .file("jb2a.magic_signs.circle.02.abjuration.intro.dark_purple")
@@ -126,12 +133,13 @@ export default class WindsOfMagic {
                                                 .scaleToObject(2.5)
                                                 .randomRotation()
                                             .play();
-                                        }, 200);
-                                        ChatMessage.create({content: "<span>Złowrogie wpływy Tzeentcha wywołały manifestację chaosu: <a class='table-click fumble-roll' title='Złowrogie Wpływy Tzeentcha' data-table='majormis'><i class='fas fa-list'></i>Poważna Manifestacja Chaosu</a></span>"})
-                                        caster.createEmbeddedDocuments("ActiveEffect", [suffusedWithMagicEffect]);
+
+                                            ChatMessage.create({content: "<span>Złowrogie wpływy Tzeentcha wywołały manifestację chaosu: <a class='table-click fumble-roll' title='Złowrogie Wpływy Tzeentcha' data-table='miscast' data-modifier='100'><i class='fas fa-list'></i>Poważna Manifestacja Chaosu (+100)</a></span>"})
+                                            caster.createEmbeddedDocuments("ActiveEffect", [suffusedWithMagicEffect]);
+                                        }
                                     }
                                     else if (args.test.result.roll.toString().split('').reverse()[0] == '9') {
-                                        ChatMessage.create({content: "<span>Złowrogie wpływy Tzeentcha wywołały manifestację chaosu: <a class='table-click fumble-roll' title='Złowrogie Wpływy Tzeentcha' data-table='minormis'><i class='fas fa-list'></i>Pomniejsza Manifestacja Chaosu</a></span>"});
+                                        ChatMessage.create({content: "<span>Złowrogie wpływy Tzeentcha wywołały manifestację chaosu: <a class='table-click fumble-roll' title='Złowrogie Wpływy Tzeentcha' data-table='miscast' data-modifier='0'><i class='fas fa-list'></i>Pomniejsza Manifestacja Chaosu</a></span>"});
                                         this.actor.createEmbeddedDocuments("ActiveEffect", [suffusedWithMagicEffect]);
                                     }`
                                 let effect = actor.effects.find(x => x.name == 'Złowrogie Wpływy Tzeentcha');
@@ -186,7 +194,7 @@ export default class WindsOfMagic {
                     if (combat.round != 1 && combat.turns && combat.active && combat.current.turn == combat.turns.length -1 && updateData.turn == 0) {
                         if (updateData.flags && updateData.flags['wfrp4e-pl-addons']) {
                             let moduleFlags = updateData.flags['wfrp4e-pl-addons'];
-                            if (moduleFlags['spells'] !== null) return;
+                            if (moduleFlags['spells']) return;
                         }
                         let spells = combat.getFlag('wfrp4e-pl-addons', 'spells');
                         if (spells) {
