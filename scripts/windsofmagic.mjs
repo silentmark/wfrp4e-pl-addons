@@ -47,12 +47,31 @@ export default class WindsOfMagic {
                     }).render(true);
                 }
             });
+
+            Hooks.on("combatRound", async function (combat, updateData, options) {
+                if (game.user.isGM) {
+                    let spells = combat.getFlag('wfrp4e-pl-addons', 'spells');
+                    if (spells) {
+                        for (let messageId in spells) {
+                            if (spells[messageId]) {
+                                let duration = spells[messageId].duration;
+                                if (duration.unit === 'rund' && Number.isInteger(duration.current) && Number.parseInt(duration.current) > 0) {
+                                    duration.current = Number.parseInt(duration.current) - 1;
+                                }
+                            }
+                        }
+                        await combat.setFlag('wfrp4e-pl-addons', 'spells', spells);
+                    }
+                }
+            });
     
             Hooks.on("updateCombat", async function (combat, updateData) {
                 if (game.user.isGM) {
                     if (typeof(updateData.round) === 'undefined' && typeof(updateData.turn) === 'undefined') {
                         return;
                     }
+                    if (!combat.started || !combat.isActive) return;
+
                     if (!combat.combatants.get(combat.current.combatantId)) {
                         return;
                     }
@@ -183,34 +202,6 @@ export default class WindsOfMagic {
                 }
             });
 
-            Hooks.on("preUpdateCombat", async (combat, updateData, context) => {
-                // no change in turns nor rounds.
-                if (updateData.turn === undefined && updateData.round === undefined) return;
-                // combat not started or not active.
-                if (!combat.started || !combat.isActive) return;
-            
-                if (game.user.isGM) {
-            
-                    if (combat.round != 1 && combat.turns && combat.active && combat.current.turn == combat.turns.length -1 && updateData.turn == 0) {
-                        if (updateData.flags && updateData.flags['wfrp4e-pl-addons']) {
-                            let moduleFlags = updateData.flags['wfrp4e-pl-addons'];
-                            if (moduleFlags['spells']) return;
-                        }
-                        let spells = combat.getFlag('wfrp4e-pl-addons', 'spells');
-                        if (spells) {
-                            for (let messageId in spells) {
-                                if (spells[messageId]) {
-                                    let duration = spells[messageId].duration;
-                                    if (duration.unit === 'rund' && Number.isInteger(duration.current) && Number.parseInt(duration.current) > 0) {
-                                        duration.current = Number.parseInt(duration.current) - 1;
-                                    }
-                                }
-                            }
-                            await combat.setFlag('wfrp4e-pl-addons', 'spells', spells);
-                        }
-                    }
-                }
-            });
 
             Hooks.on("renderChatMessage", async (app, html, messageData) => {
                 if (!game.user.isGM) {
@@ -388,26 +379,33 @@ export default class WindsOfMagic {
                             let dispelValue = spell.test.data.result.itemData.system.cn.value + Number.parseInt(spell.test.data.result.SL);
                             let dispelTest = actor.itemTags["extendedTest"].find(x => x.getFlag('wfrp4e-pl-addons', 'messageId') == messageId);
                             if (!dispelTest) {
-                                let dispelTestData = {
+
+                                const extendedTestData = {
                                     name : "Rozpraszanie Zaklęcia - " + spell.test.data.result.itemData.name,
-                                    type : "extendedTest",
-                                    system : {
-                                        completion:{value: 'remove'},
-                                        description:{type: 'String', label: 'Description', value: ''},
-                                        failingDecreases:{value: true},
-                                        gmdescription:{type: 'String', label: 'Description', value: ''},
-                                        hide: { test: false, progress: false },
-                                        negativePossible: { value: true },
-                                        SL: { current: 0, target: dispelValue },
-                                        test: { value: "Język (Magiczny)" }
-                                    },
-                                    flags : { 
-                                        'wfrp4e-pl-addons' : {
-                                            messageId : messageId
+                                    type: "extendedTest",
+                                    system: {
+                                        SL: {
+                                            current: 0,
+                                            target: dispelValue
+                                        },
+                                        test: {
+                                            value: "Język (Magiczny)"
+                                        },
+                                        failingDecreases:{
+                                            value: false
+                                        },
+                                        negativePossible: { 
+                                            value: false 
+                                        },
+                                        completion: {
+                                            value: "remove"
+                                        },
+                                        difficulty: {
+                                            value: "challenging"
                                         }
                                     }
-                                }
-                                dispelTest = await actor.createEmbeddedDocuments("Item", [dispelTestData])[0];
+                                };
+                                dispelTest = (await actor.createEmbeddedDocuments("Item", [extendedTestData]))[0];
                             }
                             await actor.setupExtendedTest(dispelTest, {appendTitle : " - Rozpraszanie Zaklęcia"});
                         });
