@@ -1,15 +1,21 @@
 import CombatDistances from './combat-distance.js';
 import './constants.js';
 
+/**
+ *
+ */
 class AutoEngaged {
 
+  /**
+   *
+   */
   setup() {
-    if (game.settings.get("wfrp4e-pl-addons", "autoEngaged.Enable")) {
-      SocketHandlers.addCondition = async function (payload) {
-        let condition = payload.condition;
-        let actorId = payload.actorId;
-        let actor = game.actors.get(actorId);
-        let owner = warhammer.utility.getActiveDocumentOwner(actor);
+    if (game.settings.get('wfrp4e-pl-addons', 'autoEngaged.Enable')) {
+      SocketHandlers.addCondition = async function(payload) {
+        const { condition } = payload;
+        const { actorId } = payload;
+        const actor = game.actors.get(actorId);
+        const owner = warhammer.utility.getActiveDocumentOwner(actor);
         if (owner.id == game.user.id) {
           await actor.addCondition(condition);
         }
@@ -18,7 +24,7 @@ class AutoEngaged {
       Hooks.on('updateToken', (tokenDocument, data) => {
         if (game.user.isGM) {
           if (data.x > 0 || data.y > 0) {
-            let token = game.canvas.tokens.get(tokenDocument.id);
+            const token = canvas.tokens.get(tokenDocument.id);
 
             if (!token || !token.hitArea || !token.actor) return;
 
@@ -35,6 +41,17 @@ class AutoEngaged {
             const oldCollisions = [];
             const newCollisions = [];
 
+            /**
+             *
+             * @param x1
+             * @param y1
+             * @param r1
+             * @param x2
+             * @param y2
+             * @param r2
+             * @param innerR1
+             * @param innerR2
+             */
             function checkReachIntersection(x1, y1, r1, x2, y2, r2, innerR1, innerR2) {
               const dx = x1 - x2;
               const dy = y1 - y2;
@@ -42,7 +59,7 @@ class AutoEngaged {
               return distance < (innerR1 + r2) || distance < (r1 + innerR2);
             }
 
-            for (let tok of canvas.tokens.placeables) {
+            for (const tok of canvas.tokens.placeables) {
               if (tok.id != token.id) {
                 const otherTokenReach = CombatDistances.calculateWeaponReachRadius(tok);
 
@@ -55,12 +72,12 @@ class AutoEngaged {
                 const otherReachRadius = otherTokenReach.radius;
 
                 // Check for intersection between original token reach and other token
-                if (checkReachIntersection(originalTokenX, originalTokenY, reachRadius, tok.center.x, tok.center.y, otherReachRadius, tokenRadius, otherTokenRadius) && tok.actor?.hasCondition("engaged")) {
+                if (checkReachIntersection(originalTokenX, originalTokenY, reachRadius, tok.center.x, tok.center.y, otherReachRadius, tokenRadius, otherTokenRadius) && tok.actor?.hasCondition('engaged')) {
                   oldCollisions.push(tok);
                 }
 
                 // Check for intersection between new token reach and other token
-                if (checkReachIntersection(originalTokenX, originalTokenY, reachRadius, newTokenX, newTokenY, otherReachRadius, tokenRadius, otherTokenRadius) && tok.actor?.hasCondition("engaged")) {
+                if (checkReachIntersection(originalTokenX, originalTokenY, reachRadius, newTokenX, newTokenY, otherReachRadius, tokenRadius, otherTokenRadius) && tok.actor?.hasCondition('engaged')) {
                   newCollisions.push(tok);
                 }
               }
@@ -69,32 +86,32 @@ class AutoEngaged {
             const remain = oldCollisions.find(t => newCollisions.includes(t));
 
             if (!remain) {
-              token.actor.removeCondition("engaged");
+              token.actor.removeCondition('engaged');
             }
           }
         }
       });
 
       Hooks.on('wfrp4e:rollWeaponTest', (test) => {
-        if (test.item.attackType == "melee" && test.context.targets?.length > 0) {
+        if (test.item.attackType == 'melee' && test.context.targets?.length > 0) {
           const tokens = test.context.targets.map(t => game.wfrp4e.utility.getToken(t));
-          test.actor.addCondition("engaged");
+          test.actor.addCondition('engaged');
           if (game.user.isGM) {
-            tokens.forEach(t => t.actor.addCondition("engaged"));
+            tokens.forEach(t => t.actor.addCondition('engaged'));
           } else {
-            tokens.forEach(t => SocketHandlers.executeOnOwner(t.actor, "addCondition", { condition: "engaged", actorId: t.actor.id }));
+            tokens.forEach(t => SocketHandlers.executeOnOwner(t.actor, 'addCondition', { condition: 'engaged', actorId: t.actor.id }));
           }
         }
       });
 
       Hooks.on('wfrp4e:rollTraitTest', (test) => {
-        if (test.item.attackType == "melee" && test.context.targets?.length > 0) {
+        if (test.item.attackType == 'melee' && test.context.targets?.length > 0) {
           const tokens = test.context.targets.map(t => game.wfrp4e.utility.getToken(t));
-          test.actor.addCondition("engaged");
+          test.actor.addCondition('engaged');
           if (game.user.isGM) {
-            tokens.forEach(t => t.actor.addCondition("engaged"));
+            tokens.forEach(t => t.actor.addCondition('engaged'));
           } else {
-            tokens.forEach(t => SocketHandlers.executeOnOwner(t.actor, "addCondition", { condition: "engaged", actorId: t.actor.id }));
+            tokens.forEach(t => SocketHandlers.executeOnOwner(t.actor, 'addCondition', { condition: 'engaged', actorId: t.actor.id }));
           }
         }
       });
