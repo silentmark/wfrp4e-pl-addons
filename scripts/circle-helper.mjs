@@ -1,6 +1,13 @@
+/**
+ *
+ */
 export default class CircleHelper {
+    /**
+     *
+     * @param data
+     */
     static getProgressCircleHtml(data) {
-      return `<svg class="progress-ring progress-ring--${data.class}" viewBox="0 0 ${data.diameter} ${data.diameter}" width="${data.diameter}" height="${data.diameter}">
+        return `<svg class="progress-ring progress-ring--${data.class}" viewBox="0 0 ${data.diameter} ${data.diameter}" width="${data.diameter}" height="${data.diameter}">
         <circle
           class="progress-ring__circle"
           stroke-width="${data.strokeWidth}"
@@ -14,25 +21,31 @@ export default class CircleHelper {
         />
       </svg>`;
     }
-  
+
+    /**
+     *
+     * @param root0
+     * @param root0.current
+     * @param root0.max
+     * @param root0.radius
+     */
     static getProgressCircle({ current = 100, max = 100, radius = 16 }) {
-      let circumference = radius * 2 * Math.PI;
-      let percent = current < max ? current / max : 1;
-      let offset = circumference - (percent * circumference);
-      let strokeWidth = 4;
-      let diameter = (radius * 2) + strokeWidth;
-      let colorClass = Math.round((percent * 100) / 10) * 10;
-  
-      return {
-        radius: radius,
-        diameter: diameter,
-        strokeWidth: strokeWidth,
-        circumference: circumference,
-        offset: offset,
-        position: diameter / 2,
-        color: 'red',
-        class: colorClass,
-      };
+        const circumference = radius * 2 * Math.PI;
+        const percent = current < max ? current / max : 1;
+        const offset = circumference - (percent * circumference);
+        const strokeWidth = 4;
+        const diameter = (radius * 2) + strokeWidth;
+        const colorClass = Math.round((percent * 100) / 10) * 10;
+
+        return {
+            radius: radius,
+            diameter: diameter,
+            strokeWidth: strokeWidth,
+            circumference: circumference,
+            offset: offset,
+            position: diameter / 2,
+            color: 'red',
+            class: colorClass
+        };
     }
-  }
-  
+}

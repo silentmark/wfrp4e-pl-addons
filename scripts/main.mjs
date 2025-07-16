@@ -1,4 +1,4 @@
-import {constants} from './constants.mjs';
+import { constants } from './constants.mjs';
 import AlternativeArmour from './alternative-armour.mjs';
 import AlternativeTemplateCollision from './alternative-template-collision.mjs';
 
@@ -15,10 +15,17 @@ import AutoMiss from './auto-miss.mjs';
 import PF2eHeresy from './pf2e-heresy.mjs';
 import Diseases from './diseases.mjs';
 import SocketTests from './socket-tests.mjs';
-import VariousExtensions from './various-extensions.mjs'
+import VariousExtensions from './various-extensions.mjs';
 import CombatDistances from './combat-distance.mjs';
 
+/**
+ * Main entry point for WFRP4e PL Addons module
+ * Manages all addon components and their lifecycle
+ */
 class Main {
+    /**
+     * Constructor - initializes all addon components
+     */
     constructor() {
         this.variousExtensions = new VariousExtensions();
         this.alternativeTemplateCollision = new AlternativeTemplateCollision();
@@ -58,6 +65,10 @@ class Main {
     diseases;
     socketTests;
 
+    /**
+     * Setup method - called during Foundry's setup phase
+     * Initializes all addon components
+     */
     setup() {
         this.alternativeTemplateCollision.setup();
         this.alternativeArmour.setup();
@@ -78,203 +89,207 @@ class Main {
         this.combatDistance.setup();
     }
 
+    /**
+     * Ready method - called during Foundry's ready phase
+     * Finalizes addon initialization
+     */
     ready() {
         this.alternativeArmour.ready();
         this.socketTests.ready();
     }
 }
 
-Hooks.on("setup", () => {    
+Hooks.on('setup', () => {
     game.modules.get(constants.moduleId).api.setup();
 });
 
-Hooks.on("ready", () => {    
+Hooks.on('ready', () => {
     game.modules.get(constants.moduleId).api.ready();
 });
 
-Hooks.once("init", () => {
+Hooks.once('init', () => {
     game.modules.get(constants.moduleId).api = new Main();
 
     // Add enable/disable setting for arrow reclamation feature
-    game.settings.register("wfrp4e-pl-addons", "alternativeArmour.Enable", {
-        name: "wfrp4epladdon.alternativeArmour.Enable",
-        hint: "wfrp4epladdon.alternativeArmour.EnableHint",
-        scope: "world",
+    game.settings.register('wfrp4e-pl-addons', 'alternativeArmour.Enable', {
+        name: 'wfrp4epladdon.alternativeArmour.Enable',
+        hint: 'wfrp4epladdon.alternativeArmour.EnableHint',
+        scope: 'world',
         config: true,
         default: false,
         type: Boolean,
-        onChange: value => {
-            foundry.utils.debouncedReload()
+        onChange: _value => {
+            foundry.utils.debouncedReload();
         }
     });
 
-    game.settings.register("wfrp4e-pl-addons", "initiativeRoll.Enable", {
-        name: "wfrp4epladdon.initiativeRoll.Enable",
-        hint: "wfrp4epladdon.initiativeRoll.EnableHint",
-        scope: "world",
+    game.settings.register('wfrp4e-pl-addons', 'initiativeRoll.Enable', {
+        name: 'wfrp4epladdon.initiativeRoll.Enable',
+        hint: 'wfrp4epladdon.initiativeRoll.EnableHint',
+        scope: 'world',
         config: true,
         default: false,
         type: Boolean
     });
 
-    game.settings.register("wfrp4e-pl-addons", "alternativeMiscasts.Enable", {
-        name: "wfrp4epladdon.alternativeMiscasts.Enable",
-        hint: "wfrp4epladdon.alternativeMiscasts.EnableHint",
-        scope: "world",
+    game.settings.register('wfrp4e-pl-addons', 'alternativeMiscasts.Enable', {
+        name: 'wfrp4epladdon.alternativeMiscasts.Enable',
+        hint: 'wfrp4epladdon.alternativeMiscasts.EnableHint',
+        scope: 'world',
         config: true,
         default: false,
         type: Boolean,
-        onChange: value => {
-            foundry.utils.debouncedReload()
+        onChange: _value => {
+            foundry.utils.debouncedReload();
         }
     });
 
-    game.settings.register("wfrp4e-pl-addons", "windsOfMagicCombatRolls.Enable", {
-        name: "wfrp4epladdon.windsOfMagicCombatRolls.Enable",
-        hint: "wfrp4epladdon.windsOfMagicCombatRolls.EnableHint",
-        scope: "world",
+    game.settings.register('wfrp4e-pl-addons', 'windsOfMagicCombatRolls.Enable', {
+        name: 'wfrp4epladdon.windsOfMagicCombatRolls.Enable',
+        hint: 'wfrp4epladdon.windsOfMagicCombatRolls.EnableHint',
+        scope: 'world',
         config: true,
         default: false,
         type: Boolean,
-        onChange: value => {
-            foundry.utils.debouncedReload()
+        onChange: _value => {
+            foundry.utils.debouncedReload();
         }
     });
 
-    game.settings.register("wfrp4e-pl-addons", "combatSpellTracker.Enable", {
-        name: "wfrp4epladdon.combatSpellTracker.Enable",
-        hint: "wfrp4epladdon.combatSpellTracker.EnableHint",
-        scope: "world",
+    game.settings.register('wfrp4e-pl-addons', 'combatSpellTracker.Enable', {
+        name: 'wfrp4epladdon.combatSpellTracker.Enable',
+        hint: 'wfrp4epladdon.combatSpellTracker.EnableHint',
+        scope: 'world',
         config: true,
         default: false,
         type: Boolean,
-        onChange: value => {
-            foundry.utils.debouncedReload()
+        onChange: _value => {
+            foundry.utils.debouncedReload();
         }
     });
 
-    game.settings.register("wfrp4e-pl-addons", "counterSpells.Enable", {
-        name: "wfrp4epladdon.counterSpells.Enable",
-        hint: "wfrp4epladdon.counterSpells.EnableHint",
-        scope: "world",
+    game.settings.register('wfrp4e-pl-addons', 'counterSpells.Enable', {
+        name: 'wfrp4epladdon.counterSpells.Enable',
+        hint: 'wfrp4epladdon.counterSpells.EnableHint',
+        scope: 'world',
         config: true,
         default: false,
         type: Boolean,
-        onChange: value => {
-            foundry.utils.debouncedReload()
+        onChange: _value => {
+            foundry.utils.debouncedReload();
         }
     });
-  
-    game.settings.register("wfrp4e-pl-addons", "autoEngaged.Enable", {
-        name: "wfrp4epladdon.autoEngaged.Enable",
-        hint: "wfrp4epladdon.autoEngaged.EnableHint",
-        scope: "world",
-        config: true,
-        default: false,
-        type: Boolean
-    });
-  
-    game.settings.register("wfrp4e-pl-addons", "autoOutnumbered.Enable", {
-        name: "wfrp4epladdon.autoOutnumbered.Enable",
-        hint: "wfrp4epladdon.autoOutnumbered.EnableHint",
-        scope: "world",
+
+    game.settings.register('wfrp4e-pl-addons', 'autoEngaged.Enable', {
+        name: 'wfrp4epladdon.autoEngaged.Enable',
+        hint: 'wfrp4epladdon.autoEngaged.EnableHint',
+        scope: 'world',
         config: true,
         default: false,
         type: Boolean
     });
 
-    game.settings.register("wfrp4e-pl-addons", "autoOutnumbered.Bonus", {
-        name: "wfrp4epladdon.autoOutnumbered.Bonus",
-        hint: "wfrp4epladdon.autoOutnumbered.BonusHint",
-        scope: "world",
+    game.settings.register('wfrp4e-pl-addons', 'autoOutnumbered.Enable', {
+        name: 'wfrp4epladdon.autoOutnumbered.Enable',
+        hint: 'wfrp4epladdon.autoOutnumbered.EnableHint',
+        scope: 'world',
+        config: true,
+        default: false,
+        type: Boolean
+    });
+
+    game.settings.register('wfrp4e-pl-addons', 'autoOutnumbered.Bonus', {
+        name: 'wfrp4epladdon.autoOutnumbered.Bonus',
+        hint: 'wfrp4epladdon.autoOutnumbered.BonusHint',
+        scope: 'world',
         config: true,
         default: 10,
         type: Number
     });
 
-    game.settings.register("wfrp4e-pl-addons", "autoOutnumbered.Max", {
-        name: "wfrp4epladdon.autoOutnumbered.Max",
-        hint: "wfrp4epladdon.autoOutnumbered.MaxHint",
-        scope: "world",
+    game.settings.register('wfrp4e-pl-addons', 'autoOutnumbered.Max', {
+        name: 'wfrp4epladdon.autoOutnumbered.Max',
+        hint: 'wfrp4epladdon.autoOutnumbered.MaxHint',
+        scope: 'world',
         config: true,
         default: 3,
         type: Number
     });
 
-  
-    game.settings.register("wfrp4e-pl-addons", "autoRotate.Enable", {
-        name: "wfrp4epladdon.autoRotate.Enable",
-        hint: "wfrp4epladdon.autoRotate.EnableHint",
-        scope: "world",
+
+    game.settings.register('wfrp4e-pl-addons', 'autoRotate.Enable', {
+        name: 'wfrp4epladdon.autoRotate.Enable',
+        hint: 'wfrp4epladdon.autoRotate.EnableHint',
+        scope: 'world',
         config: true,
         default: false,
         type: Boolean
     });
 
-    game.settings.register("wfrp4e-pl-addons", "autoRotate.BonusFlanking", {
-        name: "wfrp4epladdon.autoRotate.BonusFlanking",
-        hint: "wfrp4epladdon.autoRotate.BonusFlankingHint",
-        scope: "world",
+    game.settings.register('wfrp4e-pl-addons', 'autoRotate.BonusFlanking', {
+        name: 'wfrp4epladdon.autoRotate.BonusFlanking',
+        hint: 'wfrp4epladdon.autoRotate.BonusFlankingHint',
+        scope: 'world',
         config: true,
         default: 10,
         type: Number
     });
 
-    game.settings.register("wfrp4e-pl-addons", "autoRotate.BonuBehind", {
-        name: "wfrp4epladdon.autoRotate.BonuBehind",
-        hint: "wfrp4epladdon.autoRotate.BonuBehindHint",
-        scope: "world",
+    game.settings.register('wfrp4e-pl-addons', 'autoRotate.BonuBehind', {
+        name: 'wfrp4epladdon.autoRotate.BonuBehind',
+        hint: 'wfrp4epladdon.autoRotate.BonuBehindHint',
+        scope: 'world',
         config: true,
         default: 20,
         type: Number
     });
 
-    game.settings.register("wfrp4e-pl-addons", "prayerNerf.Enabled", {
-        name: "wfrp4epladdon.prayerNerf.Enable",
-        hint: "wfrp4epladdon.prayerNerf.EnableHint",
-        scope: "world",
+    game.settings.register('wfrp4e-pl-addons', 'prayerNerf.Enabled', {
+        name: 'wfrp4epladdon.prayerNerf.Enable',
+        hint: 'wfrp4epladdon.prayerNerf.EnableHint',
+        scope: 'world',
         config: true,
         default: false,
         type: Boolean
     });
 
-    game.settings.register("wfrp4e-pl-addons", "autoCombat.Enabled", {
-        name: "wfrp4epladdon.autoCombat.Enable",
-        hint: "wfrp4epladdon.autoCombat.EnableHint",
-        scope: "world",
+    game.settings.register('wfrp4e-pl-addons', 'autoCombat.Enabled', {
+        name: 'wfrp4epladdon.autoCombat.Enable',
+        hint: 'wfrp4epladdon.autoCombat.EnableHint',
+        scope: 'world',
         config: true,
         default: false,
         type: Boolean
     });
 
-    game.settings.register("wfrp4e-pl-addons", "autoMiss.Enabled", {
-        name: "wfrp4epladdon.autoMiss.Enable",
-        hint: "wfrp4epladdon.autoMiss.EnableHint",
-        scope: "world",
+    game.settings.register('wfrp4e-pl-addons', 'autoMiss.Enabled', {
+        name: 'wfrp4epladdon.autoMiss.Enable',
+        hint: 'wfrp4epladdon.autoMiss.EnableHint',
+        scope: 'world',
         config: true,
         default: false,
         type: Boolean
     });
 
-    game.settings.register("wfrp4e-pl-addons", "pf2eHeresy.Enable", {
-        name: "wfrp4epladdon.pf2eHeresy.Enable",
-        hint: "wfrp4epladdon.pf2eHeresy.EnableHint",
-        scope: "world",
+    game.settings.register('wfrp4e-pl-addons', 'pf2eHeresy.Enable', {
+        name: 'wfrp4epladdon.pf2eHeresy.Enable',
+        hint: 'wfrp4epladdon.pf2eHeresy.EnableHint',
+        scope: 'world',
         config: true,
         default: false,
         type: Boolean
     });
 
-    game.settings.register("wfrp4e-pl-addons", "customDiseases.Enable", {
-        name: "wfrp4epladdon.customDiseases.Enable",
-        hint: "wfrp4epladdon.customDiseases.EnableHint",
-        scope: "world",
+    game.settings.register('wfrp4e-pl-addons', 'customDiseases.Enable', {
+        name: 'wfrp4epladdon.customDiseases.Enable',
+        hint: 'wfrp4epladdon.customDiseases.EnableHint',
+        scope: 'world',
         config: true,
         default: false,
         type: Boolean
     });
 
-    game.settings.register("wfrp4e-pl-addons", "socketTests.mode", {
+    game.settings.register('wfrp4e-pl-addons', 'socketTests.mode', {
         name: 'wfrp4epladdon.socketTests.Mode',
         hint: 'wfrp4epladdon.socketTests.ModeHint',
         scope: 'world',
@@ -282,28 +297,28 @@ Hooks.once("init", () => {
         default: 'onKeyPress',
         type: String,
         choices: {
-        'onKeyPress': 'wfrp4epladdon.socketTests.OnKeyPress',
-        'always': 'wfrp4epladdon.socketTests.Always',
-        'never': 'wfrp4epladdon.socketTests.Never',
+            'onKeyPress': 'wfrp4epladdon.socketTests.OnKeyPress',
+            'always': 'wfrp4epladdon.socketTests.Always',
+            'never': 'wfrp4epladdon.socketTests.Never'
         }
     });
-    
-    game.settings.register("wfrp4e-pl-addons", "templateCollision", {
-        name: `SETTINGS.templateCollision`,
-        hint: `SETTINGS.templateCollisionHint`,
+
+    game.settings.register('wfrp4e-pl-addons', 'templateCollision', {
+        name: 'SETTINGS.templateCollision',
+        hint: 'SETTINGS.templateCollisionHint',
         scope: 'world',
         config: true,
         type: Boolean,
-        default: false,
+        default: false
     });
-  
-    game.settings.register("wfrp4e-pl-addons", "templateCollisionMinimalRatio", {
-        name: `SETTINGS.templateCollisionMinimalRatio`,
-        hint: `SETTINGS.templateCollisionMinimalRatioHint`,
+
+    game.settings.register('wfrp4e-pl-addons', 'templateCollisionMinimalRatio', {
+        name: 'SETTINGS.templateCollisionMinimalRatio',
+        hint: 'SETTINGS.templateCollisionMinimalRatioHint',
         scope: 'world',
         config: true,
         type: Number,
-        default: 25,
+        default: 25
     });
 });
 
