@@ -15,7 +15,7 @@ export default {
         "scripts/main.mjs"
     ],
     output: {
-        dir : path.join(modulePath, "dist")
+        dir : "./dist"
     },
     plugins: [
         jscc({

@@ -1,11 +1,21 @@
+/**
+ *
+ */
 export default class VariousExtensions {
+    /**
+     *
+     */
     setup() {
-        Hooks.on('createActor', async function (actor, options, userID) {
-            if (userID != game.user.id) { return; }
-            if (!game.modules.get('wall-height')?.active) { return; }
+        Hooks.on('createActor', async function(actor, options, userID) {
+            if (userID !== game.user.id) {
+                return;
+            }
+            if (!game.modules.get('wall-height')?.active) {
+                return;
+            }
 
             if (actor.system?.details?.height?.value && parseInt(actor.system.details.height.value)) {
-                let h = parseInt(actor.system.details.height.value);
+                const h = parseInt(actor.system.details.height.value);
                 actor.prototypeToken.setFlag('wall-height', 'tokenHeight', h / 100);
             } else {
                 actor.prototypeToken.setFlag('wall-height', 'tokenHeight', 1.8);
@@ -14,7 +24,7 @@ export default class VariousExtensions {
 
         Reflect.defineProperty(WarhammerActor.prototype, 'hasPlayerOwner', {
             get() {
-                return game.users.some(u => !u.isGM && u.name != "Stream" && this.testUserPermission(u, "OWNER"));
+                return game.users.some(u => !u.isGM && u.name !== 'Stream' && this.testUserPermission(u, 'OWNER'));
             }
         });
 
