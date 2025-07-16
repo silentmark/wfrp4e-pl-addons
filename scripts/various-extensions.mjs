@@ -7,7 +7,7 @@ export default class VariousExtensions {
      */
     setup() {
         Hooks.on('createActor', async function(actor, options, userID) {
-            if (userID != game.user.id) {
+            if (userID !== game.user.id) {
                 return;
             }
             if (!game.modules.get('wall-height')?.active) {
@@ -24,7 +24,7 @@ export default class VariousExtensions {
 
         Reflect.defineProperty(WarhammerActor.prototype, 'hasPlayerOwner', {
             get() {
-                return game.users.some(u => !u.isGM && u.name != 'Stream' && this.testUserPermission(u, 'OWNER'));
+                return game.users.some(u => !u.isGM && u.name !== 'Stream' && this.testUserPermission(u, 'OWNER'));
             }
         });
 

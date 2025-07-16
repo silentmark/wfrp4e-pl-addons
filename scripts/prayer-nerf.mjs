@@ -6,20 +6,20 @@ import { constants } from './constants.mjs';
 export default class PrayerNerf {
 
     calculatePrayerNerf = function(args) {
-        if (game.combat == null || !game.combat.active) {
+        if (game.combat === null || !game.combat.active) {
             return;
         }
-        if (args.type != 'prayer') {
+        if (args.type !== 'prayer') {
             return;
         }
 
-        const combatant = game.combat.combatants.find(x => x.actorId == args.actor.id);
-        if (combatant == null) {
+        const combatant = game.combat.combatants.find(x => x.actorId === args.actor.id);
+        if (combatant === null) {
             return;
         }
 
         const prayers = combatant.getFlag('wfrp4e-pl-addons', 'prayers') ?? {};
-        if (prayers[args.item.id] == null || prayers[args.item.id] == 0) {
+        if (prayers[args.item.id] === null || prayers[args.item.id] === 0) {
             return;
         }
 
@@ -42,15 +42,15 @@ export default class PrayerNerf {
         if (game.settings.get('wfrp4e-pl-addons', 'prayerNerf.Enabled')) {
 
             Hooks.on('wfrp4e:rollPrayerTest', function(prayerTest) {
-                if (game.combat == null || !game.combat.active) {
+                if (game.combat === null || !game.combat.active) {
                     return;
                 }
-                const combatant = game.combat.combatants.find(x => x.actorId == prayerTest.actor.id);
-                if (combatant == null) {
+                const combatant = game.combat.combatants.find(x => x.actorId === prayerTest.actor.id);
+                if (combatant === null) {
                     return;
                 }
                 const prayers = combatant.getFlag('wfrp4e-pl-addons', 'prayers') ?? {};
-                if (prayerTest.data.result.outcome == 'success') {
+                if (prayerTest.data.result.outcome === 'success') {
                     prayers[prayerTest.item.id] = (prayers[prayerTest.item.id] || 0) + 1;
                 } else {
                     prayers[prayerTest.item.id] = Math.max((prayers[prayerTest.item.id] || 0) - 1, 0);

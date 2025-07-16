@@ -16,7 +16,7 @@ export default class SocketTests {
             const actorId = payload.actorId;
             const actor = game.actors.get(actorId);
             const owner = warhammer.utility.getActiveDocumentOwner(actor);
-            if (owner.id == game.user.id) {
+            if (owner.id === game.user.id) {
                 for (const propName of dialogData.datasets) {
                     if (dialogData.data[propName]) {
                         dialogData.data[propName] = actor.items.get(dialogData.data[propName]._id);
@@ -32,7 +32,7 @@ export default class SocketTests {
         async function(dialogData, dialogClassName) {
             const isSocketTest = SocketTests.isSocketTest();
             const owner = warhammer.utility.getActiveDocumentOwner(this);
-            if (owner.id != game.user.id && isSocketTest) {
+            if (owner.id !== game.user.id && isSocketTest) {
                 owner.updateTokenTargets([]);
                 owner.updateTokenTargets(Array.from(game.user.targets.map(x => x.id)));
                 owner.broadcastActivity({ targets: Array.from(game.user.targets.map(x => x.id)) });
@@ -42,7 +42,7 @@ export default class SocketTests {
                 const props = Object.getOwnPropertyNames(dialogData.data);
                 dialogData.datasets = [];
                 for (const prop of props) {
-                    if (dialogData.data[prop]?.constructor?.name == 'ItemWfrp4e') {
+                    if (dialogData.data[prop]?.constructor?.name === 'ItemWfrp4e') {
                         dialogData.data[prop] = dialogData.data[prop].toObject();
                         dialogData.datasets.push(prop);
                     }
@@ -79,7 +79,7 @@ export default class SocketTests {
                 fields: options.fields || {},
                 data: {
                     characteristic,
-                    hitLoc: (characteristic == 'ws' || characteristic == 'bs') && !options.reload
+                    hitLoc: (characteristic === 'ws' || characteristic === 'bs') && !options.reload
                 },
                 options: options || {}
             };
@@ -109,7 +109,7 @@ export default class SocketTests {
         async function(skill, options = {}) {
             if (typeof (skill) === 'string') {
                 const skillName = skill;
-                skill = this.itemTypes['skill'].find(sk => sk.name == skill);
+                skill = this.itemTypes['skill'].find(sk => sk.name === skill);
                 if (!skill) {
                     // Skill not found, find later and use characteristic
                     skill = {
@@ -126,8 +126,8 @@ export default class SocketTests {
                 fields: options.fields || {},
                 data: {
                     skill,
-                    hitLoc: ((skill.characteristic.key == 'ws' ||
-                skill.characteristic.key == 'bs' ||
+                    hitLoc: ((skill.characteristic.key === 'ws' ||
+                skill.characteristic.key === 'bs' ||
                 skill.name.includes(game.i18n.localize('NAME.Melee')) ||
                 skill.name.includes(game.i18n.localize('NAME.Ranged')))
                 && !options.reload)
@@ -201,7 +201,7 @@ export default class SocketTests {
                 fields: options.fields || {},
                 data: {
                     trait,
-                    hitLoc: (trait.system.rollable.rollCharacteristic == 'ws' || trait.system.rollable.rollCharacteristic == 'bs')
+                    hitLoc: (trait.system.rollable.rollCharacteristic === 'ws' || trait.system.rollable.rollCharacteristic === 'bs')
                 },
                 options: options || {}
             };

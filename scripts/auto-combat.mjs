@@ -31,10 +31,10 @@ export default class AutoCombat {
                 html.find('.col.left').append(hudAutoCombat);
 
                 hudAutoCombat.find('i').click(async ev => {
-                    if (actor.flags?.wfrp4e?.autoCombat == 1) {
+                    if (actor.flags?.wfrp4e?.autoCombat === 1) {
                         actor.update({ 'flags.wfrp4e.autoCombat': 2 });
                         hudAutoCombat.css('box-shadow','0 0 23px red inset');
-                    } else if (actor.flags?.wfrp4e?.autoCombat == 2) {
+                    } else if (actor.flags?.wfrp4e?.autoCombat === 2) {
                         actor.update({ 'flags.wfrp4e.autoCombat': 0 });
                         hudAutoCombat.css('box-shadow','0 0 23px black inset');
                     } else {
@@ -61,10 +61,10 @@ export default class AutoCombat {
                     if (!actor?.flags?.wfrp4e?.autoCombat) {
                         return;
                     }
-                    if (actor.flags.wfrp4e.autoCombat != 2) {
+                    if (actor.flags.wfrp4e.autoCombat !== 2) {
                         return;
                     }
-                    if (game.combat.current.currentAutoCombatTurn == game.combat.current.turn) {
+                    if (game.combat.current.currentAutoCombatTurn === game.combat.current.turn) {
                         return;
                     }
                     const combatant = game.combat.combatants.find(x=> x.tokenId === combat.current.tokenId);
@@ -80,7 +80,7 @@ export default class AutoCombat {
                         .filter(x => !x.hidden)
                         .filter(x => tokenObj.vision.los.contains(x.object.center.x, x.object.center.y));
 
-                    if (potentialTargets.length == 0) {
+                    if (potentialTargets.length === 0) {
                         return;
                     }
                     potentialTargets = potentialTargets.sort(() => Math.random());
@@ -90,7 +90,7 @@ export default class AutoCombat {
                     const target = potentialTargets[0].object;
                     const distance = game.canvas.grid.measureDistance({ x: tokenObj.x, y: tokenObj.y }, { x: target.x, y: target.y }, { gridSpaces: true });
                     if (distance <= 2) {//melee
-                        const stuffToUse = actor.itemTags['weapon'].filter(w => w.attackType == 'melee');
+                        const stuffToUse = actor.itemTags['weapon'].filter(w => w.attackType === 'melee');
                         if (stuffToUse.length > 0) {
                             let setupItem = stuffToUse[0];
                             for (let i = 1; i < stuffToUse.length; i++) {
@@ -119,7 +119,7 @@ export default class AutoCombat {
                             await test.roll();
                         }
                     } else {
-                        const stuffToUse = actor.itemTags['weapon'].filter(w => w.attackType == 'ranged');
+                        const stuffToUse = actor.itemTags['weapon'].filter(w => w.attackType === 'ranged');
                         if (stuffToUse.length > 0) {
                             const setupItem = stuffToUse[0];
                             if (setupItem.currentAmmo.value && actor.items.get(setupItem.currentAmmo.value).quantity.value > 0) {
@@ -146,7 +146,7 @@ export default class AutoCombat {
                 }
 
                 const castTest = app.system.test;
-                if (castTest?.constructor?.name == 'WomCastTest' && castTest.result.castOutcome == 'success') {
+                if (castTest?.constructor?.name === 'WomCastTest' && castTest.result.castOutcome === 'success') {
                     const newMessage = jQuery(html).find('.message-content').append(jQuery('<div class="card-content"><a class="chat-button card-apply-spell" style="width: 100%">Zastosuj do wszystkich Celów</a></div>'));
                     newMessage.find('.card-apply-spell').click(async function() {
                         const messageId = messageData.message._id;
@@ -159,7 +159,7 @@ export default class AutoCombat {
                         castTest.context.targets = castTest.context.targets.concat(targets);
                         const uniqueTargets = [];
                         castTest.context.targets.forEach(target => {
-                            if (uniqueTargets.find(x=>x._id == target._id)) {
+                            if (uniqueTargets.find(x=>x._id === target._id)) {
                                 return;
                             }
                             uniqueTargets.push(target);
@@ -204,10 +204,10 @@ export default class AutoCombat {
                             if (effectId) {
                                 effect = actor.populateEffect(effectId, item, castTest);
                             }
-                            if (effect.flags.wfrp4e.effectTrigger == 'invoke') {
+                            if (effect.flags.wfrp4e.effectTrigger === 'invoke') {
                                 game.wfrp4e.utility.invokeEffect(actor, effectId, item.id);
                             } else {
-                                if (item.range && item.range.value.toLowerCase() == game.i18n.localize('You').toLowerCase() && item.target && item.target.value.toLowerCase() == game.i18n.localize('You').toLowerCase()) {
+                                if (item.range && item.range.value.toLowerCase() === game.i18n.localize('You').toLowerCase() && item.target && item.target.value.toLowerCase() === game.i18n.localize('You').toLowerCase()) {
                                     game.wfrp4e.utility.applyEffectToTarget(effect, [{ actor }]);
                                 } // Apply to caster (self)
                                 else {
@@ -218,10 +218,10 @@ export default class AutoCombat {
                     });
                 }
 
-                if (game.ready && app.system.constructor.name == 'OpposedHandlerMessage' && app.system.opposedData.attackerMessageId) {
+                if (game.ready && app.system.constructor.name === 'OpposedHandlerMessage' && app.system.opposedData.attackerMessageId) {
                     const msg = game.messages.get(app.system.opposedData.attackerMessageId);
                     const postFunction = msg?.system?.test?.preData?.rollClass;
-                    if (postFunction == 'WeaponTest' || postFunction == 'TraitTest') {
+                    if (postFunction === 'WeaponTest' || postFunction === 'TraitTest') {
                         let speaker;
                         if (msg.system.test.context.speaker.actor) {
                             speaker = game.actors.get(msg.system.test.context.speaker.actor);
@@ -239,19 +239,19 @@ export default class AutoCombat {
                             if (target.actor?.flags?.wfrp4e?.autoCombat && target.actor.flags.wfrp4e.autoCombat > 0) {
                                 let updateMsg;
                                 let resultMessage;
-                                if (item.attackType != 'ranged') {
+                                if (item.attackType !== 'ranged') {
                                     const actor = target.actor;
                                     let stuffToUse = [];
-                                    const dodge = actor.itemTags['skill'].find(sk => sk.name == game.i18n.localize('NAME.Dodge'));
+                                    const dodge = actor.itemTags['skill'].find(sk => sk.name === game.i18n.localize('NAME.Dodge'));
                                     if (dodge) {
                                         stuffToUse.push(dodge);
                                     }
-                                    stuffToUse = stuffToUse.concat(actor.itemTags['weapon'].filter(w => w.attackType == 'melee'));
+                                    stuffToUse = stuffToUse.concat(actor.itemTags['weapon'].filter(w => w.attackType === 'melee'));
 
                                     let setupItem = dodge;
                                     for (let i = 0; i < stuffToUse.length; i++) {
                                         let max = 0;
-                                        if (setupItem.type == 'skill') {
+                                        if (setupItem.type === 'skill') {
                                             max = setupItem.system.total.value;
                                         } else {
                                             const skillToUse = setupItem.skillToUse;
@@ -263,7 +263,7 @@ export default class AutoCombat {
                                         }
                                         let newMax = 0;
                                         const newSetupItem = stuffToUse[i];
-                                        if (newSetupItem.type == 'skill') {
+                                        if (newSetupItem.type === 'skill') {
                                             newMax = newSetupItem.system.total.value;
                                         } else {
                                             const skillToUse = newSetupItem.skillToUse;
@@ -279,7 +279,7 @@ export default class AutoCombat {
                                     }
 
                                     let test;
-                                    if (setupItem.type == 'skill') {
+                                    if (setupItem.type === 'skill') {
                                         test = await actor.setupSkill(setupItem, { bypass: true });
                                     } else {
                                         test = await actor.setupWeapon(setupItem, { bypass: true });
@@ -288,7 +288,7 @@ export default class AutoCombat {
                                     const appNew = game.messages.get(app.id);
                                     resultMessage = game.messages.get(appNew.system.opposedData.resultMessageId);
                                     const opposedTest = resultMessage.system.opposedTest;
-                                    if (opposedTest.opposeResult.winner == 'attacker') {
+                                    if (opposedTest.opposeResult.winner === 'attacker') {
                                         updateMsg = await opposedTest.defenderTest.actor.applyDamage(opposedTest, game.wfrp4e.config.DAMAGE_TYPE.NORMAL);
                                         await game.wfrp4e.opposedHandler.updateOpposedMessage(updateMsg, resultMessage.id);
                                     }
@@ -301,7 +301,7 @@ export default class AutoCombat {
                                         resultMessage = game.messages.get(message.system.opposedData.resultMessageId);
                                         const opposedTest = resultMessage.system.opposedTest;
 
-                                        if (opposedTest.opposeResult.winner == 'attacker') {
+                                        if (opposedTest.opposeResult.winner === 'attacker') {
                                             updateMsg = await opposedTest.defenderTest.actor.applyDamage(opposedTest, game.wfrp4e.config.DAMAGE_TYPE.NORMAL);
                                             await game.wfrp4e.opposedHandler.updateOpposedMessage(updateMsg, resultMessage.id);
                                         }

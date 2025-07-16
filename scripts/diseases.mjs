@@ -20,7 +20,7 @@ export default class Diseases {
                     script: ` let difficulty = "veasy";
                     let test = await args.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {context : {failure : args.actor.name + " umiera z powodu Uwiądu"}, fields: {difficulty}, appendTitle : " - Uwiąd"});
                     await test.roll();
-                    if (test.result.outcome == "failure") {
+                    if (test.result.outcome === "failure") {
                             await args.actor.addCondition("dead");
                     }
                   `
@@ -46,7 +46,7 @@ export default class Diseases {
                     script: ` let difficulty = "easy";
                     let test = await args.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {context : {failure : args.actor.name + " umiera z powodu Uwiądu"}, fields: {difficulty}, appendTitle : " - Uwiąd"});
                     await test.roll();
-                    if (test.result.outcome == "failure") {
+                    if (test.result.outcome === "failure") {
                             await args.actor.addCondition("dead");
                     }
                   `
@@ -72,7 +72,7 @@ export default class Diseases {
                     script: ` let difficulty = "average";
                     let test = await args.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {context : {failure : args.actor.name + " umiera z powodu Uwiądu"}, fields: {difficulty}, appendTitle : " - Uwiąd"});
                     await test.roll();
-                    if (test.result.outcome == "failure") {
+                    if (test.result.outcome === "failure") {
                             await args.actor.addCondition("dead");
                     }
                   `
@@ -96,7 +96,7 @@ export default class Diseases {
                     label: 'Dymienica (Lekka)',
                     trigger: 'dialog',
                     script: `
-          if (args.characteristic == "ws" || args.characteristic == "bs") {
+          if (args.characteristic === "ws" || args.characteristic === "bs") {
             args.fields.modifier -= 10;
           } else {
             args.fields.modifier -= 5
@@ -126,7 +126,7 @@ export default class Diseases {
                     label: 'Dymienica (Umiarkowana)',
                     trigger: 'dialog',
                     script: `
-          if (args.characteristic == "ws" || args.characteristic == "bs") {
+          if (args.characteristic === "ws" || args.characteristic === "bs") {
             args.fields.modifier -= 20;
           } else {
             args.fields.modifier -= 15
@@ -413,7 +413,7 @@ export default class Diseases {
                         script: ` let difficulty = "easy";
                     let test = await args.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {context : {failure : args.actor.name + " umiera z powodu Uwiądu"}, fields: {difficulty}, appendTitle : " - Uwiąd"});
                     await test.roll();
-                    if (test.result.outcome == "failure") {
+                    if (test.result.outcome === "failure") {
                             await args.actor.addCondition("dead");
                     }
                   `
@@ -475,8 +475,8 @@ export default class Diseases {
                         label: 'Kaszel i katar (Umiarkowany)',
                         script: 'args.fields.modifier -= 10',
                         options: {
-                            hideScript: 'return !["fel"].includes(args.characteristic) && args.type != "skill" && args.item.name.indexOf("Skradanie") == -1',
-                            activateScript: 'return ["fel"].includes(args.characteristic) || (args.type == "skill" && args.item.name.indexOf("Skradanie") != -1)'
+                            hideScript: 'return !["fel"].includes(args.characteristic) && args.type !== "skill" && args.item.name.indexOf("Skradanie") === -1',
+                            activateScript: 'return ["fel"].includes(args.characteristic) || (args.type === "skill" && args.item.name.indexOf("Skradanie") !== -1)'
                         }
                     }
                 ]

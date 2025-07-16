@@ -93,8 +93,8 @@ export default class PF2eHeresy {
                             label : game.i18n.localize('WFRP4E.ConditionName.Multichannelling'),
                             script : 'args.fields.modifier -= (this.effect.conditionValue * 30)',
                             options : {
-                                hideScript : 'return args.type != \'channelling\'',
-                                activateScript : 'return args.type == \'channelling\''
+                                hideScript : 'return args.type !== \'channelling\'',
+                                activateScript : 'return args.type === \'channelling\''
                             }
                         }
                     ]
@@ -148,8 +148,8 @@ export default class PF2eHeresy {
                             trigger : 'dialog',
                             script : 'args.fields.modifier -= 30',
                             options : {
-                                hideScript : 'return args.item?.system.attackType != \'melee\' && !args.skill?.name?.includes(game.i18n.localize(\'NAME.Dodge\'))',
-                                activateScript : 'return args.item?.system.attackType == \'melee\' || args.skill?.name?.includes(game.i18n.localize(\'NAME.Dodge\'))'
+                                hideScript : 'return args.item?.system.attackType !== \'melee\' && !args.skill?.name?.includes(game.i18n.localize(\'NAME.Dodge\'))',
+                                activateScript : 'return args.item?.system.attackType === \'melee\' || args.skill?.name?.includes(game.i18n.localize(\'NAME.Dodge\'))'
                             }
                         },
                         {
@@ -157,8 +157,8 @@ export default class PF2eHeresy {
                             trigger : 'dialog',
                             script : 'args.fields.successBonus += args.actor.system.characteristics.bs.bonus',
                             options : {
-                                hideScript : 'return args.item?.system.attackType != \'ranged\'',
-                                activateScript : 'return args.item?.system.attackType == \'ranged\''
+                                hideScript : 'return args.item?.system.attackType !== \'ranged\'',
+                                activateScript : 'return args.item?.system.attackType === \'ranged\''
                             }
                         }
                     ]
@@ -195,7 +195,7 @@ export default class PF2eHeresy {
 
                     game.wfrp4e.config.conditionDescriptions['aiming'] = '<b>Celowanie</b>: 1 akcja, zapewnia +Bonus US SL do następnej tury podczas ataków dystansowych. Niestety, z powodu skupienia na celu, postać jest bardziej podatna na ataki w walce wręcz (-30 do unikow i parowania).';
 
-                    const bleeding = game.wfrp4e.config.statusEffects.find(x => x.id == 'bleeding');
+                    const bleeding = game.wfrp4e.config.statusEffects.find(x => x.id === 'bleeding');
                     bleeding.system = bleeding.system || {};
                     bleeding.system.condition = bleeding.system.condition || {};
                     bleeding.system.condition.trigger = 'startTurn';
@@ -212,7 +212,7 @@ export default class PF2eHeresy {
                                         msg = scriptArgs.msg;
                                         damage = scriptArgs.damage;
                                         msg += await actor.applyBasicDamage(damage, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL, minimumOne : false, suppressMsg : true})
-                                        if (actor.status.wounds.value == 0 && !actor.hasCondition("unconscious"))
+                                        if (actor.status.wounds.value === 0 && !actor.hasCondition("unconscious"))
                                         {
                                             addBleedingUnconscious = async () => {
                                                 await actor.addCondition("unconscious")
@@ -237,7 +237,7 @@ export default class PF2eHeresy {
                                                 msg += "<br>" + game.i18n.format("BleedFail", {name: actor.prototypeToken.name}) + " (" + game.i18n.localize("Rolled") + " " + bleedingRoll + ")";
                                                 await actor.addCondition("dead")
                                             }
-                                            else if (bleedingRoll % 11 == 0)
+                                            else if (bleedingRoll % 11 === 0)
                                             {
                                                 msg += "<br>" + game.i18n.format("BleedCrit", { name: actor.prototypeToken.name } ) + " (" + game.i18n.localize("Rolled") + bleedingRoll + ")"
                                                 await actor.removeCondition("bleeding")
@@ -261,7 +261,7 @@ export default class PF2eHeresy {
                                         }
                                         `;
 
-                    const poisoned = game.wfrp4e.config.statusEffects.find(x => x.id == 'poisoned');
+                    const poisoned = game.wfrp4e.config.statusEffects.find(x => x.id === 'poisoned');
                     poisoned.system = poisoned.system || {};
                     poisoned.system.condition = poisoned.system.condition || {};
                     poisoned.system.condition.trigger = 'startTurn';
@@ -307,7 +307,7 @@ export default class PF2eHeresy {
                             let msg = ""
                             let test = await actor.setupSkill(game.i18n.localize("NAME.Endurance"), {appendTitle : " - Zatrucie"})
                             await test.roll();
-                            if (test.result.outcome == "success")
+                            if (test.result.outcome === "success")
                             {
                                 await actor.removeCondition("poisoned", Math.min(test.result.SL, effect.conditionValue));
                                 msg += "<br/>Liczba usuniętych stanów Zatrucia: " + Math.min(test.result.SL, effect.conditionValue);
@@ -339,12 +339,12 @@ export default class PF2eHeresy {
                         }
                     ];
 
-                    const ablaze = game.wfrp4e.config.statusEffects.find(x => x.id == 'ablaze');
+                    const ablaze = game.wfrp4e.config.statusEffects.find(x => x.id === 'ablaze');
                     ablaze.system = ablaze.system || {};
                     ablaze.system.condition = ablaze.system.condition || {};
                     ablaze.system.condition.trigger = 'startTurn';
 
-                    const stunned = game.wfrp4e.config.statusEffects.find(x => x.id == 'stunned');
+                    const stunned = game.wfrp4e.config.statusEffects.find(x => x.id === 'stunned');
                     stunned.system = {
                         condition : {
                             value : 1,
@@ -366,7 +366,7 @@ export default class PF2eHeresy {
                                 
                                 let test = await actor.setupSkill(game.i18n.localize("NAME.Endurance"), {appendTitle : " - Oszołomienie"})
                                 await test.roll();
-                                if (test.result.outcome == "success")
+                                if (test.result.outcome === "success")
                                 {
                                     await actor.removeCondition("stunned", Math.min(test.result.SL, conditionValue));
                                     msg += "Liczba usuniętych stanów Oszołomienia: " + Math.min(test.result.SL, conditionValue);
@@ -402,15 +402,15 @@ export default class PF2eHeresy {
                             label : 'Oszołomienie - Bonus do testów Ataku',
                             script : 'args.fields.slBonus += 1',
                             options : {
-                                hideScript : 'return args.item?.system.attackType != \'melee\'',
-                                activateScript : 'return args.item?.system.attackType == \'melee\'',
+                                hideScript : 'return args.item?.system.attackType !== \'melee\'',
+                                activateScript : 'return args.item?.system.attackType === \'melee\'',
                                 targeter: true
                             }
                         }
                         ]
                     };
 
-                    const entangled = game.wfrp4e.config.statusEffects.find(x => x.id == 'entangled');
+                    const entangled = game.wfrp4e.config.statusEffects.find(x => x.id === 'entangled');
                     entangled.system = {
                         condition : {
                             value : 1,
@@ -451,7 +451,7 @@ export default class PF2eHeresy {
                                     } 
                                     else 
                                     {
-                                        if (test.result.outcome == "success") 
+                                        if (test.result.outcome === "success") 
                                         {
                                             await actor.removeCondition("entangled", Math.min(test.result.SL, conditionValue));
                                             msg += "Liczba usuniętych stanów Pochwycenie: " + Math.min(test.result.SL, conditionValue);
@@ -488,7 +488,7 @@ export default class PF2eHeresy {
                         ]
                     };
 
-                    const broken = game.wfrp4e.config.statusEffects.find(x => x.id == 'broken');
+                    const broken = game.wfrp4e.config.statusEffects.find(x => x.id === 'broken');
                     broken.system =  {
                         condition: {
                             value: 1,
@@ -509,7 +509,7 @@ export default class PF2eHeresy {
                                     await Promise.all(actor.runScripts("preApplyCondition", {effect, data : scriptArgs}))
                                     let test = await actor.setupSkill(game.i18n.localize("NAME.Cool"), {appendTitle : " - Panika"})
                                     await test.roll();
-                                    if (test.result.outcome == "success")
+                                    if (test.result.outcome === "success")
                                     {
                                         await actor.removeCondition("broken", Math.min(test.result.SL, conditionValue));
                                         msg += "Liczba usuniętych stanów Paniki: " + Math.min(test.result.SL, conditionValue);
@@ -539,7 +539,7 @@ export default class PF2eHeresy {
                                 label : 'Panika - Wszystkie testy nie związane z ucieczką i ukrywaniem się.',
                                 script : 'args.fields.modifier -= 10 * this.effect.conditionValue',
                                 options : {
-                                    activateScript : 'return !args.skill?.name?.includes(game.i18n.localize(\'NAME.Stealth\')) && args.skill?.name != game.i18n.localize(\'NAME.Athletics\')'
+                                    activateScript : 'return !args.skill?.name?.includes(game.i18n.localize(\'NAME.Stealth\')) && args.skill?.name !== game.i18n.localize(\'NAME.Athletics\')'
                                 }
                             }
                         ]

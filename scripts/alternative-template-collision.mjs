@@ -66,7 +66,7 @@ export default class AlternativeTemplateCollision {
                     options._newCenter = {};
                 }
                 // Get all areas left, but aura owners should never leave their aura area
-                options._priorAreas[token.id] = scene.templates.contents.filter(template => AreaHelpers.isInTemplate(token.object, template) && template.getFlag(game.system.id, 'aura')?.owner != token.actor?.uuid).map(i => i.id);
+                options._priorAreas[token.id] = scene.templates.contents.filter(template => AreaHelpers.isInTemplate(token.object, template) && template.getFlag(game.system.id, 'aura')?.owner !== token.actor?.uuid).map(i => i.id);
                 const newCenter = TokenHelpers.tokenCenter(foundry.utils.mergeObject(token.toObject(), update));
                 options._newCenter[token.id] = newCenter;
                 options._areas[token.id] = scene.templates.contents.filter(template => AreaHelpers.isInTemplate(newCenter, template, { width: token.width, height: token.height })).map(i => i.id);
@@ -74,7 +74,7 @@ export default class AlternativeTemplateCollision {
 
             // Checks a token's current zone and zone effects, adding and removing them
             AreaHelpers.checkTokenUpdate = async function(token, update, options, user) {
-                if (user == game.user.id) {
+                if (user === game.user.id) {
                     // If every current region ID exists in priorAuras, and every priorRegion ID existis in current, there was no region change
                     const currentAreas = options._areas[token.id] || [];
                     const priorAreas = options._priorAreas[token.id] || [];
@@ -87,9 +87,9 @@ export default class AlternativeTemplateCollision {
 
             AreaHelpers.checkAreaUpdate = async function(template, update, options, user) {
                 // players can't manage token effects, so only the active GM should add/remove area effects
-                if (game.users.activeGM.id == game.user.id && !options?.skipAreaCheck) {
+                if (game.users.activeGM.id === game.user.id && !options?.skipAreaCheck) {
                     // Tokens that are now in the template or have effects from this template
-                    const tokens = template.parent?.tokens.contents.filter(token => AreaHelpers.isInTemplate(token.object, template) || token.actor?.effects.find(e => e.system.sourceData.area == template.uuid));
+                    const tokens = template.parent?.tokens.contents.filter(token => AreaHelpers.isInTemplate(token.object, template) || token.actor?.effects.find(e => e.system.sourceData.area === template.uuid));
                     for (const token of tokens) {
                         AreaHelpers.semaphore.add(AreaHelpers.checkTokenAreaEffects.bind(AreaHelpers), token);
                     }
@@ -98,9 +98,9 @@ export default class AlternativeTemplateCollision {
 
             AreaHelpers.checkAreaCreate = async function(template, options, user) {
                 // players can't manage token effects, so only the active GM should add/remove area effects
-                if (game.users.activeGM.id == game.user.id && !options?.skipAreaCheck) {
+                if (game.users.activeGM.id === game.user.id && !options?.skipAreaCheck) {
                     // Tokens that are now in the template or have effects from this template
-                    const tokens = template.parent?.tokens.contents.filter(token => AreaHelpers.isInTemplate(token.object, template) || token.actor?.effects.find(e => e.system.sourceData.area == template.uuid));
+                    const tokens = template.parent?.tokens.contents.filter(token => AreaHelpers.isInTemplate(token.object, template) || token.actor?.effects.find(e => e.system.sourceData.area === template.uuid));
                     for (const token of tokens) {
                         AreaHelpers.semaphore.add(AreaHelpers.checkTokenAreaEffects.bind(AreaHelpers), token);
                     }
@@ -115,9 +115,9 @@ export default class AlternativeTemplateCollision {
 
             AreaHelpers.checkAreaDelete = async function(template, options, user) {
                 // players can't manage token effects, so only the active GM should add/remove area effects
-                if (game.users.activeGM.id == game.user.id && !options?.skipAreaCheck) {
+                if (game.users.activeGM.id === game.user.id && !options?.skipAreaCheck) {
                     // Tokens that have effects from this template
-                    const tokens = template.parent?.tokens.contents.filter(token => token.actor?.effects.find(e => e.system.sourceData.area == template.uuid));
+                    const tokens = template.parent?.tokens.contents.filter(token => token.actor?.effects.find(e => e.system.sourceData.area === template.uuid));
                     for (const token of tokens) {
                         AreaHelpers.semaphore.add(AreaHelpers.checkTokenAreaEffects.bind(AreaHelpers), token);
                     }
@@ -138,7 +138,7 @@ export default class AlternativeTemplateCollision {
                     const auraData = area.getFlag(game.system.id, 'aura');
                     // If the effect exists, only add the area effect if the area is not an aura OR this isn't the owner of the aura and it's not a transferred aura
                     // in other words, if the aura is transferred, apply to owner of the aura. If it's a constant aura, don't add the effect to the owner
-                    if (areaEffect && (!auraData || auraData.owner != token.actor?.uuid || auraData.transferred)) {
+                    if (areaEffect && (!auraData || auraData.owner !== token.actor?.uuid || auraData.transferred)) {
                         areaEffects.push(areaEffect);
                     }
                 });
@@ -146,7 +146,7 @@ export default class AlternativeTemplateCollision {
                 const toDelete = effects.filter(e => e.system.sourceData.area && !inAreas.map(i => i.uuid).includes(e.system.sourceData.area) && !e.system.transferData.area.keep).map(e => e.id);
 
                 // filter out all area effects that are already on the actor
-                const toAdd = areaEffects.filter(ae => !token.actor?.effects.find(e => e.system.sourceData.area == ae.system.sourceData.area));
+                const toAdd = areaEffects.filter(ae => !token.actor?.effects.find(e => e.system.sourceData.area === ae.system.sourceData.area));
 
                 if (toDelete.length) {
                     if (token.actor) {
@@ -173,12 +173,12 @@ export default class AlternativeTemplateCollision {
             };
 
 
-            Hooks.off('preUpdateToken', Hooks.events.preUpdateToken.find(x => x.fn.name == 'bound setTokenAreas').fn);
-            Hooks.off('updateToken', Hooks.events.updateToken.find(x => x.fn.name == 'bound checkTokenUpdate').fn);
-            Hooks.off('createMeasuredTemplate', Hooks.events.createMeasuredTemplate.find(x => x.fn.name == 'bound checkAreaCreate').fn);
-            Hooks.off('refreshMeasuredTemplate', Hooks.events.refreshMeasuredTemplate.find(x => x.fn.name == 'bound refreshArea').fn);
-            Hooks.off('updateMeasuredTemplate', Hooks.events.updateMeasuredTemplate.find(x => x.fn.name == 'bound checkAreaUpdate').fn);
-            Hooks.off('deleteMeasuredTemplate', Hooks.events.deleteMeasuredTemplate.find(x => x.fn.name == 'bound checkAreaDelete').fn);
+            Hooks.off('preUpdateToken', Hooks.events.preUpdateToken.find(x => x.fn.name === 'bound setTokenAreas').fn);
+            Hooks.off('updateToken', Hooks.events.updateToken.find(x => x.fn.name === 'bound checkTokenUpdate').fn);
+            Hooks.off('createMeasuredTemplate', Hooks.events.createMeasuredTemplate.find(x => x.fn.name === 'bound checkAreaCreate').fn);
+            Hooks.off('refreshMeasuredTemplate', Hooks.events.refreshMeasuredTemplate.find(x => x.fn.name === 'bound refreshArea').fn);
+            Hooks.off('updateMeasuredTemplate', Hooks.events.updateMeasuredTemplate.find(x => x.fn.name === 'bound checkAreaUpdate').fn);
+            Hooks.off('deleteMeasuredTemplate', Hooks.events.deleteMeasuredTemplate.find(x => x.fn.name === 'bound checkAreaDelete').fn);
 
             Hooks.on('preUpdateToken', AreaHelpers.setTokenAreas.bind(AreaHelpers));
             Hooks.on('updateToken', AreaHelpers.checkTokenUpdate.bind(AreaHelpers));

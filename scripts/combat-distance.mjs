@@ -110,7 +110,7 @@ export default class CombatDistances {
 
         token.on('mouseover', function() {
             const distance = CombatDistances.calculateWeaponReachRadius(token);
-            const color = token.document.disposition == CONST.TOKEN_DISPOSITIONS.FRIENDLY ? distance.range.colorAlly : distance.range.colorHostile;
+            const color = token.document.disposition === CONST.TOKEN_DISPOSITIONS.FRIENDLY ? distance.range.colorAlly : distance.range.colorHostile;
             if (game.combat?.active) {
                 ring.clear();
                 ring.beginFill(PIXI.utils.string2hex(color), 0.25);

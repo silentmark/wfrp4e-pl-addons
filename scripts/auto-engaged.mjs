@@ -15,7 +15,7 @@ export default class AutoEngaged {
                 const actorId = payload.actorId;
                 const actor = game.actors.get(actorId);
                 const owner = warhammer.utility.getActiveDocumentOwner(actor);
-                if (owner.id == game.user.id) {
+                if (owner.id === game.user.id) {
                     await actor.addCondition(condition);
                 }
             };
@@ -61,7 +61,7 @@ export default class AutoEngaged {
                         }
 
                         for (const tok of canvas.tokens.placeables) {
-                            if (tok.id != token.id) {
+                            if (tok.id !== token.id) {
                                 const otherTokenReach = CombatDistances.calculateWeaponReachRadius(tok);
 
                                 const otherTokenWidth = tok.getSize().width;
@@ -94,7 +94,7 @@ export default class AutoEngaged {
             });
 
             Hooks.on('wfrp4e:rollWeaponTest', (test) => {
-                if (test.item.attackType == 'melee' && test.context.targets?.length > 0) {
+                if (test.item.attackType === 'melee' && test.context.targets?.length > 0) {
                     const tokens = test.context.targets.map(t => game.wfrp4e.utility.getToken(t));
                     test.actor.addCondition('engaged');
                     if (game.user.isGM) {
@@ -106,7 +106,7 @@ export default class AutoEngaged {
             });
 
             Hooks.on('wfrp4e:rollTraitTest', (test) => {
-                if (test.item.attackType == 'melee' && test.context.targets?.length > 0) {
+                if (test.item.attackType === 'melee' && test.context.targets?.length > 0) {
                     const tokens = test.context.targets.map(t => game.wfrp4e.utility.getToken(t));
                     test.actor.addCondition('engaged');
                     if (game.user.isGM) {

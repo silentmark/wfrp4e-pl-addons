@@ -39,17 +39,17 @@ export default class AutoOutnumbered {
             return (distance < (centerR + tokenReach));
         }
 
-        if (args.type != 'trait' && args.type != 'weapon') {
+        if (args.type !== 'trait' && args.type !== 'weapon') {
             return;
         }
-        if (args.target && (args.item.type === 'weapon' || args.item.type === 'trait') && args.item.attackType == 'melee') {
+        if (args.target && (args.item.type === 'weapon' || args.item.type === 'trait') && args.item.attackType === 'melee') {
             let tooltip = 'Przewaga Liczebna: ';
             const attackerAllies = [];
             const targetAllies = [];
             const attackingToken = args.actor.getActiveTokens()[0];
             const targetToken = args.target.getActiveTokens()[0];
 
-            if (attackingToken == null || targetToken == null) {
+            if (attackingToken === null || targetToken === null) {
                 return;
             }
 
@@ -58,7 +58,7 @@ export default class AutoOutnumbered {
             const attackingRadius = attackingToken.w / 2;
 
 
-            const vampireGift = targetToken.actor.itemTags['talent'].find(x => x.name == game.i18n.localize('Samotny Rycerz'));
+            const vampireGift = targetToken.actor.itemTags['talent'].find(x => x.name === game.i18n.localize('Samotny Rycerz'));
             if (vampireGift) {
                 return {
                     script: 'args.fields.modifier += ' + 0,
@@ -73,7 +73,7 @@ export default class AutoOutnumbered {
             const targetRadius = targetToken.w / 2;
 
             for (const tok of canvas.tokens.placeables) {
-                if (tok.actor != null && tok.id != targetToken.id && tok.id != attackingToken.id
+                if (tok.actor !== null && tok.id !== targetToken.id && tok.id !== attackingToken.id
           && tok.actor.hasCondition('engaged')
           && !tok.actor.hasCondition('dead')
           && !tok.actor.hasCondition('unconscious')
@@ -135,7 +135,7 @@ export default class AutoOutnumbered {
                 }
             }
 
-            const talent = targetToken.actor.itemTags['talent'].find(x => x.name == game.i18n.localize('NAME.CombatMaster'));
+            const talent = targetToken.actor.itemTags['talent'].find(x => x.name === game.i18n.localize('NAME.CombatMaster'));
             if (talent) {
                 outnumbering -= talent.advances;
                 tooltip += ', ' + game.i18n.localize('NAME.CombatMaster') + ' (' + talent.advances + ')';

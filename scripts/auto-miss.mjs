@@ -94,35 +94,35 @@ export default class AutoMiss {
                 }
 
                 const test = app.system.test;
-                if (!test || AutoMiss.Messages.get(app.id) || app.getFlag('wfrp4e-pl-addons', 'autoMiss') || test?.weapon?.attackType != 'ranged') {
+                if (!test || AutoMiss.Messages.get(app.id) || app.getFlag('wfrp4e-pl-addons', 'autoMiss') || test?.weapon?.attackType !== 'ranged') {
                     return;
                 }
 
                 await app.setFlag('wfrp4e-pl-addons', 'autoMiss', true);
 
                 AutoMiss.Messages.set(app.id, app);
-                if (test.weapon?.weaponGroup?.value == 'throwing' && test.result.outcome == 'failure') {
+                if (test.weapon?.weaponGroup?.value === 'throwing' && test.result.outcome === 'failure') {
                     const position = (await new Roll('1d8').roll()).total;
                     const distance = game.canvas.grid.size * Math.abs(Number.parseInt(test.result.SL));
                     const target = game.canvas.tokens.get(test.context.targets[0].token);
                     let x = target.center.x;
                     let y = target.center.y;
-                    if (position == 1) {
+                    if (position === 1) {
                         x = x - distance;
                         y = y - distance;
-                    } else if (position == 2) {
+                    } else if (position === 2) {
                         x = x - distance;;
-                    } else if (position == 3) {
+                    } else if (position === 3) {
                         x = x - distance;
                         y = y + distance;
-                    } else if (position == 4) {
+                    } else if (position === 4) {
                         y = y - distance;
-                    } else if (position == 5) {
+                    } else if (position === 5) {
                         y = y + distance;
-                    } else if (position == 6) {
+                    } else if (position === 6) {
                         y = y - distance;
                         x = x + distance;
-                    } else if (position == 7) {
+                    } else if (position === 7) {
                         x = x + distance;
                     } else {
                         x = x + distance;
@@ -144,7 +144,7 @@ export default class AutoMiss {
                         const newTest = TestWFRP.recreate(testData);
                         await newTest.roll();
                     }
-                } else if (test?.weapon?.properties?.qualities?.blast?.value && test.result.outcome == 'success' && test?.context?.targets?.length > 0) {
+                } else if (test?.weapon?.properties?.qualities?.blast?.value && test.result.outcome === 'success' && test?.context?.targets?.length > 0) {
                     const blast = test.weapon.properties.qualities.blast.value;
                     const distance = canvas.dimensions.distance;
                     const pixelDistance = (blast / distance) * canvas.dimensions.distancePixels;
@@ -155,12 +155,12 @@ export default class AutoMiss {
                     const area = new PIXI.Circle(tokenX, tokenY, pixelDistance + (game.canvas.grid.w / 2));
 
                     for (const tok of canvas.tokens.placeables) {
-                        if (tok.actor != null && tok.id != target.id && !tok.actor.hasCondition('dead') && area.contains(tok.center.x, tok.center.y)) {
+                        if (tok.actor !== null && tok.id !== target.id && !tok.actor.hasCondition('dead') && area.contains(tok.center.x, tok.center.y)) {
                             await ChatMessage.create({ content: `Rozrzut zranił również: <b>(${tok.name})</b>` });
                             await test.createOpposedMessage(tok);
                         }
                     }
-                } else if (test?.result?.outcome == 'failure' && test?.context?.targets?.length > 0 && test.context.targets[0] && test.context.targets[0].token && game.canvas?.tokens) {
+                } else if (test?.result?.outcome === 'failure' && test?.context?.targets?.length > 0 && test.context.targets[0] && test.context.targets[0].token && game.canvas?.tokens) {
                     const shooter = test.actor.getActiveTokens()[0];
                     const target = game.canvas.tokens.get(test.context.targets[0].token);
 
@@ -210,7 +210,7 @@ export default class AutoMiss {
                             }
 
                             for (const tok of canvas.tokens.placeables) {
-                                if (tok.id != target.id && tok.id != shooter.id) {
+                                if (tok.id !== target.id && tok.id !== shooter.id) {
                                     const otherTokenWidth = tok.getSize().width;
                                     const otherTokenRadius = otherTokenWidth / 2;
 

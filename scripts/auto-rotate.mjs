@@ -6,10 +6,10 @@ import { constants } from './constants.mjs';
 export default class AutoRotate {
 
     calculateRotation = function(args) {
-        if (args.type != 'trait' && args.type != 'weapon') {
+        if (args.type !== 'trait' && args.type !== 'weapon') {
             return;
         }
-        if (args.target && (args.item.type === 'weapon' || args.item.type === 'trait') && args.item.attackType == 'melee') {
+        if (args.target && (args.item.type === 'weapon' || args.item.type === 'trait') && args.item.attackType === 'melee') {
 
             const flankingBonus = game.settings.get('wfrp4e-pl-addons', 'autoRotate.BonusFlanking');
             const backBonus = game.settings.get('wfrp4e-pl-addons', 'autoRotate.BonuBehind');
@@ -30,7 +30,7 @@ export default class AutoRotate {
             const attackingToken = args.actor.getActiveTokens()[0];
             const targetToken = args.target.getActiveTokens()[0];
 
-            if (attackingToken == null || targetToken == null) {
+            if (attackingToken === null || targetToken === null) {
                 return;
             }
 

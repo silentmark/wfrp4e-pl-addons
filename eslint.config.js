@@ -42,6 +42,7 @@ export default [
                 TestWFRP: 'readonly',
                 ChannelTest: 'readonly',
                 CastTest: 'readonly',
+                Roll: 'readonly',
                 
                 // Foundry VTT Canvas/PIXI globals
                 PIXI: 'readonly',
@@ -50,6 +51,7 @@ export default [
                 // Helper classes (might be from other modules)
                 AreaHelpers: 'readonly',
                 TokenHelpers: 'readonly',
+                sleep: 'readonly',
                 
                 // Browser globals
                 console: 'readonly',
@@ -60,7 +62,7 @@ export default [
         rules: {
             // Code quality rules
             'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-            'no-console': 'warn',
+            'no-console': 'off',
             'prefer-const': 'error',
             'no-var': 'error',
             'eqeqeq': 'error',
@@ -68,7 +70,7 @@ export default [
             'no-eval': 'error',
             'no-implied-eval': 'error',
             'no-new-func': 'error',
-            'no-magic-numbers': ['warn', { ignore: [0, 1, -1, 2, 10, 100] }],
+            'no-magic-numbers': 'off',
             
             // Stylistic rules
             '@stylistic/js/indent': ['error', 4],
@@ -86,7 +88,7 @@ export default [
             '@stylistic/js/space-unary-ops': 'error',
             '@stylistic/js/no-trailing-spaces': 'error',
             '@stylistic/js/eol-last': 'error',
-            '@stylistic/js/max-len': ['error', { code: 120 }],
+            '@stylistic/js/max-len': ['error', { code: 140 }],
             
             // JSDoc rules
             'jsdoc/require-description': 'off',

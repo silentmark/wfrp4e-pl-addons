@@ -12,7 +12,7 @@ export default class WindsOfMagic {
         if (game.settings.get('wfrp4e-pl-addons', 'windsOfMagicCombatRolls.Enable')) {
             Hooks.on('createCombat', async function(combat) {
                 if (game.user.isGM) {
-                    const winds = Object.values(game.wfrp4e.config.magicWind).filter(x => x != game.i18n.localize('None')).filter((value, index, array) => array.indexOf(value) === index);
+                    const winds = Object.values(game.wfrp4e.config.magicWind).filter(x => x !== game.i18n.localize('None')).filter((value, index, array) => array.indexOf(value) === index);
                     const templateData = {};
                     templateData.winds = [];
                     for (let i = 0; i < winds.length; i++) {
@@ -85,7 +85,7 @@ export default class WindsOfMagic {
                     }
                     const actor = game.actors.get(combat.combatants.get(combat.current.combatantId).actorId);
                     const skills = actor.itemTags['skill'].filter(x=> x.name.startsWith('Splatanie Magii'));
-                    if (skills.length == 0) {
+                    if (skills.length === 0) {
                         return;
                     }
                     for (let i = 0; i < skills.length; i++) {
@@ -93,9 +93,9 @@ export default class WindsOfMagic {
                         const wind = skill.name.substring(skill.name.indexOf('(') + 1, skill.name.indexOf(')'));
                         const winds = combat.flags['wfrp4e-pl-addons']['winds'];
                         if (winds) {
-                            const modifier = winds.modifier.find(x=> x.wind == wind)?.modifier;
-                            if (modifier != 0 && modifier != undefined) {
-                                let effect = actor.effects.find(x => x.name == 'Wiatry Magii (' + wind + ')');
+                            const modifier = winds.modifier.find(x=> x.wind === wind)?.modifier;
+                            if (modifier !== 0 && modifier !== undefined) {
+                                let effect = actor.effects.find(x => x.name === 'Wiatry Magii (' + wind + ')');
                                 if (!effect) {
                                     effect = {
                                         name: 'Wiatry Magii (' + wind + ')',
@@ -107,8 +107,8 @@ export default class WindsOfMagic {
                                                 trigger: 'dialog',
                                                 script : `args.fields.modifier += ${modifier};`,
                                                 options : {
-                                                    hideScript : `return args.type != 'channelling' || game.wfrp4e.config.magicWind[args.item?.lore?.value] != '${wind}'`,
-                                                    activateScript : `return args.type == "channelling" && game.wfrp4e.config.magicWind[args.item?.lore?.value] == '${wind}'`
+                                                    hideScript : `return args.type !== 'channelling' || game.wfrp4e.config.magicWind[args.item?.lore?.value] !== '${wind}'`,
+                                                    activateScript : `return args.type === "channelling" && game.wfrp4e.config.magicWind[args.item?.lore?.value] === '${wind}'`
                                                 }
                                             }]
                                         }
@@ -132,15 +132,15 @@ export default class WindsOfMagic {
                                                     label: "Nasycenie Magią",
                                                     script : "args.fields.slBonus += 1;",
                                                     options : {
-                                                        hideScript : "return args.type != 'cast'",
-                                                        activateScript : "return args.type == 'cast'"
+                                                        hideScript : "return args.type !== 'cast'",
+                                                        activateScript : "return args.type === 'cast'"
                                                     }
                                                 }]
                                             }
                                         }
                                     };
-                                    if (args.test.result.roll.toString() == '99') {
-                                        const demon = game.actors.find(x=>x.name == "${deamonName}");
+                                    if (args.test.result.roll.toString() === '99') {
+                                        const demon = game.actors.find(x=>x.name === "${deamonName}");
                                         if (demon) {
                                             const options = {
                                                 updateData: {
@@ -165,11 +165,11 @@ export default class WindsOfMagic {
                                             caster.createEmbeddedDocuments("ActiveEffect", [suffusedWithMagicEffect]);
                                         }
                                     }
-                                    else if (args.test.result.roll.toString().split('').reverse()[0] == '9') {
+                                    else if (args.test.result.roll.toString().split('').reverse()[0] === '9') {
                                         ChatMessage.create({content: "<span>Złowrogie wpływy Tzeentcha wywołały manifestację chaosu: <a class='table-click fumble-roll' title='Złowrogie Wpływy Tzeentcha' data-table='miscast' data-modifier='0'><i class='fas fa-list'></i>Pomniejsza Manifestacja Chaosu</a></span>"});
                                         this.actor.createEmbeddedDocuments("ActiveEffect", [suffusedWithMagicEffect]);
                                     }`;
-                                let effect = actor.effects.find(x => x.name == 'Złowrogie Wpływy Tzeentcha');
+                                let effect = actor.effects.find(x => x.name === 'Złowrogie Wpływy Tzeentcha');
                                 if (!effect) {
                                     effect = {
                                         name: 'Złowrogie Wpływy Tzeentcha',
@@ -216,10 +216,10 @@ export default class WindsOfMagic {
                     return;
                 }
                 const combat = game.combat;
-                if (combat && combat.round != 0 && combat.turns && combat.active && app?.system?.test) {//combat started
+                if (combat && combat.round !== 0 && combat.turns && combat.active && app?.system?.test) {//combat started
                     const test = app.system.test;
-                    if ((test?.constructor?.name == 'WomCastTest' && test.result.castOutcome == 'success') ||
-                        (test?.constructor?.name == 'WeaponTest' && test.result.outcome == 'success' && test.weapon?.areaEffects?.length)) {
+                    if ((test?.constructor?.name === 'WomCastTest' && test.result.castOutcome === 'success') ||
+                        (test?.constructor?.name === 'WeaponTest' && test.result.outcome === 'success' && test.weapon?.areaEffects?.length)) {
                         const newMessage = jQuery(html).find('.message-content').append(jQuery('<div class="card-content"><a class="chat-button card-track-spell" style="width: 100%">Śledź zaklęcie / Efekt</a></div>'));
                         newMessage.find('.card-track-spell').click(async function() {
                             const messageId = messageData.message._id;
@@ -237,7 +237,7 @@ export default class WindsOfMagic {
                                 test: test,
                                 message: messageId
                             };
-                            if (test.constructor.name == 'WomCastTest') {
+                            if (test.constructor.name === 'WomCastTest') {
                                 spells[messageId].type = 'Spell';
                                 spells[messageId].duration = test.result.overcast.usage.duration;
                             } else {
@@ -281,7 +281,7 @@ export default class WindsOfMagic {
                                 continue;
                             }
                             const msg = spells[messageId];
-                            if (msg.type == 'Spell') {
+                            if (msg.type === 'Spell') {
                                 const actorId = msg.test.data.context.speaker.actor;
                                 const actorName = msg.test.data.context.chatOptions.speaker.alias;
                                 const spellName = msg.test.data.preData.itemData.name;
@@ -297,7 +297,7 @@ export default class WindsOfMagic {
 
                                 let textStyle = '';
                                 let imageStyle = '';
-                                if (duration.current == 0) {
+                                if (duration.current === 0) {
                                     textStyle = 'color: var(--color-text-light-7);';
                                     imageStyle = 'opacity: 0.3';
                                 }
@@ -331,7 +331,7 @@ export default class WindsOfMagic {
                                 const duration = msg.duration;
                                 let textStyle = '';
                                 let imageStyle = '';
-                                if (duration.current == 0) {
+                                if (duration.current === 0) {
                                     textStyle = 'color: var(--color-text-light-7);';
                                     imageStyle = 'opacity: 0.3';
                                 }
@@ -381,13 +381,13 @@ export default class WindsOfMagic {
                                 return;
                             }
                             const actor = game.canvas.tokens.controlled[0].actor;
-                            const skill = actor.itemTags['skill'].find(x => x.name == 'Język (Magiczny)');
+                            const skill = actor.itemTags['skill'].find(x => x.name === 'Język (Magiczny)');
                             if (!skill) {
                                 return;
                             }
                             const spell = spells[messageId];
                             const dispelValue = spell.test.data.result.itemData.system.cn.value + Number.parseInt(spell.test.data.result.SL);
-                            let dispelTest = actor.itemTags['extendedTest'].find(x => x.getFlag('wfrp4e-pl-addons', 'messageId') == messageId);
+                            let dispelTest = actor.itemTags['extendedTest'].find(x => x.getFlag('wfrp4e-pl-addons', 'messageId') === messageId);
                             if (!dispelTest) {
 
                                 const extendedTestData = {
