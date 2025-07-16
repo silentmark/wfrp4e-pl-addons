@@ -12,6 +12,8 @@
   },
   "scripts": {
     "build": "cross-env NODE_ENV=development rollup --config rollup.config.js",
+    "lint": "eslint scripts/ --max-warnings 50",
+    "lint:fix": "eslint scripts/ --fix --max-warnings 50",
     "pack": "node dbpacker.js"
   },
   "type": "module",
