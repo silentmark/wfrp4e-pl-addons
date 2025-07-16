@@ -1,7 +1,10 @@
 wfrp4e-pl-addons.zip
 node_modules
-*.log
-LOCK
-LOG
-LOG.old
+dist
+packs/**/*.log
+packs/**/LOCK
+packs/**/LOG
+packs/**/CURRENT
+packs/**/LOG.old
 dist/*
+packs/**/MANIFEST*

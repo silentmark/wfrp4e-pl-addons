@@ -1,8 +1,8 @@
 export default class VariousExtensions {
     setup() {
-
         Hooks.on('createActor', async function (actor, options, userID) {
             if (userID != game.user.id) { return; }
+            if (!game.modules.get('wall-height')?.active) { return; }
 
             if (actor.system?.details?.height?.value && parseInt(actor.system.details.height.value)) {
                 let h = parseInt(actor.system.details.height.value);
@@ -18,6 +18,7 @@ export default class VariousExtensions {
             }
         });
 
+        /*
         window.onunhandledrejection = promiseRejectionEvent => {
             let reason = promiseRejectionEvent.reason;
             let stackTrace = promiseRejectionEvent.promise.__creationPoint;
@@ -55,5 +56,6 @@ export default class VariousExtensions {
         Hooks.on("error", (location, error, data) => {
             window.oncustomerror(`Error in ${location}`, error);
         });
+        */
     }
 }

@@ -2,16 +2,17 @@ export default class AutoCounterSpell {
 
     setup() {
         if (game.settings.get("wfrp4e-pl-addons", "counterSpells.Enable")) {
-            let updateCombatCasters = async function (combat, updateData) {
+            
+            let updateCombatCasters = async function (combat) {
                 if (game.user.isGM && combat.active) {
                     let casters = combat.getFlag('wfrp4e-pl-addons', 'casters');
                     if (!casters) {
                         casters = {};
                     }
-                    let actorIds = combat.combatants.map(x=>x.actorId);
+                    let actorIds = combat.combatants.map(x => x.actorId);
                     for (let i = 0; i < actorIds.length; i++) { 
                         let actor = game.actors.get(actorIds[i]);
-                        let skills = actor.itemTags['skill'].filter(x=> x.name === "Język (Magiczny)");
+                        let skills = actor.itemTypes['skill'].filter(x=> x.name === "Język (Magiczny)");
                         if (skills.length == 0) {
                             continue;
                         }
@@ -22,9 +23,11 @@ export default class AutoCounterSpell {
                     await combat.setFlag('wfrp4e-pl-addons', 'casters', casters);
                 }
             };
+
             CombatHelpers.startTurn.push(updateCombatCasters);
 
             let castOpposedClicked = async function(event) {
+                if (!event.target.classList.contains("wfrp4e-addon-opposed-toggle")) return;
                 if(game.combats.active) {
                     const combat = game.combats.active;
                     const button = $(event.currentTarget);
@@ -44,26 +47,9 @@ export default class AutoCounterSpell {
 
             // Activate chat listeners defined in chat-wfrp4e.js
             Hooks.on('renderChatLog', (log, html, data) => {
-                html.on('click', '.wfrp4e-addon-opposed-toggle', castOpposedClicked.bind(this));
+                html.addEventListener("click", castOpposedClicked.bind(this));
             });
             
-            Hooks.on("preUpdateCombat", async function (combat, updateData) {
-                if (game.user.isGM) {
-                    if (combat.round != 0 && combat.turns && combat.active) {
-                        if (combat.current.turn > -1 && combat.current.turn == combat.turns.length - 1) {
-                            let casters = combat.getFlag('wfrp4e-pl-addons', 'casters');
-                            if (updateData.flags && updateData.flags['wfrp4e-pl-addons']) {
-                                let moduleFlags = updateData.flags['wfrp4e-pl-addons'];
-                                if (moduleFlags['-=casters'] === null) return;
-                            }
-                            if (casters) {
-                                await combat.unsetFlag('wfrp4e-pl-addons', 'casters');
-                            }
-                        }
-                    }
-                }
-            });
-
             Hooks.on("wfrp4e:rollCastTest", async function(castData, chatData) {
                 if (castData.data.result.castOutcome == "success" && game.combats.active) {
                     const casterId = chatData.speaker.actor;

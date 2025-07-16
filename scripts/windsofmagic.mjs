@@ -258,7 +258,7 @@ export default class WindsOfMagic {
                             max: bar.max,
                             radius: 16
                         });
-                        let $combatant = html.find(`.combatant[data-combatant-id="${c.id}"]`);
+                        let $combatant = jQuery(html).find(`.combatant[data-combatant-id="${c.id}"]`);
                         $combatant.find('.token-image').wrap('<div class="ce-image-wrapper">');
                         $combatant.find('.ce-image-wrapper').append(CircleHelper.getProgressCircleHtml(healthSvg));
                     });
@@ -344,7 +344,7 @@ export default class WindsOfMagic {
                             }
                         }
                         element = element.replace('[[rows]]', rows);
-                        let newElement = $(element).insertBefore(html.find("#combat-controls"));
+                        let newElement = $(element).insertBefore(jQuery(html).find("#combat-controls"));
                         newElement.find(".spell-delete").click(async function () {
                             let spells = game.combats.active.getFlag('wfrp4e-pl-addons', 'spells');
                             if (!spells) {

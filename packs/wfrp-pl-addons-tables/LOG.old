@@ -1,7 +1,0 @@
-2025/03/28-01:02:21.561 e034 Recovering log #627
-2025/03/28-01:02:21.569 e034 Delete type=0 #627
-2025/03/28-01:02:21.570 e034 Delete type=3 #625
-2025/03/28-01:07:10.843 ec1c Level-0 table #632: started
-2025/03/28-01:07:10.843 ec1c Level-0 table #632: 0 bytes OK
-2025/03/28-01:07:10.844 ec1c Delete type=0 #630
-2025/03/28-01:07:10.846 ec1c Manual compaction at level-0 from '!folders!PRtfySS3WdJY4Oq3' @ 72057594037927935 : 1 .. '!tables.results!sY13Shh3ccnrWoe1.yYqq5hfEPqTgmwvn' @ 0 : 0; will stop at (end)

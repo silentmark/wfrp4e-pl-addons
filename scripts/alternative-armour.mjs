@@ -1,12 +1,11 @@
-export default class Armours {
-
+export default class AlternativeArmour {
     ready() {
         if (game.settings.get("wfrp4e-pl-addons", "alternativeArmour.Enable")) {
             game.wfrp4e.config.armorTypes = {
-              "light": game.i18n.localize("WFRP4E.ArmourType.Light"),
-              "medium": game.i18n.localize("WFRP4E.ArmourType.Medium"),
-              "heavy": game.i18n.localize("WFRP4E.ArmourType.Heavy"),
-              "other": game.i18n.localize("WFRP4E.ArmourType.Other")
+              "light": game.i18n.localize("WFRP4E.AlternativeArmour.ArmourType.Light"),
+              "medium": game.i18n.localize("WFRP4E.AlternativeArmour.ArmourType.Medium"),
+              "heavy": game.i18n.localize("WFRP4E.AlternativeArmour.ArmourType.Heavy"),
+              "other": game.i18n.localize("WFRP4E.AlternativeArmour.ArmourType.Other")
             };
 
             game.wfrp4e.config.armorQualities.inner =  game.i18n.localize("PROPERTY.Inner");
@@ -25,7 +24,6 @@ export default class Armours {
                 }
             });
 
-            
             Reflect.defineProperty(SkillDialog.prototype, '_computeArmour', { value: 
                 function () {
                     let wearingMedium = 0;
@@ -54,11 +52,11 @@ export default class Armours {
                     }
                     if (this.item.name.includes(game.i18n.localize("NAME.Stealth")) && stealthPenaltyValue !== 0) {
                         this.fields.modifier += stealthPenaltyValue
-                        this.tooltips.addModifier(stealthPenaltyValue, `Kara do Skradania ze względu na pancerz ciężki (max -20) i średni (max -20) - (+${stealthPenaltyValue})`);
+                        const stealthPenaltyText = game.i18n.localize("WFRP4E.AlternativeArmour.ModifierDescription") + `(+${stealthPenaltyValue})`;
+                        this.tooltips.addModifier(stealthPenaltyValue, stealthPenaltyText);
                     }
                 }
             });
-
         }
     }
 }

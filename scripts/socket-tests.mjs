@@ -52,7 +52,7 @@ export default class SocketTests {
             let msg = await ChatMessage.create(chatData);
 
             let payload = { dialogData, dialogClassName, userId: game.user.id, actorId: this.id };
-            let testData = await SocketHandlers.executeOnUserAndWait(owner.id, "setupSocketTest", payload);
+            let testData = await SocketHandlers.call("setupSocketTest", payload, owner.id);
             msg.delete();
             if (testData) {
               const test = game.wfrp4e.rolls.TestWFRP.recreate(testData);

@@ -1,22 +1,15 @@
 {
-  "name": "wfrp4e-pl-addons",
+  "id": "wfrp4e-pl-addons",
   "title": "Warhammer 4ed Addons",
   "description": "Kilka Głupot.",
-  "authors": [
-    {
-      "name": "silent_mark",
-      "flags": {}
-    }
-  ],
-  "esmodules": [
-    "/dist/main.js"
-  ],
+  "version": "2.0.1",
+  "authors": [{"name": "silent_mark", "id": "silent_mark", "discord": "silent_mark"}],
+  "esmodules": ["/dist/main.js"],
   "languages": [
     {
       "lang": "pl",
       "name": "Polski",
-      "path": "pl.json",
-      "flags": {}
+      "path": "pl.json"
     }
   ],
   "packs": [
@@ -54,30 +47,28 @@
       "system": "wfrp4e"
     }
   ],
+  "socket": true,
   "url": "https://github.com/silentmark/wfrp4e-pl-addons",
   "manifest": "https://raw.githubusercontent.com/silentmark/wfrp4e-pl-addons/main/module.json",
   "download": "https://github.com/silentmark/wfrp4e-pl-addons/releases/download/1.0.0/wfrp4e-pl-addons.zip",
-  "version": "2.0.1",
   "relationships": {
     "requires": [
       {
         "id": "wfrp4e-core-pl",
-        "type": "module",
-        "compatibility": {}
+        "type": "module"
       }
     ],
     "systems": [
       {
         "id": "wfrp4e",
         "type": "system",
-        "manifest": "https://github.com/moo-man/WFRP4e-FoundryVTT/releases/latest/download/system.json",
-        "compatibility": {}
+        "manifest": "https://github.com/moo-man/WFRP4e-FoundryVTT/releases/latest/download/system.json"
       }
     ]
   },
   "compatibility": {
-    "minimum": "12",
-    "verified": "12",
-    "maximum": "12"
+    "minimum": "13",
+    "verified": "13",
+    "maximum": "13"
   }
 }

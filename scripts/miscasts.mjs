@@ -15,7 +15,7 @@ export default class Miscasts {
         }
       });
 
-      Reflect.defineProperty(CastTest$1.prototype, 'computeTables', { value:
+      Reflect.defineProperty(CastTest.prototype, 'computeTables', { value:
         function()  {
           if (this.result.mis) {
             this.result.tables.miscast = {

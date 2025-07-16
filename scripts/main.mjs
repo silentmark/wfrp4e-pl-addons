@@ -1,5 +1,7 @@
 import {constants} from './constants.mjs';
-import Armours from './armour.mjs';
+import AlternativeArmour from './alternative-armour.mjs';
+import AlternativeTemplateCollision from './alternative-template-collision.mjs';
+
 import RerollInitiative from './reroll-initiative.mjs';
 import AutoEngaged from './auto-engaged.mjs';
 import WindsOfMagic from './windsofmagic.mjs';
@@ -13,13 +15,15 @@ import AutoMiss from './auto-miss.mjs';
 import PF2eHeresy from './pf2e-heresy.mjs';
 import Diseases from './diseases.mjs';
 import SocketTests from './socket-tests.mjs';
-import AreaHelpersExtension from './area-helpers.mjs';
 import VariousExtensions from './various-extensions.mjs'
 import CombatDistances from './combat-distance.mjs';
 
 class Main {
     constructor() {
-        this.armoury = new Armours();
+        this.variousExtensions = new VariousExtensions();
+        this.alternativeTemplateCollision = new AlternativeTemplateCollision();
+        this.alternativeArmour = new AlternativeArmour();
+
         this.rerollInitiative = new RerollInitiative();
         this.autoCounterSpell = new AutoCounterSpell();
         this.windsOfMagic = new WindsOfMagic();
@@ -33,12 +37,12 @@ class Main {
         this.pf2eHeresy = new PF2eHeresy();
         this.diseases = new Diseases();
         this.socketTests = new SocketTests();
-        this.variousExtensions = new VariousExtensions();
-        this.areaHelpers = new AreaHelpersExtension();
         this.combatDistance = new CombatDistances();
     }
 
-    armoury;
+    alternativeTemplateCollision;
+    alternativeArmour;
+
     rerollInitiative;
     autoCounterSpell;
     windsOfMagic;
@@ -50,13 +54,14 @@ class Main {
     autoCombat;
     autoMiss;
     pf2eHeresy;
-    areaHelpers;
     combatDistance;
     diseases;
     socketTests;
 
     setup() {
-        this.armoury.setup();
+        this.alternativeTemplateCollision.setup();
+        this.alternativeArmour.setup();
+
         this.rerollInitiative.setup();
         this.autoCounterSpell.setup();
         this.windsOfMagic.setup();
@@ -70,12 +75,11 @@ class Main {
         this.pf2eHeresy.setup();
         this.diseases.setup();
         this.variousExtensions.setup();
-        this.areaHelpers.setup();
         this.combatDistance.setup();
     }
 
     ready() {
-        this.armoury.ready();
+        this.alternativeArmour.ready();
         this.socketTests.ready();
     }
 }
@@ -90,7 +94,6 @@ Hooks.on("ready", () => {
 
 Hooks.once("init", () => {
     game.modules.get(constants.moduleId).api = new Main();
-    CONFIG.supportedLanguages["pl"] = "pl";
 
     // Add enable/disable setting for arrow reclamation feature
     game.settings.register("wfrp4e-pl-addons", "alternativeArmour.Enable", {
@@ -284,23 +287,24 @@ Hooks.once("init", () => {
         'never': 'wfrp4epladdon.socketTests.Never',
         }
     });
-
     
-    
-    game.settings.register("wfrp4e-pl-addons", "templateCollisionMethod", {
-        name: `SETTINGS.templateCollisionMethod`,
-        hint: `SETTINGS.templateCollisionMethodHint`,
+    game.settings.register("wfrp4e-pl-addons", "templateCollision", {
+        name: `SETTINGS.templateCollision`,
+        hint: `SETTINGS.templateCollisionHint`,
         scope: 'world',
         config: true,
-        type: String,
-        choices: {
-            "default": "SETTINGS.templateCollisionMethodDefault",
-            "centerPoint": "SETTINGS.templateCollisionCenterPoint",
-            "grid": "SETTINGS.templateCollisionGrid",
-            "area": "SETTINGS.templateCollisionArea"
-        },
+        type: Boolean,
+        default: false,
     });
   
+    game.settings.register("wfrp4e-pl-addons", "templateCollisionMinimalRatio", {
+        name: `SETTINGS.templateCollisionMinimalRatio`,
+        hint: `SETTINGS.templateCollisionMinimalRatioHint`,
+        scope: 'world',
+        config: true,
+        type: Number,
+        default: 25,
+    });
 });
 
 export default Main;
