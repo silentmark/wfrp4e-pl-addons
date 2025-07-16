@@ -133,7 +133,7 @@ export default class AutoMiss {
                         const newTarget = tokensInArea[Math.floor(Math.random() * tokensInArea.length)];
                         const testData = app.system.testData;
                         testData.context.edited = true;
-                        testData.context.previousResult = duplicate(test.result);
+                        testData.context.previousResult = foundry.utils.duplicate(test.result);
                         testData.preData.slBonus = 0;
                         testData.preData.successBonus = 0;
                         testData.preData.roll = test.result.roll;
@@ -173,7 +173,7 @@ export default class AutoMiss {
                             const newTarget = tokens[Math.floor(Math.random() * tokens.length)];
                             const testData = app.system.testData;
                             testData.context.edited = true;
-                            testData.context.previousResult = duplicate(test.result);
+                            testData.context.previousResult = foundry.utils.duplicate(test.result);
                             testData.preData.slBonus = 0;
                             testData.preData.successBonus = 0;
                             testData.preData.roll = test.result.roll;
@@ -225,7 +225,7 @@ export default class AutoMiss {
                                 const newTarget = game.canvas.tokens.get(newTargets[Math.floor(Math.random() * newTargets.length)]);
                                 const testData = app.system.testData;
                                 testData.context.edited = true;
-                                testData.context.previousResult = duplicate(test.result);
+                                testData.context.previousResult = foundry.utils.duplicate(test.result);
                                 testData.preData.slBonus = 0;
                                 testData.preData.successBonus = 0;
                                 testData.preData.roll = test.result.roll;

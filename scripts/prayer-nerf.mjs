@@ -6,14 +6,14 @@ import { constants } from './constants.mjs';
 export default class PrayerNerf {
 
     calculatePrayerNerf = function(args) {
-        if (game.combats.active == null || !game.combats.active.active) {
+        if (game.combat == null || !game.combat.active) {
             return;
         }
         if (args.type != 'prayer') {
             return;
         }
 
-        const combatant = game.combats.active.combatants.find(x => x.actorId == args.actor.id);
+        const combatant = game.combat.combatants.find(x => x.actorId == args.actor.id);
         if (combatant == null) {
             return;
         }
@@ -42,10 +42,10 @@ export default class PrayerNerf {
         if (game.settings.get('wfrp4e-pl-addons', 'prayerNerf.Enabled')) {
 
             Hooks.on('wfrp4e:rollPrayerTest', function(prayerTest) {
-                if (game.combats.active == null || !game.combats.active.active) {
+                if (game.combat == null || !game.combat.active) {
                     return;
                 }
-                const combatant = game.combats.active.combatants.find(x => x.actorId == prayerTest.actor.id);
+                const combatant = game.combat.combatants.find(x => x.actorId == prayerTest.actor.id);
                 if (combatant == null) {
                     return;
                 }

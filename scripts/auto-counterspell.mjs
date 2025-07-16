@@ -36,8 +36,8 @@ export default class AutoCounterSpell {
                 if (!event.target.classList.contains('wfrp4e-addon-opposed-toggle')) {
                     return;
                 }
-                if (game.combats.active) {
-                    const combat = game.combats.active;
+                if (game.combat) {
+                    const combat = game.combat;
                     const button = $(event.currentTarget);
                     const tokenId = button.attr('data-token');
                     const actorId = button.attr('data-actor');
@@ -59,9 +59,9 @@ export default class AutoCounterSpell {
             });
 
             Hooks.on('wfrp4e:rollCastTest', async function(castData, chatData) {
-                if (castData.data.result.castOutcome == 'success' && game.combats.active) {
+                if (castData.data.result.castOutcome == 'success' && game.combat) {
                     const casterId = chatData.speaker.actor;
-                    const combat = game.combats.active;
+                    const combat = game.combat;
                     const casters = combat.getFlag('wfrp4e-pl-addons', 'casters');
                     const potentialDefenders = [];
                     if (casters) {

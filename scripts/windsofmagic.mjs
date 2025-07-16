@@ -215,7 +215,7 @@ export default class WindsOfMagic {
                 if (!game.user.isGM) {
                     return;
                 }
-                const combat = game.combats.active;
+                const combat = game.combat;
                 if (combat && combat.round != 0 && combat.turns && combat.active && app?.system?.test) {//combat started
                     const test = app.system.test;
                     if ((test?.constructor?.name == 'WomCastTest' && test.result.castOutcome == 'success') ||
@@ -255,7 +255,7 @@ export default class WindsOfMagic {
             });
 
             Hooks.on('renderCombatTracker', (app, html, options) => {
-                const combat = game.combats.active;
+                const combat = game.combat;
                 if (combat) {
 
                     game.combat.combatants.forEach(c => {
@@ -356,23 +356,23 @@ export default class WindsOfMagic {
                         element = element.replace('[[rows]]', rows);
                         const newElement = $(element).insertBefore(jQuery(html).find('#combat-controls'));
                         newElement.find('.spell-delete').click(async function() {
-                            let spells = game.combats.active.getFlag('wfrp4e-pl-addons', 'spells');
+                            let spells = game.combat.getFlag('wfrp4e-pl-addons', 'spells');
                             if (!spells) {
                                 spells = {};
                             }
                             spells[this.dataset.spellId] = null;
-                            await game.combats.active.setFlag('wfrp4e-pl-addons', 'spells', spells);
+                            await game.combat.setFlag('wfrp4e-pl-addons', 'spells', spells);
                         });
                         newElement.find('.item-delete').click(async function() {
-                            let spells = game.combats.active.getFlag('wfrp4e-pl-addons', 'spells');
+                            let spells = game.combat.getFlag('wfrp4e-pl-addons', 'spells');
                             if (!spells) {
                                 spells = {};
                             }
                             spells[this.dataset.itemId] = null;
-                            await game.combats.active.setFlag('wfrp4e-pl-addons', 'spells', spells);
+                            await game.combat.setFlag('wfrp4e-pl-addons', 'spells', spells);
                         });
                         newElement.find('.spell-dispel').click(async function() {
-                            const spells = game.combats.active.getFlag('wfrp4e-pl-addons', 'spells');
+                            const spells = game.combat.getFlag('wfrp4e-pl-addons', 'spells');
                             const messageId = this.dataset.spellId;
                             if (!spells) {
                                 return;

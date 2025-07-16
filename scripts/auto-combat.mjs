@@ -67,14 +67,14 @@ export default class AutoCombat {
                     if (game.combat.current.currentAutoCombatTurn == game.combat.current.turn) {
                         return;
                     }
-                    const combatant = game.combats.active.combatants.find(x=> x.tokenId === combat.current.tokenId);
+                    const combatant = game.combat.combatants.find(x=> x.tokenId === combat.current.tokenId);
                     combatant.autoCombat = combatant.autoCombat || {};
-                    if (combatant.autoCombat['tracker.' + game.combats.active.round + '.' + game.combats.active.turn]) {
+                    if (combatant.autoCombat['tracker.' + game.combat.round + '.' + game.combat.turn]) {
                         return;
                     }
-                    combatant.autoCombat['tracker.' + game.combats.active.round + '.' + game.combats.active.turn] = true;
+                    combatant.autoCombat['tracker.' + game.combat.round + '.' + game.combat.turn] = true;
                     game.combat.current.currentAutoCombatTurn = game.combat.current.turn;
-                    let potentialTargets = game.combats.active.combatants
+                    let potentialTargets = game.combat.combatants
                         .map(x=>x.token)
                         .filter(x => (x.disposition * -1) === token.disposition)
                         .filter(x => !x.hidden)
