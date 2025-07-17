@@ -57,4 +57,3 @@ Hooks.on('ready', () => {
     };
     foundry.utils.mergeObject(game.wfrp4e.config, config);
 });
-

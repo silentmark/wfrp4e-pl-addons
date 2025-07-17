@@ -8,7 +8,7 @@ export default class RerollInitiative {
      */
     setup() {
         if (game.settings.get('wfrp4e-pl-addons', 'initiativeRoll.Enable')) {
-            Hooks.on('preUpdateCombat', (combat, update, options, userId) => {
+            Hooks.on('preUpdateCombat', (combat, update, options, _userId) => {
                 if (!game.user.isUniqueGM) {
                     return;
                 }
@@ -38,7 +38,7 @@ export default class RerollInitiative {
                 delete update.turn;
             });
 
-            Hooks.on('updateCombat', async(combat, update, options, userId) => {
+            Hooks.on('updateCombat', async(combat, update, _options, _userId) => {
                 const shouldReroll = foundry.utils.getProperty(update, 'flags.wfrp4e-pl-addons.shouldReroll');
                 const round = foundry.utils.getProperty(update, 'flags.wfrp4e-pl-addons.round');
                 if (!shouldReroll || !game.user.isUniqueGM) {
@@ -58,7 +58,7 @@ export default class RerollInitiative {
                 });
             });
 
-            Hooks.on('preCreateChatMessage', (doc, message, options, userid) => {
+            Hooks.on('preCreateChatMessage', (doc, message, _options, _userid) => {
                 if (message.flags !== undefined && message.flags?.core?.initiativeRoll) {
                     return false;
                 }

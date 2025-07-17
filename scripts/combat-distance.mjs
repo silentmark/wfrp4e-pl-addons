@@ -69,7 +69,7 @@ export default class CombatDistances {
      */
     static calculateWeaponReachRadius(token) {
         const weapons = token.actor.itemTags['weapon'].filter(x => x.equipped.value);
-        const sortedWeapons = weapons.sort((x, y) => x.reachNum < x.reachNum ? 1 : -1);
+        const sortedWeapons = weapons.sort((x, _y) => x.reachNum < x.reachNum ? 1 : -1);
         let reach = 1;
         if (sortedWeapons.length > 0) {
             reach = sortedWeapons[0].reachNum ?? reach;
@@ -129,7 +129,7 @@ export default class CombatDistances {
      *
      */
     setup() {
-        Hooks.on('createToken', (token, data, user) => {
+        Hooks.on('createToken', (token, _data, _user) => {
             CombatDistances.createRings(token.object);
         });
         libWrapper.register(

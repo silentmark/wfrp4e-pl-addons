@@ -1,6 +1,4 @@
 
-import { constants } from './constants.mjs';
-
 /**
  *
  */

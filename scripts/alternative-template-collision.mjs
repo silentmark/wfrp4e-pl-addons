@@ -36,29 +36,29 @@ export default class AlternativeTemplateCollision {
                 let templatePoly;
 
                 switch (templateObject.shape.type) {
-                case 0: // generic poly
-                    const x = templateObject.x;
-                    const y = templateObject.y;
-                    const clipperPolygon = templateObject.shape.toClipperPoints();
-                    clipperPolygon.forEach((p) => {
-                        p.X += x;
-                        p.Y += y;
-                    });
-                    templatePoly = PIXI.Polygon.fromClipperPoints(clipperPolygon);
-                    break;
-                case 1: // rect
-                case 2: // circle
-                    const shapeCopy = templateObject.shape.clone();
-                    shapeCopy.x += templateObject.x;
-                    shapeCopy.y += templateObject.y;
-                    templatePoly = shapeCopy.toPolygon();
-                    break;
+                    case 0: // generic poly
+                        const x = templateObject.x;
+                        const y = templateObject.y;
+                        const clipperPolygon = templateObject.shape.toClipperPoints();
+                        clipperPolygon.forEach((p) => {
+                            p.X += x;
+                            p.Y += y;
+                        });
+                        templatePoly = PIXI.Polygon.fromClipperPoints(clipperPolygon);
+                        break;
+                    case 1: // rect
+                    case 2: // circle
+                        const shapeCopy = templateObject.shape.clone();
+                        shapeCopy.x += templateObject.x;
+                        shapeCopy.y += templateObject.y;
+                        templatePoly = shapeCopy.toPolygon();
+                        break;
                 }
                 const intersectionArea = templatePoly.intersectPolygon(tokenRectanglePolygon).signedArea();
                 return (intersectionArea / Math.min(templatePoly.signedArea(), tokenRectanglePolygon.signedArea())) >= minimalRatio;
             };
 
-            AreaHelpers.setTokenAreas = async function(token, update, options, user) {
+            AreaHelpers.setTokenAreas = async function(token, update, options, _user) {
                 const scene = token.parent;
                 if (!options._priorAreas) {
                     options._priorAreas = {};
@@ -85,7 +85,7 @@ export default class AlternativeTemplateCollision {
                 }
             };
 
-            AreaHelpers.checkAreaUpdate = async function(template, update, options, user) {
+            AreaHelpers.checkAreaUpdate = async function(template, update, options, _user) {
                 // players can't manage token effects, so only the active GM should add/remove area effects
                 if (game.users.activeGM.id === game.user.id && !options?.skipAreaCheck) {
                     // Tokens that are now in the template or have effects from this template
@@ -96,7 +96,7 @@ export default class AlternativeTemplateCollision {
                 }
             };
 
-            AreaHelpers.checkAreaCreate = async function(template, options, user) {
+            AreaHelpers.checkAreaCreate = async function(template, options, _user) {
                 // players can't manage token effects, so only the active GM should add/remove area effects
                 if (game.users.activeGM.id === game.user.id && !options?.skipAreaCheck) {
                     // Tokens that are now in the template or have effects from this template
@@ -113,7 +113,7 @@ export default class AlternativeTemplateCollision {
                 }
             };
 
-            AreaHelpers.checkAreaDelete = async function(template, options, user) {
+            AreaHelpers.checkAreaDelete = async function(template, options, _user) {
                 // players can't manage token effects, so only the active GM should add/remove area effects
                 if (game.users.activeGM.id === game.user.id && !options?.skipAreaCheck) {
                     // Tokens that have effects from this template
@@ -164,7 +164,7 @@ export default class AlternativeTemplateCollision {
             /**
              * Get all Tokens inside template
              * @param template
-             * @returns
+             * @returns {any}
              */
             AreaHelpers.tokensInTemplate = function(template) {
                 const scene = template.scene;

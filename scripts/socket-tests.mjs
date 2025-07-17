@@ -12,6 +12,7 @@ export default class SocketTests {
 
         SocketHandlers.setupSocketTest = async function(payload) {
             const dialogData = foundry.utils.deepClone(payload.dialogData);
+            // eslint-disable-next-line no-eval
             const dialogClass = eval(payload.dialogClassName);
             const actorId = payload.actorId;
             const actor = game.actors.get(actorId);
@@ -66,6 +67,7 @@ export default class SocketTests {
                     return null;
                 }
             } else {
+                // eslint-disable-next-line no-eval
                 const dialog = await this._setupTest(dialogData, eval(dialogClassName));
                 return dialog;
             }

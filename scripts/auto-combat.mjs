@@ -12,7 +12,7 @@ export default class AutoCombat {
     setup() {
         if (game.settings.get('wfrp4e-pl-addons', 'autoCombat.Enabled')) {
 
-            Hooks.on('renderTokenHUD', (app, html, data) => {
+            Hooks.on('renderTokenHUD', (app, html, _data) => {
                 const actor = game.actors.get(canvas.tokens.controlled[0].actor.id);
                 if (actor === undefined) {
                     return;
@@ -46,7 +46,7 @@ export default class AutoCombat {
                 });
             });
 
-            Hooks.on('updateCombat', async(combat, updateData) => {
+            Hooks.on('updateCombat', async(combat, _updateData) => {
                 if (!game.user.isUniqueGM) {
                     return;
                 }
@@ -209,8 +209,7 @@ export default class AutoCombat {
                             } else {
                                 if (item.range && item.range.value.toLowerCase() === game.i18n.localize('You').toLowerCase() && item.target && item.target.value.toLowerCase() === game.i18n.localize('You').toLowerCase()) {
                                     game.wfrp4e.utility.applyEffectToTarget(effect, [{ actor }]);
-                                } // Apply to caster (self)
-                                else {
+                                } else { // Apply to caster (self)
                                     game.wfrp4e.utility.applyEffectToTarget(effect, targets, user);
                                 }
                             }

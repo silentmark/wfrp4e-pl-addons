@@ -54,7 +54,7 @@ export default class AutoCounterSpell {
             };
 
             // Activate chat listeners defined in chat-wfrp4e.js
-            Hooks.on('renderChatLog', (log, html, data) => {
+            Hooks.on('renderChatLog', (log, html, _data) => {
                 html.addEventListener('click', castOpposedClicked.bind(this));
             });
 
@@ -89,7 +89,7 @@ export default class AutoCounterSpell {
                 }
             });
 
-            Hooks.on('wfrp4e:opposedTestResult', async function(opposedData, attackerTest, defenderTest) {
+            Hooks.on('wfrp4e:opposedTestResult', async function(opposedData, attackerTest, _defenderTest) {
                 //TODO: TEST THIS - may not work anymore
                 if (opposedData.data.attackerTestData.preData.rollClass === 'CastTest'
                     && opposedData.data.defenderTestData.preData.rollClass === 'SkillTest'

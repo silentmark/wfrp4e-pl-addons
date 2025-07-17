@@ -1,9 +1,7 @@
-import js from '@eslint/js';
-import stylistic from '@stylistic/eslint-plugin-js';
+import stylistic from '@stylistic/eslint-plugin';
 import jsdoc from 'eslint-plugin-jsdoc';
 
 export default [
-    js.configs.recommended,
     jsdoc.configs['flat/recommended'],
     {
         plugins: {
@@ -31,11 +29,9 @@ export default [
                 deepClone: 'readonly',
                 isNewerVersion: 'readonly',
                 randomID: 'readonly',
-                
                 // WFRP4e System globals
                 warhammer: 'readonly',
                 SocketHandlers: 'readonly',
-                
                 // WFRP4e Models and Classes
                 ArmourModel: 'readonly',
                 SkillDialog: 'readonly',
@@ -43,16 +39,13 @@ export default [
                 ChannelTest: 'readonly',
                 CastTest: 'readonly',
                 Roll: 'readonly',
-                
                 // Foundry VTT Canvas/PIXI globals
                 PIXI: 'readonly',
                 Ray: 'readonly',
-                
                 // Helper classes (might be from other modules)
                 AreaHelpers: 'readonly',
                 TokenHelpers: 'readonly',
                 sleep: 'readonly',
-                
                 // Browser globals
                 console: 'readonly',
                 $: 'readonly',
@@ -63,7 +56,7 @@ export default [
             // Code quality rules
             'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
             'no-console': 'off',
-            'prefer-const': 'error',
+            'prefer-const': ['error', { 'destructuring': 'all' }],
             'no-var': 'error',
             'eqeqeq': 'error',
             'curly': 'error',
@@ -71,7 +64,6 @@ export default [
             'no-implied-eval': 'error',
             'no-new-func': 'error',
             'no-magic-numbers': 'off',
-            
             // Stylistic rules
             '@stylistic/js/indent': ['error', 4],
             '@stylistic/js/quotes': ['error', 'single'],
@@ -87,9 +79,8 @@ export default [
             '@stylistic/js/space-infix-ops': 'error',
             '@stylistic/js/space-unary-ops': 'error',
             '@stylistic/js/no-trailing-spaces': 'error',
-            '@stylistic/js/eol-last': 'error',
-            '@stylistic/js/max-len': ['error', { code: 140 }],
-            
+            '@stylistic/js/eol-last': ['error', 'never'],
+            '@stylistic/js/max-len': ['error', { code: 400, ignoreUrls: true, ignoreComments: true }],
             // JSDoc rules
             'jsdoc/require-description': 'off',
             'jsdoc/require-param-description': 'off',

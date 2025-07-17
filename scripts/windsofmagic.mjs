@@ -49,12 +49,12 @@ export default class WindsOfMagic {
                             }
                         },
                         default: 'confirm',
-                        close: dlg => { }
+                        close: _dlg => { }
                     }).render(true);
                 }
             });
 
-            Hooks.on('combatRound', async function(combat, updateData, options) {
+            Hooks.on('combatRound', async function(combat, _updateData, _options) {
                 if (game.user.isGM) {
                     const spells = combat.getFlag('wfrp4e-pl-addons', 'spells');
                     if (spells) {
@@ -196,7 +196,7 @@ export default class WindsOfMagic {
                 }
             });
 
-            Hooks.on('deleteCombat', async function(combat) {
+            Hooks.on('deleteCombat', async function(_combat) {
                 if (game.user.isGM) {
                     const actors = game.actors.map(x=>x);
                     for (let i = 0; i < actors.length; i++) {
@@ -254,7 +254,7 @@ export default class WindsOfMagic {
                 }
             });
 
-            Hooks.on('renderCombatTracker', (app, html, options) => {
+            Hooks.on('renderCombatTracker', (_app, html, _options) => {
                 const combat = game.combat;
                 if (combat) {
 

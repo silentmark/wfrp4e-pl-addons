@@ -1,5 +1,3 @@
-import { constants } from './constants.mjs';
-
 /**
  *
  */
@@ -48,7 +46,7 @@ export default class AutoMiss {
                 }
             };
 
-            Hooks.on('renderTokenHUD', (data, hud, drawData) => {
+            Hooks.on('renderTokenHUD', (data, hud, _drawData) => {
                 const token = data.object.document;
                 let active = token.getFlag('wfrp4e-pl-addons', 'ducking') || false;
                 const toggleDuckbtn = `
@@ -88,7 +86,7 @@ export default class AutoMiss {
                 }
             });
 
-            Hooks.on('renderChatMessage', async(app, html, messageData) => {
+            Hooks.on('renderChatMessage', async(app, _html, _messageData) => {
                 if (!game.user.isGM || !app?.system?.test) {
                     return;
                 }

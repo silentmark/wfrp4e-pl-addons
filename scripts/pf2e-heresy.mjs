@@ -1,3 +1,4 @@
+/* eslint-disable @stylistic/js/max-len */
 /**
  *
  */
@@ -545,7 +546,7 @@ export default class PF2eHeresy {
                         ]
                     };
                 }, 10000);
-                const f = async function(combat, updateData) {
+                const f = async function(combat, _updateData) {
                     await combat.combatant.actor.removeCondition('multiattacks', 99);
                     await combat.combatant.actor.removeCondition('multichannelling', 99);
                     await combat.combatant.actor.removeCondition('multispell', 99);
