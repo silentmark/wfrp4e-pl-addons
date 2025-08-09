@@ -57,7 +57,7 @@ export default class AutoRotate {
                     trigger: 'dialog',
                     options: { activateScript: 'return true' }
                 };
-                return newScript;
+                return new WarhammerScript(newScript);
             } else if (attackAngle > backRange1Min && attackAngle < backRange1Max) {
                 const newScript = {
                     script: 'args.fields.modifier += ' + backBonus,
@@ -65,7 +65,7 @@ export default class AutoRotate {
                     trigger: 'dialog',
                     options: { activateScript: 'return true' }
                 };
-                return newScript;
+                return new WarhammerScript(newScript);
             }
         }
     };

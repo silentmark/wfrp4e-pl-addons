@@ -32,7 +32,7 @@ export default class PrayerNerf {
             trigger: 'dialog',
             options: {  activateScript: 'return true' }
         };
-        return newScript;
+        return new WarhammerScript(newScript);
     };
 
     /**

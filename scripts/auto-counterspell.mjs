@@ -67,7 +67,6 @@ export default class AutoCounterSpell {
             });
 
             Hooks.on('wfrp4e:opposedTestResult', async function(opposedData, attackerTest, defenderTest) {
-                //TODO: TEST THIS - may not work anymore
                 if ((attackerTest.preData.rollClass === 'CastTest' || attackerTest.preData.rollClass === 'WomCastTest')
                     && defenderTest.preData.rollClass === 'SkillTest'
                     && defenderTest.preData.skillName === 'Język (Magiczny)'
