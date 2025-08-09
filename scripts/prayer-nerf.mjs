@@ -1,4 +1,4 @@
-import { constants } from './constants.mjs';
+import wfrp4ePlAddon from './constants.mjs';
 
 /**
  *
@@ -59,16 +59,9 @@ export default class PrayerNerf {
             });
 
             Hooks.on('wfrp4e:createRollDialog', (dialog) => {
-                if (!dialog.options) {
-                    dialog.options = {};
-                }
-                if (!dialog.options.scripts) {
-                    dialog.options.scripts = [];
-                }
-
-                const script = game.modules.get(constants.moduleId).api.prayerNerf.calculatePrayerNerf(dialog);
+                const script = game.modules.get(wfrp4ePlAddon.moduleId).api.prayerNerf.calculatePrayerNerf(dialog);
                 if (script) {
-                    dialog.options.scripts.push(script);
+                    dialog.data.scripts.push(script);
                 }
             });
         }

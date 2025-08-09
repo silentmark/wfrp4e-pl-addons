@@ -1,3 +1,5 @@
+import wfrp4ePlAddon from './constants.mjs';
+
 /**
  *
  */
@@ -6,7 +8,7 @@ export default class AlternativeTemplateCollision {
      *
      */
     setup() {
-        if (game.settings.get('wfrp4e-pl-addons', 'templateCollision')) {
+        if (game.settings.get(wfrp4ePlAddon.moduleId, 'templateCollision')) {
 
             AreaHelpers.isInTemplate = function(tokenObject, templateDocument, size) {
                 const templateObject = templateDocument.object;
@@ -21,7 +23,7 @@ export default class AlternativeTemplateCollision {
                     };
                 }
 
-                const minimalRatio = game.settings.get('wfrp4e-pl-addons', 'templateCollisionMinimalRatio') / 100;
+                const minimalRatio = game.settings.get(wfrp4ePlAddon.moduleId, 'templateCollisionMinimalRatio') / 100;
                 if (!templateObject.shape) {
                     let { x, y, direction, distance } = templateObject.document;
                     distance *= game.canvas.dimensions.distancePixels;

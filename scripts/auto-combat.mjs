@@ -1,3 +1,4 @@
+import wfrp4ePlAddon from './constants.mjs';
 
 /**
  *
@@ -10,7 +11,7 @@ export default class AutoCombat {
      *
      */
     setup() {
-        if (game.settings.get('wfrp4e-pl-addons', 'autoCombat.Enabled')) {
+        if (game.settings.get(wfrp4ePlAddon.moduleId, 'autoCombat.Enabled')) {
 
             Hooks.on('renderTokenHUD', (app, html, _data) => {
                 const actor = game.actors.get(canvas.tokens.controlled[0].actor.id);

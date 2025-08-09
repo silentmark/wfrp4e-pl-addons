@@ -1,3 +1,5 @@
+import wfrp4ePlAddon from './constants.mjs';
+
 /**
  * Alternative Armour system for WFRP4e
  * Provides enhanced armor type functionality and calculations
@@ -7,7 +9,7 @@ export default class AlternativeArmour {
      * Ready hook - initializes armor configuration when the setting is enabled
      */
     ready() {
-        if (game.settings.get('wfrp4e-pl-addons', 'alternativeArmour.Enable')) {
+        if (game.settings.get(wfrp4ePlAddon.moduleId, 'alternativeArmour.Enable')) {
             game.wfrp4e.config.armorTypes = {
                 'light': game.i18n.localize('WFRP4E.AlternativeArmour.ArmourType.Light'),
                 'medium': game.i18n.localize('WFRP4E.AlternativeArmour.ArmourType.Medium'),
@@ -26,7 +28,7 @@ export default class AlternativeArmour {
      * Setup hook - defines armor-related property overrides and calculations
      */
     setup() {
-        if (game.settings.get('wfrp4e-pl-addons', 'alternativeArmour.Enable')) {
+        if (game.settings.get(wfrp4ePlAddon.moduleId, 'alternativeArmour.Enable')) {
 
             Reflect.defineProperty(ArmourModel.prototype, 'isMetal', {
                 get() {

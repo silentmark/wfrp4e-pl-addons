@@ -1,0 +1,17 @@
+<p><strong>Następujący walczący mogą Rozproszyć Magię:</strong></p>
+<table>
+    {{#each this}}
+        <tr>
+            <td>
+                <span id="defender-{{this.tokenId}}" class="cast-defender">{{this.name}}</span>
+                <a class="wfrp4e-addon-opposed-toggle chat-button-gm"
+                        data-action="counter-spell"
+                        data-actor="{{this.actorId}}"
+                        data-token="{{this.tokenId}}"
+                        title="{{localize "CHAT.OpposedTest"}}">
+                    <i class="fas fa-exchange-alt"></i>
+                </a>
+            </td>
+        </tr>
+    {{/each}}
+</table>

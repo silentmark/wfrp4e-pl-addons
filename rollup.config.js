@@ -1,32 +1,32 @@
-import fs from "fs";
-import path from "path";
-import watch from "rollup-plugin-watch";
-import foundryPath from "./foundry-path.mjs";
-import jscc from 'rollup-plugin-jscc';
+import fs from 'fs';
+import foundryPath from './foundry-path.mjs';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 
-let manifest = JSON.parse(fs.readFileSync("./module.json"))
+const manifest = JSON.parse(fs.readFileSync('./module.json'));
+const modulePath = foundryPath(manifest.id);
 
-let modulePath = foundryPath(manifest.id)
+console.log('Bundling to ' + modulePath);
 
-console.log("Bundling to " + modulePath)
 export default {
     input: [
-        "scripts/main.mjs"
+        'scripts/main.mjs'
     ],
     output: {
-        dir : "./dist"
+        dir: './dist'
     },
     plugins: [
-        jscc({
-            values : {_ENV :  process.env.NODE_ENV}
-        }),
-        watch({ dir: "scripts" }),
-		nodeResolve()
+        nodeResolve()
     ],
+    watch: {
+        chokidar: {
+            usePolling: true,
+            interval: 200
+        }
+    },
     onwarn(warning, warn) {
-        // suppress eval warnings
-        if (warning.code === 'EVAL') return
-        warn(warning)
+        if (warning.code === 'EVAL') {
+            return;
+        }
+        warn(warning);
     }
-}
+};

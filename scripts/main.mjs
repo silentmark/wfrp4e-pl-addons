@@ -1,4 +1,4 @@
-import { constants } from './constants.mjs';
+import wfrp4ePlAddon from './constants.mjs';
 import { registerSettings } from './module-settings.mjs';
 import AlternativeArmour from './alternative-armour.mjs';
 import AlternativeTemplateCollision from './alternative-template-collision.mjs';
@@ -18,6 +18,8 @@ import Diseases from './diseases.mjs';
 import SocketTests from './socket-tests.mjs';
 import VariousExtensions from './various-extensions.mjs';
 import CombatDistances from './combat-distance.mjs';
+import { CounterSpellMessageModel } from './models/counter-spell.mjs';
+
 
 /**
  * Main entry point for WFRP4e PL Addons module
@@ -101,18 +103,18 @@ class Main {
 }
 
 Hooks.on('setup', () => {
-    game.modules.get(constants.moduleId).api.setup();
+    game.modules.get(wfrp4ePlAddon.moduleId).api.setup();
 });
 
 Hooks.on('ready', () => {
-    game.modules.get(constants.moduleId).api.ready();
+    game.modules.get(wfrp4ePlAddon.moduleId).api.ready();
 });
 
 Hooks.once('init', () => {
-    game.modules.get(constants.moduleId).api = new Main();
-
-    // Register all module settings
+    game.modules.get(wfrp4ePlAddon.moduleId).api = new Main();
     registerSettings();
+
+    CONFIG.ChatMessage.dataModels['wfrp4e-pl-addons.counterSpell'] = CounterSpellMessageModel;
 });
 
 export default Main;

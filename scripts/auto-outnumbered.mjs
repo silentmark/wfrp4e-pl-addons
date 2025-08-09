@@ -1,4 +1,4 @@
-import { constants } from './constants.mjs';
+import wfrp4ePlAddon from './constants.mjs';
 import CombatDistances from './combat-distance.mjs';
 
 
@@ -168,16 +168,9 @@ export default class AutoOutnumbered {
             });
 
             Hooks.on('wfrp4e:createRollDialog', (dialog) => {
-                if (!dialog.options) {
-                    dialog.options = {};
-                }
-                if (!dialog.options.scripts) {
-                    dialog.options.scripts = [];
-                }
-
-                const script = game.modules.get(constants.moduleId).api.autoOutnumbered.calculateOutnumbering(dialog);
+                const script = game.modules.get(wfrp4ePlAddon.moduleId).api.autoOutnumbered.calculateOutnumbering(dialog);
                 if (script) {
-                    dialog.options.scripts.push(script);
+                    dialog.data.scripts.push(script);
                 }
                 if (Sequence) {
                     Promise.all(game.canvas.tokens.placeables.map(tok => new Sequence().animation().on(tok).tint('#FFFFFF').play()))

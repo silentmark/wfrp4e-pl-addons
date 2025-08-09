@@ -66,6 +66,11 @@
       }
     ]
   },
+  "documentTypes": {
+    "ChatMessage": {
+      "counterSpell": {}
+    }
+  },
   "compatibility": {
     "minimum": "13",
     "verified": "13",

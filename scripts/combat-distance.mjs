@@ -1,4 +1,4 @@
-import { constants } from './constants.mjs';
+import wfrp4ePlAddon from './constants.mjs';
 
 /**
  *
@@ -133,7 +133,7 @@ export default class CombatDistances {
             CombatDistances.createRings(token.object);
         });
         libWrapper.register(
-            constants.moduleId,
+            wfrp4ePlAddon.moduleId,
             'Token.prototype.draw',
             CombatDistances.tokenDraw,
             'WRAPPER'
