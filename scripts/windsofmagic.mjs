@@ -264,10 +264,10 @@ export default class WindsOfMagic {
                         const healthSvg = CircleHelper.getProgressCircle({
                             current: bar.value,
                             max: bar.max,
-                            radius: 16
+                            radius: 22
                         });
                         const $combatant = jQuery(html).find(`.combatant[data-combatant-id="${c.id}"]`);
-                        $combatant.find('.token-image').wrap('<div class="ce-image-wrapper">');
+                        $combatant.find('.token-image').wrap('<div class="ce-image-wrapper" style="position: relative;">');
                         $combatant.find('.ce-image-wrapper').append(CircleHelper.getProgressCircleHtml(healthSvg));
                     });
 

@@ -7,7 +7,7 @@ export default class CircleHelper {
      * @param data
      */
     static getProgressCircleHtml(data) {
-        return `<svg class="progress-ring progress-ring--${data.class}" viewBox="0 0 ${data.diameter} ${data.diameter}" width="${data.diameter}" height="${data.diameter}">
+        return `<svg style="position: absolute; top: 0;" class="progress-ring progress-ring--${data.class}" viewBox="0 0 ${data.diameter} ${data.diameter}" width="${data.diameter}" height="${data.diameter}">
         <circle
           class="progress-ring__circle"
           stroke-width="${data.strokeWidth}"
