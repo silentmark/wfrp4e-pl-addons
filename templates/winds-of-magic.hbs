@@ -1,5 +1,5 @@
 <div>
-    <h2 style="text-align: center">Wiatry Magii podczas Starcia</h2>
+    <h3 style="text-align: center">Wiatry Magii podczas Starcia</h3>
     <ol style="display: flex; flex-flow: row; flex-wrap: wrap; margin: 0; list-style-type: none;">
   {{#each winds as |wind i|}}
      <li data-item-id="{{wind.wind}}" style="display: flex; margin: 5px; flex-direction: column">
@@ -8,13 +8,8 @@
     </li>
   {{/each}}
   </ol>
-
-      <div style="padding-left: 20px; padding-top: 20px; padding-right: 20px">
-        <span style="padding-right: 5px">Złowrogie Wpływy Tzeentcha</span>
-        <input type="checkbox" name="tzeentchInfluence"/>
-      </div>
-      <div style="padding: 20px; display: flex; flex-flow: column;">
-        <span>Nazwa przywołanego demona</span>
-        <input class="input" name="tzeentchInfluenceDemon" type="text" value="" style="font-family: var(--actor-input-font-family); font-size: var(--actor-input-font-family); font-weight: var(--actor-input-font-weight); color: var(--actor-input-color);" />
+      <div style="padding: 20px;">
+        <h3 style="padding-right: 5px">Złowrogie Wpływy Tzeentcha</h3>
+        <input type="checkbox" name="tzeentchInfluence" value="{{tzeentchInfluence}}"/>
       </div>
 </div>

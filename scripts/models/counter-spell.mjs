@@ -25,7 +25,7 @@ export class CounterSpellMessageModel extends WarhammerMessageModel {
     /**
      * Creates a chat message for a counter spell.
      * @param {Array} defenders - The defenders of the counter spell.
-     * @param {Object} [chatData={}] - Additional chat data to merge with the message.
+     * @param {object} [chatData] - Additional chat data to merge with the message.
      */
     static async createCounterSpellMessage(defenders, chatData = {}) {
         const html = await foundry.applications.handlebars.renderTemplate('modules/wfrp4e-pl-addons/templates/auto-counterspell.hbs', defenders);

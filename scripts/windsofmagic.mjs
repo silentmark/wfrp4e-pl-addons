@@ -5,6 +5,71 @@ import CircleHelper from './circle-helper.mjs';
  */
 export default class WindsOfMagic {
 
+    calculateWind = function(args) {
+        const wind = args.skill.name.substring(args.skill.name.indexOf('(') + 1, args.skill.name.indexOf(')'));
+        const winds = game.combat.flags['wfrp4e-pl-addons']['winds'];
+        if (winds) {
+            if (args.type === 'channelling') {
+                const modifier = winds.modifier.find(x=> x.wind === wind)?.modifier;
+                if (modifier !== 0 && modifier !== undefined) {
+                    const newScript = {
+                        label: 'Wiatry Magii (' + wind + ')',
+                        trigger: 'dialog',
+                        script : `args.fields.modifier += ${modifier};`,
+                        options : { activateScript : 'return true;' }
+                    };
+                    return new WarhammerScript(newScript);
+                }
+            }
+            if (winds.tzeentchInfluence && args.type === 'cast') {
+                const newScript = {
+                    trigger: 'dialog',
+                    label: 'Nasycenie Magią',
+                    script : 'args.fields.slBonus += 1;',
+                    options : {
+                        activateScript : 'return true;'
+                    }
+                };
+                return new WarhammerScript(newScript);
+            }
+        }
+    };
+
+    calculateTzeentch = async function(test) {
+        if (test.spell) { //channnel or cast test.
+            const winds = game.combat.flags['wfrp4e-pl-addons']['winds'];
+            if (winds?.tzeentchInfluence && test.result.roll.toString() === '99') {
+                const demons = game.actors.filter(x => x.itemTags['trait'].find(t => t.name === 'Demoniczny'));
+                if (demons.length) {
+                    const choice = await ItemDialog.create(demons.map(z=> ({ id: z.uuid, name: z.name })), 1, 'Wybierz Demona');
+                    if (choice && choice[0].id) {
+                        const options = {
+                            updateData: {
+                                token: { alpha: 0 }
+                            },
+                            count: 1
+                        };
+                        const [creature] = await new Portal()
+                            .addCreature(choice[0].id, options)
+                            .spawn();
+
+                        await Sequencer.Helpers.wait(200);
+                        new Sequence()
+                            .effect()
+                            .file('jb2a.magic_signs.circle.02.abjuration.intro.dark_purple')
+                            .atLocation(creature)
+                            .scaleToObject(2.5)
+                            .randomRotation()
+                            .play();
+
+                        ChatMessage.create({ content: '<span>Złowrogie wpływy Tzeentcha wywołały manifestację chaosu: <a class=\'table-click fumble-roll\' title=\'Złowrogie Wpływy Tzeentcha\' data-table=\'miscast\' data-modifier=\'100\'><i class=\'fas fa-list\'></i>Poważna Manifestacja Chaosu (+100)</a></span>' });
+                    }
+                }
+            } else if (winds?.tzeentchInfluence && test.result.roll.toString().split('').reverse()[0] === '9') {
+                ChatMessage.create({ content: '<span>Złowrogie wpływy Tzeentcha wywołały manifestację chaosu: <a class=\'table-click fumble-roll\' title=\'Złowrogie Wpływy Tzeentcha\' data-table=\'miscast\' data-modifier=\'0\'><i class=\'fas fa-list\'></i>Pomniejsza Manifestacja Chaosu</a></span>' });
+            }
+        }
+    };
     /**
      *
      */
@@ -13,13 +78,10 @@ export default class WindsOfMagic {
             Hooks.on('createCombat', async function(combat) {
                 if (game.user.isGM) {
                     const winds = Object.values(game.wfrp4e.config.magicWind).filter(x => x !== game.i18n.localize('None')).filter((value, index, array) => array.indexOf(value) === index);
-                    const templateData = {};
-                    templateData.winds = [];
-                    for (let i = 0; i < winds.length; i++) {
-                        templateData.winds[i] = {};
-                        templateData.winds[i].wind = winds[i];
-                        templateData.winds[i].modifier = 0;
-                    }
+                    const templateData = {
+                        winds: winds.map(wind => ({ wind, modifier: 0 })),
+                        tzeentchInfluence: false
+                    };
 
                     const html = await renderTemplate('modules/wfrp4e-pl-addons/templates/winds-of-magic.hbs', templateData);
                     new Dialog({
@@ -29,22 +91,30 @@ export default class WindsOfMagic {
                             confirm: {
                                 label: 'Rzut',
                                 callback: async(dlg) => {
-                                    const inputs = $('input.wind[name]', dlg);
-                                    const winds = {};
-                                    winds.modifier = [];
-                                    let message = '';
-                                    for (let i = 0; i < inputs.length; i++) {
-                                        const input = inputs[i];
-                                        const wind =  input.attributes['name'].value;
-                                        const modifier = Number.parseInt(input.value);
-                                        const result = Number.parseInt((await game.wfrp4e.tables.rollTable('winds', { hideDSN: true, modifier: modifier })).result);
-                                        winds.modifier.push({ wind: wind, modifier: result });
-                                        message += `<tr><td><strong>${wind}</strong>:</td><td>${result > 0 ? '+' + result : result}</td></tr>`;
-                                    }
-                                    winds.tzeentch = $('input[name="tzeentchInfluence"]', dlg)[0].checked;
-                                    winds.deamonName = $('input[name="tzeentchInfluenceDemon"]', dlg)[0].value;
+                                    const tableName = 'winds';
+                                    const inputs = $('input.wind[name]', dlg).toArray();
+                                    const windsModifier = await Promise.all(inputs.map(async input => {
+                                        const wind = input.name;
+                                        const modValue = Number(input.value);
+                                        const roll = await game.wfrp4e.tables.rollTable(tableName, { hideDSN: true, modifier: modValue });
+                                        const result = Number(roll.result);
+                                        return { wind, modifier: result };
+                                    }));
+
+                                    const winds = {
+                                        modifier: windsModifier,
+                                        tzeentchInfluence: !!$('input[name="tzeentchInfluence"]', dlg).is(':checked')
+                                    };
+
                                     await combat.setFlag('wfrp4e-pl-addons', 'winds', winds);
-                                    await ChatMessage.create({ content: `<p><strong>Zmienne Wiatry magii wpływają na splatanie w następujący sposób:</strong><br/><table>${message}</table></p>` });
+
+                                    const rows = windsModifier
+                                        .map(w => `<tr><td><strong>${w.wind}</strong>:</td><td>${w.modifier > 0 ? '+' : ''}${w.modifier}</td></tr>`)
+                                        .join('');
+
+                                    await ChatMessage.create({
+                                        content: `<p><strong>Zmienne Wiatry magii wpływają na splatanie w następujący sposób:</strong><table>${rows}</table></p>`
+                                    });
                                 }
                             }
                         },
@@ -52,6 +122,21 @@ export default class WindsOfMagic {
                         close: _dlg => { }
                     }).render(true);
                 }
+            });
+
+            Hooks.on('wfrp4e:createRollDialog', (dialog) => {
+                const script = game.modules.get(wfrp4ePlAddon.moduleId).api.windsOfMagic.calculateWind(dialog);
+                if (script) {
+                    dialog.data.scripts.push(script);
+                }
+            });
+
+            Hooks.on('wfrp4e:rollCastTest', async function(castTest, _chatData) {
+                await game.modules.get(wfrp4ePlAddon.moduleId).api.windsOfMagic.calculateTzeentch(castTest);
+            });
+
+            Hooks.on('wfrp4e:rollChannelTest', async function(castTest, _chatData) {
+                await game.modules.get(wfrp4ePlAddon.moduleId).api.windsOfMagic.calculateTzeentch(castTest);
             });
 
             Hooks.on('combatRound', async function(combat, _updateData, _options) {
@@ -70,146 +155,6 @@ export default class WindsOfMagic {
                     }
                 }
             });
-
-            Hooks.on('updateCombat', async function(combat, updateData) {
-                if (game.user.isGM) {
-                    if (typeof (updateData.round) === 'undefined' && typeof (updateData.turn) === 'undefined') {
-                        return;
-                    }
-                    if (!combat.started || !combat.isActive) {
-                        return;
-                    }
-
-                    if (!combat.combatants.get(combat.current.combatantId)) {
-                        return;
-                    }
-                    const actor = game.actors.get(combat.combatants.get(combat.current.combatantId).actorId);
-                    const skills = actor.itemTags['skill'].filter(x=> x.name.startsWith('Splatanie Magii'));
-                    if (skills.length === 0) {
-                        return;
-                    }
-                    for (let i = 0; i < skills.length; i++) {
-                        const skill = skills[i];
-                        const wind = skill.name.substring(skill.name.indexOf('(') + 1, skill.name.indexOf(')'));
-                        const winds = combat.flags['wfrp4e-pl-addons']['winds'];
-                        if (winds) {
-                            const modifier = winds.modifier.find(x=> x.wind === wind)?.modifier;
-                            if (modifier !== 0 && modifier !== undefined) {
-                                let effect = actor.effects.find(x => x.name === 'Wiatry Magii (' + wind + ')');
-                                if (!effect) {
-                                    effect = {
-                                        name: 'Wiatry Magii (' + wind + ')',
-                                        img: 'modules/wfrp4e-core/icons/spells/octagram.png',
-                                        system: {
-                                            condition : { },
-                                            scriptData: [{
-                                                label: 'Wiatry Magii (' + wind + ')',
-                                                trigger: 'dialog',
-                                                script : `args.fields.modifier += ${modifier};`,
-                                                options : {
-                                                    hideScript : `return args.type !== 'channelling' || game.wfrp4e.config.magicWind[args.item?.lore?.value] !== '${wind}'`,
-                                                    activateScript : `return args.type === "channelling" && game.wfrp4e.config.magicWind[args.item?.lore?.value] === '${wind}'`
-                                                }
-                                            }]
-                                        }
-                                    };
-                                    await actor.createEmbeddedDocuments('ActiveEffect', [effect]);
-                                }
-                            }
-                            if (winds.tzeentch) {
-                                const deamonName = winds.deamonName;
-                                const script = `
-                                    let suffusedWithMagicEffect = {
-                                        name: 'Nasycenie Magią',
-                                        img: "modules/wfrp4e-core/icons/spells/tzeentch.png",
-                                        duration: {
-                                            rounds: 1
-                                        },
-                                        system: {
-                                            condition : { },
-                                            scriptData: [{
-                                                    trigger: "dialog",
-                                                    label: "Nasycenie Magią",
-                                                    script : "args.fields.slBonus += 1;",
-                                                    options : {
-                                                        hideScript : "return args.type !== 'cast'",
-                                                        activateScript : "return args.type === 'cast'"
-                                                    }
-                                                }]
-                                            }
-                                        }
-                                    };
-                                    if (args.test.result.roll.toString() === '99') {
-                                        const demon = game.actors.find(x=>x.name === "${deamonName}");
-                                        if (demon) {
-                                            const options = {
-                                                updateData: {
-                                                    token: { alpha: 0 }
-                                                },
-                                                count: 1
-                                            }
-                                            const [creature] = await new Portal()
-                                                .addCreature(demon.uuid, options)
-                                                .spawn();
-
-                                            await Sequencer.Helpers.wait(200)
-                                            new Sequence()
-                                                .effect()
-                                                .file("jb2a.magic_signs.circle.02.abjuration.intro.dark_purple")
-                                                .atLocation(demonToken)
-                                                .scaleToObject(2.5)
-                                                .randomRotation()
-                                            .play();
-
-                                            ChatMessage.create({content: "<span>Złowrogie wpływy Tzeentcha wywołały manifestację chaosu: <a class='table-click fumble-roll' title='Złowrogie Wpływy Tzeentcha' data-table='miscast' data-modifier='100'><i class='fas fa-list'></i>Poważna Manifestacja Chaosu (+100)</a></span>"})
-                                            caster.createEmbeddedDocuments("ActiveEffect", [suffusedWithMagicEffect]);
-                                        }
-                                    }
-                                    else if (args.test.result.roll.toString().split('').reverse()[0] === '9') {
-                                        ChatMessage.create({content: "<span>Złowrogie wpływy Tzeentcha wywołały manifestację chaosu: <a class='table-click fumble-roll' title='Złowrogie Wpływy Tzeentcha' data-table='miscast' data-modifier='0'><i class='fas fa-list'></i>Pomniejsza Manifestacja Chaosu</a></span>"});
-                                        this.actor.createEmbeddedDocuments("ActiveEffect", [suffusedWithMagicEffect]);
-                                    }`;
-                                let effect = actor.effects.find(x => x.name === 'Złowrogie Wpływy Tzeentcha');
-                                if (!effect) {
-                                    effect = {
-                                        name: 'Złowrogie Wpływy Tzeentcha',
-                                        img: 'modules/wfrp4e-core/icons/spells/tzeentch.png',
-                                        system: {
-                                            condition : { },
-                                            scriptData: [{
-                                                label: 'Złowrogie Wpływy Tzeentcha (Czarowanie)',
-                                                trigger: 'rollCastTest',
-                                                script : script
-                                            },
-                                            {
-                                                label: 'Złowrogie Wpływy Tzeentcha (Splatanie)',
-                                                trigger: 'rollChannellingTest',
-                                                script : script
-                                            }]
-                                        }
-                                    };
-                                    await actor.createEmbeddedDocuments('ActiveEffect', [effect]);
-                                }
-                            }
-                        }
-                    }
-                }
-            });
-
-            Hooks.on('deleteCombat', async function(_combat) {
-                if (game.user.isGM) {
-                    const actors = game.actors.map(x=>x);
-                    for (let i = 0; i < actors.length; i++) {
-                        const actor = actors[i];
-                        let effects = actor.effects.filter(x=> x.name.startsWith('Wiatry Magii') || x.name.startsWith('Złowrogie Wpływy Tzeentcha'));
-                        if (effects.length > 0) {
-                            effects = effects.map(x => x.id);
-                            await actor.deleteEmbeddedDocuments('ActiveEffect', effects);
-                        }
-                    }
-                }
-            });
-
 
             Hooks.on('renderChatMessage', async(app, html, messageData) => {
                 if (!game.user.isGM) {
