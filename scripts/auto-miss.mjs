@@ -48,34 +48,34 @@ export default class AutoMiss {
 
             Hooks.on('renderTokenHUD', (data, hud, _drawData) => {
                 const token = data.object.document;
-                let active = token.getFlag('wfrp4e-pl-addons', 'ducking') || false;
+                const active = token.getFlag('wfrp4e-pl-addons', 'ducking') || false;
                 const toggleDuckbtn = `
-                    <div class="control-icon${active ? ' active' : ''}" id="toggleDuck">
-                      <img src="/modules/wfrp4e-pl-addons/icons/ducking.png" width="36" height="36" title='Kucnij'></i>
-                    </div>`;
-                const controlIcons = hud.find('div.control-icon');
+                    <button type="button" class="control-icon${active ? ' active' : ''}" data-action="duck" data-tooltip="Kucnij">
+                      <img src="/modules/wfrp4e-pl-addons/icons/ducking.png" width="36" height="36"/>
+                    </button>`;
+                const controlIcons = $(hud).find('button.control-icon');
                 controlIcons.last().after(toggleDuckbtn);
-                $(hud.find('div[id="toggleDuck"]')).on('click', toggDuck);
+                $(hud).find('button[data-action="duck"]').on('click', toggDuck);
 
                 /**
                  *
                  */
                 async function toggDuck() {
-                    active = !active;
-                    await token.setFlag('wfrp4e-pl-addons', 'ducking', !(token.getFlag('wfrp4e-pl-addons', 'ducking') || false));
+                    const newActive = !(token.getFlag('wfrp4e-pl-addons', 'ducking') || false);
+                    await token.setFlag('wfrp4e-pl-addons', 'ducking', newActive);
 
-                    const hudbtn = hud.find('div[id="toggleDuck"]');
-                    if (active) {
-                        hudbtn.addClass('active');
+                    const duckButton = $(hud).find('button[data-action="duck"]');
+                    if (newActive) {
+                        duckButton.addClass('active');
                         await token.setFlag('wall-height', 'tokenHeight', parseInt(token.actor.details.height.value) / 250);
-                        const e = token.actor.effects.find(x => x.flags?.wfrp4e.ducking);
+                        const e = token.actor.effects.find(x => x.name === duckEffectData.name);
                         if (!e) {
                             await token.actor.createEmbeddedDocuments('ActiveEffect', [duckEffectData]);
                         }
                     } else {
-                        hudbtn.removeClass('active');
+                        duckButton.removeClass('active');
                         await token.setFlag('wall-height', 'tokenHeight', parseInt(token.actor.details.height.value) / 100);
-                        const e = token.actor.effects.find(x => x.flags?.wfrp4e.ducking);
+                        const e = token.actor.effects.find(x => x.name === duckEffectData.name);
                         if (e) {
                             await token.actor.deleteEmbeddedDocuments('ActiveEffect', [e.id]);
                         }

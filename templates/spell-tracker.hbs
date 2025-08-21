@@ -1,0 +1,39 @@
+<div class="spell-tracker" style="max-height: 25%;">
+    <h4 style="text-align: center;">Aktywne zaklęcia</h4>
+    <ol class="directory-list">
+      {{#each spells as |spell|}}
+        <li class="directory-item flexrow" style="position: relative;" data-message-id="{{spell.messageId}}">
+          <div class="flexcol" style="max-width: 48px;">
+            <img style="width:48px; height:48px;" alt="{{spell.name}}" src="{{spell.img}}" data-tooltip="{{spell.name}}">
+          </div>
+          <div class="flexcol" style="max-width: 48px;">
+            <img style="width:48px; height:48px;" alt="{{tokenName spell.actor}}" src="{{tokenImg spell.actor}}" data-tooltip="{{tokenName spell.actor}}">
+          </div>
+          <div class="flexcol" style="max-width: 48px; height: 48px;" data-tooltip="Pozostały czas trwania">
+            <div style="text-align: center; align-content: center; width: 100%; height: 100%;">{{spell.duration.current}}</div>
+          </div>
+          <div class="flexcol" style="max-width: 48px; height: 48px;" data-tooltip="{{spell.basePowerTooltip}}">
+            <div class="ce-image-wrapper" style="text-align: center; position: relative; align-content: center; width: 100%; height: 100%">
+              {{spell.basePower}}
+              {{#each spell.dispelPower as |power|}}
+               <svg style="position: absolute; top: 0; left: 0" class="progress-ring {{power.colorClass}}" viewBox="0 0 48 48" width="48" height="48">
+                <circle class="progress-ring__circle" stroke-width="4" stroke-dasharray="{{power.circumference}}" stroke-dashoffset="{{power.offset}}" stroke="{{power.color}}" fill="transparent" r="22" cx="24" cy="24"></circle>
+               </svg>
+              {{/each}}
+            </div>
+          </div>
+          <div style="text-align: center; align-content: center; height: 48px;">
+            <a class="item-controls" data-message-id="{{spell.messageId}}" data-action="dispel" data-tooltip="Rozprosz Zaklęcie">
+              <i class="fas fa-burst"></i>
+            </a>
+            <a class="item-controls" data-message-id="{{spell.messageId}}" data-action="boost" data-tooltip="Wzmocnij Zaklęcie">
+              <i class="fas fa-burst"></i>
+            </a>
+            <a class="item-controls" data-message-id="{{spell.messageId}}" data-action="delete" data-tooltip="Skasuj Zaklęcie">
+              <i class="fas fa-trash"></i>
+            </a>
+          </div>
+        </li>
+      {{/each}}
+    </ol>
+</div>

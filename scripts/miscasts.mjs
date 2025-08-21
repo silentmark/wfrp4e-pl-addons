@@ -165,7 +165,7 @@ export default class Miscasts {
                             this.result.tooltips.miscast.push('Zmysł Magii: ' + -random);
                             globalModifier -= random;
                         }
-                        this.result.tooltips.miscastText = 'Manifestacje Chaosu: <ul><li style=\'float: left\'>' +
+                        this.result.tooltips.miscastText = 'Manifestacje Chaosu: <ul><li style="float: left">' +
                             `${this.result.tooltips.miscast.map(t => t.trim()).join('</li><li>')}</li></ul>`;
                         this.result.miscastModifier = globalModifier;
                         this.result.miscastTable = 'miscast';

@@ -1,4 +1,5 @@
 import CircleHelper from './circle-helper.mjs';
+import wfrp4ePlAddon from './constants.mjs';
 
 /**
  *
@@ -43,12 +44,7 @@ export default class WindsOfMagic {
                 if (demons.length) {
                     const choice = await ItemDialog.create(demons.map(z=> ({ id: z.uuid, name: z.name })), 1, 'Wybierz Demona');
                     if (choice && choice[0].id) {
-                        const options = {
-                            updateData: {
-                                token: { alpha: 0 }
-                            },
-                            count: 1
-                        };
+                        const options = { count: 1 };
                         const [creature] = await new Portal()
                             .addCreature(choice[0].id, options)
                             .spawn();
@@ -56,17 +52,17 @@ export default class WindsOfMagic {
                         await Sequencer.Helpers.wait(200);
                         new Sequence()
                             .effect()
-                            .file('jb2a.magic_signs.circle.02.abjuration.intro.dark_purple')
+                            .file('jb2a.magic_signs.circle.02.illusion.intro.purple')
                             .atLocation(creature)
                             .scaleToObject(2.5)
                             .randomRotation()
                             .play();
 
-                        ChatMessage.create({ content: '<span>Złowrogie wpływy Tzeentcha wywołały manifestację chaosu: <a class=\'table-click fumble-roll\' title=\'Złowrogie Wpływy Tzeentcha\' data-table=\'miscast\' data-modifier=\'100\'><i class=\'fas fa-list\'></i>Poważna Manifestacja Chaosu (+100)</a></span>' });
+                        ChatMessage.create({ content: '<span>Złowrogie wpływy Tzeentcha wywołały manifestację chaosu: <a class="table-click action-link fumble" data-action="clickTable" title="Złowrogie Wpływy Tzeentcha" data-table="miscastdhar" data-modifier="150"><i class="fas fa-list"></i>Poważna Manifestacja Chaosu (+150)</a></span>' });
                     }
                 }
             } else if (winds?.tzeentchInfluence && test.result.roll.toString().split('').reverse()[0] === '9') {
-                ChatMessage.create({ content: '<span>Złowrogie wpływy Tzeentcha wywołały manifestację chaosu: <a class=\'table-click fumble-roll\' title=\'Złowrogie Wpływy Tzeentcha\' data-table=\'miscast\' data-modifier=\'0\'><i class=\'fas fa-list\'></i>Pomniejsza Manifestacja Chaosu</a></span>' });
+                ChatMessage.create({ content: '<span>Złowrogie wpływy Tzeentcha wywołały manifestację chaosu: <a class="table-click action-link fumble" data-action="clickTable" title="Złowrogie Wpływy Tzeentcha" data-table="miscastdhar" data-modifier="100"><i class="fas fa-list"></i>Manifestacja Chaosu (+100)</a></span>' });
             }
         }
     };
@@ -144,11 +140,9 @@ export default class WindsOfMagic {
                     const spells = combat.getFlag('wfrp4e-pl-addons', 'spells');
                     if (spells) {
                         for (const messageId in spells) {
-                            if (spells[messageId]) {
-                                const duration = spells[messageId].duration;
-                                if (duration.unit === 'rund' && Number.isInteger(duration.current) && Number.parseInt(duration.current) > 0) {
-                                    duration.current = Number.parseInt(duration.current) - 1;
-                                }
+                            const duration = spells[messageId].duration;
+                            if (duration.unit === 'rund' && Number.isInteger(duration.current) && Number.parseInt(duration.current) > 0) {
+                                duration.current = Number.parseInt(duration.current) - 1;
                             }
                         }
                         await combat.setFlag('wfrp4e-pl-addons', 'spells', spells);
@@ -163,43 +157,29 @@ export default class WindsOfMagic {
                 const combat = game.combat;
                 if (combat && combat.round !== 0 && combat.turns && combat.active && app?.system?.test) {//combat started
                     const test = app.system.test;
-                    if ((test?.constructor?.name === 'WomCastTest' && test.result.castOutcome === 'success') ||
-                        (test?.constructor?.name === 'WeaponTest' && test.result.outcome === 'success' && test.weapon?.areaEffects?.length)) {
-                        const newMessage = jQuery(html).find('.message-content').append(jQuery('<div class="card-content"><a class="chat-button card-track-spell" style="width: 100%">Śledź zaklęcie / Efekt</a></div>'));
+                    if ((test.result.castOutcome === 'success')) {
+                        const newMessage = $(html).find('.message-content').append($('<div class="card-content"><a class="chat-button card-track-spell" style="width: 100%">Dodaj zaklęcie do trackera</a></div>'));
                         newMessage.find('.card-track-spell').click(async function() {
                             const messageId = messageData.message._id;
                             const userId = messageData.user.id;
                             const message = game.messages.get(messageId);
                             const test = message.system.test;
 
-                            let spells = combat.getFlag('wfrp4e-pl-addons', 'spells');
-                            if (!spells) {
-                                spells = {};
-                            }
-
+                            const spells = combat.getFlag('wfrp4e-pl-addons', 'spells') ?? {};
                             spells[messageId] = {
                                 user: userId,
-                                test: test,
-                                message: messageId
+                                message: messageId,
+                                duration: test.result.overcast.usage.duration,
+                                basePower: parseInt(test.result.SL) + (result.itemData.system.memorized.value ? test.result.itemData.system.cn.value : test.result.itemData.system.cn.value / 2),
+                                dispelPower: {}
                             };
-                            if (test.constructor.name === 'WomCastTest') {
-                                spells[messageId].type = 'Spell';
-                                spells[messageId].duration = test.result.overcast.usage.duration;
-                            } else {
-                                spells[messageId].type = 'Weapon';
-                                const effect = test.weapon.areaEffects;
-                                spells[messageId].duration = { current: effect.duration.rounds, unit: 'rund' };
-                            }
-                            if (test.data?.context?.templates) {
-                                spells[messageId].templates = test.data.context.templates;
-                            }
                             await combat.setFlag('wfrp4e-pl-addons', 'spells', spells);
                         });
                     }
                 }
             });
 
-            Hooks.on('renderCombatTracker', (_app, html, _options) => {
+            Hooks.on('renderCombatTracker', async(_app, html, _options) => {
                 const combat = game.combat;
                 if (combat) {
 
@@ -218,88 +198,47 @@ export default class WindsOfMagic {
 
                     const spells = combat.getFlag('wfrp4e-pl-addons', 'spells');
                     if (spells) {
-                        let rows = '';
-                        let element = '<div style="width: 100%; text-align: center; flex: 0;"><h4>Aktywne zaklęcia</h4></div><ol id="spell-tracker" style="min-height: 20%; flex: 0;" class="directory-list">[[rows]]</ol>';
-
+                        const data = {
+                            spells: []
+                        };
                         for (const messageId in spells) {
-                            if (!spells[messageId]) {
-                                continue;
+                            const msg = game.messages.get(messageId);
+                            const spell = {
+                                messageId: messageId,
+                                duration: spells[messageId].duration,
+                                basePower: spells[messageId].basePower,
+                                dispelPower: [],
+                                name: msg.system.test.data.preData.itemData.name,
+                                img: msg.system.test.data.preData.itemData.img,
+                                actor: msg.system.test.actor
+                            };
+                            let basePowerTooltip = `Rozproszenie: ${spell.basePower}`;
+                            for (const dispelPowerWind in spells[messageId].dispelPower) {
+                                const dispelPower = spells[messageId].dispelPower[dispelPowerWind];
+                                const dispelPowerCircle = CircleHelper.getProgressCircle({
+                                    current: dispelPower.value,
+                                    max: spell.basePower,
+                                    radius: 22
+                                });
+                                const dispelPowerData = {
+                                    colorClass: `progress-ring--${dispelPowerCircle.class}`,
+                                    circumference: dispelPowerCircle.circumference,
+                                    offset: dispelPowerCircle.offset,
+                                    color: dispelPower.color,
+                                    value: dispelPower.value
+                                };
+                                basePowerTooltip += `<br>${dispelPowerWind}: ${dispelPower.value}`;
+                                spell.dispelPower.push(dispelPowerData);
                             }
-                            const msg = spells[messageId];
-                            if (msg.type === 'Spell') {
-                                const actorId = msg.test.data.context.speaker.actor;
-                                const actorName = msg.test.data.context.chatOptions.speaker.alias;
-                                const spellName = msg.test.data.preData.itemData.name;
-                                const spellImg = msg.test.data.preData.itemData.img;
-                                const spellId = msg.test.data.preData.itemData._id;
-                                const isMemorized = msg.test.data.result.itemData.system.memorized.value;
-                                let cnValue = msg.test.data.result.itemData.system.cn.value;
-                                if (!isMemorized) {
-                                    cnValue = cnValue / 2;
-                                }
-                                const duration = msg.duration;
-                                const dispelValue = cnValue + Number.parseInt(msg.test.data.result.SL);
-
-                                let textStyle = '';
-                                let imageStyle = '';
-                                if (duration.current === 0) {
-                                    textStyle = 'color: var(--color-text-light-7);';
-                                    imageStyle = 'opacity: 0.3';
-                                }
-
-                                rows += `<li class="directory-item flexrow" style="position: relative;" data-message-id="${messageId}" data-spell-id="${spellId}" data-actor-id="${actorId}">
-                                    <div class="flexcol" style="max-width: 48px;max-height: 48px;">
-                                        <img style="width:48px;max-width: 48px;${imageStyle}" alt="${spellName} - ${actorName}" src="${spellImg}">
-                                    </div>
-                                    <div class="flexcol" style="width: calc(100% - 48px);height: 48px;${textStyle}">
-                                        <div class="flexrow" style="width: 100%;height: 50%;margin-top: -10px;padding-left: 10px;margin-bottom: 10px;">${spellName} - ${actorName}</div>
-                                        <div class="flexrow" style="width: 100%;height: 50%;margin-top: -10px;padding-left: 10px;margin-bottom: 10px;">
-                                            <div class="flexcol duration-value" style="text-align: center;width: 48px;min-width: 48px;max-width: 48px;height: 100%;">${duration.current}</div>
-                                            <div class="flexcol duration-unit" style="min-width: calc(100% - 146px);text-align: center;height: 100%;">${duration.unit}</div>
-                                            <div class="flexcol dispel-value" style="text-align: center;min-width: 48px;height: 100%;" title="Wartość Rozproszenia">${dispelValue}</div>
-                                            <div style="max-width: 48px;min-width: 48px;text-align: center;height: 100%;">
-                                                <a class="item-controls spell-dispel" data-spell-id="${messageId}" title="Rozprosz Zaklęcie"><i class="fas fa-burst"></i></a>
-                                                <a class="item-controls spell-delete" data-spell-id="${messageId}" title="Skasuj Zaklęcie"><i class="fas fa-trash"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    </li>`;
-                            } else {
-                                const actorId = msg.test.data.context.speaker.actor;
-                                const actorName = msg.test.data.context.chatOptions.speaker.alias;
-                                const item = game.actors.get(actorId).items.get(msg.test.data.preData.item);
-
-                                const itemName = item.name;
-                                const itemImg = item.img;
-                                const itemId = item.id;
-
-                                const duration = msg.duration;
-                                let textStyle = '';
-                                let imageStyle = '';
-                                if (duration.current === 0) {
-                                    textStyle = 'color: var(--color-text-light-7);';
-                                    imageStyle = 'opacity: 0.3';
-                                }
-
-                                rows += `<li class="directory-item flexrow" style="position: relative;" data-message-id="${messageId}" data-item-id="${itemId}" data-actor-id="${actorId}">
-                                    <div class="flexcol" style="max-width: 48px;max-height: 48px;">
-                                        <img style="width:48px;max-width: 48px;${imageStyle}" alt="${itemName} - ${actorName}" src="${itemImg}">
-                                    </div>
-                                    <div class="flexcol" style="width: calc(100% - 48px);height: 48px;${textStyle}">
-                                        <div class="flexrow" style="width: 100%;height: 50%;margin-top: -10px;padding-left: 10px;margin-bottom: 10px;">${itemName} - ${actorName}</div>
-                                        <div class="flexrow" style="width: 100%;height: 50%;margin-top: -10px;padding-left: 10px;margin-bottom: 10px;">
-                                            <div class="flexcol duration-value" style="text-align: center;width: 48px;min-width: 48px;max-width: 48px;height: 100%;">${duration.current}</div>
-                                            <div class="flexcol duration-unit" style="min-width: calc(100% - 96px);text-align: center;height: 100%;">${duration.unit}</div>
-                                            <div style="max-width: 48px;min-width: 48px;text-align: center;height: 100%;">
-                                                <a class="item-controls item-delete" data-item-id="${messageId}" title="Skasuj Przedmiot"><i class="fas fa-trash"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    </li>`;
-                            }
+                            spell.basePowerTooltip = basePowerTooltip;
+                            spell.dispelPower.sort((a, b) => b.value - a.value);
+                            data.spells.push(spell);
                         }
-                        element = element.replace('[[rows]]', rows);
-                        const newElement = $(element).insertBefore(jQuery(html).find('#combat-controls'));
+
+                        const element = await renderTemplate('modules/wfrp4e-pl-addons/templates/spell-tracker.hbs', data);
+
+                        $(html).find('.spell-tracker').remove();
+                        const newElement = $(html).find('.combat-controls').after(element);
                         newElement.find('.spell-delete').click(async function() {
                             let spells = game.combat.getFlag('wfrp4e-pl-addons', 'spells');
                             if (!spells) {
