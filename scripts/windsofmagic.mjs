@@ -8,8 +8,8 @@ export default class WindsOfMagic {
 
     calculateWind = function(args) {
         const wind = args.skill.name.substring(args.skill.name.indexOf('(') + 1, args.skill.name.indexOf(')'));
-        const winds = game.combat.flags['wfrp4e-pl-addons']['winds'];
-        if (winds) {
+        if (game.combat && game.combat.flags['wfrp4e-pl-addons'] && game.combat.flags['wfrp4e-pl-addons']['winds']) {
+            const winds = game.combat.flags['wfrp4e-pl-addons']['winds'];
             if (args.type === 'channelling') {
                 const modifier = winds.modifier.find(x=> x.wind === wind)?.modifier;
                 if (modifier !== 0 && modifier !== undefined) {
@@ -37,9 +37,9 @@ export default class WindsOfMagic {
     };
 
     calculateTzeentch = async function(test) {
-        if (test.spell) { //channnel or cast test.
+        if (test.spell && game.combat && game.combat.flags['wfrp4e-pl-addons'] && game.combat.flags['wfrp4e-pl-addons']['winds']) { //channnel or cast test.
             const winds = game.combat.flags['wfrp4e-pl-addons']['winds'];
-            if (winds?.tzeentchInfluence && test.result.roll.toString() === '99') {
+            if (winds.tzeentchInfluence && test.result.roll.toString() === '99') {
                 const demons = game.actors.filter(x => x.itemTags['trait'].find(t => t.name === 'Demoniczny'));
                 if (demons.length) {
                     const choice = await ItemDialog.create(demons.map(z=> ({ id: z.uuid, name: z.name })), 1, 'Wybierz Demona');
@@ -158,8 +158,11 @@ export default class WindsOfMagic {
                 if (combat && combat.round !== 0 && combat.turns && combat.active && app?.system?.test) {//combat started
                     const test = app.system.test;
                     if ((test.result.castOutcome === 'success')) {
-                        const newMessage = $(html).find('.message-content').append($('<div class="card-content"><a class="chat-button card-track-spell" style="width: 100%">Dodaj zaklęcie do trackera</a></div>'));
-                        newMessage.find('.card-track-spell').click(async function() {
+                        const newMessage = $(html).find('.message-content').append($(`
+                            <div class="card-content">
+                                <button type="button" class="chat-button" data-action="track-spell" data-tooltip="Dodaj zaklęcie do trackera">Dodaj zaklęcie do trackera</button>
+                            </div>`));
+                        newMessage.find('button[data-action="track-spell"]').click(async function() {
                             const messageId = messageData.message._id;
                             const userId = messageData.user.id;
                             const message = game.messages.get(messageId);
@@ -239,7 +242,8 @@ export default class WindsOfMagic {
 
                         $(html).find('.spell-tracker').remove();
                         const newElement = $(html).find('.combat-controls').after(element);
-                        newElement.find('.spell-delete').click(async function() {
+
+                        newElement.find('button[data-action="dispel"]').click(async function() {
                             let spells = game.combat.getFlag('wfrp4e-pl-addons', 'spells');
                             if (!spells) {
                                 spells = {};
@@ -247,15 +251,15 @@ export default class WindsOfMagic {
                             spells[this.dataset.spellId] = null;
                             await game.combat.setFlag('wfrp4e-pl-addons', 'spells', spells);
                         });
-                        newElement.find('.item-delete').click(async function() {
+                        newElement.find('button[data-action="boost').click(async function() {
                             let spells = game.combat.getFlag('wfrp4e-pl-addons', 'spells');
                             if (!spells) {
                                 spells = {};
                             }
-                            spells[this.dataset.itemId] = null;
+                            spells[this.dataset.messageId] = null;
                             await game.combat.setFlag('wfrp4e-pl-addons', 'spells', spells);
                         });
-                        newElement.find('.spell-dispel').click(async function() {
+                        newElement.find('button[data-action="delete"]').click(async function() {
                             const spells = game.combat.getFlag('wfrp4e-pl-addons', 'spells');
                             const messageId = this.dataset.spellId;
                             if (!spells) {

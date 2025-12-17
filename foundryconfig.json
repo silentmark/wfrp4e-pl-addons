@@ -1,3 +1,18 @@
 {
-    "path" : "C:\\Users\\marek\\AppData\\Local\\FoundryVTT\\Data"
+    "path": "C:\\Users\\marek\\AppData\\Local\\FoundryVTT\\Data",
+    "ftp": {
+        "host": "silentmark.foundryvtt.be",
+        "user": "silentmark",
+        "password": "user!234",
+        "remotePath": "/modules/wfrp4e-pl-addons"
+    },
+    "chrome": {
+        "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+        "tabMatch": "Warhammer - The Enemy Within",
+        "profiles": [
+            { "port": 9222, "dir": "Foundry" },
+            { "port": 9223, "dir": "Foundry-User-1" },
+            { "port": 9224, "dir": "Foundry-User-2" }
+        ]
+    }
 }

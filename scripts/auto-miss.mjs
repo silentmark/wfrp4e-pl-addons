@@ -55,12 +55,12 @@ export default class AutoMiss {
                     </button>`;
                 const controlIcons = $(hud).find('button.control-icon');
                 controlIcons.last().after(toggleDuckbtn);
-                $(hud).find('button[data-action="duck"]').on('click', toggDuck);
+                $(hud).find('button[data-action="duck"]').on('click', toggleDuck);
 
                 /**
                  *
                  */
-                async function toggDuck() {
+                async function toggleDuck() {
                     const newActive = !(token.getFlag('wfrp4e-pl-addons', 'ducking') || false);
                     await token.setFlag('wfrp4e-pl-addons', 'ducking', newActive);
 

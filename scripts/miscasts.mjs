@@ -42,7 +42,7 @@ export default class Miscasts {
                         mis = true;
                     } else if (this.result.roll % 10 === 0 && this.preData.malignantInfluence) {
                         mis = true;
-                    } else if (game.combat && game.combat.flags['wfrp4e-pl-addons']['winds']['tzeentch']) {
+                    } else if (game.combat && game.combat.flags['wfrp4e-pl-addons'] && game.combat.flags['wfrp4e-pl-addons']['winds'] && game.combat.flags['wfrp4e-pl-addons']['winds']['tzeentch']) {
                         if (this.result.roll.toString().split('').reverse()[0] === '9') {
                             mis = true;
                         }
@@ -56,7 +56,7 @@ export default class Miscasts {
                         this.result.mis = game.i18n.localize('Manifestacja Chaosu');
                         const wind = game.wfrp4e.config.magicWind[this.spell.lore.value.toLowerCase()];
                         let modifier = 0;
-                        if (game.combat && game.combat.flags['wfrp4e-pl-addons']['winds']) {
+                        if (game.combat && game.combat.flags['wfrp4e-pl-addons'] && game.combat.flags['wfrp4e-pl-addons']['winds']) {
                             modifier = game.combat.flags['wfrp4e-pl-addons']['winds']?.modifier.find(x=>x.wind === wind)?.modifier;
 
                             if (modifier) {
@@ -87,7 +87,7 @@ export default class Miscasts {
                             globalModifier += 50;
                         }
 
-                        if (game.combat && game.combat.flags['wfrp4e-pl-addons']['winds']['tzeentch']) {
+                        if (game.combat && game.combat.flags['wfrp4e-pl-addons'] && game.combat.flags['wfrp4e-pl-addons']['winds'] && game.combat.flags['wfrp4e-pl-addons']['winds']['tzeentch']) {
                             console.log('Tzeentch: ' + this.result.roll);
                             this.result.tooltips.miscast.push('Tzeentch: ' + this.result.roll);
                             globalModifier += this.result.roll;

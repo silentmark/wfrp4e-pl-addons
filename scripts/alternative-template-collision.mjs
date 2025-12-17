@@ -108,9 +108,14 @@ export default class AlternativeTemplateCollision {
                     }
 
                     if (template.getFlag(game.system.id, 'instantaneous')) {
-                        sleep(500).then(() => {
-                            template.setFlag(game.system.id, 'effectData', null);
-                        });
+                        // Wait for semaphore to finish before removing effect data from the template
+                        // Not really ideal but I don't know of a way to await the semaphore
+                        const poll = setInterval(((semaphore) => {
+                            if (!semaphore.remaining) {
+                                template.setFlag(game.system.id, 'effectData', null);
+                                clearInterval(poll);
+                            }
+                        }), 500, this.semaphore);
                     }
                 }
             };
