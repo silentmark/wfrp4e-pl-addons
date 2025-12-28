@@ -27,9 +27,9 @@ export default class AutoCombat {
                 const style = `0 0 23px ${autoCombatColor} inset`;
                 const hudAutoCombat = $(
                     `<div style="box-shadow: ${style}" class="control-icon" id="toggleAutoCombat" title="${autoCombatTooltip}">
-            <i class="fas fa-repeat"></i>
-          </div>`);
-                html.find('.col.left').append(hudAutoCombat);
+                        <i class="fas fa-repeat"></i>
+                    </div>`);
+            $(html).find('.col.left').append(hudAutoCombat);
 
                 hudAutoCombat.find('i').click(async ev => {
                     if (actor.flags?.wfrp4e?.autoCombat === 1) {

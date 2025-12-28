@@ -42,7 +42,7 @@ export default class AutoOutnumbered {
         if (args.type !== 'trait' && args.type !== 'weapon') {
             return;
         }
-        if (args.target && (args.item.type === 'weapon' || args.item.type === 'trait') && args.item.attackType === 'melee') {
+        if (args.targets?.length === 1 && (args.item?.type === 'weapon' || args.item?.type === 'trait') && args.item?.attackType === 'melee') {
             let tooltip = 'Przewaga Liczebna: ';
             const attackerAllies = [];
             const targetAllies = [];

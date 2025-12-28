@@ -7,7 +7,7 @@ import wfrp4ePlAddon from './constants.mjs';
 export default class WindsOfMagic {
 
     calculateWind = function(args) {
-        const wind = args.skill.name.substring(args.skill.name.indexOf('(') + 1, args.skill.name.indexOf(')'));
+        const wind = args.skill?.name.substring(args.skill.name.indexOf('(') + 1, args.skill.name.indexOf(')'));
         if (game.combat && game.combat.flags['wfrp4e-pl-addons'] && game.combat.flags['wfrp4e-pl-addons']['winds']) {
             const winds = game.combat.flags['wfrp4e-pl-addons']['winds'];
             if (args.type === 'channelling') {

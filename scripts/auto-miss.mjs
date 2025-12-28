@@ -175,7 +175,7 @@ export default class AutoMiss {
                             testData.preData.slBonus = 0;
                             testData.preData.successBonus = 0;
                             testData.preData.roll = test.result.roll;
-                            testData.preData.target = test.target + 10;
+                            testData.preData.target = test.result.roll;
                             testData.context.targets[0].token = newTarget.id;
                             testData.preData.other.push(`Ups, trafiono cel na linii ognia! <b>(${newTarget.name})</b>`);
                             delete testData.context.messageId;
@@ -227,7 +227,7 @@ export default class AutoMiss {
                                 testData.preData.slBonus = 0;
                                 testData.preData.successBonus = 0;
                                 testData.preData.roll = test.result.roll;
-                                testData.preData.target = test.target + 20;
+                                testData.preData.target = test.result.roll;
                                 if (!testData.context.targets) {
                                     testData.context.targets = [{ token: newTarget.id }];
                                 } else {

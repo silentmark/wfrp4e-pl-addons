@@ -15,7 +15,7 @@
     "scss": "0.2.4"
   },
   "scripts": {
-    "build": "cross-env NODE_ENV=development rollup --config rollup.config.js --watch",
+    "build": "cross-env NODE_ENV=development rollup --config rollup.config.js",
     "pack": "node dbpacker.js",
     "lint": "eslint scripts/",
     "lint:fix": "eslint scripts/ --fix"

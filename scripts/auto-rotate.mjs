@@ -9,7 +9,7 @@ export default class AutoRotate {
         if (args.type !== 'trait' && args.type !== 'weapon') {
             return;
         }
-        if (args.target && (args.item.type === 'weapon' || args.item.type === 'trait') && args.item.attackType === 'melee') {
+        if (args.targets?.length === 1 && (args.item?.type === 'weapon' || args.item?.type === 'trait') && args.item?.attackType === 'melee') {
 
             const flankingBonus = game.settings.get('wfrp4e-pl-addons', 'autoRotate.BonusFlanking');
             const backBonus = game.settings.get('wfrp4e-pl-addons', 'autoRotate.BonuBehind');
