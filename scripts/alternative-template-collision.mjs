@@ -56,8 +56,8 @@ export default class AlternativeTemplateCollision {
                         templatePoly = shapeCopy.toPolygon();
                         break;
                 }
-                const intersectionArea = templatePoly.intersectPolygon(tokenRectanglePolygon).signedArea();
-                return (intersectionArea / Math.min(templatePoly.signedArea(), tokenRectanglePolygon.signedArea())) >= minimalRatio;
+                const intersectionArea = templatePoly.intersectPolygon(tokenRectanglePolygon).area;
+                return (intersectionArea / Math.min(templatePoly.area, tokenRectanglePolygon.area)) >= minimalRatio;
             };
 
             AreaHelpers.setTokenAreas = async function(token, update, options, _user) {
