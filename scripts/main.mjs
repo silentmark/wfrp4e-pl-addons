@@ -177,4 +177,28 @@ Hooks.on('ready', () => {
     foundry.utils.mergeObject(game.wfrp4e.config, config);
 });
 
+      Hooks.once("init", () => {
+  const cls = CONFIG.Canvas.layers.templates.layerClass;
+  const desc = Object.getOwnPropertyDescriptor(cls, "layerOptions");
+  const originalGetter = desc?.get;
+
+  Object.defineProperty(cls, "layerOptions", {
+    configurable: true,
+    get: function () {
+      let options;
+
+      if (originalGetter) {
+        options = originalGetter.call(this);
+      } else {
+        options = foundry.utils.mergeObject(PlaceablesLayer.layerOptions, {});
+      }
+
+      options = foundry.utils.duplicate(options);
+      options.zIndex = 150;
+
+      return options;
+    }
+  });
+});
+
 export default Main;

@@ -68,7 +68,7 @@ export default class AlternativeArmour {
                         this.fields.modifier += stealthPenaltyValue;
                         const stealthPenaltyText = game.i18n.localize('WFRP4E.AlternativeArmour.ModifierDescription') +
                             `(+${stealthPenaltyValue})`;
-                        this.tooltips.addModifier(stealthPenaltyValue, stealthPenaltyText);
+                        this.tooltips.add("modifier", stealthPenaltyValue, stealthPenaltyText);
                     }
                 }
             });

@@ -28,7 +28,7 @@ export default class RerollInitiative {
                 if (!update.round) {
                     return;
                 }
-                if (update.round < 2 || update.round <= combat.previous.round) {
+                if (isNaN(update.round) || update.round < 2 || update.round <= combat.previous.round) {
                     return;
                 }
 

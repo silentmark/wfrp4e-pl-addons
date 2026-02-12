@@ -76,13 +76,16 @@ export default class AlternativeTemplateCollision {
 
             // Checks a token's current zone and zone effects, adding and removing them
             AreaHelpers.checkTokenUpdate = async function(token, update, options, user) {
-                if (user === game.user.id) {
+                if (user === game.user.id && options && options._areas) {
                     // If every current region ID exists in priorAuras, and every priorRegion ID existis in current, there was no region change
                     const currentAreas = options._areas[token.id] || [];
                     const priorAreas = options._priorAreas[token.id] || [];
                     const changedRegion = !(currentAreas.every(rId => priorAreas.includes(rId)) && priorAreas.every(rId => currentAreas.includes(rId)));
                     if (changedRegion) {
-                        await this.checkTokenAreaEffects(token, options._newCenter[token.id]);
+                        AreaHelpers.semaphore.add(async () => {
+                            await new Promise(resolve => setTimeout(resolve, 500));
+                            await AreaHelpers.checkTokenAreaEffects(token, options._newCenter[token.id]);
+                        });
                     }
                 }
             };
@@ -115,7 +118,7 @@ export default class AlternativeTemplateCollision {
                                 template.setFlag(game.system.id, 'effectData', null);
                                 clearInterval(poll);
                             }
-                        }), 500, this.semaphore);
+                        }), 500, AreaHelpers.semaphore);
                     }
                 }
             };
@@ -180,12 +183,32 @@ export default class AlternativeTemplateCollision {
             };
 
 
-            Hooks.off('preUpdateToken', Hooks.events.preUpdateToken.find(x => x.fn.name === 'bound setTokenAreas').fn);
-            Hooks.off('updateToken', Hooks.events.updateToken.find(x => x.fn.name === 'bound checkTokenUpdate').fn);
-            Hooks.off('createMeasuredTemplate', Hooks.events.createMeasuredTemplate.find(x => x.fn.name === 'bound checkAreaCreate').fn);
-            Hooks.off('refreshMeasuredTemplate', Hooks.events.refreshMeasuredTemplate.find(x => x.fn.name === 'bound refreshArea').fn);
-            Hooks.off('updateMeasuredTemplate', Hooks.events.updateMeasuredTemplate.find(x => x.fn.name === 'bound checkAreaUpdate').fn);
-            Hooks.off('deleteMeasuredTemplate', Hooks.events.deleteMeasuredTemplate.find(x => x.fn.name === 'bound checkAreaDelete').fn);
+            let functions = Hooks.events.preUpdateToken.filter(x => x.fn.name === 'bound setTokenAreas');
+            for (let func of functions) {
+                Hooks.off('preUpdateToken', func.fn);
+            }
+            functions = Hooks.events.updateToken.filter(x => x.fn.name === 'bound checkTokenUpdate');
+            for (let func of functions) {
+                Hooks.off('updateToken', func.fn);
+            }
+            functions = Hooks.events.createMeasuredTemplate.filter(x => x.fn.name === 'bound checkAreaCreate');
+            for (let func of functions) {
+                Hooks.off('createMeasuredTemplate', func.fn);
+            }
+            functions = Hooks.events.refreshMeasuredTemplate.filter(x => x.fn.name === 'bound refreshArea');
+            for (let func of functions) {
+                Hooks.off('refreshMeasuredTemplate', func.fn);
+            }
+            functions = Hooks.events.updateMeasuredTemplate.filter(x => x.fn.name === 'bound checkAreaUpdate');
+            for (let func of functions) {
+                Hooks.off('updateMeasuredTemplate', func.fn);
+            }
+            functions = Hooks.events.deleteMeasuredTemplate.filter(x => x.fn.name === 'bound checkAreaDelete');
+            for (let func of functions) {
+                Hooks.off('deleteMeasuredTemplate', func.fn);
+            }
+
+            Hooks.on('updateToken', ZoneHelpers.checkTokenUpdate.bind(ZoneHelpers));
 
             Hooks.on('preUpdateToken', AreaHelpers.setTokenAreas.bind(AreaHelpers));
             Hooks.on('updateToken', AreaHelpers.checkTokenUpdate.bind(AreaHelpers));
